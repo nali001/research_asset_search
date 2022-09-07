@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Search Result</title>
+  <meta charset="utf-8" />
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=no" />
+  <meta name="description" content="Semantic-UI-Forest, collection of design, themes and templates for Semantic-UI." />
+  <meta name="keywords" content="Semantic-UI, Theme, Design, Template" />
+  <meta name="author" content="PPType" />
+  <meta name="theme-color" content="#ffffff" />
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/result_page.css' %}" type="text/css" />
+  <link rel="stylesheet" href="{% static 'Semantic-UI-CSS-2.4.1/semantic.min.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="{% static 'Semantic-UI-CSS-2.4.1/semantic.min.js' %}"></script>
+
+  <script>
+    $(document).ready(function () {
+      // $(".ui.toggle.button").click(function () {
+      //   $(".mobile.only.grid .ui.vertical.menu").toggle(100);
+      // });
+
+      // Change colors of buttons on sidebar
+      $("#sidebar .item").click(function () {
+        $("#sidebar .active.item").removeClass("active");
+        $(this).removeClass("item").addClass("active item");
+      });
+    });
+  </script>
+</head>
+
+<body id="root">
+  <!------------------------ Top menu bar --------------------------->
+  <div class="ui tablet computer only padded grid">
+    <div class="ui inverted borderless top fixed fluid menu">
+      <a class="header item">Notebook search</a>
+      <div class="right menu">
+        <div class="item">
+          <div class="ui small input"><input placeholder="Search..." /></div>
+        </div>
+        <a class="item">History</a> <a class="item">Settings</a>
+        <a class="item">Profile</a> <a class="item">Help</a>
+      </div>
+    </div>
+  </div>
+
+  <!------------------------ Top menu bar --------------------------->
+  <div class="ui mobile only padded grid">
+    <div class="ui top fixed borderless fluid inverted menu">
+      <a class="header item">Project Name</a>
+      <div class="right menu">
+        <div class="item">
+          <button class="ui icon toggle basic inverted button">
+            <i class="content icon"></i>
+          </button>
+        </div>
+      </div>
+      <div class="ui vertical borderless inverted fluid menu">
+        <a class="item">Dashboard</a> <a class="item">Settings</a>
+        <a class="item">Profile</a> <a class="item">Help</a>
+        <div class="ui fitted divider"></div>
+        <div class="item">
+          <div class="ui small input"><input placeholder="Search..." /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="ui padded grid">
+    <!------------------------ Side bar --------------------------->
+    <div class="three wide tablet only three wide computer only column" id="sidebar">
+      <div class="ui vertical borderless fluid text menu">
+        <a class="active item">Notebook</a> <a class="item">Images</a>
+        <div class="ui hidden divider"></div>
+        <a class="item" id="sidebar_buttons">Nav item</a> <a class="item">Nav item again</a>
+        <a class="item">One more nav</a> <a class="item">Another nav item</a>
+        <a class="item">More navigation</a>
+        <div class="ui hidden divider"></div>
+        <a class="item">Browse</a> <a class="item">Account</a>
+        <a class="item">Seetings</a>
+      </div>
+    </div>
+
+    <!------------------------ Content --------------------------->
+    <div class="sixteen wide mobile thirteen wide tablet thirteen wide computer right floated column" id="content">
+      <div class="ui padded grid">
+        <!------------------------ Search result --------------------------->
+        <div class="row">
+          <h1 class="ui huge dividing header">Search result</h1>
+        </div>
+        <div class="fourteen wide column" , id="ranking_list">
+          <div class="ui items">
+            <!-- Generate returned items -->
+            {% for i in context_list %}
+            <div class="ui item">
+              <div class="ui tiny image">
+                <img src="{% static 'images/jupyter.png' %}">
+              </div>
+              <div class="content">
+                <a class="header">Baseline OpRisk Loss Model & Sensitivity Analysis</a>
+
+                <div class="description">
+                  <p>Operational Risk losses stem from different domains like business continuity
+                    interruption
+                    (e.g.
+                    due to failure in process execution, natural catastrophes, large scale cyber attacks
+                    etc.),
+                    frauds
+                    (internal and external) etc. The main two dimensions which drive the OpRisk Loss
+                    are:
+                    Likelihood
+                    (probability of the event's happening in a year) and Severity (magnitude of loss
+                    amount in
+                    USD
+                    value) associated with the events. For the baseline estimation of OpRisk Loss
+                    amount,
+                    Likelihood
+                    is
+                    multiplied by the Severity of an incident.</p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="ui hidden section divider"></div>
+
+        <!------------------------ Recommendation result --------------------------->
+        <div class="row">
+          <h1 class="ui huge dividing header">Similar notebooks</h1>
+        </div>
+        <div class="center aligned row">
+          <div class="eight wide mobile four wide tablet four wide computer column">
+            <img class="ui centered small circular image" src="{% static 'images/jupyter.png' %}" />
+            <div class="ui large basic label">Label</div>
+            <p>Notebook 1</p>
+          </div>
+          <div class="eight wide mobile four wide tablet four wide computer column">
+            <img class="ui centered small circular image" src="{% static 'images/jupyter.png' %}" />
+            <div class="ui large basic label">Label</div>
+            <p>Notebook 2</p>
+          </div>
+          <div class="eight wide mobile four wide tablet four wide computer column">
+            <img class="ui centered small circular image" src="{% static 'images/jupyter.png' %}" />
+            <div class="ui large basic label">Label</div>
+            <p>Notebook 3</p>
+          </div>
+          <div class="eight wide mobile four wide tablet four wide computer column" id="show_effect">
+            <img class="ui centered small circular image" src="{% static 'images/jupyter.png' %}" />
+            <div class="ui large basic label">Label</div>
+            <p>Notebook 4</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

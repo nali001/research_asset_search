@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Semantic-UI-CSS-2.4.1/semantic.min.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="% static 'semantic.min.js' %"></script>
+</head>
+
+<body>
+    <div class="ui breadcrumb">
+        <div class="section">
+            <a href="">Home</a>
+        </div>
+        <div class="divider"> / </div>
+        <div class="active section">Search</div>
+    </div>
+
+
+
+    <div class="ui padded grid">
+        <div class="two wide column" id="sidebar">
+            <div class="ui vertical borderless fluid text menu">
+                <a class="active item">Overview</a> <a class="item">Reports</a>
+                <a class="item">Analytics</a> <a class="item">Export</a>
+                <div class="ui hidden divider"></div>
+                <a class="item">Nav item</a> <a class="item">Nav item again</a>
+                <a class="item">One more nav</a> <a class="item">Another nav item</a>
+                <a class="item">More navigation</a>
+                <div class="ui hidden divider"></div>
+                <a class="item">Macintosh</a> <a class="item">Linux</a>
+                <a class="item">Windows</a>
+            </div>
+        </div>
+        <div class="ten wide column" , id="ranking_list">
+            <div class="ui items">
+                <!-- Generate returned items -->
+                {% for i in context_list %}
+                <div class="ui item">
+                    <div class="ui tiny image">
+                        <img src="{% static 'images/jupyter.png' %}">
+                    </div>
+                    <div class="content">
+                        <a class="header">Baseline OpRisk Loss Model & Sensitivity Analysis</a>
+
+                        <div class="description">
+                            <p>Operational Risk losses stem from different domains like business continuity
+                                interruption
+                                (e.g.
+                                due to failure in process execution, natural catastrophes, large scale cyber attacks
+                                etc.),
+                                frauds
+                                (internal and external) etc. The main two dimensions which drive the OpRisk Loss
+                                are:
+                                Likelihood
+                                (probability of the event's happening in a year) and Severity (magnitude of loss
+                                amount in
+                                USD
+                                value) associated with the events. For the baseline estimation of OpRisk Loss
+                                amount,
+                                Likelihood
+                                is
+                                multiplied by the Severity of an incident.</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

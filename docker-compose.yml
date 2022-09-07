@@ -1,0 +1,41 @@
+services:
+  elasticsearch: 
+    build: ./elasticsearch
+    volumes: 
+      - ./elasticsearch/data:/usr/share/elasticsearch/data
+      - ./elasticsearch/logs:/usr/share/elasticsearch/logs
+    networks: 
+      - search_engine_net
+    environment:
+      - discovery.type=single-node
+      - cluster.name=es_dataserver
+      - node.name=es01
+    expose: 
+      - 9200
+
+  search_engine_app:
+    build: ./search_engine_app
+    volumes:
+      - ./search_engine_app:/search_engine_app
+    networks: 
+      - search_engine_net
+    depends_on:
+      - elasticsearch
+    expose: 
+      - 7777
+  
+  nginx: 
+    build: ./nginx
+    volumes: 
+      - ./search_engine_app/static:/nginx_server/search_engine_app/static
+    networks: 
+      - search_engine_net
+    depends_on:
+      - search_engine_app
+    ports: 
+      - 80:80
+
+networks: 
+  search_engine_net:
+    driver: bridge
+
