@@ -51,6 +51,12 @@ under directory `search_engine_app`
 ### High-level structure 
 ![high-level structure](readme/high_level_structure.png)
 
+### Network connection 
+![high-level structure](readme/network.png)
+
+### Storage 
+![high-level structure](readme/storage.png)
+
 
 
 ### Folder explanation
