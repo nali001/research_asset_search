@@ -41,7 +41,7 @@ Development is mainly for Django project.
 `docker compose -f docker-compose.dev.yml up` \
 It can be accessed via `localhost:9200`
 4. Inside `search_engine_app/search_engine_app/setting.py` change `ELASTICSEARCH_DSL` from `elasticsearch` to `localhost`
-5. Now you are good to go! Run \
+5. Now you are good to go! Start Django dummy server \
 `python manage.py runserver 7777` \
 under directory `search_engine_app`
 

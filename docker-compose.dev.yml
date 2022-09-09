@@ -15,6 +15,17 @@ services:
     ports:
       - 9200:9200
 
+nginx: 
+    build: ./nginx
+    volumes: 
+      - ./search_engine_app/static:/nginx_server/search_engine_app/static
+    # networks: 
+    #   - search_engine_net
+    # depends_on:
+    #   - search_engine_app
+    ports: 
+      - 80:80
+
 #   search_engine_app:
 #     build: ./search_engine_app
 #     volumes:
