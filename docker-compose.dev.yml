@@ -4,17 +4,31 @@ services:
     volumes: 
       - ./elasticsearch/data:/usr/share/elasticsearch/data
       - ./elasticsearch/logs:/usr/share/elasticsearch/logs
-    networks: 
-      - search_engine_net
     environment:
       - discovery.type=single-node
       - cluster.name=es_dataserver
       - node.name=es01
-    ports: 
+    # expose: 
+    #   - 9200
+    # networks: 
+    #   - search_engine_net
+    ports:
       - 9200:9200
 
+#   search_engine_app:
+#     build: ./search_engine_app
+#     volumes:
+#       - ./search_engine_app:/search_engine_app
+#     networks: 
+#       - search_engine_net
+#     depends_on:
+#       - elasticsearch
+#     command: python manage.py runserver 0.0.0.0:7777
+#     ports: 
+#       - 7777:7777
 
-networks: 
-  search_engine_net:
-    driver: bridge
+# networks: 
+#   search_engine_net:
+#     driver: bridge
+
 

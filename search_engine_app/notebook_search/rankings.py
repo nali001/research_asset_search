@@ -1,10 +1,20 @@
 from datetime import datetime
 from elasticsearch import Elasticsearch
 from elasticsearch.client import IndicesClient
-es = Elasticsearch(
-    hosts=[{"host": "elasticsearch", "port": 9200}],
-    http_auth=["elastic", "changeme"],
-)
+
+ELASTICSEARCH_HOSTNAMES = ["elasticsearch", "localhost"]
+# ELASTICSEARCH_HOSTNAMES = ["elasticsearch", "localhost"]
+
+# Try different host names for Elasticsearch service. 
+# It depends on on what machine the service is running. 
+for host in ELASTICSEARCH_HOSTNAMES: 
+    es = Elasticsearch(
+        hosts=[{"host": host, "port": 9200}],
+        http_auth=["elastic", "changeme"],
+        )
+    if es.ping(): 
+        break
+
 
 # es_index_client = IndicesClient(es_client)
 # es_index_client.create(index="laptops-demo")
