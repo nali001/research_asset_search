@@ -1,2 +1,4 @@
 __pycache__/
 search_engine_app/venv
+elasticsearch/data
+elasticsearch/logs

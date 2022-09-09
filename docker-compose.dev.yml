@@ -1,0 +1,20 @@
+services:
+  elasticsearch: 
+    build: ./elasticsearch
+    volumes: 
+      - ./elasticsearch/data:/usr/share/elasticsearch/data
+      - ./elasticsearch/logs:/usr/share/elasticsearch/logs
+    networks: 
+      - search_engine_net
+    environment:
+      - discovery.type=single-node
+      - cluster.name=es_dataserver
+      - node.name=es01
+    ports: 
+      - 9200:9200
+
+
+networks: 
+  search_engine_net:
+    driver: bridge
+
