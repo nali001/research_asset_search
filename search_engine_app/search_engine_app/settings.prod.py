@@ -122,13 +122,13 @@ STATIC_URL = "static/"
 
 #-------------------------- Uncomment STATICFILES_DIRS and comment STATIC_ROOT in development------------------
 # The STATICFILES_DIRS tuple tells Django where to look for static files that are not tied to a particular app.
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",
+# ]
 
 # Using the `collectstatic`` command, Django looks for all static files in your apps and collects them wherever you told it to, i.e. the STATIC_ROOT. 
 # In our case, we are telling Django that when we run `python manage.py collectstatic`, gather all static files into a folder called staticfiles in our project root directory. 
-# STATIC_ROOT = BASE_DIR / "static"
+STATIC_ROOT = BASE_DIR / "static"
 
 #---------------------------------------------------------------------------------------------------------------
 
@@ -140,16 +140,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #-------------------------- Uncomment first part and comment second part in development------------------
 # Elasticsearch deployment
-# ELASTICSEARCH_DSL = {
-#     'default': {
-#         'hosts': os.getenv("ELASTICSEARCH_DSL_HOSTS", 'elasticsearch:9200')
-#     },
-# }
-
-# Elasticsearch development
 ELASTICSEARCH_DSL = {
     'default': {
-        'hosts': os.getenv("ELASTICSEARCH_DSL_HOSTS", '127.0.0.1:9200')
+        'hosts': os.getenv("ELASTICSEARCH_DSL_HOSTS", 'elasticsearch:9200')
     },
 }
+
+# Elasticsearch development
+# ELASTICSEARCH_DSL = {
+#     'default': {
+#         'hosts': os.getenv("ELASTICSEARCH_DSL_HOSTS", '127.0.0.1:9200')
+#     },
+# }
 #---------------------------------------------------------------------------------------------------------------
