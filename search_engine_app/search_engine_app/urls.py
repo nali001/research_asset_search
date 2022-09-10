@@ -16,7 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+
 urlpatterns = [
+    path('', include('genericpages.urls')), 
     path('notebook_search/', include('notebook_search.urls')), 
     path('admin/', admin.site.urls),
 ]
+

@@ -15,6 +15,7 @@ The deployment lives on docker and is accesible from the Internet.
 1. Setup environment on host machine, refer to `os_env_setup.sh`
 2. Clone the repository \
 `git clone https://github.com/nali001/notebook_search_docker.git`
+3. Remove `search_engine_app/settings.py` and change `search_engine_app/settings.prod.py` to `settings.py`
 3. Run \
 `docker compose up`
 
