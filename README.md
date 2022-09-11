@@ -16,8 +16,10 @@ The deployment lives on docker and is accesible from the Internet.
 2. Clone the repository \
 `git clone https://github.com/nali001/notebook_search_docker.git`
 3. Remove `search_engine_app/settings.py` and change `search_engine_app/settings.prod.py` to `settings.py`
-3. Run \
-`docker compose up`
+3. Run 
+```
+docker compose up
+```
 
 
 ------------------------------------------------------------------------------------------------------
@@ -42,9 +44,12 @@ Development is mainly for Django project.
 `docker compose -f docker-compose.dev.yml up` \
 It can be accessed via `localhost:9200`
 4. Inside `search_engine_app/search_engine_app/setting.py` change `ELASTICSEARCH_DSL` from `elasticsearch` to `localhost`
-5. Now you are good to go! Run \
-`python manage.py runserver 7777` \
-under directory `search_engine_app`
+5. Now you are good to go! Go to 
+`search_engine_app` and run \
+```
+conda activate notebook_search
+python manage.py runserver 7777
+```
 
 ------------------------------------------------------------------------------------------------------
 ## Framework Design Philosophy 
@@ -59,9 +64,9 @@ under directory `search_engine_app`
 ![high-level structure](readme/storage.png)
 
 
-
-### Folder explanation
-+ important configuration files
+------------------------------------------------------------------------------------------------------
+## Folder explanation
+### nginx
     - `opensemanticsearch/settings.py`: Django project global setting
     - `opensemanticsearch/settings.py`: URL configurations
 
@@ -71,3 +76,14 @@ under directory `search_engine_app`
 + `webSearch`: Web page searching module, including a crawler and a search engine
 + `DSS`: Crawler for datasets
     - `DSS/crawlerDatasetConfig.json`: Configuration file for the crawler. 
+
+### elasticsearch 
+
+### search_engine_app
+The Django project, providing URL resolvement and 
+
+### docker-compose.yml 
+Docker compose file for setting up **deployment** environment. 
+
+### docker-compose.dev.yml 
+Docker compose file for setting up **development** environment. 

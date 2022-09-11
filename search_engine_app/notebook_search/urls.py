@@ -1,10 +1,8 @@
-from django.urls import path
-
-from . import views
+from django.urls import path, include
+from notebook_search import views, models
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path(f'test', views.ui_test, name='ui_test'),
-    path(f'result', views.search_result, name='result'),
-    path(f'movies', views.movies, name='movies'),
+    path('genericsearch/', views.genericsearch, name='genericsearch'),
+    path('github_index_pipeline/', views.github_index_pipeline, name='github_index_pipeline')
 ]
+
