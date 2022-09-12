@@ -138,18 +138,27 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-#-------------------------- Uncomment first part and comment second part in development------------------
-# Elasticsearch deployment
-# ELASTICSEARCH_DSL = {
-#     'default': {
-#         'hosts': os.getenv("ELASTICSEARCH_DSL_HOSTS", 'elasticsearch:9200')
-#     },
-# }
+#-------------------------- Setup Elasticsearch environment ------------------
+from elasticsearch import Elasticsearch
+ELASTICSEARCH_HOSTNAMES = ["elasticsearch", "localhost"]
+valid_hostname = None
+for host in ELASTICSEARCH_HOSTNAMES: 
+    es = Elasticsearch(
+        hosts=[{"host": host, "port": 9200}],
+        http_auth=["elastic", "changeme"],
+        )
+    if es.ping(): 
+        valid_hostname = host
+        break
 
-# Elasticsearch development
+if valid_hostname == None: 
+    raise Exception('Please start Elasticsearch service first!')
+
 ELASTICSEARCH_DSL = {
     'default': {
-        'hosts': os.getenv("ELASTICSEARCH_DSL_HOSTS", '127.0.0.1:9200')
+        'hosts': os.getenv("ELASTICSEARCH_DSL_HOSTS", valid_hostname + ':9200')
     },
 }
+print('VALIDDDDDDDDDDDDDDD Elasticsearch hostname:', valid_hostname)
 #---------------------------------------------------------------------------------------------------------------
+

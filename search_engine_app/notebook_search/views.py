@@ -82,7 +82,7 @@ def genericsearch(request):
             searchResults["searchTerm"]=term
             searchResults["suggestedSearchTerm"]=suggestedSearchTerm
 
-    return render(request,'notebook_results.html',searchResults )
+    return render(request,'notebook_results.html', searchResults)
 #-----------------------------------------------------------------------------------------------------------------------
 def potentialSearchTerm(term):
     alternativeSearchTerm=""

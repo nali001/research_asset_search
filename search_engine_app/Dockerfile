@@ -5,6 +5,7 @@ ENV PYTHONUNBUFFERED 1
 
 WORKDIR /search_engine_app
 COPY ./requirements.txt .
+COPY ./requirements.dev.txt .
 RUN pip install -r requirements.txt
 RUN pip install -r requirements.dev.txt
 

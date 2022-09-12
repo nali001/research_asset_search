@@ -1,8 +1,6 @@
 from django.test import TestCase
 
 from notebook_search import notebook_indexing
-from elasticsearch_dsl import Search
-from elasticsearch_dsl import Q
 
 import os
 
