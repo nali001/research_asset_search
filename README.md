@@ -92,3 +92,22 @@ Docker compose file for setting up **deployment** environment.
 
 ### docker-compose.dev.yml 
 Docker compose file for setting up **development** environment. 
+
+
+
+
+-------------------------------------------------------------------------------------------------------
+## Python-related tips
+### Run scripts separately
+Each djano app is considered as a package, we assume all the Python scripts are executed from `search_engine_app` dir. 
+
+For example, if you wanna invoke `notebook_indexing` from CLI, use
+```
+python -m notebook_search.notebook_indexing.py
+```
+
+### Imports
++ Only use import for packages and modules, not classes or functions. 
++ Always use absolute path for importing modules even it is from the same package. 
+
+In this case, you would not be confused by changing `sys.path`

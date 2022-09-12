@@ -1,24 +1,12 @@
-from django.forms.widgets import NullBooleanSelect, Widget
-from django.http import JsonResponse, HttpResponse, HttpResponseRedirect
-from django.shortcuts import render
-import simplejson
-from urllib.request import urlopen
-import urllib
-from datetime import datetime
-from elasticsearch import Elasticsearch
-from glob import glob
-from elasticsearch_dsl import Search, Q, Index
-from elasticsearch_dsl.query import MatchAll
-from django.core import serializers
-import numpy as np
+from elasticsearch_dsl import Index
 import json
-import uuid
 import os
-from github import BadCredentialsException
 from github import Github
 import time
 import re
-from utils import create_es_client
+
+from notebook_search import utils
+from elasticsearch import Elasticsearch
 
 ACCESS_TOKEN_Github= ""
 ACCESS_TOKEN_Gitlab= "glpat-RLNz1MhmyeR7jcox_dyA"
@@ -30,19 +18,25 @@ def open_file(file):
         data = json.load(read_file)
     return data
 # ----------------------------------------------------------------
-def index_notebooks():
-    es = create_es_client()
-    index = Index('notebooks', es)
+def index_notebooks(index_name: str, notebook_path: str) -> Elasticsearch:
+    """ Index the preprocessed notebooks into the index of Elasticsearch server named `index_name`
 
-    if not es.indices.exists(index='notebooks'):
+    Args:
+        index_name: The name of the index to be created for indexing notebooks. 
+
+    """
+    es = utils.create_es_client()
+    index = Index(index_name, es)
+
+    if not es.indices.exists(index = index_name):
         index.settings(
             index={'mapping': {'ignore_malformed': True}}
         )
         index.create()
     else:
-        es.indices.close(index='notebooks')
+        es.indices.close(index=index_name)
         put = es.indices.put_settings(
-            index='notebooks',
+            index=index_name,
             body={
                 "index": {
                     "mapping": {
@@ -50,9 +44,9 @@ def index_notebooks():
                     }
                 }
             })
-        es.indices.open(index='notebooks')
+        es.indices.open(index=index_name)
     cnt=0
-    root=(os. getcwd()+"/Jupyter Notebook/")
+    root = notebook_path
     for path, subdirs, files in os.walk(root):
         for name in files:
             cnt=cnt+1
@@ -69,9 +63,10 @@ def index_notebooks():
                 "html_url":indexfile["html_url"],
                 "git_url":indexfile["git_url"]
             }
-            res = es.index(index="notebooks", id= indexfile["git_url"], body=newRecord)
-            es.indices.refresh(index="notebooks")
+            res = es.index(index=index_name, id = indexfile["git_url"], body=newRecord)
+            es.indices.refresh(index=index_name)
             print(str(cnt)+" recode added! \n")
+    return es
 # ----------------------------------------------------------------
 def search_repository_github(keywords):
     g = Github(ACCESS_TOKEN_Github)
@@ -113,7 +108,7 @@ def test():
     indexFile= open("notebooks.json","w+")
     indexFile.write(json.dumps(response_data))
     indexFile.close()
-    indexingpipeline()
+    index_notebooks()
 # ----------------------------------------------------------------
 
 def get_most_starred_repos():
@@ -182,5 +177,6 @@ def get_most_starred_repos():
                     time.sleep(10)
             time.sleep(10)
 # ----------------------------------------------------------------
-index_notebooks()
+if __name__ == '__main__': 
+    index_notebooks('notebooks', os.getcwd() + 'Jupyter Notebook/')
 # test()

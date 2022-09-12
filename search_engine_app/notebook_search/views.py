@@ -1,23 +1,16 @@
-from django.forms.widgets import NullBooleanSelect, Widget
-from django.http import JsonResponse, HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
-import simplejson
-from urllib.request import urlopen
+
 import urllib
-from datetime import datetime
-from elasticsearch import Elasticsearch
-from glob import glob
-from elasticsearch_dsl import Search, Q, Index
-from elasticsearch_dsl.query import MatchAll
-from django.core import serializers
-import numpy as np
 import json
+import numpy as np
 import requests
 from bs4 import BeautifulSoup
 from spellchecker import SpellChecker
 
-from utils import create_es_client
-es = create_es_client()
+import os
+
+from notebook_search import utils
+es = utils.create_es_client()
 #-------------------------------------------------------------------------------------------
 ACCESS_TOKEN_Github= "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"
 ACCESS_TOKEN_Gitlab= "glpat-RLNz1MhmyeR7jcox_dyA"
