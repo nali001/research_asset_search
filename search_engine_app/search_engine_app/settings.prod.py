@@ -145,11 +145,4 @@ ELASTICSEARCH_DSL = {
         'hosts': os.getenv("ELASTICSEARCH_DSL_HOSTS", 'elasticsearch:9200')
     },
 }
-
-# Elasticsearch development
-# ELASTICSEARCH_DSL = {
-#     'default': {
-#         'hosts': os.getenv("ELASTICSEARCH_DSL_HOSTS", '127.0.0.1:9200')
-#     },
-# }
 #---------------------------------------------------------------------------------------------------------------

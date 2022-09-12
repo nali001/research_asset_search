@@ -1,4 +1,9 @@
+.vscode
 __pycache__/
 search_engine_app/venv
+search_engine_app/notebook_search/Jupyter Notebook
 elasticsearch/data
 elasticsearch/logs
+
+search_engine_app/notebook_search/haha.py
+search_engine_app/notebook_search/test.py
