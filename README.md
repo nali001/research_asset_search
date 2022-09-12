@@ -80,7 +80,12 @@ python manage.py runserver 7777
 ### elasticsearch 
 
 ### search_engine_app
-The Django project, providing URL resolvement and 
+
+### search_engine_app/notebook_search
+The Django project, providing URL resolvement, data processing and web page generation
+
++ `notebook_indexing.py`: Feed preprocessed notebook files under `Jupyter Notebook` to Elasticsearch database
+
 
 ### docker-compose.yml 
 Docker compose file for setting up **deployment** environment. 

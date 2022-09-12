@@ -16,7 +16,8 @@ import requests
 from bs4 import BeautifulSoup
 from spellchecker import SpellChecker
 
-es = Elasticsearch("http://localhost:9200")
+from utils import create_es_client
+es = create_es_client()
 #-------------------------------------------------------------------------------------------
 ACCESS_TOKEN_Github= "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"
 ACCESS_TOKEN_Gitlab= "glpat-RLNz1MhmyeR7jcox_dyA"
