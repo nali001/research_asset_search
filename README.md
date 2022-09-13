@@ -13,8 +13,10 @@ The deployment lives on docker and is accesible from the Internet.
 
 ### Usage
 1. Setup environment on host machine, refer to `os_env_setup.sh`
-2. Clone the repository \
-`git clone https://github.com/nali001/notebook_search_docker.git`
+2. Clone the repository
+```
+git clone https://github.com/nali001/notebook_search_docker.git
+```
 3. Navigate to `notebook_search_docker` and run the following: 
 ```
 mkdir elasticsearch/data elasticsearch/config elasticsearch/logs 
@@ -24,8 +26,15 @@ sudo chgrp 0 elasticsearch/data elasticsearch/config elasticsearch/logs
 3. Inside `search_engine_app/manage.py`, replace the following line: 
 ```
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'search_engine_app.settings')
+
 ```
-4. Run 
+4. Inside `search_engine_app/search_engine_app/setting.py`, replace the following line with your actual IP address: 
+```
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'IP_address']
+```
+5. Prepare the data. Put your notebooks under `notebook_search/Jupyter Notebook` and then run 
+
+6. Run 
 ```
 docker compose up
 ```
