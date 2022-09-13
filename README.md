@@ -15,6 +15,12 @@ The deployment lives on docker and is accesible from the Internet.
 1. Setup environment on host machine, refer to `os_env_setup.sh`
 2. Clone the repository \
 `git clone https://github.com/nali001/notebook_search_docker.git`
+3. Navigate to `notebook_search_docker` and run the following: 
+```
+mkdir elasticsearch/data elasticsearch/config elasticsearch/logs 
+chmod g+rwx elasticsearch/data elasticsearch/config elasticsearch/logs 
+sudo chgrp 0 elasticsearch/data elasticsearch/config elasticsearch/logs
+```
 3. Inside `search_engine_app/manage.py`, replace the following line: 
 ```
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'search_engine_app.settings')
