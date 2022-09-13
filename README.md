@@ -23,7 +23,7 @@ mkdir elasticsearch/data elasticsearch/config elasticsearch/logs
 chmod g+rwx elasticsearch/data elasticsearch/config elasticsearch/logs 
 sudo chgrp 0 elasticsearch/data elasticsearch/config elasticsearch/logs
 ```
-3. Inside `search_engine_app/manage.py`, replace the following line: 
+3. Inside `search_engine_app/manage.py`, replace with the following line: 
 ```
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'search_engine_app.settings')
 
@@ -32,7 +32,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'search_engine_app.settings')
 ```
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'IP_address']
 ```
-5. Prepare the data. Put your notebooks under `notebook_search/Jupyter Notebook` and then run 
+5. Prepare the data. Put your notebooks under `notebook_search/Jupyter Notebook`
 
 6. Run 
 ```
@@ -85,15 +85,6 @@ python manage.py runserver 7777
 ------------------------------------------------------------------------------------------------------
 ## Folder explanation
 ### nginx
-    - `opensemanticsearch/settings.py`: Django project global setting
-    - `opensemanticsearch/settings.py`: URL configurations
-
-+ `genericpages`: The main entry point of the search engine, containing a landing page
-
-+ `notebookearch`: Notebook search module
-+ `webSearch`: Web page searching module, including a crawler and a search engine
-+ `DSS`: Crawler for datasets
-    - `DSS/crawlerDatasetConfig.json`: Configuration file for the crawler. 
 
 ### elasticsearch 
 
