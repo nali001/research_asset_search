@@ -10,6 +10,10 @@ from spellchecker import SpellChecker
 import os
 
 from notebook_search import utils
+from notebook_search import notebook_indexing
+
+
+# Create Elasticsearch client
 es = utils.create_es_client()
 #-------------------------------------------------------------------------------------------
 ACCESS_TOKEN_Github= "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"
@@ -23,6 +27,10 @@ page_url = '&per_page=100'
 indexPath="./var/lib/opensemanticsearch/notebookSearch/Indexes.json"
 #-------------------------------------------------------------------------------------------
 def genericsearch(request):
+    # Create index
+    if not es.indices.exists(index = 'notebooks'): 
+        notebook_indexing.index_notebooks(es, 'notebooks', os.path.join(os.getcwd(), 'notebook_search/Jupyter Notebook'))
+
     try:
         term = request.GET['term']
     except:
@@ -328,3 +336,4 @@ def getAllfunctionList(request):
     for item in saved_list:
         functionList= functionList+r"modifyCart({'operation':'add','type':'"+item['type']+"','title':'"+item['title']+"','url':'"+item['url']+"','id':'"+item['id']+"' });"
     return functionList
+
