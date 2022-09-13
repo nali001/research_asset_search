@@ -11,15 +11,16 @@ def open_file(file):
         data = json.load(read_file)
     return data
 # ----------------------------------------------------------------
-def index_notebooks(index_name: str, notebook_path: str) -> Elasticsearch:
+def index_notebooks(es: Elasticsearch, index_name: str, notebook_path: str) -> Elasticsearch:
     """ Feed the preprocessed notebooks into the index of Elasticsearch server named `index_name`
 
     Args:
+        es: The connected Elasticsearch client 
         index_name: The name of the index to be created for indexing notebooks. 
         notebook_path: Directory for storing preprocessed notebooks
 
     """
-    es = utils.create_es_client()
+    # es = utils.create_es_client()
     index = Index(index_name, es)
 
     if not es.indices.exists(index = index_name):
@@ -64,5 +65,6 @@ def index_notebooks(index_name: str, notebook_path: str) -> Elasticsearch:
 # ----------------------------------------------------------------
 
 if __name__ == '__main__': 
-    index_notebooks('notebooks', os.getcwd() + 'Jupyter Notebook/')
+    es = utils.create_es_client()
+    index_notebooks(es, 'notebooks', os.getcwd() + 'Jupyter Notebook/')
 # test()
