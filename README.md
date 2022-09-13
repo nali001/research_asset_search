@@ -15,8 +15,11 @@ The deployment lives on docker and is accesible from the Internet.
 1. Setup environment on host machine, refer to `os_env_setup.sh`
 2. Clone the repository \
 `git clone https://github.com/nali001/notebook_search_docker.git`
-3. Remove `search_engine_app/settings.py` and change `search_engine_app/settings.prod.py` to `settings.py`
-3. Run 
+3. Inside `search_engine_app/manage.py`, replace the following line: 
+```
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'search_engine_app.settings')
+```
+4. Run 
 ```
 docker compose up
 ```
@@ -39,13 +42,13 @@ Development is mainly for Django project.
 1. Setup environment on host machine, refer to `os_env_setup.sh`
 2. Clone the repository \
 `git clone https://github.com/nali001/notebook_search_docker.git`
-2. Setup local Python environment, refer to `search_engine_app/dev_env_setup.sh`
-3. Start Elasticsearch service in a container \
-`docker compose -f docker-compose.dev.yml up` \
+3. Setup local Python environment, refer to `search_engine_app/dev_env_setup.sh`
+4. Start Elasticsearch service in a container \
+`docker compose -f docker-compose_dev.yml up` \
 It can be accessed via `localhost:9200`
-4. Inside `search_engine_app/search_engine_app/setting.py` change `ELASTICSEARCH_DSL` from `elasticsearch` to `localhost`
-5. Now you are good to go! Go to 
-`search_engine_app` and run \
+
+Now you are good to go! Go to 
+`search_engine_app` and run 
 ```
 conda activate notebook_search
 python manage.py runserver 7777
