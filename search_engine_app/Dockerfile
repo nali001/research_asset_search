@@ -6,9 +6,8 @@ ENV PYTHONUNBUFFERED 1
 WORKDIR /search_engine_app
 COPY ./requirements.txt .
 COPY ./requirements_dev.txt .
-RUN pip install -r requirements.txt
-RUN pip install -r requirements_dev.txt
-
+RUN pip install -r requirements.txt -r requirements_dev.txt
+RUN python -m notebook_search.notebook_indexing
 
 # COPY . .
 
