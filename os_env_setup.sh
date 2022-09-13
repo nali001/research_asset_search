@@ -16,6 +16,7 @@ sudo ufw allow 80/tcp
 sudo apt-get update
 # If update runs into problems, considering to uncomment this
 # sudo apt-get upgrade
+sudo apt-get install curl gpg
 
 sudo apt-get install \
     ca-certificates \
@@ -33,14 +34,8 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
 
 #---------------------- Setup Elasticsearch ----------------------#
-# For setting up Elasticsearch
-#--- 1. Change the memory limit
+# Change the memory limit
 sudo nano /etc/sysctl.conf
-# add this line at the bottom: vm.max_map_count=262144
-
-
-#--- 2. Modify access rights for the elasticsearch data
-mkdir elasticsearch/data elasticsearch/config elasticsearch/logs 
-chmod g+rwx elasticsearch/data elasticsearch/config elasticsearch/logs 
-sudo chgrp 0 elasticsearch/data elasticsearch/config elasticsearch/logs
+# add this line at the bottom: 
+# vm.max_map_count=262144
 
