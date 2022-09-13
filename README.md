@@ -85,15 +85,6 @@ python manage.py runserver 7777
 ------------------------------------------------------------------------------------------------------
 ## Folder explanation
 ### nginx
-    - `opensemanticsearch/settings.py`: Django project global setting
-    - `opensemanticsearch/settings.py`: URL configurations
-
-+ `genericpages`: The main entry point of the search engine, containing a landing page
-
-+ `notebookearch`: Notebook search module
-+ `webSearch`: Web page searching module, including a crawler and a search engine
-+ `DSS`: Crawler for datasets
-    - `DSS/crawlerDatasetConfig.json`: Configuration file for the crawler. 
 
 ### elasticsearch 
 
