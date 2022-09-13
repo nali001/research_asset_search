@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-@i7f150h^z1f9wiq7541i)h_^8$4a!zoe+fb+050y6f7xfq2ev
 DEBUG = True
 
 # replace the following line with your actual IP address
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '145.100.135.119']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'IP_address']
 
 
 # Application definition
