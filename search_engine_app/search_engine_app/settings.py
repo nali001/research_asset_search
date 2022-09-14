@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-@i7f150h^z1f9wiq7541i)h_^8$4a!zoe+fb+050y6f7xfq2ev'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # replace the following line with your actual IP address
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'IP_address']
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'genericpages',
     'notebook_search', 
     'django_elasticsearch_dsl', 
+    'rest_framework', 
 ]
 
 MIDDLEWARE = [
@@ -139,11 +140,32 @@ STATIC_ROOT = BASE_DIR / "static"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-#-------------------------- Uncomment first part and comment second part in development------------------
+#---------------------------------------- Elasticsearch DSL--------------------------------
 # Elasticsearch deployment
 ELASTICSEARCH_DSL = {
     'default': {
         'hosts': os.getenv("ELASTICSEARCH_DSL_HOSTS", 'elasticsearch:9200')
     },
+}
+#---------------------------------------------------------------------------------------------------------------
+
+
+
+
+#---------------------------------------- Django REST API--------------------------------
+DEFAULT_RENDERER_CLASSES = (
+    'rest_framework.renderers.JSONRenderer',
+)
+
+if DEBUG:
+    DEFAULT_RENDERER_CLASSES = DEFAULT_RENDERER_CLASSES + (
+        'rest_framework.renderers.BrowsableAPIRenderer',
+    )
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    ),
+    'DEFAULT_RENDERER_CLASSES': DEFAULT_RENDERER_CLASSES
 }
 #---------------------------------------------------------------------------------------------------------------

@@ -38,7 +38,7 @@ ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'IP_address']
 ```
 docker compose up
 ```
-
+If the system does not work properly, either wait for some time for all containers to go up, or run `docker compose build` to update the images. 
 
 ------------------------------------------------------------------------------------------------------
 
