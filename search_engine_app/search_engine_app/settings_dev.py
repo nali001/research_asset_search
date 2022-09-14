@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'genericpages',
     'notebook_search', 
     'django_elasticsearch_dsl', 
+    'rest_framework', 
 ]
 
 MIDDLEWARE = [

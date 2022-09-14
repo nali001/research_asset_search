@@ -1,3 +1,5 @@
+# notebook_search/views.py
+# Only used for rendering HTML
 from django.shortcuts import render
 
 import urllib
