@@ -2,3 +2,9 @@ Django==4.0.5
 gunicorn==20.1.0
 elasticsearch==7.17.6
 django-elasticsearch-dsl==7.2.2
+
+
+# Django REST API framework
+djangorestframework==3.13.1
+Markdown==3.4.1
+
