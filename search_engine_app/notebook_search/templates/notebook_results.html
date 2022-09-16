@@ -107,7 +107,7 @@
                             <img class="img-fluid" src="{% static 'images/Clarify-logo.png' %}"
                                 style="height:40px;  padding:6px;margin-top:5px;" alt="Theme-Logo" />
                         </a> -->
-                        <a href="../..">
+                        <a href="/">
                             <!-- <img class="img-fluid" src="{% static 'images/Clarify-logo.png' %}"
                               style="height:40px;  padding:6px;margin-top:5px;" alt="Theme-Logo" /> -->
                               <span style="height:40px;font-size:11pt;padding:6px;margin-top:5px;">Home</span>
@@ -508,7 +508,7 @@
             }
             newEntitiy = { 'operation': operation, 'type': type, 'title': title, 'url': url, 'id': id };
             $.ajax({
-                url: '../webSearch/addToBasket',
+                url: '../add_to_basket',
                 type: "POST",
                 dataType: "json",
                 data: JSON.stringify(newEntitiy),

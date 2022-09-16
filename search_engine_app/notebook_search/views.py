@@ -93,6 +93,10 @@ def genericsearch(request):
             searchResults["suggestedSearchTerm"]=suggestedSearchTerm
 
     return render(request,'notebook_results.html', searchResults)
+
+#-----------------------------------------------------------------------------------------------------------------------
+def add_to_basket(request): 
+    term = request.POST['term']
 #-----------------------------------------------------------------------------------------------------------------------
 def potentialSearchTerm(term):
     alternativeSearchTerm=""

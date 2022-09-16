@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'notebook_search', 
     'django_elasticsearch_dsl', 
     'rest_framework', 
+    'rest_framework.authtoken', 
 ]
 
 MIDDLEWARE = [
@@ -166,6 +167,9 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
     ),
-    'DEFAULT_RENDERER_CLASSES': DEFAULT_RENDERER_CLASSES
+    'DEFAULT_RENDERER_CLASSES': DEFAULT_RENDERER_CLASSES, 
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
 }
 #---------------------------------------------------------------------------------------------------------------
