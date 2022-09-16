@@ -8,6 +8,8 @@ services:
       - discovery.type=single-node
       - cluster.name=es_dataserver
       - node.name=es01
+      - TAKE_FILE_OWNERSHIP=true 
     ports:
       - 9200:9200
+
 

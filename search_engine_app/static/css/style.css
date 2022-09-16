@@ -7628,7 +7628,7 @@ table tbody .border-bottom-info td {
     border-left-color: transparent; }
 .pcoded .pcoded-navbar[active-item-theme="theme4"] .pcoded-item > li.active > a {
   background: -webkit-gradient(linear, left top, right top, from(#004ef9), to(#79a3ff)) !important;
-  background: linear-gradient(to right, #004ef9, #79a3ff) !important;
+  background: linear-gradient(to right, #e166a3, #0f1e85) !important;
   color: #fff !important; }
   .pcoded .pcoded-navbar[active-item-theme="theme4"] .pcoded-item > li.active > a .pcoded-micon {
     color: #fff !important; }
@@ -8348,12 +8348,12 @@ table tbody .border-bottom-info td {
     color: #fff; }
 .pcoded .pcoded-header[header-theme="theme5"] {
   background: -webkit-gradient(linear, left top, right top, from(#0071f3), to(#73b4ff));
-  background: linear-gradient(to right, #0071f3, #73b4ff); }
+  background: linear-gradient(to right, #e166a3, #0f1e85); }
   .pcoded .pcoded-header[header-theme="theme5"] a {
     color: #fff; }
 .pcoded .pcoded-header[header-theme="theme6"] {
-  background: -webkit-gradient(linear, left top, right top, from(#aa8a0a), to(#f4d03f));
-  background: linear-gradient(to right, #aa8a0a, #f4d03f); }
+  background: -webkit-gradient(linear, left top, right top, from(#d463a1), to(#001a82));
+  background: linear-gradient(to right, #d463a1, #001a82); }
   .pcoded .pcoded-header[header-theme="theme6"] a {
     color: #fff; }
 
@@ -9518,7 +9518,7 @@ body.menu-bottom #collapse-menu {
   margin-bottom: 1.25em; }
 
 .input-group-addon {
-  background-color: #4099ff;
+  background-color: #a4519a;
   color: #fff; }
 
 .input-group-button .input-group-addon {

@@ -1,10 +1,13 @@
 from django.shortcuts import render
-from elasticsearch import Elasticsearch
 import json
-import numpy as np
 
-# Create your views here.
-es = Elasticsearch("http://localhost:9200")
+from notebook_search import utils
+
+# Create Elasticsearch client
+es = utils.create_es_client()
+
+def ui_test(request): 
+    return render(request,'ui_test.html',{})
 #---------------------------------------------------------------------------------------------------------------------
 def landingpage(request):
     return render(request,'landingpage.html',{})

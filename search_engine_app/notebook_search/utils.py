@@ -16,6 +16,7 @@ def create_es_client() -> Elasticsearch:
         es = Elasticsearch(
             hosts=[{"host": host, "port": 9200}],
             http_auth=["elastic", "changeme"],
+            tim_out=30
             )
         if es.ping(): 
             break
