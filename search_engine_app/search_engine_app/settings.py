@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'genericpages',
     'notebook_search', 
     'django_elasticsearch_dsl', 
+    'apis', 
     'rest_framework', 
     'rest_framework.authtoken', 
 ]
