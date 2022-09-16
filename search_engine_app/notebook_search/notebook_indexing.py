@@ -66,5 +66,6 @@ def index_notebooks(es: Elasticsearch, index_name: str, notebook_path: str) -> E
 
 if __name__ == '__main__': 
     es = utils.create_es_client()
-    index_notebooks(es, 'notebooks', os.getcwd() + 'Jupyter Notebook/')
+    notebook_path = os.path.join(os.getcwd(), 'notebook_search', 'Jupyter Notebook')
+    index_notebooks(es, 'notebooks', notebook_path)
 # test()

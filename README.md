@@ -55,15 +55,22 @@ Development is mainly for Django project.
 
 ### Environment setup
 1. Setup environment on host machine, refer to `os_env_setup.sh`
-2. Clone the repository \
-`git clone https://github.com/nali001/notebook_search_docker.git`
+2. Clone the repository
+```
+git clone https://github.com/nali001/notebook_search_docker.git
+```
 3. Setup local Python environment, refer to `search_engine_app/dev_env_setup.sh`
-4. Start Elasticsearch service in a container \
-`docker compose -f docker-compose_dev.yml up` \
-It can be accessed via `localhost:9200`
+4. Start Elasticsearch service in a container. It can be accessed via `localhost:9200`
+```
+docker compose -f docker-compose_dev.yml up
+```
 
-Now you are good to go! Go to 
+5. Prepare the data. Put your notebooks under `notebook_search/Jupyter Notebook`. Then go to 
 `search_engine_app` and run 
+```
+python -m notebook_search.notebook_indexing
+```
+Now you are good to go! and run 
 ```
 conda activate notebook_search
 python manage.py runserver 7777
