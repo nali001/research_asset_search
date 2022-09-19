@@ -21,3 +21,8 @@ def create_es_client() -> Elasticsearch:
         if es.ping(): 
             break
     return es
+
+def extract_queries(request): 
+    ''' Extract queries from the request. 
+    
+    '''

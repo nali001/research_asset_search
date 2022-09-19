@@ -12,7 +12,7 @@ from spellchecker import SpellChecker
 import os
 
 from notebook_search import utils
-from notebook_search import notebook_indexing
+from notebook_search import notebook_retrieval
 
 
 # Create Elasticsearch client
@@ -29,71 +29,9 @@ page_url = '&per_page=100'
 indexPath="./var/lib/opensemanticsearch/notebookSearch/Indexes.json"
 #-------------------------------------------------------------------------------------------
 def genericsearch(request):
-    # Create index
-    if not es.indices.exists(index = 'notebooks'): 
-        notebook_indexing.index_notebooks(es, 'notebooks', os.path.join(os.getcwd(), 'notebook_search/Jupyter Notebook'))
-
-    try:
-        term = request.GET['term']
-    except:
-        term = ''
-    response_data= {}
-
-    if (term=="*"):
-        term=""
-    #response_data= search_github_by_url(term)
- #   response_data=search_repository_github(term)
-    #search_projects_Gitlab(term)
-
- #   indexFile= open("notebooks.json","w+")
- #   indexFile.write(json.dumps(response_data))
- #   indexFile.close()
-
-#    return HttpResponse(json.dumps(response_data), content_type="application/json")
-
-
-    try:
-        term = request.GET['term']
-        term=term.rstrip()
-        term=term.lstrip()
-    except:
-        term = ''
-
-    try:
-        page = request.GET['page']
-    except:
-        page = 0
-
-    try:
-        filter = request.GET['filter']
-    except:
-        filter = ''
-
-    try:
-        facet = request.GET['facet']
-    except:
-        facet = ''
-
-    try:
-        suggestedSearchTerm = request.GET['suggestedSearchTerm']
-    except:
-        suggestedSearchTerm = ''
-
-    searchResults=getSearchResults(request, facet, filter, page, term)
-
-    if(suggestedSearchTerm != ""):
-        searchResults["suggestedSearchTerm"]=""
-    else:
-        suggestedSearchTerm=""
-        if searchResults["NumberOfHits"]==0:
-            suggestedSearchTerm= potentialSearchTerm(term)
-            searchResults=getSearchResults(request, facet, filter, page, "*")
-            searchResults["NumberOfHits"]=0
-            searchResults["searchTerm"]=term
-            searchResults["suggestedSearchTerm"]=suggestedSearchTerm
-
-    return render(request,'notebook_results.html', searchResults)
-
+    searcher = notebook_retrieval.Genericsearch(request)
+    results = searcher.genericsearch()
+    return render(request,'notebook_results.html', results)
 #-----------------------------------------------------------------------------------------------------------------------
 def add_to_basket(request): 
     term = request.POST['term']

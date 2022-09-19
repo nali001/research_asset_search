@@ -7,6 +7,8 @@ from rest_framework.decorators import api_view
 from rest_framework.decorators import authentication_classes
 from rest_framework.decorators import permission_classes
 
+from notebook_search.serializers import NotebookResultSerializer
+from notebook_search import notebook_retrieval
 
 @api_view(['GET'])
 @authentication_classes([TokenAuthentication])
@@ -27,8 +29,30 @@ def welcome(request) -> Response:
         msg = {'name': 'notebook_search API', 'message': 'Congratulations! You have succefully received information from notebook_search API :)'}
         return Response(msg)
 
+
+# from rest_framework.renderers import JSONRenderer
+from django.http import JsonResponse
+
 @api_view(['GET'])
-def api_test(request):
+@authentication_classes([TokenAuthentication])
+# @permission_classes([IsAuthenticated])
+def notebook_search(request) -> Response: 
+    ''' Return the notebook searching results to the client. 
+    Args: 
+        request: Received request from the client. 
+
+    Returns: 
+        Response to the client.
+    '''
+    searcher = notebook_retrieval.Genericsearch(request)
+    results = searcher.genericsearch()
+
+    print('RESSSSSSSS: ', type(results))
     if request.method == 'GET':
-        print('GETTTTTTTTTTTT:', request.GET)
-        return Response({'message': request.data})
+        msg = {'name': 'notebook_search API', 
+        'alias': 'hello'}
+        serializer = NotebookResultSerializer(msg)
+        return Response(serializer.data)
+        # return JsonResponse(results)
+
+    
