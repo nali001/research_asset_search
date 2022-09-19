@@ -9,7 +9,7 @@ import os
 
 from notebook_search import utils
 from notebook_search import notebook_indexing
-from notebook_search import models
+from notebook_search import serializers
 
 # Create Elasticsearch client
 es = utils.create_es_client()
@@ -95,18 +95,17 @@ class Genericsearch():
                 searchResults["NumberOfHits"]=0
                 searchResults["searchTerm"]=term
                 searchResults["suggestedSearchTerm"]=suggestedSearchTerm
-        print('TYPEEEEEEE: ', type(searchResults))
         return searchResults
-        # Create a model
-        # Create a serializer
-        # Return the results
 
-    # 3 Iterate the search results and for each result create a new models.NotebookResult type.  
+  
     def return_notebook_results(self): 
+        ''' Iterate the search results and for each result create a new models.NotebookResultSerializer object.
+        '''
+        searchResults = self.genericsearch()
         results = []
-        results.append(models.NotebookResult(name='test', alias = 'hello world'))
+        for item in searchResults['results']: 
+            results.append(serializers.NotebookResultSerializer(item).data)
         return results
-
 
     #-----------------------------------------------------------------------------------------------------------------------
     def potentialSearchTerm(self, term):

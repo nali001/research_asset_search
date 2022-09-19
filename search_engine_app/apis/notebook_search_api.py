@@ -7,8 +7,11 @@ from rest_framework.decorators import api_view
 from rest_framework.decorators import authentication_classes
 from rest_framework.decorators import permission_classes
 
+from notebook_search.models import NotebookResult
 from notebook_search.serializers import NotebookResultSerializer
 from notebook_search import notebook_retrieval
+
+import json
 
 @api_view(['GET'])
 @authentication_classes([TokenAuthentication])
@@ -44,15 +47,13 @@ def notebook_search(request) -> Response:
     Returns: 
         Response to the client.
     '''
-    searcher = notebook_retrieval.Genericsearch(request)
-    results = searcher.genericsearch()
-
-    print('RESSSSSSSS: ', type(results))
     if request.method == 'GET':
-        msg = {'name': 'notebook_search API', 
-        'alias': 'hello'}
-        serializer = NotebookResultSerializer(msg)
-        return Response(serializer.data)
+        # Use NotebookResultSerializer to serialize one search result and 
+        # Use json dumps to encode a list of serialized data
+        # data = json.dumps([NotebookResultSerializer(msg[0]).data, NotebookResultSerializer(msg[0]).data])
+        searcher = notebook_retrieval.Genericsearch(request)
+        results = json.dumps(searcher.return_notebook_results())
+        return Response(results)
         # return JsonResponse(results)
 
     

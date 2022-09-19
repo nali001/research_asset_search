@@ -1,8 +1,7 @@
+from tkinter.ttk import Notebook
 from django.contrib import admin
-# from .models import Movie, Hero
+from notebook_search.models import NotebookResult
 
-# # Register your models here.
-
-# admin.site.register(Movie)
-# admin.site.register(Hero)
+# Register your models here.
+admin.site.register(NotebookResult)
 
