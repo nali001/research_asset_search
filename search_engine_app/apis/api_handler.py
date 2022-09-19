@@ -1,4 +1,5 @@
 import requests
+from pprint import pprint
 
 def get_notebook_search_results(): 
     keyword = 'cancer'
@@ -18,7 +19,10 @@ def get_notebook_search_results():
         }
     )
     hits = response.json()
-    print(hits)
+    # hits = response
+    print('------------------------ Example of searching result -----------------------\n')
+    pprint(hits[7])
+    print('----------------------------------------------------------------------------\n')
     return hits
 
 if __name__ == "__main__": 
