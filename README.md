@@ -19,9 +19,9 @@ git clone https://github.com/nali001/notebook_search_docker.git
 ```
 3. Navigate to `notebook_search_docker` and run the following: 
 ```
-mkdir elasticsearch/data elasticsearch/config elasticsearch/logs 
-chmod g+rwx elasticsearch/data elasticsearch/config elasticsearch/logs 
-sudo chgrp 0 elasticsearch/data elasticsearch/config elasticsearch/logs
+mkdir elasticsearch/data elasticsearch/logs 
+chmod g+rwx elasticsearch/data elasticsearch/logs 
+sudo chgrp 0 elasticsearch/data elasticsearch/logs
 ```
 3. Inside `search_engine_app/manage.py`, replace with the following line: 
 ```
@@ -75,6 +75,14 @@ Now you are good to go! and run
 conda activate notebook_search
 python manage.py runserver 7777
 ```
+
+
+------------------------------------------------------------------------------------------------------
+## Data backup and restore
+It is important to persist your data, especially when you run everything inside containers. 
+
+### Elasticsearch data backup
+Please refer to `es_backup.sh`.
 
 ------------------------------------------------------------------------------------------------------
 ## Framework Design Philosophy 

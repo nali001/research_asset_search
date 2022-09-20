@@ -2,14 +2,15 @@ services:
   elasticsearch: 
     build: ./elasticsearch
     volumes: 
-      - ./elasticsearch/data:/usr/share/elasticsearch/data
-      - ./elasticsearch/logs:/usr/share/elasticsearch/logs
+      - esdata/data:/usr/share/elasticsearch/data
+      - esdata/logs:/usr/share/elasticsearch/logs
     networks: 
       - search_engine_net
     environment:
       - discovery.type=single-node
       - cluster.name=es_dataserver
       - node.name=es01
+      - TAKE_FILE_OWNERSHIP=true 
     expose: 
       - 9200
 
@@ -38,4 +39,7 @@ services:
 networks: 
   search_engine_net:
     driver: bridge
+
+volumes: 
+  esdata
 
