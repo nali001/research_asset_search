@@ -2,9 +2,9 @@ import requests
 from pprint import pprint
 
 def get_notebook_search_results(): 
-    keyword = 'cancer'
+    keyword = 'breast cancer'
     response = requests.get(
-        'http://127.0.0.1:7777/api/notebook_search/',
+        'http://145.100.135.119/api/notebook_search/',
         params={
             "page": "1",
             "keywords": keyword,
