@@ -2,8 +2,8 @@ services:
   elasticsearch: 
     build: ./elasticsearch
     volumes: 
-      - esdata/data:/usr/share/elasticsearch/data
-      - esdata/logs:/usr/share/elasticsearch/logs
+      - ./elasticsearch/data:/usr/share/elasticsearch/data
+      - ./elasticsearch/logs:/usr/share/elasticsearch/logs
     networks: 
       - search_engine_net
     environment:
@@ -39,7 +39,4 @@ services:
 networks: 
   search_engine_net:
     driver: bridge
-
-volumes: 
-  esdata
 
