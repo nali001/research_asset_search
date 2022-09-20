@@ -33,10 +33,9 @@ class Genericsearch():
         self.response_data = {}
     def genericsearch(self):
         request = self.request
-        # # Create index
-        # if not es.indices.exists(index = 'notebooks'): 
-        #     notebook_indexing.index_notebooks(es, 'notebooks', os.path.join(os.getcwd(), 'notebook_search/Jupyter Notebook'))
-
+        # Create index from Jupyter notebooks 
+        if not es.indices.exists(index = 'notebooks'): 
+            notebook_indexing.index_notebooks(es, 'notebooks', os.path.join(os.getcwd(), 'notebook_search/Jupyter Notebook'))
         try:
             term = request.GET['term']
         except:
