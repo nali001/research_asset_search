@@ -47,6 +47,7 @@ def notebook_search(request) -> Response:
         # Use NotebookResultSerializer to serialize one search result and 
         # return a list of serialized data
         searcher = notebook_retrieval.Genericsearch(request)
+        print('RUQESTTTTTTTTT: \n', request)
         results = searcher.return_notebook_results()
         return Response(results) 
 

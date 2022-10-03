@@ -82,6 +82,8 @@ class Genericsearch():
         except:
             suggestedSearchTerm = ''
 
+        
+        print("TERMMMMMMM: \n", term)
         searchResults = self.getSearchResults(request, facet, filter, page, term)
 
         if(suggestedSearchTerm != ""):
