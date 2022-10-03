@@ -1,7 +1,7 @@
 .vscode
 __pycache__/
 search_engine_app/venv
-search_engine_app/notebook_search/Jupyter Notebook
+search_engine_app/notebook_search/Github Notebooks
 elasticsearch/data
 elasticsearch/logs
 

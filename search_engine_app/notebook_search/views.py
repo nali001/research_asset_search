@@ -17,19 +17,10 @@ from notebook_search import notebook_retrieval
 
 # Create Elasticsearch client
 es = utils.create_es_client()
-#-------------------------------------------------------------------------------------------
-ACCESS_TOKEN_Github= "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"
-ACCESS_TOKEN_Gitlab= "glpat-RLNz1MhmyeR7jcox_dyA"
 
-# http request authentication
-header = {"Authorization": "token %s" % ACCESS_TOKEN_Github}
-# initialize query request parameters
-base_url = 'https://api.github.com/search/code?l=Jupyter+Notebook&q=ipynb+in:path+extension:ipynb'
-page_url = '&per_page=100'
-indexPath="./var/lib/opensemanticsearch/notebookSearch/Indexes.json"
-#-------------------------------------------------------------------------------------------
 def genericsearch(request):
-    searcher = notebook_retrieval.Genericsearch(request)
+    index_name = "github_notebooks"
+    searcher = notebook_retrieval.Genericsearch(request, es, index_name)
     results = searcher.genericsearch()
     return render(request,'notebook_results.html', results)
 #-----------------------------------------------------------------------------------------------------------------------
