@@ -18,14 +18,15 @@
 
 -----------------------------------------------------------------------------------------------
 ## Data exchange between frontend and backend
-### A.1-A.2 
+### A.1-A.2 [current progress]
 When clicking the search icon: 
 
 client --> server
 ```
 {
-'event': 'notebook_search', 
-'query': query,
+    'user_id': user_id, 
+    'event': 'notebook_search', 
+    'query': query,
 }
 ```
 
@@ -39,7 +40,7 @@ server --> client
 ```
 
 
-### B.1 
+### B.1 [next step]
 When clicking the 'Context-based search' button: 
 
 client --> server
@@ -59,7 +60,7 @@ server --> client
 }
 ```
 
-### B.2-B.3 
+### B.2-B.3 [similar to A.1-A.2]
 When clicking the search icon:
 
 client --> server
@@ -81,15 +82,15 @@ server --> client
 ```
 
 
-### D.1-D.2
+### D.1-D.2 [relevancy annotation]
 When clicking the stars: \
 client --> server
 ```
 {
-'event': 'relevancy_feedback', 
-'query': query, 
-'notebook_id': notebook_id, 
-'num_stars': num_stars
+    'event': 'relevancy_feedback', 
+    'query': query, 
+    'notebook_id': notebook_id, 
+    'num_stars': num_stars
 }
 ```
 
