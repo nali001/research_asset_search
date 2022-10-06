@@ -6,10 +6,14 @@ from rest_framework.decorators import authentication_classes
 from rest_framework.decorators import permission_classes
 
 from notebook_search import notebook_retrieval
+from notebook_search import utils
+from notebook_search import serializers
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 
-import json
+
+# Create Elasticsearch client
+es = utils.create_es_client()
 
 @api_view(['GET'])
 @authentication_classes([TokenAuthentication])
@@ -44,11 +48,14 @@ def notebook_search(request) -> Response:
         Response(results): A list of notebook searching results. 
     '''
     if request.method == 'GET':
-        # Use NotebookResultSerializer to serialize one search result and 
-        # return a list of serialized data
-        searcher = notebook_retrieval.Genericsearch(request)
-        print('RUQESTTTTTTTTT: \n', request)
-        results = searcher.return_notebook_results()
+        # Generate notebook search results for API endpoint. 
+        # Iterate the search results and for each result create a new models.NotebookResultSerializer object.
+        index_name = "kaggle_notebooks"
+        searcher = notebook_retrieval.Genericsearch(request, es, index_name)
+        searchResults = searcher.genericsearch()
+        results = []
+        for item in searchResults['results']: 
+            results.append(serializers.KaggleNotebookResultSerializer(item).data)
+            # results.append(serializers.GithubNotebookResultSerializer(item).data)
         return Response(results) 
-
     

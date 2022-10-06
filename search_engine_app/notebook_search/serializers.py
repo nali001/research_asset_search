@@ -1,13 +1,19 @@
 
 # 2. Define the model serializer
 from rest_framework import serializers
-from notebook_search.models import NotebookResultGithub
+from notebook_search.models import GithubNotebookResult
+from notebook_search.models import KaggleNotebookResult
 
-class NotebookResultGithubSerializer(serializers.ModelSerializer):
+
+class GithubNotebookResultSerializer(serializers.ModelSerializer):
     class Meta:
-        model = NotebookResultGithub
+        model = GithubNotebookResult
         # Modify the fields to get a subset of fields to serialize
         fields = ['name', 'full_name', 'stargazers_count', 'forks_count', 'description', 'size', 'language', 'html_url', 'git_url']
-        # fields = ['name', 'full_name']
 
 
+class KaggleNotebookResultSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = KaggleNotebookResult
+        # Modify the fields to get a subset of fields to serialize
+        fields = ['kaggle_id', 'name', 'file_name', 'description', 'html_url']

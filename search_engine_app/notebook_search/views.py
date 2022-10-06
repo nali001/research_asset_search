@@ -18,8 +18,10 @@ from notebook_search import notebook_retrieval
 # Create Elasticsearch client
 es = utils.create_es_client()
 
-def genericsearch(request):
-    index_name = "github_notebooks"
+def genericsearch_view(request):
+    ''' Retrieve notebooks from Elasticsearch and render the web page. 
+    '''
+    index_name = "kaggle_notebooks"
     searcher = notebook_retrieval.Genericsearch(request, es, index_name)
     results = searcher.genericsearch()
     return render(request,'notebook_results.html', results)

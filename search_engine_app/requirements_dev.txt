@@ -6,3 +6,6 @@ pyspellchecker==0.7.0
 
 PyGithub==1.55
 
+
+# notebook_search 
+pandas==1.5.0

@@ -1,15 +1,7 @@
-import os
 import numpy as np
 from spellchecker import SpellChecker
 import requests
 from bs4 import BeautifulSoup
-
-from notebook_search import utils
-from notebook_search.notebook_indexing import ElasticsearchIndexer
-from notebook_search import serializers
-
-# # Create Elasticsearch client
-# es = utils.create_es_client()
 
 #-----------------------------------------------------------------------------------------------------------------------
 def synonyms(term):
@@ -35,13 +27,13 @@ class Genericsearch():
         es = self.es
         index_name = self.index_name
 
-        # Create index from Jupyter notebooks 
-        if not es.indices.exists(index = index_name): 
-            github_notebook_path = os.path.join(os.getcwd(), 'notebook_search', 'Github Notebooks')
-            indexer = ElasticsearchIndexer(es, "Github", "github_notebooks", github_notebook_path)
-            # kaggle_notebook_path = os.path.join(os.getcwd(), 'notebook_search', 'Kaggle Notebooks')
-            # indexer = ElasticsearchNotebookIndexer(es, "Kaggle", "kaggle_notebooks", kaggle_notebook_path)
-            indexer.index_notebooks()
+        # # Create index from Jupyter notebooks 
+        # if not es.indices.exists(index = index_name): 
+        #     github_notebook_path = os.path.join(os.getcwd(), 'notebook_search', 'Github Notebooks')
+        #     indexer = ElasticsearchIndexer(es, "Github", "github_notebooks", github_notebook_path)
+        #     # kaggle_notebook_path = os.path.join(os.getcwd(), 'notebook_search', 'Kaggle Notebooks')
+        #     # indexer = ElasticsearchNotebookIndexer(es, "Kaggle", "kaggle_notebooks", kaggle_notebook_path)
+        #     indexer.index_notebooks()
         
         try:
             term = request.GET['term']
@@ -94,12 +86,15 @@ class Genericsearch():
 
   
     def return_notebook_results(self): 
-        ''' Iterate the search results and for each result create a new models.NotebookResultSerializer object.
+        ''' Generate notebook search results for API endpoint. 
+        
+        Iterate the search results and for each result create a new models.NotebookResultSerializer object.
         '''
         searchResults = self.genericsearch()
         results = []
         for item in searchResults['results']: 
-            results.append(serializers.NotebookResultSerializer(item).data)
+            results.append(serializers.KaggleNotebookResultSerializer(item).data)
+            # results.append(serializers.GithubNotebookResultSerializer(item).data)
         return results
 
     def potentialSearchTerm(self, term):
