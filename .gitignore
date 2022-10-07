@@ -5,7 +5,9 @@ search_engine_app/notebook_search/Github Notebooks
 elasticsearch/data
 elasticsearch/logs
 
-postgres/
+postgres/data
+postgres/logs
+postgres/pgadmin
 
 search_engine_app/notebook_search/haha.py
 search_engine_app/notebook_search/test.py
