@@ -17,24 +17,30 @@ The deployment lives on docker and is accesible from the Internet.
 ```
 git clone https://github.com/nali001/notebook_search_docker.git
 ```
-3. Navigate to `notebook_search_docker` and run the following: 
+3. Setup Elasticsearch data folder. Navigate to `notebook_search_docker` and run the following: 
 ```
 mkdir elasticsearch/data elasticsearch/logs 
 chmod g+rwx elasticsearch/data elasticsearch/logs 
 sudo chgrp 0 elasticsearch/data elasticsearch/logs
 ```
-3. Inside `search_engine_app/manage.py`, replace with the following line: 
+4. Setup PostgresSQL data folder. Navigate to `notebook_search_docker` and run the following: 
+```
+mkdir postgres/data postgres/logs postgres/pgadmin
+chmod g+rwx postgres/data postgres/logs postgres/pgadmin
+sudo chgrp 0 postgres/data postgres/logs postgres/pgadmin
+```
+5. Inside `search_engine_app/manage.py`, replace with the following line: 
 ```
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'search_engine_app.settings')
 
 ```
-4. Inside `search_engine_app/search_engine_app/setting.py`, replace the following line with your actual IP address: 
+6. Inside `search_engine_app/search_engine_app/setting.py`, replace the following line with your actual IP address: 
 ```
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'IP_address']
 ```
-5. Prepare the data. Put your notebooks under `notebook_search/Jupyter Notebook`
+7. Prepare the data. Put your notebooks under `notebook_search/Jupyter Notebook`
 
-6. Run 
+8. Run 
 ```
 docker compose up
 ```
@@ -63,6 +69,8 @@ git clone https://github.com/nali001/notebook_search_docker.git
 4. Start Elasticsearch service in a container. It can be accessed via `localhost:9200`
 ```
 docker compose -f docker-compose_dev.yml up
+docker compose -f docker-compose_postgres.yml up
+
 ```
 
 5. Prepare the data. Put your notebooks under `notebook_search/Jupyter Notebook`. Then go to 

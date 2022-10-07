@@ -1,4 +1,6 @@
 from elasticsearch import Elasticsearch
+import psycopg2
+
 ELASTICSEARCH_HOSTNAMES = ["elasticsearch", "localhost"]
 def create_es_client() -> Elasticsearch:
     """ Create an Elasticsearch client based on the IP addresses/hostname. 
@@ -26,3 +28,12 @@ def extract_queries(request):
     ''' Extract queries from the request. 
     
     '''
+
+def create_postgres_client(): 
+    conn = psycopg2.connect(
+        host="localhost",
+        port=5432, 
+        # database="suppliers",
+        user="aubergine",
+        password="aubergine")
+    return conn
