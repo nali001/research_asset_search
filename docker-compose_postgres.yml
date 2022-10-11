@@ -1,30 +1,30 @@
 services:
   postgres:
-    image: postgres:14.1-alpine
-    # build: ./postgres
+    # image: postgres:14.1-alpine
+    build: ./postgres
     volumes: 
       - ./postgres/data:/var/lib/postgresql/data
-      - ./postgres/logs:/var/lib/postgresql/logs
     environment:
-      - POSTGRES_USER=aubergine
+      - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=aubergine
-      - PGADMIN_DEFAULT_EMAIL=aubergine@master.com
-      - PGADMIN_DEFAULT_PASSWORD=auberginemaster
+      - POSTGRES_DB=notebook_search
     ports:
       - 5432:5432
       # - 5433:80
 
-  pgadmin:
-    image: dpage/pgadmin4:6.14
-    # container_name: pgadmin4_container
-    restart: always
-    ports:
-      - "5050:80"
-    environment:
-      PGADMIN_DEFAULT_EMAIL: raj@nola.com
-      PGADMIN_DEFAULT_PASSWORD: admin
-    volumes:
-      - ./postgres/pgadmin:/var/lib/pgadmin
+    
+
+  # pgadmin:
+  #   image: dpage/pgadmin4
+  #   # container_name: pgadmin4_container
+  #   # restart: always
+  #   ports:
+  #     - 5433:80
+  #   environment:
+  #     PGADMIN_DEFAULT_EMAIL: aubergine@master.com
+  #     PGADMIN_DEFAULT_PASSWORD: auberginemaster
+  #   volumes:
+  #     - ./postgres/pgadmin:/var/lib/pgadmin
 
     
 
