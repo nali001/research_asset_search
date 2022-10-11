@@ -14,30 +14,6 @@ DEBUG = True
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
-# Database
-# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-# from notebook_search import postgres_tools
-# postgres_tools.create_databases(["notebook_search"])
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'HOST': 'localhost',
-#         'PORT': '5432',
-#         'NAME': 'notebook_search',
-#         'USER': 'postgres',
-#         'PASSWORD': 'aubergine',
-#     }
-# }
-
 #-------------------------- Uncomment STATICFILES_DIRS and comment STATIC_ROOT in development------------------
 # The STATICFILES_DIRS tuple tells Django where to look for static files that are not tied to a particular app.
 STATICFILES_DIRS = [
