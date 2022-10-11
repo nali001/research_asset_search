@@ -1,11 +1,35 @@
 import psycopg2
-#!/usr/bin/python
-
-import psycopg2
-# from config import config
+from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 
 
-def create_tables():
+def execute_commands(commands): 
+    conn = None
+    try:
+        # Connect to PostgreSQL DBMS
+        # con = psycopg2.connect("user=postgres password='aubergine'")
+        conn = psycopg2.connect(
+            host="localhost",
+            port=5432,
+            user="postgres",
+            password="aubergine")    
+        conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT) 
+        cur = conn.cursor()
+        # create table one by one
+        for command in commands:
+            cur.execute(command)
+            print(f'Successfully executed:\n{command}\n')
+            print('-------------------------------------------')
+        # close communication with the PostgreSQL database server
+        cur.close()
+        # commit the changes
+        conn.commit()
+    except (Exception, psycopg2.DatabaseError) as error:
+        print(error)
+    finally:
+        if conn is not None:
+            conn.close()
+
+def create_table(schema):
     """ create tables in the PostgreSQL database"""
     commands = (
         """
@@ -42,26 +66,35 @@ def create_tables():
                     ON UPDATE CASCADE ON DELETE CASCADE
         )
         """)
-    conn = None
-    try:
-        # read the connection parameters
-        params = config()
-        # connect to the PostgreSQL server
-        conn = psycopg2.connect(**params)
-        cur = conn.cursor()
-        # create table one by one
-        for command in commands:
-            cur.execute(command)
-        # close communication with the PostgreSQL database server
-        cur.close()
-        # commit the changes
-        conn.commit()
-    except (Exception, psycopg2.DatabaseError) as error:
-        print(error)
-    finally:
-        if conn is not None:
-            conn.close()
+    execute_commands(commands)
 
 
 # if __name__ == '__main__':
 #     create_tables()
+
+
+# ----- Example Python program to create a database in PostgreSQL using Psycopg2 -----
+
+# import the PostgreSQL client for Python
+
+
+def create_databases(database_names): 
+    ''' Create postgres databases
+    '''
+    commands = []
+    for item in database_names: 
+        commands.append(f'create database {item};')
+    execute_commands(commands)
+
+    # # Connect to PostgreSQL DBMS
+    # con = psycopg2.connect("user=postgres password='aubergine'")
+    # con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
+
+    # # Obtain a DB Cursor
+    # cursor = con.cursor()
+    # cursor.execute(f'create database {database_name};')
+    # print(f'Created {database_name} in postgres!')
+    # cursor.close()
+
+
+

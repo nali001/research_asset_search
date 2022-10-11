@@ -68,8 +68,7 @@ git clone https://github.com/nali001/notebook_search_docker.git
 3. Setup local Python environment, refer to `search_engine_app/dev_env_setup.sh`
 4. Start Elasticsearch service in a container. It can be accessed via `localhost:9200`
 ```
-docker compose -f docker-compose_dev.yml up
-docker compose -f docker-compose_postgres.yml up
+docker compose -f docker-compose_es.yml -f docker-compose_postgres.yml up
 
 ```
 
