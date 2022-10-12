@@ -34,7 +34,7 @@ Related tasks:
 | Variables     | Data type |
 | ----------- | ----------- |
 | User ID      | text       |
-| Field | text |
+| Research interests | text |
 
 
 ## Query-document relevancy data

@@ -18,89 +18,175 @@
 
 -----------------------------------------------------------------------------------------------
 ## Data exchange between frontend and backend
-### A.1-A.2 [current progress]
+### Main data models
+`<user object>` 
+```
+{
+    "user_id": user_id, 
+}
+```
+
+`<query object>` 
+```
+{
+    "query_text": query_text, 
+}
+```
+
+`<notebook_result object>` 
+```
+{
+    "notebook_id": notebook_id, 
+}
+```
+
+`<cell_content object>` 
+```
+{
+    "cell_type": cell_type,
+    "cell_text": cell_text,  
+}
+```
+
+
+### A.1-A.2 [Notebook search session]
 When clicking the search icon: 
 
-client --> server
+client --> server \
+`NotebookSearchRequest`
 ```
 {
-    'user_id': user_id, 
-    'event': 'notebook_search', 
-    'query': query,
+    "user": <user object>, 
+    "event": "notebook_search", 
+    "query": <query object>,
 }
 ```
 
-server --> client
+server --> client \
+`NotebookSearchResponse`
 ```
 {
-'event': 'notebook_search', 
-'query': query, 
-'search_results': search_results
+    "user": <user object>,  
+    "event": "notebook_search", 
+    "query": <query object>, 
+    "notebook_results": [<notebook_result object>], 
+}
+```
+server --> database \
+`NotebookSearchLog`
+```
+{
+    "user": <user object>,  
+    "event": "notebook_search", 
+    "query": <query object>, 
+    "notebook_results": [<notebook_result object>], 
 }
 ```
 
 
-### B.1 [next step]
-When clicking the 'Context-based search' button: 
+### B.1 [Query generation session]
+When clicking the "Context-based search" button: 
 
-client --> server
+client --> server \
+`QueryGenerationRequest`
 ```
 {
-'event': 'context_based_search', 
-'cell_content': content
+    "user": <user object>, 
+    "event": "query_generation", 
+    "cell_content": <cell object>, 
 }
 ```
 
-server --> client 
+server --> client \
+`QueryGenerationResponse`
 ```
 {
-'event': 'context_based_search', 
-'cell_content': content, 
-'generated_queries': generated_queries
+    "user": <user object>, 
+    "event": "query_generation", 
+    "cell_content": <cell object>, 
+    "generated_queries": [<query object>], 
 }
 ```
 
-### B.2-B.3 [similar to A.1-A.2]
+### B.2-B.3 [Context-based search session]
 When clicking the search icon:
 
-client --> server
+client --> server \
+`ContextSearchRequest`
 ```
 {
-'event': 'context_based_search', 
-'generated_queries': generated_queries, 
-'actual_query': actual_query
+    "user": <user object>, 
+    "event": "context_based_search", 
+    "cell_content": <cell object>, 
+    "generated_queries": [<query object>], 
+    "issued_query": <query object>, 
 }
 ```
 
-server --> client 
+server --> client \
+`ContextSearchResponse`
 ```
 {
-'event': 'context_based_search', 
-'actual_query': actual_query, 
-'search_results': search_results
+    "user": <user object>, 
+    "event": "context_based_search", 
+    "cell_content": <cell object>, 
+    "generated_queries": [<query object>], 
+    "issued_query": <query object>, 
+    "notebook_results": [<notebook_result object>], 
+}
+```
+
+server --> client \
+`ContextSearchLog`
+```
+{
+    "user": <user object>, 
+    "event": "context_based_search", 
+    "cell_content": <cell object>, 
+    "generated_queries": [<query object>], 
+    "issued_query": <query object>, 
+    "notebook_results": [<notebook_result object>], 
 }
 ```
 
 
 ### D.1-D.2 [relevancy annotation]
 When clicking the stars: \
-client --> server
+client --> server \
+`RelevancyFeedbackRequest`
 ```
 {
-    'event': 'relevancy_feedback', 
-    'query': query, 
-    'notebook_id': notebook_id, 
-    'num_stars': num_stars
+    "user": <user object>, 
+    "event": "relevancy_feedback", 
+    "query": <query object>, 
+    "notebook": <notebook_result object>, 
+    "num_stars": num_stars, 
 }
 ```
 
-server --> client 
+server --> client \
+`RelevancyFeedbackResponse`
 ```
 {
-'event': 'relevancy_feedback', 
-'query': query, 
-'notebook_id': notebook_id, 
-'num_stars': num_stars, 
-'success': True
+    "user": <user object>, 
+    "event": "relevancy_feedback", 
+    "query": query, 
+    "notebook": <notebook_result object>, 
+    "num_stars": num_stars, 
+    "success": True, 
+}
+```
+If success is not True, then the client should send the data again. 
+
+server --> database \
+`RelevancyFeedbackLog`
+```
+{
+    "user": <user object>, 
+    "event": "relevancy_feedback", 
+    "query": query, 
+    "notebook": <notebook_result object>, 
+    "num_stars": num_stars, 
+    "success": True, 
 }
 ```
