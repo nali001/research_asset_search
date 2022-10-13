@@ -83,6 +83,16 @@ conda activate notebook_search
 python manage.py runserver 7777
 ```
 
+### Postgres inspection
+Get into postgres docker container: 
+```
+sudo docker exec -it notebook_search_docker-postgres-1 /bin/bash
+```
+Connect to the DMBS using `psql`: 
+```
+psql -U postgres
+```
+
 
 ------------------------------------------------------------------------------------------------------
 ## Data backup and restore
