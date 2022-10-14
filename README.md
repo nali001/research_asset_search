@@ -93,6 +93,20 @@ Connect to the DMBS using `psql`:
 psql -U postgres
 ```
 
+### Django administration
+Create superuser for admin: 
+```
+python manage.py createsuperuser
+# Username: admin
+# Email address: aubergine@aubergine.com
+# Password: aubergine
+```
+Update data models to database (PostgreSQL in our case)
+```
+python manage.py makemigrations
+python manage.py migrate
+```
+
 
 ------------------------------------------------------------------------------------------------------
 ## Data backup and restore

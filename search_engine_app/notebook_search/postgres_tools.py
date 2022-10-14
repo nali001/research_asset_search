@@ -28,9 +28,9 @@ def execute_commands(commands) -> psycopg2.extensions.cursor:
     # execute commands one by one
     for command in commands:
         cur.execute(command)
-        print('-----------------Command------------------')
-        print(command)
-        print('------------------------------------------\n')
+        # print('-----------------Command------------------')
+        # print(command)
+        # print('------------------------------------------\n')
     # commit the changes
     conn.commit()
     return cur
@@ -47,12 +47,20 @@ def list_databases():
     commands = ['SELECT datname FROM pg_database;']
     cur = execute_commands(commands)
     results = cur.fetchall()
-    print('----------------- Databases ---------------')
+    databases = []
     for item in results: 
-        print(item[0])
-    print('-------------------------------------------\n')
-    return results
+        databases.append(item[0])
+    # print('----------------- Databases ---------------')
+    # print(databases)
+    # print('-------------------------------------------\n')
+    return databases
 
+def database_exists(database_name:str): 
+    databases = list_databases()
+    if database_name in databases: 
+        return True
+    else: 
+        return False
 
 def create_databases(database_names:list): 
     ''' Create postgres databases

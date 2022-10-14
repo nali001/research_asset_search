@@ -2,6 +2,7 @@
 __pycache__/
 search_engine_app/venv
 search_engine_app/notebook_search/Github Notebooks
+search_engine_app/notebook_search/migrations/
 elasticsearch/data
 elasticsearch/logs
 
@@ -11,4 +12,3 @@ postgres/pgadmin
 
 search_engine_app/notebook_search/haha.py
 search_engine_app/notebook_search/test.py
-search_engine_app/notebook_search/migrations/

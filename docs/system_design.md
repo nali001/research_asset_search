@@ -37,6 +37,7 @@
 ```
 {
     "notebook_id": notebook_id, 
+    ... 
 }
 ```
 
@@ -57,6 +58,7 @@ client --> server \
 ```
 {
     "user": <user object>, 
+    "timestamp": datetime, 
     "event": "notebook_search", 
     "query": <query object>,
 }
@@ -73,7 +75,7 @@ server --> client \
 }
 ```
 server --> database \
-`NotebookSearchLog`
+`NotebookSearchLog` 
 ```
 {
     "user": <user object>,  
@@ -187,6 +189,5 @@ server --> database \
     "query": query, 
     "notebook": <notebook_result object>, 
     "num_stars": num_stars, 
-    "success": True, 
 }
 ```

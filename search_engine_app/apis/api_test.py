@@ -25,5 +25,16 @@ def get_notebook_search_results():
     print('----------------------------------------------------------------------------\n')
     return hits
 
+def send_user_data():
+    user_id = 'klm2022'
+    data = {
+        "user_id": user_id, 
+    }
+    url = "http://localhost/api/notebook_search/"
+    response = requests.post(url, data = data)
+    print('------------------------ Example of user feedback -----------------------\n')
+    pprint(response.json())
+    print('----------------------------------------------------------------------------\n')
+
 if __name__ == "__main__": 
-    get_notebook_search_results()
+    send_user_data()

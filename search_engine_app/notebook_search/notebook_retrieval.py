@@ -1,3 +1,6 @@
+# notebook_retrieval.py
+'''' This module retrieves notebooks from indexes
+'''
 import numpy as np
 from spellchecker import SpellChecker
 import requests
@@ -85,17 +88,17 @@ class Genericsearch():
         return searchResults
 
   
-    def return_notebook_results(self): 
-        ''' Generate notebook search results for API endpoint. 
+    # def return_notebook_results(self): 
+    #     ''' Generate notebook search results for API endpoint. 
         
-        Iterate the search results and for each result create a new models.NotebookResultSerializer object.
-        '''
-        searchResults = self.genericsearch()
-        results = []
-        for item in searchResults['results']: 
-            results.append(serializers.KaggleNotebookResultSerializer(item).data)
-            # results.append(serializers.GithubNotebookResultSerializer(item).data)
-        return results
+    #     Iterate the search results and for each result create a new models.NotebookResultSerializer object.
+    #     '''
+    #     searchResults = self.genericsearch()
+    #     results = []
+    #     for item in searchResults['results']: 
+    #         results.append(serializers.KaggleNotebookResultSerializer(item).data)
+    #         # results.append(serializers.GithubNotebookResultSerializer(item).data)
+    #     return results
 
     def potentialSearchTerm(self, term):
         ''' Get potential search terms

@@ -2,6 +2,7 @@
 '''
 from pathlib import Path
 import os
+from turtle import pos
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -116,7 +117,9 @@ STATIC_URL = "static/"
 
 #-------------------------- PostgreSQL database --------------------------
 from notebook_search import postgres_tools
-postgres_tools.create_databases(["notebook_search"])
+# Create database `notebook_search` if not exists
+if not postgres_tools.database_exists("notebook_search"): 
+    postgres_tools.create_databases(["notebook_search"])
 
 DATABASES = {
     'default': {

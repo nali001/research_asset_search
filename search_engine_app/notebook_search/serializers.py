@@ -3,7 +3,7 @@
 from rest_framework import serializers
 from notebook_search.models import GithubNotebookResult
 from notebook_search.models import KaggleNotebookResult
-
+from notebook_search.models import NotebookSearchRequest
 
 class GithubNotebookResultSerializer(serializers.ModelSerializer):
     class Meta:

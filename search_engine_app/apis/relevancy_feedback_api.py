@@ -15,23 +15,6 @@ from rest_framework.decorators import api_view
 # Create Elasticsearch client
 es = utils.create_es_client()
 
-@api_view(['POST'])
-@authentication_classes([TokenAuthentication])
-@permission_classes([IsAuthenticated])
-def database_test(request) -> Response: 
-    ''' Return the welcome message to API connection. 
-    Args: 
-        request: Received request from the client. 
-
-    Returns: 
-        Response to the client.
-    '''
-    if request.method == 'POST':
-        return Response(request.data)
-
-
-
-
 @api_view(['GET'])
 @authentication_classes([TokenAuthentication])
 @permission_classes([IsAuthenticated])
@@ -76,29 +59,3 @@ def notebook_search(request) -> Response:
             # results.append(serializers.GithubNotebookResultSerializer(item).data)
         return Response(results) 
     
-
-@api_view(['GET'])
-@authentication_classes([TokenAuthentication])
-@permission_classes([IsAuthenticated])
-def notebook_search(request) -> Response: 
-    ''' Return the notebook searching results to the client. 
-    Args: 
-        request: Received request from the client. 
-
-    Returns: 
-        Response(results): A list of notebook searching results. 
-    '''
-    if request.method == 'GET':
-        # Generate notebook search results for API endpoint. 
-        # Iterate the search results and for each result create a new models.NotebookResultSerializer object.
-        index_name = "kaggle_notebooks"
-        searcher = notebook_retrieval.Genericsearch(request, es, index_name)
-        searchResults = searcher.genericsearch()
-        results = []
-        for item in searchResults['results']: 
-            results.append(serializers.KaggleNotebookResultSerializer(item).data)
-            # results.append(serializers.GithubNotebookResultSerializer(item).data)
-        return Response(results) 
-
-
-
