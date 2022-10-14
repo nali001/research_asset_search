@@ -3,7 +3,11 @@
 from rest_framework import serializers
 from notebook_search.models import GithubNotebookResult
 from notebook_search.models import KaggleNotebookResult
+# from notebook_search.models import NotebookSearchRequest
 from notebook_search.models import NotebookSearchRequest
+from notebook_search.models import NotebookSearchRequestLog
+
+
 
 class GithubNotebookResultSerializer(serializers.ModelSerializer):
     class Meta:
@@ -17,3 +21,15 @@ class KaggleNotebookResultSerializer(serializers.ModelSerializer):
         model = KaggleNotebookResult
         # Modify the fields to get a subset of fields to serialize
         fields = ['kaggle_id', 'name', 'file_name', 'description', 'html_url']
+
+class NotebookSearchRequestSerializer(serializers.ModelSerializer): 
+    class Meta:
+        model = NotebookSearchRequest
+        # Modify the fields to get a subset of fields to serialize
+        fields = '__all__'
+
+class NotebookSearchRequestLogSerializer(serializers.ModelSerializer): 
+    class Meta:
+        model = NotebookSearchRequestLog
+        # Modify the fields to get a subset of fields to serialize
+        fields = '__all__'

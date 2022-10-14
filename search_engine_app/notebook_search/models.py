@@ -12,7 +12,6 @@ class BaseNotebook(models.Model):
     description = models.TextField(default = 'No description.')
     html_url = models.CharField(max_length=240, default = 'No html URL.')
     download_url = models.CharField(max_length=240, default = 'No download URL.')
-
     class Meta:
         abstract = True
 
@@ -61,11 +60,15 @@ class UserProfile(BaseUser):
 class BaseQuery(models.Model): 
     ''' Abstract query model that contains minimum set of query attributes
     '''
-    # query_id = models.CharField(max_length=60)
-    query_text = models.TextField()
+    query_id = models.CharField(max_length=60)
+    query_text = models.TextField(default = 'unknown')
     
     class Meta:
         abstract = True
+
+class QueryProfile(BaseQuery): 
+    ''' Abstract query model that contains minimum set of query attributes
+    '''
 # -----------------------------------------------------------------
 
 # ------------------------- Cell content models -----------------------
@@ -88,56 +91,99 @@ class BaseCellContent(models.Model):
 
 
 # ------------------- Notebook search models --------------------
-class BaseUserRequest(BaseUser): 
+class NotebookSearchRequest(models.Model): 
     ''' Basic search session
     '''
-    event_choices = [
-        ('notebook_search', 'notebook_search'), 
-        ('query_generation', 'query_generation'),
-        ('context_based_search', 'context_based_search'), 
-        ]
-    event = models.CharField(choices = event_choices, max_length=60, default = 'unknown')
+    user_id = models.CharField(max_length=240, default = 'unknown')
+    timestamp = models.DateTimeField(), 
+    # event_choices = [
+    #     ('notebook_search', 'notebook_search'), 
+    #     ('query_generation', 'query_generation'),
+    #     ('context_based_search', 'context_based_search'), 
+    #     ]
+    event = models.CharField(max_length=60, default = 'notebook_search')
+    query = models.TextField(default = 'unknown')
+    # class Meta:
+    #     abstract = True
+
+
+class NotebookSearchRequest(models.Model): 
+    ''' Basic search session
+    '''
+    user_id = models.CharField(max_length=240, default = 'unknown')
+    timestamp = models.CharField(max_length=60, default = 'unknown')
+    # event_choices = [
+    #     ('notebook_search', 'notebook_search'), 
+    #     ('query_generation', 'query_generation'),
+    #     ('context_based_search', 'context_based_search'), 
+    #     ]
+    event = models.CharField(max_length=60, default = 'notebook_search')
+    query = models.TextField(default = 'unknown')
+
+    def __str__(self): 
+        return self.user_id
+    # class Meta:
+    #     abstract = True
+
     
-    class Meta:
-        abstract = True
-
-class NotebookSearchRequest(BaseUserRequest): 
-    ''' Notebook search request
+class NotebookSearchRequestLog(models.Model): 
+    ''' Basic search session
     '''
-# class NotebookSearchResponse(): 
-#     ''' Notebook search response
+    user_id = models.CharField(max_length=240, default = 'unknown')
+    timestamp = models.DateTimeField(auto_now=False)
+    # event_choices = [
+    #     ('notebook_search', 'notebook_search'), 
+    #     ('query_generation', 'query_generation'),
+    #     ('context_based_search', 'context_based_search'), 
+    #     ]
+    event = models.CharField(max_length=60, default = 'notebook_search')
+    query = models.TextField(default = 'unknown')
+
+    def __str__(self): 
+        return self.user_id
+    # class Meta:
+    #     abstract = True
+
+    
+
+# class NotebookSearchRequest(UserRequest): 
+#     ''' Notebook search request
 #     '''
-#     notebook_results = 
+#     event = 'notebook_search'
+# # class NotebookSearchResponse(): 
+# #     ''' Notebook search response
+# #     '''
+# #     notebook_results = 
 
-class NotebookSearchLog(BaseUserRequest): 
-    ''' Notebook search session
-    '''
-
-
-# -----------------------------------------------------------------
-
-# ------------------- Query generation models --------------------
-class QueryGenerationSession(): 
-    ''' Query generation session
-    '''
-# -----------------------------------------------------------------
+# class NotebookSearchLog(UserRequest): 
+#     ''' Notebook search session
+#     '''
 
 
-# ------------------- Context-based search models --------------------
-class ContextSearchSession(BaseUser): 
-    ''' Context-based search session
-    '''
+# # -----------------------------------------------------------------
+
+# # ------------------- Query generation models --------------------
+# class QueryGenerationSession(): 
+#     ''' Query generation session
+#     '''
+# # -----------------------------------------------------------------
+
+
+# # ------------------- Context-based search models --------------------
+# class ContextSearchSession(BaseUser): 
+#     ''' Context-based search session
+#     '''
 
 
 
-# -----------------------------------------------------------------
+# # -----------------------------------------------------------------
 
-# ------------------- Relevancy feedback models --------------------
-class RelevancyFeedbackRequest(NotebookSearchRequest): 
-    num_stars = models.IntegerField()
-
-# class RelevancyFeedbackLog(NotebookSearchRequest, BaseNotebook): 
+# # ------------------- Relevancy feedback models --------------------
+# class RelevancyFeedbackRequest(NotebookSearchRequest): 
 #     num_stars = models.IntegerField()
-# -----------------------------------------------------------------
+
+# # class RelevancyFeedbackLog(NotebookSearchRequest, BaseNotebook): 
+# #     num_stars = models.IntegerField()
+# # -----------------------------------------------------------------
 
 

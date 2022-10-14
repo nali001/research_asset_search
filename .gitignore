@@ -12,3 +12,4 @@ postgres/pgadmin
 
 search_engine_app/notebook_search/haha.py
 search_engine_app/notebook_search/test.py
+search_engine_app/notebook_search/models_test/

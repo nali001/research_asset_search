@@ -11,6 +11,17 @@ from notebook_search import serializers
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 
+from datetime import datetime
+
+# from snotebook_search.serializers import NotebookSearchRequestSerializer
+# from search_engine_app.notebook_search.serializers import NotebookSearchRequestLogSerializer
+
+def str2datetime(timestamp:str): 
+    ''' Transform a timestamp to datatime.datetime instance in UTC timezone. 
+    '''
+    return datetime.utcfromtimestamp(float(timestamp))
+
+
 
 # Create Elasticsearch client
 es = utils.create_es_client()
@@ -28,7 +39,6 @@ def database_test(request) -> Response:
     '''
     if request.method == 'POST':
         return Response(request.data)
-
 
 
 
@@ -77,10 +87,10 @@ def notebook_search(request) -> Response:
         return Response(results) 
     
 
-@api_view(['GET'])
+@api_view(['GET', 'POST'])
 @authentication_classes([TokenAuthentication])
 @permission_classes([IsAuthenticated])
-def notebook_search(request) -> Response: 
+def notebook_search_test(request) -> Response: 
     ''' Return the notebook searching results to the client. 
     Args: 
         request: Received request from the client. 
@@ -99,6 +109,27 @@ def notebook_search(request) -> Response:
             results.append(serializers.KaggleNotebookResultSerializer(item).data)
             # results.append(serializers.GithubNotebookResultSerializer(item).data)
         return Response(results) 
+    
+    elif request.method == 'POST':
+        # print(f'REQUESTTTTTTTTTTTT: {request.data}')
+
+        # Validate the data using serializer
+        request_serializer = serializers.NotebookSearchRequestSerializer(data=request.data)
+        if request_serializer.is_valid(): 
+            request_serializer.save()
+            # Transform the request data to log data and save it into the database
+            request_data = request_serializer.data
+            request_data['timestamp'] = str2datetime(request_data['timestamp'])
+            return Response(request_data, status = 201)
+            # serializer.save()
+            # else: 
+            #     print('NNNNNNNNNOoooooooo')
+            #     return Response(request_data, status = 200) 
+        else: 
+            return Response(request_data, status = 400)
+
+        
+
 
 
 

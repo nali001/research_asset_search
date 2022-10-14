@@ -1,5 +1,17 @@
 import requests
 from pprint import pprint
+import time
+
+# API_ENDPOINT = 'http://145.100.135.119/api/'
+API_ENDPOINT = 'http://127.0.0.1:7777/api/'
+POST_CONFIG = {
+    'verify': False,
+    'headers': {
+        # "Accept": "*/*",
+        # "Content-Type": "text/json",
+        "Authorization": "Token 6d0bd0aeb32a5bad4da35ebab477c7abb65213cf"
+    }
+}
 
 def get_notebook_search_results(): 
     term = 'bread'
@@ -10,7 +22,7 @@ def get_notebook_search_results():
             "term": term,
             "filter": "",
             "facet": ""
-        },
+        }, 
         verify=False,
         headers={
             "Accept": "*/*",
@@ -25,16 +37,23 @@ def get_notebook_search_results():
     print('----------------------------------------------------------------------------\n')
     return hits
 
-def send_user_data():
+def notebook_search_test():
+    url = API_ENDPOINT + "notebook_search_test/"
     user_id = 'klm2022'
+    event = 'notebook_search'
+    timestamp = str(time.time())
+    query = 'yes please'
     data = {
         "user_id": user_id, 
+        "event": event, 
+        "timestamp": timestamp, 
+        "query": query, 
     }
-    url = "http://localhost/api/notebook_search/"
-    response = requests.post(url, data = data)
+    print(data)
+    response = requests.post(url, data = data, **POST_CONFIG)
     print('------------------------ Example of user feedback -----------------------\n')
     pprint(response.json())
     print('----------------------------------------------------------------------------\n')
 
 if __name__ == "__main__": 
-    send_user_data()
+    notebook_search_test()
