@@ -60,7 +60,7 @@ class UserProfile(models.Model):
     client_user = models.ForeignKey(ClientUser, on_delete=models.CASCADE)
     research_interests = models.TextField()
     def __str__(self):
-        return self.client_id
+        return self.id
 # -----------------------------------------------------------------
 
 
