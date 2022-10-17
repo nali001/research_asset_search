@@ -11,7 +11,7 @@ def create_connection() -> psycopg2.extensions.connection:
             host="localhost",
             port=5432,
             user="postgres",
-            password="aubergine")    
+            password="notebooksearch2022")    
         conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT) 
     except (Exception, psycopg2.DatabaseError) as error:
         print(error)
@@ -67,7 +67,7 @@ def create_databases(database_names:list):
     '''
     commands = []
     for item in database_names: 
-        commands.append(f'create database {item};')
+        commands.append(f'CREATE DATABASE {item};')
     execute_commands(commands)
     print()
     return True
@@ -81,14 +81,14 @@ def delete_databases(database_names: list):
     '''
     commands = []
     for item in database_names: 
-        commands.append(f'drop database {item};')
+        commands.append(f'DROP DATABASE {item};')
     execute_commands(commands)
     return True
 # ----------------------------------------------------------------
 
 
 # ---------------------------- Table level ---------------------
-def create_table(schema):
+def create_tables(schema):
     """ create tables in the PostgreSQL database"""
     commands = (
         """
@@ -126,10 +126,20 @@ def create_table(schema):
         )
         """)
     execute_commands(commands)
+
+
+def delete_tables(table_names):
+    """ create tables in the PostgreSQL database
+    """
+    commands = []
+    for table_name in table_names: 
+        commands.append(f'DROP TABLE {table_name};')
+    execute_commands(commands)
+    return True
 # ----------------------------------------------------------------
 
 
-# if __name__ == '__main__':
+# if __name__ == '__main__': 
 #     create_tables()
 
 

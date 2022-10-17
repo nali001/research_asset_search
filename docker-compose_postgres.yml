@@ -6,7 +6,7 @@ services:
       - ./postgres/data:/var/lib/postgresql/data
     environment:
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=aubergine
+      - POSTGRES_PASSWORD=notebooksearch2022
       - POSTGRES_DB=notebook_search
     ports:
       - 5432:5432

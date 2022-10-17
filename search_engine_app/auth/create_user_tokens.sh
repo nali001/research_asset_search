@@ -1,6 +1,11 @@
 # user: aubergine  
-# password: notebook_search2022
-# token: 6d0bd0aeb32a5bad4da35ebab477c7abb65213cf
-python manage.py createsuperuser --username aubergine  --email aubergine@aubergine.com
+# token: 6239ff813e9b33b24f7bd60a59eb09d81f58df58
+python manage.py createsuperuser --username aubergine  --email aubergine@notebooksearch.com
+# password: notebooksearch2022
+
 python manage.py drf_create_token aubergine
+
+
+python manage.py createsuperuser --username admin  --email admin@notebooksearch.com
+# password: notebooksearch2022
 

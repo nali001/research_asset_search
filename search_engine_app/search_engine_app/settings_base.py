@@ -128,7 +128,7 @@ DATABASES = {
         'PORT': '5432',
         'NAME': 'notebook_search',
         'USER': 'postgres',
-        'PASSWORD': 'aubergine',
+        'PASSWORD': 'notebooksearch2022',
     }
 }
 #---------------------------------------------------------------------------

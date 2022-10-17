@@ -9,9 +9,10 @@ POST_CONFIG = {
     'headers': {
         # "Accept": "*/*",
         # "Content-Type": "text/json",
-        "Authorization": "Token 6d0bd0aeb32a5bad4da35ebab477c7abb65213cf"
+        "Authorization": "Token 6239ff813e9b33b24f7bd60a59eb09d81f58df58", 
     }
 }
+
 
 def get_notebook_search_results(): 
     term = 'bread'
@@ -39,7 +40,7 @@ def get_notebook_search_results():
 
 def notebook_search_test():
     url = API_ENDPOINT + "notebook_search_test/"
-    user_id = 'klm2022'
+    user_id = 'bigface'
     event = 'notebook_search'
     timestamp = str(time.time())
     query = 'yes please'
@@ -55,5 +56,41 @@ def notebook_search_test():
     pprint(response.json())
     print('----------------------------------------------------------------------------\n')
 
+
+
+def notebook_search_test():
+    url = API_ENDPOINT + "notebook_search_test/"
+    user_id = 'bigface'
+    event = 'notebook_search'
+    timestamp = str(time.time())
+    query = 'yes please'
+    data = {
+        "user_id": user_id, 
+        "event": event, 
+        "timestamp": timestamp, 
+        "query": query, 
+    }
+    print(data)
+    response = requests.post(url, data = data, **POST_CONFIG)
+    print('------------------------ Example of user feedback -----------------------\n')
+    pprint(response.json())
+    print('----------------------------------------------------------------------------\n')
+
+def send_user_data():
+    url = API_ENDPOINT + "create_user/"
+    client_id = 'bigface'
+    # event = 'notebook_search'
+    # timestamp = str(time.time())
+    # query = 'yes please'
+    data = {
+        "client_id": client_id, 
+    }
+    response = requests.post(url, data = data, **POST_CONFIG)
+    print('------------------------ Example of user feedback -----------------------\n')
+    pprint(response.json())
+    print('----------------------------------------------------------------------------\n')
+
+
+
 if __name__ == "__main__": 
-    notebook_search_test()
+    send_user_data()
