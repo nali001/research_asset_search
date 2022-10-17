@@ -47,32 +47,32 @@ class ClientUser(models.Model):
     # The ID assigned to a user by the frontend. 
     client_id = models.CharField(max_length=240, unique=True)
 
-    # class Meta:
-    #     abstract = True
-    def __str__(self):
-        return self.client_id
+    class Meta:
+        abstract = True
+    # def __str__(self):
+    #     return self.client_id
 
 
-class UserProfile(models.Model): 
+class UserProfile(ClientUser): 
     ''' User profile 
     '''
     # client_id = models.CharField(max_length=240)
-    client_user = models.ForeignKey(ClientUser, on_delete=models.CASCADE)
+    # client_user = models.ForeignKey(ClientUser, related_name="userprofiles", on_delete=models.CASCADE)
     research_interests = models.TextField()
     def __str__(self):
-        return self.id
+        return self.client_id
 # -----------------------------------------------------------------
 
 
-# # ------------------------- Query models -----------------------
-# class Query(models.Model): 
-#     ''' Abstract query model that contains minimum set of query attributes
-#     '''
-#     query_id = models.CharField(max_length=60)
-#     query_text = models.TextField(default = 'unknown')
+# ------------------------- Query models -----------------------
+class Query(models.Model): 
+    ''' Abstract query model that contains minimum set of query attributes
+    '''
+    # query_id = models.CharField(max_length=60)
+    query_text = models.TextField()
     
-#     # class Meta:
-#     #     abstract = True
+    # class Meta:
+    #     abstract = True
 
 # # class QueryProfile(Query): 
 # #     ''' Abstract query model that contains minimum set of query attributes

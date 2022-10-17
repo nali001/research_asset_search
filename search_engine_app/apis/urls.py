@@ -12,4 +12,5 @@ urlpatterns = [
     # path('query_generation/', notebook_search_api.query_generation, name='query_generation'),
     # path('relevancy_feedback/', notebook_search_api.relevancy_feedback, name='relevancy_feedback'),
     path('create_user/', notebook_search_api.create_user, name='create_user'),
+    path('create_userprofile/', notebook_search_api.create_userprofile, name='create_userprofile'),
 ]

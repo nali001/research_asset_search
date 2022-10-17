@@ -9,7 +9,7 @@ POST_CONFIG = {
     'headers': {
         # "Accept": "*/*",
         # "Content-Type": "text/json",
-        "Authorization": "Token 6239ff813e9b33b24f7bd60a59eb09d81f58df58", 
+        "Authorization": "Token ab132fc1bc7f55d8410d276335b5e922a7d60072", 
     }
 }
 
@@ -76,7 +76,7 @@ def notebook_search_test():
     pprint(response.json())
     print('----------------------------------------------------------------------------\n')
 
-def send_user_data():
+def send_user_info():
     url = API_ENDPOINT + "create_user/"
     client_id = 'bigface'
     # event = 'notebook_search'
@@ -90,7 +90,26 @@ def send_user_data():
     pprint(response.json())
     print('----------------------------------------------------------------------------\n')
 
+def send_user_profile():
+    url = API_ENDPOINT + "create_userprofile/"
+    client_id = 'smalldog'
+    client_user = {
+        "client_id": client_id, 
+    }
+    research_interests = "machine learning"
+    # event = 'notebook_search'
+    # timestamp = str(time.time())
+    # query = 'yes please'
+    data = {
+        "client_id": client_id, 
+        "research_interests": research_interests, 
+    }
+    response = requests.post(url, json = data, **POST_CONFIG)
+    print('------------------------ Example of user feedback -----------------------\n')
+    pprint(response.json())
+    print('----------------------------------------------------------------------------\n')
+
 
 
 if __name__ == "__main__": 
-    send_user_data()
+    send_user_profile()

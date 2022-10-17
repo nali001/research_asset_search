@@ -66,13 +66,21 @@ Development is mainly for Django project.
 git clone https://github.com/nali001/notebook_search_docker.git
 ```
 3. Setup local Python environment, refer to `search_engine_app/dev_env_setup.sh`
-4. Start Elasticsearch service in a container. It can be accessed via `localhost:9200`
+4. Start `Elasticsearch` service in docker. It can be accessed via `localhost:9200`
 ```
 docker compose -f docker-compose_es.yml up
-docker compose -f docker-compose_postgres_admin.yml up
 ```
 
-5. Prepare the data. Put your notebooks under `notebook_search/Jupyter Notebook`. Then go to 
+5. Start `Postgres` service in docker. It can be accessed via `localhost:5432`
+```
+docker compose -f docker-compose_postgres_admin.yml up
+```
+If you don't want to use pgadmin4, run the following: 
+```
+docker compose -f docker-compose_postgres.yml up
+```
+
+6. Prepare the data. Put your notebooks under `notebook_search/Jupyter Notebook`. Then go to 
 `search_engine_app` and run 
 ```
 python -m notebook_search.notebook_indexing

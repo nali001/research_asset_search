@@ -10,7 +10,8 @@ from rest_framework import serializers
 # # from notebook_search.models import NotebookSearchRequest
 # from notebook_search.models import NotebookSearchRequest
 # from notebook_search.models import NotebookSearchRequestLog
-from notebook_search.models import ClientUser
+# from notebook_search.models import ClientUser
+from notebook_search.models import UserProfile
 
 
 
@@ -40,7 +41,20 @@ from notebook_search.models import ClientUser
 #         # Modify the fields to get a subset of fields to serialize
 #         fields = '__all__'
 
-class UserSerializer(serializers.ModelSerializer): 
+# class UserSerializer(serializers.ModelSerializer): 
+#     class Meta: 
+#         model = ClientUser
+#         fields = '__all__'
+
+class UserProfileSerializer(serializers.ModelSerializer): 
+    ''' A nested serializer for serializing UserProfile data
+    '''
+    # client_user = serializers.SlugRelatedField(
+    #     many=True, 
+    #     read_only=False, 
+    #     slug_field= "client_id", 
+    #     queryset=ClientUser.objects.all()
+    # )
     class Meta: 
-        model = ClientUser
+        model = UserProfile
         fields = '__all__'

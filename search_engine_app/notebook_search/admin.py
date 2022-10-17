@@ -13,7 +13,7 @@ from django.contrib import admin
 
 # from notebook_search.models import NotebookSearchRequest
 # from notebook_search.models import NotebookSearchRequestLog
-from notebook_search.models import ClientUser
+# from notebook_search.models import ClientUser
 from notebook_search.models import UserProfile
 
 
@@ -36,7 +36,7 @@ from notebook_search.models import UserProfile
 
 # admin.site.register(NotebookSearchRequest)
 # admin.site.register(NotebookSearchRequestLog)
-admin.site.register(ClientUser)
+# admin.site.register(ClientUser)
 admin.site.register(UserProfile)
 
 

@@ -69,7 +69,6 @@ def create_databases(database_names:list):
     for item in database_names: 
         commands.append(f'CREATE DATABASE {item};')
     execute_commands(commands)
-    print()
     return True
     
 
@@ -88,44 +87,30 @@ def delete_databases(database_names: list):
 
 
 # ---------------------------- Table level ---------------------
-def create_tables(schema):
-    """ create tables in the PostgreSQL database"""
-    commands = (
+def list_tables(commands): 
+    commands = [
         """
-        CREATE TABLE vendors (
-            vendor_id SERIAL PRIMARY KEY,
-            vendor_name VARCHAR(255) NOT NULL
-        )
-        """,
-        """ CREATE TABLE parts (
-                part_id SERIAL PRIMARY KEY,
-                part_name VARCHAR(255) NOT NULL
-                )
-        """,
-        """
-        CREATE TABLE part_drawings (
-                part_id INTEGER PRIMARY KEY,
-                file_extension VARCHAR(5) NOT NULL,
-                drawing_data BYTEA NOT NULL,
-                FOREIGN KEY (part_id)
-                REFERENCES parts (part_id)
-                ON UPDATE CASCADE ON DELETE CASCADE
-        )
-        """,
-        """
-        CREATE TABLE vendor_parts (
-                vendor_id INTEGER NOT NULL,
-                part_id INTEGER NOT NULL,
-                PRIMARY KEY (vendor_id , part_id),
-                FOREIGN KEY (vendor_id)
-                    REFERENCES vendors (vendor_id)
-                    ON UPDATE CASCADE ON DELETE CASCADE,
-                FOREIGN KEY (part_id)
-                    REFERENCES parts (part_id)
-                    ON UPDATE CASCADE ON DELETE CASCADE
-        )
-        """)
+        SELECT *
+        FROM pg_catalog.pg_tables
+        WHERE schemaname != 'pg_catalog' AND 
+            schemaname != 'information_schema';
+        """   
+    ]
+    cur = execute_commands(commands)
+    results = cur.fetchall()
+    tables = []
+    for item in results: 
+        tables.append(item[0])
+    # print('----------------- Databases ---------------')
+    # print(databases)
+    # print('-------------------------------------------\n')
+    return tables
+    
+
+def create_tables(commands):
+    """ create tables in the PostgreSQL database """
     execute_commands(commands)
+    return True
 
 
 def delete_tables(table_names):
