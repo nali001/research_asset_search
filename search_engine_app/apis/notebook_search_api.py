@@ -1,5 +1,6 @@
 # notebook_search/apis.py
 # Only used for handling REST APIs. 
+import re
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import authentication_classes
@@ -128,48 +129,16 @@ def welcome(request) -> Response:
 #         else: 
 #             return Response(request_data, status = 400)
 
-        
-@api_view(['POST'])
-@authentication_classes([TokenAuthentication])
-@permission_classes([IsAuthenticated])
-def create_user(request) -> Response: 
-    ''' Return the notebook searching results to the client. 
-    Args: 
-        request: Received request from the client. 
-
-    Returns: 
-        Response(results): A list of notebook searching results. 
-    '''
-    if request.method == 'POST':
-        # print(f'REQUESTTTTTTTTTTTT: {request.data}')
-
-        # Validate the data using serializer
-        request_serializer = serializers.UserSerializer(data=request.data)
-        if request_serializer.is_valid(): 
-            request_serializer.save()
-            # Transform the request data to log data and save it into the database
-            request_data = request_serializer.data
-            # request_data['timestamp'] = str2datetime(request_data['timestamp'])
-            return Response(request_data, status = 201)
-            # serializer.save()
-            # else: 
-            #     print('NNNNNNNNNOoooooooo')
-            #     return Response(request_data, status = 200) 
-        else: 
-            return Response(request_serializer.errors, status = 400)
-
-
-
 @api_view(['POST'])
 @authentication_classes([TokenAuthentication])
 @permission_classes([IsAuthenticated])
 def create_userprofile(request) -> Response: 
-    ''' Return the notebook searching results to the client. 
+    ''' Create a user profile. 
     Args: 
         request: Received request from the client. 
 
     Returns: 
-        Response(results): A list of notebook searching results. 
+        user's request. 
     '''
     if request.method == 'POST':
         print(f'REQUESTTTTTTTTTTTT: {request.data}')
@@ -180,14 +149,55 @@ def create_userprofile(request) -> Response:
             request_serializer.save()
             # Transform the request data to log data and save it into the database
             request_data = request_serializer.data
-            # request_data['timestamp'] = str2datetime(request_data['timestamp'])
             return Response(request_data, status = 201)
-            # serializer.save()
-            # else: 
-            #     print('NNNNNNNNNOoooooooo')
-            #     return Response(request_data, status = 200) 
         else: 
             return Response(request_serializer.errors, status = 400)
 
 
+
+@api_view(['POST'])
+@authentication_classes([TokenAuthentication])
+@permission_classes([IsAuthenticated])
+def notebook_search(request) -> Response: 
+    ''' Return the notebook searching results to the client. 
+    Args: 
+        request: Received request from the client. 
+
+    Returns: 
+        Response(results): A list of notebook searching results. 
+    '''
+    if request.method == 'POST':
+        print(f'REQUESTTTTTTTTTTTT: {request.data}')
+        # Validate the data using NotebookSearchRequest serializer
+        request_serializer = serializers.NotebookSearchLogSerializer(data=request.data)
+        if request_serializer.is_valid(): 
+            request_data = request_serializer.validated_data
+            if request_data["event"] == "notebook_search": 
+                request_serializer.save()
+
+                # Get notebook retrieval results from Elasticsearch 
+                index_name = "kaggle_notebooks"
+                searcher = notebook_retrieval.Genericsearch(request, es, index_name)
+                searchResults = searcher.genericsearch()
+
+                # Serialize each result using the KaggleNotebookSerializer.
+                results = []
+                for item in searchResults['results']: 
+                    results.append(serializers.KaggleNotebookResultSerializer(item).data)
+                
+                # Generate responses using the KaggleNotebookResultSerializer
+                response_data = request_data
+                response_data["notebook_results"] = results
+                response_serializer = serializers.KaggleNotebookResultSerializer(data=response_data)
+                return Response(response_serializer.data)
+                
+                # return Response(request_data, status = 201)
+            # Transform the request data to log data and save it into the database
+            else: 
+                return Response({"EventError": "Only notebook_search event is accepted."}, status = 400)
+                request_data = request_serializer.data
+    
+        else: 
+            print('NNNNNNNNNOoooooooo')
+            return Response(request_serializer.errors, status = 400)
 
