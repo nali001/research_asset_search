@@ -13,4 +13,5 @@ urlpatterns = [
     # path('create_user/', notebook_search_api.create_user, name='create_user'),
     path('create_userprofile/', notebook_search_api.create_userprofile, name='create_userprofile'),
     path('notebook_search/', notebook_search_api.notebook_search, name='notebook_search'),
+    path('test/', notebook_search_api.test, name='test'),
 ]

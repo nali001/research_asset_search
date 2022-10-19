@@ -12,7 +12,7 @@ from rest_framework import serializers
 from notebook_search.models import UserProfile
 from notebook_search.models import NotebookSearchLog
 from notebook_search.models import KaggleNotebook
-
+from notebook_search.models import NotebookSearchResult
 
 
 
@@ -66,17 +66,18 @@ class KaggleNotebookSerializer(serializers.ModelSerializer):
     class Meta:
         model = KaggleNotebook
         # Modify the fields to get a subset of fields to serialize
-        fields = '__all__'
+        fields = ('kaggle_id', 'name', 'file_name', 'html_url', 'description')
 
 
-class KaggleNotebookResultSerializer(serializers.ModelSerializer):
+class KaggleNotebookSearchResultSerializer(serializers.ModelSerializer):
     ''' A nested serliazer for generating responses for notebook search using Kaggle notebooks
 
     It copys the notebook search request information received from the client and adds a list of notebook results
     '''
-    notebook_results = KaggleNotebookSerializer(many=True)
+    results = KaggleNotebookSerializer(many=True)
+
     class Meta:
-        model = NotebookSearchLog
+        model = NotebookSearchResult
         # Modify the fields to get a subset of fields to serialize
         fields = '__all__'
 

@@ -1,4 +1,4 @@
-# notebook_retrieval.py
+# genericsearch.py
 '''' This module retrieves notebooks from indexes
 '''
 import numpy as np
@@ -14,7 +14,7 @@ def synonyms(term):
     return [span.text for span in soup.findAll('a', {'class': 'css-1kg1yv8 eh475bn0'})]
 #-----------------------------------------------------------------------------------------------------------------------
 
-class NotebookSearch():
+class Genericsearch():
     ''' Provide an entrypoint for generic notebook search
     '''
     def __init__(self, request, es, index_name): 
@@ -23,43 +23,10 @@ class NotebookSearch():
         self.index_name = index_name
         self.response_data = {}
 
-    def process_requests(self): 
-        ''' Process both `GET` and `POST` methods for notebook search 
-        '''
-        # Extract POST data
-        try: 
-            request_data = self.request.data
-        except: 
-            request_data = {}
-        
-        # Extract params for both `GET` and `POSt`
-        try: 
-            request_params = self.request.query_params
-        except: 
-            request_params = {}
-        
-        # Combine request data and params
-        request_data.update(request_params)
-        
-        query_data = {
-            'query': '', 
-            'page': 0, 
-            'filter': '', 
-            'facet': '', 
-        }
-        for key in request_data.keys(): 
-            try: 
-                val = request_data[key]
-                query_data[key] = val
-            except: 
-                continue
-        return query_data
-
-
-    def return_notebooks(self):
+    def genericsearch(self):
         ''' Provide retrival functionality towards an Elasticsearch index of given index_name. 
         '''
-        query_data = self.process_requests()
+        request = self.request
         es = self.es
         index_name = self.index_name
 
@@ -71,6 +38,39 @@ class NotebookSearch():
         #     # indexer = ElasticsearchNotebookIndexer(es, "Kaggle", "kaggle_notebooks", kaggle_notebook_path)
         #     indexer.index_notebooks()
         
+        try:
+            term = request.GET['term']
+        except:
+            term = ''
+        if (term=="*"):
+            term=""
+        try:
+            term = request.GET['term']
+            term=term.rstrip()
+            term=term.lstrip()
+        except:
+            term = ''
+
+        try:
+            page = request.GET['page']
+        except:
+            page = 0
+
+        try:
+            filter = request.GET['filter']
+        except:
+            filter = ''
+
+        try:
+            facet = request.GET['facet']
+        except:
+            facet = ''
+
+        try:
+            suggestedSearchTerm = request.GET['suggestedSearchTerm']
+        except:
+            suggestedSearchTerm = ''
+
         
         print("TERMMMMMMM: \n", term)
         searchResults = self.getSearchResults(request, facet, filter, page, term)
@@ -100,19 +100,42 @@ class NotebookSearch():
     #         # results.append(serializers.GithubNotebookResultSerializer(item).data)
     #     return results
 
+    def potentialSearchTerm(self, term):
+        ''' Get potential search terms
+        '''
+        alternativeSearchTerm=""
+
+        spell = SpellChecker()
+        searchTerm=term.split()
+        alternativeSearchTerm=""
+        for sTerm in searchTerm:
+            alterWord=spell.correction(sTerm)
+            if(alterWord!=""):
+                alternativeSearchTerm= alternativeSearchTerm+" "+alterWord
+
+        alternativeSearchTerm=alternativeSearchTerm.rstrip()
+        alternativeSearchTerm=alternativeSearchTerm.lstrip()
+
+        if alternativeSearchTerm==term:
+            alternativeSearchTerm=""
+            for sTerm in searchTerm:
+                syn=synonyms(sTerm)
+                if len(syn)>0:
+                    alterWord=syn[0]
+                    alternativeSearchTerm= alternativeSearchTerm+" "+alterWord
+
+        alternativeSearchTerm=alternativeSearchTerm.rstrip()
+        alternativeSearchTerm=alternativeSearchTerm.lstrip()
+
+        return alternativeSearchTerm
     
 
-    def retrieve_notebooks(self):
-        ''' Retrieval notebooks from Elasticsearch
+    def getSearchResults(self, request, facet, filter, page, term):
+        ''' Get search results 
         '''
-        query_data = self.process_requests()
-        term = query_data['query']
-        page = query_data['page']
-        
         es = self.es
         index_name = self.index_name
-
-        if query_data['filter']!='' and query_data['facet']!='':
+        if filter!="" and facet!="":
             saved_list = request.session['filters']
             saved_list.append({"term": {facet+".keyword": filter}})
             request.session['filters'] = saved_list
@@ -139,6 +162,7 @@ class NotebookSearch():
                 }
             )
         else:
+            user_request = "some_param"
             query_body = {
                 "from" : page,
                 "size" : 10,
@@ -175,7 +199,7 @@ class NotebookSearch():
             "facets":facets,
             "results":lstResults,
             "NumberOfHits": numHits,
-            "page_range": range(1,upperBoundPage),
+            "page_range": upperBoundPage,
             "cur_page": (page/10+1),
             "searchTerm":term,
             "functionList": self.getAllfunctionList(request)
@@ -198,6 +222,5 @@ class NotebookSearch():
             functionList= functionList+r"modifyCart({'operation':'add','type':'"+item['type']+"','title':'"+item['title']+"','url':'"+item['url']+"','id':'"+item['id']+"' });"
         return functionList
 
+
 #-----------------------------------------------------------------------------------------------------------------------
-def add_to_basket(request): 
-    term = request.POST['term']

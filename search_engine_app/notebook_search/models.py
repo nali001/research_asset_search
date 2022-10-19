@@ -45,17 +45,18 @@ class UserProfile(ClientUser):
 class BaseNotebook(models.Model): 
     ''' Abstract notebook model that contains minimum set of notebook attributes
     '''
-    notebook_id = models.CharField(max_length=60)
     name = models.CharField(max_length=60)
     description = models.TextField(default = 'No description.')
     html_url = models.CharField(max_length=240, default = 'No html URL.')
-    download_url = models.CharField(max_length=240, default = 'No download URL.')
+    # download_url = models.CharField(max_length=240, default = 'No download URL.')
     class Meta:
         abstract = True
 
 # class GithubNotebookResult(BaseNotebook):
 #     ''' Notebook result specific to Github source
 #     '''
+    # notebook_id = models.CharField(max_length=60)
+# 
 #     full_name = models.CharField(max_length=60)
 #     stargazers_count = models.IntegerField()
 #     forks_count = models.IntegerField()
@@ -65,16 +66,6 @@ class BaseNotebook(models.Model):
 #     class Meta: 
 #         managed = False
     
-
-class KaggleNotebook(BaseNotebook): 
-    ''' A notebook result specific to Kaggle source
-    
-    '''
-    title = models.CharField(max_length=120)
-    kaggle_id = models.CharField(max_length=60)
-    file_name = models.CharField(max_length=60)
-    class Meta: 
-        managed = False
 # -----------------------------------------------------------------
 
 
@@ -110,6 +101,33 @@ class NotebookSearchLog(ClientUser):
     def __str__(self):
         return self.client_id
 
+
+class NotebookSearchResult(models.Model): 
+    ''' notebook_results
+    ['facets', 'results', 'NumberOfHits', 'page_range', 'cur_page', 'searchTerm', 'functionList']
+    '''
+    facets = models.CharField(max_length=60)
+    NumberOfHits = models.IntegerField()
+    page_range = models.IntegerField()
+    cur_page = models.IntegerField()
+    searchTerm = models.CharField(max_length=60)
+    functionList = models.CharField(max_length=60)
+
+    class Meta: 
+        managed = False
+
+
+class KaggleNotebook(BaseNotebook): 
+    ''' A notebook result specific to Kaggle source
+
+    ['kaggle_id', 'name', 'file_name', 'html_url', 'description']
+    '''
+    # title = models.CharField(max_length=120)
+    kaggle_id = models.CharField(max_length=60)
+    file_name = models.CharField(max_length=60)
+    notebook_search_result = models.ForeignKey(NotebookSearchResult, related_name="results", on_delete=models.CASCADE)
+    class Meta: 
+        managed = False
 
 
 # # -----------------------------------------------------------------

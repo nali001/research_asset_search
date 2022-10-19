@@ -80,7 +80,8 @@ server --> database \
 {
     "user": <user object>,  
     "event": "notebook_search", 
-    "query": <query object>, 
+    "timestamp": timestamp, 
+    "query": query, 
     "notebook_results": [<notebook_result object>], 
 }
 ```
