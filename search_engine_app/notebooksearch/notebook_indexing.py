@@ -4,7 +4,7 @@ import os
 
 import pandas as pd
 
-from notebook_search import utils
+from notebooksearch import utils
 from elasticsearch import Elasticsearch
 
 def open_file(file):

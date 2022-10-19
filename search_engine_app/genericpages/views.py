@@ -1,7 +1,7 @@
 from django.shortcuts import render
 import json
 
-from notebook_search import utils
+from notebooksearch import utils
 
 # Create Elasticsearch client
 es = utils.create_es_client()

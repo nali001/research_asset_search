@@ -104,14 +104,14 @@ class NotebookSearchLog(ClientUser):
 
 class NotebookSearchResult(models.Model): 
     ''' notebook_results
-    ['facets', 'results', 'NumberOfHits', 'page_range', 'cur_page', 'searchTerm', 'functionList']
+    ['query', 'facets', 'num_hits', 'num_pages', 'current_page', 'results']
     '''
+    query = models.CharField(max_length=240)
     facets = models.CharField(max_length=60)
-    NumberOfHits = models.IntegerField()
-    page_range = models.IntegerField()
-    cur_page = models.IntegerField()
-    searchTerm = models.CharField(max_length=60)
-    functionList = models.CharField(max_length=60)
+    num_hits = models.IntegerField()
+    num_pages = models.IntegerField()
+    current_page = models.IntegerField()
+    # functionList = models.CharField(max_length=60)
 
     class Meta: 
         managed = False

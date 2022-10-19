@@ -3,7 +3,7 @@ from datetime import datetime
 # Always use absolute path for importing modules even it is from the same package. 
 from elasticsearch_dsl import Search
 from elasticsearch_dsl import Q
-from notebook_search import utils
+from notebooksearch import utils
 
 
 

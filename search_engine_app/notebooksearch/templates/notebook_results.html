@@ -189,21 +189,21 @@
                             <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Search Space</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="">
-                                    <a href="../webSearch/genericsearch?term={{ searchTerm }}&page=1">
+                                    <a href="../webSearch/genericsearch?term={{ query }}&page=1">
                                         <span class="pcoded-micon"><i class="ti-world"></i><b>D</b></span>
                                         <span class="pcoded-mtext" data-i18n="nav.dash.main">Webpages</span>
                                         <span class="pcoded-mcaret"></span>
                                     </a>
                                 </li>
                                 <!-- <li class="">
-                                <a href="../dataset_elastic/genericsearch?term={{ searchTerm }}&page=1">
+                                <a href="../dataset_elastic/genericsearch?term={{ query }}&page=1">
                                     <span class="pcoded-micon"><i class="ti-ruler-pencil"></i></span>
                                     <span class="pcoded-mtext"  data-i18n="nav.dash.main">Datasets</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
                             <li class="">
-                                <a href="../webAPI/genericsearch?term={{ searchTerm }}&page=1" >
+                                <a href="../webAPI/genericsearch?term={{ query }}&page=1" >
                                     <span class="pcoded-micon"><i class="ti-control-shuffle"></i></span>
                                     <span class="pcoded-mtext"  data-i18n="nav.dash.main">Web APIs</span>
                                     <span class="pcoded-mcaret"></span>
@@ -217,7 +217,7 @@
                                     </a>
                                 </li>
                                 <!-- <li class="">
-                                <a href="../webSearch/genericsearch?term={{ searchTerm }}&page=1&searchtype=imagesearch" >
+                                <a href="../webSearch/genericsearch?term={{ query }}&page=1&searchtype=imagesearch" >
                                     <span class="pcoded-micon"><i class="ti-gallery"></i></span>
                                     <span class="pcoded-mtext"  data-i18n="nav.dash.main">Images</span>
                                     <span class="pcoded-mcaret"></span>
@@ -227,7 +227,7 @@
                             <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Visualization</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li>
-                                    <a href="../genericpages/genericpages?page=graphV&term={{ searchTerm }}"
+                                    <a href="../genericpages/genericpages?page=graphV&term={{ query }}"
                                         target="_blank">
                                         <span class="pcoded-micon"><i class="ti-vector"></i><b>FC</b></span>
                                         <span class="pcoded-mtext" data-i18n="nav.form-components.main">Graph
@@ -236,7 +236,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="../genericpages/genericpages?page=pieChart&term={{ searchTerm }}">
+                                    <a href="../genericpages/genericpages?page=pieChart&term={{ query }}">
                                         <span class="pcoded-micon"><i class="ti-pie-chart"></i><b>FC</b></span>
                                         <span class="pcoded-mtext" data-i18n="nav.form-components.main">Pie chart</span>
                                         <span class="pcoded-mcaret"></span>
@@ -248,7 +248,7 @@
                             <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Info</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li>
-                                    <a href="../genericpages/genericpages?page=publications&term={{ searchTerm }}">
+                                    <a href="../genericpages/genericpages?page=publications&term={{ query }}">
                                         <span class="pcoded-micon"><i class="ti-write"></i><b>FC</b></span>
                                         <span class="pcoded-mtext"
                                             data-i18n="nav.form-components.main">Publications</span>
@@ -256,7 +256,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="../genericpages/genericpages?page=RnD&term={{ searchTerm }}">
+                                    <a href="../genericpages/genericpages?page=RnD&term={{ query }}">
                                         <span class="pcoded-micon"><i class="ti-user"></i><b>FC</b></span>
                                         <span class="pcoded-mtext" data-i18n="nav.form-components.main">R&amp;D
                                             team</span>
@@ -278,20 +278,20 @@
 
                             <div class="main-body">
                                 <div class="page-wrapper" id="MessageBox">
-                                    <script>sessionStorage.setItem("searchValue", "{{searchTerm}}"); </script>
-                                    {% if NumberOfHits == 10000 %}
-                                    I found <b> more than {{ NumberOfHits }}</b> results for you!
-                                    {% elif NumberOfHits > 0 %}
-                                    I found <b>{{ NumberOfHits}}</b> results for you!
-                                    {% elif NumberOfHits == 1 %}
+                                    <script>sessionStorage.setItem("searchValue", "{{query}}"); </script>
+                                    {% if num_hits == 10000 %}
+                                    I found <b> more than {{ num_hits }}</b> results for you!
+                                    {% elif num_hits > 0 %}
+                                    I found <b>{{ num_hits}}</b> results for you!
+                                    {% elif num_hits == 1 %}
                                     I found only <b>one</b> result for you!
                                     {% else %}
-                                    I couldn't find <b>anything</b> based on <b>"{{searchTerm}}"</b> for you!
+                                    I couldn't find <b>anything</b> based on <b>"{{query}}"</b> for you!
                                     <br>
-                                    {% if suggestedSearchTerm != "" %}
+                                    {% if suggestedquery != "" %}
                                     Did you mean:
-                                    <b><a href="../notebookSearch/genericsearch?term={{ suggestedSearchTerm }}&page=1">{{
-                                            suggestedSearchTerm }}</a></b>
+                                    <b><a href="../notebookSearch/genericsearch?term={{ suggestedquery }}&page=1">{{
+                                            suggestedquery }}</a></b>
                                     {% endif %}
                                     <script>
                                         //sessionStorage.setItem("SearchFailed","Yes");
@@ -299,7 +299,7 @@
                                     </script>
                                     {% endif %}
                                     <a style="color:blue;font-size:xx-small;" href="#"
-                                        onclick="sendFeedback('notebooks', '{{searchTerm}}', 'guestUser');">
+                                        onclick="sendFeedback('notebooks', '{{query}}', 'guestUser');">
                                         (Feedback)</a>
                                     <br>
                                     <br>
@@ -380,8 +380,8 @@
                                     {% endfor %}
                                 </div>
                                 <div style="text-align:center; margin-bottom:40px;">
-                                    {%for page in page_range %}
-                                    {% if page == cur_page %}
+                                    {% for page in page_range %}
+                                    {% if page == current_page %}
                                     <input type="button" class="btn btn-grd-primary"
                                         style="font-weight:bold; width:30px; padding:5px;" value="{{ page }}">
                                     {% else %}
@@ -562,7 +562,7 @@
             cnt = document.querySelectorAll("#MyCart li").length - 1;
             $('#MyCartCount').text(cnt);
         }
-        { { functionList | safe } }
+        {% comment %} { { functionList | safe } } {% endcomment %}
     </script>
 </body>
 

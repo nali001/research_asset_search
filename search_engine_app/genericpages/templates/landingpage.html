@@ -221,10 +221,12 @@
         // Construct URLSearchParams object instance from current URL querystring.
         var queryParams = new URLSearchParams(window.location.search);
         // Set new or modify existing parameter value.
-        queryParams.set("term", searchValue);
+        queryParams.set("query", searchValue);
         queryParams.set("page", 1);
+        queryParams.set("filter", '');
+        queryParams.set("facet", '');
         // Replace current querystring with the new one.
-        window.location.replace("../notebook_search/genericsearch?" + queryParams.toString());
+        window.location.replace("../notebooksearch/notebook_search?" + queryParams.toString());
 
       }
     }

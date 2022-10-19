@@ -5,9 +5,9 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import authentication_classes
 from rest_framework.decorators import permission_classes
 
-from notebook_search import notebook_retrieval
-from notebook_search import utils
-from notebook_search import serializers
+from notebooksearch import notebook_retrieval
+from notebooksearch import utils
+from notebooksearch import serializers
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 

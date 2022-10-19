@@ -116,7 +116,7 @@ STATIC_URL = "static/"
 
 
 #-------------------------- PostgreSQL database --------------------------
-from notebook_search import postgres_tools
+from notebooksearch import postgres_tools
 # Create database `notebook_search` if not exists
 if not postgres_tools.database_exists("notebook_search"): 
     postgres_tools.create_databases(["notebook_search"])

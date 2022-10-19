@@ -14,48 +14,7 @@ API_CONFIG = {
     }
 }
 
-
-def get_notebook_search_results(): 
-    term = 'bread'
-    url = API_ENDPOINT + "notebook_search/"
-    params={
-        "page": "1",
-        "term": term,
-        "filter": "",
-        "facet": "",
-    }
-    response = requests.get(url, params=params, **API_CONFIG)
-    hits = response.json()
-    # hits = response
-    print('------------------------ Example of searching result -----------------------\n')
-    pprint(hits[0])
-    print('----------------------------------------------------------------------------\n')
-    return hits
-
-# def notebook_search():
-#     url = API_ENDPOINT + "notebook_search/"
-#     client_id = 'smallpig'
-#     event = 'notebook_search'
-#     timestamp = str(time.time())
-#     query = 'yes please'
-#     data = {
-#         "client_id": client_id, 
-#         "event": event, 
-#         "timestamp": timestamp, 
-#         "query": query, 
-#     }
-#     params={
-#             "page": "1",
-#             "filter": "",
-#             "facet": ""
-#         }, 
-#     print(data)
-#     response = requests.post(url, params=params, data = data, **API_CONFIG)
-#     print('------------------------ Example of user feedback -----------------------\n')
-#     pprint(response.json())
-#     print('----------------------------------------------------------------------------\n')
-
-
+# ----------------------------------------- Working ------------------------------
 def send_user_profile():
     ''' Post userprofile data
     '''
@@ -74,14 +33,64 @@ def send_user_profile():
     pprint(response.json())
     print('----------------------------------------------------------------------------\n')
 
+
+
+def get_notebook_search(): 
+    query = 'bread'
+    url = API_ENDPOINT + "notebook_search/"
+    params={
+        "page": "1",
+        "query": query,
+        "filter": "",
+        "facet": "",
+    }
+    response = requests.get(url, params=params, **API_CONFIG)
+    hits = response.json()['results']
+    # hits = response
+    print('------------------------ Example of searching result -----------------------\n')
+    pprint(hits[0])
+    print('----------------------------------------------------------------------------\n')
+    return hits
+
+def post_notebook_search():
+    ''' test
+    '''
+    query = 'bread'
+    url = API_ENDPOINT + "notebook_search/"
+    params = {
+        "page": "1",
+        "query": query,
+        "filter": "",
+        "facet": "",
+    }
+
+    client_id = 'smalldog'
+    event = "notebook_search"
+    data = {
+        "client_id": client_id, 
+        "timestamp": str(time.time()), 
+        "event": event, 
+        "query": query, 
+    }
+    response = requests.get(url, params=params, data=data, **API_CONFIG)
+    hits = response.json()['results']
+    # hits = response
+    print('------------------------ Example of searching result -----------------------\n')
+    pprint(hits[0])
+    print('----------------------------------------------------------------------------\n')
+    return hits
+
+# ------------------------------------------------------------------------------------
+
+
 def test():
     ''' test
     '''
-    term = 'bread'
+    query = 'bread'
     url = API_ENDPOINT + "test/"
     params={
         "page": "1",
-        "term": term,
+        "query": query,
         "filter": "",
         "facet": "",
     }
@@ -94,4 +103,4 @@ def test():
     return hits
 
 if __name__ == "__main__": 
-    test()
+    post_notebook_search()

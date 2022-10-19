@@ -1,6 +1,6 @@
 from django.test import TestCase
 import requests
-from notebook_search import notebook_retrieval
+from notebooksearch import notebook_retrieval
 
 import os
 

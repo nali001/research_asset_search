@@ -9,10 +9,10 @@ from rest_framework import serializers
 # # from notebook_search.models import NotebookSearchRequest
 # from notebook_search.models import NotebookSearchRequestLog
 # from notebook_search.models import ClientUser
-from notebook_search.models import UserProfile
-from notebook_search.models import NotebookSearchLog
-from notebook_search.models import KaggleNotebook
-from notebook_search.models import NotebookSearchResult
+from notebooksearch.models import UserProfile
+from notebooksearch.models import NotebookSearchLog
+from notebooksearch.models import KaggleNotebook
+from notebooksearch.models import NotebookSearchResult
 
 
 

@@ -12,9 +12,9 @@ from django.contrib import admin
 
 # from notebook_search.models import NotebookSearchRequestLog
 # from notebook_search.models import ClientUser
-from notebook_search.models import UserProfile
+from notebooksearch.models import UserProfile
 # from notebook_search.models import NotebookSearchRequest
-from notebook_search.models import NotebookSearchLog
+from notebooksearch.models import NotebookSearchLog
 # from notebook_search.models import KaggleNotebookResult
 
 
