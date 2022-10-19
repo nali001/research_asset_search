@@ -103,4 +103,4 @@ def test():
     return hits
 
 if __name__ == "__main__": 
-    post_notebook_search()
+    get_notebook_search()

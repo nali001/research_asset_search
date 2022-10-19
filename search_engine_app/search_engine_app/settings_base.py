@@ -96,7 +96,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'genericpages',
-    'notebook_search', 
+    'notebooksearch', 
     'django_elasticsearch_dsl', 
     'apis', 
     'rest_framework', 

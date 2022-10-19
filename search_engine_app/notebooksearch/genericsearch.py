@@ -39,13 +39,13 @@ class Genericsearch():
         #     indexer.index_notebooks()
         
         try:
-            term = request.GET['term']
+            term = request.GET['query']
         except:
             term = ''
         if (term=="*"):
             term=""
         try:
-            term = request.GET['term']
+            term = request.GET['query']
             term=term.rstrip()
             term=term.lstrip()
         except:
@@ -78,11 +78,11 @@ class Genericsearch():
             searchResults["suggestedSearchTerm"]=""
         else:
             suggestedSearchTerm=""
-            if searchResults["NumberOfHits"]==0:
+            if searchResults["num_hits"]==0:
                 suggestedSearchTerm= self.potentialSearchTerm(term)
                 searchResults=self.getSearchResults(request, facet, filter, page, "*")
-                searchResults["NumberOfHits"]=0
-                searchResults["searchTerm"]=term
+                searchResults["num_hits"]=0
+                searchResults["query"]=term
                 searchResults["suggestedSearchTerm"]=suggestedSearchTerm
         return searchResults
 
@@ -185,14 +185,23 @@ class Genericsearch():
 
         facets=[]
 
+        # results={
+        #     "facets":facets,
+        #     "results":lstResults,
+        #     "NumberOfHits": numHits,
+        #     "page_range": upperBoundPage,
+        #     "cur_page": (page/10+1),
+        #     "searchTerm":term,
+        #     "functionList": self.getAllfunctionList(request)
+        # }
         results={
-            "facets":facets,
-            "results":lstResults,
-            "NumberOfHits": numHits,
-            "page_range": upperBoundPage,
-            "cur_page": (page/10+1),
-            "searchTerm":term,
-            "functionList": self.getAllfunctionList(request)
+            "query": term,
+            "facets": facets,
+            "num_hits": numHits,
+            "num_pages": upperBoundPage,
+            "current_page": page,
+            "results": lstResults,
+            # "function_list": self.getAllfunctionList(request)
         }
 
         return results

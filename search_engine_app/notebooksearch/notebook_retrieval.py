@@ -40,12 +40,19 @@ class NotebookRetriever():
 
         if query == "*" or query == "top10":
             query = ''
-    
+
+        print(f'QUERYYYYYYYYYY: {query}')
+        
         location=(page-1)*10
+        print(f'LOCATIONNNNNNNNN: {location}')
+
         s = Search(using=es, index=index_name)
         # Construct query
-        es_query = MultiMatch(query=query, fileds=["name", "description"], type="best_fields", minimum_should_match="50%")
-        s.query(es_query)
+        # es_query = MultiMatch(query=query, fileds=["name", "description"], type="best_fields", minimum_should_match="50%")
+
+        q = Q("match", query=query, fields=['name'])
+        q_bool = Q("bool", must = [q])
+        s.query(q_bool)
         # Pagination (from: `location', size: 10)
         s = s[location:location+10]
         es_results = s.execute()
