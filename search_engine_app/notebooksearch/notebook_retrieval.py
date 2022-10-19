@@ -2,13 +2,11 @@
 '''' This module retrieves notebooks from Elasticsearch indexes
 '''
 import numpy as np
-from spellchecker import SpellChecker
+# from spellchecker import SpellChecker
 import requests
 from bs4 import BeautifulSoup
 
 from notebooksearch import utils
-from elasticsearch_dsl import Search, Q
-from elasticsearch_dsl.query import Match, MultiMatch
 
 #-----------------------------------------------------------------------------------------------------------------------
 def synonyms(term):
@@ -40,36 +38,49 @@ class NotebookRetriever():
 
         if query == "*" or query == "top10":
             query = ''
-
-        print(f'QUERYYYYYYYYYY: {query}')
-        
         location=(page-1)*10
-        print(f'LOCATIONNNNNNNNN: {location}')
+        if query=="*" or query=="top10":
+            query_body={
+                    "from" : location,
+                    "size" : 10,
+                    "query": {
+                        "bool" : {
+                            "must" : {
+                                "match_all": {}
+                            }
+                        }
+                    }
+                }
+        else:
+            # user_request = "some_param"
+            query_body = {
+                "from" : location,
+                "size" : 10,
+                "query": {
+                    "bool": {
+                        "must": {
+                            "multi_match" : {
+                                "query": query,
+                                "fields": [ "name", "description"],
+                                # "type": "best_fields",
+                                # "minimum_should_match": "50%"
+                            }
+                        },
+                    }
+                }
+            }
 
-        s = Search(using=es, index=index_name)
-        # Construct query
-        # es_query = MultiMatch(query=query, fileds=["name", "description"], type="best_fields", minimum_should_match="50%")
-
-        q = Q("match", query=query, fields=['name'])
-        q_bool = Q("bool", must = [q])
-        s.query(q_bool)
-        # Pagination (from: `location', size: 10)
-        s = s[location:location+10]
-        es_results = s.execute()
-        
+        es_results = es.search(index=index_name, body=query_body)
         # Extract notebooks from Elasticsearch responses
         es_notebooks=[]
         for search_result in es_results['hits']['hits']:
             es_notebooks.append(search_result['_source'])
-
         num_hits=es_results['hits']['total']['value']
         num_pages=round(np.ceil(num_hits/10)+1)
         # Only display the first 11 pages
         if(num_pages>10):
             num_pages = 11
-
         facets=[]
-
         results={
             "query": query,
             "facets": facets,
@@ -79,5 +90,4 @@ class NotebookRetriever():
             "results": es_notebooks,
             # "function_list": self.getAllfunctionList(request)
         }
-
         return results

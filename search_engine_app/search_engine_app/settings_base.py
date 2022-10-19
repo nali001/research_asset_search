@@ -97,7 +97,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'genericpages',
     'notebooksearch', 
-    'django_elasticsearch_dsl', 
     'apis', 
     'rest_framework', 
     'rest_framework.authtoken', 
@@ -150,11 +149,6 @@ for host in ELASTICSEARCH_HOSTNAMES:
 if valid_hostname == None: 
     raise Exception('Please start Elasticsearch service first!')
 
-ELASTICSEARCH_DSL = {
-    'default': {
-        'hosts': os.getenv("ELASTICSEARCH_DSL_HOSTS", valid_hostname + ':9200')
-    },
-}
 print('VALIDDDDDDDDDDDDDDD Elasticsearch hostname:', valid_hostname)
 #----------------------------------------------------------------------------------------
 

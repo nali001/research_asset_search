@@ -14,10 +14,10 @@ def notebook_search_view(request):
     query_data = request.GET
     print(query_data)
     index_name = "kaggle_notebooks"
-    # searcher = notebook_retrieval.NotebookRetriever(query_data, index_name)
-    # results = searcher.retrieve_notebooks()
-    searcher = genericsearch.Genericsearch(request, es, index_name)
-    results = searcher.genericsearch()
+    searcher = notebook_retrieval.NotebookRetriever(query_data, index_name)
+    results = searcher.retrieve_notebooks()
+    # searcher = genericsearch.Genericsearch(request, es, index_name)
+    # results = searcher.genericsearch()
     results["page_range"] = range(1, results["num_pages"])
     return render(request,'notebook_results.html', results)
  

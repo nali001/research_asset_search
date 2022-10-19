@@ -74,6 +74,7 @@ class Genericsearch():
         
         searchResults = self.getSearchResults(request, facet, filter, page, term)
 
+        # Generate suggested queries for searching 
         if(suggestedSearchTerm != ""):
             searchResults["suggestedSearchTerm"]=""
         else:
@@ -84,6 +85,7 @@ class Genericsearch():
                 searchResults["num_hits"]=0
                 searchResults["query"]=term
                 searchResults["suggestedSearchTerm"]=suggestedSearchTerm
+
         return searchResults
 
     def potentialSearchTerm(self, term):
@@ -121,7 +123,7 @@ class Genericsearch():
         '''
         es = self.es
         index_name = self.index_name
-        print("Request.sessioNNNNNNNNNNNNNNNNNNNN: \n", request.session.items())
+        # print("Request.sessioNNNNNNNNNNNNNNNNNNNN: \n", request.session.items())
 
         if filter!="" and facet!="":
             saved_list = request.session['filters']
@@ -162,14 +164,13 @@ class Genericsearch():
                             "multi_match" : {
                                 "query": term,
                                 "fields": [ "name", "description"],
-                                "type": "best_fields",
-                                "minimum_should_match": "50%"
+                                # "type": "best_fields",
+                                # "minimum_should_match": "50%"
                             }
                         },
                     }
                 }
             }
-
             result = es.search(index=index_name, body=query_body)
         lstResults=[]
 
