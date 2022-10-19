@@ -23,3 +23,14 @@ ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'IP_address']
 # In our case, we are telling Django that when we run `python manage.py collectstatic`, gather all static files into a folder called staticfiles in our project root directory. 
 STATIC_ROOT = BASE_DIR / "static"
 #---------------------------------------------------------------------------------------------------------------
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': 'postgres',
+        'PORT': '5432',
+        'NAME': 'notebooksearch',
+        'USER': 'postgres',
+        'PASSWORD': 'notebooksearch2022',
+    }
+}

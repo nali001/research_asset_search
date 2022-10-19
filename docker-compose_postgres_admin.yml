@@ -7,7 +7,7 @@ services:
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=notebooksearch2022
-      - POSTGRES_DB=notebook_search
+      - POSTGRES_DB=notebooksearch
     ports:
       - 5432:5432
 

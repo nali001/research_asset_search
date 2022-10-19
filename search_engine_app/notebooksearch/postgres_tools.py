@@ -1,20 +1,25 @@
 import psycopg2
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 
+POSTGRES_HOSTNAMES = ["postgres", "localhost"]
 # ---------------------------- Global level ---------------------
 def create_connection() -> psycopg2.extensions.connection:
     conn = None
-    try:
-        # Connect to PostgreSQL DBMS
-        # con = psycopg2.connect("user=postgres password='aubergine'")
-        conn = psycopg2.connect(
-            host="localhost",
-            port=5432,
-            user="postgres",
-            password="notebooksearch2022")    
-        conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT) 
-    except (Exception, psycopg2.DatabaseError) as error:
-        print(error)
+    for host_name in POSTGRES_HOSTNAMES: 
+        try:
+            # Connect to PostgreSQL DBMS
+            # con = psycopg2.connect("user=postgres password='aubergine'")
+            conn = psycopg2.connect(
+                host=host_name,
+                port=5432,
+                user="postgres",
+                password="notebooksearch2022")    
+            conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT) 
+            print(f'\nVALID POSTGRESSSSSSSS: {host_name}\n')
+            break
+        except (Exception, psycopg2.DatabaseError) as error:
+            # print(error)
+            continue
     return conn
 
 def execute_commands(commands) -> psycopg2.extensions.cursor: 

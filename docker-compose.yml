@@ -27,18 +27,33 @@ services:
       - 9200
 
   postgres:
-    # image: postgres:14.5-bullseye
-    build: ./postgres
+    image: postgres:14.5-bullseye
     volumes: 
       - ./postgres/data:/var/lib/postgresql/data
       - ./postgres/logs:/var/lib/postgresql/logs
+    networks: 
+      - search_engine_net
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=notebooksearch2022
-      - POSTGRES_DB=notebook_search
+      - POSTGRES_DB=notebooksearch
     expose:
       - 5432
-      # - 5433:80
+
+  pgadmin:
+    image: dpage/pgadmin4:6.14
+    restart: always
+    volumes:
+      - ./postgres/pgadmin:/var/lib/pgadmin
+    networks: 
+      - search_engine_net
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=postgres@notebooksearch.com
+      - PGADMIN_DEFAULT_PASSWORD=notebooksearch2022
+    depends_on: 
+      - postgres
+    posts:
+      - 5050:80
     
   nginx: 
     build: ./nginx

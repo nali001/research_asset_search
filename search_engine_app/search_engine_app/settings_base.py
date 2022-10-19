@@ -112,46 +112,26 @@ STATIC_URL = "static/"
 
 #------------------------------------------------------------------
 
-
+# Allowed hosts
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 #-------------------------- PostgreSQL database --------------------------
 from notebooksearch import postgres_tools
 # Create database `notebook_search` if not exists
-if not postgres_tools.database_exists("notebook_search"): 
-    postgres_tools.create_databases(["notebook_search"])
+if not postgres_tools.database_exists("notebooksearch"): 
+    postgres_tools.create_databases(["notebooksearch"])
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'HOST': 'localhost',
         'PORT': '5432',
-        'NAME': 'notebook_search',
+        'NAME': 'notebooksearch',
         'USER': 'postgres',
         'PASSWORD': 'notebooksearch2022',
     }
 }
 #---------------------------------------------------------------------------
-
-
-#-------------------------- Elasticsearch database -------------------------
-from elasticsearch import Elasticsearch
-ELASTICSEARCH_HOSTNAMES = ["elasticsearch", "localhost"]
-valid_hostname = None
-for host in ELASTICSEARCH_HOSTNAMES: 
-    es = Elasticsearch(
-        hosts=[{"host": host, "port": 9200}],
-        http_auth=["elastic", "changeme"],
-        )
-    if es.ping(): 
-        valid_hostname = host
-        break
-
-if valid_hostname == None: 
-    raise Exception('Please start Elasticsearch service first!')
-
-print('VALIDDDDDDDDDDDDDDD Elasticsearch hostname:', valid_hostname)
-#----------------------------------------------------------------------------------------
-
 
 
 #-------------------------------- Django REST API --------------------------------

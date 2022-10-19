@@ -1,5 +1,4 @@
 from elasticsearch import Elasticsearch
-import psycopg2
 
 ELASTICSEARCH_HOSTNAMES = ["elasticsearch", "localhost"]
 def create_es_client() -> Elasticsearch:
@@ -21,19 +20,6 @@ def create_es_client() -> Elasticsearch:
             tim_out=30
             )
         if es.ping(): 
+            print(f'\nVALID ELASTICSEARCHHHHHHHHHH: {host}\n')
             break
     return es
-
-def extract_queries(request): 
-    ''' Extract queries from the request. 
-    
-    '''
-
-def create_postgres_client(): 
-    conn = psycopg2.connect(
-        host="localhost",
-        port=5432, 
-        # database="suppliers",
-        user="aubergine",
-        password="aubergine")
-    return conn

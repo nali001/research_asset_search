@@ -36,7 +36,7 @@ def send_user_profile():
 
 
 def get_notebook_search(): 
-    query = 'bread'
+    query = 'cancer'
     url = API_ENDPOINT + "notebook_search/"
     params={
         "page": "1",
@@ -45,17 +45,19 @@ def get_notebook_search():
         "facet": "",
     }
     response = requests.get(url, params=params, **API_CONFIG)
-    hits = response.json()['results']
+    hits = response.json()
+    results = hits['results']
     # hits = response
-    print('------------------------ Example of searching result -----------------------\n')
-    pprint(hits[0])
+    print('------------------------ First 10 of notebook results -----------------------\n')
+    for i in range(10): 
+        pprint(results[i]['name'])
     print('----------------------------------------------------------------------------\n')
     return hits
 
 def post_notebook_search():
     ''' test
     '''
-    query = 'bread'
+    query = 'bird'
     url = API_ENDPOINT + "notebook_search/"
     params = {
         "page": "1",
@@ -64,7 +66,7 @@ def post_notebook_search():
         "facet": "",
     }
 
-    client_id = 'smalldog'
+    client_id = 'applepie'
     event = "notebook_search"
     data = {
         "client_id": client_id, 
@@ -73,10 +75,12 @@ def post_notebook_search():
         "query": query, 
     }
     response = requests.post(url, params=params, data=data, **API_CONFIG)
-    hits = response.json()['results']
+    hits = response.json()
+    results = hits['results']
     # hits = response
-    print('------------------------ Example of searching result -----------------------\n')
-    pprint(hits[0])
+    print('------------------------ First 10 of notebook results -----------------------\n')
+    for i in range(min(len(results), 10)): 
+        pprint(results[i]['name'])
     print('----------------------------------------------------------------------------\n')
     return hits
 
