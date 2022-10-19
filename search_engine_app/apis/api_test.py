@@ -72,7 +72,7 @@ def post_notebook_search():
         "event": event, 
         "query": query, 
     }
-    response = requests.get(url, params=params, data=data, **API_CONFIG)
+    response = requests.post(url, params=params, data=data, **API_CONFIG)
     hits = response.json()['results']
     # hits = response
     print('------------------------ Example of searching result -----------------------\n')
@@ -103,4 +103,4 @@ def test():
     return hits
 
 if __name__ == "__main__": 
-    get_notebook_search()
+    post_notebook_search()

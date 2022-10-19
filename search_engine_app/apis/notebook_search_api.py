@@ -98,7 +98,7 @@ def notebook_search(request) -> Response:
     
     elif request.method == 'POST': 
         # Validate the data using serializer
-        request_serializer = serializers.NotebookSearchRequestSerializer(data=request.data)
+        request_serializer = serializers.NotebookSearchLogSerializer(data=request.data)
         if request_serializer.is_valid(): 
             request_serializer.save()
             return Response(result_serializer.data, status = 201)
