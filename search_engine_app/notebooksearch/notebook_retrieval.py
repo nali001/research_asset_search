@@ -7,6 +7,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from notebooksearch import utils
+from notebooksearch import notebook_indexing
 
 #-----------------------------------------------------------------------------------------------------------------------
 def synonyms(term):
@@ -25,12 +26,16 @@ class NotebookRetriever():
         self.index_name = index_name
         self.response_data = {}
 
+
     def retrieve_notebooks(self):
         ''' Retrieval notebooks from Elasticsearch
         '''
         es = self.es
         index_name = self.index_name 
         query_data = self.query_data
+        # Index the notebooks if there is no indexes before. 
+        notebook_indexing.index_kaggle_notebooks()
+
         query = query_data['query']
         page = int(query_data['page'])
         filter = query_data['filter']

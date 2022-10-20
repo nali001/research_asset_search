@@ -46,6 +46,26 @@ docker compose up
 ```
 If the system does not work properly, either wait for some time for all containers to go up, or run `docker compose build` to update the images. 
 
+
+
+### Administration
+We expose `pgadmin` service to the localhost so that you can easily monitor the database. Access it through http://localhost:5050/ 
+
+However, `postgres` `search_engine_app` and `Elasticsearch` services are only accessible within the docker network and thus cannot be accessed from host machine using host name or IP address. 
+
+Postgres pgadmin login 
+```
+Username: postgres@notebooksearch.com
+Password: notebooksearch2022
+```
+
+Postgres pgadmin server connection
+```
+Hostname: postgres
+Username: postgres
+Password: notebooksearch2022
+```
+
 ------------------------------------------------------------------------------------------------------
 
 
@@ -80,16 +100,23 @@ If you don't want to use pgadmin4, run the following:
 docker compose -f docker-compose_postgres.yml up
 ```
 
-6. Prepare the data. Put your notebooks under `notebook_search/Jupyter Notebook`. Then go to 
+6. Prepare the data. Put your notebooks under `notebook_search/Kaggle Notebook`. Then go to 
 `search_engine_app` and run 
 ```
-python -m notebook_search.notebook_indexing
+python -m notebooksearch.notebook_indexing
 ```
 Now you are good to go! and run 
 ```
 conda activate notebook_search
 python manage.py runserver 7777
 ```
+
+### Open ports
++ Django dummy server (search_engine_app): 7777
++ Elasticsearch: 9200
++ Postgres: 5432
++ pgadmin: 5050
+
 
 ### Postgres inspection
 Get into postgres docker container: 
@@ -105,9 +132,16 @@ psql -U postgres
 Create superuser for admin: 
 ```
 python manage.py createsuperuser
-# Username: admin
-# Email address: aubergine@aubergine.com
-# Password: aubergine
+python manage.py createsuperuser --username admin  --email admin@notebooksearch.com
+# password: notebooksearch2022
+```
+
+Create superuser for aubergine and generate tokens: 
+```
+python manage.py createsuperuser --username aubergine  --email aubergine@notebooksearch.com
+# password: notebooksearch2022
+
+python manage.py drf_create_token aubergine
 ```
 Update data models to database (PostgreSQL in our case)
 ```

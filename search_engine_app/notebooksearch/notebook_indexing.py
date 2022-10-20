@@ -65,54 +65,61 @@ class ElasticsearchIndexer():
         es = self.es
 
         index = Index(index_name, es)
-        if not es.indices.exists(index = index_name):
+        if  es.indices.exists(index = index_name):
+            print(f'\n{index_name} already exists!\n')
+        else: 
             index.settings(
                 index={'mapping': {'ignore_malformed': True}}
             )
             index.create()
-        else:
-            es.indices.close(index=index_name)
-            put = es.indices.put_settings(
-                index=index_name,
-                body={
-                    "index": {
-                        "mapping": {
-                            "ignore_malformed": True
-                        }
-                    }
-                })
-            es.indices.open(index=index_name)
+        
+            # es.indices.close(index=index_name)
+            # put = es.indices.put_settings(
+            #     index=index_name,
+            #     body={
+            #         "index": {
+            #             "mapping": {
+            #                 "ignore_malformed": True
+            #             }
+            #         }
+            #     })
+            # es.indices.open(index=index_name)
 
-        # Call Elasticsearch to index the files
-        indexfiles = self.generate_index_files()
-        if self.source_name == 'Github': 
-            for count, record in enumerate(indexfiles): 
-                try: 
-                    res = es.index(index=index_name, id = record["git_url"], body=record)
-                    print(f'Indexing {str(count+1)}-th recode!\n')
-                except Exception as e: 
-                    print(e, "\n")
-                    print(record["name"])
-                es.indices.refresh(index=index_name)
-        elif self.source_name == 'Kaggle': 
-            for count, record in enumerate(indexfiles): 
-                try: 
-                    res = es.index(index=index_name, id = record["kaggle_id"], body=record)
-                    print(f'Indexing {str(count+1)}-th recode!\n')
-                except Exception as e: 
-                    print(e, "\n")
-                    print(record["name"])
-                es.indices.refresh(index=index_name)
+            # Call Elasticsearch to index the files
+            indexfiles = self.generate_index_files()
+            if self.source_name == 'Github': 
+                for count, record in enumerate(indexfiles): 
+                    try: 
+                        res = es.index(index=index_name, id = record["git_url"], body=record)
+                        print(f'Indexing {str(count+1)}-th recode!\n')
+                    except Exception as e: 
+                        print(e, "\n")
+                        print(record["name"])
+                    es.indices.refresh(index=index_name)
+            elif self.source_name == 'Kaggle': 
+                for count, record in enumerate(indexfiles): 
+                    try: 
+                        res = es.index(index=index_name, id = record["kaggle_id"], body=record)
+                        print(f'Indexing {str(count+1)}-th recode!\n')
+                    except Exception as e: 
+                        print(e, "\n")
+                        print(record["name"])
+                    es.indices.refresh(index=index_name)
+        return True
 # ----------------------------------------------------------------------------------
 
-# If using `python -m notebook_search.notebook_indexing`, 
-# `__name__` will be `__main__`
-if __name__ == '__main__': 
+def index_kaggle_notebooks(): 
     es = utils.create_es_client()
 
     # Index notebooks crawled from Github
-    # github_notebook_path = os.path.join(os.getcwd(), 'notebook_search', 'Github Notebooks')
+    # github_notebook_path = os.path.join(os.getcwd(), 'notebooksearch', 'Github Notebooks')
     # indexer = ElasticsearchIndexer(es, "Github", "github_notebooks", github_notebook_path)
-    kaggle_notebook_path = os.path.join(os.getcwd(), 'notebook_search', 'Kaggle Notebooks')
+    kaggle_notebook_path = os.path.join(os.getcwd(), 'notebooksearch', 'Kaggle Notebooks')
     indexer = ElasticsearchIndexer(es, "Kaggle", "kaggle_notebooks", kaggle_notebook_path)
     indexer.index_notebooks()
+
+# If using `python -m notebooksearch.notebook_indexing`, 
+# `__name__` will be `__main__`
+if __name__ == '__main__': 
+    index_kaggle_notebooks()
+   
