@@ -38,7 +38,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'search_engine_app.settings')
 ```
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'IP_address']
 ```
-7. Prepare the data. Put your notebooks under `notebook_search/Jupyter Notebook`
+7. Prepare the data. Put your notebooks under `notebooksearch/Kaggle Notebook`
 
 8. Run 
 ```
