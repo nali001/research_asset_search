@@ -15,7 +15,7 @@ The deployment lives on docker and is accesible from the Internet.
 1. Setup environment on host machine, refer to `os_env_setup.sh`
 2. Clone the repository
 ```
-git clone https://github.com/nali001/notebook_search_docker.git
+git clone --branch deploy https://github.com/nali001/notebook_search_docker.git
 ```
 3. Setup Elasticsearch data folder. Navigate to `notebook_search_docker` and run the following: 
 ```
@@ -29,18 +29,14 @@ mkdir postgres/data postgres/logs postgres/pgadmin
 chmod g+rwx postgres/data postgres/logs postgres/pgadmin
 sudo chgrp 0 postgres/data postgres/logs postgres/pgadmin
 ```
-5. Inside `search_engine_app/manage.py`, replace with the following line: 
-```
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'search_engine_app.settings')
+5. Prepare the data. Put your notebooks under `notebooksearch/Kaggle Notebook`
 
-```
 6. Inside `search_engine_app/search_engine_app/setting.py`, replace the following line with your actual IP address: 
 ```
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'IP_address']
 ```
-7. Prepare the data. Put your notebooks under `notebooksearch/Kaggle Notebook`
 
-8. Run 
+7. Run 
 ```
 docker compose up
 ```
@@ -48,9 +44,7 @@ If the system does not work properly, either wait for some time for all containe
 
 Now you can access the web page on http://IP_address/
 
-9. Initialize the web application via: http://IP_address/api/initialize_app/
-
-10. Obtain API token via: http://IP_address/api/obtain_api_token/
+8. Initialize the web application via: http://IP_address/api/initialize_app/
 
 
 ### Administration
