@@ -1,8 +1,12 @@
 .vscode
 __pycache__/
 search_engine_app/venv
-search_engine_app/notebook_search/Github Notebooks
-search_engine_app/notebook_search/migrations/
+search_engine_app/notebooksearch/Github Notebooks
+search_engine_app/notebooksearch/migrations/
+search_engine_app/genericpages/migrations/
+search_engine_app/apis/migrations/
+
+
 elasticsearch/data
 elasticsearch/logs
 
@@ -10,6 +14,4 @@ postgres/data
 postgres/logs
 postgres/pgadmin
 
-search_engine_app/notebook_search/haha.py
-search_engine_app/notebook_search/test.py
-search_engine_app/notebook_search/models_test/
+search_engine_app/notebooksearch/test.py
