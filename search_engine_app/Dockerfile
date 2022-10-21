@@ -7,9 +7,9 @@ WORKDIR /search_engine_app
 # Install psycopg dependencies
 RUN apt-get install libpq-dev
 
-COPY ./requirements.txt .
-COPY ./requirements_dev.txt .
+COPY ./requirements.txt ./requirements_dev.txt ./deployment_env_setup.sh ./
 RUN pip install -r requirements.txt -r requirements_dev.txt
 
 # COPY . .
-CMD ["gunicorn", "--bind", ":7777", "--workers", "4", "search_engine_app.wsgi:application"]
+# CMD ["gunicorn", "--bind", ":7777", "--workers", "4", "search_engine_app.wsgi:application"]
+CMD ["source", "deployment_env_setup.sh"]
