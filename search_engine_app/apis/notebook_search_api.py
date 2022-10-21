@@ -1,6 +1,5 @@
-# notebook_search/apis.py
+# notebook_search_api.py
 # Only used for handling REST APIs. 
-import re
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import authentication_classes
@@ -32,23 +31,6 @@ def str2datetime(timestamp:str):
 # es = utils.create_es_client()
 
 # -------------------------------- Working ----------------------------------
-@api_view(['GET'])
-@authentication_classes([TokenAuthentication])
-@permission_classes([IsAuthenticated])
-def welcome(request) -> Response: 
-    ''' Return the welcome message to API connection. 
-    Args: 
-        request: Received request from the client. 
-
-    Returns: 
-        Response to the client.
-    '''
-    if request.method == 'GET':
-        msg = {'name': 'notebook_search API', 'message': 'Congratulations! You have succefully received information from notebook_search API :)'}
-        return Response(msg)
-
-
-
 @api_view(['POST'])
 @authentication_classes([TokenAuthentication])
 @permission_classes([IsAuthenticated])

@@ -24,6 +24,16 @@ LOCAL_API_CONFIG = {
 
 
 # ----------------------------------------- Working ------------------------------
+def initialize_app(api_endpoint): 
+    ''' Initialize the web application
+    '''
+    url = api_endpoint + "initialize_app/"
+    response = requests.get(url)
+    print('------------------------ Result -----------------------\n')
+    pprint(response.json())
+    print('----------------------------------------------------------------------------\n')
+
+
 def obatain_api_token(api_endpoint): 
     ''' Get api token for API calls
     '''
@@ -135,5 +145,6 @@ def test(api_endpoint, api_config):
     return hits
 
 if __name__ == "__main__": 
+    initialize_app(LOCAL_API_ENDPOINT)
     obatain_api_token(LOCAL_API_ENDPOINT)
     test_api_token(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)

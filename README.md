@@ -46,12 +46,20 @@ docker compose up
 ```
 If the system does not work properly, either wait for some time for all containers to go up, or run `docker compose build` to update the images. 
 
+Now you can access the web page on http://IP_address/
+
+9. Initialize the web application via: http://IP_address/api/initialize_app/
+
+10. Obtain API token via: http://IP_address/api/obtain_api_token/
 
 
 ### Administration
 We expose `pgadmin` service to the localhost so that you can easily monitor the database. Access it through http://localhost:5050/ 
 
-However, `postgres` `search_engine_app` and `Elasticsearch` services are only accessible within the docker network and thus cannot be accessed from host machine using host name or IP address. 
+We expose `Django admin` service to public web. Access it through http://IP_address/admin/ 
+
+
+However, `postgres` `search_engine_app` and `Elasticsearch` services are only accessible within the docker network and thus cannot be accessed from the host machine or the web. 
 
 Postgres pgadmin login 
 ```
@@ -152,11 +160,35 @@ python manage.py migrate
 ------------------------------------------------------------------------------------------------------
 
 
-## Client
-### Authentication 
-We are using TokenAuthentication. 
-Ref: https://www.django-rest-framework.org/api-guide/authentication/#generating-tokens 
 
+## REST API
+API endpoint: http://IP_address/api/
+
+API examples are in the file `apis/api_test.py`
+
+### Authentication 
+We are using TokenAuthentication. Ref: https://www.django-rest-framework.org/api-guide/authentication/#generating-tokens 
+
+Obtain a API token: 
+```
+GET http://IP_address/api/obtain_api_token/ 
+```
+
+
+### APIs
+Test API token: 
+```
+GET http://IP_address/api/ 
+```
+Creat user profile: 
+```
+POST http://IP_address/api/create_userprofile/ 
+```
+
+Notebook search: 
+```
+GET/POST http://IP_address/api/notebook_search/
+```
 
 ------------------------------------------------------------------------------------------------------
 

@@ -5,7 +5,8 @@ from apis import auth_api
 # from notebook_search import apis
 
 urlpatterns = [
-    path('', notebook_search_api.welcome, name='welcome'),
+    path('', auth_api.welcome, name='welcome'),
+    path('initialize_app/', auth_api.initialize_app, name="initialize_app"),
     path('obtain_api_token/', auth_api.obatain_api_token, name="obtain_api_token"),
     # path('context_search/', notebook_search_api.context_search, name='context_search'),
     # path('query_generation/', notebook_search_api.query_generation, name='query_generation'),
