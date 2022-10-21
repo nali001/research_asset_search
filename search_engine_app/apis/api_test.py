@@ -3,9 +3,18 @@ import requests
 from pprint import pprint
 import time
 
-# API_ENDPOINT = 'http://145.100.135.119/api/'
-API_ENDPOINT = 'http://127.0.0.1:7777/api/'
-API_CONFIG = {
+ONLINE_API_ENDPOINT = 'http://145.100.135.119/api/'
+ONLINE_API_CONFIG = {
+    'verify': False,
+    'headers': {
+        # "Accept": "*/*",
+        # "Content-Type": "text/json",
+        "Authorization": "Token ", 
+    }
+}
+
+LOCAL_API_ENDPOINT = 'http://127.0.0.1:7777/api/'
+LOCAL_API_CONFIG = {
     'verify': False,
     'headers': {
         # "Accept": "*/*",
@@ -14,11 +23,32 @@ API_CONFIG = {
     }
 }
 
+
 # ----------------------------------------- Working ------------------------------
-def send_user_profile():
+def obatain_api_token(api_endpoint): 
+    ''' Get api token for API calls
+    '''
+    url = api_endpoint + "obtain_api_token/"
+    response = requests.get(url)
+    print('------------------------ Token -----------------------\n')
+    pprint(response.json())
+    print('----------------------------------------------------------------------------\n')
+
+
+def test_api_token(api_endpoint, api_config): 
+    ''' Test api token
+    '''
+    url = api_endpoint
+    response = requests.get(url, **api_config)
+    print('------------------------ Welcome -----------------------\n')
+    pprint(response.json())
+    print('----------------------------------------------------------------------------\n')
+
+
+def send_user_profile(api_endpoint, api_config):
     ''' Post userprofile data
     '''
-    url = API_ENDPOINT + "create_userprofile/"
+    url = api_endpoint + "create_userprofile/"
     client_id = 'smalldog'
     research_interests = "machine learning"
     # event = 'notebook_search'
@@ -28,23 +58,22 @@ def send_user_profile():
         "client_id": client_id, 
         "research_interests": research_interests, 
     }
-    response = requests.post(url, json = data, **API_CONFIG)
+    response = requests.post(url, json = data, **api_config)
     print('------------------------ Example of user feedback -----------------------\n')
     pprint(response.json())
     print('----------------------------------------------------------------------------\n')
 
 
-
-def get_notebook_search(): 
+def get_notebook_search(api_endpoint, api_config): 
     query = 'cancer'
-    url = API_ENDPOINT + "notebook_search/"
+    url = api_endpoint + "notebook_search/"
     params={
         "page": "1",
         "query": query,
         "filter": "",
         "facet": "",
     }
-    response = requests.get(url, params=params, **API_CONFIG)
+    response = requests.get(url, params=params, **api_config)
     hits = response.json()
     results = hits['results']
     # hits = response
@@ -54,11 +83,11 @@ def get_notebook_search():
     print('----------------------------------------------------------------------------\n')
     return hits
 
-def post_notebook_search():
+def post_notebook_search(api_endpoint, api_config):
     ''' test
     '''
     query = 'bird'
-    url = API_ENDPOINT + "notebook_search/"
+    url = api_endpoint + "notebook_search/"
     params = {
         "page": "1",
         "query": query,
@@ -74,7 +103,7 @@ def post_notebook_search():
         "event": event, 
         "query": query, 
     }
-    response = requests.post(url, params=params, data=data, **API_CONFIG)
+    response = requests.post(url, params=params, data=data, **api_config)
     hits = response.json()
     results = hits['results']
     # hits = response
@@ -87,18 +116,18 @@ def post_notebook_search():
 # ------------------------------------------------------------------------------------
 
 
-def test():
+def test(api_endpoint, api_config):
     ''' test
     '''
     query = 'bread'
-    url = API_ENDPOINT + "test/"
+    url = api_endpoint + "test/"
     params={
         "page": "1",
         "query": query,
         "filter": "",
         "facet": "",
     }
-    response = requests.get(url, params=params, **API_CONFIG)
+    response = requests.get(url, params=params, **api_config)
     hits = response.json()['results']
     # hits = response
     print('------------------------ Example of searching result -----------------------\n')
@@ -107,4 +136,5 @@ def test():
     return hits
 
 if __name__ == "__main__": 
-    post_notebook_search()
+    obatain_api_token(LOCAL_API_ENDPOINT)
+    test_api_token(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)

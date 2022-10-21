@@ -149,8 +149,17 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
+------------------------------------------------------------------------------------------------------
+
+
+## Client
+### Authentication 
+We are using TokenAuthentication. 
+Ref: https://www.django-rest-framework.org/api-guide/authentication/#generating-tokens 
+
 
 ------------------------------------------------------------------------------------------------------
+
 ## Data backup and restore
 It is important to persist your data, especially when you run everything inside containers. 
 

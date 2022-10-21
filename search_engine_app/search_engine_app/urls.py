@@ -21,6 +21,5 @@ urlpatterns = [
     path('notebooksearch/', include('notebooksearch.urls')), 
     path('admin/', admin.site.urls),
     path('api/', include('apis.urls')),
-
 ]
 
