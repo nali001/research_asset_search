@@ -31,9 +31,13 @@ sudo chgrp 0 postgres/data postgres/logs postgres/pgadmin
 ```
 5. Prepare the data. Put your notebooks under `notebooksearch/Kaggle Notebook`
 
-6. Inside `search_engine_app/search_engine_app/setting.py`, replace the following line with your actual IP address: 
+6. Inside `search_engine_app/search_engine_app/setting_prod.py`, replace the following line with your actual IP address: 
 ```
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'IP_address']
+```
+You can find the IP address with command: 
+```
+hostname -I
 ```
 
 7. Run 

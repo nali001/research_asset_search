@@ -8,7 +8,7 @@ ONLINE_API_CONFIG = {
     'headers': {
         # "Accept": "*/*",
         # "Content-Type": "text/json",
-        "Authorization": "Token ", 
+        "Authorization": "Token 5901347bc7ccd4560fe687a3ec0754b26904ba6a", 
     }
 }
 
@@ -145,6 +145,7 @@ def test(api_endpoint, api_config):
     return hits
 
 if __name__ == "__main__": 
-    initialize_app(LOCAL_API_ENDPOINT)
-    obatain_api_token(LOCAL_API_ENDPOINT)
-    test_api_token(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
+    # initialize_app(ONLINE_API_ENDPOINT)
+    # obatain_api_token(ONLINE_API_ENDPOINT)
+    # test_api_token(ONLINE_API_ENDPOINT, ONLINE_API_CONFIG)
+    get_notebook_search(ONLINE_API_ENDPOINT, ONLINE_API_CONFIG)

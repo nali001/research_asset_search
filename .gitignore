@@ -2,9 +2,9 @@
 __pycache__/
 search_engine_app/venv
 search_engine_app/notebooksearch/Github Notebooks
-# search_engine_app/notebooksearch/migrations/*
-# search_engine_app/genericpages/migrations/*
-# search_engine_app/apis/migrations/*
+search_engine_app/notebooksearch/migrations/*
+search_engine_app/genericpages/migrations/*
+search_engine_app/apis/migrations/*
 
 
 elasticsearch/data

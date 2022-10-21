@@ -14,8 +14,6 @@ services:
   pgadmin:
     image: dpage/pgadmin4:6.14
     restart: always
-    ports:
-      - 5050:80
     environment:
       - PGADMIN_DEFAULT_EMAIL=postgres@notebooksearch.com
       - PGADMIN_DEFAULT_PASSWORD=notebooksearch2022
@@ -23,6 +21,8 @@ services:
       - ./postgres/pgadmin:/var/lib/pgadmin
     depends_on: 
       - postgres
+    ports:
+      - 5050:80
 
     
 

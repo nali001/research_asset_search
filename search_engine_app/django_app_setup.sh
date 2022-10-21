@@ -1,5 +1,5 @@
 # change the settings to production
-copy ./search_engine_app/settings_prod.py ./search_engine_app/settings.py
+cp ./search_engine_app/settings_prod.py ./search_engine_app/settings.py
 
 python manage.py makemigrations
 python manage.py migrate

@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = False
 
 # replace the following line with your actual IP address
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'IP_address']
+# ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'IP_address']
 
 #-------------------------- Uncomment STATICFILES_DIRS and comment STATIC_ROOT in development------------------
 # The STATICFILES_DIRS tuple tells Django where to look for static files that are not tied to a particular app.
