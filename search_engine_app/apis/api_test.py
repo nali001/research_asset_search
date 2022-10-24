@@ -74,7 +74,7 @@ def send_user_profile(api_endpoint, api_config):
 
 
 def get_notebook_search(api_endpoint, api_config): 
-    query = 'cancer'
+    query = 'question'
     url = api_endpoint + "notebook_search/"
     params={
         "page": "1",
@@ -104,7 +104,7 @@ def post_notebook_search(api_endpoint, api_config):
         "facet": "",
     }
 
-    client_id = 'applepie'
+    client_id = 'sugar'
     event = "notebook_search"
     data = {
         "client_id": client_id, 
@@ -126,6 +126,13 @@ def post_notebook_search(api_endpoint, api_config):
 
 
 def test(api_endpoint, api_config):
+    pass
+
+
+def query_generation(api_endpoint, api_config): 
+    pass
+
+def context_search(api_endpoint, api_config):
     ''' test
     '''
     query = 'bread'
@@ -147,5 +154,6 @@ def test(api_endpoint, api_config):
 if __name__ == "__main__": 
     # initialize_app(ONLINE_API_ENDPOINT)
     # obatain_api_token(ONLINE_API_ENDPOINT)
-    # test_api_token(ONLINE_API_ENDPOINT, ONLINE_API_CONFIG)
-    get_notebook_search(ONLINE_API_ENDPOINT, ONLINE_API_CONFIG)
+    # test_api_token(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
+    # get_notebook_search(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
+    get_notebook_search(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)

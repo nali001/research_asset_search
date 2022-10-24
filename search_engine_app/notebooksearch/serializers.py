@@ -5,17 +5,16 @@
 
 from rest_framework import serializers
 
-# from notebook_search.models import GithubNotebookResult
-# # from notebook_search.models import NotebookSearchRequest
-# from notebook_search.models import NotebookSearchRequestLog
-# from notebook_search.models import ClientUser
 from notebooksearch.models import UserProfile
+from notebooksearch.models import NotebookSearchParam
 from notebooksearch.models import NotebookSearchLog
 from notebooksearch.models import KaggleNotebook
 from notebooksearch.models import NotebookSearchResult
 
-
-
+from notebooksearch.models import QueryGenerationLog
+from notebooksearch.models import CellContent
+from notebooksearch.models import GeneratedQuery
+# from notebooksearch.models import QueryGenerationResult
 
 
 # class GithubNotebookResultSerializer(serializers.ModelSerializer):
@@ -52,6 +51,13 @@ class UserProfileSerializer(serializers.ModelSerializer):
 
 
 # ------------------- Notebook search serializers --------------------    
+class NotebookSearchParamSerializer(serializers.ModelSerializer): 
+    ''' A serialier for handling parameters of notebook search requests
+    '''
+    class Meta:
+        model = NotebookSearchParam
+        fields = '__all__'
+
 class NotebookSearchLogSerializer(serializers.ModelSerializer): 
     ''' A serialier for handling notebook search requests
     '''
@@ -59,13 +65,11 @@ class NotebookSearchLogSerializer(serializers.ModelSerializer):
         model = NotebookSearchLog
         fields = '__all__'
 
-
 class KaggleNotebookSerializer(serializers.ModelSerializer):
     ''' A serliazer for serializing Kaggle notebooks
     '''
     class Meta:
         model = KaggleNotebook
-        # Modify the fields to get a subset of fields to serialize
         fields = ('kaggle_id', 'name', 'file_name', 'html_url', 'description')
 
 
@@ -78,17 +82,50 @@ class KaggleNotebookSearchResultSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = NotebookSearchResult
-        # Modify the fields to get a subset of fields to serialize
         fields = '__all__'
 
 # -----------------------------------------------------------------
 
 
-# # ------------------- Query generation serializers --------------------
-# class QueryGenerationSession(): 
-#     ''' Query generation session
-#     '''
-# # -----------------------------------------------------------------
+# ------------------- Query generation serializers --------------------
+class CellContentSerializer(serializers.ModelSerializer): 
+    ''' A serialier for handling cell contents 
+    '''
+    class Meta:
+        model = CellContent
+        fields = ('cell_type', 'cell_content')
+
+
+class QueryGenerationLogSerializer(serializers.ModelSerializer):
+    ''' A nested serliazer for handling query generation requests
+    '''
+    cell_contents = CellContentSerializer(many=True)
+
+    class Meta:
+        model = QueryGenerationLog
+        fields = '__all__'
+
+
+class GeneratedQuerySerializer(serializers.ModelSerializer): 
+    ''' A serliazer for serializing geneted queries
+    '''
+
+    class Meta:
+        model = GeneratedQuery
+        fields = ('generation_method', 'generated_queries')
+
+class QueryGenerationResultSerializer(serializers.ModelSerializer):
+    ''' A nested serliazer for generating responses for query generation
+
+    It generate one or more query for each 
+    '''
+    cell_contents = CellContentSerializer(many=True)
+    generation_results = GeneratedQuerySerializer(many=True)
+
+    class Meta:
+        # model = QueryGenerationResult
+        fields = '__all__'
+# -----------------------------------------------------------------
 
 
 
