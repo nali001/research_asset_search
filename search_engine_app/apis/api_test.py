@@ -93,7 +93,7 @@ def get_notebook_search(api_endpoint, api_config):
     return hits
 
 def post_notebook_search(api_endpoint, api_config):
-    ''' test
+    ''' test notebook search with `POST` method
     '''
     query = 'bird'
     url = api_endpoint + "notebook_search/"
@@ -130,7 +130,43 @@ def test(api_endpoint, api_config):
 
 
 def query_generation(api_endpoint, api_config): 
-    pass
+    ''' test query generation API with `POST` method
+    '''
+    url = api_endpoint + "query_generation/"
+    # params = {
+    #     "page": "1",
+    #     "query": query,
+    #     "filter": "",
+    #     "facet": "",
+    # }
+
+    client_id = 'sugar'
+    event = "query_generation"
+    cell_contents = [
+        {
+            "cell_type": "markdown",
+            "cell_content": "Great", 
+        }, 
+        {
+            "cell_type": "markdown",
+            "cell_content": "Mamamia", 
+        }, 
+        ]
+    data = {
+        "client_id": client_id, 
+        "timestamp": str(time.time()), 
+        "event": event, 
+        "cell_contents": cell_contents, 
+    }
+    response = requests.post(url, params=params, data=data, **api_config)
+    hits = response.json()
+    # results = hits['results']
+    # # hits = response
+    # print('------------------------ First 10 of notebook results -----------------------\n')
+    # for i in range(min(len(results), 10)): 
+    #     pprint(results[i]['name'])
+    # print('----------------------------------------------------------------------------\n')
+    # return hits
 
 def context_search(api_endpoint, api_config):
     ''' test
@@ -157,3 +193,5 @@ if __name__ == "__main__":
     # test_api_token(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
     # get_notebook_search(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
     get_notebook_search(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
+    query_generation(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
+

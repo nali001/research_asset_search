@@ -48,37 +48,46 @@ def create_userprofile(request) -> Response:
         else: 
             return Response(request_serializer.errors, status = 400)
 
-# @api_view(['GET', 'POST'])
-# @authentication_classes([TokenAuthentication])
-# @permission_classes([IsAuthenticated])
-# def notebook_search(request) -> Response: 
-#     ''' Return the notebook searching results to the client. 
-#     Args: 
-#         request: Received request from the client. 
+@api_view(['GET', 'POST'])
+@authentication_classes([TokenAuthentication])
+@permission_classes([IsAuthenticated])
+def notebook_search(request) -> Response: 
+    ''' Return the notebook searching results to the client. 
+    Args: 
+        request: Received request from the client. 
 
-#     Returns: 
-#         Response(results): A list of notebook searching results. 
-#     '''
-#     # Retrieve notebooks from Elasticsearch
-#     query_data = request.query_params
-#     index_name = "kaggle_notebooks"
-#     searcher = notebook_retrieval.NotebookRetriever(query_data, index_name)
-#     search_results = searcher.retrieve_notebooks()
+    Returns: 
+        Response(results): A list of notebook searching results. 
+    '''
 
-#     # Serialize search results 
-#     result_serializer = serializers.KaggleNotebookSearchResultSerializer(search_results)
+    try: 
+        query_params = request.query_params
+    except: 
+        return Response({'Error': 'Request parameters are not given!'}, status = 400)
+    # Validate request parameters
+    param_serializer = serializers.NotebookSearchParamSerializer(data=request.query_params)
+    if not param_serializer.is_valid(): 
+        return Response(param_serializer.errors, status = 400)
 
-#     if request.method == 'GET':     
-#         return Response(result_serializer.data, status = 200)
-    
-#     elif request.method == 'POST': 
-#         # Validate the data using serializer
-#         request_serializer = serializers.NotebookSearchLogSerializer(data=request.data)
-#         if request_serializer.is_valid(): 
-#             request_serializer.save()
-#             return Response(result_serializer.data, status = 201)
-#         else: 
-#             return Response(result_serializer.data, status = 400)
+    # Validate NotebookSearchLog data for `POST` method
+    if request.method == 'POST': 
+        log_serializer = serializers.NotebookSearchLogSerializer(data=request.data)
+        if log_serializer.is_valid(): 
+            log_serializer.save()  
+        else: 
+            return Response(log_serializer.errors, status = 400)
+
+    # Retrieve notebooks from Elasticsearch dataserver
+    index_name = "kaggle_notebooks"
+    searcher = notebook_retrieval.NotebookRetriever(query_params, index_name)
+    search_results = searcher.retrieve_notebooks()
+    result_serializer = serializers.KaggleNotebookSearchResultSerializer(search_results)
+
+    # Generate responses 
+    if request.method == 'GET':     
+        return Response(result_serializer.data, status = 200)
+    elif request.method == 'POST': 
+        return Response(result_serializer.data, status = 201)
 
 # -----------------------------------------------------------------------
 
@@ -139,43 +148,3 @@ def test(request) -> Response:
         pass
 
 
-@api_view(['GET', 'POST'])
-@authentication_classes([TokenAuthentication])
-@permission_classes([IsAuthenticated])
-def notebook_search(request) -> Response: 
-    ''' Return the notebook searching results to the client. 
-    Args: 
-        request: Received request from the client. 
-
-    Returns: 
-        Response(results): A list of notebook searching results. 
-    '''
-
-    try: 
-        query_params = request.query_params
-    except: 
-        return Response({'Error': 'Request parameters are not given!'}, status = 400)
-    # Validate request parameters
-    param_serializer = serializers.NotebookSearchParamSerializer(data=request.query_params)
-    if not param_serializer.is_valid(): 
-        return Response(param_serializer.errors, status = 400)
-
-    # Validate NotebookSearchLog data for `POST` method
-    if request.method == 'POST': 
-        log_serializer = serializers.NotebookSearchLogSerializer(data=request.data)
-        if log_serializer.is_valid(): 
-            log_serializer.save()  
-        else: 
-            return Response(log_serializer.errors, status = 400)
-
-    # Retrieve notebooks from Elasticsearch dataserver
-    index_name = "kaggle_notebooks"
-    searcher = notebook_retrieval.NotebookRetriever(query_params, index_name)
-    search_results = searcher.retrieve_notebooks()
-    result_serializer = serializers.KaggleNotebookSearchResultSerializer(search_results)
-
-    # Generate responses 
-    if request.method == 'GET':     
-        return Response(result_serializer.data, status = 200)
-    elif request.method == 'POST': 
-        return Response(result_serializer.data, status = 201)

@@ -19,10 +19,10 @@
 -----------------------------------------------------------------------------------------------
 ## Data exchange between frontend and backend
 ### Main data models
-`<user object>` 
+`<ClientUser>` 
 ```
 {
-    "user_id": user_id, 
+    "client_id": client_id, 
 }
 ```
 
@@ -33,11 +33,14 @@
 }
 ```
 
-`<notebook_result object>` 
+`<KaggleNotebook object>` 
 ```
 {
-    "notebook_id": notebook_id, 
-    ... 
+    "name": name, 
+    "html_url": html_url, 
+    "description": description, 
+    "kaggle_id": kaggle_id,
+    "file_name": file_name, 
 }
 ```
 
@@ -45,7 +48,7 @@
 ```
 {
     "cell_type": cell_type,
-    "cell_text": cell_text,  
+    "cell_content": cell_content,  
 }
 ```
 
@@ -54,35 +57,36 @@
 When clicking the search icon: 
 
 client --> server \
-`NotebookSearchRequest`
+`NotebookSearchLog`
 ```
 {
-    "user": <user object>, 
-    "timestamp": datetime, 
-    "event": "notebook_search", 
-    "query": <query object>,
+    "client_id": client_id, 
+    "timestamp": timestamp, 
+    "event": event, 
+    "query": query,
 }
 ```
 
 server --> client \
-`NotebookSearchResponse`
+`NotebookSearchResult`
 ```
 {
-    "user": <user object>,  
-    "event": "notebook_search", 
-    "query": <query object>, 
-    "notebook_results": [<notebook_result object>], 
+    "query" = query
+    "facets" = facets
+    "num_hits" = num_hits
+    "num_pages" = num_pages
+    "current_page" = current_page
+    "results": [<KaggleNotebook object>], 
 }
 ```
 server --> database \
-`NotebookSearchLog` 
+`NotebookSearchLog`
 ```
 {
-    "user": <user object>,  
-    "event": "notebook_search", 
+    "client_id": client_id, 
     "timestamp": timestamp, 
-    "query": query, 
-    "notebook_results": [<notebook_result object>], 
+    "event": event, 
+    "query": query,
 }
 ```
 
@@ -91,17 +95,18 @@ server --> database \
 When clicking the "Context-based search" button: 
 
 client --> server \
-`QueryGenerationRequest`
+`QueryGenerationLog`
 ```
 {
-    "user": <user object>, 
-    "event": "query_generation", 
-    "cell_content": <cell object>, 
+    "client_id": client_id, 
+    "timestamp": timestamp, 
+    "event": event, 
+    "cell_contents": [<CellContent object>]
 }
 ```
 
 server --> client \
-`QueryGenerationResponse`
+`QueryGenerationResult`
 ```
 {
     "user": <user object>, 
