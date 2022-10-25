@@ -30,7 +30,7 @@ def query_generation(request) -> Response:
         # Validate the data using serializer
         request_serializer = serializers.QueryGenetationLogSerializer(data=request.data)
         if request_serializer.is_valid(): 
-            # request_serializer.save()
+            request_serializer.save()
             pass
         else: 
             return Response(request_serializer.errors, status = 400)
