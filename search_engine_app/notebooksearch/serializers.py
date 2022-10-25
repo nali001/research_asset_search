@@ -4,6 +4,7 @@
 '''
 
 from rest_framework import serializers
+from drf_writable_nested.serializers import WritableNestedModelSerializer
 
 from notebooksearch.models import UserProfile
 from notebooksearch.models import NotebookSearchParam
@@ -96,10 +97,10 @@ class CellContentSerializer(serializers.ModelSerializer):
         fields = ('cell_type', 'cell_content')
 
 
-class QueryGenetationLogSerializer(serializers.ModelSerializer):
+class QueryGenetationLogSerializer(WritableNestedModelSerializer):
     ''' A nested serliazer for handling query generation requests
     '''
-    cell_contents = CellContentSerializer(many=True)
+    cell_contents = CellContentSerializer(many=True, allow_null=True)
     class Meta:
         model = QueryGenerationLog
         fields = '__all__'

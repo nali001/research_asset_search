@@ -8,6 +8,8 @@ Django==4.0.5
 # Django REST API framework
 djangorestframework==3.13.1
 Markdown==3.4.1
+drf-writable-nested==0.7.0
+
 
 
 # Elasticsearch

@@ -12,6 +12,7 @@ def create_connection() -> psycopg2.extensions.connection:
             conn = psycopg2.connect(
                 host=host_name,
                 port=5432,
+                database="notebooksearch", 
                 user="postgres",
                 password="notebooksearch2022")    
             conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT) 

@@ -115,8 +115,8 @@ class QueryGenerationLog(BaseUser):
     timestamp = models.CharField(max_length=60)
     event = models.CharField(max_length=60)
 
-    class Meta:
-        managed = False
+    # class Meta:
+    #     managed = False
 
     def __str__(self):
         return self.client_id
@@ -128,8 +128,8 @@ class CellContent(models.Model):
     cell_content = models.TextField()
     query_generation_log = models.ForeignKey(QueryGenerationLog, related_name="cell_contents", on_delete=models.CASCADE)
    
-    class Meta:
-        managed = False
+    # class Meta:
+    #     managed = False
 
     def __str__(self): 
         return str(self.id)
