@@ -29,8 +29,8 @@
 `<GeneratedQuery object>` 
 ```
 {
-    "generation_method": generation_method, 
-    "generated_queries": [query_text], 
+    "method": generation_method, 
+    "queries": [query_text], 
 }
 ```
 
@@ -58,18 +58,18 @@
 When clicking the search icon: 
 
 client --> server \
-`NotebookSearchLog`
+`NotebookSearchLogSerializer`
 ```
 {
     "client_id": client_id, 
     "timestamp": timestamp, 
-    "event": event, 
+    "event": "notebook_search", 
     "query": query,
 }
 ```
 
 server --> client \
-`NotebookSearchResult`
+`NotebookSearchResultSerializer`
 ```
 {
     "query" = query
@@ -81,12 +81,12 @@ server --> client \
 }
 ```
 server --> database \
-`NotebookSearchLog`
+`NotebookSearchLogSerializer`
 ```
 {
     "client_id": client_id, 
     "timestamp": timestamp, 
-    "event": event, 
+    "event": "notebook_search", 
     "query": query,
 }
 ```
@@ -96,35 +96,35 @@ server --> database \
 When clicking the "Context-based search" button: 
 
 client --> server \
-`QueryGenerationLog`
+`QueryGenerationLogSerializer`
 ```
 {
     "client_id": client_id, 
     "timestamp": timestamp, 
-    "event": event, 
+    "event": "query_generation", 
     "cell_contents": [<CellContent object>]
 }
 ```
 
 server --> client \
-`QueryGenerationResult`
+`QueryGenerationResultSerializer`
 ```
 {
     "client_id": client_id, 
     "timestamp": timestamp, 
-    "event": event, 
+    "event": "query_generation", 
     "cell_contents": [<CellContent object>], 
-    "generation_results": [<GeneratedQuery object>], 
+    "generated_queries": [<GeneratedQuery object>], 
 }
 ```
 
 server --> database \
-`QueryGenerationLog`
+`QueryGenerationLogSerializer`
 ```
 {
     "client_id": client_id, 
     "timestamp": timestamp, 
-    "event": event, 
+    "event": "query_generation", 
     "cell_contents": [<CellContent object>]
 }
 ```
@@ -133,40 +133,42 @@ server --> database \
 When clicking the search icon:
 
 client --> server \
-`ContextSearchRequest`
+`ContextSearchLogSerializer`
 ```
 {
-    "user": <user object>, 
-    "event": "context_based_search", 
-    "cell_content": <cell object>, 
-    "generated_queries": [<query object>], 
-    "issued_query": <query object>, 
+    "client_id": client_id, 
+    "timestamp": timestamp, 
+    "event": "context_search", 
+    "query": query, 
+    "cell_contents": [<CellContent object>]
+    "generated_queries": [<GeneratedQuery object>], 
 }
 ```
 
 server --> client \
-`ContextSearchResponse`
+`ContextSearchResultSerializer`
 ```
 {
-    "user": <user object>, 
-    "event": "context_based_search", 
-    "cell_content": <cell object>, 
-    "generated_queries": [<query object>], 
-    "issued_query": <query object>, 
-    "notebook_results": [<notebook_result object>], 
+    "client_id": client_id, 
+    "timestamp": timestamp, 
+    "event": "context_search", 
+    "query": query, 
+    "cell_contents": [<CellContent object>], 
+    "generated_queries": [<GeneratedQuery object>], 
+    "search_results": [<NotebookSearchResult object>], 
 }
 ```
 
 server --> client \
-`ContextSearchLog`
+`ContextSearchLogSerializer`
 ```
 {
-    "user": <user object>, 
-    "event": "context_based_search", 
-    "cell_content": <cell object>, 
-    "generated_queries": [<query object>], 
-    "issued_query": <query object>, 
-    "notebook_results": [<notebook_result object>], 
+    "client_id": client_id, 
+    "timestamp": timestamp, 
+    "event": "context_search", 
+    "cell_contents": [<CellContent object>]
+    "generation_results": [<GeneratedQuery object>], 
+    "query": query
 }
 ```
 

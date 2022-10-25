@@ -8,7 +8,7 @@ from rest_framework.decorators import authentication_classes
 from rest_framework.decorators import permission_classes
 
 @api_view(['GET'])
-def initialize_app(request) -> Response: 
+def initialize_app_api(request) -> Response: 
     ''' Initialize the application by creating superuser `admin`
 
     username: admin
@@ -26,7 +26,7 @@ def initialize_app(request) -> Response:
 
 
 @api_view(['GET'])
-def obatain_api_token(request) -> Response: 
+def obatain_api_token_api(request) -> Response: 
     ''' Show the token for user `aubergine` which will be used for token authentication of some APIs
     '''
     # Create user `aubergine` if not exists
@@ -42,7 +42,7 @@ def obatain_api_token(request) -> Response:
 @api_view(['GET'])
 @authentication_classes([TokenAuthentication])
 @permission_classes([IsAuthenticated])
-def welcome(request) -> Response: 
+def welcome_api(request) -> Response: 
     ''' Return the welcome message to API connection. 
     Args: 
         request: Received request from the client. 

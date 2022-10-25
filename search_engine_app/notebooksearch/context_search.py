@@ -9,8 +9,8 @@ class QueryGenerator:
             print(f'CELLLLLLLL: {cell}\n\n')
             lsa_queries = self.lsa(cell["cell_content"])
             queries_by_method = {
-                'generation_method': 'LSA', 
-                'generated_queries': [lsa_queries]*10
+                'method': 'LSA', 
+                'queries': [lsa_queries]*10
             }
             generated_queries.append(queries_by_method)
         return generated_queries

@@ -121,19 +121,6 @@ class QueryGenerationLog(BaseUser):
     def __str__(self):
         return self.client_id
 
-class CellContent(models.Model): 
-    ''' Cell content model 
-    '''
-    cell_type = models.CharField(max_length=60)
-    cell_content = models.TextField()
-    query_generation_log = models.ForeignKey(QueryGenerationLog, related_name="cell_contents", on_delete=models.CASCADE)
-   
-    # class Meta:
-    #     managed = False
-
-    def __str__(self): 
-        return str(self.id)
-
 
 class QueryGenerationResult(BaseUser): 
     ''' Query generation result model
@@ -148,44 +135,76 @@ class QueryGenerationResult(BaseUser):
 
     def __str__(self):
         return self.client_id
-        
-
-class GeneratedQuery(models.Model): 
-    # generation_method = models.CharField(max_length=60)
-    generation_method = models.CharField(max_length=60)
-    generated_queries = ArrayField(
-        models.CharField(max_length=120, blank=True), 
-        size=10,
-    )
-    class Meta: 
-        managed = False
-    def __str__(self): 
-        return self.generation_method
-
-
-
-# class QueryProfile(Query): 
-#     ''' Abstract query model that contains minimum set of query attributes
-#     '''
-
 # -----------------------------------------------------------------
 
 
-# # ------------------- Query generation models --------------------
-# class QueryGenerationSession(): 
-#     ''' Query generation session
-#     '''
+# ------------------- Context-based search models --------------------
+class ContextSearchLog(BaseUser): 
+    ''' Context-based search session
+    '''
+    timestamp = models.CharField(max_length=60)
+    event = models.CharField(max_length=60)
+    query = models.TextField()
+    # class Meta:
+    #     abstract = True
+    def __str__(self):
+        return self.client_id
+
+
+class ContextSearchResult(BaseUser): 
+    ''' Query generation result model
+
+    Each query generation method will generate 10 queries. 
+    ''' 
+    timestamp = models.CharField(max_length=60)
+    event = models.CharField(max_length=60)
+    query = models.TextField()
+
+    class Meta:
+        managed = False
+
+    def __str__(self):
+        return self.client_id
 # # -----------------------------------------------------------------
 
 
-# # ------------------- Context-based search models --------------------
-# class ContextSearchSession(BaseUser): 
-#     ''' Context-based search session
-#     '''
+# ------------------- Cell contents models --------------------
+class CellContent(models.Model): 
+    ''' Cell content model 
+    '''
+    cell_type = models.CharField(max_length=60)
+    cell_content = models.TextField()
+    # Add `null=True` to prevent writting to database when no data is passed
+    query_generation_log = models.ForeignKey(QueryGenerationLog, null=True, related_name="cell_contents", on_delete=models.CASCADE)
+    context_search_log = models.ForeignKey(ContextSearchLog, null=True, related_name="cell_contents", on_delete=models.CASCADE)
+
+    def __str__(self): 
+        try: 
+            return str(self.query_generation_log.client_id)
+        except: 
+            return str(self.context_search_log.client_id)
+# -----------------------------------------------------------------
+
+# ------------------- Generated query models --------------------
+class GeneratedQuery(models.Model): 
+    method = models.CharField(max_length=60)
+    queries = ArrayField(
+        models.CharField(max_length=240, null=True), 
+        size=10,
+    )
+    context_search_log = models.ForeignKey(ContextSearchLog, null=True, related_name="generated_queries", on_delete=models.CASCADE)
+    
+    class Meta: 
+        managed = False
+        
+    def __str__(self): 
+        return self.method
+# -----------------------------------------------------------------
 
 
 
-# # -----------------------------------------------------------------
+
+
 
 # # ------------------- Relevancy feedback models --------------------
 # class RelevancyFeedbackRequest(NotebookSearchRequest): 

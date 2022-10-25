@@ -27,7 +27,7 @@ def str2datetime(timestamp:str):
 @api_view(['POST'])
 @authentication_classes([TokenAuthentication])
 @permission_classes([IsAuthenticated])
-def create_userprofile(request) -> Response: 
+def create_userprofile_api(request) -> Response: 
     ''' Create a user profile. 
     Args: 
         request: Received request from the client. 
@@ -51,7 +51,7 @@ def create_userprofile(request) -> Response:
 @api_view(['GET', 'POST'])
 @authentication_classes([TokenAuthentication])
 @permission_classes([IsAuthenticated])
-def notebook_search(request) -> Response: 
+def notebook_search_api(request) -> Response: 
     ''' Return the notebook searching results to the client. 
     Args: 
         request: Received request from the client. 

@@ -123,24 +123,10 @@ def post_notebook_search(api_endpoint, api_config):
     print('----------------------------------------------------------------------------\n')
     return hits
 
-# ------------------------------------------------------------------------------------
-
-
-def test(api_endpoint, api_config):
-    pass
-
-
 def query_generation(api_endpoint, api_config): 
     ''' test query generation API with `POST` method
     '''
     url = api_endpoint + "query_generation/"
-    # params = {
-    #     "page": "1",
-    #     "query": query,
-    #     "filter": "",
-    #     "facet": "",
-    # }
-
     client_id = 'sugar'
     event = "query_generation"
     cell_contents = [
@@ -160,29 +146,47 @@ def query_generation(api_endpoint, api_config):
         "cell_contents": cell_contents, 
     }
     response = requests.post(url, json=data, **api_config)
-    hits = response.json()
+    results = response.json()
     print('------------------------ Generated quries results -----------------------\n')
-    pprint(hits)
+    pprint(results)
     print('----------------------------------------------------------------------------\n')
-    return hits
+    return results
+# ------------------------------------------------------------------------------------
+
+
+def test(api_endpoint, api_config):
+    pass
+
+
+
 
 
 def context_search(api_endpoint, api_config):
-    ''' test
+    ''' test context_based search API with `POST` method
     '''
-    query = 'bread'
-    url = api_endpoint + "test/"
-    params={
+    query = 'bird'
+    url = api_endpoint + "notebook_search/"
+    params = {
         "page": "1",
         "query": query,
         "filter": "",
         "facet": "",
     }
-    response = requests.get(url, params=params, **api_config)
-    hits = response.json()['results']
-    # hits = response
-    print('------------------------ Example of searching result -----------------------\n')
-    pprint(hits[0])
+    # Get generated queries
+    generated_queries = query_generation(api_endpoint, api_config)
+
+    # Modify `POST` data
+    generation_results["event"] = "context_search"
+    generation_results["timestamp"] = str(time.time())
+    issued_query = 'recall'
+    data = {**generation_results, **{"query": query}}
+
+    # Send request
+    url = api_endpoint + "context_search/"
+    response = requests.post(url, json=data, **api_config)
+    hits = response.json()
+    print('------------------------ Generated quries results -----------------------\n')
+    pprint(hits)
     print('----------------------------------------------------------------------------\n')
     return hits
 

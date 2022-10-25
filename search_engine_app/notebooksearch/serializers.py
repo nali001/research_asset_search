@@ -12,10 +12,13 @@ from notebooksearch.models import NotebookSearchLog
 from notebooksearch.models import KaggleNotebook
 from notebooksearch.models import NotebookSearchResult
 
-from notebooksearch.models import QueryGenerationLog
 from notebooksearch.models import CellContent
 from notebooksearch.models import GeneratedQuery
+from notebooksearch.models import QueryGenerationLog
 from notebooksearch.models import QueryGenerationResult
+
+from notebooksearch.models import ContextSearchLog
+from notebooksearch.models import ContextSearchResult
 
 
 # class GithubNotebookResultSerializer(serializers.ModelSerializer):
@@ -24,23 +27,6 @@ from notebooksearch.models import QueryGenerationResult
 #         # Modify the fields to get a subset of fields to serialize
 #         fields = ['name', 'full_name', 'stargazers_count', 'forks_count', 'description', 'size', 'language', 'html_url', 'git_url']
 
-
-# class NotebookSearchRequestSerializer(serializers.ModelSerializer): 
-#     class Meta:
-#         model = NotebookSearchRequest
-#         # Modify the fields to get a subset of fields to serialize
-#         fields = '__all__'
-
-# class NotebookSearchRequestLogSerializer(serializers.ModelSerializer): 
-#     class Meta:
-#         model = NotebookSearchRequestLog
-#         # Modify the fields to get a subset of fields to serialize
-#         fields = '__all__'
-
-# class UserSerializer(serializers.ModelSerializer): 
-#     class Meta: 
-#         model = ClientUser
-#         fields = '__all__'
 
 class UserProfileSerializer(serializers.ModelSerializer): 
     ''' A serializer for serializing UserProfile data
@@ -109,18 +95,17 @@ class QueryGenetationLogSerializer(WritableNestedModelSerializer):
 class GeneratedQuerySerializer(serializers.ModelSerializer): 
     ''' A serliazer for serializing geneted queries
     '''
-
     class Meta:
         model = GeneratedQuery
-        fields = ('generation_method', 'generated_queries')
+        fields = ('method', 'queries')
 
 class QueryGenerationResultSerializer(serializers.ModelSerializer):
     ''' A nested serliazer for generating responses for query generation
 
     It generate one or more query for each 
     '''
-    cell_contents = CellContentSerializer(many=True)
-    generation_results = GeneratedQuerySerializer(many=True)
+    cell_contents = CellContentSerializer(many=True, allow_null=True)
+    generated_queries = GeneratedQuerySerializer(many=True, allow_null=True)
 
     class Meta:
         model = QueryGenerationResult
@@ -130,14 +115,30 @@ class QueryGenerationResultSerializer(serializers.ModelSerializer):
 
 
 
-# # ------------------- Context-based search serializers --------------------
-# class ContextSearchSession(BaseUser): 
-#     ''' Context-based search session
-#     '''
+# ------------------- Context-based search serializers --------------------
+class ContextSearchLogSerializer(WritableNestedModelSerializer):
+    ''' A nested serliazer for handling context search requests
+    '''
+    cell_contents = CellContentSerializer(many=True, allow_null=True)
+    generated_queries = GeneratedQuerySerializer(many=True, allow_null=True)
 
+    class Meta:
+        model = ContextSearchLog
+        fields = '__all__'
 
+class KaggleContextSearchResultSerializer(serializers.ModelSerializer):
+    ''' A nested serliazer for generating responses for context search using Kaggle notebooks
 
-# # -----------------------------------------------------------------
+    It copys the context search request information received from the client and adds a list of notebook results
+    '''
+    cell_contents = CellContentSerializer(many=True, allow_null=True)
+    generated_queries = GeneratedQuerySerializer(many=True, allow_null=True)
+    search_results = KaggleNotebookSerializer(many=True)
+
+    class Meta:
+        model = ContextSearchResult
+        fields = '__all__'
+# -----------------------------------------------------------------
 
 
 
