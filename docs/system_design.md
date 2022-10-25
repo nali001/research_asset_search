@@ -26,10 +26,11 @@
 }
 ```
 
-`<query object>` 
+`<GeneratedQuery object>` 
 ```
 {
-    "query_text": query_text, 
+    "generation_method": generation_method, 
+    "generated_queries": [query_text], 
 }
 ```
 
@@ -44,7 +45,7 @@
 }
 ```
 
-`<cell_content object>` 
+`<CellContent object>` 
 ```
 {
     "cell_type": cell_type,
@@ -109,10 +110,22 @@ server --> client \
 `QueryGenerationResult`
 ```
 {
-    "user": <user object>, 
-    "event": "query_generation", 
-    "cell_content": <cell object>, 
-    "generated_queries": [<query object>], 
+    "client_id": client_id, 
+    "timestamp": timestamp, 
+    "event": event, 
+    "cell_contents": [<CellContent object>], 
+    "generation_results": [<GeneratedQuery object>], 
+}
+```
+
+server --> database \
+`QueryGenerationLog`
+```
+{
+    "client_id": client_id, 
+    "timestamp": timestamp, 
+    "event": event, 
+    "cell_contents": [<CellContent object>]
 }
 ```
 

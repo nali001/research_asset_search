@@ -14,7 +14,7 @@ from notebooksearch.models import NotebookSearchResult
 from notebooksearch.models import QueryGenerationLog
 from notebooksearch.models import CellContent
 from notebooksearch.models import GeneratedQuery
-# from notebooksearch.models import QueryGenerationResult
+from notebooksearch.models import QueryGenerationResult
 
 
 # class GithubNotebookResultSerializer(serializers.ModelSerializer):
@@ -96,11 +96,10 @@ class CellContentSerializer(serializers.ModelSerializer):
         fields = ('cell_type', 'cell_content')
 
 
-class QueryGenerationLogSerializer(serializers.ModelSerializer):
+class QueryGenetationLogSerializer(serializers.ModelSerializer):
     ''' A nested serliazer for handling query generation requests
     '''
     cell_contents = CellContentSerializer(many=True)
-
     class Meta:
         model = QueryGenerationLog
         fields = '__all__'
@@ -123,7 +122,7 @@ class QueryGenerationResultSerializer(serializers.ModelSerializer):
     generation_results = GeneratedQuerySerializer(many=True)
 
     class Meta:
-        # model = QueryGenerationResult
+        model = QueryGenerationResult
         fields = '__all__'
 # -----------------------------------------------------------------
 

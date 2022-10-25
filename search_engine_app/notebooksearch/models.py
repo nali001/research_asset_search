@@ -114,8 +114,10 @@ class QueryGenerationLog(BaseUser):
     '''
     timestamp = models.CharField(max_length=60)
     event = models.CharField(max_length=60)
-    # class Meta:
-    #     abstract = True
+
+    class Meta:
+        managed = False
+
     def __str__(self):
         return self.client_id
 
@@ -133,20 +135,20 @@ class CellContent(models.Model):
         return str(self.id)
 
 
-# class QueryGenerationResult(models.Model): 
-#     ''' Query generation result model
+class QueryGenerationResult(BaseUser): 
+    ''' Query generation result model
 
-#     Each query generation method will generate 10 queries. 
-#     ''' 
-#     generation_method = models.CharField(max_length=60)
-#     generated_queries = ArrayField(
-#         models.CharField(max_length=120, blank=True), 
-#         size=10,
-#     )
-#     class Meta: 
-#         managed = False
-#     def __str__(self): 
-#         return self.generation_method
+    Each query generation method will generate 10 queries. 
+    ''' 
+    timestamp = models.CharField(max_length=60)
+    event = models.CharField(max_length=60)
+
+    class Meta:
+        managed = False
+
+    def __str__(self):
+        return self.client_id
+        
 
 class GeneratedQuery(models.Model): 
     # generation_method = models.CharField(max_length=60)

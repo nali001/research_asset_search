@@ -1,3 +1,4 @@
+from lib2to3.pgen2.pgen import generate_grammar
 import requests
 from pprint import pprint
 import time
@@ -149,7 +150,7 @@ def query_generation(api_endpoint, api_config):
         }, 
         {
             "cell_type": "markdown",
-            "cell_content": "Mamamia", 
+            "cell_content": "Mamammia", 
         }, 
         ]
     data = {
@@ -158,15 +159,13 @@ def query_generation(api_endpoint, api_config):
         "event": event, 
         "cell_contents": cell_contents, 
     }
-    response = requests.post(url, params=params, data=data, **api_config)
+    response = requests.post(url, json=data, **api_config)
     hits = response.json()
-    # results = hits['results']
-    # # hits = response
-    # print('------------------------ First 10 of notebook results -----------------------\n')
-    # for i in range(min(len(results), 10)): 
-    #     pprint(results[i]['name'])
-    # print('----------------------------------------------------------------------------\n')
-    # return hits
+    print('------------------------ Generated quries results -----------------------\n')
+    pprint(hits)
+    print('----------------------------------------------------------------------------\n')
+    return hits
+
 
 def context_search(api_endpoint, api_config):
     ''' test
@@ -192,6 +191,6 @@ if __name__ == "__main__":
     # obatain_api_token(ONLINE_API_ENDPOINT)
     # test_api_token(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
     # get_notebook_search(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
-    get_notebook_search(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
+    # get_notebook_search(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
     query_generation(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
 
