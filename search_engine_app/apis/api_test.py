@@ -86,7 +86,6 @@ def get_notebook_search(api_endpoint, api_config):
     response = requests.get(url, params=params, **api_config)
     hits = response.json()
     results = hits['results']
-    # hits = response
     print('------------------------ First 10 of notebook results -----------------------\n')
     for i in range(10): 
         pprint(results[i]['name'])
@@ -151,6 +150,42 @@ def query_generation(api_endpoint, api_config):
     pprint(results)
     print('----------------------------------------------------------------------------\n')
     return results
+
+
+def context_search(api_endpoint, api_config):
+    ''' test context_based search API with `POST` method
+    '''
+    # Get generated queries via calling query_generation API
+    generated_queries = query_generation(api_endpoint, api_config)
+
+    # Modify `POST` data
+    generated_queries["event"] = "context_search"
+    generated_queries["timestamp"] = str(time.time())
+    query = 'recall'
+    data = {**generated_queries, **{"query": query}}
+
+    # print(data)
+    print('------------------------ Modified data -----------------------\n')
+    pprint(data)
+    print('----------------------------------------------------------------------------\n')
+    
+
+    # Send request to context search API
+    url = api_endpoint + "context_search/"
+    params = {
+        "page": "1",
+        "query": query,
+        "filter": "",
+        "facet": "",
+    }
+    response = requests.post(url, params=params, json=data, **api_config)
+    hits = response.json()
+    results = hits['search_results']['results']
+    print('------------------------ First 10 of notebook results -----------------------\n')
+    for i in range(10): 
+        pprint(results[i]['name'])
+    print('----------------------------------------------------------------------------\n')
+    return hits
 # ------------------------------------------------------------------------------------
 
 
@@ -161,34 +196,7 @@ def test(api_endpoint, api_config):
 
 
 
-def context_search(api_endpoint, api_config):
-    ''' test context_based search API with `POST` method
-    '''
-    query = 'bird'
-    url = api_endpoint + "notebook_search/"
-    params = {
-        "page": "1",
-        "query": query,
-        "filter": "",
-        "facet": "",
-    }
-    # Get generated queries
-    generated_queries = query_generation(api_endpoint, api_config)
 
-    # Modify `POST` data
-    generation_results["event"] = "context_search"
-    generation_results["timestamp"] = str(time.time())
-    issued_query = 'recall'
-    data = {**generation_results, **{"query": query}}
-
-    # Send request
-    url = api_endpoint + "context_search/"
-    response = requests.post(url, json=data, **api_config)
-    hits = response.json()
-    print('------------------------ Generated quries results -----------------------\n')
-    pprint(hits)
-    print('----------------------------------------------------------------------------\n')
-    return hits
 
 if __name__ == "__main__": 
     # initialize_app(ONLINE_API_ENDPOINT)
@@ -196,5 +204,6 @@ if __name__ == "__main__":
     # test_api_token(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
     # get_notebook_search(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
     # get_notebook_search(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
-    query_generation(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
+    # query_generation(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
+    context_search(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
 

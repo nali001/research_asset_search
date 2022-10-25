@@ -145,6 +145,7 @@ class ContextSearchLog(BaseUser):
     timestamp = models.CharField(max_length=60)
     event = models.CharField(max_length=60)
     query = models.TextField()
+
     # class Meta:
     #     abstract = True
     def __str__(self):
@@ -194,9 +195,6 @@ class GeneratedQuery(models.Model):
     )
     context_search_log = models.ForeignKey(ContextSearchLog, null=True, related_name="generated_queries", on_delete=models.CASCADE)
     
-    class Meta: 
-        managed = False
-        
     def __str__(self): 
         return self.method
 # -----------------------------------------------------------------

@@ -22,6 +22,7 @@
 `<ClientUser>` 
 ```
 {
+	"id": id, 
     "client_id": client_id, 
 }
 ```
@@ -29,6 +30,7 @@
 `<GeneratedQuery object>` 
 ```
 {
+	"id": id, 
     "method": generation_method, 
     "queries": [query_text], 
 }
@@ -37,6 +39,8 @@
 `<KaggleNotebook object>` 
 ```
 {
+	"id": id, 
+	"id": id, 
     "name": name, 
     "html_url": html_url, 
     "description": description, 
@@ -48,6 +52,7 @@
 `<CellContent object>` 
 ```
 {
+	"id": id, 
     "cell_type": cell_type,
     "cell_content": cell_content,  
 }
@@ -61,6 +66,7 @@ client --> server \
 `NotebookSearchLogSerializer`
 ```
 {
+	"id": id, 
     "client_id": client_id, 
     "timestamp": timestamp, 
     "event": "notebook_search", 
@@ -72,6 +78,7 @@ server --> client \
 `NotebookSearchResultSerializer`
 ```
 {
+	"id": id, 
     "query" = query
     "facets" = facets
     "num_hits" = num_hits
@@ -84,6 +91,7 @@ server --> database \
 `NotebookSearchLogSerializer`
 ```
 {
+	"id": id, 
     "client_id": client_id, 
     "timestamp": timestamp, 
     "event": "notebook_search", 
@@ -99,6 +107,7 @@ client --> server \
 `QueryGenerationLogSerializer`
 ```
 {
+	"id": id, 
     "client_id": client_id, 
     "timestamp": timestamp, 
     "event": "query_generation", 
@@ -110,6 +119,7 @@ server --> client \
 `QueryGenerationResultSerializer`
 ```
 {
+	"id": id, 
     "client_id": client_id, 
     "timestamp": timestamp, 
     "event": "query_generation", 
@@ -122,6 +132,7 @@ server --> database \
 `QueryGenerationLogSerializer`
 ```
 {
+	"id": id, 
     "client_id": client_id, 
     "timestamp": timestamp, 
     "event": "query_generation", 
@@ -136,6 +147,7 @@ client --> server \
 `ContextSearchLogSerializer`
 ```
 {
+	"id": id, 
     "client_id": client_id, 
     "timestamp": timestamp, 
     "event": "context_search", 
@@ -146,9 +158,10 @@ client --> server \
 ```
 
 server --> client \
-`ContextSearchResultSerializer`
+`KaggleContextSearchResultSerializer`
 ```
 {
+	"id": id, 
     "client_id": client_id, 
     "timestamp": timestamp, 
     "event": "context_search", 
@@ -163,6 +176,7 @@ server --> client \
 `ContextSearchLogSerializer`
 ```
 {
+	"id": id, 
     "client_id": client_id, 
     "timestamp": timestamp, 
     "event": "context_search", 
@@ -179,6 +193,7 @@ client --> server \
 `RelevancyFeedbackRequest`
 ```
 {
+	"id": id, 
     "user": <user object>, 
     "event": "relevancy_feedback", 
     "query": <query object>, 
@@ -191,6 +206,7 @@ server --> client \
 `RelevancyFeedbackResponse`
 ```
 {
+	"id": id, 
     "user": <user object>, 
     "event": "relevancy_feedback", 
     "query": query, 
@@ -205,6 +221,7 @@ server --> database \
 `RelevancyFeedbackLog`
 ```
 {
+	"id": id, 
     "user": <user object>, 
     "event": "relevancy_feedback", 
     "query": query, 

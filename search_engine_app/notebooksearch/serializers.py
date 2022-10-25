@@ -133,7 +133,7 @@ class KaggleContextSearchResultSerializer(serializers.ModelSerializer):
     '''
     cell_contents = CellContentSerializer(many=True, allow_null=True)
     generated_queries = GeneratedQuerySerializer(many=True, allow_null=True)
-    search_results = KaggleNotebookSerializer(many=True)
+    search_results = KaggleNotebookSearchResultSerializer()
 
     class Meta:
         model = ContextSearchResult

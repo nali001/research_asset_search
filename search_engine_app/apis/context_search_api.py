@@ -8,11 +8,16 @@ from rest_framework.decorators import authentication_classes
 from rest_framework.decorators import permission_classes
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
+from rest_framework.reverse import reverse_lazy
+import requests
+
 
 from notebooksearch import serializers
 from notebooksearch import context_search
 from apis import notebook_search_api
 
+import copy
+from django.http import HttpRequest
 
 
       
@@ -47,9 +52,7 @@ def query_generation_api(request) -> Response:
 
 
         # Merge results from two serializers
-        results = {**request_data, **{"generated_queries": generated_queries}}
-        print(f'GENERATION RESUUUUUULTS: \n\n{results}\n\n')
-        
+        results = {**request_data, **{"generated_queries": generated_queries}}        
         # Serialize the response
         result_serializer = serializers.QueryGenerationResultSerializer(results)
         return Response(result_serializer.data, status = 200)
@@ -79,16 +82,25 @@ def context_search_api(request) -> Response:
         else: 
             return Response(request_serializer.errors, status = 400)
         
-        # Strip the request.data and use remaining for notebook search
-        request_data = request_serializer.data
+        # Strip the request.data and use the remaining for notebook search
+        request_data = request.data
         request_data["event"] = "notebook_search"
         request_data.pop("cell_contents")
         request_data.pop("generated_queries")
-        request.data = request_data
 
-        print(f'DAAAAAATTTTAAAAAAA: {request.data}\n')
-        search_results = notebook_search_api.notebook_search(request)
-
+        # Construct a new data request with data being modified
+        url = reverse_lazy('notebook_search', request=request)
+        params = request.query_params
+        data = request.data
+        http_authorization = request.META['HTTP_AUTHORIZATION']
+        http_config = {
+            'verify': False,
+            'headers': {
+                "Authorization": http_authorization, 
+            }}
+        # Issue a notebook search request via the notebook search API call
+        search_results = requests.post(url, params=params, data=data, **http_config).json()
+       
         # Merge results from two serializers
         results = {**request_serializer.data, **{"search_results": search_results}}
         
