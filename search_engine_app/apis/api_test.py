@@ -126,7 +126,7 @@ def query_generation(api_endpoint, api_config):
     ''' test query generation API with `POST` method
     '''
     url = api_endpoint + "query_generation/"
-    client_id = 'sugar'
+    client_id = 'kitten'
     event = "query_generation"
     cell_contents = [
         {

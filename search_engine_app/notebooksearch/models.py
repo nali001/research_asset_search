@@ -30,6 +30,7 @@ class BaseNotebook(models.Model):
     ''' Abstract notebook model that contains minimum set of notebook attributes
     '''
     name = models.CharField(max_length=60)
+    source = models.CharField(max_length=60)
     description = models.TextField(default = 'No description.')
     html_url = models.CharField(max_length=240, default = 'No html URL.')
     # download_url = models.CharField(max_length=240, default = 'No download URL.')

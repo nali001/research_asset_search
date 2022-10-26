@@ -48,7 +48,8 @@ class ElasticsearchIndexer():
                         "language": indexfile["language"],
                         "html_url":indexfile["html_url"],
                         "git_url":indexfile["git_url"], 
-                        "id":indexfile["git_url"]
+                        "id":indexfile["git_url"], 
+                        "source": "Github", 
                     }
                     indexfiles.append(newRecord)
 
@@ -72,18 +73,6 @@ class ElasticsearchIndexer():
                 index={'mapping': {'ignore_malformed': True}}
             )
             index.create()
-        
-            # es.indices.close(index=index_name)
-            # put = es.indices.put_settings(
-            #     index=index_name,
-            #     body={
-            #         "index": {
-            #             "mapping": {
-            #                 "ignore_malformed": True
-            #             }
-            #         }
-            #     })
-            # es.indices.open(index=index_name)
 
             # Call Elasticsearch to index the files
             indexfiles = self.generate_index_files()
