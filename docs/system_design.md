@@ -33,6 +33,7 @@
     "source": source, 
     "html_url": html_url, 
     "description": description, 
+    "docid": docid, 
     "kaggle_id": kaggle_id,
     "file_name": file_name, 
 }
@@ -57,7 +58,11 @@
 `<AnnotatedNotebook object>` 
 ```
 {
-
+    "name": name, 
+    "source": source, 
+    "html_url": html_url, 
+    "description": description,
+    "unified_notebook_id": unified_notebook_id, 
 }
 ```
 
@@ -191,8 +196,8 @@ client --> server \
     "timestamp": timestamp, 
     "event": "relevancy_feedback", 
     "query": query, 
+    "num_stars": num_stars, 
     "annotated_notebook": <AnnotatedNotebook object>, 
-
 }
 ```
 

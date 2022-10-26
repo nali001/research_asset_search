@@ -113,5 +113,5 @@ def index_kaggle_notebooks(reindex=False):
 # `__name__` will be `__main__`
 if __name__ == '__main__': 
     # Change `reindex` to Tur if you want to reindex the notebooks
-    index_kaggle_notebooks(reindex=False)
+    index_kaggle_notebooks(reindex=True)
    

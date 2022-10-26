@@ -57,7 +57,7 @@ class KaggleNotebookSerializer(serializers.ModelSerializer):
     '''
     class Meta:
         model = KaggleNotebook
-        fields = ('kaggle_id', 'name', 'source', 'file_name', 'html_url', 'description')
+        fields = ('docid', 'name', 'source', 'html_url', 'description', 'kaggle_id','file_name')
 
 
 class KaggleNotebookSearchResultSerializer(serializers.ModelSerializer):

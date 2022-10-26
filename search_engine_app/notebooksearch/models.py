@@ -33,6 +33,8 @@ class BaseNotebook(models.Model):
     source = models.CharField(max_length=60)
     description = models.TextField(default = 'No description.')
     html_url = models.CharField(max_length=240, default = 'No html URL.')
+    # This is unified notebook ID, assigned to each notebook in the database
+    docid = models.CharField(max_length=240)
     # download_url = models.CharField(max_length=240, default = 'No download URL.')
     class Meta:
         abstract = True
@@ -43,7 +45,7 @@ class NotebookSearchParam(models.Model):
     For both `GET` and `POST` mthods
     '''
     page = models.CharField(max_length=60)
-    query = models.CharField(max_length=240)
+    query = models.TextField()
     filter = models.CharField(max_length=60, null=True, blank=True)
     facet = models.CharField(max_length=60, null=True, blank=True)
 
@@ -68,7 +70,7 @@ class NotebookSearchResult(models.Model):
     ''' notebook_results
     ['query', 'facets', 'num_hits', 'num_pages', 'current_page', 'results']
     '''
-    query = models.CharField(max_length=240)
+    query = models.TextField()
     facets = models.CharField(max_length=60)
     num_hits = models.IntegerField()
     num_pages = models.IntegerField()
@@ -205,12 +207,26 @@ class GeneratedQuery(models.Model):
 
 
 
-# # ------------------- Relevancy feedback models --------------------
-# class RelevancyFeedbackRequest(NotebookSearchRequest): 
-#     num_stars = models.IntegerField()
+# ------------------- Relevancy feedback models --------------------
+class AnnotatedNotebook(BaseNotebook):
+    def __str__(self): 
+        return str(self.unified_notebook_id)
 
-# # class RelevancyFeedbackLog(NotebookSearchRequest, BaseNotebook): 
-# #     num_stars = models.IntegerField()
-# # -----------------------------------------------------------------
+class RelevancyFeedbackLog(BaseUser): 
+    ''' Query generation request model
+    '''
+    timestamp = models.CharField(max_length=60)
+    event = models.CharField(max_length=60)
+    query = models.TextField()
+
+    # class Meta:
+    #     managed = False
+
+    def __str__(self):
+        return self.client_id
+
+# class RelevancyFeedbackLog(NotebookSearchRequest, BaseNotebook): 
+#     num_stars = models.IntegerField()
+# -----------------------------------------------------------------
 
 
