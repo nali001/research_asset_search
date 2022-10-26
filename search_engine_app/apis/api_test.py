@@ -90,6 +90,9 @@ def get_notebook_search(api_endpoint, api_config):
     for i in range(10): 
         pprint(results[i]['name'])
     print('----------------------------------------------------------------------------\n')
+    print('------------------------------ Result fields ---------------------------\n')
+    pprint(results[0].keys())
+    print('----------------------------------------------------------------------------\n')
     return hits
 
 def post_notebook_search(api_endpoint, api_config):
@@ -202,8 +205,8 @@ if __name__ == "__main__":
     # initialize_app(ONLINE_API_ENDPOINT)
     # obatain_api_token(ONLINE_API_ENDPOINT)
     # test_api_token(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
-    # get_notebook_search(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
-    # get_notebook_search(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
+    get_notebook_search(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
+    # post_notebook_search(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
     # query_generation(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
-    context_search(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
+    # context_search(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
 

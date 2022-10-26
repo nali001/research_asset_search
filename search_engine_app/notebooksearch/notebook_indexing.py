@@ -61,13 +61,15 @@ class ElasticsearchIndexer():
             print("Notebook source is unknown, please specify a scheme.")
         return indexfiles
 
-    def index_notebooks(self): 
+    def index_notebooks(self, reindex = False): 
         index_name = self.index_name
         es = self.es
-
         index = Index(index_name, es)
-        if  es.indices.exists(index = index_name):
+        if reindex: 
+            index.delete(ignore=[400, 404])
+        if es.indices.exists(index = index_name): 
             print(f'\n{index_name} already exists!\n')
+            return True
         else: 
             index.settings(
                 index={'mapping': {'ignore_malformed': True}}
@@ -97,7 +99,7 @@ class ElasticsearchIndexer():
         return True
 # ----------------------------------------------------------------------------------
 
-def index_kaggle_notebooks(): 
+def index_kaggle_notebooks(reindex=False): 
     es = utils.create_es_client()
 
     # Index notebooks crawled from Github
@@ -105,10 +107,11 @@ def index_kaggle_notebooks():
     # indexer = ElasticsearchIndexer(es, "Github", "github_notebooks", github_notebook_path)
     kaggle_notebook_path = os.path.join(os.getcwd(), 'notebooksearch', 'Kaggle Notebooks')
     indexer = ElasticsearchIndexer(es, "Kaggle", "kaggle_notebooks", kaggle_notebook_path)
-    indexer.index_notebooks()
+    indexer.index_notebooks(reindex=reindex)
 
 # If using `python -m notebooksearch.notebook_indexing`, 
 # `__name__` will be `__main__`
 if __name__ == '__main__': 
-    index_kaggle_notebooks()
+    # Change `reindex` to Tur if you want to reindex the notebooks
+    index_kaggle_notebooks(reindex=False)
    
