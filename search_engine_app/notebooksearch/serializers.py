@@ -20,21 +20,17 @@ from notebooksearch.models import QueryGenerationResult
 from notebooksearch.models import ContextSearchLog
 from notebooksearch.models import ContextSearchResult
 
+from notebooksearch.models import AnnotatedNotebook
+from notebooksearch.models import RelevancyFeedbackLog
 
-# class GithubNotebookResultSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = GithubNotebookResult
-#         # Modify the fields to get a subset of fields to serialize
-#         fields = ['name', 'full_name', 'stargazers_count', 'forks_count', 'description', 'size', 'language', 'html_url', 'git_url']
-
-
+# ------------------- User Profile serializers --------------------    
 class UserProfileSerializer(serializers.ModelSerializer): 
     ''' A serializer for serializing UserProfile data
     '''
     class Meta: 
         model = UserProfile
         fields = '__all__'
-
+# -----------------------------------------------------------------
 
 
 # ------------------- Notebook search serializers --------------------    
@@ -51,6 +47,13 @@ class NotebookSearchLogSerializer(serializers.ModelSerializer):
     class Meta:
         model = NotebookSearchLog
         fields = '__all__'
+
+# class GithubNotebookResultSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = GithubNotebookResult
+#         # Modify the fields to get a subset of fields to serialize
+#         fields = ['name', 'full_name', 'stargazers_count', 'forks_count', 'description', 'size', 'language', 'html_url', 'git_url']
+
 
 class KaggleNotebookSerializer(serializers.ModelSerializer):
     ''' A serliazer for serializing Kaggle notebooks
@@ -142,10 +145,21 @@ class KaggleContextSearchResultSerializer(serializers.ModelSerializer):
 
 
 
-# # ------------------- Relevancy feedback serializers --------------------
-# class RelevancyFeedbackRequest(NotebookSearchRequest): 
-#     num_stars = models.IntegerField()
+# ------------------- Relevancy feedback serializers --------------------
+class AnnotatedNotebookSerializer(serializers.ModelSerializer):
+    ''' A serliazer for serializing annotated notebooks
+    '''
+    class Meta:
+        model = AnnotatedNotebook
+        fields = ('docid', 'name', 'source', 'html_url', 'description')
 
-# # class RelevancyFeedbackLog(NotebookSearchRequest, BaseNotebook): 
-# #     num_stars = models.IntegerField()
-# # -----------------------------------------------------------------
+
+class RelevancyFeedbackLogSerializer(WritableNestedModelSerializer):
+    ''' A nested serliazer for handling context search requests
+    '''
+    annotated_notebook = AnnotatedNotebookSerializer(allow_null=True)
+
+    class Meta:
+        model = RelevancyFeedbackLog
+        fields = '__all__'
+# -----------------------------------------------------------------

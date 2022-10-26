@@ -62,7 +62,7 @@
     "source": source, 
     "html_url": html_url, 
     "description": description,
-    "unified_notebook_id": unified_notebook_id, 
+    "docid": docid, 
 }
 ```
 
@@ -202,27 +202,27 @@ client --> server \
 ```
 
 server --> client \
-`RelevancyFeedbackResponse`
+`RelevancyFeedbackLogSerializer`
 ```
 {
-    "user": <user object>, 
+    "client_id": client_id, 
+    "timestamp": timestamp, 
     "event": "relevancy_feedback", 
     "query": query, 
-    "notebook": <notebook_result object>, 
     "num_stars": num_stars, 
-    "success": True, 
+    "annotated_notebook": <AnnotatedNotebook object>, 
 }
 ```
-If success is not True, then the client should send the data again. 
 
 server --> database \
-`RelevancyFeedbackLog`
+`RelevancyFeedbackLogSerializer`
 ```
 {
-    "user": <user object>, 
+    "client_id": client_id, 
+    "timestamp": timestamp, 
     "event": "relevancy_feedback", 
     "query": query, 
-    "notebook": <notebook_result object>, 
     "num_stars": num_stars, 
+    "annotated_notebook": <AnnotatedNotebook object>, 
 }
 ```

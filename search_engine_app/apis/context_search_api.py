@@ -1,4 +1,4 @@
-# notebook_search_api.py
+# context_search_api.py
 ''' Implementations for context-based notebook search API
 
 '''
@@ -14,10 +14,6 @@ import requests
 
 from notebooksearch import serializers
 from notebooksearch import context_search
-from apis import notebook_search_api
-
-import copy
-from django.http import HttpRequest
 
 
       

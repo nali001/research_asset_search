@@ -61,9 +61,6 @@ def send_user_profile(api_endpoint, api_config):
     url = api_endpoint + "create_userprofile/"
     client_id = 'smalldog'
     research_interests = "machine learning"
-    # event = 'notebook_search'
-    # timestamp = str(time.time())
-    # query = 'yes please'
     data = {
         "client_id": client_id, 
         "research_interests": research_interests, 
@@ -118,7 +115,6 @@ def post_notebook_search(api_endpoint, api_config):
     response = requests.post(url, params=params, data=data, **api_config)
     hits = response.json()
     results = hits['results']
-    # hits = response
     print('------------------------ First 10 of notebook results -----------------------\n')
     for i in range(min(len(results), 10)): 
         pprint(results[i]['name'])
@@ -189,6 +185,36 @@ def context_search(api_endpoint, api_config):
         pprint(results[i]['name'])
     print('----------------------------------------------------------------------------\n')
     return hits
+
+
+def relevancy_feedback(api_endpoint, api_config): 
+    ''' test query generation API with `POST` method
+    '''
+    url = api_endpoint + "relevancy_feedback/"
+    client_id = 'Old man never lies'
+    event = "relevancy_feedback"
+    query = "what do you think about powerpoint?"
+    num_stars = 4
+    hits = get_notebook_search(api_endpoint, api_config)
+    notebook = hits["results"][0]
+    annotated_notebook = {}
+    for attr in ['docid', 'name', 'source', 'html_url', 'description']: 
+        annotated_notebook[attr] = notebook[attr]
+        
+    data = {
+        "client_id": client_id, 
+        "timestamp": str(time.time()), 
+        "event": event, 
+        "query": query, 
+        "num_stars": str(num_stars), 
+        "annotated_notebook": annotated_notebook, 
+    }
+    response = requests.post(url, json=data, **api_config)
+    # results = response.json()
+    print('------------------------ User feedback -----------------------\n')
+    pprint(response.status_code)
+    print('----------------------------------------------------------------------------\n')
+    return True
 # ------------------------------------------------------------------------------------
 
 
@@ -197,16 +223,13 @@ def test(api_endpoint, api_config):
 
 
 
-
-
-
-
 if __name__ == "__main__": 
     # initialize_app(ONLINE_API_ENDPOINT)
     # obatain_api_token(ONLINE_API_ENDPOINT)
     # test_api_token(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
-    get_notebook_search(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
+    # get_notebook_search(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
     # post_notebook_search(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
     # query_generation(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
     # context_search(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
+    relevancy_feedback(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
 

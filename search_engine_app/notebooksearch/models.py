@@ -11,15 +11,11 @@ class BaseUser(models.Model):
 
     class Meta:
         abstract = True
-    # def __str__(self):
-    #     return self.client_id
 
 
 class UserProfile(BaseUser): 
     ''' User profile 
     '''
-    # client_id = models.CharField(max_length=240)
-    # client_user = models.ForeignKey(ClientUser, related_name="userprofiles", on_delete=models.CASCADE)
     research_interests = models.TextField()
     def __str__(self):
         return self.client_id
@@ -60,8 +56,7 @@ class NotebookSearchLog(BaseUser):
     timestamp = models.CharField(max_length=60)
     event = models.CharField(max_length=60)
     query = models.TextField()
-    # class Meta:
-    #     abstract = True
+
     def __str__(self):
         return self.client_id
 
@@ -101,11 +96,8 @@ class KaggleNotebook(BaseNotebook):
 class BaseQuery(models.Model): 
     ''' Abstract query model that contains minimum set of query attributes
     '''
-    # query_id = models.CharField(max_length=60)
     query_text = models.TextField()
-    # def __str__(self):
-    #     return self.query_text
-    
+
     class Meta:
         abstract = True
 # -----------------------------------------------------------------
@@ -117,9 +109,6 @@ class QueryGenerationLog(BaseUser):
     '''
     timestamp = models.CharField(max_length=60)
     event = models.CharField(max_length=60)
-
-    # class Meta:
-    #     managed = False
 
     def __str__(self):
         return self.client_id
@@ -189,6 +178,7 @@ class CellContent(models.Model):
             return str(self.context_search_log.client_id)
 # -----------------------------------------------------------------
 
+
 # ------------------- Generated query models --------------------
 class GeneratedQuery(models.Model): 
     method = models.CharField(max_length=60)
@@ -203,14 +193,12 @@ class GeneratedQuery(models.Model):
 # -----------------------------------------------------------------
 
 
-
-
-
-
 # ------------------- Relevancy feedback models --------------------
 class AnnotatedNotebook(BaseNotebook):
+    
     def __str__(self): 
-        return str(self.unified_notebook_id)
+        return str(self.docid)
+
 
 class RelevancyFeedbackLog(BaseUser): 
     ''' Query generation request model
@@ -218,15 +206,11 @@ class RelevancyFeedbackLog(BaseUser):
     timestamp = models.CharField(max_length=60)
     event = models.CharField(max_length=60)
     query = models.TextField()
-
-    # class Meta:
-    #     managed = False
+    num_stars = models.CharField(max_length=60)
+    annotated_notebook = models.OneToOneField(AnnotatedNotebook, null=True, related_name="RelevancyFeedbackLog", on_delete=models.CASCADE)
 
     def __str__(self):
         return self.client_id
-
-# class RelevancyFeedbackLog(NotebookSearchRequest, BaseNotebook): 
-#     num_stars = models.IntegerField()
 # -----------------------------------------------------------------
 
 
