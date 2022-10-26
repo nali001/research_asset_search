@@ -211,23 +211,57 @@ Please refer to `es_backup.sh`.
 
 ------------------------------------------------------------------------------------------------------
 ## Folder explanation
-### nginx
+### - nginx/
+For docker build `nginx` service. 
 
-### elasticsearch 
+### - elasticsearch/ 
+For docker build `elasticsearch` service and mounting data between docker contains and host machine. 
 
-### search_engine_app
+### - search_engine_app/
+For docker build `search_engine_app` service and mounting data between docker contains and host machine. 
 
-### search_engine_app/notebook_search
-The Django project, providing URL resolvement, data processing and web page generation
+### - postgres/
+For docker build `postgres` service and mounting data between docker contains and host machine. 
 
+### - search_engine_app/
+The Django project. 
+
+#### -- notebook_search/
+Django app for implementing notebook search functionalities. 
 + `notebook_indexing.py`: Feed preprocessed notebook files under `Jupyter Notebook` to Elasticsearch database
 
+#### -- apis/
+Django app for implementing REST APIs. 
 
-### docker-compose.yml 
-Docker compose file for setting up **deployment** environment. 
+#### -- dev_env_setup.sh
+Bash script for setting up Django project running env on the local machine. \
+For **Development** only. 
 
-### docker-compose.dev.yml 
-Docker compose file for setting up **development** environment. 
+#### -- django_app_setup.sh
+Bash script for setting up Django project inside the container of `search_engine_app` service, used by Dockerfile. \
+For **Deployment** only. 
+
+#### -- requirements.txt
+Python library dependencies. 
+
+#### -- requirements_dev.txt
+Python library dependencies. 
+
+
+### - docker-compose.yml 
+Docker compose file for setting up **deployment** environment, including all the services. 
+
+### - docker-compose_es.yml 
+Docker compose file for setting up `elasticsearch` service inside a container. 
+
+### - docker-compose_postgres.yml 
+Docker compose file for setting up `postgres` service inside a container. 
+
+### - docker-compose_postgres_admin.yml 
+Docker compose file for setting up `postgres` and `pgadmin` services inside containers. 
+
+### - os_backup.sh
+Bash script for creating backups for elasticsearch data. 
 
 
 
@@ -237,7 +271,7 @@ Docker compose file for setting up **development** environment.
 ### Run scripts separately
 Each djano app is considered as a package, we assume all the Python scripts are executed from `search_engine_app` dir. 
 
-For example, if you wanna invoke `notebook_indexing` from CLI, use
+For example, if you want to invoke `notebook_indexing` from CLI, use
 ```
 python -m notebook_search.notebook_indexing.py
 ```
