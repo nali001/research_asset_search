@@ -2,6 +2,7 @@ from lib2to3.pgen2.pgen import generate_grammar
 import requests
 from pprint import pprint
 import time
+import json
 
 ONLINE_API_ENDPOINT = 'http://145.100.135.119/api/'
 ONLINE_API_CONFIG = {
@@ -65,7 +66,7 @@ def send_user_profile(api_endpoint, api_config):
         "client_id": client_id, 
         "research_interests": research_interests, 
     }
-    response = requests.post(url, json = data, **api_config)
+    response = requests.post(url, json=data, **api_config)
     print('------------------------ Example of user feedback -----------------------\n')
     pprint(response.json())
     print('----------------------------------------------------------------------------\n')
@@ -95,7 +96,7 @@ def get_notebook_search(api_endpoint, api_config):
 def post_notebook_search(api_endpoint, api_config):
     ''' test notebook search with `POST` method
     '''
-    query = 'bird'
+    query = 'explosion'
     url = api_endpoint + "notebook_search/"
     params = {
         "page": "1",
@@ -112,7 +113,7 @@ def post_notebook_search(api_endpoint, api_config):
         "event": event, 
         "query": query, 
     }
-    response = requests.post(url, params=params, data=data, **api_config)
+    response = requests.post(url, params=params, json=data, **api_config)
     hits = response.json()
     results = hits['results']
     print('------------------------ First 10 of notebook results -----------------------\n')
@@ -143,6 +144,7 @@ def query_generation(api_endpoint, api_config):
         "event": event, 
         "cell_contents": cell_contents, 
     }
+    # print(json.dumps(data))
     response = requests.post(url, json=data, **api_config)
     results = response.json()
     print('------------------------ Generated quries results -----------------------\n')
@@ -163,28 +165,28 @@ def context_search(api_endpoint, api_config):
     query = 'recall'
     data = {**generated_queries, **{"query": query}}
 
-    # print(data)
-    print('------------------------ Modified data -----------------------\n')
-    pprint(data)
-    print('----------------------------------------------------------------------------\n')
+    print(json.dumps(data))
+    # print('------------------------ Modified data -----------------------\n')
+    # pprint(data)
+    # print('----------------------------------------------------------------------------\n')
     
 
-    # Send request to context search API
-    url = api_endpoint + "context_search/"
-    params = {
-        "page": "1",
-        "query": query,
-        "filter": "",
-        "facet": "",
-    }
-    response = requests.post(url, params=params, json=data, **api_config)
-    hits = response.json()
-    results = hits['search_results']['results']
-    print('------------------------ First 10 of notebook results -----------------------\n')
-    for i in range(10): 
-        pprint(results[i]['name'])
-    print('----------------------------------------------------------------------------\n')
-    return hits
+    # # Send request to context search API
+    # url = api_endpoint + "context_search/"
+    # params = {
+    #     "page": "1",
+    #     "query": query,
+    #     "filter": "",
+    #     "facet": "",
+    # }
+    # response = requests.post(url, params=params, json=data, **api_config)
+    # hits = response.json()
+    # results = hits['search_results']['results']
+    # print('------------------------ First 10 of notebook results -----------------------\n')
+    # for i in range(10): 
+    #     pprint(results[i]['name'])
+    # print('----------------------------------------------------------------------------\n')
+    # return hits
 
 
 def relevancy_feedback(api_endpoint, api_config): 
@@ -212,7 +214,7 @@ def relevancy_feedback(api_endpoint, api_config):
     response = requests.post(url, json=data, **api_config)
     # results = response.json()
     print('------------------------ User feedback -----------------------\n')
-    pprint(response.status_code)
+    pprint(response.json())
     print('----------------------------------------------------------------------------\n')
     return True
 # ------------------------------------------------------------------------------------
@@ -222,14 +224,17 @@ def test(api_endpoint, api_config):
     pass
 
 
-
 if __name__ == "__main__": 
-    # initialize_app(ONLINE_API_ENDPOINT)
-    # obatain_api_token(ONLINE_API_ENDPOINT)
-    # test_api_token(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
-    # get_notebook_search(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
-    # post_notebook_search(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
-    # query_generation(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
-    # context_search(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
-    relevancy_feedback(LOCAL_API_ENDPOINT, LOCAL_API_CONFIG)
+    server = 'LOCAL'
+    api_endpoint = locals()[server + '_API_ENDPOINT']
+    api_config = locals()[server + '_API_CONFIG']
+    print(api_config)
+    # initialize_app(api_endpoint)clear
+    # obatain_api_token(api_endpoint)
+    # test_api_token(api_endpoint, api_config)
+    # get_notebook_search(api_endpoint, api_config)
+    # post_notebook_search(api_endpoint, api_config)
+    # query_generation(api_endpoint, api_config)
+    context_search(api_endpoint, api_config)
+    # relevancy_feedback(api_endpoint, api_config)
 

@@ -9,8 +9,8 @@ from rest_framework.decorators import permission_classes
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 
-
 from notebooksearch import serializers
+
 
 # The range for relevancy level
 # Represented as 0-5(including 0 and 5) stars in the frontend

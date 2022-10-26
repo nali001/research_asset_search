@@ -71,7 +71,6 @@ def notebook_search_api(request) -> Response:
 
     # Validate NotebookSearchLog data for `POST` method
     if request.method == 'POST': 
-        print(f'DAAAAAATTTTAAAAAAA: {request.data}\n')
         log_serializer = serializers.NotebookSearchLogSerializer(data=request.data)
         if log_serializer.is_valid(): 
             log_serializer.save()  
