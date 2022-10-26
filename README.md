@@ -46,15 +46,15 @@ docker compose up
 ```
 If the system does not work properly, either wait for some time for all containers to go up, or run `docker compose build` to update the images. 
 
-Now you can access the web page on http://IP_address/
+Now you can access the web page on `http://IP_address/`
 
-8. Initialize the web application via: http://IP_address/api/initialize_app/
+8. Initialize the web application via: `http://IP_address/api/initialize_app/`
 
 
 ### Administration
-We expose `pgadmin` service to the localhost so that you can easily monitor the database. Access it through http://localhost:5050/ 
+We expose `pgadmin` service to the localhost so that you can easily monitor the database. Access it through `http://localhost:5050/`
 
-We expose `Django admin` service to public web. Access it through http://IP_address/admin/ 
+We expose `Django admin` service to public web. Access it through `http://IP_address/admin/` 
 
 
 However, `postgres` `search_engine_app` and `Elasticsearch` services are only accessible within the docker network and thus cannot be accessed from the host machine or the web. 
@@ -160,7 +160,10 @@ python manage.py migrate
 
 
 ## REST API
-API endpoint: http://IP_address/api/
+API endpoint: 
+```
+http://IP_address/api/
+```
 
 API examples are in the file `apis/api_test.py`
 
