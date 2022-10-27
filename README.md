@@ -10,26 +10,21 @@ Right now it is focused on notebook search.
 - Docker
 
 ### Usage
-1. Setup environment on host machine, refer to `os_env_setup.sh`
+1. Setup environment on host machine, refer to `host_env_setup.sh`
 2. Clone the repository
 ```
 git clone --branch deploy https://github.com/nali001/notebook_search_docker.git
 ```
-3. Setup Elasticsearch data folder. Navigate to `notebook_search_docker` and run the following: 
+3. Setup Elasticsearch, PostgresSQL and pgadmin data folders. Navigate to `notebook_search_docker` and run the following: 
 ```
-mkdir elasticsearch/data elasticsearch/logs 
-chmod g+rwx elasticsearch/data elasticsearch/logs 
-sudo chgrp 0 elasticsearch/data elasticsearch/logs
+mkdir elasticsearch/data elasticsearch/logs postgres/data postgres/logs pgadmin/data
+chmod g+rwx elasticsearch/data elasticsearch/logs postgres/data postgres/logs pgadmin/data
+sudo chgrp 0 elasticsearch/data elasticsearch/logs postgres/data postgres/logs pgadmin/data
 ```
-4. Setup PostgresSQL data folder. Navigate to `notebook_search_docker` and run the following: 
-```
-mkdir postgres/data postgres/logs postgres/pgadmin
-chmod g+rwx postgres/data postgres/logs postgres/pgadmin
-sudo chgrp 0 postgres/data postgres/logs postgres/pgadmin
-```
-5. Prepare the data. Put your notebooks under `notebooksearch/Kaggle Notebook`
 
-6. Run 
+4. Prepare the data. Put your notebooks under `notebooksearch/Kaggle Notebook`
+
+5. Run 
 ```
 docker compose up
 ```
@@ -37,7 +32,7 @@ If the system does not work properly, either wait for some time for all containe
 
 Now you can access the web page on `http://IP_address/`
 
-7. Initialize the web application via: `http://IP_address/api/initialize_app/`
+6. Initialize the web application via: `http://IP_address/api/initialize_app/`
 
 
 
