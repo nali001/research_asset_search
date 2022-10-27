@@ -76,7 +76,7 @@ Development is mainly for Django project.
 ### Environment setup
 1. Clone the whole repository
 ```
-git clone https://github.com/nali001/notebook_search_docker.git
+git clone git@github.com:nali001/notebook_search_docker.git
 ```
 
 2. Setup environment on host machine, refer to `host_env_setup.sh`
