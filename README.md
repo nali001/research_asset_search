@@ -76,7 +76,7 @@ Development is mainly for Django project.
 ### Environment setup
 1. Clone the whole repository
 ```
-git clone https://github.com/nali001/notebook_search_docker.git
+git clone git@github.com:nali001/notebook_search_docker.git
 ```
 
 2. Setup environment on host machine, refer to `host_env_setup.sh`
@@ -287,7 +287,7 @@ In this case, you would not be confused by changing `sys.path`
 -------------------------------------------------------------------------------------------------------
 ## Debug
 ### Host machine IP address
-The bash script `os_env_setup.sh` together with `django_app_setup.sh` will automatically detect and pass the public IP address of host machine to `search_engine_app` service. 
+The bash script `host_env_setup.sh` together with `django_app_setup.sh` will automatically detect and pass the public IP address of host machine to `search_engine_app` service. 
 
 If it is not working, then inside `search_engine_app/search_engine_app/setting_prod.py`, replace the following line with your actual IP address: 
 ```
