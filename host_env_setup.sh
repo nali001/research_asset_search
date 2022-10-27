@@ -40,6 +40,11 @@ sudo nano /etc/sysctl.conf
 # vm.max_map_count=262144
 
 
+#---------------------- Setup data folders ----------------------#
+mkdir elasticsearch/data elasticsearch/logs postgres/data postgres/logs pgadmin/data
+chmod g+rwx elasticsearch/data elasticsearch/logs postgres/data postgres/logs pgadmin/data
+sudo chgrp 0 elasticsearch/data elasticsearch/logs postgres/data postgres/logs pgadmin/data
+
 #---------------------- Setup Environment variable ----------------------#
 echo "HOST_IP=$(wget -qO- ifconfig.me)" >> .env
 

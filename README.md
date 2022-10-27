@@ -15,16 +15,10 @@ Right now it is focused on notebook search.
 ```
 git clone --branch deploy https://github.com/nali001/notebook_search_docker.git
 ```
-3. Setup Elasticsearch, PostgresSQL and pgadmin data folders. Navigate to `notebook_search_docker` and run the following: 
-```
-mkdir elasticsearch/data elasticsearch/logs postgres/data postgres/logs pgadmin/data
-chmod g+rwx elasticsearch/data elasticsearch/logs postgres/data postgres/logs pgadmin/data
-sudo chgrp 0 elasticsearch/data elasticsearch/logs postgres/data postgres/logs pgadmin/data
-```
 
-4. Prepare the data. Put your notebooks under `notebooksearch/Kaggle Notebook`
+3. Prepare the data. Put your notebooks under `notebooksearch/Kaggle Notebook`
 
-5. Run 
+4. Run 
 ```
 docker compose up
 ```
@@ -32,7 +26,7 @@ If the system does not work properly, either wait for some time for all containe
 
 Now you can access the web page on `http://IP_address/`
 
-6. Initialize the web application via: `http://IP_address/api/initialize_app/`
+5. Initialize the web application via: `http://IP_address/api/initialize_app/`
 
 
 
