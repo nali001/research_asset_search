@@ -10,11 +10,11 @@ Right now it is focused on notebook search.
 - Docker
 
 ### Usage
-1. Setup environment on host machine, refer to `host_env_setup.sh`
-2. Clone the repository
+1. Clone the repository
 ```
-git clone --branch deploy https://github.com/nali001/notebook_search_docker.git
+git clone --branch deploy git@github.com:nali001/notebook_search_docker.git
 ```
+2. Setup environment on host machine, refer to `host_env_setup.sh`
 
 3. Prepare the data. Put your notebooks under `notebooksearch/Kaggle Notebook`
 
