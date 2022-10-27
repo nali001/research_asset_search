@@ -7,7 +7,7 @@ services:
     image: notebooksearch/search_engine_app:latest
     container_name: notebooksearch_search_engine_app
     volumes: 
-      - ./search_engine_app/notebooksearch/Notebooks:./notebooksearch/Notebooks
+      - ./search_engine_app/notebooksearch/Notebooks:/search_engine/notebooksearch/Notebooks
     environment: 
       - HOST_IP=${HOST_IP}
     networks: 
