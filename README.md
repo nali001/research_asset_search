@@ -4,9 +4,7 @@ Right now it is focused on notebook search.
 
 ------------------------------------------------------------------------------------------------------
 
-## Deployment / Production
-The deployment lives on docker and is accesible from the Internet. 
-
+## Deployment / Production 
 ### Prerequisites 
 - Open port 80/tcp
 - Docker
@@ -31,16 +29,7 @@ sudo chgrp 0 postgres/data postgres/logs postgres/pgadmin
 ```
 5. Prepare the data. Put your notebooks under `notebooksearch/Kaggle Notebook`
 
-6. Inside `search_engine_app/search_engine_app/setting_prod.py`, replace the following line with your actual IP address: 
-```
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'IP_address']
-```
-You can find the IP address with command: 
-```
-hostname -I
-```
-
-7. Run 
+6. Run 
 ```
 docker compose up
 ```
@@ -48,7 +37,8 @@ If the system does not work properly, either wait for some time for all containe
 
 Now you can access the web page on `http://IP_address/`
 
-8. Initialize the web application via: `http://IP_address/api/initialize_app/`
+7. Initialize the web application via: `http://IP_address/api/initialize_app/`
+
 
 
 ### Administration
@@ -282,3 +272,18 @@ python -m notebook_search.notebook_indexing.py
 + Always use absolute path for importing modules even it is from the same package. 
 
 In this case, you would not be confused by changing `sys.path`
+
+
+-------------------------------------------------------------------------------------------------------
+## Debug
+### Host machine IP address
+The bash script `os_env_setup.sh` together with `django_app_setup.sh` will automatically detect and pass the public IP address of host machine to `search_engine_app` service. 
+
+If it is not working, then inside `search_engine_app/search_engine_app/setting_prod.py`, replace the following line with your actual IP address: 
+```
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'IP_address']
+```
+You can find the IP address with command: 
+```
+hostname -I
+```

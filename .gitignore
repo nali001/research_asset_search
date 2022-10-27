@@ -1,17 +1,18 @@
 .vscode
 __pycache__/
+migrations/
 search_engine_app/venv
 search_engine_app/notebooksearch/Github Notebooks
-search_engine_app/notebooksearch/migrations/*
-search_engine_app/genericpages/migrations/*
-search_engine_app/apis/migrations/*
-
+search_engine_app/notebooksearch/test.py
 
 elasticsearch/data
 elasticsearch/logs
 
 postgres/data
 postgres/logs
-postgres/pgadmin
 
-search_engine_app/notebooksearch/test.py
+nginx/static
+
+pgadmin/data
+
+push_docker_images.sh

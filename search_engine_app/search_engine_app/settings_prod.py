@@ -34,3 +34,4 @@ DATABASES = {
         'PASSWORD': 'notebooksearch2022',
     }
 }
+

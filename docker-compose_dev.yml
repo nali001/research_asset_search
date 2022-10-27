@@ -70,6 +70,8 @@ services:
     build: ./nginx
     image: notebooksearch/nginx:latest
     container_name: notebooksearch_nginx
+    # volumes: 
+    #   - ./search_engine_app/static:/nginx_server/search_engine_app/static
     networks: 
       - search_engine_net
     depends_on:

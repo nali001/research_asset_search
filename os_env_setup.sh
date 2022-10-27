@@ -39,3 +39,7 @@ sudo nano /etc/sysctl.conf
 # add this line at the bottom: 
 # vm.max_map_count=262144
 
+
+#---------------------- Setup Environment variable ----------------------#
+echo "HOST_IP=$(wget -qO- ifconfig.me)" >> .env
+

@@ -7,7 +7,8 @@ WORKDIR /search_engine_app
 # Install psycopg dependencies
 RUN apt-get install libpq-dev
 
-COPY ./requirements.txt ./requirements_dev.txt ./django_app_setup.sh ./
+# COPY ./requirements.txt ./requirements_dev.txt ./django_app_setup.sh ./
+COPY . .
 RUN pip install -r requirements.txt -r requirements_dev.txt
 
 CMD ["/bin/sh", "./django_app_setup.sh"]
