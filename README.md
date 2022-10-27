@@ -18,9 +18,9 @@ git clone --branch deploy git@github.com:nali001/notebook_search_docker.git
 
 3. Setup data folders. Navigate to `notebook_search_docker` and run the following: 
 ```
-mkdir elasticsearch/data elasticsearch/logs 
-mkdir postgres/data postgres/logs
-mkdir pgadmin/data
+mkdir elasticsearch elasticsearch/data elasticsearch/logs 
+mkdir postgres postgres/data postgres/logs
+mkdir pgadmin pgadmin/data
 chmod g+rwx elasticsearch/data elasticsearch/logs postgres/data postgres/logs pgadmin/data
 sudo chgrp 0 elasticsearch/data elasticsearch/logs postgres/data postgres/logs pgadmin/data
 ```
