@@ -287,7 +287,7 @@ In this case, you would not be confused by changing `sys.path`
 -------------------------------------------------------------------------------------------------------
 ## Debug
 ### Host machine IP address
-The bash script `os_env_setup.sh` together with `django_app_setup.sh` will automatically detect and pass the public IP address of host machine to `search_engine_app` service. 
+The bash script `host_env_setup.sh` together with `django_app_setup.sh` will automatically detect and pass the public IP address of host machine to `search_engine_app` service. 
 
 If it is not working, then inside `search_engine_app/search_engine_app/setting_prod.py`, replace the following line with your actual IP address: 
 ```
