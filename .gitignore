@@ -2,17 +2,17 @@
 __pycache__/
 migrations/
 search_engine_app/venv
-search_engine_app/notebooksearch/Github Notebooks
+search_engine_app/notebooksearch/Notebooks/Kaggle/*
+search_engine_app/notebooksearch/Notebooks/Github/*
+
 search_engine_app/notebooksearch/test.py
 
-elasticsearch/data
-elasticsearch/logs
+elasticsearch/data/*
+elasticsearch/logs/*
 
-postgres/data
-postgres/logs
+postgres/data/*
+postgres/logs/*
 
-nginx/static
-
-pgadmin/data
+pgadmin/data/*
 
 push_docker_images.sh
