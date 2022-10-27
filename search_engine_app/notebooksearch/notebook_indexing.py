@@ -1,6 +1,7 @@
 from elasticsearch_dsl import Index
 import json
 import os
+import time
 
 import pandas as pd
 
@@ -99,8 +100,16 @@ class ElasticsearchIndexer():
         return True
 # ----------------------------------------------------------------------------------
 
-def index_kaggle_notebooks(reindex=False): 
-    es = utils.create_es_client()
+def index_kaggle_notebooks(reindex=False):         
+    # Try to reconnect to Elasticsearch for 10 times when failing
+    # This 
+    for i in range(100): 
+        es = utils.create_es_client()
+        if es == None: 
+            time.sleep(0.5)
+            continue
+        else: 
+            break
 
     # Index notebooks crawled from Github
     # github_notebook_path = os.path.join(os.getcwd(), 'notebooksearch', 'Github Notebooks')

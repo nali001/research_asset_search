@@ -2,7 +2,7 @@ services:
   postgres:
     build: ./postgres
     image: local_test/postgres
-    container_name: local_test/postgres
+    container_name: local_test_postgres
     volumes: 
       - ./postgres/data:/var/lib/postgresql/data
       - ./postgres/logs:/var/lib/postgresql/logs

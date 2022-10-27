@@ -11,6 +11,7 @@ def create_es_client() -> Elasticsearch:
         es: a elasticsearch client. 
 
     """
+    valid_es = None
     # Try different host names for Elasticsearch service. 
     # It depends on on what machine the service is running. 
     for host in ELASTICSEARCH_HOSTNAMES: 
@@ -21,5 +22,9 @@ def create_es_client() -> Elasticsearch:
             )
         if es.ping(): 
             print(f'\nVALID ELASTICSEARCHHHHHHHHHH: {host}\n')
+            valid_es = es
             break
-    return es
+    if valid_es == None: 
+        print(f'\n\nElasticsearch is NOT ready yet!\n\n')
+    # If ther is no valid connection. 
+    return valid_es

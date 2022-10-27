@@ -16,3 +16,5 @@ postgres/logs/*
 pgadmin/data/*
 
 push_docker_images.sh
+
+.env

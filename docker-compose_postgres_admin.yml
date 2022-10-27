@@ -2,7 +2,7 @@ services:
   postgres:
     build: ./postgres
     image: local_test/postgres
-    container_name: local_test/postgres
+    container_name: local_test_postgres
     volumes: 
       - ./postgres/data:/var/lib/postgresql/data
       - ./postgres/logs:/var/lib/postgresql/logs
@@ -16,7 +16,7 @@ services:
   pgadmin:
     build: ./pgadmin
     image: local_test/pgadmin
-    container_name: local_test/pgadmin
+    container_name: local_test_pgadmin
     restart: always
     environment:
       - PGADMIN_DEFAULT_EMAIL=postgres@notebooksearch.com

@@ -21,11 +21,13 @@ git clone --branch deploy git@github.com:nali001/notebook_search_docker.git
 mkdir elasticsearch elasticsearch/data elasticsearch/logs 
 mkdir postgres postgres/data postgres/logs
 mkdir pgadmin pgadmin/data
-chmod g+rwx elasticsearch/data elasticsearch/logs postgres/data postgres/logs pgadmin/data
-sudo chgrp 0 elasticsearch/data elasticsearch/logs postgres/data postgres/logs pgadmin/data
+chmod -R g+rwx elasticsearch/data elasticsearch/logs postgres/data postgres/logs pgadmin/data 
+chmod -R g+rwx search_engine_app/notebooksearch/Notebooks/
+sudo chgrp -R 0 elasticsearch/data elasticsearch/logs postgres/data postgres/logs pgadmin/data 
+sudo chgrp -R 0 search_engine_app/notebooksearch/Notebooks
 ```
 
-4. Prepare the data. Put your notebooks under `search_engine_app/notebooksearch/Notebooks/Kaggle`
+4. Prepare the data. Put your notebooks `es_kaggle_notebooks.csv` under `search_engine_app/notebooksearch/Notebooks/Kaggle`
 
 5. Run 
 ```
@@ -86,8 +88,8 @@ git clone git@github.com:nali001/notebook_search_docker.git
 mkdir elasticsearch/data elasticsearch/logs 
 mkdir postgres/data postgres/logs
 mkdir pgadmin/data
-chmod g+rwx elasticsearch/data elasticsearch/logs postgres/data postgres/logs pgadmin/data
-sudo chgrp 0 elasticsearch/data elasticsearch/logs postgres/data postgres/logs pgadmin/data
+chmod -R g+rwx elasticsearch/data elasticsearch/logs postgres/data postgres/logs pgadmin/data
+sudo -R chgrp 0 elasticsearch/data elasticsearch/logs postgres/data postgres/logs pgadmin/data
 ```
 
 4. Setup local Python environment, refer to `search_engine_app/dev_env_setup.sh`
