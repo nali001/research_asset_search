@@ -16,7 +16,7 @@ git clone --branch deploy git@github.com:nali001/notebook_search_docker.git
 ```
 2. Setup environment on host machine, refer to `host_env_setup.sh`
 
-3. Prepare the data. Put your notebooks under `notebooksearch/Kaggle Notebook`
+3. Prepare the data. Put your notebooks under `search_engine_app/notebooksearch/Notebooks`
 
 4. Run 
 ```
