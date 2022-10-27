@@ -105,7 +105,7 @@ def index_kaggle_notebooks(reindex=False):
     # Index notebooks crawled from Github
     # github_notebook_path = os.path.join(os.getcwd(), 'notebooksearch', 'Github Notebooks')
     # indexer = ElasticsearchIndexer(es, "Github", "github_notebooks", github_notebook_path)
-    kaggle_notebook_path = os.path.join(os.getcwd(), 'notebooksearch', 'Kaggle Notebooks')
+    kaggle_notebook_path = os.path.join(os.getcwd(), 'notebooksearch', 'Notebooks', 'Kaggle')
     indexer = ElasticsearchIndexer(es, "Kaggle", "kaggle_notebooks", kaggle_notebook_path)
     indexer.index_notebooks(reindex=reindex)
 
