@@ -7,6 +7,6 @@ echo "ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '$HOST_IP']" >> ./search_engine
 python manage.py makemigrations
 python manage.py migrate
 
-python -m notebooksearch.notebook_indexing
+# python -m notebooksearch.notebook_indexing
 
 gunicorn --bind :7777 --workers 4 search_engine_app.wsgi:application

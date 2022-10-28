@@ -1,5 +1,6 @@
 .vscode
 __pycache__/
+__init__.pyc
 migrations/
 search_engine_app/venv
 search_engine_app/notebooksearch/Notebooks/Kaggle/*
