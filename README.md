@@ -18,14 +18,15 @@ git clone --branch deploy git@github.com:nali001/notebook_search_docker.git
 
 3. Setup data folders. Navigate to `notebook_search_docker` and run the following: 
 ```
-mkdir elasticsearch elasticsearch/data elasticsearch/logs 
-mkdir postgres postgres/data postgres/logs
-mkdir pgadmin pgadmin/data
-chmod -R g+rwx elasticsearch/data elasticsearch/logs postgres/data postgres/logs pgadmin/data 
+chmod -R g+rwx elasticsearch/data elasticsearch/logs 
+chmod -R g+rwx postgres/data postgres/logs pgadmin/data
 chmod -R g+rwx search_engine_app/notebooksearch/Notebooks/
-sudo chgrp -R 0 elasticsearch/data elasticsearch/logs postgres/data postgres/logs pgadmin/data 
+sudo chgrp -R 0 elasticsearch/data elasticsearch/logs
+sudo chgrp -R 0 postgres/data postgres/logs pgadmin/data
 sudo chgrp -R 0 search_engine_app/notebooksearch/Notebooks
 ```
+
+This step is crucial for access and persistent storage of data. 
 
 4. Prepare the data. Put your notebooks `es_kaggle_notebooks.csv` under `search_engine_app/notebooksearch/Notebooks/Kaggle`
 
@@ -85,11 +86,10 @@ git clone git@github.com:nali001/notebook_search_docker.git
 
 3. Setup data folders. Navigate to `notebook_search_docker` and run the following: 
 ```
-mkdir elasticsearch/data elasticsearch/logs 
-mkdir postgres/data postgres/logs
-mkdir pgadmin/data
-chmod -R g+rwx elasticsearch/data elasticsearch/logs postgres/data postgres/logs pgadmin/data
-sudo -R chgrp 0 elasticsearch/data elasticsearch/logs postgres/data postgres/logs pgadmin/data
+chmod -R g+rwx elasticsearch/data elasticsearch/logs 
+chmod -R postgres/data postgres/logs pgadmin/data
+sudo chgrp -R 0 elasticsearch/data elasticsearch/logs
+sudo chgrp -R 0 postgres/data postgres/logs pgadmin/data
 ```
 
 4. Setup local Python environment, refer to `search_engine_app/dev_env_setup.sh`

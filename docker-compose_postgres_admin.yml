@@ -21,12 +21,12 @@ services:
     environment:
       - PGADMIN_DEFAULT_EMAIL=postgres@notebooksearch.com
       - PGADMIN_DEFAULT_PASSWORD=notebooksearch2022
-    volumes:
-      - ./pgadmin/data:/var/lib/pgadmin
+    # volumes:
+      # - ./pgadmin/data:/var/lib/pgadmin
     depends_on: 
       - postgres
     ports:
-      - 5050:80
+      - 6666:80
 
     
 
