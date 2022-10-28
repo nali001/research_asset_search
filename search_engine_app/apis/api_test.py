@@ -10,7 +10,7 @@ ONLINE_API_CONFIG = {
     'headers': {
         # "Accept": "*/*",
         # "Content-Type": "text/json",
-        "Authorization": "Token 5901347bc7ccd4560fe687a3ec0754b26904ba6a", 
+        "Authorization": "Token 2d23b88f724f5d95072d011786f7133e1e517675", 
     }
 }
 
@@ -20,7 +20,7 @@ LOCAL_API_CONFIG = {
     'headers': {
         # "Accept": "*/*",
         # "Content-Type": "text/json",
-        "Authorization": "Token ab132fc1bc7f55d8410d276335b5e922a7d60072", 
+        "Authorization": "Token 0b19c9cc081ee3dd3db94a50f2bfb6198e0908c5", 
     }
 }
 
@@ -165,28 +165,28 @@ def context_search(api_endpoint, api_config):
     query = 'recall'
     data = {**generated_queries, **{"query": query}}
 
-    print(json.dumps(data))
-    # print('------------------------ Modified data -----------------------\n')
-    # pprint(data)
-    # print('----------------------------------------------------------------------------\n')
+
+    print('------------------------ Modified data -----------------------\n')
+    pprint(data)
+    print('----------------------------------------------------------------------------\n')
     
 
-    # # Send request to context search API
-    # url = api_endpoint + "context_search/"
-    # params = {
-    #     "page": "1",
-    #     "query": query,
-    #     "filter": "",
-    #     "facet": "",
-    # }
-    # response = requests.post(url, params=params, json=data, **api_config)
-    # hits = response.json()
-    # results = hits['search_results']['results']
-    # print('------------------------ First 10 of notebook results -----------------------\n')
-    # for i in range(10): 
-    #     pprint(results[i]['name'])
-    # print('----------------------------------------------------------------------------\n')
-    # return hits
+    # Send request to context search API
+    url = api_endpoint + "context_search/"
+    params = {
+        "page": "1",
+        "query": query,
+        "filter": "",
+        "facet": "",
+    }
+    response = requests.post(url, params=params, json=data, **api_config)
+    hits = response.json()
+    results = hits['search_results']['results']
+    print('------------------------ First 10 of notebook results -----------------------\n')
+    for i in range(10): 
+        pprint(results[i]['name'])
+    print('----------------------------------------------------------------------------\n')
+    return hits
 
 
 def relevancy_feedback(api_endpoint, api_config): 
@@ -195,14 +195,14 @@ def relevancy_feedback(api_endpoint, api_config):
     url = api_endpoint + "relevancy_feedback/"
     client_id = 'Old man never lies'
     event = "relevancy_feedback"
-    query = "what do you think about powerpoint?"
+    query = "bird"
     num_stars = 4
     hits = get_notebook_search(api_endpoint, api_config)
     notebook = hits["results"][0]
     annotated_notebook = {}
     for attr in ['docid', 'name', 'source', 'html_url', 'description']: 
         annotated_notebook[attr] = notebook[attr]
-        
+
     data = {
         "client_id": client_id, 
         "timestamp": str(time.time()), 
@@ -212,9 +212,10 @@ def relevancy_feedback(api_endpoint, api_config):
         "annotated_notebook": annotated_notebook, 
     }
     response = requests.post(url, json=data, **api_config)
-    # results = response.json()
+    feedback = response.json()
     print('------------------------ User feedback -----------------------\n')
-    pprint(response.json())
+    print(f"Client: {feedback['client_id']}")
+    print(f"Stars: {feedback['num_stars']}")
     print('----------------------------------------------------------------------------\n')
     return True
 # ------------------------------------------------------------------------------------
@@ -225,16 +226,16 @@ def test(api_endpoint, api_config):
 
 
 if __name__ == "__main__": 
-    server = 'LOCAL'
+    server = 'ONLINE'
     api_endpoint = locals()[server + '_API_ENDPOINT']
     api_config = locals()[server + '_API_CONFIG']
-    print(api_config)
-    # initialize_app(api_endpoint)clear
+    # print(api_config)
+    # initialize_app(api_endpoint)
     # obatain_api_token(api_endpoint)
-    # test_api_token(api_endpoint, api_config)
+    test_api_token(api_endpoint, api_config)
     # get_notebook_search(api_endpoint, api_config)
     # post_notebook_search(api_endpoint, api_config)
     # query_generation(api_endpoint, api_config)
-    context_search(api_endpoint, api_config)
+    # context_search(api_endpoint, api_config)
     # relevancy_feedback(api_endpoint, api_config)
 
