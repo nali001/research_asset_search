@@ -1,0 +1,41 @@
+query,title,kernel_ref
+cancer,Breast cancer prediction,buddhiniw/breast-cancer-prediction
+cancer,Breast Cancer,allunia/breast-cancer
+cancer,Basic Machine Learning with Cancer,gargmanish/basic-machine-learning-with-cancer
+cancer,Breast Cancer Dataset Analysis,lbronchal/breast-cancer-dataset-analysis
+cancer,CNN for skin cancer detection,fanconic/cnn-for-skin-cancer-detection
+cancer,Breast Cancer Analysis and Prediction,vincentlugat/breast-cancer-analysis-and-prediction
+cancer,Breast Cancer Classification,niteshyadav3103/breast-cancer-classification
+cancer,[Classification] Breast Cancer or Not (with 15 ML),mirichoi0218/classification-breast-cancer-or-not-with-15-ml
+cancer,Predicting Breast Cancer - Logistic Regression,jagannathrk/predicting-breast-cancer-logistic-regression
+cancer,Intro to Keras with breast cancer data[ANN],thebrownviking20/intro-to-keras-with-breast-cancer-data-ann
+cancer,"Skin Cancer Classification with  ResNet 50, FastAI",ingbiodanielh/skin-cancer-classification-with-resnet-50-fastai
+cancer,Breast Cancer Prediction,aditimulye/breast-cancer-prediction
+cancer,Breast Cancer Prediction from Cytopathology Data,gpreda/breast-cancer-prediction-from-cytopathology-data
+cancer,"Prostate Cancer: In Depth Understanding,EDA ,Model",tanulsingh077/prostate-cancer-in-depth-understanding-eda-model
+cancer,Predict IDC in Breast Cancer Histology Images,paultimothymooney/predict-idc-in-breast-cancer-histology-images
+cancer,Breast cancer Wisconsin,mragpavank/breast-cancer-wisconsin
+cancer,Blood Cancer Diagnosis,sarques/blood-cancer-diagnosis
+cancer,Skin Cancer EfficientNetB0,fanconic/skin-cancer-efficientnetb0
+cancer,A complete ML pipeline (Fast.ai),qitvision/a-complete-ml-pipeline-fast-ai
+cancer,Skin Cancer Prediction,samansiadati/skin-cancer-prediction
+cancer,Breast Cancer Detection with CNN,zeadomar/breast-cancer-detection-with-cnn
+cancer,Breast Cancer Detection using CNN 98% Accuracy,krutarthhd/breast-cancer-detection-using-cnn-98-accuracy
+cancer,Breast Cancer - Prediction,samansiadati/breast-cancer-prediction
+cancer,Breast Cancer images Classification ,midouazerty/breast-cancer-images-classification
+cancer,Prostate Cancer Grading - Intro & starter kernel,tanlikesmath/prostate-cancer-grading-intro-starter-kernel
+cancer,Python ML - breast cancer diagnostic data set,rcfreitas/python-ml-breast-cancer-diagnostic-data-set
+cancer,Breast cancer image classification for beginners,mohamedhanyyy/breast-cancer-image-classification-for-beginners
+cancer,CNN Starter - NasNet Mobile ( 0.9709 LB) ,CVxTz/cnn-starter-nasnet-mobile-0-9709-lb
+cancer,🫁Lung Cancer 〽️Analysis & 🎯Accuracy 96.4%,hasibalmuzdadid/lung-cancer-analysis-accuracy-96-4
+cancer,Breast Cancer Analysis & Prediction,pankajbhowmik/breast-cancer-analysis-prediction
+cancer,Patterns of Colorectal Cancer - Wally,allunia/patterns-of-colorectal-cancer-wally
+cancer,Skin Cancer,melihkanbay/skin-cancer
+cancer,HAM10000 : Skin Cancer Classification,kaushil268/ham10000-skin-cancer-classification
+cancer,Histopathologic Cancer Detection,soumya044/histopathologic-cancer-detection
+cancer,Lung Cancer Detection,vishwas09/lung-cancer-detection
+cancer,Predicting Breast Cancer - Logistic Regression,leemun1/predicting-breast-cancer-logistic-regression
+cancer,Breast Cancer Classification,meetnagadia/breast-cancer-classification
+cancer,Lung Cancer Classification,michaelbryantds/lung-cancer-classification
+cancer,Lung Cancer detection,jesyfax/lung-cancer-detection
+cancer,skin cancer detection using pytorch,naim99/skin-cancer-detection-using-pytorch
