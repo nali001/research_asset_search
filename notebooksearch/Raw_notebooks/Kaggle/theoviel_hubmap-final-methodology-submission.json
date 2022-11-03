@@ -1,0 +1,22 @@
+{
+  "id": "theoviel/hubmap-final-methodology-submission",
+  "id_no": 16895315,
+  "title": "HubMap Final Methodology Submission",
+  "code_file": "hubmap-final-methodology-submission.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "keywords": [
+    "neuroscience",
+    "matplotlib"
+  ],
+  "dataset_sources": [
+    ""
+  ],
+  "kernel_sources": [],
+  "competition_sources": [
+    "competitions/hubmap-kidney-segmentation"
+  ]
+}

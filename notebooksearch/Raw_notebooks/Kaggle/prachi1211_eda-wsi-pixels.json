@@ -1,0 +1,17 @@
+{
+  "id": "prachi1211/eda-wsi-pixels",
+  "id_no": 10316657,
+  "title": "EDA - WSI Pixels ",
+  "code_file": "eda-wsi-pixels.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [],
+  "kernel_sources": [],
+  "competition_sources": [
+    "competitions/prostate-cancer-grade-assessment"
+  ]
+}

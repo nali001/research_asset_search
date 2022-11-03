@@ -1,0 +1,17 @@
+{
+  "id": "kerneler/starter-camelyon16-cancer-wsi-list-fb14cfc6-7",
+  "id_no": 3671642,
+  "title": "Starter: Camelyon16 Cancer WSI List fb14cfc6-7",
+  "code_file": "starter-camelyon16-cancer-wsi-list-fb14cfc6-7.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "keywords": [],
+  "dataset_sources": [
+    "datasets/kokecacao/camelyon16-cancer-wsi-list-normal-050"
+  ],
+  "kernel_sources": [],
+  "competition_sources": []
+}

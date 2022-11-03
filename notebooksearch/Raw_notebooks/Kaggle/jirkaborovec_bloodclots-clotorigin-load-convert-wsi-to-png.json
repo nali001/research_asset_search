@@ -1,0 +1,22 @@
+{
+  "id": "jirkaborovec/bloodclots-clotorigin-load-convert-wsi-to-png",
+  "id_no": 29060708,
+  "title": "BloodClots\ud83d\udd2cClotOrigin: load \ud83e\udd16 convert WSI to PNG",
+  "code_file": "bloodclots-clotorigin-load-convert-wsi-to-png.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "keywords": [
+    "image data",
+    "medicine"
+  ],
+  "dataset_sources": [],
+  "kernel_sources": [
+    "code/jirkaborovec/conda-pkg-pyvips-download-4-offline"
+  ],
+  "competition_sources": [
+    "competitions/mayo-clinic-strip-ai"
+  ]
+}

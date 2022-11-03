@@ -1,0 +1,79 @@
+query,title,kernel_ref
+wsi,PatchSlicer generator and plots of sorted patches ,sermakarevich/patchslicer-generator-and-plots-of-sorted-patches
+wsi,Part 1 : Breast Cancer Analyzer + Web App,vbookshelf/part-1-breast-cancer-analyzer-web-app
+wsi,Micro visuals: WSI * mask * zoom,sermakarevich/micro-visuals-wsi-mask-zoom
+wsi,AugMix data augmentation on TPU,szacho/augmix-data-augmentation-on-tpu
+wsi,BloodClots🔬ClotOrigin: load 🤖 convert WSI to PNG,jirkaborovec/bloodclots-clotorigin-load-convert-wsi-to-png
+wsi,Use PyVips Offline (v. 2.1.13),dschettler8845/use-pyvips-offline-v-2-1-13
+wsi,First steps with the MITOS WSI CCMCT data set,marcaubreville/first-steps-with-the-mitos-wsi-ccmct-data-set
+wsi,WSI_Extract_Patches_Pytorch,imrandude/wsi-extract-patches-pytorch
+wsi, Medical Whole Slide Processing: Speed Up!,sakima/medical-whole-slide-processing-speed-up
+wsi,🐚CLAM STRIP AI [inference]🐚,fx6300/clam-strip-ai-inference
+wsi,PANDA dataset - getting started,foobar167/panda-dataset-getting-started
+wsi,Mobile WSI Patches Creation,haashaatif/mobile-wsi-patches-creation
+wsi,MCSAI - Exploratory Data Analysis & Baseline,dschettler8845/mcsai-exploratory-data-analysis-baseline
+wsi,KB-->MB-->GB-->TB-->?B (BigQuery),ash316/kb-mb-gb-tb-b-bigquery
+wsi,Glomeruli Detection Related Works,leahscherschel/glomeruli-detection-related-works
+wsi,[WSI-HuBMAP] Dataset creation 256x256,nghihuynh/wsi-hubmap-dataset-creation-256x256
+wsi,Prepare patches coordinates and targets,sermakarevich/prepare-patches-coordinates-and-targets
+wsi,Mayo Clinic: EfficientNet Transfer Learning,minhajulhoque/mayo-clinic-efficientnet-transfer-learning
+wsi,🐚CLAM STRIP AI [image generation]🐚,fx6300/clam-strip-ai-image-generation
+wsi,Visualizing the test data,marcaubreville/visualizing-the-test-data
+wsi,HuBMAP EDA  Pytorch EfficientUNet Offline Training,vineeth1999/hubmap-eda-pytorch-efficientunet-offline-training
+wsi,Lung cancer WSI-Efficient net,tanushrikumar/lung-cancer-wsi-efficient-net
+wsi,PANDA_WSI_Manipulation_Openslide_Overview,jberros/panda-wsi-manipulation-openslide-overview
+wsi,[Beginner EDA] - Mayo STRIP AI,rajsengo/beginner-eda-mayo-strip-ai
+wsi,MCSAI - EDA,phanttan/mcsai-eda
+wsi,Split Image to 256*256 Patch（切割图片为256*256的patch）,xiafire/split-image-to-256-256-patch-256-256-patch
+wsi,"Prostate Cancer: In Depth Understanding,EDA ,Model",habibmrad1983/prostate-cancer-in-depth-understanding-eda-model
+wsi,[Dynamic vectorized code] All Non-white patches,ekami66/dynamic-vectorized-code-all-non-white-patches
+wsi,STRIP AI - Understand image processing ,xxxxyyyy80008/strip-ai-understand-image-processing
+wsi,Starter: Mitosis WSI CCMCT Training Set 48450e6f-5,kerneler/starter-mitosis-wsi-ccmct-training-set-48450e6f-5
+wsi,EDA - WSI Pixels ,prachi1211/eda-wsi-pixels
+wsi,WSI - Monk code,tanushrikumar/wsi-monk-code
+wsi,🐚CLAM STRIP AI [feature extraction]🐚,fx6300/clam-strip-ai-feature-extraction
+wsi,HubMap Final Methodology Submission,theoviel/hubmap-final-methodology-submission
+wsi,🐚CLAM STRIP AI [train]🐚,fx6300/clam-strip-ai-train
+wsi,"Mayo Clinic-EDA,Making Tiles & Removing Background",hiba007/mayo-clinic-eda-making-tiles-removing-background
+wsi,TIGER_lymphocytes_breast_cancer_segmentation_2022,albertozorzetto/tiger-lymphocytes-breast-cancer-segmentation-2022
+wsi,Save Mobile WSI Patches,micheomaano/save-mobile-wsi-patches
+wsi,Starter: Camelyon16 Cancer WSI List fb14cfc6-7,kerneler/starter-camelyon16-cancer-wsi-list-fb14cfc6-7
+wsi,Mayo Clinic - STRIP AI [MONAI starter kit],lhd0430/mayo-clinic-strip-ai-monai-starter-kit
+wsi,PanDa WSI tiles preprocessing SCRIPT,huynhdoo/panda-wsi-tiles-preprocessing-script
+wsi,Generating Cancer JigSaw,kokecacao/generating-cancer-jigsaw
+wsi,MCS_AI Helper Functions,phanttan/mcs-ai-helper-functions
+wsi,Starter: Mitosis WSI CCMCT Test Set 6d8a08f3-6,kerneler/starter-mitosis-wsi-ccmct-test-set-6d8a08f3-6
+wsi,HuBMAP_HPA Methodology Submission,nghihuynh/hubmap-hpa-methodology-submission
+wsi,PANDA - EDA + Better Visualization+Simple Baseline,habibmrad1983/panda-eda-better-visualization-simple-baseline
+wsi,Histopathologic Cancer Detection using CNNs,walia20/histopathologic-cancer-detection-using-cnns
+wsi,WSI  Textures,barbaroserdal/wsi-textures
+wsi,Prostate Cancer: PANDA Insight & EDA,spidyweb/prostate-cancer-panda-insight-eda
+wsi,LBP_CCA_features_tune_upsample_better_image_tiles,arkajyotib/lbp-cca-features-tune-upsample-better-image-tiles
+wsi,Fork of HuBMAP - Submission Experts (Raster I/O + ,dannyelkallab/fork-of-hubmap-submission-experts-raster-i-o
+wsi,Keras VGG16 -VGG19-InceptionV3- Resnet50,nobletp/keras-vgg16-vgg19-inceptionv3-resnet50
+wsi,PANDA - EDA + Better Visualization+Simple Baseline,razamh/panda-eda-better-visualization-simple-baseline
+wsi,[Inference-LB:0.73] Binary segmentation UNext50,nghihuynh/inference-lb-0-73-binary-segmentation-unext50
+wsi,PANDA-Deeper-EDA-and-Visualization-v2,djeutsch/panda-deeper-eda-and-visualization-v2
+wsi,Eksploratorna Analiza,bornarado/eksploratorna-analiza
+wsi,KagglePandaTfRecords,esindarici/kagglepandatfrecords
+wsi,🐚CLAM STRIP AI [attention heatmap]🐚,fx6300/clam-strip-ai-attention-heatmap
+wsi,Prostate Cancer Grading,hossein2015/prostate-cancer-grading
+wsi,Starter: histopathologic-cancer-WSI 2baccc52-2,kerneler/starter-histopathologic-cancer-wsi-2baccc52-2
+wsi,11 SVM Lagrangian multipler Method,manmohan291/11-svm-lagrangian-multipler-method
+wsi,A complete ML pipeline (Fast.ai),habibmrad1983/a-complete-ml-pipeline-fast-ai
+wsi,Prostate Cancer Identification (2nd review),koushikkkk/prostate-cancer-identification-2nd-review
+wsi,The Office TV Series Part 1 - EDA using Plotly,nehaprabhavalkar/the-office-tv-series-part-1-eda-using-plotly
+wsi,PANDA generating data_2000,nizamuddin/panda-generating-data-2000
+wsi,Mini project -Cancer Detection ,smithstrivedi17it/mini-project-cancer-detection
+wsi,A complete ML pipeline (Fast.ai),fengqianpang/a-complete-ml-pipeline-fast-ai
+wsi,ObjectDetectionTools,marcaubreville/objectdetectiontools
+wsi,A complete ML pipeline (Fast.ai),mducducd9999/a-complete-ml-pipeline-fast-ai
+wsi,kernel4a3b468030,natalyayurina/kernel4a3b468030
+wsi,NNDS_HW2_continual_learning,ramsegaurav/nnds-hw2-continual-learning
+wsi,CIFAR-10 Images classification using CNN,kelvar/cifar-10-images-classification-using-cnn
+wsi,New_Colab_Features,welcomehere/new-colab-features
+wsi,A complete ML pipeline (Fast.ai) e37094,hiutrnc/a-complete-ml-pipeline-fast-ai-e37094
+wsi,A complete ML pipeline (Fast.ai),thangld97/a-complete-ml-pipeline-fast-ai
+wsi,Starter: my_own_dataset_WSI 04c9a0c5-8,kerneler/starter-my-own-dataset-wsi-04c9a0c5-8
+wsi,Time Series -The various steps ,jurk06/time-series-the-various-steps
+wsi,Scatter Plots of IP over Time per Channel: part 2,jtrotman/scatter-plots-of-ip-over-time-per-channel-part-2

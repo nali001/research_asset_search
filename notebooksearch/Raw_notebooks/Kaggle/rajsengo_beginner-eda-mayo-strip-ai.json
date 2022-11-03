@@ -1,0 +1,17 @@
+{
+  "id": "rajsengo/beginner-eda-mayo-strip-ai",
+  "id_no": 28524635,
+  "title": "[Beginner EDA] - Mayo STRIP AI",
+  "code_file": "beginner-eda-mayo-strip-ai.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [],
+  "kernel_sources": [],
+  "competition_sources": [
+    "competitions/mayo-clinic-strip-ai"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "xiafire/split-image-to-256-256-patch-256-256-patch",
+  "id_no": 28633978,
+  "title": "Split Image to 256*256 Patch\uff08\u5207\u5272\u56fe\u7247\u4e3a256*256\u7684patch\uff09",
+  "code_file": "split-image-to-256-256-patch-256-256-patch.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [],
+  "kernel_sources": [],
+  "competition_sources": [
+    "competitions/mayo-clinic-strip-ai"
+  ]
+}

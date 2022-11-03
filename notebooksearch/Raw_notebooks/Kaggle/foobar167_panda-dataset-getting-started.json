@@ -1,0 +1,17 @@
+{
+  "id": "foobar167/panda-dataset-getting-started",
+  "id_no": 9301002,
+  "title": "PANDA dataset - getting started",
+  "code_file": "panda-dataset-getting-started.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "keywords": [],
+  "dataset_sources": [],
+  "kernel_sources": [],
+  "competition_sources": [
+    "competitions/prostate-cancer-grade-assessment"
+  ]
+}

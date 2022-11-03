@@ -1,0 +1,23 @@
+{
+  "id": "hiba007/mayo-clinic-eda-making-tiles-removing-background",
+  "id_no": 29499432,
+  "title": "Mayo Clinic-EDA,Making Tiles & Removing Background",
+  "code_file": "mayo-clinic-eda-making-tiles-removing-background.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "keywords": [
+    "cv2",
+    "matplotlib",
+    "plotly",
+    "pandas",
+    "numpy"
+  ],
+  "dataset_sources": [],
+  "kernel_sources": [],
+  "competition_sources": [
+    "competitions/mayo-clinic-strip-ai"
+  ]
+}

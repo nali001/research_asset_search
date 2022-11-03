@@ -1,0 +1,20 @@
+{
+  "id": "marcaubreville/visualizing-the-test-data",
+  "id_no": 7649527,
+  "title": "Visualizing the test data",
+  "code_file": "visualizing-the-test-data.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "keywords": [],
+  "dataset_sources": [
+    "datasets/marcaubreville/mitosis-wsi-ccmct-test-set"
+  ],
+  "kernel_sources": [
+    "code/marcaubreville/dicomslide",
+    "code/marcaubreville/sliderunnerdatabase"
+  ],
+  "competition_sources": []
+}

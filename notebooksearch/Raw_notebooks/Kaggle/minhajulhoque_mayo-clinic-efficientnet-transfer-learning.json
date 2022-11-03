@@ -1,0 +1,20 @@
+{
+  "id": "minhajulhoque/mayo-clinic-efficientnet-transfer-learning",
+  "id_no": 29161274,
+  "title": "Mayo Clinic: EfficientNet Transfer Learning",
+  "code_file": "mayo-clinic-efficientnet-transfer-learning.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "keywords": [],
+  "dataset_sources": [
+    "",
+    "datasets/jirkaborovec/stroke-blood-clot-origin-1k-scale-bg-crop"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [
+    "competitions/mayo-clinic-strip-ai"
+  ]
+}

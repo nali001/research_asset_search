@@ -1,0 +1,17 @@
+{
+  "id": "micheomaano/save-mobile-wsi-patches",
+  "id_no": 17463163,
+  "title": "Save Mobile WSI Patches",
+  "code_file": "save-mobile-wsi-patches.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [
+    "datasets/micheomaano/mobilewsis"
+  ],
+  "kernel_sources": [],
+  "competition_sources": []
+}

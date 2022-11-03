@@ -1,0 +1,21 @@
+{
+  "id": "lhd0430/mayo-clinic-strip-ai-monai-starter-kit",
+  "id_no": 30238412,
+  "title": "Mayo Clinic - STRIP AI [MONAI starter kit]",
+  "code_file": "mayo-clinic-strip-ai-monai-starter-kit.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [
+    "datasets/dariussingh/mayo-clinic-strip-ai-jpg-dataset"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [
+    "competitions/mayo-clinic-strip-ai"
+  ]
+}

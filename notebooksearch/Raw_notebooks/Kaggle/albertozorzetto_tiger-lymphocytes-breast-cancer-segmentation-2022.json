@@ -1,0 +1,23 @@
+{
+  "id": "albertozorzetto/tiger-lymphocytes-breast-cancer-segmentation-2022",
+  "id_no": 24320998,
+  "title": "TIGER_lymphocytes_breast_cancer_segmentation_2022",
+  "code_file": "tiger-lymphocytes-breast-cancer-segmentation-2022.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "cancer",
+    "healthcare",
+    "health",
+    "health conditions",
+    "medicine"
+  ],
+  "dataset_sources": [
+    "datasets/albertozorzetto/tiger-grand-challenge-data-dlv3plus-pre"
+  ],
+  "kernel_sources": [],
+  "competition_sources": []
+}

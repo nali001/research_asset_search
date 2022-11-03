@@ -1,0 +1,17 @@
+{
+  "id": "haashaatif/mobile-wsi-patches-creation",
+  "id_no": 24477969,
+  "title": "Mobile WSI Patches Creation",
+  "code_file": "mobile-wsi-patches-creation.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "keywords": [],
+  "dataset_sources": [
+    "datasets/micheomaano/mobilewsis"
+  ],
+  "kernel_sources": [],
+  "competition_sources": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "fx6300/clam-strip-ai-image-generation",
+  "id_no": 30713367,
+  "title": "\ud83d\udc1aCLAM STRIP AI [image generation]\ud83d\udc1a",
+  "code_file": "clam-strip-ai-image-generation.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "keywords": [],
+  "dataset_sources": [],
+  "kernel_sources": [
+    "code/analokamus/how-to-use-pyvips-offline"
+  ],
+  "competition_sources": [
+    "competitions/mayo-clinic-strip-ai"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "sermakarevich/prepare-patches-coordinates-and-targets",
+  "id_no": 9185069,
+  "title": "Prepare patches coordinates and targets",
+  "code_file": "prepare-patches-coordinates-and-targets.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [],
+  "kernel_sources": [],
+  "competition_sources": [
+    "competitions/prostate-cancer-grade-assessment"
+  ]
+}

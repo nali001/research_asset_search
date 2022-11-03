@@ -1,0 +1,17 @@
+{
+  "id": "tanushrikumar/lung-cancer-wsi-efficient-net",
+  "id_no": 24410358,
+  "title": "Lung cancer WSI-Efficient net",
+  "code_file": "lung-cancer-wsi-efficient-net.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "keywords": [],
+  "dataset_sources": [
+    ""
+  ],
+  "kernel_sources": [],
+  "competition_sources": []
+}

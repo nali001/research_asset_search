@@ -1,0 +1,23 @@
+{
+  "id": "xxxxyyyy80008/strip-ai-understand-image-processing",
+  "id_no": 29273171,
+  "title": "STRIP AI - Understand image processing ",
+  "code_file": "strip-ai-understand-image-processing.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "pytorch",
+    "exploratory data analysis",
+    "python",
+    "image data",
+    "data analytics"
+  ],
+  "dataset_sources": [],
+  "kernel_sources": [],
+  "competition_sources": [
+    "competitions/mayo-clinic-strip-ai"
+  ]
+}

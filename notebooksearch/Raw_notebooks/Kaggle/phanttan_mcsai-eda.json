@@ -1,0 +1,17 @@
+{
+  "id": "phanttan/mcsai-eda",
+  "id_no": 28806454,
+  "title": "MCSAI - EDA",
+  "code_file": "mcsai-eda.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [],
+  "kernel_sources": [],
+  "competition_sources": [
+    "competitions/mayo-clinic-strip-ai"
+  ]
+}
