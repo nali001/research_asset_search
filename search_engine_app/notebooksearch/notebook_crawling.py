@@ -4,6 +4,7 @@ import pandas as pd
 import kaggle
 import json
 
+
 class NotebookCrawler: 
     pass
 
@@ -13,7 +14,8 @@ class KaggleNotebookCrawler:
 
     def __init__(self, df_queries, KERNEL_DOWNLOAD_PATH, KAGGLE_DOWNLOAD_LOG_FILE, KAGGLE_SEARCH_LOG_FILE):
         self.KERNEL_DOWNLOAD_PATH = KERNEL_DOWNLOAD_PATH
-        self.KAGGLE_NOTEBOOK_LOG_FILE = KAGGLE_DOWNLOAD_LOG_FILE
+        self.KAGGLE_DOWNLOAD_LOG_FILE = KAGGLE_DOWNLOAD_LOG_FILE
+        self.KAGGLE_SEARCH_LOG_FILE = KAGGLE_SEARCH_LOG_FILE
         self.df_queries = df_queries    
 
     def search_kernels(self, query, page_range): 
@@ -53,7 +55,7 @@ class KaggleNotebookCrawler:
             - kernel_ref: the ID used by Kaggle to denote one notebook. 
         
         Return: 
-            - Boolean: Only True when everything is correct. 
+            - Boolean: Only True when the file is correctly downloaded or already exists. 
 
 
         The notebook will be downloaded as 'dirname_basename' of `kernel_ref`. 
@@ -66,23 +68,25 @@ class KaggleNotebookCrawler:
         download_path = self.KERNEL_DOWNLOAD_PATH
         file_name = os.path.dirname(kernel_ref) + '_' + os.path.basename(kernel_ref)
 
-        # Check if the file already downloaded
+        # Check if the file is already downloaded
         if self.file_exists(file_name): 
             print(f'*** {kernel_ref} *** already exists!')
-            return False
+            return True
         
         try: 
             kaggle.api.kernels_pull(kernel_ref, download_path, metadata=True)
-            print(f'Pulls *** {kernel_ref} ***')
+            print(f'[Pulling] {kernel_ref}')
             
             old_file_name = os.path.basename(kernel_ref)
             if not self.file_exists(old_file_name): 
-                print(f'*** {kernel_ref} *** fails to download!')
+                print(f'[***FAIL] {kernel_ref}')
                 old_metadata = os.path.join(download_path, self.METADATA_FILE_NAME)
+
+                # It is very important to delete the metadata file, otherwise the following downloading will fail
                 os.remove(old_metadata)
                 return False
 
-            # Rename the file
+            # Rename the notebook file
             try: 
                 old_file = os.path.join(download_path, os.path.basename(kernel_ref)) + '.ipynb'
                 new_file = os.path.join(download_path, file_name) + '.ipynb'
@@ -137,28 +141,31 @@ class KaggleNotebookCrawler:
             search_all = search_logs.merge(df_notebooks, how='left')
         except: 
             search_all = df_notebooks
-        search_all.to_csv(KAGGLE_SEARCH_LOG_FILE, index=False)
+        search_all.to_csv(self.KAGGLE_SEARCH_LOG_FILE, index=False)
 
 
         # Read notebook download logs and filter out the new notbooks to download
         try: 
             download_logs = pd.read_csv(self.KAGGLE_DOWNLOAD_LOG_FILE)
-            df_all = df_notebooks.merge(download_logs.drop_duplicates(), how='left', indicator=True)
-            new_notebooks = df_all[df_all['_merge'] == 'left_only'].drop(columns=['_merge'])
-            df_all = df_all.drop(columns=['_merge'])
-        except: 
+            download_all = df_notebooks.merge(download_logs.drop_duplicates(), how='left', indicator=True)
+            new_notebooks = download_all[download_all['_merge'] == 'left_only'].drop(columns=['_merge'])
+            download_all = download_all.drop(columns=['_merge'])
+        except Exception as e:
+            print(e) 
             new_notebooks = df_notebooks
-            df_all = df_notebooks
+            download_all = df_notebooks
         
-        print(f'---------------------- {len(new_notebooks)} new Notebooks -----------------------\n{new_notebooks}\n')
+        print(f'--------------------------- {len(new_notebooks)} new Notebooks --------------------------------')
+        print(f'{new_notebooks}')
+        print(f'----------------------------------------------------------------------------')
         
         # Download the notebooks and only keep record for downloaded notebooks 
         for kernel_ref in new_notebooks['kernel_ref']: 
             if not self.download_kernel(kernel_ref):
-                df_all.drop(df_all[df_all['kernel_ref']==kernel_ref].index, inplace=True)
+                download_all.drop(download_all[download_all['kernel_ref']==kernel_ref].index, inplace=True)
 
         # Save notebook names, IDs etc to .csv file. 
-        df_all.to_csv(self.KAGGLE_NOTEBOOK_LOG_FILE, index=False)
+        download_all.to_csv(self.KAGGLE_DOWNLOAD_LOG_FILE, index=False)
 
         return True
 
