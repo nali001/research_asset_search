@@ -118,9 +118,15 @@ def index_kaggle_notebooks(reindex=False):
     indexer = ElasticsearchIndexer(es, "Kaggle", "kaggle_notebooks", kaggle_notebook_path)
     indexer.index_notebooks(reindex=reindex)
 
+def main():
+# Check if the current working path is `search_engine_app``, if not terminate the program
+    if os.path.basename(os.getcwd()) != 'search_engine_app': 
+        print(f'Please navigate to `search_engine_app` directory and run: \n `python -m notebooksearch.notebook_crawling`\n')
+        return False
+    # Change `reindex` to Tur if you want to reindex the notebooks
+    index_kaggle_notebooks(reindex=True)
+
 # If using `python -m notebooksearch.notebook_indexing`, 
 # `__name__` will be `__main__`
 if __name__ == '__main__': 
-    # Change `reindex` to Tur if you want to reindex the notebooks
-    index_kaggle_notebooks(reindex=True)
-   
+    main()

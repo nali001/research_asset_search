@@ -3,6 +3,7 @@ import time
 import pandas as pd
 import kaggle
 import json
+import tqdm
 
 
 class NotebookCrawler: 
@@ -126,22 +127,25 @@ class KaggleNotebookCrawler:
         '''
         df_queries = self.df_queries
         notebooks = []
-
         # Search notebooks for each query
-        for query in df_queries['queries']: 
+        for i, query in tqdm(enumerate(df_queries['queries'])): 
+            # To save the memory, we write the searching results to disk for every 10 queries 
             notebooks.extend(self.search_kernels(query, page_range))
-        df_notebooks = pd.DataFrame(notebooks)
+            if i%10 == 0 or i == len(df_queries['queries']): 
+                df_notebooks = pd.DataFrame(notebooks)
+                # Delete duplicated results
+                df_notebooks.drop_duplicates(inplace=True)
 
-        # Delete duplicated results
-        df_notebooks.drop_duplicates(inplace=True)
-
-        # Update notebook search logs
-        try: 
-            search_logs = pd.read_csv(self.KAGGLE_SEARCH_LOG_FILE)
-            search_all = search_logs.merge(df_notebooks, how='left')
-        except: 
-            search_all = df_notebooks
-        search_all.to_csv(self.KAGGLE_SEARCH_LOG_FILE, index=False)
+                # Update notebook search logs
+                try: 
+                    search_logs = pd.read_csv(self.KAGGLE_SEARCH_LOG_FILE)
+                    search_all = search_logs.merge(df_notebooks, how='left')
+                except: 
+                    search_all = df_notebooks
+                search_all.to_csv(self.KAGGLE_SEARCH_LOG_FILE, index=False)
+                print(f'Saving searching results to disk...')
+                # Reset the notebooks after saving to
+                notebooks = []
 
 
         # Read notebook download logs and filter out the new notbooks to download
@@ -160,7 +164,7 @@ class KaggleNotebookCrawler:
         print(f'----------------------------------------------------------------------------')
         
         # Download the notebooks and only keep record for downloaded notebooks 
-        for kernel_ref in new_notebooks['kernel_ref']: 
+        for kernel_ref in  tqdm(new_notebooks['kernel_ref']): 
             if not self.download_kernel(kernel_ref):
                 download_all.drop(download_all[download_all['kernel_ref']==kernel_ref].index, inplace=True)
 
@@ -170,18 +174,27 @@ class KaggleNotebookCrawler:
         return True
 
 
+def main(): 
+    # Check if the current working path is `search_engine_app``, if not terminate the program
+    if os.path.basename(os.getcwd()) != 'search_engine_app': 
+        print(f'Please navigate to `search_engine_app` directory and run: \n `python -m notebooksearch.notebook_crawling`\n')
+        return False
 
-if __name__ == '__main__':
     KERNEL_DOWNLOAD_PATH = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/Kaggle')
     KAGGLE_DOWNLOAD_LOG_FILE = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/logs/kaggle_download_log.csv')
     KAGGLE_SEARCH_LOG_FILE = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/logs/kaggle_search_log.csv')
-    QUERY_FILE = os.path.join(os.getcwd(), 'notebooksearch/Queries/kaggle_queries.csv')
+    QUERY_FILE = os.path.join(os.getcwd(), 'notebooksearch/Queries/kaggle_crawler_queries.csv')
 
     # Read queries
-    # df_queries = pd.read_csv(QUERY_FILE)
-    queries = ['wsi']
-    df_queries = pd.DataFrame(queries, columns= ['queries'])
+    df_queries = pd.read_csv(QUERY_FILE)
+    # queries = ['wsi']
+    # df_queries = pd.DataFrame(queries, columns= ['queries'])
     # print(df_queries)
 
     crawler = KaggleNotebookCrawler(df_queries, KERNEL_DOWNLOAD_PATH, KAGGLE_DOWNLOAD_LOG_FILE, KAGGLE_SEARCH_LOG_FILE)
-    results = crawler.crawl_notebooks(page_range=100)
+    result = crawler.crawl_notebooks(page_range=100)
+    return result
+
+if __name__ == '__main__':
+    main()
+
