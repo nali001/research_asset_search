@@ -5,15 +5,12 @@
 # and then use the relevant commands in this file to transfer data
 
 # 1. 
-# Source: data/pyserini
-# Destination: /home/notebooksearch/data/pyserini
-rclone copy ./pyserini na_surf:notebooksearch/data/pyserini  --progress
-
-zip -r ./pyserini/collections.zip ./pyserini/collections
-zip -r ./pyserini/indexes.zip ./pyserini/indexes
-mkdir ./pyserini/temp
-mv ./pyserini/*.zip ./pyserini/temp
-cp ./pyserini/*.csv ./pyserini/temp
-rclone copy ./pyserini/temp na_surf:notebooksearch/data/pyserini/  --progress
-rm -dr ./pyserini/temp
+# Source: search_engine_app/notebooksearch/Raw_notebooks/Kaggle
+# Destination: /home/notebook_search_docker/Raw_notebooks
+zip -r ./search_engine_app/notebooksearch/Raw_notebooks/Kaggle.zip ./search_engine_app/notebooksearch/Raw_notebooks/Kaggle
+mkdir ./temp
+mv ./search_engine_app/notebooksearch/Raw_notebooks/Kaggle.zip ./temp
+cp ./search_engine_app/notebooksearch/Raw_notebooks/logs/*.csv ./temp
+rclone copy ./temp na_surf:notebook_search_docker/Raw_notebooks/  --progress
+rm -dr ./temp
 
