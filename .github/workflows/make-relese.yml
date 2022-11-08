@@ -3,6 +3,10 @@ on:
   push:
     tags:
       - '*'
+env:
+  DOCKERFILE:  Dockerfile
+  TAG:  search-engine-app
+  DOCKERHUB_IMAGE_ID: "qcdis/"
 
 jobs:
   build:
