@@ -1,30 +1,29 @@
+import os
+
 from elasticsearch import Elasticsearch
 
-ELASTICSEARCH_HOSTNAMES = ["elasticsearch", "localhost"]
+elasticsearch_hostname = os.environ.get('ELASTICSEARCH_HOSTNAME')
+elasticsearch_port = os.environ.get('ELASTICSEARCH_PORT')
+elasticsearch_username = os.environ.get('ELASTICSEARCH_USERNAME')
+elasticsearch_password = os.environ.get('ELASTICSEARCH_PASSWORD')
+
+
 def create_es_client() -> Elasticsearch:
-    """ Create an Elasticsearch client based on the IP addresses/hostname. 
-
-    In development, it is "localhost"; 
-    In deployment, it is "elasticsearch". 
-
+    """ Create an Elasticsearch client based on the IP addresses/hostname.
     Returns: 
-        es: a elasticsearch client. 
+        es: an elasticsearch client.
 
     """
     valid_es = None
-    # Try different host names for Elasticsearch service. 
-    # It depends on on what machine the service is running. 
-    for host in ELASTICSEARCH_HOSTNAMES: 
-        es = Elasticsearch(
-            hosts=[{"host": host, "port": 9200}],
-            http_auth=["elastic", "changeme"],
-            tim_out=30
-            )
-        if es.ping(): 
-            print(f'\nVALID ELASTICSEARCHHHHHHHHHH: {host}\n')
-            valid_es = es
-            break
-    if valid_es == None: 
+    es = Elasticsearch(
+        hosts=[{"host": elasticsearch_hostname, "port": elasticsearch_port}],
+        http_auth=[elasticsearch_username, elasticsearch_password],
+        tim_out=30
+    )
+    if es.ping():
+        print(f'\nVALID ELASTICSEARCHHHHHHHHHH: {elasticsearch_hostname}\n')
+        valid_es = es
+    if valid_es == None:
         print(f'\n\nElasticsearch is NOT ready yet!\n\n')
-    # If ther is no valid connection. 
+        # If there is no connection.
     return valid_es
