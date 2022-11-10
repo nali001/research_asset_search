@@ -91,4 +91,3 @@ services:
 networks: 
   search_engine_net:
     driver: bridge
-
