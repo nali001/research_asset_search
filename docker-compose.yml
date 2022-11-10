@@ -1,4 +1,4 @@
-# docker-compose.ym
+# docker-compose.yml
 # Build and run docker containers for web services in deployment environment
 
 services:

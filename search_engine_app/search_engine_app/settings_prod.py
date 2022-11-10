@@ -1,17 +1,22 @@
 ''' Settings for deployment environment
 '''
-
+import os
 from .settings_base import *
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+host_ip = os.environ.get('HOST_IP')
+postgres_hostname = os.environ.get('POSTGRES_HOSTNAME')
+postgres_port = os.environ.get('POSTGRES_PORT')
+postgres_db = os.environ.get('POSTGRES_DB')
+postgres_user = os.environ.get('POSTGRES_USER')
+postgres_password = os.environ.get('POSTGRES_PASSWORD')
+
+
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', host_ip]
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-
-# replace the following line with your actual IP address
-# ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'IP_address']
 
 #-------------------------- Uncomment STATICFILES_DIRS and comment STATIC_ROOT in development------------------
 # The STATICFILES_DIRS tuple tells Django where to look for static files that are not tied to a particular app.
@@ -27,11 +32,11 @@ STATIC_ROOT = BASE_DIR / "static"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'HOST': 'postgres',
-        'PORT': '5432',
-        'NAME': 'notebooksearch',
-        'USER': 'postgres',
-        'PASSWORD': 'notebooksearch2022',
+        'HOST': postgres_hostname,
+        'PORT': postgres_port,
+        'NAME': postgres_db,
+        'USER': postgres_user,
+        'PASSWORD': postgres_password,
     }
 }
 

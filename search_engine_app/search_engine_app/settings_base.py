@@ -109,29 +109,7 @@ INSTALLED_APPS = [
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 STATIC_URL = "static/"
-
 #------------------------------------------------------------------
-
-# Allowed hosts
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
-
-#-------------------------- PostgreSQL database --------------------------
-from notebooksearch import postgres_tools
-# Create database `notebook_search` if not exists
-if not postgres_tools.database_exists("notebooksearch"): 
-    postgres_tools.create_databases(["notebooksearch"])
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'HOST': 'localhost',
-        'PORT': '5432',
-        'NAME': 'notebooksearch',
-        'USER': 'postgres',
-        'PASSWORD': 'notebooksearch2022',
-    }
-}
-#---------------------------------------------------------------------------
 
 
 #-------------------------------- Django REST API --------------------------------

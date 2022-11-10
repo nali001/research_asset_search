@@ -2,11 +2,6 @@ import os
 
 from elasticsearch import Elasticsearch
 
-elasticsearch_hostname = os.environ.get('ELASTICSEARCH_HOSTNAME')
-elasticsearch_port = os.environ.get('ELASTICSEARCH_PORT')
-elasticsearch_username = os.environ.get('ELASTICSEARCH_USERNAME')
-elasticsearch_password = os.environ.get('ELASTICSEARCH_PASSWORD')
-
 
 def create_es_client() -> Elasticsearch:
     """ Create an Elasticsearch client based on the IP addresses/hostname.
@@ -15,6 +10,12 @@ def create_es_client() -> Elasticsearch:
 
     """
     valid_es = None
+    elasticsearch_hostname = os.environ.get('ELASTICSEARCH_HOSTNAME')
+    elasticsearch_port = os.environ.get('ELASTICSEARCH_PORT')
+    elasticsearch_username = os.environ.get('ELASTICSEARCH_USERNAME')
+    elasticsearch_password = os.environ.get('ELASTICSEARCH_PASSWORD')
+    print(f'\n\nelasticsearch_hostname: {elasticsearch_hostname}\n\n\n')
+    
     es = Elasticsearch(
         hosts=[{"host": elasticsearch_hostname, "port": elasticsearch_port}],
         http_auth=[elasticsearch_username, elasticsearch_password],

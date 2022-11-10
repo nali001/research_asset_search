@@ -24,7 +24,7 @@ pgadmin/data/*
 
 push_docker_images.sh
 
-.env
+./.env
 
 rclone_setup.sh
 temp/

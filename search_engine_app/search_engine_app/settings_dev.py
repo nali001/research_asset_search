@@ -1,11 +1,20 @@
 ''' Settings for deployment environment
 '''
-
+import os
 from .settings_base import *
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+
+host_ip = os.environ.get('HOST_IP')
+postgres_hostname = os.environ.get('POSTGRES_HOSTNAME')
+postgres_port = os.environ.get('POSTGRES_PORT')
+postgres_db = os.environ.get('POSTGRES_DB')
+postgres_user = os.environ.get('POSTGRES_USER')
+postgres_password = os.environ.get('POSTGRES_PASSWORD')
+
+
+# Allowed hosts
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', host_ip]
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -20,3 +29,33 @@ STATICFILES_DIRS = [
 # In our case, we are telling Django that when we run `python manage.py collectstatic`, gather all static files into a folder called staticfiles in our project root directory. 
 # STATIC_ROOT = BASE_DIR / "static"
 #---------------------------------------------------------------------------------------------------------------
+
+
+#-------------------------- PostgreSQL database --------------------------
+# from notebooksearch import postgres_tools
+# # Create database `notebook_search` if not exists
+# if not postgres_tools.database_exists("notebooksearch"): 
+#     postgres_tools.create_databases(["notebooksearch"])
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#         'NAME': 'notebooksearch',
+#         'USER': 'postgres',
+#         'PASSWORD': 'notebooksearch2022',
+#     }
+# }
+#---------------------------------------------------------------------------
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': postgres_hostname,
+        'PORT': postgres_port,
+        'NAME': postgres_db,
+        'USER': postgres_user,
+        'PASSWORD': postgres_password,
+    }
+}
