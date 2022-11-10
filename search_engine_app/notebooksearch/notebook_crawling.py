@@ -3,7 +3,8 @@ import pandas as pd
 import kaggle
 import time
 from datetime import timedelta
-
+from memory_profiler import profile
+ 
 class NotebookCrawler: 
     pass
 
@@ -117,7 +118,9 @@ class KaggleNotebookCrawler:
             return False
         else: 
             return True   
-
+    
+    # memory_profile decorator
+    @profile
     def bulk_search(self, page_range): 
         '''' Search for notebooks '''
         df_queries = self.df_queries
@@ -150,6 +153,8 @@ class KaggleNotebookCrawler:
                 df_notebooks.drop(df_notebooks.index, inplace=True) 
         return search_all
 
+    # memory_profile decorator
+    @profile
     def bulk_download(self, df_notebooks): 
         ''' Download a bunch of notebooks specified inside `df_notebooks`'''
         # Read notebook download logs and filter out the new notbooks to download
@@ -162,7 +167,6 @@ class KaggleNotebookCrawler:
         merged = df_notebooks.merge(download_logs, how='left', indicator=True)
         new_notebooks = merged[merged['_merge'] == 'left_only'].drop(columns=['_merge'])
         new_notebooks.reset_index(inplace=True, drop=True)
-        print(new_notebooks.head())
         print(f'--------------------------- {len(new_notebooks)} new Notebooks --------------------------------')
         print(f'{new_notebooks}')
         print(f'----------------------------------------------------------------------------\n\n')
@@ -215,7 +219,7 @@ class KaggleNotebookCrawler:
             except Exception as e:
                 print(f'[SearchLog ERROR(self-defined)] There is no search log file specified!') 
         
-        self.bulk_download(df_notebooks)
+        # self.bulk_download(df_notebooks)
         return True
 
 
@@ -237,7 +241,7 @@ def main():
     # print(df_queries)
 
     crawler = KaggleNotebookCrawler(df_queries, KERNEL_DOWNLOAD_PATH, KAGGLE_DOWNLOAD_LOG_FILE, KAGGLE_SEARCH_LOG_FILE)
-    result = crawler.crawl_notebooks(page_range=1, re_search=False)
+    result = crawler.crawl_notebooks(page_range=1, re_search=True)
     return result
 
 if __name__ == '__main__':
