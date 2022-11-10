@@ -10,6 +10,15 @@ services:
       - ./search_engine_app/notebooksearch/Notebooks:/search_engine_app/notebooksearch/Notebooks
     environment: 
       - HOST_IP=${HOST_IP}
+      - ELASTICSEARCH_HOSTNAME=elasticsearch
+      - ELASTICSEARCH_PORT=9200
+      - ELASTICSEARCH_USERNAME=elastic
+      - ELASTICSEARCH_PASSWORD=changeme
+      - POSTGRES_HOSTNAME=postgres
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=notebooksearch2022
+      - POSTGRES_DB=notebooksearch
     networks: 
       - search_engine_net
     depends_on:
@@ -82,4 +91,3 @@ services:
 networks: 
   search_engine_net:
     driver: bridge
-
