@@ -7,7 +7,7 @@ class NotebookDownloader:
         pass 
     def get_notebook_by_docid(self, docid):
         print(f'\n\nCurrentttttt path :{os.getcwd()}\n\n')
-        sample_file = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/Kaggle/a5bhowmik_gan-vgg.ipynb')
+        sample_file = os.path.join(os.getcwd(), 'notebooksearch/sample.ipynb')
         with open(sample_file, 'r') as f: 
             notebook_source_file = f.read()
         download_result = {

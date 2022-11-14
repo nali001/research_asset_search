@@ -210,6 +210,8 @@ class KaggleNotebookCrawler:
 
     def crawl_notebooks(self, page_range, re_search=False):
         ''' Search and download notebooks using given queries 
+
+        The notebooks will be downloaed to disk
         '''
         if re_search==True: 
             df_notebooks = self.bulk_search(page_range)
