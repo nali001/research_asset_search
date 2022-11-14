@@ -24,8 +24,7 @@ class ElasticsearchIndexer():
         self.index_name = index_name
         self.notebook_path = notebook_path
         self.source_name = source_name
-
-
+        
     def generate_index_files(self) -> list:
         ''' Generate a list of index files to be indexed by Elasticsearch. 
 

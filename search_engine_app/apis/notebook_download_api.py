@@ -63,7 +63,7 @@ def notebook_download_api(request) -> Response:
     docid = query_params['docid']
     downloader = notebook_downloading.NotebookDownloader()
     download_result = downloader.get_notebook_by_docid(docid)
-    result_serializer = serializers.KaggleNotebookDownloadResultSerializer(download_result)
+    result_serializer = serializers.NotebookDownloadResultSerializer(download_result)
 
     # Generate responses 
     if request.method == 'GET':     

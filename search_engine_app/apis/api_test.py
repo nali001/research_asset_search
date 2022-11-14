@@ -20,7 +20,7 @@ LOCAL_API_CONFIG = {
     'headers': {
         # "Accept": "*/*",
         # "Content-Type": "text/json",
-        "Authorization": "Token 0b19c9cc081ee3dd3db94a50f2bfb6198e0908c5", 
+        "Authorization": "Token af6913382ff759edca1af42ecdfacaeb3a3256af", 
     }
 }
 
@@ -121,6 +121,22 @@ def post_notebook_search(api_endpoint, api_config):
         pprint(results[i]['name'])
     print('----------------------------------------------------------------------------\n')
     return hits
+
+def get_notebook_download(api_endpoint, api_config): 
+    url = api_endpoint + "notebook_download/"
+    params={
+        "docid": "80",
+    }
+    response = requests.get(url, params=params, **api_config)
+    hits = response.json()
+    notebook_source_file = hits['notebook_source_file']
+    print('------------------------ Returned notebook source file -----------------------\n')
+    notebook = json.loads(notebook_source_file)
+    with open('sample.ipynb', 'w') as outfile: 
+        json.dump(notebook, outfile)
+    return hits
+
+
 
 def query_generation(api_endpoint, api_config): 
     ''' test query generation API with `POST` method
@@ -226,7 +242,7 @@ def test(api_endpoint, api_config):
 
 
 if __name__ == "__main__": 
-    server = 'ONLINE'
+    server = 'LOCAL'
     api_endpoint = locals()[server + '_API_ENDPOINT']
     api_config = locals()[server + '_API_CONFIG']
     # print(api_config)
@@ -235,6 +251,7 @@ if __name__ == "__main__":
     test_api_token(api_endpoint, api_config)
     # get_notebook_search(api_endpoint, api_config)
     # post_notebook_search(api_endpoint, api_config)
+    get_notebook_download(api_endpoint, api_config)
     # query_generation(api_endpoint, api_config)
     # context_search(api_endpoint, api_config)
     # relevancy_feedback(api_endpoint, api_config)
