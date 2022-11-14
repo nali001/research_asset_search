@@ -191,6 +191,16 @@ Notebook search:
 GET/POST http://IP_address/api/notebook_search/
 ```
 
+
+### Add a new API to `notebooksearch` app
+- Modify `docs/system_design.md`
+- Add `apis/new_api.py`
+- Modify `apis/urls.py`
+- Add `notebooksearch/new_api_functions.py`
+- Modify `notebooksearch/models.py`
+- Modify `notebooksearch/serializers.py`
+- Modify `apis/api_test.py`
+
 ------------------------------------------------------------------------------------------------------
 
 ## Data backup and restore

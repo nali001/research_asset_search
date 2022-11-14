@@ -12,6 +12,10 @@ from notebooksearch.models import NotebookSearchLog
 from notebooksearch.models import KaggleNotebook
 from notebooksearch.models import NotebookSearchResult
 
+from notebooksearch.models import NotebookDownloadParam
+from notebooksearch.models import NotebookDownloadLog
+from notebooksearch.models import NotebookDownloadResult
+
 from notebooksearch.models import CellContent
 from notebooksearch.models import GeneratedQuery
 from notebooksearch.models import QueryGenerationLog
@@ -72,6 +76,38 @@ class KaggleNotebookSearchResultSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = NotebookSearchResult
+        fields = '__all__'
+
+# -----------------------------------------------------------------
+
+
+
+# ------------------- Notebook download serializers --------------------    
+class NotebookDownloadParamSerializer(serializers.ModelSerializer): 
+    ''' A serialier for handling parameters of notebook download requests
+
+    For `GET` and `POST`
+    '''
+    class Meta:
+        model = NotebookDownloadParam
+        fields = '__all__'
+
+class NotebookDownloadLogSerializer(serializers.ModelSerializer): 
+    ''' A serialier for handling notebook download `POST` requests data
+    '''
+    class Meta:
+        model = NotebookDownloadLog
+        fields = '__all__'
+
+
+class NotebookDownloadResultSerializer(serializers.ModelSerializer):
+    ''' A simple serliazer for generating responses for notebook download
+
+    It simply returns the notebook soure file inside a models.TextField.  
+    '''
+
+    class Meta:
+        model = NotebookDownloadResult
         fields = '__all__'
 
 # -----------------------------------------------------------------

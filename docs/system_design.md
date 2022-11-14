@@ -67,11 +67,22 @@
 ```
 
 
-### A.1-A.2 [Notebook search session]
+### A.1-A.2 [Notebook search session] `GET` `POST`
 When clicking the search icon: 
 
 client --> server \
-`NotebookSearchLogSerializer`
+`NotebookSearchParamSerializer` \
+for both `Get` and `POST`
+```
+{
+    "query": query, 
+    "page": page, 
+    "filter": filter, 
+    "facet": facet,
+}
+```
+`NotebookSearchLogSerializer` \
+`POST` only
 ```
 {
     "client_id": client_id, 
@@ -105,7 +116,7 @@ server --> database \
 ```
 
 
-### B.1 [Query generation session]
+### B.1 [Query generation session] `POST`
 When clicking the "Context-based search" button: 
 
 client --> server \
@@ -142,7 +153,7 @@ server --> database \
 }
 ```
 
-### B.2-B.3 [Context-based search session]
+### B.2-B.3 [Context-based search session] `POST`
 When clicking the search icon:
 
 client --> server \
@@ -186,7 +197,40 @@ server --> client \
 ```
 
 
-### D.1-D.2 [relevancy annotation]
+### C.1-C.2 [download notebook] `GET` `POST`
+client --> server \
+`NotebookDownloadParamSerializer` \
+`Get` & `POST`
+```
+{
+    "docid": docid
+}
+```
+
+`NotebookDownloadLogSerializer` \
+`POST` only
+```
+{
+    "client_id": client_id, 
+    "timestamp": timestamp, 
+    "event": "notebook_download", 
+    "docid": docid
+}
+```
+
+server --> client \
+`NotebookDownloadResultSerializer`
+```
+{
+    "client_id": client_id, 
+    "timestamp": timestamp, 
+    "event": "notebook_download", 
+    "docid": docid, 
+    "notebook_source_file": notebook_source_file(TextField)
+}
+```
+
+### D.1-D.2 [relevancy annotation] `POST`
 When clicking the stars: \
 client --> server \
 `RelevancyFeedbackLogSerializer`

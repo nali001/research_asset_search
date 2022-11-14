@@ -63,7 +63,10 @@ class NotebookSearchLog(BaseUser):
 
 class NotebookSearchResult(models.Model): 
     ''' notebook_results
-    ['query', 'facets', 'num_hits', 'num_pages', 'current_page', 'results']
+
+    Fields: ['query', 'facets', 'num_hits', 'num_pages', 'current_page', 'results']
+    The fields defined below are the high-level fields. 
+    The `results` field is a list of notebook results and is only defined by serialiers. 
     '''
     query = models.TextField()
     facets = models.CharField(max_length=60)
@@ -88,6 +91,46 @@ class KaggleNotebook(BaseNotebook):
     
     class Meta: 
         managed = False
+# -----------------------------------------------------------------
+
+
+
+
+# ------------------- Notebook download models --------------------    
+class NotebookDownloadParam(models.Model): 
+    ''' Model for parameters contained in notebook download requests
+
+    For both `GET` and `POST` mthods
+    '''
+    docid = models.CharField(max_length=240)
+
+    class Meta:
+        managed = False
+    def __str__(self):
+        return str(self.docid)
+
+class NotebookDownloadLog(BaseUser): 
+    ''' Model for data contained in notebook search `POST` requests
+    '''
+    timestamp = models.CharField(max_length=60)
+    event = models.CharField(max_length=60)
+    docid = models.CharField(max_length=240)
+
+    def __str__(self):
+        return self.docid
+
+
+class NotebookDownloadResult(models.Model): 
+    ''' notebook_results
+    ['query', 'facets', 'num_hits', 'num_pages', 'current_page', 'results']
+    '''
+    docid = models.CharField(max_length=240)
+    notebook_source_file = models.TextField()
+    # functionList = models.CharField(max_length=60)
+
+    class Meta: 
+        managed = False
+
 # -----------------------------------------------------------------
 
 
