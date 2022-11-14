@@ -2,9 +2,8 @@
 '''
 import os
 from .settings_base import *
-from pathlib import Path
 
-
+# The variables are stored in `.env` file under the same dir as this file
 host_ip = os.environ.get('HOST_IP')
 postgres_hostname = os.environ.get('POSTGRES_HOSTNAME')
 postgres_port = os.environ.get('POSTGRES_PORT')
@@ -32,23 +31,6 @@ STATICFILES_DIRS = [
 
 
 #-------------------------- PostgreSQL database --------------------------
-# from notebooksearch import postgres_tools
-# # Create database `notebook_search` if not exists
-# if not postgres_tools.database_exists("notebooksearch"): 
-#     postgres_tools.create_databases(["notebooksearch"])
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'HOST': 'localhost',
-#         'PORT': '5432',
-#         'NAME': 'notebooksearch',
-#         'USER': 'postgres',
-#         'PASSWORD': 'notebooksearch2022',
-#     }
-# }
-#---------------------------------------------------------------------------
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -59,3 +41,4 @@ DATABASES = {
         'PASSWORD': postgres_password,
     }
 }
+#---------------------------------------------------------------------------
