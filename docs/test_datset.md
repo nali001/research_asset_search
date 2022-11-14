@@ -54,8 +54,9 @@ Related tasks:
 | ----------- | ----------- |
 | qid   | number        |
 | docno      | number       |
-| label | 0 or 1 |
+| relevancy | 0 to 5 |
 
+Example
 
 
 
