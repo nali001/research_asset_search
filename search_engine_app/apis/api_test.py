@@ -123,16 +123,46 @@ def post_notebook_search(api_endpoint, api_config):
     return hits
 
 def get_notebook_download(api_endpoint, api_config): 
+    docid = 'Kaggle219'
     url = api_endpoint + "notebook_download/"
     params={
-        "docid": "80",
+        "docid": docid,
     }
     response = requests.get(url, params=params, **api_config)
     hits = response.json()
     notebook_source_file = hits['notebook_source_file']
     print('------------------------ Returned notebook source file -----------------------\n')
+    print(hits['docid'])
+    print('\n')
     notebook = json.loads(notebook_source_file)
-    with open('sample.ipynb', 'w') as outfile: 
+    with open('get_sample.ipynb', 'w') as outfile: 
+        json.dump(notebook, outfile)
+    return hits
+
+def post_notebook_download(api_endpoint, api_config): 
+    url = api_endpoint + "notebook_download/"
+    docid = 'Kaggle157'
+    params={
+        "docid": docid,
+    }
+
+    client_id = 'muyamiamiahey'
+    event = "notebook_download"
+    data = {
+    "client_id": client_id, 
+    "timestamp": str(time.time()), 
+    "event": event, 
+    "docid": docid
+    }
+    response = requests.post(url, params=params, json=data, **api_config)
+    hits = response.json()
+    notebook_source_file = hits['notebook_source_file']
+    print('------------------------ Returned notebook source file -----------------------\n')
+    print(hits['docid'])
+    print('\n')
+
+    notebook = json.loads(notebook_source_file)
+    with open('post_sample.ipynb', 'w') as outfile: 
         json.dump(notebook, outfile)
     return hits
 
@@ -248,10 +278,11 @@ if __name__ == "__main__":
     # print(api_config)
     # initialize_app(api_endpoint)
     # obatain_api_token(api_endpoint)
-    test_api_token(api_endpoint, api_config)
+    # test_api_token(api_endpoint, api_config)
     # get_notebook_search(api_endpoint, api_config)
     # post_notebook_search(api_endpoint, api_config)
-    get_notebook_download(api_endpoint, api_config)
+    # get_notebook_download(api_endpoint, api_config)
+    post_notebook_download(api_endpoint, api_config)
     # query_generation(api_endpoint, api_config)
     # context_search(api_endpoint, api_config)
     # relevancy_feedback(api_endpoint, api_config)

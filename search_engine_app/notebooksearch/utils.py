@@ -2,6 +2,13 @@ import os
 import json 
 from elasticsearch import Elasticsearch
 
+
+# Ignore warnings
+import warnings
+from elasticsearch import ElasticsearchWarning
+warnings.simplefilter('ignore', ElasticsearchWarning)
+
+
 def read_json_file(file):
     read_path = file
     with open(read_path, "r", errors='ignore') as read_file:
@@ -20,17 +27,18 @@ def create_es_client() -> Elasticsearch:
     elasticsearch_port = os.environ.get('ELASTICSEARCH_PORT')
     elasticsearch_username = os.environ.get('ELASTICSEARCH_USERNAME')
     elasticsearch_password = os.environ.get('ELASTICSEARCH_PASSWORD')
-    print(f'\n\nelasticsearch_hostname: {elasticsearch_hostname}\n\n\n')
     
     es = Elasticsearch(
         hosts=[{"host": elasticsearch_hostname, "port": elasticsearch_port}],
         http_auth=[elasticsearch_username, elasticsearch_password],
         tim_out=30
     )
-    if es.ping():
-        print(f'\nVALID ELASTICSEARCHHHHHHHHHH: {elasticsearch_hostname}\n')
+    
+    connected = es.ping()
+    if connected: 
+        print(f'\n[Elasticsearch] `{elasticsearch_hostname}` being connected\n')
         valid_es = es
     if valid_es == None:
-        print(f'\n\nElasticsearch is NOT ready yet!\n\n')
+        print(f'\n[Elasticsearch] data server is NOT ready yet!\n')
         # If there is no connection.
     return valid_es

@@ -68,7 +68,7 @@ class ElasticsearchIndexer():
         # Index raw notebooks
         elif self.doc_type == 'raw': 
             root = self.notebook_path
-            df_notebooks = pd.read_csv(os.path.join(root, "es_raw_notebooks.csv"))
+            df_notebooks = pd.read_csv(os.path.join(root, self.source_name+"_raw_notebooks.csv"))
             indexfiles =  df_notebooks.to_dict('records')
         else: 
             print("Notebook type is unknown, please specify a doc_type.")
@@ -163,7 +163,7 @@ def index_raw_notebooks(reindex=False):
     # github_notebook_path = os.path.join(os.getcwd(), 'notebooksearch', 'Github Notebooks')
     # indexer = ElasticsearchIndexer(es, "Github", "github_notebooks", github_notebook_path)
     raw_notebook_path = os.path.join(os.getcwd(), 'notebooksearch', 'Raw_notebooks')
-    indexer = ElasticsearchIndexer(es=es, soure_name="Multiple", doc_type="raw", index_name="raw_notebooks", notebook_path=raw_notebook_path)
+    indexer = ElasticsearchIndexer(es=es, source_name="Kaggle", doc_type="raw", index_name="kaggle_raw_notebooks", notebook_path=raw_notebook_path)
     indexer.index_notebooks(reindex=reindex)
 
 def main():

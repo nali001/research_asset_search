@@ -52,7 +52,7 @@ def notebook_download_api(request) -> Response:
 
     # Validate NotebookSearchLog data for `POST` method
     if request.method == 'POST': 
-        log_serializer = serializers.NotebookDownloadSerializer(data=request.data)
+        log_serializer = serializers.NotebookDownloadLogSerializer(data=request.data)
         if log_serializer.is_valid(): 
             pass
             # log_serializer.save()  
@@ -62,7 +62,7 @@ def notebook_download_api(request) -> Response:
     # Retrieve notebooks from Elasticsearch dataserver
     docid = query_params['docid']
     downloader = notebook_downloading.NotebookDownloader()
-    download_result = downloader.get_notebook_by_docid(docid)
+    download_result = downloader.get_notebook_from_es(docid, index_name='kaggle_raw_notebooks')
     result_serializer = serializers.NotebookDownloadResultSerializer(download_result)
 
     # Generate responses 
