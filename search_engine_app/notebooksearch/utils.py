@@ -1,6 +1,12 @@
 import os
-
+import json 
 from elasticsearch import Elasticsearch
+
+def read_json_file(file):
+    read_path = file
+    with open(read_path, "r", errors='ignore') as read_file:
+        data = json.load(read_file)
+    return data
 
 
 def create_es_client() -> Elasticsearch:

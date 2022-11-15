@@ -8,11 +8,6 @@ import pandas as pd
 from notebooksearch import utils
 from elasticsearch import Elasticsearch
 
-def open_file(file):
-    read_path = file
-    with open(read_path, "r", errors='ignore') as read_file:
-        data = json.load(read_file)
-    return data
 
 # ----------------------------------------------------------------------------------
 
@@ -47,7 +42,7 @@ class ElasticsearchIndexer():
                 for path, _, files in os.walk(root):
                     for name in files:
                         indexfile= os.path.join(path, name)
-                        indexfile = open_file(indexfile)
+                        indexfile = utils.read_json_file(indexfile)
                         newRecord={
                             "name":indexfile["name"],
                             "full_name":indexfile["full_name"],
