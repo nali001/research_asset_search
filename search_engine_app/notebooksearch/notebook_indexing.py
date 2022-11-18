@@ -60,7 +60,7 @@ class ElasticsearchIndexer():
 
             elif self.source_name == 'Kaggle': 
                 root = self.notebook_path
-                df_notebooks = pd.read_csv(os.path.join(root, self.source_name+"preprocessed_notebooks.csv"))
+                df_notebooks = pd.read_csv(os.path.join(root, self.source_name+"_preprocessed_notebooks.csv"))
                 indexfiles =  df_notebooks.to_dict('records')
             else: 
                 print("Notebook source is unknown, please specify a scheme.")
@@ -79,7 +79,7 @@ class ElasticsearchIndexer():
         
         Can index raw notebooks and preprocessed notebooks. 
 
-        When indexing raw notebooks, it requires a `es_raw_notebooks.csv` file placed under `notebook_path`
+        When indexing raw notebooks, it requires a `kaggle_raw_notebooks.csv` file placed under `notebook_path`
         '''
         index_name = self.index_name
         es = self.es
@@ -110,7 +110,7 @@ class ElasticsearchIndexer():
                 elif self.source_name == 'Kaggle': 
                     for count, record in enumerate(indexfiles): 
                         try: 
-                            res = es.index(index=index_name, id = record["kaggle_id"], body=record)
+                            res = es.index(index=index_name, id = record["docid"], body=record)
                             print(f'Indexing {str(count+1)}-th recode!\n')
                         except Exception as e: 
                             print(e, "\n")
@@ -142,7 +142,7 @@ def index_kaggle_notebooks(reindex=False):
     # Index notebooks crawled from Github or Kaggle
     # github_notebook_path = os.path.join(os.getcwd(), 'notebooksearch', 'Github Notebooks')
     # indexer = ElasticsearchIndexer(es, "Github", "github_notebooks", github_notebook_path)
-    kaggle_notebook_path = os.path.join(os.getcwd(), 'notebooksearch', 'Notebooks', 'Kaggle')
+    kaggle_notebook_path = os.path.join(os.getcwd(), 'notebooksearch', 'Notebooks')
     indexer = ElasticsearchIndexer(es=es, source_name="Kaggle", doc_type="preprocessed", index_name="kaggle_notebooks", notebook_path=kaggle_notebook_path)
     indexer.index_notebooks(reindex=reindex)
 
@@ -162,7 +162,7 @@ def index_raw_notebooks(reindex=False):
     # Index notebooks crawled from Github or Kaggle
     # github_notebook_path = os.path.join(os.getcwd(), 'notebooksearch', 'Github Notebooks')
     # indexer = ElasticsearchIndexer(es, "Github", "github_notebooks", github_notebook_path)
-    raw_notebook_path = os.path.join(os.getcwd(), 'notebooksearch', 'Raw_notebooks')
+    raw_notebook_path = os.path.join(os.getcwd(), 'notebooksearch', 'Notebooks')
     indexer = ElasticsearchIndexer(es=es, source_name="Kaggle", doc_type="raw", index_name="kaggle_raw_notebooks", notebook_path=raw_notebook_path)
     indexer.index_notebooks(reindex=reindex)
 
@@ -172,7 +172,7 @@ def main():
         print(f'Please navigate to `search_engine_app` directory and run: \n `python -m notebooksearch.notebook_indexing`\n')
         return False
     # Change `reindex` to Tur if you want to reindex the notebooks
-    index_kaggle_notebooks(reindex=True)
+    index_kaggle_notebooks(reindex=False)
     index_raw_notebooks(reindex=True)
 
 # If using `python -m notebooksearch.notebook_indexing`, 

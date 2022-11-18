@@ -15,6 +15,8 @@ def get_doc_number(index_name):
 
 def main():
     get_doc_number('kaggle_raw_notebooks')
+    get_doc_number('kaggle_notebooks')
+
 
 if __name__ == '__main__': 
     main()

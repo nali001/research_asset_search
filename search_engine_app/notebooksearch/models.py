@@ -24,13 +24,15 @@ class UserProfile(BaseUser):
 # ------------------- Notebook search models --------------------    
 class BaseNotebook(models.Model): 
     ''' Abstract notebook model that contains minimum set of notebook attributes
-    '''
+
+    docid, name, source, html_url, description
+    ''' 
+    docid = models.CharField(max_length=240)
     name = models.CharField(max_length=60)
     source = models.CharField(max_length=60)
-    description = models.TextField(default = 'No description.')
     html_url = models.CharField(max_length=240, default = 'No html URL.')
+    description = models.TextField(default = 'No description.')
     # This is unified notebook ID, assigned to each notebook in the database
-    docid = models.CharField(max_length=240)
     # download_url = models.CharField(max_length=240, default = 'No download URL.')
     class Meta:
         abstract = True
@@ -82,10 +84,10 @@ class NotebookSearchResult(models.Model):
 class KaggleNotebook(BaseNotebook): 
     ''' A notebook result specific to Kaggle source
 
-    ['kaggle_id', 'name', 'file_name', 'html_url', 'description']
+    docid, source_id, name, file_name, source, html_url, description
     '''
     # title = models.CharField(max_length=120)
-    kaggle_id = models.CharField(max_length=60)
+    source_id = models.CharField(max_length=60)
     file_name = models.CharField(max_length=60)
     notebook_search_result = models.ForeignKey(NotebookSearchResult, related_name="results", on_delete=models.CASCADE)
     
