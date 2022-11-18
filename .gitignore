@@ -16,6 +16,8 @@ search_engine_app/notebooksearch/test.py
 search_engine_app/test.ipynb
 search_engine_app/auth/kaggle_token.json
 
+get_sample.ipynb
+
 
 elasticsearch/data/*
 elasticsearch/logs/*
