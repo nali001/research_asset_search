@@ -30,4 +30,4 @@ push_docker_images.sh
 rclone_setup.sh
 temp/
 
-./.env
+.env
