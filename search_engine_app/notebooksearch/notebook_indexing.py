@@ -60,7 +60,7 @@ class ElasticsearchIndexer():
 
             elif self.source_name == 'Kaggle': 
                 root = self.notebook_path
-                df_notebooks = pd.read_csv(os.path.join(root, "es_kaggle_notebooks.csv"))
+                df_notebooks = pd.read_csv(os.path.join(root, self.source_name+"preprocessed_notebooks.csv"))
                 indexfiles =  df_notebooks.to_dict('records')
             else: 
                 print("Notebook source is unknown, please specify a scheme.")
@@ -172,8 +172,8 @@ def main():
         print(f'Please navigate to `search_engine_app` directory and run: \n `python -m notebooksearch.notebook_indexing`\n')
         return False
     # Change `reindex` to Tur if you want to reindex the notebooks
-    # index_kaggle_notebooks(reindex=False)
-    index_raw_notebooks(reindex=False)
+    index_kaggle_notebooks(reindex=True)
+    index_raw_notebooks(reindex=True)
 
 # If using `python -m notebooksearch.notebook_indexing`, 
 # `__name__` will be `__main__`

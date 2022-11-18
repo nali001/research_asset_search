@@ -5,12 +5,13 @@
 # and then use the relevant commands in this file to transfer data
 
 # 1. 
-# Source: search_engine_app/notebooksearch/Raw_notebooks/Kaggle
+# Source: search_engine_app/notebooksearch/Raw_notebooks/
 # Destination: /home/notebook_search_docker/Raw_notebooks
 zip -r ./search_engine_app/notebooksearch/Raw_notebooks/Kaggle.zip ./search_engine_app/notebooksearch/Raw_notebooks/Kaggle
-mkdir ./temp
+mkdir ./temp ./temp/logs
 mv ./search_engine_app/notebooksearch/Raw_notebooks/Kaggle.zip ./temp
-cp ./search_engine_app/notebooksearch/Raw_notebooks/logs/*.csv ./temp
+cp ./search_engine_app/notebooksearch/Raw_notebooks/logs/*.csv ./temp/logs
+cp ./search_engine_app/notebooksearch/Raw_notebooks/*.csv ./temp
 rclone copy ./temp na_surf:notebook_search_docker/Raw_notebooks/  --progress
 rm -dr ./temp
 

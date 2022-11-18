@@ -3,12 +3,10 @@ __pycache__/
 __init__.pyc
 migrations/
 search_engine_app/venv
-search_engine_app/notebooksearch/Notebooks/Kaggle/*
-search_engine_app/notebooksearch/Notebooks/Github/*
+search_engine_app/notebooksearch/Notebooks/*
+
 search_engine_app/notebooksearch/Raw_notebooks/Github/*
 search_engine_app/notebooksearch/Raw_notebooks/Kaggle/*
-search_engine_app/notebooksearch/Raw_notebooks/Kaggle_notebook_metadata.csv
-search_engine_app/notebooksearch/Raw_notebooks/Kaggle_raw_notebooks.csv
 
 sample.ipynb
 
