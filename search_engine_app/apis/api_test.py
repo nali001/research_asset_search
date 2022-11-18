@@ -1,4 +1,3 @@
-from lib2to3.pgen2.pgen import generate_grammar
 import requests
 from pprint import pprint
 import time
@@ -272,16 +271,16 @@ def test(api_endpoint, api_config):
 
 
 if __name__ == "__main__": 
-    server = 'LOCAL'
+    server = 'ONLINE'
     api_endpoint = locals()[server + '_API_ENDPOINT']
     api_config = locals()[server + '_API_CONFIG']
     # print(api_config)
     # initialize_app(api_endpoint)
     # obatain_api_token(api_endpoint)
     # test_api_token(api_endpoint, api_config)
-    get_notebook_search(api_endpoint, api_config)
+    # get_notebook_search(api_endpoint, api_config)
     # post_notebook_search(api_endpoint, api_config)
-    # get_notebook_download(api_endpoint, api_config)
+    get_notebook_download(api_endpoint, api_config)
     # post_notebook_download(api_endpoint, api_config)
     # query_generation(api_endpoint, api_config)
     # context_search(api_endpoint, api_config)

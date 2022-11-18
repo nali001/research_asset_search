@@ -14,7 +14,7 @@ Right now it is focused on notebook search.
 ```
 git clone --branch deploy git@github.com:nali001/notebook_search_docker.git
 ```
-2. Setup environment on host machine, refer to `host_env_setup.sh`
+2. Setup environment on host machine, refer to `deploy_host_setup.sh`
 
 3. Setup data folders. Navigate to `notebook_search_docker` and run the following: 
 ```
@@ -26,9 +26,12 @@ sudo chgrp -R 0 postgres/data postgres/logs pgadmin/data
 sudo chgrp -R 0 search_engine_app/notebooksearch/Notebooks
 ```
 
-This step is crucial for access and persistent storage of data. 
+This step is crucial for accesses and persistent storage of data. 
 
-4. Prepare the data. Put your notebooks `es_kaggle_notebooks.csv` under `search_engine_app/notebooksearch/Notebooks/Kaggle`
+4. Prepare the notebooks for indexing. \
+Put the preprocessed notebooks `es_kaggle_notebooks.csv` under the folder `search_engine_app/notebooksearch/Notebooks/Kaggle` \
+Put the raw notebooks `Kaggle_raw_notebooks.csv` under the folder `search_engine_app/notebooksearch/Raw_notebooks` 
+
 
 5. Run 
 ```
@@ -48,7 +51,7 @@ We expose `pgadmin` service to the localhost so that you can easily monitor the 
 We expose `Django admin` service to public web. Access it through `http://IP_address/admin/` 
 
 
-However, `postgres` `search_engine_app` and `Elasticsearch` services are only accessible within the docker network and thus cannot be accessed from the host machine or the web. 
+However, services `postgres`, `search_engine_app`, `Elasticsearch` are only accessible within the docker network and thus cannot be accessed from the host machine or the web. 
 
 Postgres pgadmin login 
 ```
@@ -82,7 +85,7 @@ Development is mainly for Django project.
 git clone git@github.com:nali001/notebook_search_docker.git
 ```
 
-2. Setup environment on host machine, refer to `host_env_setup.sh`
+2. Setup environment on host machine, refer to `dev_host_setup.sh`
 
 3. Setup data folders. Navigate to `notebook_search_docker` and run the following: 
 ```
@@ -92,38 +95,41 @@ sudo chgrp -R 0 elasticsearch/data elasticsearch/logs
 sudo chgrp -R 0 postgres/data postgres/logs pgadmin/data
 ```
 
-4. Setup local Python environment, refer to `search_engine_app/dev_env_setup.sh`
+4. Start services `Postgres`, `pgadmin` and `Elasticsearch` in docker. 
+```
+docker compose -f docker-compose_dev.yml up
+```
 
-5. Start `Elasticsearch` service in docker. It can be accessed via `localhost:9200`
+Or you can start them separately using: 
 ```
 docker compose -f docker-compose_es.yml up
-```
-
-6. Start `Postgres` service in docker. It can be accessed via `localhost:5432`
-```
 docker compose -f docker-compose_postgres_admin.yml up
 ```
+
 If you don't want to use pgadmin4, run the following: 
 ```
 docker compose -f docker-compose_postgres.yml up
 ```
 
-7. Prepare the data. Put your notebooks under `notebook_search/Notebooks/Kaggle`. Then go to 
+6. Prepare the notebooks for indexing. \
+(1) Put the preprocessed notebooks `es_kaggle_notebooks.csv` under the folder `search_engine_app/notebooksearch/Notebooks/Kaggle` \
+(2) Put the raw notebooks `Kaggle_raw_notebooks.csv` under the folder `search_engine_app/notebooksearch/Raw_notebooks` \
+Then go to 
 `search_engine_app` and run 
 ```
 python -m notebooksearch.notebook_indexing
 ```
-Now you are good to go! and run 
+Now you are good to go! Run the following to start your search engine:  
 ```
 conda activate notebook_search
 python manage.py runserver 7777
 ```
 
-### Open ports
-+ Django dummy server (search_engine_app): 7777
-+ Elasticsearch: 9200
-+ Postgres: 5432
-+ pgadmin: 5050
+### Accessing addresses
++ Django dummy server (search_engine_app): `localhost:7777`
++ Elasticsearch: `localhost:9200`
++ Postgres: `localhost:5432`
++ pgadmin: `localhost:5050`
 
 
 ### Postgres inspection
