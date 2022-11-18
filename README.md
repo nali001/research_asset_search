@@ -29,8 +29,7 @@ sudo chgrp -R 0 search_engine_app/notebooksearch/Notebooks
 This step is crucial for accesses and persistent storage of data. 
 
 4. Prepare the notebooks for indexing. \
-Put the preprocessed notebooks `es_kaggle_notebooks.csv` under the folder `search_engine_app/notebooksearch/Notebooks/Kaggle` \
-Put the raw notebooks `Kaggle_raw_notebooks.csv` under the folder `search_engine_app/notebooksearch/Raw_notebooks` 
+Put the preprocessed notebooks `Kaggle_preprocessed_notebooks.csv` and the raw notebooks `Kaggle_raw_notebooks.csv` under the folder `search_engine_app/notebooksearch/Notebooks` 
 
 
 5. Run 
@@ -112,8 +111,7 @@ docker compose -f docker-compose_postgres.yml up
 ```
 
 6. Prepare the notebooks for indexing. \
-(1) Put the preprocessed notebooks `es_kaggle_notebooks.csv` under the folder `search_engine_app/notebooksearch/Notebooks/Kaggle` \
-(2) Put the raw notebooks `Kaggle_raw_notebooks.csv` under the folder `search_engine_app/notebooksearch/Raw_notebooks` \
+Put the preprocessed notebooks `Kaggle_preprocessed_notebooks.csv` and the raw notebooks `Kaggle_raw_notebooks.csv` under the folder `search_engine_app/notebooksearch/Notebooks` \
 Then go to 
 `search_engine_app` and run 
 ```

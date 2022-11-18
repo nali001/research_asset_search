@@ -11,7 +11,14 @@ zip -r ./search_engine_app/notebooksearch/Raw_notebooks/Kaggle.zip ./search_engi
 mkdir ./temp ./temp/logs
 mv ./search_engine_app/notebooksearch/Raw_notebooks/Kaggle.zip ./temp
 cp ./search_engine_app/notebooksearch/Raw_notebooks/logs/*.csv ./temp/logs
-cp ./search_engine_app/notebooksearch/Raw_notebooks/*.csv ./temp
 rclone copy ./temp na_surf:notebook_search_docker/Raw_notebooks/  --progress
 rm -dr ./temp
 
+
+# 1. 
+# Source: search_engine_app/notebooksearch/Raw_notebooks/
+# Destination: /home/notebook_search_docker/Raw_notebooks
+mkdir ./temp
+cp ./search_engine_app/notebooksearch/Notebooks/*.csv ./temp
+rclone copy ./temp na_surf:notebook_search_docker/Notebooks/  --progress
+rm -dr ./temp

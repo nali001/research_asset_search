@@ -171,9 +171,10 @@ def main():
     if os.path.basename(os.getcwd()) != 'search_engine_app': 
         print(f'Please navigate to `search_engine_app` directory and run: \n `python -m notebooksearch.notebook_indexing`\n')
         return False
-    # Change `reindex` to Tur if you want to reindex the notebooks
+
+    # Change `reindex` to True if you want to reindex the notebooks
     index_kaggle_notebooks(reindex=False)
-    index_raw_notebooks(reindex=True)
+    index_raw_notebooks(reindex=False)
 
 # If using `python -m notebooksearch.notebook_indexing`, 
 # `__name__` will be `__main__`
