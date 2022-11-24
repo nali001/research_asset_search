@@ -27,7 +27,7 @@ def create_es_client() -> Elasticsearch:
     elasticsearch_port = os.environ.get('ELASTICSEARCH_PORT')
     elasticsearch_username = os.environ.get('ELASTICSEARCH_USERNAME')
     elasticsearch_password = os.environ.get('ELASTICSEARCH_PASSWORD')
-    
+
     es = Elasticsearch(
         hosts=[{"host": elasticsearch_hostname, "port": elasticsearch_port}],
         http_auth=[elasticsearch_username, elasticsearch_password],

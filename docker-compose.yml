@@ -41,8 +41,8 @@ services:
       - cluster.name=es_dataserver
       - node.name=es01
       - TAKE_FILE_OWNERSHIP=true 
-    expose: 
-      - 9200
+    ports: 
+      - 9200:9200
 
   postgres:
     build: ./postgres
