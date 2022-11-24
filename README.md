@@ -49,6 +49,8 @@ We expose `pgadmin` service to the localhost so that you can easily monitor the 
 
 We expose `Django admin` service to public web. Access it through `http://IP_address/admin/` 
 
+We expose `Elasticsearch` service to localhost so that you can update Elasticsearch server from the host machine, without modifying code within Django project. Access it through `http://localhost/9200/` 
+
 
 However, services `postgres`, `search_engine_app`, `Elasticsearch` are only accessible within the docker network and thus cannot be accessed from the host machine or the web. 
 
