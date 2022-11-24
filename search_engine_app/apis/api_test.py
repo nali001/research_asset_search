@@ -122,7 +122,7 @@ def post_notebook_search(api_endpoint, api_config):
     return hits
 
 def get_notebook_download(api_endpoint, api_config): 
-    docid = 'Kaggle219'
+    docid = 'Kaggle2903'
     url = api_endpoint + "notebook_download/"
     params={
         "docid": docid,
@@ -271,7 +271,7 @@ def test(api_endpoint, api_config):
 
 
 if __name__ == "__main__": 
-    server = 'ONLINE'
+    server = 'LOCAL'
     api_endpoint = locals()[server + '_API_ENDPOINT']
     api_config = locals()[server + '_API_CONFIG']
     # print(api_config)

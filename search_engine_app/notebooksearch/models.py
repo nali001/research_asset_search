@@ -89,6 +89,8 @@ class KaggleNotebook(BaseNotebook):
     # title = models.CharField(max_length=120)
     source_id = models.CharField(max_length=60)
     file_name = models.CharField(max_length=60)
+    language = models.CharField(max_length=60)
+    num_cells = models.CharField(max_length=60)
     notebook_search_result = models.ForeignKey(NotebookSearchResult, related_name="results", on_delete=models.CASCADE)
     
     class Meta: 
