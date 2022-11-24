@@ -36,6 +36,8 @@
     "docid": docid, 
     "kaggle_id": kaggle_id,
     "file_name": file_name, 
+    "language": language, 
+    "num_cells": num_cells, 
 }
 ```
 

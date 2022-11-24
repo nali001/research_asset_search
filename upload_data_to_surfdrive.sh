@@ -15,9 +15,9 @@ rclone copy ./temp na_surf:notebook_search_docker/Raw_notebooks/  --progress
 rm -dr ./temp
 
 
-# 1. 
-# Source: search_engine_app/notebooksearch/Raw_notebooks/
-# Destination: /home/notebook_search_docker/Raw_notebooks
+# 2. 
+# Source: search_engine_app/notebooksearch/Notebooks/
+# Destination: /home/notebook_search_docker/Notebooks
 mkdir ./temp
 cp ./search_engine_app/notebooksearch/Notebooks/*.csv ./temp
 rclone copy ./temp na_surf:notebook_search_docker/Notebooks/  --progress
