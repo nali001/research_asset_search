@@ -16,6 +16,8 @@ search_engine_app/auth/kaggle_token.json
 
 get_sample.ipynb
 
+nginx/logs/*
+docker_logs
 
 elasticsearch/data/*
 elasticsearch/logs/*

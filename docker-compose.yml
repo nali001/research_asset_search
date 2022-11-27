@@ -81,6 +81,10 @@ services:
     build: ./nginx
     image: notebooksearch/nginx:latest
     container_name: notebooksearch_nginx
+    volumes: 
+      - ./nginx/logs:/nginx_server/search_engine_app/logs
+      - ./nginx/templates:/etc/nginx/templates
+
     networks: 
       - search_engine_net
     depends_on:
