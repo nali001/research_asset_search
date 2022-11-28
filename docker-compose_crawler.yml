@@ -1,0 +1,29 @@
+# docker-compose_crawler.yml
+# Build and run docker containers for notebook crawler
+version: '2'
+services:
+    notebookcrawler:
+        build:
+            context: ./notebookcrawler
+            dockerfile: Dockerfile
+        volumes:
+            - ./notebookcrawler:/app
+        links:
+            - rabbit
+        depends_on:
+            - rabbit
+
+    rabbit:
+        hostname: rabbit
+        image: rabbitmq:3.11.3
+        environment:
+            - RABBITMQ_DEFAULT_USER=admin
+            - RABBITMQ_DEFAULT_PASS=notebookcrawler2022
+        expose:
+            - 5672
+
+    mongo:
+        hostname: mongo
+        image: mongo:5
+        expose:
+            - 27017
