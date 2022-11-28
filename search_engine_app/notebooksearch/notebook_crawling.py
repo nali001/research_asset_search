@@ -1,12 +1,63 @@
 import os 
+import json
 import pandas as pd
+import itertools
+
 import kaggle
 import time
 from datetime import timedelta
 from memory_profiler import profile
  
-class NotebookCrawler: 
-    pass
+
+class PwcResource: 
+    def __init__(self):
+        ''' Handle the resources provided by paperwithcodes. 
+        '''
+        self.methods = None
+        self.datasets = None
+        self.tasks = None
+
+    def get_methods(self, method_file):
+        ''' Extract method names
+        '''
+        pwc_methods = []
+        with open(method_file) as f: 
+            methods = json.load(f) 
+
+        for method in methods: 
+            pwc_methods.append(method['name'])
+            pwc_methods.append(method['full_name'])
+        pwc_methods = list(set(pwc_methods))
+        return pwc_methods
+
+    def get_datasets(self, dataset_file):
+        ''' Extract dataset names and task names'''
+        pwc_datasets = []
+        pwc_tasks = []
+        with open(dataset_file) as f: 
+            datasets = json.load(f) 
+
+        for dataset in datasets: 
+            pwc_datasets.append(dataset['name'])
+            pwc_datasets.append(dataset['full_name'])
+            if 'tasks' in dataset.keys(): 
+                for task in dataset['tasks']:
+                    pwc_tasks.append(task['task'])
+            else: 
+                continue
+        
+        pwc_datasets = list(set(pwc_datasets))
+        pwc_tasks = list(set(pwc_tasks))
+        return pwc_datasets, pwc_tasks
+        
+    def get_resources(self, file_path):
+        method_file = os.path.join(file_path, 'methods.json')
+        dataset_file = os.path.join(file_path, 'datasets.json')
+
+        self.methods = self.get_methods(method_file)
+        self.datasets, self.tasks = self.get_datasets(dataset_file)
+        return self
+
 
 
 class KaggleNotebookCrawler: 
@@ -127,7 +178,7 @@ class KaggleNotebookCrawler:
         df_notebooks = pd.DataFrame()
         # Search notebooks for each query
         start = time.time()
-        for i, query in enumerate(df_queries['queries']): 
+        for i, query in enumerate(df_queries['query']): 
             print(f'---------------- Query [{i+1}]: {query} ----------------')
             # To save the memory, we write the searching results to disk for every 10 queries 
             df_notebooks = pd.concat([df_notebooks, self.search_kernels(query, page_range)])
@@ -225,7 +276,29 @@ class KaggleNotebookCrawler:
         return True
 
 
-def main(): 
+# --------------------------------- Usage examples
+def generate_pwc_queries(PWC_PATH): 
+    ''' Generate queries for crawler using methods, datasets and tasks from PWC
+    '''
+    pwc = PwcResource()
+    pwc.get_resources(PWC_PATH)
+    methods = {'query': pwc.methods, 'type': ['method']*len(pwc.methods)}
+    datasets = {'query': pwc.datasets, 'type': ['dataset']*len(pwc.datasets)}
+    tasks = {'query': pwc.tasks, 'type': ['task']*len(pwc.tasks)}
+    print(f'------------------ PWC resources -------------------')
+    print(f'methods: {len(pwc.methods)}\ndatasets: {len(pwc.datasets)}\ntasks: {len(pwc.tasks)}\n')
+
+    pwc_queries = {}
+    for key in ['query', 'type']: 
+        pwc_queries[key] = list(itertools.chain(methods[key], datasets[key], tasks[key]))
+    df_pwc_queries = pd.DataFrame.from_dict(pwc_queries)
+    
+    # Save df_pwc_queries
+    print(f'Save methods, dataset, tasks to `{PWC_PATH}/pwc_queries.csv`\n')
+    df_pwc_queries.to_csv(os.path.join(PWC_PATH, 'pwc_queries.csv'), index=False)
+    return df_pwc_queries
+
+def crawl_kaggle_notebooks(QUERY_FILE, page_range, re_search=False): 
     # Check if the current working path is `search_engine_app``, if not terminate the program
     if os.path.basename(os.getcwd()) != 'search_engine_app': 
         print(f'Please navigate to `search_engine_app` directory and run: \n `python -m notebooksearch.notebook_crawling`\n')
@@ -234,7 +307,6 @@ def main():
     KERNEL_DOWNLOAD_PATH = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/Kaggle')
     KAGGLE_DOWNLOAD_LOG_FILE = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/logs/kaggle_download_log.csv')
     KAGGLE_SEARCH_LOG_FILE = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/logs/kaggle_search_log.csv')
-    QUERY_FILE = os.path.join(os.getcwd(), 'notebooksearch/Queries/kaggle_crawler_queries.csv')
 
     # Read queries
     df_queries = pd.read_csv(QUERY_FILE)
@@ -243,8 +315,18 @@ def main():
     # print(df_queries)
 
     crawler = KaggleNotebookCrawler(df_queries, KERNEL_DOWNLOAD_PATH, KAGGLE_DOWNLOAD_LOG_FILE, KAGGLE_SEARCH_LOG_FILE)
-    result = crawler.crawl_notebooks(page_range=1, re_search=True)
+    result = crawler.crawl_notebooks(page_range=page_range, re_search=re_search)
     return result
+
+
+
+def main():
+    # PWC_PATH = os.path.join(os.getcwd(), 'notebooksearch/Queries')
+    # generate_pwc_queries(PWC_PATH)
+    
+    QUERY_FILE = os.path.join(os.getcwd(), 'notebooksearch/Queries/pwc_queries.csv')
+    crawl_kaggle_notebooks(QUERY_FILE, page_range=10, re_search=True)
+    return True
 
 if __name__ == '__main__':
     main()

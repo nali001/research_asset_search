@@ -121,7 +121,7 @@ python -m notebooksearch.notebook_indexing
 ```
 Now you are good to go! Run the following to start your search engine:  
 ```
-conda activate notebook_search
+conda activate notebooksearch
 python manage.py runserver 7777
 ```
 
