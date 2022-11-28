@@ -1,6 +1,7 @@
 FROM python:3.8
 COPY ./requirements.txt /app/requirements.txt
-COPY ./kagglecrawler/ /app/
+ADD ./kagglecrawler/ /app/
+# COPY ./kagglecrawler/kaggle.json /root/.kaggle/kaggle.json
 
 WORKDIR /app/
 RUN pip install -r requirements.txt

@@ -1,0 +1,8 @@
+query,type
+MinCut Pooling,method
+Residual GRU,method
+Four-dimensional A-star,method
+Hierarchical Network Dissection,method
+DCLS,method
+Meena,method
+CRF-RNN,method

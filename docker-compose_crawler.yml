@@ -6,8 +6,8 @@ services:
         build:
             context: ./notebookcrawler
             dockerfile: Dockerfile
-        volumes:
-            - ./notebookcrawler:/app
+        # volumes:
+        #     - ./notebookcrawler:/app
         links:
             - rabbit
         depends_on:
@@ -25,5 +25,7 @@ services:
     mongo:
         hostname: mongo
         image: mongo:5
-        expose:
-            - 27017
+        volumes:
+            - ./mongo/db:/data/db
+        ports:
+            - 27017:27017

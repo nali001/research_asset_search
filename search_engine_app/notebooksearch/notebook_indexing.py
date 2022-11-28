@@ -60,12 +60,15 @@ class ElasticsearchIndexer():
                         indexfiles.append(newRecord)
 
             elif self.source_name == 'Kaggle': 
+                # ['source_id', 'name', 'file_name', 'html_url', 'description', 'source', 'docid', 'language', 
+                # 'num_cells', 'num_code_cells', 'num_md_cells', 'len_md_text']
                 df_notebooks = pd.read_csv(os.path.join(self.notebook_path, self.source_file_name))
                 indexfiles =  df_notebooks.to_dict('records')
             else: 
                 print("Notebook source is unknown, please specify a scheme.")
 
         # Index raw notebooks
+        # ['docid', 'source_id', 'name', 'file_name', 'source', 'notebook_source_file']
         elif self.doc_type == 'raw': 
             root = self.notebook_path
             df_notebooks = pd.read_csv(os.path.join(self.notebook_path, self.source_file_name))

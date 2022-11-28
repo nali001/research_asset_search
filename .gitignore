@@ -27,6 +27,8 @@ postgres/logs/*
 
 pgadmin/data/*
 
+mongo/db/*
+
 push_docker_images.sh
 
 rclone_setup.sh
