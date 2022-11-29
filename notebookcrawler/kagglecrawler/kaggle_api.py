@@ -37,7 +37,7 @@ class AuthenticatedKaggleAPI:
                     kernels.extend(kernel_list)
             # Skip the pages that cause ApiException
             except kaggle.rest.ApiException as e:  
-                # print(e)
+                print(e)
                 continue
     
         # Extract the `title` and the `ref` of returned Kaggle kernels

@@ -1,8 +1,13 @@
+# distribution_notebook_crawling.py
+# Incorporate multiprocessing to increase parallisation. 
+
 import os 
 import pandas as pd
 from kagglecrawler.kaggle_api import AuthenticatedKaggleAPI
 
 from pymongo import MongoClient
+
+from multiprocessing import Pool
 
 
 class KaggleNotebookCrawler: 
@@ -123,14 +128,14 @@ class KaggleNotebookCrawler:
         '''
 
         # Check if the notebook already exists
-        record = {'kernel_ref': kernel_ref}
+        record = {'source_id': kernel_ref}
         if not list(raw_notebook_coll.find(record)): 
             # Download notebook from Kaggle 
             try: 
                 print(f'[Pulling] {kernel_ref}')
                 response = self.kaggle_api.download_kernel(kernel_ref)
             except Exception as e:
-                print(e) 
+                # print(e) 
                 print(f'[***FAIL] {kernel_ref}')
                 return False
             metadata = response['metadata']
@@ -156,16 +161,28 @@ class KaggleNotebookCrawler:
         return True
 
 
-    def crawl_notebooks_to_db(self, query, page_range, search_log_coll, download_log_coll, raw_notebook_coll, re_search=False):
+    def crawl_notebooks_to_db(self, ordered_query:tuple, page_range, search_log_coll, download_log_coll, raw_notebook_coll, re_search=False):
         ''' Search and download notebooks for each query 
 
-        The notebooks will be downloaed to database
+        The notebooks will be downloaed to database. 
+
+        Args: 
+            - ordered_query: (index, query_text)
         '''
+        print(f'---------------- Query [{ordered_query[0]+1}]: {ordered_query[1]} ----------------') 
+        query = ordered_query[1]
+
+        # If `re_search` is True, it will search the notebooks using `query` 
         if re_search==True: 
             records = self.search_kernels_to_db(query, page_range, search_log_coll)
-        else: 
+            print(records)
+        # If `re_search` is False, it will read from `search_log_coll` for a list of notebooks to be download 
+        elif re_search==False: 
+            key = {'query': query}
             try: 
-                records = list(search_log_coll.find())
+                records = list(search_log_coll.find(key))
+                if len(records): 
+                    print(f'Found {len(records)} from search log.\n')
             except Exception as e:
                 print(f'[SearchLog ERROR(self-defined)] There is no search log found!') 
         
@@ -180,7 +197,77 @@ class KaggleNotebookCrawler:
 
 
 # --------------------------------- Usage examples
-def crawl_kaggle_notebooks(QUERY_FILE, page_range, re_search=False): 
+# def crawl_kaggle_notebooks(QUERY_FILE, page_range, re_search=False): 
+#     # create database and collections
+#     client = MongoClient('localhost', 27017) # change the ip and port to your mongo database's
+#     db = client['kagglecrawler']
+#     search_log_coll = db['search_log']
+#     download_log_coll = db['download_log']
+#     raw_notebook_coll = db['raw_notebooks']
+#     task_log = db['task_log']
+    
+    
+#     crawler = KaggleNotebookCrawler()
+
+#     # Read queries
+#     df_queries = pd.read_csv(QUERY_FILE)
+#     # queries = ['wsi']
+#     # df_queries = pd.DataFrame(queries, columns= ['queries'])
+#     # print(df_queries)
+#     def f(ordered_query):
+#         result = crawler.crawl_notebooks_to_db(ordered_query, page_range, search_log_coll, download_log_coll, raw_notebook_coll, re_search)
+#         return result
+
+#     ordered_queries = list(enumerate(df_queries['query']))
+#     with Pool(20) as p:
+#         p.map(f, ordered_queries)
+        
+#     return True
+
+
+# def main():
+#     # Check if the current working path is `search_engine_app``, if not terminate the program
+#     if os.path.basename(os.getcwd()) != 'notebookcrawler': 
+#         print(f'Please navigate to `notebookcrawler` directory.')
+#         return False
+#     QUERY_FILE = os.path.join(os.getcwd(), 'Queries/test_queries.csv')
+#     # crawl_kaggle_notebooks(QUERY_FILE, page_range=10, re_search=True)
+    
+#     # create database and collections
+#     client = MongoClient('localhost', 27017) # change the ip and port to your mongo database's
+#     db = client['kagglecrawler']
+#     search_log_coll = db['search_log']
+#     download_log_coll = db['download_log']
+#     raw_notebook_coll = db['raw_notebooks']
+#     task_log = db['task_log']
+    
+    
+#     crawler = KaggleNotebookCrawler()
+
+#     # Read queries
+#     df_queries = pd.read_csv(QUERY_FILE)
+#     # queries = ['wsi']
+#     # df_queries = pd.DataFrame(queries, columns= ['queries'])
+#     # print(df_queries)
+#     def f(ordered_query):
+#         # print(f'---------------- Query [{query[0]+1}]: {query[1]} ----------------') 
+#         result = crawler.crawl_notebooks_to_db(ordered_query, page_range=10, search_log_coll=search_log_coll, download_log_coll=download_log_coll, raw_notebook_coll=raw_notebook_coll, re_search=True)
+#         return result
+
+#     ordered_queries = list(enumerate(df_queries['query']))
+#     with Pool(20) as p:
+#         p.map(f, ordered_queries)   
+
+#     return True
+
+if __name__ == '__main__':
+    # Check if the current working path is `search_engine_app``, if not terminate the program
+    if os.path.basename(os.getcwd()) != 'notebookcrawler': 
+        print(f'Please navigate to `notebookcrawler` directory.')
+
+    QUERY_FILE = os.path.join(os.getcwd(), 'Queries/pwc_queries.csv')
+    # crawl_kaggle_notebooks(QUERY_FILE, page_range=10, re_search=True)
+    
     # create database and collections
     client = MongoClient('localhost', 27017) # change the ip and port to your mongo database's
     db = client['kagglecrawler']
@@ -197,22 +284,12 @@ def crawl_kaggle_notebooks(QUERY_FILE, page_range, re_search=False):
     # queries = ['wsi']
     # df_queries = pd.DataFrame(queries, columns= ['queries'])
     # print(df_queries)
-    for i, query in enumerate(df_queries['query']): 
-        print(f'---------------- Query [{i+1}]: {query} ----------------')
-        result = crawler.crawl_notebooks_to_db(query, page_range, search_log_coll, download_log_coll, raw_notebook_coll, re_search)
-    return True
+    def f(ordered_query):
+        # print(f'---------------- Query [{query[0]+1}]: {query[1]} ----------------') 
+        result = crawler.crawl_notebooks_to_db(ordered_query, page_range=10, search_log_coll=search_log_coll, download_log_coll=download_log_coll, raw_notebook_coll=raw_notebook_coll, re_search=False)
+        return result
 
-
-
-def main():
-    # Check if the current working path is `search_engine_app``, if not terminate the program
-    if os.path.basename(os.getcwd()) != 'notebookcrawler': 
-        print(f'Please navigate to `notebookcrawler` directory.')
-        return False
-    QUERY_FILE = os.path.join(os.getcwd(), 'Queries/test_queries.csv')
-    crawl_kaggle_notebooks(QUERY_FILE, page_range=10, re_search=True)
-    return True
-
-if __name__ == '__main__':
-    main()
+    ordered_queries = list(enumerate(df_queries['query']))
+    with Pool(50) as p:
+        p.map(f, ordered_queries)
 
