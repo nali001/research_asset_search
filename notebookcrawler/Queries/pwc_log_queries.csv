@@ -601,2606 +601,2606 @@ Mirror-BERT,method,1
 CTRL,method,1
 rnnDrop,method,1
 Discriminative and Generative Network,method,1
-DistDGL,method,0
-Pixel-BERT,method,0
-Hybrid-deconvolution,method,0
-CBNet,method,0
-Peer-attention,method,0
-PolarNet,method,0
-SegFormer,method,0
-Dynamic Convolution,method,0
-Variational Dropout,method,0
-Grid R-CNN,method,0
-Baidu Dependency Parser,method,0
-GaAN,method,0
-ClassSR,method,0
-Generalizable Node Injection Attack,method,0
-Expected Sarsa,method,0
-StyleSwin,method,0
-Contour Stochastic Gradient Langevin Dynamics,method,0
-DenseNAS-B,method,0
-SMITH,method,0
-DQN,method,0
-Mode Normalization,method,0
-Attention Free Transformer,method,0
-CrossViT,method,0
-SFAM,method,0
-Knowledge Enhanced Masked Language Model,method,0
-U-Net Generative Adversarial Network,method,0
-Deeper Atrous Spatial Pyramid Pooling,method,0
-spatial transformer networks,method,0
-Auto-Classifier,method,0
-Center Pooling,method,0
-hdxresnet,method,0
-Non-linear Independent Component Estimation,method,0
-Restricted Boltzmann Machine,method,0
-RAHP,method,0
-context2vec,method,0
-Contrastive BERT,method,0
-DualGCN,method,0
-Stochastic Gradient Descent,method,0
-Deep Deterministic Policy Gradient,method,0
-DALL·E 2,method,0
-HTC,method,0
-Factor Graph Attention,method,0
-ALBERT,method,0
-Sandwich Transformer,method,0
-GPT-3,method,0
-ZeRO,method,0
-YOLOv1,method,0
-Fawkes,method,0
-DU-GAN,method,0
-Hermite Activation,method,0
-mBARTHez,method,0
-Graph Recurrent Imputation Network,method,0
-GALA,method,0
-Exponential Decay,method,0
-ByteScheduler,method,0
-USE,method,0
-POTO,method,0
-Virtual Batch Normalization,method,0
-FastSGT,method,0
-MeshGraphNet,method,0
-Long Short-Term Memory,method,0
-Sparsemax,method,0
-GeGLU,method,0
-Gradient Harmonizing Mechanism R,method,0
-Symbolic Deep Learning,method,0
-MT-PET,method,0
-DVD-GAN DBlock,method,0
-AWARE,method,0
-Graph Echo State Network,method,0
-Guided Language to Image Diffusion for Generation and Editing,method,0
-Hue — Bi-Dimensional Empirical Mode Decomposition,method,0
-Gated Linear Unit,method,0
-Denoising Score Matching,method,0
-Grammatical evolution + Q-learning,method,0
-RPDet,method,0
-ALQ and AMQ,method,0
-Source Hypothesis Transfer,method,0
-Seesaw Loss,method,0
-Prioritized Sweeping,method,0
-Composite Backbone Network,method,0
-Inpainting,method,0
-ComplEx-N3-RP,method,0
-Deep Voice 3,method,0
-Dynamic R-CNN,method,0
-Learning From Multiple Experts,method,0
-RMSProp,method,0
-MoGA-B,method,0
-MoGA-A,method,0
-Cascade Mask R-CNN,method,0
-Neural Attention Fields,method,0
-TopK Copy,method,0
-STDC,method,0
-Attention Dropout,method,0
-Swish,method,0
-Visual Geometry Group 19 Layer CNN,method,0
-SKNet,method,0
-HDCGAN,method,0
-Heterogeneous Molecular Graph Neural Network,method,0
-Colorization Transformer,method,0
-Cycle-CenterNet,method,0
-Activation Regularization,method,0
-GTrXL,method,0
-Transformer,method,0
-MPNN,method,0
-SNet,method,0
-ComplEx with N3 Regularizer,method,0
-BiFPN,method,0
-KAF,method,0
-Canvas Method,method,0
-SlowMo,method,0
-YOLOv2,method,0
-CentripetalNet,method,0
-SRGAN,method,0
-CP with N3 Regularizer and Relation Prediction,method,0
-Adaptive Dropout,method,0
-Inception-v3,method,0
-reSGLD,method,0
-Spatially Separable Self-Attention,method,0
-Neural Oblivious Decision Ensembles,method,0
-Adversarial Color Enhancement,method,0
-Seq2Seq,method,0
-Directional Sparse Filtering,method,0
-Differential attention for visual question answering,method,0
-MLFPN,method,0
-FastSpeech 2s,method,0
-HypE,method,0
-Unbiased Online Recurrent Optimization,method,0
-MoCo v2,method,0
-Fastformer,method,0
-Fourier Contour Embedding,method,0
-Detailed Expression Capture and Animation,method,0
-MuZero,method,0
-Independent Component Analysis,method,0
-LAMA,method,0
-Gaussian Error Linear Units,method,0
-GPT-2,method,0
-IQL,method,0
-SaBN,method,0
-GMVAE,method,0
-CANINE,method,0
-ALIS,method,0
-FeatureNMS,method,0
-SEED RL,method,0
-RotNet,method,0
-Polyak Averaging,method,0
-PixelShuffle,method,0
-Mixer Layer,method,0
-Single-Headed Attention,method,0
-Relation-aware Global Attention,method,0
-Test-time Local Converter,method,0
-Large-scale Information Network Embedding,method,0
-Pixel Recurrent Neural Network,method,0
-Global Context Block,method,0
-Weight Tying,method,0
-ELU,method,0
-PELU,method,0
-Hi-LANDER,method,0
-NCL,method,0
-Unitary RNN,method,0
-Fishr,method,0
-Negative Face Recognition,method,0
-Phish: A Novel Hyper-Optimizable Activation Function,method,0
-Learning to Match,method,0
-Conditional Relation Network,method,0
-RE-NET,method,0
-SqueezeNeXt,method,0
-DMA,method,0
-PointNet,method,0
-Conditional Random Field,method,0
-Self-regularizing Boundary Time and Amplitude Warping,method,0
-E-MBConv,method,0
-GAN Least Squares Loss,method,0
-Channel & Spatial attention,method,0
-HITNet,method,0
-Neural Additive Model,method,0
-ZeRO-Infinity,method,0
-Sscs,method,0
-FreeAnchor,method,0
-Self-Adjusting Smooth L1 Loss,method,0
-StreaMRAK,method,0
-mBERT,method,0
-ASPP,method,0
-SCA,method,0
-MTS,method,0
-Pattern-Exploiting Training,method,0
-Time-aware Large Kernel Convolution,method,0
-ARMA GNN,method,0
-DeepMind AlphaStar,method,0
-GAP-Layer,method,0
-RealNVP,method,0
-Variational Graph Auto Encoder,method,0
-Deformable Attention Module,method,0
-Dimension-wise Convolution,method,0
-Batchboost,method,0
-Hierarchical Feature Fusion,method,0
-Libra R-CNN,method,0
-Voxel R-CNN,method,0
-Panoptic-PolarNet,method,0
-DNAS,method,0
-Bottleneck Transformer Block,method,0
-Xavier Initialization,method,0
-DEQ,method,0
-Cycle Consistency Loss,method,0
-DANet,method,0
-Scatter Connection,method,0
-True Online TD Lambda,method,0
-GLOW,method,0
-BoundaryNet,method,0
-Corner Pooling,method,0
-Dutch Eligibility Trace,method,0
-Fast Bi-level Adversarial Training,method,0
-MLP-Mixer,method,0
-Laplacian Positional Encodings,method,0
-PCA,method,0
-LeNet,method,0
-AutoML-Zero,method,0
-Poincaré Embeddings,method,0
-Entropy Regularization,method,0
-ConvLSTM,method,0
-PAA,method,0
-Neural Architecture Search,method,0
-STMDA-RetinaNet,method,0
-VarifocalNet,method,0
-Graph Isomorphism Network,method,0
-Graph-to-Tree MWP Solver,method,0
-VDO-SLAM,method,0
-ElasticFace,method,0
-DyGED,method,0
-modified arcsinh,method,0
-Content-Conditioned Style Encoder,method,0
-Groupwise Point Convolution,method,0
-Bi-attention,method,0
-ALIGN,method,0
-Global Sub-Sampled Attention,method,0
-CP-N3-RP,method,0
-Detection Transformer,method,0
-gCANS,method,0
-Self-Adversarial Negative Sampling,method,0
-FFB6D,method,0
-Squared ReLU,method,0
-SVD Parameterization,method,0
-AdaRNN,method,0
-Additive Angular Margin Loss,method,0
-UCNet,method,0
-EfficientNet,method,0
-ComiRec,method,0
-GSoP-Net,method,0
-CLRNet,method,0
-Fast Sample Re-Weighting,method,0
-Spatial-Reduction Attention,method,0
-Hierarchical Multi-Task Learning,method,0
-CoVA,method,0
-AdaHessian,method,0
-Class activation guide,method,0
-NICE-SLAM: Neural Implicit Scalable Encoding for SLAM,method,0
-Dual Softmax Loss,method,0
-Explanation vs Attention: A Two-Player Game to Obtain Attention for VQA,method,0
-Attentive Walk-Aggregating Graph Neural Network,method,0
-Big-Little Net,method,0
-ClusterFit,method,0
-EVM,method,0
-DifferNet,method,0
-MDPO,method,0
-Point-GNN,method,0
-PP-OCR,method,0
-Florence,method,0
-LSTM,method,0
-Multi-Head Linear Attention,method,0
-GAIL,method,0
-SCNet,method,0
-Hierarchical Transferability Calibration Network,method,0
-Variational Entanglement Detection,method,0
-Ape-X DPG,method,0
-Revision Network,method,0
-Singular Value Clipping,method,0
-Truncation Trick,method,0
-HyperDenseNet,method,0
-G3D,method,0
-Multiscale Dilated Convolution Block,method,0
-SimCLR,method,0
-Fast Focal Detection Network,method,0
-Feature Fusion Module v2,method,0
-TURL,method,0
-SVPG,method,0
-Synchronized Batch Normalization,method,0
-TuckER with Relation Prediction,method,0
-MelGAN Residual Block,method,0
-CurvVAE,method,0
-StereoLayers,method,0
-Generalized Focal Loss,method,0
-Graph Convolutional Network,method,0
-LiteSeg,method,0
-Criss-Cross Network,method,0
-Mogrifier LSTM,method,0
-Randomized Leaky Rectified Linear Units,method,0
-Pointwise Convolution,method,0
-LDA,method,0
-Tacotron,method,0
-VEGA,method,0
-StyleALAE,method,0
-ShuffleNet V2 Block,method,0
-FBNet Block,method,0
-ALDEN,method,0
-UORO,method,0
-ResNeSt,method,0
-ENet Initial Block,method,0
-ShuffleNet Block,method,0
-TernaryBERT,method,0
-MoNet,method,0
-gSDE,method,0
-FLAVR,method,0
-Center-pivot convolution,method,0
-Gaussian Gated Linear Network,method,0
-3D ResNet-RS,method,0
-wav2vec-U,method,0
-Fast Minimum-Norm Attack,method,0
-RSU Beneš Block,method,0
-YOLOX,method,0
-Siamese U-Net,method,0
-VoiceFilter-Lite,method,0
-NUQSGD,method,0
-Inception-ResNet-v2-B,method,0
-Multi-band MelGAN,method,0
-VoVNet,method,0
-Extremely Efficient Spatial Pyramid of Depth-wise Dilated Separable Convolutions,method,0
-AdaMod,method,0
-Single-Shot Multi-Object Tracker,method,0
-Temporal Jittering,method,0
-ASAF,method,0
-TuckER-RP,method,0
-AdaMax,method,0
-Track objects as points,method,0
-FairMOT,method,0
-Synthetic Minority Over-sampling Technique.,method,0
-Hierarchical MTL,method,0
-Adversarial Model Perturbation,method,0
-Adapter,method,0
-NFR,method,0
-Dual Multimodal Attention,method,0
-State-Aware Tracker,method,0
-SDAE,method,0
-Channel-wise Cross Fusion Transformer,method,0
-Causal Inference,method,0
-DeepLabv2,method,0
-Deep Extreme Cut,method,0
-PolyCAM,method,0
-FORK,method,0
-Dynamic Keypoint Head,method,0
-OFA,method,0
-Cross-Attention Module,method,0
-Dense Connections,method,0
-Multi Loss ( BCE Loss + Focal Loss )  + Dice Loss,method,0
-U-CAM,method,0
-Point-wise Spatial Attention,method,0
-KNN and IOU based verification,method,0
-Pix2Pix,method,0
-SpreadsheetCoder,method,0
-Ape-X DQN,method,0
-IoU-guided NMS,method,0
-Random Grayscale,method,0
-Metrix,method,0
-NeuralRecon: Real-Time Coherent 3D Reconstruction from Monocular Video,method,0
-VAE,method,0
-Prioritized Experience Replay,method,0
-SOHO,method,0
-Metric mixup,method,0
-PermuteFormer,method,0
-DECA,method,0
-Frequency channel attention networks,method,0
-Distribution-induced Bidirectional Generative Adversarial Network for Graph Representation Learning,method,0
-Feedforward Network,method,0
-R(2+1)D,method,0
-Enhanced Seq2Seq Autoencoder via Contrastive Learning,method,0
-IPL,method,0
-FPG,method,0
-LeVIT,method,0
-Fast-YOLOv2,method,0
-Triplet Entropy Loss,method,0
-Rank-based loss,method,0
-QuantTree histograms,method,0
-Griffin-Lim Algorithm,method,0
-One-Shot Aggregation,method,0
-DROID-SLAM,method,0
-Disentangled Attribution Curves,method,0
-CoLU,method,0
-Random Mutation Search,method,0
-CSPDarknet53,method,0
-Maxout,method,0
-Holographic Reduced Representation,method,0
-DSelect-k,method,0
-Augmented SBERT,method,0
-Harmonic Block,method,0
-PWIL,method,0
-Progressive Growing Channel Attentive Non-Local Network,method,0
-Twin Delayed Deep Deterministic,method,0
-SAGAN,method,0
-BIMAN,method,0
-Deep Convolutional GAN,method,0
-DAU-ConvNet,method,0
-Highway Network,method,0
-Low-resolution input,method,0
-WaveTTS,method,0
-DropConnect,method,0
-Procrustes,method,0
-BAM,method,0
-Patch AutoAugment,method,0
-Deformable Kernel,method,0
-Class Activation Guided Attention Mechanism (CAGAM),method,0
-Hierarchical-Split Block,method,0
-Feedback Alignment,method,0
-Graph InfoClust,method,0
-Targeted Dropout,method,0
-Conditional Positional Encoding,method,0
-CornerNet,method,0
-CP conv,method,0
-FixMatch,method,0
-SM3,method,0
-Set Transformer,method,0
-GCU,method,0
-Focal Transformers,method,0
-HyperHyperNetwork,method,0
-Compressed Memory,method,0
-KIP,method,0
-DenseNAS-A,method,0
-Fixed Factorized Attention,method,0
-Rational Activation Function,method,0
-HFPSO,method,0
-CornerNet-Saccade,method,0
-TS,method,0
-VL-BERT,method,0
-Value Imputation and Mask Estimation,method,0
-Parameterized ReLU,method,0
-Table Pre-training via Execution,method,0
-SABL,method,0
-Bi-Directional Graph Convolutional Network,method,0
-Inception-A,method,0
-Soft Nearest Neighbor Loss with Annealing Temperature,method,0
-AdaSmooth,method,0
-LightConv,method,0
-Adaptive Label Smoothing,method,0
-ICA,method,0
-Neural Cache,method,0
-MobileBERT,method,0
-LSH Attention,method,0
-ASVI,method,0
-BERT,method,0
-ARShoe,method,0
-HOC,method,0
-SyncBN,method,0
-Soft Pooling,method,0
-Continuous Bag-of-Words Word2Vec,method,0
-Wide&Deep,method,0
-M2Det,method,0
-Spatiotemporal Point Inference Network,method,0
-GCNII,method,0
-SpineNet,method,0
-PointRend,method,0
-Mixture of Softmaxes,method,0
-HyperNetwork,method,0
-NODE,method,0
-Skim and Intensive Reading Model,method,0
-CInC Flow,method,0
-Parametric Exponential Linear Unit,method,0
-Graph Network-based Simulators,method,0
-PFPNet,method,0
-Gated Transformer-XL,method,0
-Retrace,method,0
-Unigram Segmentation,method,0
-Macaw,method,0
-Grammatical evolution and Q-learning,method,0
-nnFormer,method,0
-VLMo,method,0
-LIMix,method,0
-Fast Attention Via Positive Orthogonal Random Features,method,0
-CCNet,method,0
-Z-PNN,method,0
-Adaptive Early-Learning Correction,method,0
-Xception,method,0
-PVT,method,0
-RevSilo,method,0
-ComplEx with N3 Regularizer and Relation Prediction Objective,method,0
-IFBlock,method,0
-Dense Contrastive Learning,method,0
-ASFF,method,0
-Selective Kernel Convolution,method,0
-An Easier Data Augmentation,method,0
-IAN,method,0
-Atrous Spatial Pyramid Pooling,method,0
-Dropout,method,0
-Absolute Position Encodings,method,0
-Forward-Looking Actor,method,0
-K-Net,method,0
-Prime Dilated Convolution,method,0
-SSTDA,method,0
-GNNCL,method,0
-I-BERT,method,0
-Associative LSTM,method,0
-DAPO,method,0
-U-Net,method,0
-Cross-Covariance Attention,method,0
-Bottom-up Path Augmentation,method,0
-Sequence to Sequence,method,0
-MinCutPool,method,0
-FRILL,method,0
-QHAdam,method,0
-PPO,method,0
-WRQE,method,0
-WEGL,method,0
-Affine Operator,method,0
-Recurrent Replay Distributed DQN,method,0
-Deep-MAC,method,0
-Distance to Modelled Embedding,method,0
-Local Interpretable Model-Agnostic Explanations,method,0
-Cross-View Training,method,0
-Perceiver IO,method,0
-Style-based Recalibration Module,method,0
-CycleGAN,method,0
-DE-GAN: A Conditional Generative Adversarial Network for Document Enhancement,method,0
-TanhExp,method,0
-EMEA,method,0
-TransferQA,method,0
-DRPNN,method,0
-WordPiece,method,0
-CharacterBERT,method,0
-Spatial Feature Transform,method,0
-Protagonist Antagonist Induced Regret Environment Design,method,0
-Bayesian REX,method,0
-srBTAW (BTW),method,0
-Residual Attention Network,method,0
-Position-Sensitive RoIAlign,method,0
-Bidirectional GRU,method,0
-SuperpixelGridMasks,method,0
-uNetXST,method,0
-Monte-Carlo Tree Search,method,0
-Rotary Embeddings,method,0
-LFME,method,0
-HOPE,method,0
-SAFRAN - Scalable and fast non-redundant rule application,method,0
-Transductive Inference,method,0
-ERU,method,0
-Weighted Recurrent Quality Enhancement,method,0
-Spherical Graph Convolutional Network,method,0
-DOLG,method,0
-Q-Learning,method,0
-GER,method,0
-Noisy Linear Layer,method,0
-AlphaStar,method,0
-Mesh-TensorFlow,method,0
-SepFormer,method,0
-Adaptive Instance Normalization,method,0
-CuBERT,method,0
-ParaNet,method,0
-WaveGrad DBlock,method,0
-PointASNL,method,0
-Copy-Paste,method,0
-Iterative Pseudo-Labeling,method,0
-Displaced Aggregation Units,method,0
-PICARD,method,0
-Kaleido-BERT,method,0
-DeepLabv3,method,0
-DIME,method,0
-KP,method,0
-Temporaral Difference Network,method,0
-Replica exchange stochastic gradient Langevin Dynamics,method,0
-Reduction-B,method,0
-GCN,method,0
-Dilated Bottleneck Block,method,0
-Bi3D,method,0
-Synergistic Image and Feature Alignment,method,0
-Normalized Temperature-scaled Cross Entropy Loss,method,0
-DDParser,method,0
-SRDC,method,0
-PNA,method,0
-MyGym: Modular Toolkit for Visuomotor Robotic Tasks,method,0
-Visformer,method,0
-Disentangled Attention Mechanism,method,0
-Base Boosting,method,0
-CurricularFace,method,0
-Apollo,method,0
-Rainbow DQN,method,0
-Max Pooling,method,0
-Pyramidal Bottleneck Residual Unit,method,0
-Support-set Based Cross-Supervision,method,0
-Position-Wise Feed-Forward Layer,method,0
-Cascade Corner Pooling,method,0
-WGAN,method,0
-CaiT,method,0
-JLA,method,0
-PAU,method,0
-Deep Q-Network,method,0
-DTW,method,0
-Neural adjoint,method,0
-MFEC,method,0
-NON,method,0
-GIN,method,0
-CayleyNet,method,0
-Spectral Dropout,method,0
-Dynamic Graph Event Detection,method,0
-PinvGCN,method,0
-ReasonBERT,method,0
-Variational Trace Distance Estimation,method,0
-NetAdapt,method,0
-MobileNetV1,method,0
-1cycle,method,0
-SHA-RNN,method,0
-MSPFN,method,0
-Shuffle Transformer,method,0
-Adaptive Smooth Optimizer,method,0
-Local Response Normalization,method,0
-CVRL,method,0
-ResNeXt-Elastic,method,0
-MixNet,method,0
-GShard,method,0
-CARAFE,method,0
-ILVR,method,0
-NVAE Generative Residual Cell,method,0
-Octave Convolution,method,0
-Multi-Heads of Mixed Attention,method,0
-Hyper HyperNetwork,method,0
-Random Resized Crop,method,0
-Distance Shrinking with Angular Marginalizing Loss,method,0
-VC R-CNN,method,0
-ZoomNet,method,0
-Adversarially Learned Inference,method,0
-Soft Split and Soft Composition,method,0
-ELR,method,0
-Self-critical Sequence Training,method,0
-Polya-Gamma Augmentation,method,0
-RetinaMask,method,0
-Encoder-Decoder model with local and pairwise loss along with shared encoder and discriminator network (EDLPS),method,0
-Adaptive Graph Convolutional Neural Networks,method,0
-Tofu,method,0
-rTPNN,method,0
-Tacotron 2,method,0
-VFNet,method,0
-Branch attention,method,0
-ScheduledDropPath,method,0
-CoordConv,method,0
-AdapTive Meta Optimizer,method,0
-3D SA,method,0
-ORN,method,0
-VGAE,method,0
-WGAN-GP Loss,method,0
-Aggregated Learning,method,0
-Re-Attention Module,method,0
-InfoGAN,method,0
-squeeze-and-excitation networks,method,0
-MADGRAD,method,0
-QuantTree,method,0
-Hunger Games Search,method,0
-ReZero,method,0
-TGN,method,0
-DistanceNet,method,0
-Transformer in Transformer,method,0
-ENet Bottleneck,method,0
-Elastic ResNeXt Block,method,0
-Contrastive Learning,method,0
-Continuous Kernel Convolution,method,0
-Conditional Batch Normalization,method,0
-Tanh Exponential Activation Function,method,0
-SentencePiece,method,0
-Stochastic Steady-state Embedding,method,0
-A3C,method,0
-Stein Variational Policy Gradient,method,0
-ZFNet,method,0
-ADELE,method,0
-MoBY,method,0
-Residual Block,method,0
-Auxiliary Batch Normalization,method,0
-Dilated Bottleneck with Projection Block,method,0
-Gated Positional Self-Attention,method,0
-Stochastic Gradient Variational Bayes,method,0
-GloVe Embeddings,method,0
-GFSA,method,0
-Leaky ReLU,method,0
-CRF,method,0
-Hybrid Firefly and Particle Swarm Optimization,method,0
-TDN,method,0
-Gather-Excite Networks,method,0
-CoBERL,method,0
-Filter Response Normalization,method,0
-Kernel Inducing Points,method,0
-PixLoc,method,0
-Phish,method,0
-NesT,method,0
-Multi-DConv-Head Attention,method,0
-GPFL,method,0
-Voxel Transformer,method,0
-Genetic Algorithms,method,0
-CT-Layer,method,0
-RegionViT,method,0
-Error Back Proragation Network,method,0
-Gradient-based optimization,method,0
-Wavelet Distributed Training,method,0
-GBST,method,0
-Relational Graph Convolution Network,method,0
-LipGAN,method,0
-Gated Convolution,method,0
-G-GLN Neuron,method,0
-Teacher-Tutor-Student Knowledge Distillation,method,0
-online deep learning,method,0
-ReLIC,method,0
-Pyramid Vision Transformer,method,0
-SmeLU,method,0
-NTK,method,0
-Smish,method,0
-ESP,method,0
-ORB-Simultaneous localization and mapping,method,0
-Early Stopping,method,0
-DG-Net,method,0
-Neural Network Compression Framework,method,0
-Segment Sorting,method,0
-Pansharpening by convolutional neural networks in the full resolution framework,method,0
-CBHG,method,0
-Meta Pseudo Labels,method,0
-DEXTR,method,0
-Spatial CNN with UNet based Encoder-decoder and ConvLSTM,method,0
-Neural network for graphs,method,0
-Spatial & Temporal Attention,method,0
-EESP,method,0
-Natural Gradient Descent,method,0
-CSGLD,method,0
-Temporal Activation Regularization,method,0
-uPIT,method,0
-IMGEP,method,0
-GAT,method,0
-Sarsa Lambda,method,0
-Agglomerative Contextual Decomposition,method,0
-Multi-partition Embedding Interaction,method,0
-PipeMare,method,0
-Random Synthesized Attention,method,0
-PPMC,method,0
-SortCut Sinkhorn Attention,method,0
-Spatial Attention Module (ThunderNet),method,0
-EdgeFlow,method,0
-MotionNet,method,0
-LRNet,method,0
-Continuously Indexed Domain Adaptation,method,0
-SERLU,method,0
-ViLBERT,method,0
-Multi-Attention Network,method,0
-ETC,method,0
-Sharpness-Aware Minimization,method,0
-SqueezeBERT,method,0
-Tanh Activation,method,0
-CCT,method,0
-Experience Replay,method,0
-PANet,method,0
-Beneš Block with Residual Switch Units,method,0
-Synthesizer,method,0
-Self-Supervised Temporal Domain Adaptation,method,0
-gMLP,method,0
-Structurally Regularized Deep Clustering,method,0
-Adaptive Locally Connected Neuron,method,0
-Random Search,method,0
-Res2Net Block,method,0
-Supporting Clustering with Contrastive Learning,method,0
-Big-Little Module,method,0
-OASIS,method,0
-Sigmoid Linear Unit,method,0
-Graph Self-Attention,method,0
-BigGAN-deep,method,0
-MDETR,method,0
-Asymmetrical Bi-RNN,method,0
-BLIP,method,0
-SC-GPT,method,0
-RFB,method,0
-AutoGL,method,0
-Low-level backbone,method,0
-ScatNet,method,0
-MutualGuide,method,0
-CSL,method,0
-Triplet Attention,method,0
-Deep Graph Convolutional Neural Network,method,0
-High-resolution input,method,0
-Anycost GAN,method,0
-Padé Activation Units,method,0
-Instances-Pixels Balance Index,method,0
-Object Dropout,method,0
-MIM,method,0
-Generalized additive models,method,0
-RAN,method,0
-Inception-ResNet-v2-A,method,0
-Image Scale Augmentation,method,0
-Mixture of Logistic Distributions,method,0
-Adaptive Span Transformer,method,0
-RoBERTa,method,0
-REINFORCE,method,0
-R1 Regularization,method,0
-HaloNet,method,0
-CSPResNeXt,method,0
-DeltaConv,method,0
-Self-Attention GAN,method,0
-CvT,method,0
-Mixup,method,0
-Ensemble Clustering,method,0
-ALI,method,0
-CGRU,method,0
-Trust Region Policy Optimization,method,0
-Inception-v4,method,0
-Feedback Transformer,method,0
-Mixing Adam and SGD,method,0
-Universal Transformer,method,0
-ParamCrop,method,0
-Exponential Linear Squashing Activation,method,0
-Mirror Descent Policy Optimization,method,0
-RoIPool,method,0
-CTAB-GAN,method,0
-VL-T5,method,0
-STN,method,0
-FGA,method,0
-ReLU,method,0
-Dual Path Network,method,0
-SNAIL,method,0
-OHEM,method,0
-Depth-wise Plane Sweeping,method,0
-myGym,method,0
-Convolutional LSTM based Residual Network,method,0
-ClipBERT,method,0
-Chinese Pre-trained Unbalanced Transformer,method,0
-Feature-Aligned Person Search Network,method,0
-Estimation Statistics,method,0
-Hourglass Module,method,0
-AlignPS,method,0
-efficient channel attention,method,0
-SAFRAN,method,0
-SGPCS,method,0
-Adaptive NMS,method,0
-TSRUp,method,0
-Glow-TTS,method,0
-PAFPN,method,0
-Strided EESP,method,0
-Entropy Minimized Ensemble of Adapters,method,0
-Dilated Causal Convolution,method,0
-Disp R-CNN,method,0
-Shuffle-T,method,0
-Pointer Sentinel-LSTM,method,0
-3-Augment,method,0
-Dynamic Algorithm Configuration,method,0
-Canonical Tensor Decomposition with N3 Regularizer,method,0
-BRepNet,method,0
-GEOMANCER,method,0
-XLSR,method,0
-SHAP,method,0
-Neural Image Assessment,method,0
-ProxylessNet-Mobile,method,0
-ControlVAE,method,0
-Ghost Module,method,0
-DouZero,method,0
-SPNet,method,0
-LOGAN,method,0
-HMGNN,method,0
-AggMo,method,0
-Spatio-Temporal Attention LSTM,method,0
-Spatial and Channel-wise Attention-based Convolutional Neural Network,method,0
-Parallel Feature Pyramid Network,method,0
-Lower Bound on Transmission Using Non-Linear Bounding Function in Single Image Dehazing,method,0
-RFP,method,0
-style-based recalibration module,method,0
-AWD-LSTM,method,0
-Siren,method,0
-MiVOS,method,0
-FA,method,0
-Chinchilla,method,0
-Co-Correcting,method,0
-FCOS,method,0
-CRISS,method,0
-MODNet,method,0
-APPO,method,0
-CTAL,method,0
-Scaled Dot-Product Attention,method,0
-DFDNet,method,0
-Reformer,method,0
-Generative Emotion Estimator,method,0
-Channel attention,method,0
-CapsNet,method,0
-Stacked Denoising Autoencoder,method,0
-Primer,method,0
-Soft Actor Critic,method,0
-Neural Turing Machine,method,0
-CBAM,method,0
-Residual Shuffle-Exchange Network,method,0
-Dilated Convolution,method,0
-PresGAN,method,0
-Orientation Regularized Network,method,0
-EfficientDet,method,0
-CDCC-NET,method,0
-AdaGrad,method,0
-VGG,method,0
-TE2Rules,method,0
-Memory-Associated Differential Learning,method,0
-Hierarchical VAE,method,0
-Differentiable Neural Architecture Search,method,0
-Vision-and-Langauge Transformer,method,0
-Pansharpening Network,method,0
-MonoPort,method,0
-Concatenated Skip Connection,method,0
-Support Vector Machine,method,0
-AutoTinyBERT,method,0
-SymmNet,method,0
-Neural Probabilistic Language Model,method,0
-fastText,method,0
-Varifocal Loss,method,0
-VisTR,method,0
-Gated Convolution Network,method,0
-Grab,method,0
-Iterative Latent Variable Refinement,method,0
-Adaptive Feature Pooling,method,0
-SSE,method,0
-Residual Normal Distribution,method,0
-Subformer,method,0
-FEFM,method,0
-Decentralized Distributed Proximal Policy Optimization,method,0
-Context-aware Visual Attention-based (CoVA) webpage object detection pipeline,method,0
-Multiplicative RNN,method,0
-Channel-wise Cross Attention,method,0
-SPP-Net,method,0
-ZeRO-Offload,method,0
-ViP-DeepLab,method,0
-LARS,method,0
-Denoised Smoothing,method,0
-Feature Intertwiner,method,0
-CARLA: An Open Urban Driving Simulator,method,0
-m-arcsinh,method,0
-NADAM,method,0
-Instruction Pointer Attention Graph Neural Network,method,0
-RESCAL,method,0
-Mechanism Transfer,method,0
-NoisyNet-DQN,method,0
-AdaBound,method,0
-Dual Contrastive Learning,method,0
-TD-VAE,method,0
-AE,method,0
-Embedded Dot Product Affinity,method,0
-MODERN,method,0
-nlogistic-sigmoid function,method,0
-OverFeat,method,0
-Linear Regression,method,0
-RGA,method,0
-Gravity,method,0
-A Framework for Leader Identification in Coordinated Activity,method,0
-ProxylessNet-GPU,method,0
-GraRep,method,0
-TAPEX,method,0
-TABBIE,method,0
-GA,method,0
-MXMNet,method,0
-Bilinear Attention,method,0
-Graph Path Feature Learning,method,0
-CW-ERM,method,0
-CTC Loss,method,0
-LayoutReader,method,0
-Multiple Random Window Discriminator,method,0
-FiLM Module,method,0
-LPM,method,0
-PGHI,method,0
-Blender,method,0
-Discrete Cosine Transform,method,0
-ShakeDrop,method,0
-Anti-Alias Downsampling,method,0
-SDNE,method,0
-GeniePath,method,0
-Harm-Net,method,0
-Gated Linear Network,method,0
-Normalizing Flows,method,0
-Replacing Eligibility Trace,method,0
-Weight Decay,method,0
-BiGG,method,0
-Accuracy-Robustness Area,method,0
-DynaBERT,method,0
-Temporal Pyramid Network,method,0
-Dot-Product Attention,method,0
-You Only Hypothesize Once,method,0
-Hybrid Task Cascade,method,0
-Hardtanh Activation,method,0
-Polynomial Rate Decay,method,0
-Global Average Pooling,method,0
-Fast-YOLOv4-SmallObj,method,0
-PCB,method,0
-EfficientUNet++,method,0
-Gradient Sign Dropout,method,0
-GPT,method,0
-Blink Communication,method,0
-ENet,method,0
-SCCL,method,0
-SNIP,method,0
-QRNN,method,0
-Early exiting using confidence measures,method,0
-BASNet,method,0
-Gradient Clipping,method,0
-Visual-Linguistic BERT,method,0
-Temporal Word Embeddings with a Compass,method,0
-DGRF,method,0
-Wide Residual Block,method,0
-LayoutLMv2,method,0
-VQSVD,method,0
-Neural Radiance Field,method,0
-Hierarchical Style Disentanglement,method,0
-Models Genesis,method,0
-Explanation vs Attention,method,0
-Deformable Convolutional Networks,method,0
-Embedded Gaussian Affinity,method,0
-utterance level permutation invariant training,method,0
-ACTKR,method,0
-Weight Normalization,method,0
-LFPNet with test time augmentation,method,0
-Confidence Calibration with an Auxiliary Class),method,0
-Channel Shuffle,method,0
-COCO-FUNIT,method,0
-KungFu,method,0
-Difference of Gaussian Random Forest,method,0
-Linear Warmup,method,0
-IQ-Learn,method,0
-Routing Transformer,method,0
-Online Hard Example Mining,method,0
-DeLighT Block,method,0
-TridentNet,method,0
-Assemble-ResNet,method,0
-ORB-SLAM2,method,0
-scSE,method,0
-Direct Feedback Alignment,method,0
-Go-Explore,method,0
-BART,method,0
-Class-activation map,method,0
-Location Sensitive Attention,method,0
-Stable Rank Normalization,method,0
-SCST,method,0
-Video Language Graph Matching Network,method,0
-Style Transfer Module,method,0
-Deep-CAPTCHA,method,0
-PSPNet,method,0
-ProxyOptimization,method,0
-Fixup Initialization,method,0
-FT-Transformer,method,0
-Segregated Attention Network,method,0
-Projection Discriminator,method,0
-Movement Pruning,method,0
-Autoencoders,method,0
-Local SGD,method,0
-BASE,method,0
-GEE,method,0
-HetPipe,method,0
-GHM-R,method,0
-NAM,method,0
-Deactivable Skip Connection,method,0
-FastPitch,method,0
-Residual Multi-Layer Perceptrons,method,0
-Kernel Activation Function,method,0
-TabNN,method,0
-CKConv,method,0
-Generic RoI Extractor,method,0
-Random Ensemble Mixture,method,0
-GPS,method,0
-YOLOv3,method,0
-Convolutional Vision Transformer,method,0
-ATSS,method,0
-GAN Feature Matching,method,0
-Domain-Symmetric Network,method,0
-Linear Layer,method,0
-SOM,method,0
-Faster R-CNN,method,0
-bilayer convolutional neural network,method,0
-Gait Emotion Recognition,method,0
-CCAC,method,0
-mBART,method,0
-Span-Based Dynamic Convolution,method,0
-GMI,method,0
-PNAS,method,0
-Harris Hawks optimization (HHO),method,0
-PLATO-2,method,0
-BezierAlign,method,0
-Progressive Neural Architecture Search,method,0
-Bridge-net,method,0
-PGC-DGCNN,method,0
-Multiplex Molecular Graph Neural Network,method,0
-Inception-ResNet-v2 Reduction-B,method,0
-Graph Representation with Global structure,method,0
-YellowFin,method,0
-Non-Local Operation,method,0
-DCGAN,method,0
-Temporal Distribution Matching,method,0
-UNIMO,method,0
-Voxel RoI Pooling,method,0
-Schrödinger Network,method,0
-SynaNN,method,0
-AlphaFold,method,0
-HRI pipeline,method,0
-Proxy Anchor Loss for Deep Metric Learning,method,0
-SNGAN,method,0
-Growing Cosine Unit,method,0
-Matrix-power Normalization,method,0
-Adaptive Bezier-Curve Network,method,0
-CenterMask,method,0
-GreedyNAS-B,method,0
-Channel Squeeze and Spatial Excitation,method,0
-Softplus,method,0
-RAM,method,0
-Hard Swish,method,0
-High-Order Consensuses,method,0
-TrOCR,method,0
-CDEP,method,0
-GBO,method,0
-Bootstrap Your Own Latent,method,0
-Medical Entity Disambiguation using Graph Neural Networks,method,0
-WaveGrad UBlock,method,0
-EsViT,method,0
-Residual Network,method,0
-GroupDNet,method,0
-AMSBound,method,0
-RandWire,method,0
-Channel Squeeze and Spatial Excitation (sSE),method,0
-CoaT,method,0
-VGG Loss,method,0
-E-swish,method,0
-WaveGrad,method,0
-L-GCN,method,0
-Fast AutoAugment,method,0
-RAE,method,0
-WaveNet,method,0
-Learning Cross-Modality Encoder Representations from Transformers,method,0
-Structural Deep Network Embedding,method,0
-ConvMLP,method,0
-ALiBi,method,0
-VisualBERT,method,0
-Instance-Level Meta Normalization,method,0
-Spatial Gating Unit,method,0
-Self-Organizing Map,method,0
-RFB Net,method,0
-Convolutional GRU,method,0
-Make-A-Scene,method,0
-L1 Regularization,method,0
-Slime Mould Algorithm,method,0
-VisuoSpatial Foresight,method,0
-SCN,method,0
-InstaBoost,method,0
-Dense Prediction Transformer,method,0
-Gated Recurrent Unit,method,0
-SPL,method,0
-K3M,method,0
-Magnification Prior Contrastive Similarity,method,0
-CP N3,method,0
-Scale Aggregation Block,method,0
-AutoEncoder,method,0
-Non-Local Block,method,0
-Dilated convolution with learnable spacings,method,0
-Triplet Loss,method,0
-ConViT,method,0
-Bidirectional Pyramid Networks for Semantic Segmentation,method,0
-DeepSIM,method,0
-AEDA,method,0
-Local Augmentation,method,0
-MPN,method,0
-SENet,method,0
-Contrastive Multiview Coding,method,0
-Auditory Cortex ResNet,method,0
-PGM,method,0
-"SuperpixelGridCut, SuperpixelGridMean, SuperpixelGridMix",method,0
-Invertible NxN Convolution,method,0
-GELU,method,0
-FuseFormer Block,method,0
-Linear Warmup With Linear Decay,method,0
-NPID,method,0
-SEAM,method,0
-MobileDet,method,0
-Serf,method,0
-Graph Neural Networks with Continual Learning,method,0
-Regularized Autoencoders,method,0
-Generative Adversarial Imitation Learning,method,0
-Accordion,method,0
-DropPathway,method,0
-FuseFormer,method,0
-ELMo,method,0
-StoGCN,method,0
-Switch Transformer,method,0
-Vision-and-Language BERT,method,0
-BTmPG,method,0
-GECO,method,0
-CIDA,method,0
-Dice Loss,method,0
-Self-Learning,method,0
-ScanSSD,method,0
-GNS,method,0
-Random Horizontal Flip,method,0
-ShuffleNet v2,method,0
-pixel2style2pixel,method,0
-Policy Similarity Metric,method,0
-Differentiable Digital Signal Processing,method,0
-CAM,method,0
-Primal Wasserstein Imitation Learning,method,0
-TayPO,method,0
-Transformer Decoder,method,0
-Ghost Bottleneck,method,0
-ShapeConv,method,0
-SSFG regularization,method,0
-Visual Attention,method,0
-Channel Attention Module,method,0
-Sparse Transformer,method,0
-NNCF,method,0
-Bilateral Grid,method,0
-Eligibility Trace,method,0
-Temporal attention,method,0
-Learnable adjacency matrix GCN,method,0
-RBPN,method,0
-Non-Linear-Bounding-Function,method,0
-FFMv1,method,0
-Meta-augmentation,method,0
-EBM,method,0
-1-Dimensional Convolutional Neural Networks,method,0
-SCARLET,method,0
-MacBERT,method,0
-T5,method,0
-Two Time-scale Update Rule,method,0
-RIFE,method,0
-,method,0
-(2+1)D Convolution,method,0
-BiDet,method,0
-RandAugment,method,0
-UNet++,method,0
-Deep LSTM Reader,method,0
-Deep Residual Pansharpening Neural Network,method,0
-CornerNet-Squeeze Hourglass Module,method,0
-IRN,method,0
-Chimera,method,0
-GPU-Efficient Network,method,0
-AdamW,method,0
-AGCN,method,0
-Depthwise Fire Module,method,0
-Temporally Consistent Spatial Augmentation,method,0
-SimAdapter,method,0
-LeViT Attention Block,method,0
-NICE,method,0
-Model-Free Episodic Control,method,0
-DAFNe,method,0
-Recurrent Trend Predictive Neural Network,method,0
-Auxiliary Classifier,method,0
-V-trace,method,0
-Large-scale spectral clustering,method,0
-Rendezvous,method,0
-NeuroTactic,method,0
-Dynamic SmoothL1 Loss,method,0
-Multi-head of Mixed Attention,method,0
-GGS-NNs,method,0
-Minibatch Discrimination,method,0
-Root-of-Mean-Squared Pooling,method,0
-TransE,method,0
-MultiGrain,method,0
-H-BEMD,method,0
-Adversarial Soft Advantage Fitting (ASAF),method,0
-TILDEv2,method,0
-Byte Pair Encoding,method,0
-All-Attention Layer,method,0
-IMPALA,method,0
-XCiT Layer,method,0
-Context Optimization,method,0
-SegNet,method,0
-Generative Adversarial Network,method,0
-IPBI,method,0
-Annealing SNNL,method,0
-Hyperboloid Embeddings,method,0
-BigGAN,method,0
-RevNet,method,0
-LAMB,method,0
-BiGAN,method,0
-Gaussian Mixture Variational Autoencoder,method,0
-Concrete Dropout,method,0
-Scaled Exponential Linear Unit,method,0
-Hierarchical Entity Graph Convolutional Network,method,0
-Lovasz-Softmax,method,0
-End-to-End Neural Diarization,method,0
-NormFormer,method,0
-Adafactor,method,0
-NICE-SLAM,method,0
-H3DNet,method,0
-Rectified Linear Units,method,0
-Invertible 1x1 Convolution,method,0
-SEER,method,0
-Sinusoidal Representation Network,method,0
-ShuffleNet,method,0
-Inverse Square Root Schedule,method,0
-CoVe,method,0
-DeepMask,method,0
-Discriminative Adversarial Search,method,0
-SRU++,method,0
-FLICA,method,0
-Grid Sensitive,method,0
-SCAN-clustering,method,0
-Elastic Dense Block,method,0
-CSPDenseNet,method,0
-ALS,method,0
-Precise RoI Pooling,method,0
-DMAGE,method,0
-AMSGrad,method,0
-Adam,method,0
-Semantic Cross Attention,method,0
-First Integer Neighbor Clustering Hierarchy,method,0
-ProGAN,method,0
-SIG,method,0
-1x1 Convolution,method,0
-Rotary Position Embedding,method,0
-TorchBeast,method,0
-TinaFace,method,0
-Knowledge Graph Refiner,method,0
-Contextual Residual Aggregation,method,0
-Taylor Expansion Policy Optimization,method,0
-Global Convolutional Network,method,0
-SRU,method,0
-SPADE,method,0
-PeleeNet,method,0
-LXMERT,method,0
-LTLS,method,0
-BinaryBERT,method,0
-Attribute2Font,method,0
-Spectrally Normalised GAN,method,0
-Dense Synthesized Attention,method,0
-Cutout,method,0
-Graphic Mutual Information,method,0
-GATv2,method,0
-BiGCN,method,0
-DGCNN,method,0
-ResNeXt,method,0
-CodeBERT,method,0
-Contextualized Topic Models,method,0
-DiCE Unit,method,0
-Viewmaker Network,method,0
-StruBERT,method,0
-DINO,method,0
-Deformable RoI Pooling,method,0
-Joint Learning Architecture,method,0
-Inception Module,method,0
-GradDrop,method,0
-CMCL,method,0
-SRS,method,0
-DELG,method,0
-Cyclical Learning Rate Policy,method,0
-RMS Pooling,method,0
-TAPAS,method,0
-DPN,method,0
-KOVA,method,0
-Graph Attention Network v2,method,0
-NeuralRecon,method,0
-k-Sparse Autoencoder,method,0
-IB-BERT,method,0
-Sparse Switchable Normalization,method,0
-CNN Bidirectional LSTM,method,0
-ESPNetv2,method,0
-UCTransNet,method,0
-Temporal Adaptive Module,method,0
-Compressive Transformer,method,0
-Layer-Sequential Unit-Variance Initialization,method,0
-Attentional Liquid Warping GAN,method,0
-Universal Language Model Fine-tuning,method,0
-MCKERNEL,method,0
-Coresets,method,0
-ClariNet,method,0
-PixelRNN,method,0
-Topographic VAE,method,0
-ShuffleNet V2 Downsampling Block,method,0
-GrowNet,method,0
-Single-path NAS,method,0
-ConvBERT,method,0
-O-Net,method,0
-GPipe,method,0
-Circular Smooth Label,method,0
-Enhanced Fusion Framework,method,0
-CPC v2,method,0
-CTracker,method,0
-Target Policy Smoothing,method,0
-LAPGAN,method,0
-SETR,method,0
-Stand-Alone Self Attention,method,0
-GraphSAINT,method,0
-k-Means Clustering,method,0
-Distributional Generalization,method,0
-XLM-R,method,0
-Chained-Tracker,method,0
-ManifoldPlus,method,0
-Collapsing Linear Unit,method,0
-PGNet,method,0
-MEI,method,0
-Meta Face Recognition,method,0
-SchNet,method,0
-NAFNet,method,0
-Noisy Student,method,0
-CPVT,method,0
-Hopfield Layer,method,0
-RESCAL with Relation Prediction,method,0
-Sample Redistribution,method,0
-DBGAN,method,0
-CBoW Word2Vec,method,0
-Demon ADAM,method,0
-S-shaped ReLU,method,0
-Label Smoothing,method,0
-Region Proposal Network,method,0
-Vision Transformer,method,0
-Nyströmformer,method,0
-cVAE,method,0
-XLNet,method,0
-Dorylus,method,0
-Segmentation Transformer,method,0
-SRN,method,0
-Symbolic rule learning,method,0
-Fast R-CNN,method,0
-SqueezeNeXt Block,method,0
-MDL,method,0
-AdaSqrt,method,0
-PSFR-GAN,method,0
-TaBERT,method,0
-UNet Transformer,method,0
-OTM,method,0
-Gradient-Based Subword Tokenization,method,0
-DPT,method,0
-Inverse Q-Learning,method,0
-Parametric UMAP,method,0
-Graph sampling based inductive learning method,method,0
-EncAttAgg,method,0
-mLSTM,method,0
-SAGA,method,0
-VirTex,method,0
-PipeDream-2BW,method,0
-SSKD,method,0
-VSF,method,0
-Mixture Normalization,method,0
-Attentional Liquid Warping Block,method,0
-ENIGMA,method,0
-PipeDream,method,0
-SESAME Discriminator,method,0
-k-NN,method,0
-STATEGAME MAINTAIN PICTURE BALANCED PLAY STABLE,method,0
-Feature Information Entropy Regularized Cross Entropy,method,0
-Inception v2,method,0
-RandomRotate,method,0
-Uncertainty Class Activation Map (U-CAM) Using Gradient Certainty Method,method,0
-Contrastive Predictive Coding,method,0
-PVTv2,method,0
-wav2vec Unsupervised,method,0
-DeCLUTR,method,0
-Goal-Driven Tree-Structured Neural Model,method,0
-GloVe,method,0
-Height-driven Attention Network,method,0
-Slot Attention,method,0
-Edge-augmented Graph Transformer,method,0
-DGI,method,0
-VPSNet,method,0
-NetMF,method,0
-Dilated Sliding Window Attention,method,0
-Differentiable Architecture Search Max-W,method,0
-Recursive Feature Pyramid,method,0
-LayerDrop,method,0
-Probabilistically Masked Language Model,method,0
-Euclidean Norm Regularization,method,0
-ProxylessNet-CPU,method,0
-Cross-Scale Non-Local Attention,method,0
-Dialogue-Adaptive Pre-training Objective,method,0
-SKEP,method,0
-Strip Pooling,method,0
-Non Maximum Suppression,method,0
-Segmentation of patchy areas in biomedical images based on local edge density estimation,method,0
-Deep Layer Aggregation,method,0
-Seq2Edits,method,0
-Batch Normalization,method,0
-CornerNet-Squeeze,method,0
-CRN,method,0
-Multiscale Attention ViT with Late fusion,method,0
-CheXNet,method,0
-Temporal ROIAlign,method,0
-3DSSD,method,0
-Cosine Normalization,method,0
-DCNN,method,0
-ConvTasNet,method,0
-Syntax Heat Parse Tree,method,0
-MAS,method,0
-SETSe,method,0
-node2vec,method,0
-Wasserstein GAN (Gradient Penalty),method,0
-RGCN,method,0
-SCARF,method,0
-NVAE Encoder Residual Cell,method,0
-Contour Proposal Network,method,0
-Animatable Reconstruction of Clothed Humans,method,0
-EfficientNetV2,method,0
-HPO,method,0
-Fully Convolutional Network,method,0
-Stochastically Scaling Features and Gradients Regularization,method,0
-Fire Module,method,0
-AlterNet,method,0
-R2D2,method,0
-NVAE,method,0
-CSPResNeXt Block,method,0
-EGT,method,0
-Morphence,method,0
-SwiGLU,method,0
-SELU,method,0
-Kaiming Initialization,method,0
-Conditional Convolutions for Instance Segmentation,method,0
-Robust Predictable Control,method,0
-ALCN,method,0
-DV3 Attention Block,method,0
-DiffAugment,method,0
-RoIAlign,method,0
-MLP-Mixer Layer,method,0
-Submanifold Convolution,method,0
-Dual Graph Convolutional Networks,method,0
-Network On Network,method,0
-PonderNet,method,0
-NoisyNet-A3C,method,0
-Sparse R-CNN,method,0
-HiFi-GAN,method,0
-AccoMontage,method,0
-FLAVA,method,0
-R-CNN,method,0
-Position-Sensitive RoI Pooling,method,0
-LightGCN,method,0
-Patch Merger Module,method,0
-Harris Hawks optimization,method,0
-Dense Block,method,0
-BytePS,method,0
-Good Feature Matching,method,0
-Swapping Assignments between Views,method,0
-SqueezeNet,method,0
-TNT,method,0
-Inception-C,method,0
-Diffusion,method,0
-Alternating Direction Method of Multipliers,method,0
-Flow Alignment Module,method,0
-Distributed Any-Batch Mirror Descent,method,0
-TUM,method,0
-Implicit PointRend,method,0
-StruBERT: Structure-aware BERT for Table Search and Matching,method,0
-Depthwise Convolution,method,0
-Class-MLP,method,0
-Strided Attention,method,0
-YOLOP,method,0
-Mix-FFN,method,0
-BigBird,method,0
-Concurrent Spatial and Channel Squeeze & Excitation (scSE),method,0
-Packed Levitated Markers,method,0
-DExTra,method,0
-Axial Attention,method,0
-Video Panoptic Segmentation Network,method,0
-LGCL,method,0
-Performer,method,0
-Instance Normalization,method,0
-1D CNN,method,0
-VTDE,method,0
-Adaptive Training Sample Selection,method,0
-CondInst,method,0
-Bottleneck Transformer,method,0
-DAEL,method,0
-Bilateral Guided Aggregation Layer,method,0
-Factorized Random Synthesized Attention,method,0
-Label Quality Model,method,0
-Gradient Harmonizing Mechanism C,method,0
-Implicit Q-Learning,method,0
-Depthwise Separable Convolution,method,0
-Pyramid Pooling Module,method,0
-Multiscale Vision Transformer,method,0
-Dual Attention Network,method,0
-Dynamic Time Warping,method,0
-GRLIA,method,0
-Self-adaptive Training,method,0
-EMF,method,0
-Adaptive Masking,method,0
-Soft Actor-Critic (Autotuned Temperature),method,0
-MACEst,method,0
-VocGAN,method,0
-TRPO,method,0
-MATE,method,0
-RegNetX,method,0
-T-D,method,0
-Group Decreasing Network,method,0
-Funnel Transformer,method,0
-DARTS,method,0
-FMix,method,0
-Step Decay,method,0
-Noise2Fast,method,0
-EMQAP,method,0
-Spatial and Channel SE Blocks,method,0
-T-Fixup,method,0
-Modularity preserving NMF,method,0
-GCNFN,method,0
-WaveGAN,method,0
-FBNet,method,0
-Simple Neural Attention Meta-Learner,method,0
-DeBERTa,method,0
-DBlock,method,0
-AdaShift,method,0
-Grouped Convolution,method,0
-Boundary-Aware Segmentation Network,method,0
-3 Dimensional Soft Attention,method,0
-Encoder-Attender-Aggregator,method,0
-Context Enhancement Module,method,0
-Paddle Anchor Free Network,method,0
-SegSort,method,0
-Zoneout,method,0
-Skip-gram Word2Vec,method,0
-Deformable ConvNets,method,0
-Balanced Selection,method,0
-Selective Kernel,method,0
-Adaptive Parameter-wise Diagonal Quasi-Newton Method,method,0
-RESCAL RP,method,0
-Hamburger,method,0
-Multiplicative Attention,method,0
-Class Activation Guided Attention Mechanism,method,0
-Deep Equilibrium Models,method,0
-VGG-16,method,0
-GLN,method,0
-SimpleNet,method,0
-Neural Tangent Transfer,method,0
-MaskFlownet,method,0
-CHM,method,0
-Part Affinity Fields,method,0
-Recurrent Event Network,method,0
-Feature-Centric Voting,method,0
-AUCO ResNet,method,0
-Spectral-Normalized Identity Priors,method,0
-EDLPS,method,0
-Gradual Self-Training,method,0
-Deflation,method,0
-Accumulating Eligibility Trace,method,0
-Embedding Dropout,method,0
-GAGNN,method,0
-Capsule Network,method,0
-SLR,method,0
-VoVNetV2,method,0
-Smooth ReLU,method,0
-Efficient Spatial Pyramid,method,0
-Self training multi target domain adaptive RetinaNet,method,0
-Monocular Real-Time Volumetric Performance Capture,method,0
-Softsign Activation,method,0
-HTCN,method,0
-SCARLET-NAS,method,0
-Deformable Position-Sensitive RoI Pooling,method,0
-Fast Voxel Query,method,0
-k-Nearest Neighbors,method,0
-Probabilistic Anchor Assignment,method,0
-Approximate Bayesian Computation,method,0
-ReInfoSelect,method,0
-Meta Reward Learning,method,0
-ParaNet Convolution Block,method,0
-Drafting Network,method,0
-HBMP,method,0
-GRU,method,0
-Nonlinear Activation Free Network,method,0
-MagFace,method,0
-Modulated Residual Network,method,0
-BigBiGAN,method,0
-GradientDICE,method,0
-Graph2Tree,method,0
-ABC,method,0
-ReLU6,method,0
-DSAM loss,method,0
-SwAV,method,0
-DimFuse,method,0
-Characterizable Invertible 3x3 Convolution,method,0
-AutoSync,method,0
-Log-time and Log-space Extreme Classification,method,0
-GRoIE,method,0
-Switchable Normalization,method,0
-FixRes,method,0
-Human Robot Interaction Pipeline,method,0
-PolarMask,method,0
-Guided Anchoring,method,0
-Visual Commonsense Region-based Convolutional Neural Network,method,0
-BAGUA,method,0
-Matrix NMS,method,0
-Inception-v3 Module,method,0
-Vokenization,method,0
-DiCENet,method,0
-Scale-wise Feature Aggregation Module,method,0
-Temporal Graph Network,method,0
-DeepWalk,method,0
-FINCH Clustering,method,0
-Directional Sparse FIltering,method,0
-Affine Coupling,method,0
-WideResNet,method,0
-GreedyNAS-C,method,0
-PP-YOLO,method,0
-RegNetY,method,0
-Efficient Recurrent Unit,method,0
-Adaptive Input Representations,method,0
-1-bit Adam,method,0
-Phase Shuffle,method,0
-ALP-GMM,method,0
-VGG-19,method,0
-Gaussian Process,method,0
-L2M,method,0
-Hard Sigmoid,method,0
-BPE,method,0
-Random Gaussian Blur,method,0
-Pipelined Backpropagation,method,0
-HRank,method,0
-Monte Carlo Dropout,method,0
-Spatial Group-wise Enhance,method,0
-Surrogate Lagrangian Relaxation,method,0
-RUN,method,0
-G-NIA,method,0
-Bidirectional GAN,method,0
-CT3D,method,0
-Local Importance-based Pooling,method,0
-GHM-C,method,0
-Deep Orthogonal Fusion of Local and Global Features,method,0
-MatrixNet,method,0
-Computation Redistribution,method,0
-BiGRU,method,0
-SimVLM,method,0
-SNIPER,method,0
-Involution,method,0
-LR-Net,method,0
-UNiversal Image-TExt Representation Learning,method,0
-Lower Bound on Transmission using Non-Linear Bounding Function in Single Image Dehazing,method,0
-IICNet,method,0
-Metropolis Hastings,method,0
-CodeSLAM,method,0
-CARLA,method,0
-PAUSE,method,0
-Generalized ELBO with Constrained Optimization,method,0
-Inverted Bottleneck BERT,method,0
-Semantic Reasoning Network,method,0
-SIRM,method,0
-FastMoE,method,0
-Sparse Autoencoder,method,0
-ENet Dilated Bottleneck,method,0
-Temporal Distribution Characterization,method,0
-Blue River Controls,method,0
-Collaborative Distillation,method,0
-Stochastic Depth,method,0
-Crystal Graph Neural Network,method,0
-Neural adjoint method,method,0
-Simple Visual Language Model,method,0
-Squeeze-and-Excitation Block,method,0
-SFT,method,0
-SRGAN Residual Block,method,0
-GRIN,method,0
-CORAD,method,0
-Network Dissection,method,0
-Asynchronous Interaction Aggregation,method,0
-Contrastive Language-Image Pre-training,method,0
-Latent Optimisation,method,0
-Fraternal Dropout,method,0
-HiSD,method,0
-DPN Block,method,0
-TimeSformer,method,0
-Fast_BAT,method,0
-PowerSGD,method,0
-Ontology,method,0
-PCA Whitening,method,0
-Sliced Iterative Generator,method,0
-Principal Neighbourhood Aggregation,method,0
-PrIme Sample Attention,method,0
-Global and Sliding Window Attention,method,0
-Time-homogenuous Top-K Ranking,method,0
-NEAT,method,0
-Concatenation Affinity,method,0
-GBlock,method,0
-Deformable Convolution,method,0
-Linformer,method,0
-Recurrent Dropout,method,0
-Differentiable Architecture Search,method,0
-TraDeS,method,0
-GTS,method,0
-Hit-Detector,method,0
-Contextual Word Vectors,method,0
-FCPose,method,0
-Routing Attention,method,0
-Neighborhood Contrastive Learning,method,0
-ALAE,method,0
-Lipschitz Constant Constraint,method,0
-RPN,method,0
-VATT,method,0
-FlexFlow,method,0
-Elastic Margin Loss for Deep Face Recognition,method,0
-Local Prior Matching,method,0
-DV3 Convolution Block,method,0
-Selective Search,method,0
-Wasserstein Embedding for Graph Learning,method,0
-Powerpropagation,method,0
-Message Passing Neural Network,method,0
-Self-Attention Guidance,method,0
-Receptive Field Block,method,0
-Jukebox,method,0
-OMGD,method,0
-DCN-V2,method,0
-Semi-Supervised Knowledge Distillation,method,0
-Self-Attention Network,method,0
-CutBlur,method,0
-Sandwich Batch Normalization,method,0
-SimCLRv2,method,0
-Double Q-learning,method,0
-Watch Your Step,method,0
-GreedyNAS-A,method,0
-Blended Diffusion,method,0
-Channel-wise Soft Attention,method,0
-G-GLN,method,0
-Convolutional Block Attention Module,method,0
-MNMF,method,0
-FIERCE,method,0
-StyleGAN2,method,0
-Wavelet-integrated Identity Preserving Adversarial Network for face super-resolution,method,0
-ResNet-D,method,0
-Diffusion-Convolutional Neural Networks,method,0
-Heatmap,method,0
-Gradient Quantization with Adaptive Levels/Multiplier,method,0
-N-step Returns,method,0
-Residual Connection,method,0
-Balanced Feature Pyramid,method,0
-AugMix,method,0
-LINE,method,0
-In-Place Activated Batch Normalization,method,0
-DE-GAN,method,0
-SiLU,method,0
-LIME,method,0
-Two-Way Dense Layer,method,0
-GIC,method,0
-Spectral Gap Rewiring Layer,method,0
-Curvature Regularized Variational Auto-Encoder,method,0
-Sarsa,method,0
-CAG,method,0
-Fast-YOLOv3,method,0
-GAN-TTS,method,0
-Enhanced Sequential Inference Model,method,0
-R-FCN,method,0
-Logistic Regression,method,0
-PyTorch DDP,method,0
-PALED,method,0
-Model-Agnostic Meta-Learning,method,0
-IoU-Balanced Sampling,method,0
-ARCH,method,0
-Recurrent models of visual attention,method,0
-DD-PPO,method,0
-Depthwise Dilated Separable Convolution,method,0
-Deep Ensembles,method,0
-Masked Convolution,method,0
-YOLOv4,method,0
-Data-efficient Image Transformer,method,0
-KE-MLM,method,0
-NoisyNet-Dueling,method,0
-BlendMask,method,0
-MAVL,method,0
-1-bit LAMB,method,0
-Convolution,method,0
-Invertible Rescaling Network,method,0
-TrIVD-GAN,method,0
-Effective Squeeze-and-Excitation Block,method,0
-Prediction-aware One-To-One,method,0
-TD Lambda,method,0
-Sparse Convolutions,method,0
-VIME,method,0
-ESIM,method,0
-Patch Merger,method,0
-Global second-order pooling convolutional networks,method,0
-U-RNNs,method,0
-Contextual Decomposition Explanation Penalization,method,0
-Tree-structured Parzen Estimator Approach (TPE),method,0
-Local Patch Interaction,method,0
-High-Order Proximity preserved Embedding,method,0
-Exponential Linear Unit,method,0
-IFNet,method,0
-LFPNet (TTA),method,0
-Spatio-temporal stability analysis,method,0
-CondConv,method,0
-SPIN,method,0
-Rank-based Loss,method,0
-PrivacyNet,method,0
-VLG-Net,method,0
-TSDAE,method,0
-Adaptively Sparse Transformer,method,0
-ARiA,method,0
-Conditional DBlock,method,0
-RetinaNet-RS,method,0
-Side-Aware Boundary Localization,method,0
-RSE,method,0
-ABCNet,method,0
-EdgeBoxes,method,0
-Strain Elevation Tension Spring embedding,method,0
-LMOT,method,0
-Semantic Clustering by Adopting Nearest Neighbours,method,0
-Barlow Twins,method,0
-PIRL,method,0
-InfoNCE,method,0
-Deep Stereo Geometry Network,method,0
-Motion-Encoded Particle Swarm Optimization,method,0
-Knowledge Distillation,method,0
-ADMM,method,0
-Non-monotonically Triggered ASGD,method,0
-DVD-GAN,method,0
-DistilBERT,method,0
-Snapshot Ensembles,method,0
-DetNet,method,0
-LocalViT,method,0
-RAdam,method,0
-Panoptic FPN,method,0
-LMOT: Efficient Light-Weight Detection and Tracking in Crowds,method,0
-Probability Guided Maxout,method,0
-Prescribed Generative Adversarial Network,method,0
-Contextual Graph Markov Model,method,0
-AutoGAN,method,0
-CrossTransformers,method,0
-Spatial Attention Module,method,0
-Neural Tangent Kernel,method,0
-CReLU,method,0
-Parallax,method,0
-ResNeXt Block,method,0
-Efficient Channel Attention,method,0
-AdvProp,method,0
-Asynchronous Proximal Policy Optimization,method,0
-Denoising Autoencoder,method,0
-Dimension-wise Fusion,method,0
-CutMix,method,0
-Group-Aware Neural Network,method,0
-Sticker Response Selector,method,0
-GraphESN,method,0
-Inception-B,method,0
-STraTA,method,0
-SGD,method,0
-SNN,method,0
-DetNASNet,method,0
-Adaptive Softmax,method,0
-PnP,method,0
-Focal Loss,method,0
-MFF,method,0
-Streaming Module,method,0
-Forward gradient,method,0
-Feature Pyramid Network,method,0
-ADAHESSIAN,method,0
-ISPL,method,0
-TTUR,method,0
-STA-LSTM,method,0
-TaLK Convolution,method,0
-SGD with Momentum,method,0
-Talking-Heads Attention,method,0
-PISA,method,0
-Switchable Atrous Convolution,method,0
-TridentNet Block,method,0
-GENet,method,0
-LapStyle,method,0
-NT-Xent,method,0
-Boom Layer,method,0
-MelGAN,method,0
-Attentive Normalization,method,0
-3D Dynamic Scene Graph,method,0
-E2EAdaptiveDistTraining,method,0
-OSA (identity mapping + eSE),method,0
-StyleMapGAN,method,0
-Mask Scoring R-CNN,method,0
-CornerNet-Squeeze Hourglass,method,0
-Low Rank Tensor Learning Paradigms,method,0
-Composite Fields,method,0
-WGAN GP,method,0
-TWEC,method,0
-Multi-scale Progressive Fusion Network,method,0
-Split Attention,method,0
-RoIWarp,method,0
-PatchGAN,method,0
-Blind Image Decomposition Network,method,0
-Graph Finite-State Automaton,method,0
-PULSE,method,0
-MAD Learning,method,0
-Boost-GNN,method,0
-LV-ViT,method,0
-OODformer,method,0
-Deterministic Policy Gradient,method,0
-XGPT,method,0
-Inverted Residual Block,method,0
-RotatE,method,0
-SimCSE,method,0
-DeLighT,method,0
-Adaptive Robust Loss,method,0
-PReLU-Net,method,0
-Ternary Weight Splitting,method,0
-Tacotron2,method,0
-Slanted Triangular Learning Rates,method,0
-MeRL,method,0
-NeRF,method,0
-GAN,method,0
-CenterPoint,method,0
-Variance-based Feature Importance of Artificial Neural Networks,method,0
-S-GCN,method,0
-DeepCluster,method,0
-BP-Transformer,method,0
-Kollen-Pollack Learning,method,0
-MixConv,method,0
-StyleGAN,method,0
-Adabelief,method,0
-Siamese Network,method,0
-Cross-resolution features,method,0
-Clipped Double Q-learning,method,0
-DeepIR,method,0
-Local Relation Layer,method,0
-Laplacian EigenMap,method,0
-MUSIQ,method,0
-MNN,method,0
-MFR,method,0
-3-dimensional interaction space,method,0
-Automated Graph Learning,method,0
-Average Pooling,method,0
-Darknet-19,method,0
-Pyramid Vision Transformer v2,method,0
-WFST,method,0
-Data augmentation using Polya-Gamma latent variables.,method,0
-ASGD Weight-Dropped LSTM,method,0
-CLIP,method,0
-FAVOR+,method,0
-Unified VLP,method,0
-Quasi-Recurrent Neural Network,method,0
-Spatial Attention-Guided Mask,method,0
-Lookahead,method,0
-Relative Position Encodings,method,0
-DSGN,method,0
-Off-Diagonal Orthogonal Regularization,method,0
-Random Erasing,method,0
-Gated Attention Networks,method,0
-WaveGlow,method,0
-AdaDelta,method,0
-SpecGAN,method,0
-Local Contrast Normalization,method,0
-LMU,method,0
-DeiT,method,0
-Automatic Structured Variational Inference,method,0
-BIDeN,method,0
-Global Coupled Adaptive Number of Shots,method,0
-Exact Fusion Model,method,0
-,dataset,0
-Fashion-MMT,dataset,0
-Pushshift Telegram,dataset,0
-Malay Speech Data by Mobile Phone_Reading,dataset,0
-Chinese VQA,dataset,0
-SuMe,dataset,0
-PST900,dataset,0
-Multi-Genre Natural Language Inference,dataset,0
-DaNewsroom,dataset,0
-27 Class American Sign Language-Based Dataset,dataset,0
-Minigrid,dataset,0
-SpatialVOC2K,dataset,0
-Grand Theft Auto 5,dataset,0
-PART-OF,dataset,0
-CSAbstruct Dataset,dataset,0
-MSU Video Quality Metrics Benchmark,dataset,0
-ClipShots,dataset,0
-NYT-H,dataset,0
-Multilingual LibriSpeech,dataset,0
-60k Stack Overflow Questions,dataset,0
-LiDAR-based Moving Object Segmentation,dataset,0
-Temporal Popularity Image Collection,dataset,0
-ProteinKG25,dataset,0
-capes,dataset,0
-WikiMulti,dataset,0
-Proposal Flow Datasets,dataset,0
-Real World Occluded Faces,dataset,0
-FAIR-Play,dataset,0
-Occ-Traj120,dataset,0
-catbAbI QA-mode,dataset,0
-LiveQA,dataset,0
-PANDA,dataset,0
-TRN,dataset,0
-Grasping dataset: suction-based,dataset,0
-MLS,dataset,0
-SMS Spam Collection Data Set,dataset,0
-HuTu 80 cell populations,dataset,0
-Person Re-identification in the Wild,dataset,0
-Avicenna: Deductive Commonsense Reasoning,dataset,0
-CorresPondenceNet,dataset,0
-HM3D-Semantics,dataset,0
-TGIF,dataset,0
-The Winograd Schema Challenge (Russian),dataset,0
-Task2Dial,dataset,0
-N-UCLA,dataset,0
-TRaffic ANd COngestionS,dataset,0
-Species-800,dataset,0
-UCLA Protest Image,dataset,0
-DAD,dataset,0
-Birdsnap,dataset,0
-Fongbe Speech Dataset,dataset,0
-https://sourceforge.net/adobe/adobedatasets/panoramas/home/Home/,dataset,0
-Wuhan UAV-borne hyperspectral image,dataset,0
-SES,dataset,0
-DIRHA,dataset,0
-The BioScope Corpus,dataset,0
-Stylized ImageNet,dataset,0
-249 Hours - Hangzhou Dialect Speech Data by Mobile Phone,dataset,0
-MSU Video Alignment and Retrieval Benchmark Suite,dataset,0
-DBLP Temporal,dataset,0
-Cuff-Less Blood Pressure Estimation,dataset,0
-DSSN,dataset,0
-Berkeley Multimodal Human Action Database,dataset,0
-Tufts Medical Echocardiogram Dataset,dataset,0
-HumanoidRobotPose,dataset,0
-SKU110K,dataset,0
-Short Video Dataset,dataset,0
-Dynamic Vision Sensor 3D Human Pose Dataset,dataset,0
-multi-labEl haTe speecH detectiOn dataSet,dataset,0
-TotalCapture,dataset,0
-Question Answering via Sentence Composition,dataset,0
-Yet Another Chinese Learner Corpus,dataset,0
-CBT,dataset,0
-Niko Chord Progression Dataset,dataset,0
-ParsTwiner,dataset,0
-MuJoCo,dataset,0
-"13.3 Hours - Chinese Mandarin Synthesis Corpus-Female, Emotional",dataset,0
-19.46 Hours - American English Speech Synthesis Corpus-Female,dataset,0
-PIROPO,dataset,0
-201 Hours - Singaporean Speaking English Speech Data by Mobile Phone,dataset,0
-Emotions and their Triggers during Covid-19,dataset,0
-Common Objects in COntext-stuff,dataset,0
-CommonCrawl News dataset,dataset,0
-VFR-2420,dataset,0
-Microsoft Research Video Description Corpus,dataset,0
-VoicePrivacy 2020,dataset,0
-PIPAL,dataset,0
-MedNLI,dataset,0
-Skeleton-Based Action Recognition Dataset,dataset,0
-SYNTHIA-PANO,dataset,0
-Large-Scale Arabic Book Reviews,dataset,0
-Tracking Machine Learning Challenge,dataset,0
-Sentiment Analysis + Data Drift,dataset,0
-Hotels-50K,dataset,0
-Google Landmarks Dataset v2,dataset,0
-TED-LIUM 3,dataset,0
-CB-ToF,dataset,0
-L3DAS22,dataset,0
-"1,417 People – 3D Living_Face & Anti_Spoofing Data",dataset,0
-TrUMAn,dataset,0
-Egomon Gaze & Video dataset,dataset,0
-IARPA Janus Benchmark-S,dataset,0
-Multi-domain Wizard-of-Oz,dataset,0
-Perceptual Image Processing ALgorithms IQA Dataset,dataset,0
-Benchmark for Neural Paraphrase Detection,dataset,0
-PLOD-filtered,dataset,0
-Rice Image Dataset,dataset,0
-VISION dataset,dataset,0
-Software Mentions in Scientific Articles,dataset,0
-CLO-WTSP,dataset,0
-rSoccer,dataset,0
-ACDC Scribbles,dataset,0
-CUAD,dataset,0
-global cyclone data from 1841 to 2021,dataset,0
-TNBC,dataset,0
-SMLM CEP152-Complex FITS Images,dataset,0
-Partial-iLIDS,dataset,0
-image-goal-nav-dataset,dataset,0
-x-stance,dataset,0
-OTTers,dataset,0
-emojiSpace embedding,dataset,0
-SMM4H,dataset,0
-Eth-Exchange,dataset,0
-Water Footprint Recommender System Data,dataset,0
-A Multilingual Form Understanding Benchmark,dataset,0
-FUNSD,dataset,0
-FSDnoisy18k,dataset,0
-Duolingo SLAM Shared Task,dataset,0
-Replication Data for: On estimating Armington elasticities for Japan's meat imports,dataset,0
-TurkQA,dataset,0
-WikiNEuRal,dataset,0
-"14,980 Images PPT OCR Data of 8 Languages",dataset,0
-Irish Wikipedia,dataset,0
-PyTorrent,dataset,0
-Colon Cancer Histology Dataset,dataset,0
-ACID,dataset,0
-Unsupervised Reinforcement Learning Benchmark,dataset,0
-ObjectsRoom,dataset,0
-XTREME,dataset,0
-Room Rearrangement,dataset,0
-M-PCCD,dataset,0
-ImageNet Long-Tailed,dataset,0
-Visual Affordance Learning,dataset,0
-MAST,dataset,0
-CrowdSpeech,dataset,0
-Refer-YouTube-VOS,dataset,0
-Deep Soccer Captioning,dataset,0
-ACE 2004,dataset,0
-Munich Sentinel2 Crop Segmentation,dataset,0
-Pose Estimation Lunar Robot,dataset,0
-Bajer Online Misogyny,dataset,0
-SILG,dataset,0
-FullTextPeerRead,dataset,0
-Vision for Intelligent Vehicles and Applications,dataset,0
-Full-Spectral Autofluorescence Lifetime Microscopic Images,dataset,0
-CaSiNo,dataset,0
-INRIA Sparse Light Field,dataset,0
-Knot128,dataset,0
-An Amharic News Text classification Dataset,dataset,0
-Russian Commitment Bank,dataset,0
-Dataset for methane combustion,dataset,0
-ETH Kinect Dataset,dataset,0
-Atari Annotated RAM Interface,dataset,0
-EMC Dutch Clinical Corpus,dataset,0
-HAA500,dataset,0
-OSCAR,dataset,0
-The Softwarised Network Data Zoo,dataset,0
-DeepFake MNIST+,dataset,0
-ETRI-LIVE Space-Time Subsampled Video Quality (STSVQ) Database,dataset,0
-Multimodal Entity Image Repurposing,dataset,0
-Freibrug Cars,dataset,0
-GINC,dataset,0
-MVTEC 3D-AD,dataset,0
-TekGen,dataset,0
-Public Git Archive,dataset,0
-Content4All,dataset,0
-CFQ,dataset,0
-Virtual Image Dataset for Illumination Transfer,dataset,0
-Booking.com Data Challenge,dataset,0
-All Words OpenIE,dataset,0
-NLI-TR,dataset,0
-VideoLQ,dataset,0
-High resolution ship collections 2016,dataset,0
-S2ORC,dataset,0
-Cops-Ref,dataset,0
-Alsat-2B,dataset,0
-Source Code Tagger Training Set,dataset,0
-2018 Data Science Bowl,dataset,0
-AQUA-RAT,dataset,0
-Large Scale Informal Chinese Corpus,dataset,0
-Mal-Activity,dataset,0
-Vietnamese Speech Data,dataset,0
-FoodLogoDet-1500,dataset,0
-Collision Avoidance Challenge dataset,dataset,0
-PTB-TIR,dataset,0
-CPED,dataset,0
-ETH Py150 Open,dataset,0
-C4,dataset,0
-E-KAR,dataset,0
-NLPR,dataset,0
-RAVEN,dataset,0
-OntoNotes 4.0,dataset,0
-UBOFAB19,dataset,0
-PASCAL Face,dataset,0
-ASPEC,dataset,0
-Sub-Slot Dialogue dataset id number domain,dataset,0
-Modern Office-31,dataset,0
-Pre-trained Transliterated Embeddings for Indian Languages,dataset,0
-Western Mediterranean Wetlands Birds - Version 2,dataset,0
-RITE,dataset,0
-3D cross-source point cloud registration dataset,dataset,0
-HYPERVIEW,dataset,0
-Multilingual Reuters,dataset,0
-Kuzushiji-49,dataset,0
-CVEfixes,dataset,0
-SketchyVR,dataset,0
-Multilingual Persuasion Detection,dataset,0
-StyleGAN-Human,dataset,0
-Boxy Vehicles Dataset,dataset,0
-CORRONA CERTAIN,dataset,0
-TOSCA,dataset,0
-DAVIS-585,dataset,0
-Crisscrossed Captions,dataset,0
-The Stack,dataset,0
-Abstract Meaning Representation,dataset,0
-VAST Absorption,dataset,0
-EXEQ-300k,dataset,0
-Controlled On/Off Loads Library,dataset,0
-"4,788 images Human Facial Skin Defects Data",dataset,0
-ADNI,dataset,0
-HEV-I,dataset,0
-Kvasir,dataset,0
-AwA2,dataset,0
-Building and Using Comparable Corpora,dataset,0
-Visual Relationship Detection Dataset,dataset,0
-Google Landmarks,dataset,0
-KITTI'15 MSplus,dataset,0
-Slashdot,dataset,0
-XSum,dataset,0
-DREAM,dataset,0
-“Visible” Physical Commonsense Knowledge,dataset,0
-FSD50K,dataset,0
-Clinical Diagnosis Normalization Dataset,dataset,0
-TUT Acoustic Scenes 2017,dataset,0
-ABC Dataset,dataset,0
-Brown University Stylus Handwriting,dataset,0
-Sony-TAu Realistic Spatial Soundscapes 2022,dataset,0
-Multi-Dimensional Gender Bias Datasets,dataset,0
-CLEAR,dataset,0
-PRED18: Predator/Prey DAVIS Dataset,dataset,0
-Portrait Photo Retouching dataset,dataset,0
-Peer to Peer Hate,dataset,0
-G1020,dataset,0
-Mining in Ethereum,dataset,0
-Identity-Centric and Fine-Grained Person Description Dataset,dataset,0
-Hypersim,dataset,0
-OpeReid,dataset,0
-895 Fire Videos Data,dataset,0
-Complementary Commonsense,dataset,0
-MOBIO,dataset,0
-Knowledge-Enriched Task-Oriented Dialogue,dataset,0
-Video Storytelling,dataset,0
-SPEECH-COCO,dataset,0
-MUSIC,dataset,0
-AnlamVer,dataset,0
-Reddit Norm Violations,dataset,0
-KP20k,dataset,0
-IIRC,dataset,0
-DEFT Corpus,dataset,0
-Grasp Affordance,dataset,0
-TruthfulQA,dataset,0
-EPIE,dataset,0
-Stickers,dataset,0
-pathbased,dataset,0
-BReAst Carcinoma Subtyping,dataset,0
-Kuzushiji-Kanji,dataset,0
-HOPE-Image,dataset,0
-ASIRRA,dataset,0
-HoaxItaly,dataset,0
-SWSR,dataset,0
-Eduge,dataset,0
-Spoken-SQuAD,dataset,0
-"ASC (TIL, 19 tasks)",dataset,0
-QASC,dataset,0
-Contextualised Polyseme Word Sense Dataset v2,dataset,0
-Financial Opinion Mining and Question Answering,dataset,0
-Ocean Drifters,dataset,0
-A Dataset to facilitate Explainable Classification and Summarization of Concerns towards COVID Vaccines,dataset,0
-Get it #OffMyChest,dataset,0
-KAIST-Radar,dataset,0
-ELAS,dataset,0
-Multi-Sentence Reading Comprehension,dataset,0
-Cornell (60%/20%/20% random splits),dataset,0
-EDUVSUM,dataset,0
-Dongguk Body-based Person Recognition Database (DBPerson-Recog-DB1),dataset,0
-Algebra Question Answering with Rationales,dataset,0
-CoVaxLies v1,dataset,0
-Large-scale Chinese Question Matching Corpus,dataset,0
-The 4th China Physiological Signal Challenge 2021,dataset,0
-MR Movie Reviews,dataset,0
-Multiple Object Tracking 17,dataset,0
-NTPairs,dataset,0
-SciFact,dataset,0
-Cross-Lingual Transfer Evaluation of Multilingual Encoders,dataset,0
-PIQA,dataset,0
-Freebase-122,dataset,0
-MinneApple,dataset,0
-E-GMD,dataset,0
-Multiface,dataset,0
-CATS,dataset,0
-Dirty-MNIST,dataset,0
-CHIP-CDN,dataset,0
-KADID-10k,dataset,0
-227 Hours - Italian Speaking English Speech Data by Mobile Phone,dataset,0
-Face Expression Recognition Plus dataset,dataset,0
-ROSTD,dataset,0
-Background Dataset - 20k,dataset,0
-Tracking the Trackers,dataset,0
-Multilingual Quality Estimation and Automatic Post-editing Dataset,dataset,0
-Purpose-driven Affordance Dataset,dataset,0
-RoboCupSimData,dataset,0
-MUlti-Shot EventS,dataset,0
-ROF,dataset,0
-OSCD,dataset,0
-Neural Latents Benchmark,dataset,0
-RC-49,dataset,0
-Color BSD68,dataset,0
-H-DIBCO 2016,dataset,0
-NAFLD pathology and healthy tissue samples,dataset,0
-ML-CB,dataset,0
-NERGRIT Corpus,dataset,0
-FoodSeg103,dataset,0
-Procedural Human Action Videos,dataset,0
-MOD,dataset,0
-Drone Tracking,dataset,0
-Colossal Clean Crawled Corpus,dataset,0
-MFAQ,dataset,0
-Berlin Database of Emotional Speech,dataset,0
-Oxford Buildings,dataset,0
-Social Bias Inference Corpus,dataset,0
-CCGbank,dataset,0
-Cooperative Driving Dataset,dataset,0
-PAGE,dataset,0
-VALUE,dataset,0
-OADAT: Experimental and Synthetic Clinical Optoacoustic Data for Standardized Image Processing,dataset,0
-RAVEN-FAIR,dataset,0
-WMT19 Metrics Task,dataset,0
-SKM-TEA,dataset,0
-TimeTravel,dataset,0
-SHREC 2016 TRACK: PARTIAL MATCHING OF DEFORMABLE SHAPES,dataset,0
-CoNaLa,dataset,0
-NTU RGB+D 2D,dataset,0
-Incidents1M,dataset,0
-Extended MNIST,dataset,0
-A large-scale high-resolution outdoor stereo dataset,dataset,0
-CVIT PIB,dataset,0
-Ninapro DB5 - 10 Intact Subjects - Double Myo Armband,dataset,0
-GIGO revisited: ML publications' approaches to training data,dataset,0
-QUVA Repetition,dataset,0
-Track Long and Prosper,dataset,0
-WITS,dataset,0
-Wikipedia Generation,dataset,0
-Multi-scene Aerial Image,dataset,0
-RIT-18,dataset,0
-FSDKaggle2019,dataset,0
-REDDIT-5K,dataset,0
-MDIA,dataset,0
-VALSE: A Task-Independent Benchmark for Vision and Language Models Centered on Linguistic Phenomena,dataset,0
-MJU-Waste,dataset,0
-Semantic Scholar Network,dataset,0
-PARANMT-50M,dataset,0
-PMC-SA,dataset,0
-TUM-GAID,dataset,0
-DeepSport Dataset,dataset,0
-GAMMA Challenge,dataset,0
-VQG,dataset,0
-BBBC041,dataset,0
-Pseudocode-to-Code,dataset,0
-EXTREME CLASSIFICATION,dataset,0
-San Francisco Park Evaluation,dataset,0
-WebUAV-3M,dataset,0
-Pan+ChiPhoto,dataset,0
-The Uzbek Wordnet,dataset,0
-MS-CXR,dataset,0
-raw gaze data,dataset,0
-HiNER-original,dataset,0
-SoftAttributes,dataset,0
-A collection of LFR benchmark graphs,dataset,0
-COCO-CN,dataset,0
-COUGHVID,dataset,0
-Beyond the Imitation Game Benchmark,dataset,0
-MATRES,dataset,0
-Quality of Movement Assessment for Rehabilitation,dataset,0
-Sparse LiDAR KITTI dataset,dataset,0
-Panoptic,dataset,0
-Multi-View Partial point cloud,dataset,0
-Pirá,dataset,0
-3D Lane Synthetic Dataset,dataset,0
-DanbooRegion,dataset,0
-MTNT,dataset,0
-"Dataset for: ""It is just a flu: Assessing the Effect of Watch History on YouTube's Pseudoscientific Video Recommendations""",dataset,0
-NCT-CRC-HE-100K,dataset,0
-Replica,dataset,0
-WEB-FORUM-52 gold standard,dataset,0
-SWDE,dataset,0
-ML guided Logic synthesis,dataset,0
-PROTEINS,dataset,0
-FB1.5M,dataset,0
-ZooScanNet,dataset,0
-Criteo live traffic data,dataset,0
-ViText2SQL,dataset,0
-Pump and dump dataset,dataset,0
-CAR,dataset,0
-BBBC039,dataset,0
-DDAD,dataset,0
-IndicGLUE,dataset,0
-Multimodal PISA,dataset,0
-Tecnocampus Hand Image Database,dataset,0
-Correlated and Imbalanced MNIST,dataset,0
-COCO Object Detection VIPriors subset,dataset,0
-Toloka WaterMeters,dataset,0
-CARLANE Benchmark,dataset,0
-Waste Classification data,dataset,0
-Liver Tumor Segmentation Challenge 2017,dataset,0
-Replay-Mobile,dataset,0
-SECBENCH,dataset,0
-The Laboratory for Web Algorithmics,dataset,0
-COCO,dataset,0
-HO-3D,dataset,0
-IndoNLI,dataset,0
-WikiDes,dataset,0
-ITB,dataset,0
-Indonesian Speech Data,dataset,0
-VISION,dataset,0
-BuzzFeed-Webis Fake News Corpus 2016,dataset,0
-OrdinalDataset,dataset,0
-BioRED,dataset,0
-STAR: A Benchmark for Situated Reasoning in Real-World Videos,dataset,0
-Reasonable Crowd,dataset,0
-MAVS,dataset,0
-MultiLingual Question Answering,dataset,0
-OQMD v1.2,dataset,0
-MMAct,dataset,0
-SynthCity,dataset,0
-STREETS,dataset,0
-ORConvQA,dataset,0
-ZESHEL,dataset,0
-OSS for Social Good Project List,dataset,0
-KoDF,dataset,0
-CoDEx Medium,dataset,0
-StarCraft Multi-Agent Challenge Plus,dataset,0
-Interactive Gibson Environment,dataset,0
-MultiSubs: A Large-scale Multimodal and Multilingual Dataset,dataset,0
-MSP-Podcast,dataset,0
-Multi_Channel_Grid,dataset,0
-CLOze test by TeacHers,dataset,0
-CARD-660,dataset,0
-HAKE,dataset,0
-FKD,dataset,0
-IMDb Movie Reviews,dataset,0
-MIMIC PERform Testing Dataset,dataset,0
-DailyDialog,dataset,0
-French CASS dataset,dataset,0
-ViViD++,dataset,0
-Evaluating registrations of serial sections with distortions of the ground truths. Supplemental data,dataset,0
-SVIRO,dataset,0
-100DOH,dataset,0
-NaturalProofs,dataset,0
-Social-IQ,dataset,0
-Botswana,dataset,0
-The 3rd China Physiological Signal Challenge 2020,dataset,0
-RELLIS-3D,dataset,0
-HellaSwag,dataset,0
-Oulu-CASIA,dataset,0
-Eisen Funcat,dataset,0
-CoVoST,dataset,0
-Middlebury 2014,dataset,0
-MPII Cooking 2 Dataset,dataset,0
-FoolMeTwice,dataset,0
-PDE dataset,dataset,0
-A-OKVQA,dataset,0
-Depth in the Wild,dataset,0
-ECG in High Intensity Exercise Dataset,dataset,0
-FSC147,dataset,0
-N-Digit MNIST,dataset,0
-Extended Labeled Faces in-the-Wild,dataset,0
-WebChild,dataset,0
-Nations,dataset,0
-Cam2BEV,dataset,0
-HANNA,dataset,0
-EVIL,dataset,0
-OpenEA Benchmark,dataset,0
-A2Dre,dataset,0
-DAGW,dataset,0
-IQR,dataset,0
-Set5,dataset,0
-ARCA23K,dataset,0
-KACC,dataset,0
-UCSD Ped2,dataset,0
-NEMO Hebrew NER and Morphology Corpus,dataset,0
-Breast Cancer Immunohistochemical Image Generation,dataset,0
-DocBank-TB,dataset,0
-Derisi Funcat,dataset,0
-Mall,dataset,0
-Toyota Smarthome Trimmed,dataset,0
-Movie Fill-in-the-Blank,dataset,0
-Multilingual and Code-mixed Visual Question Answering,dataset,0
-Wiki-CS,dataset,0
-Cross-Linguistic Polysemies,dataset,0
-P3,dataset,0
-MUNO21,dataset,0
-Multi-Spectral Leaf Segmentation For Crop/Weed Identification,dataset,0
-WMT 2014 Medical,dataset,0
-DIR-LAB COPDgene,dataset,0
-UniMiB SHAR,dataset,0
-AnimalWeb,dataset,0
-IowaRain,dataset,0
-Multimodal Spontaneous Expression-Heart Rate dataset,dataset,0
-Flickr Cropping Dataset,dataset,0
-PEC,dataset,0
-The 'Call me sexist but' Dataset (CMSB),dataset,0
-CIFAR-10,dataset,0
-Monocular 3D Lane Detection Dataset,dataset,0
-Microsoft Learning to Rank Datasets-30k,dataset,0
-SLURP,dataset,0
-BH-rPPG,dataset,0
-esXNLI,dataset,0
-Abt-Buy,dataset,0
-"9,497 Images - OCR Data of 10 Types of Forms",dataset,0
-Many Faces of Anger,dataset,0
-CAMUS,dataset,0
-DCF Valuation template,dataset,0
-Open-Domain Spoken Question Answering,dataset,0
-Liverpool 360 degree Street View,dataset,0
-COCO-Stuff,dataset,0
-A*3D,dataset,0
-arXiv Astro-Ph,dataset,0
-MP-3DHP: Multi-Person 3D Human Pose Dataset,dataset,0
-Moral Foundations Reddit Corpus,dataset,0
-Trailers12k,dataset,0
-WEB-FORUM-52,dataset,0
-Rendered WB dataset,dataset,0
-Multiple Light Source,dataset,0
-Tunisian Sentiment Analysis Corpus,dataset,0
-Emomusic,dataset,0
-Pre-Contest Workshop Slidedeck,dataset,0
-DRealSR,dataset,0
-CUHK01,dataset,0
-ModelNet40-C,dataset,0
-PEMS-BAY Point Missing,dataset,0
-Frames Dataset,dataset,0
-MICCAI'2015 Gland Segmentation Challenge Contest Dataset,dataset,0
-Wiki-Reliability,dataset,0
-MetaGraspNet difficulty 4 - hard 2,dataset,0
-Visual Wake Words,dataset,0
-Kvasir-SEG,dataset,0
-The Samsung Open MOS Dataset for the Evaluation of Neural Text-to-Speech Synthesis,dataset,0
-Visual Dialog,dataset,0
-COVID-19 Image Data Collection,dataset,0
-WiLI-2018,dataset,0
-Topo-boundary,dataset,0
-speechocean762,dataset,0
-WHO-COVID19 Dataset,dataset,0
-Rendered SST2,dataset,0
-French Question Answering Dataset,dataset,0
-PCD,dataset,0
-PhC-U373,dataset,0
-CBC,dataset,0
-xP3,dataset,0
-Uzbek Speech Corpus,dataset,0
-GeoQA,dataset,0
-MLFP,dataset,0
-CIC,dataset,0
-50 Salads,dataset,0
-MineRL,dataset,0
-Exclusively Dark Image Dataset,dataset,0
-NASA Worldview,dataset,0
-ROSE,dataset,0
-Wind Tunnel and Flight Test Experiments,dataset,0
+DistDGL,method,1
+Pixel-BERT,method,1
+Hybrid-deconvolution,method,1
+CBNet,method,1
+Peer-attention,method,1
+PolarNet,method,1
+SegFormer,method,1
+Dynamic Convolution,method,1
+Variational Dropout,method,1
+Grid R-CNN,method,1
+Baidu Dependency Parser,method,1
+GaAN,method,1
+ClassSR,method,1
+Generalizable Node Injection Attack,method,1
+Expected Sarsa,method,1
+StyleSwin,method,1
+Contour Stochastic Gradient Langevin Dynamics,method,1
+DenseNAS-B,method,1
+SMITH,method,1
+DQN,method,1
+Mode Normalization,method,1
+Attention Free Transformer,method,1
+CrossViT,method,1
+SFAM,method,1
+Knowledge Enhanced Masked Language Model,method,1
+U-Net Generative Adversarial Network,method,1
+Deeper Atrous Spatial Pyramid Pooling,method,1
+spatial transformer networks,method,1
+Auto-Classifier,method,1
+Center Pooling,method,1
+hdxresnet,method,1
+Non-linear Independent Component Estimation,method,1
+Restricted Boltzmann Machine,method,1
+RAHP,method,1
+context2vec,method,1
+Contrastive BERT,method,1
+DualGCN,method,1
+Stochastic Gradient Descent,method,1
+Deep Deterministic Policy Gradient,method,1
+DALL·E 2,method,1
+HTC,method,1
+Factor Graph Attention,method,1
+ALBERT,method,1
+Sandwich Transformer,method,1
+GPT-3,method,1
+ZeRO,method,1
+YOLOv1,method,1
+Fawkes,method,1
+DU-GAN,method,1
+Hermite Activation,method,1
+mBARTHez,method,1
+Graph Recurrent Imputation Network,method,1
+GALA,method,1
+Exponential Decay,method,1
+ByteScheduler,method,1
+USE,method,1
+POTO,method,1
+Virtual Batch Normalization,method,1
+FastSGT,method,1
+MeshGraphNet,method,1
+Long Short-Term Memory,method,1
+Sparsemax,method,1
+GeGLU,method,1
+Gradient Harmonizing Mechanism R,method,1
+Symbolic Deep Learning,method,1
+MT-PET,method,1
+DVD-GAN DBlock,method,1
+AWARE,method,1
+Graph Echo State Network,method,1
+Guided Language to Image Diffusion for Generation and Editing,method,1
+Hue — Bi-Dimensional Empirical Mode Decomposition,method,1
+Gated Linear Unit,method,1
+Denoising Score Matching,method,1
+Grammatical evolution + Q-learning,method,1
+RPDet,method,1
+ALQ and AMQ,method,1
+Source Hypothesis Transfer,method,1
+Seesaw Loss,method,1
+Prioritized Sweeping,method,1
+Composite Backbone Network,method,1
+Inpainting,method,1
+ComplEx-N3-RP,method,1
+Deep Voice 3,method,1
+Dynamic R-CNN,method,1
+Learning From Multiple Experts,method,1
+RMSProp,method,1
+MoGA-B,method,1
+MoGA-A,method,1
+Cascade Mask R-CNN,method,1
+Neural Attention Fields,method,1
+TopK Copy,method,1
+STDC,method,1
+Attention Dropout,method,1
+Swish,method,1
+Visual Geometry Group 19 Layer CNN,method,1
+SKNet,method,1
+HDCGAN,method,1
+Heterogeneous Molecular Graph Neural Network,method,1
+Colorization Transformer,method,1
+Cycle-CenterNet,method,1
+Activation Regularization,method,1
+GTrXL,method,1
+Transformer,method,1
+MPNN,method,1
+SNet,method,1
+ComplEx with N3 Regularizer,method,1
+BiFPN,method,1
+KAF,method,1
+Canvas Method,method,1
+SlowMo,method,1
+YOLOv2,method,1
+CentripetalNet,method,1
+SRGAN,method,1
+CP with N3 Regularizer and Relation Prediction,method,1
+Adaptive Dropout,method,1
+Inception-v3,method,1
+reSGLD,method,1
+Spatially Separable Self-Attention,method,1
+Neural Oblivious Decision Ensembles,method,1
+Adversarial Color Enhancement,method,1
+Seq2Seq,method,1
+Directional Sparse Filtering,method,1
+Differential attention for visual question answering,method,1
+MLFPN,method,1
+FastSpeech 2s,method,1
+HypE,method,1
+Unbiased Online Recurrent Optimization,method,1
+MoCo v2,method,1
+Fastformer,method,1
+Fourier Contour Embedding,method,1
+Detailed Expression Capture and Animation,method,1
+MuZero,method,1
+Independent Component Analysis,method,1
+LAMA,method,1
+Gaussian Error Linear Units,method,1
+GPT-2,method,1
+IQL,method,1
+SaBN,method,1
+GMVAE,method,1
+CANINE,method,1
+ALIS,method,1
+FeatureNMS,method,1
+SEED RL,method,1
+RotNet,method,1
+Polyak Averaging,method,1
+PixelShuffle,method,1
+Mixer Layer,method,1
+Single-Headed Attention,method,1
+Relation-aware Global Attention,method,1
+Test-time Local Converter,method,1
+Large-scale Information Network Embedding,method,1
+Pixel Recurrent Neural Network,method,1
+Global Context Block,method,1
+Weight Tying,method,1
+ELU,method,1
+PELU,method,1
+Hi-LANDER,method,1
+NCL,method,1
+Unitary RNN,method,1
+Fishr,method,1
+Negative Face Recognition,method,1
+Phish: A Novel Hyper-Optimizable Activation Function,method,1
+Learning to Match,method,1
+Conditional Relation Network,method,1
+RE-NET,method,1
+SqueezeNeXt,method,1
+DMA,method,1
+PointNet,method,1
+Conditional Random Field,method,1
+Self-regularizing Boundary Time and Amplitude Warping,method,1
+E-MBConv,method,1
+GAN Least Squares Loss,method,1
+Channel & Spatial attention,method,1
+HITNet,method,1
+Neural Additive Model,method,1
+ZeRO-Infinity,method,1
+Sscs,method,1
+FreeAnchor,method,1
+Self-Adjusting Smooth L1 Loss,method,1
+StreaMRAK,method,1
+mBERT,method,1
+ASPP,method,1
+SCA,method,1
+MTS,method,1
+Pattern-Exploiting Training,method,1
+Time-aware Large Kernel Convolution,method,1
+ARMA GNN,method,1
+DeepMind AlphaStar,method,1
+GAP-Layer,method,1
+RealNVP,method,1
+Variational Graph Auto Encoder,method,1
+Deformable Attention Module,method,1
+Dimension-wise Convolution,method,1
+Batchboost,method,1
+Hierarchical Feature Fusion,method,1
+Libra R-CNN,method,1
+Voxel R-CNN,method,1
+Panoptic-PolarNet,method,1
+DNAS,method,1
+Bottleneck Transformer Block,method,1
+Xavier Initialization,method,1
+DEQ,method,1
+Cycle Consistency Loss,method,1
+DANet,method,1
+Scatter Connection,method,1
+True Online TD Lambda,method,1
+GLOW,method,1
+BoundaryNet,method,1
+Corner Pooling,method,1
+Dutch Eligibility Trace,method,1
+Fast Bi-level Adversarial Training,method,1
+MLP-Mixer,method,1
+Laplacian Positional Encodings,method,1
+PCA,method,1
+LeNet,method,1
+AutoML-Zero,method,1
+Poincaré Embeddings,method,1
+Entropy Regularization,method,1
+ConvLSTM,method,1
+PAA,method,1
+Neural Architecture Search,method,1
+STMDA-RetinaNet,method,1
+VarifocalNet,method,1
+Graph Isomorphism Network,method,1
+Graph-to-Tree MWP Solver,method,1
+VDO-SLAM,method,1
+ElasticFace,method,1
+DyGED,method,1
+modified arcsinh,method,1
+Content-Conditioned Style Encoder,method,1
+Groupwise Point Convolution,method,1
+Bi-attention,method,1
+ALIGN,method,1
+Global Sub-Sampled Attention,method,1
+CP-N3-RP,method,1
+Detection Transformer,method,1
+gCANS,method,1
+Self-Adversarial Negative Sampling,method,1
+FFB6D,method,1
+Squared ReLU,method,1
+SVD Parameterization,method,1
+AdaRNN,method,1
+Additive Angular Margin Loss,method,1
+UCNet,method,1
+EfficientNet,method,1
+ComiRec,method,1
+GSoP-Net,method,1
+CLRNet,method,1
+Fast Sample Re-Weighting,method,1
+Spatial-Reduction Attention,method,1
+Hierarchical Multi-Task Learning,method,1
+CoVA,method,1
+AdaHessian,method,1
+Class activation guide,method,1
+NICE-SLAM: Neural Implicit Scalable Encoding for SLAM,method,1
+Dual Softmax Loss,method,1
+Explanation vs Attention: A Two-Player Game to Obtain Attention for VQA,method,1
+Attentive Walk-Aggregating Graph Neural Network,method,1
+Big-Little Net,method,1
+ClusterFit,method,1
+EVM,method,1
+DifferNet,method,1
+MDPO,method,1
+Point-GNN,method,1
+PP-OCR,method,1
+Florence,method,1
+LSTM,method,1
+Multi-Head Linear Attention,method,1
+GAIL,method,1
+SCNet,method,1
+Hierarchical Transferability Calibration Network,method,1
+Variational Entanglement Detection,method,1
+Ape-X DPG,method,1
+Revision Network,method,1
+Singular Value Clipping,method,1
+Truncation Trick,method,1
+HyperDenseNet,method,1
+G3D,method,1
+Multiscale Dilated Convolution Block,method,1
+SimCLR,method,1
+Fast Focal Detection Network,method,1
+Feature Fusion Module v2,method,1
+TURL,method,1
+SVPG,method,1
+Synchronized Batch Normalization,method,1
+TuckER with Relation Prediction,method,1
+MelGAN Residual Block,method,1
+CurvVAE,method,1
+StereoLayers,method,1
+Generalized Focal Loss,method,1
+Graph Convolutional Network,method,1
+LiteSeg,method,1
+Criss-Cross Network,method,1
+Mogrifier LSTM,method,1
+Randomized Leaky Rectified Linear Units,method,1
+Pointwise Convolution,method,1
+LDA,method,1
+Tacotron,method,1
+VEGA,method,1
+StyleALAE,method,1
+ShuffleNet V2 Block,method,1
+FBNet Block,method,1
+ALDEN,method,1
+UORO,method,1
+ResNeSt,method,1
+ENet Initial Block,method,1
+ShuffleNet Block,method,1
+TernaryBERT,method,1
+MoNet,method,1
+gSDE,method,1
+FLAVR,method,1
+Center-pivot convolution,method,1
+Gaussian Gated Linear Network,method,1
+3D ResNet-RS,method,1
+wav2vec-U,method,1
+Fast Minimum-Norm Attack,method,1
+RSU Beneš Block,method,1
+YOLOX,method,1
+Siamese U-Net,method,1
+VoiceFilter-Lite,method,1
+NUQSGD,method,1
+Inception-ResNet-v2-B,method,1
+Multi-band MelGAN,method,1
+VoVNet,method,1
+Extremely Efficient Spatial Pyramid of Depth-wise Dilated Separable Convolutions,method,1
+AdaMod,method,1
+Single-Shot Multi-Object Tracker,method,1
+Temporal Jittering,method,1
+ASAF,method,1
+TuckER-RP,method,1
+AdaMax,method,1
+Track objects as points,method,1
+FairMOT,method,1
+Synthetic Minority Over-sampling Technique.,method,1
+Hierarchical MTL,method,1
+Adversarial Model Perturbation,method,1
+Adapter,method,1
+NFR,method,1
+Dual Multimodal Attention,method,1
+State-Aware Tracker,method,1
+SDAE,method,1
+Channel-wise Cross Fusion Transformer,method,1
+Causal Inference,method,1
+DeepLabv2,method,1
+Deep Extreme Cut,method,1
+PolyCAM,method,1
+FORK,method,1
+Dynamic Keypoint Head,method,1
+OFA,method,1
+Cross-Attention Module,method,1
+Dense Connections,method,1
+Multi Loss ( BCE Loss + Focal Loss )  + Dice Loss,method,1
+U-CAM,method,1
+Point-wise Spatial Attention,method,1
+KNN and IOU based verification,method,1
+Pix2Pix,method,1
+SpreadsheetCoder,method,1
+Ape-X DQN,method,1
+IoU-guided NMS,method,1
+Random Grayscale,method,1
+Metrix,method,1
+NeuralRecon: Real-Time Coherent 3D Reconstruction from Monocular Video,method,1
+VAE,method,1
+Prioritized Experience Replay,method,1
+SOHO,method,1
+Metric mixup,method,1
+PermuteFormer,method,1
+DECA,method,1
+Frequency channel attention networks,method,1
+Distribution-induced Bidirectional Generative Adversarial Network for Graph Representation Learning,method,1
+Feedforward Network,method,1
+R(2+1)D,method,1
+Enhanced Seq2Seq Autoencoder via Contrastive Learning,method,1
+IPL,method,1
+FPG,method,1
+LeVIT,method,1
+Fast-YOLOv2,method,1
+Triplet Entropy Loss,method,1
+Rank-based loss,method,1
+QuantTree histograms,method,1
+Griffin-Lim Algorithm,method,1
+One-Shot Aggregation,method,1
+DROID-SLAM,method,1
+Disentangled Attribution Curves,method,1
+CoLU,method,1
+Random Mutation Search,method,1
+CSPDarknet53,method,1
+Maxout,method,1
+Holographic Reduced Representation,method,1
+DSelect-k,method,1
+Augmented SBERT,method,1
+Harmonic Block,method,1
+PWIL,method,1
+Progressive Growing Channel Attentive Non-Local Network,method,1
+Twin Delayed Deep Deterministic,method,1
+SAGAN,method,1
+BIMAN,method,1
+Deep Convolutional GAN,method,1
+DAU-ConvNet,method,1
+Highway Network,method,1
+Low-resolution input,method,1
+WaveTTS,method,1
+DropConnect,method,1
+Procrustes,method,1
+BAM,method,1
+Patch AutoAugment,method,1
+Deformable Kernel,method,1
+Class Activation Guided Attention Mechanism (CAGAM),method,1
+Hierarchical-Split Block,method,1
+Feedback Alignment,method,1
+Graph InfoClust,method,1
+Targeted Dropout,method,1
+Conditional Positional Encoding,method,1
+CornerNet,method,1
+CP conv,method,1
+FixMatch,method,1
+SM3,method,1
+Set Transformer,method,1
+GCU,method,1
+Focal Transformers,method,1
+HyperHyperNetwork,method,1
+Compressed Memory,method,1
+KIP,method,1
+DenseNAS-A,method,1
+Fixed Factorized Attention,method,1
+Rational Activation Function,method,1
+HFPSO,method,1
+CornerNet-Saccade,method,1
+TS,method,1
+VL-BERT,method,1
+Value Imputation and Mask Estimation,method,1
+Parameterized ReLU,method,1
+Table Pre-training via Execution,method,1
+SABL,method,1
+Bi-Directional Graph Convolutional Network,method,1
+Inception-A,method,1
+Soft Nearest Neighbor Loss with Annealing Temperature,method,1
+AdaSmooth,method,1
+LightConv,method,1
+Adaptive Label Smoothing,method,1
+ICA,method,1
+Neural Cache,method,1
+MobileBERT,method,1
+LSH Attention,method,1
+ASVI,method,1
+BERT,method,1
+ARShoe,method,1
+HOC,method,1
+SyncBN,method,1
+Soft Pooling,method,1
+Continuous Bag-of-Words Word2Vec,method,1
+Wide&Deep,method,1
+M2Det,method,1
+Spatiotemporal Point Inference Network,method,1
+GCNII,method,1
+SpineNet,method,1
+PointRend,method,1
+Mixture of Softmaxes,method,1
+HyperNetwork,method,1
+NODE,method,1
+Skim and Intensive Reading Model,method,1
+CInC Flow,method,1
+Parametric Exponential Linear Unit,method,1
+Graph Network-based Simulators,method,1
+PFPNet,method,1
+Gated Transformer-XL,method,1
+Retrace,method,1
+Unigram Segmentation,method,1
+Macaw,method,1
+Grammatical evolution and Q-learning,method,1
+nnFormer,method,1
+VLMo,method,1
+LIMix,method,1
+Fast Attention Via Positive Orthogonal Random Features,method,1
+CCNet,method,1
+Z-PNN,method,1
+Adaptive Early-Learning Correction,method,1
+Xception,method,1
+PVT,method,1
+RevSilo,method,1
+ComplEx with N3 Regularizer and Relation Prediction Objective,method,1
+IFBlock,method,1
+Dense Contrastive Learning,method,1
+ASFF,method,1
+Selective Kernel Convolution,method,1
+An Easier Data Augmentation,method,1
+IAN,method,1
+Atrous Spatial Pyramid Pooling,method,1
+Dropout,method,1
+Absolute Position Encodings,method,1
+Forward-Looking Actor,method,1
+K-Net,method,1
+Prime Dilated Convolution,method,1
+SSTDA,method,1
+GNNCL,method,1
+I-BERT,method,1
+Associative LSTM,method,1
+DAPO,method,1
+U-Net,method,1
+Cross-Covariance Attention,method,1
+Bottom-up Path Augmentation,method,1
+Sequence to Sequence,method,1
+MinCutPool,method,1
+FRILL,method,1
+QHAdam,method,1
+PPO,method,1
+WRQE,method,1
+WEGL,method,1
+Affine Operator,method,1
+Recurrent Replay Distributed DQN,method,1
+Deep-MAC,method,1
+Distance to Modelled Embedding,method,1
+Local Interpretable Model-Agnostic Explanations,method,1
+Cross-View Training,method,1
+Perceiver IO,method,1
+Style-based Recalibration Module,method,1
+CycleGAN,method,1
+DE-GAN: A Conditional Generative Adversarial Network for Document Enhancement,method,1
+TanhExp,method,1
+EMEA,method,1
+TransferQA,method,1
+DRPNN,method,1
+WordPiece,method,1
+CharacterBERT,method,1
+Spatial Feature Transform,method,1
+Protagonist Antagonist Induced Regret Environment Design,method,1
+Bayesian REX,method,1
+srBTAW (BTW),method,1
+Residual Attention Network,method,1
+Position-Sensitive RoIAlign,method,1
+Bidirectional GRU,method,1
+SuperpixelGridMasks,method,1
+uNetXST,method,1
+Monte-Carlo Tree Search,method,1
+Rotary Embeddings,method,1
+LFME,method,1
+HOPE,method,1
+SAFRAN - Scalable and fast non-redundant rule application,method,1
+Transductive Inference,method,1
+ERU,method,1
+Weighted Recurrent Quality Enhancement,method,1
+Spherical Graph Convolutional Network,method,1
+DOLG,method,1
+Q-Learning,method,1
+GER,method,1
+Noisy Linear Layer,method,1
+AlphaStar,method,1
+Mesh-TensorFlow,method,1
+SepFormer,method,1
+Adaptive Instance Normalization,method,1
+CuBERT,method,1
+ParaNet,method,1
+WaveGrad DBlock,method,1
+PointASNL,method,1
+Copy-Paste,method,1
+Iterative Pseudo-Labeling,method,1
+Displaced Aggregation Units,method,1
+PICARD,method,1
+Kaleido-BERT,method,1
+DeepLabv3,method,1
+DIME,method,1
+KP,method,1
+Temporaral Difference Network,method,1
+Replica exchange stochastic gradient Langevin Dynamics,method,1
+Reduction-B,method,1
+GCN,method,1
+Dilated Bottleneck Block,method,1
+Bi3D,method,1
+Synergistic Image and Feature Alignment,method,1
+Normalized Temperature-scaled Cross Entropy Loss,method,1
+DDParser,method,1
+SRDC,method,1
+PNA,method,1
+MyGym: Modular Toolkit for Visuomotor Robotic Tasks,method,1
+Visformer,method,1
+Disentangled Attention Mechanism,method,1
+Base Boosting,method,1
+CurricularFace,method,1
+Apollo,method,1
+Rainbow DQN,method,1
+Max Pooling,method,1
+Pyramidal Bottleneck Residual Unit,method,1
+Support-set Based Cross-Supervision,method,1
+Position-Wise Feed-Forward Layer,method,1
+Cascade Corner Pooling,method,1
+WGAN,method,1
+CaiT,method,1
+JLA,method,1
+PAU,method,1
+Deep Q-Network,method,1
+DTW,method,1
+Neural adjoint,method,1
+MFEC,method,1
+NON,method,1
+GIN,method,1
+CayleyNet,method,1
+Spectral Dropout,method,1
+Dynamic Graph Event Detection,method,1
+PinvGCN,method,1
+ReasonBERT,method,1
+Variational Trace Distance Estimation,method,1
+NetAdapt,method,1
+MobileNetV1,method,1
+1cycle,method,1
+SHA-RNN,method,1
+MSPFN,method,1
+Shuffle Transformer,method,1
+Adaptive Smooth Optimizer,method,1
+Local Response Normalization,method,1
+CVRL,method,1
+ResNeXt-Elastic,method,1
+MixNet,method,1
+GShard,method,1
+CARAFE,method,1
+ILVR,method,1
+NVAE Generative Residual Cell,method,1
+Octave Convolution,method,1
+Multi-Heads of Mixed Attention,method,1
+Hyper HyperNetwork,method,1
+Random Resized Crop,method,1
+Distance Shrinking with Angular Marginalizing Loss,method,1
+VC R-CNN,method,1
+ZoomNet,method,1
+Adversarially Learned Inference,method,1
+Soft Split and Soft Composition,method,1
+ELR,method,1
+Self-critical Sequence Training,method,1
+Polya-Gamma Augmentation,method,1
+RetinaMask,method,1
+Encoder-Decoder model with local and pairwise loss along with shared encoder and discriminator network (EDLPS),method,1
+Adaptive Graph Convolutional Neural Networks,method,1
+Tofu,method,1
+rTPNN,method,1
+Tacotron 2,method,1
+VFNet,method,1
+Branch attention,method,1
+ScheduledDropPath,method,1
+CoordConv,method,1
+AdapTive Meta Optimizer,method,1
+3D SA,method,1
+ORN,method,1
+VGAE,method,1
+WGAN-GP Loss,method,1
+Aggregated Learning,method,1
+Re-Attention Module,method,1
+InfoGAN,method,1
+squeeze-and-excitation networks,method,1
+MADGRAD,method,1
+QuantTree,method,1
+Hunger Games Search,method,1
+ReZero,method,1
+TGN,method,1
+DistanceNet,method,1
+Transformer in Transformer,method,1
+ENet Bottleneck,method,1
+Elastic ResNeXt Block,method,1
+Contrastive Learning,method,1
+Continuous Kernel Convolution,method,1
+Conditional Batch Normalization,method,1
+Tanh Exponential Activation Function,method,1
+SentencePiece,method,1
+Stochastic Steady-state Embedding,method,1
+A3C,method,1
+Stein Variational Policy Gradient,method,1
+ZFNet,method,1
+ADELE,method,1
+MoBY,method,1
+Residual Block,method,1
+Auxiliary Batch Normalization,method,1
+Dilated Bottleneck with Projection Block,method,1
+Gated Positional Self-Attention,method,1
+Stochastic Gradient Variational Bayes,method,1
+GloVe Embeddings,method,1
+GFSA,method,1
+Leaky ReLU,method,1
+CRF,method,1
+Hybrid Firefly and Particle Swarm Optimization,method,1
+TDN,method,1
+Gather-Excite Networks,method,1
+CoBERL,method,1
+Filter Response Normalization,method,1
+Kernel Inducing Points,method,1
+PixLoc,method,1
+Phish,method,1
+NesT,method,1
+Multi-DConv-Head Attention,method,1
+GPFL,method,1
+Voxel Transformer,method,1
+Genetic Algorithms,method,1
+CT-Layer,method,1
+RegionViT,method,1
+Error Back Proragation Network,method,1
+Gradient-based optimization,method,1
+Wavelet Distributed Training,method,1
+GBST,method,1
+Relational Graph Convolution Network,method,1
+LipGAN,method,1
+Gated Convolution,method,1
+G-GLN Neuron,method,1
+Teacher-Tutor-Student Knowledge Distillation,method,1
+online deep learning,method,1
+ReLIC,method,1
+Pyramid Vision Transformer,method,1
+SmeLU,method,1
+NTK,method,1
+Smish,method,1
+ESP,method,1
+ORB-Simultaneous localization and mapping,method,1
+Early Stopping,method,1
+DG-Net,method,1
+Neural Network Compression Framework,method,1
+Segment Sorting,method,1
+Pansharpening by convolutional neural networks in the full resolution framework,method,1
+CBHG,method,1
+Meta Pseudo Labels,method,1
+DEXTR,method,1
+Spatial CNN with UNet based Encoder-decoder and ConvLSTM,method,1
+Neural network for graphs,method,1
+Spatial & Temporal Attention,method,1
+EESP,method,1
+Natural Gradient Descent,method,1
+CSGLD,method,1
+Temporal Activation Regularization,method,1
+uPIT,method,1
+IMGEP,method,1
+GAT,method,1
+Sarsa Lambda,method,1
+Agglomerative Contextual Decomposition,method,1
+Multi-partition Embedding Interaction,method,1
+PipeMare,method,1
+Random Synthesized Attention,method,1
+PPMC,method,1
+SortCut Sinkhorn Attention,method,1
+Spatial Attention Module (ThunderNet),method,1
+EdgeFlow,method,1
+MotionNet,method,1
+LRNet,method,1
+Continuously Indexed Domain Adaptation,method,1
+SERLU,method,1
+ViLBERT,method,1
+Multi-Attention Network,method,1
+ETC,method,1
+Sharpness-Aware Minimization,method,1
+SqueezeBERT,method,1
+Tanh Activation,method,1
+CCT,method,1
+Experience Replay,method,1
+PANet,method,1
+Beneš Block with Residual Switch Units,method,1
+Synthesizer,method,1
+Self-Supervised Temporal Domain Adaptation,method,1
+gMLP,method,1
+Structurally Regularized Deep Clustering,method,1
+Adaptive Locally Connected Neuron,method,1
+Random Search,method,1
+Res2Net Block,method,1
+Supporting Clustering with Contrastive Learning,method,1
+Big-Little Module,method,1
+OASIS,method,1
+Sigmoid Linear Unit,method,1
+Graph Self-Attention,method,1
+BigGAN-deep,method,1
+MDETR,method,1
+Asymmetrical Bi-RNN,method,1
+BLIP,method,1
+SC-GPT,method,1
+RFB,method,1
+AutoGL,method,1
+Low-level backbone,method,1
+ScatNet,method,1
+MutualGuide,method,1
+CSL,method,1
+Triplet Attention,method,1
+Deep Graph Convolutional Neural Network,method,1
+High-resolution input,method,1
+Anycost GAN,method,1
+Padé Activation Units,method,1
+Instances-Pixels Balance Index,method,1
+Object Dropout,method,1
+MIM,method,1
+Generalized additive models,method,1
+RAN,method,1
+Inception-ResNet-v2-A,method,1
+Image Scale Augmentation,method,1
+Mixture of Logistic Distributions,method,1
+Adaptive Span Transformer,method,1
+RoBERTa,method,1
+REINFORCE,method,1
+R1 Regularization,method,1
+HaloNet,method,1
+CSPResNeXt,method,1
+DeltaConv,method,1
+Self-Attention GAN,method,1
+CvT,method,1
+Mixup,method,1
+Ensemble Clustering,method,1
+ALI,method,1
+CGRU,method,1
+Trust Region Policy Optimization,method,1
+Inception-v4,method,1
+Feedback Transformer,method,1
+Mixing Adam and SGD,method,1
+Universal Transformer,method,1
+ParamCrop,method,1
+Exponential Linear Squashing Activation,method,1
+Mirror Descent Policy Optimization,method,1
+RoIPool,method,1
+CTAB-GAN,method,1
+VL-T5,method,1
+STN,method,1
+FGA,method,1
+ReLU,method,1
+Dual Path Network,method,1
+SNAIL,method,1
+OHEM,method,1
+Depth-wise Plane Sweeping,method,1
+myGym,method,1
+Convolutional LSTM based Residual Network,method,1
+ClipBERT,method,1
+Chinese Pre-trained Unbalanced Transformer,method,1
+Feature-Aligned Person Search Network,method,1
+Estimation Statistics,method,1
+Hourglass Module,method,1
+AlignPS,method,1
+efficient channel attention,method,1
+SAFRAN,method,1
+SGPCS,method,1
+Adaptive NMS,method,1
+TSRUp,method,1
+Glow-TTS,method,1
+PAFPN,method,1
+Strided EESP,method,1
+Entropy Minimized Ensemble of Adapters,method,1
+Dilated Causal Convolution,method,1
+Disp R-CNN,method,1
+Shuffle-T,method,1
+Pointer Sentinel-LSTM,method,1
+3-Augment,method,1
+Dynamic Algorithm Configuration,method,1
+Canonical Tensor Decomposition with N3 Regularizer,method,1
+BRepNet,method,1
+GEOMANCER,method,1
+XLSR,method,1
+SHAP,method,1
+Neural Image Assessment,method,1
+ProxylessNet-Mobile,method,1
+ControlVAE,method,1
+Ghost Module,method,1
+DouZero,method,1
+SPNet,method,1
+LOGAN,method,1
+HMGNN,method,1
+AggMo,method,1
+Spatio-Temporal Attention LSTM,method,1
+Spatial and Channel-wise Attention-based Convolutional Neural Network,method,1
+Parallel Feature Pyramid Network,method,1
+Lower Bound on Transmission Using Non-Linear Bounding Function in Single Image Dehazing,method,1
+RFP,method,1
+style-based recalibration module,method,1
+AWD-LSTM,method,1
+Siren,method,1
+MiVOS,method,1
+FA,method,1
+Chinchilla,method,1
+Co-Correcting,method,1
+FCOS,method,1
+CRISS,method,1
+MODNet,method,1
+APPO,method,1
+CTAL,method,1
+Scaled Dot-Product Attention,method,1
+DFDNet,method,1
+Reformer,method,1
+Generative Emotion Estimator,method,1
+Channel attention,method,1
+CapsNet,method,1
+Stacked Denoising Autoencoder,method,1
+Primer,method,1
+Soft Actor Critic,method,1
+Neural Turing Machine,method,1
+CBAM,method,1
+Residual Shuffle-Exchange Network,method,1
+Dilated Convolution,method,1
+PresGAN,method,1
+Orientation Regularized Network,method,1
+EfficientDet,method,1
+CDCC-NET,method,1
+AdaGrad,method,1
+VGG,method,1
+TE2Rules,method,1
+Memory-Associated Differential Learning,method,1
+Hierarchical VAE,method,1
+Differentiable Neural Architecture Search,method,1
+Vision-and-Langauge Transformer,method,1
+Pansharpening Network,method,1
+MonoPort,method,1
+Concatenated Skip Connection,method,1
+Support Vector Machine,method,1
+AutoTinyBERT,method,1
+SymmNet,method,1
+Neural Probabilistic Language Model,method,1
+fastText,method,1
+Varifocal Loss,method,1
+VisTR,method,1
+Gated Convolution Network,method,1
+Grab,method,1
+Iterative Latent Variable Refinement,method,1
+Adaptive Feature Pooling,method,1
+SSE,method,1
+Residual Normal Distribution,method,1
+Subformer,method,1
+FEFM,method,1
+Decentralized Distributed Proximal Policy Optimization,method,1
+Context-aware Visual Attention-based (CoVA) webpage object detection pipeline,method,1
+Multiplicative RNN,method,1
+Channel-wise Cross Attention,method,1
+SPP-Net,method,1
+ZeRO-Offload,method,1
+ViP-DeepLab,method,1
+LARS,method,1
+Denoised Smoothing,method,1
+Feature Intertwiner,method,1
+CARLA: An Open Urban Driving Simulator,method,1
+m-arcsinh,method,1
+NADAM,method,1
+Instruction Pointer Attention Graph Neural Network,method,1
+RESCAL,method,1
+Mechanism Transfer,method,1
+NoisyNet-DQN,method,1
+AdaBound,method,1
+Dual Contrastive Learning,method,1
+TD-VAE,method,1
+AE,method,1
+Embedded Dot Product Affinity,method,1
+MODERN,method,1
+nlogistic-sigmoid function,method,1
+OverFeat,method,1
+Linear Regression,method,1
+RGA,method,1
+Gravity,method,1
+A Framework for Leader Identification in Coordinated Activity,method,1
+ProxylessNet-GPU,method,1
+GraRep,method,1
+TAPEX,method,1
+TABBIE,method,1
+GA,method,1
+MXMNet,method,1
+Bilinear Attention,method,1
+Graph Path Feature Learning,method,1
+CW-ERM,method,1
+CTC Loss,method,1
+LayoutReader,method,1
+Multiple Random Window Discriminator,method,1
+FiLM Module,method,1
+LPM,method,1
+PGHI,method,1
+Blender,method,1
+Discrete Cosine Transform,method,1
+ShakeDrop,method,1
+Anti-Alias Downsampling,method,1
+SDNE,method,1
+GeniePath,method,1
+Harm-Net,method,1
+Gated Linear Network,method,1
+Normalizing Flows,method,1
+Replacing Eligibility Trace,method,1
+Weight Decay,method,1
+BiGG,method,1
+Accuracy-Robustness Area,method,1
+DynaBERT,method,1
+Temporal Pyramid Network,method,1
+Dot-Product Attention,method,1
+You Only Hypothesize Once,method,1
+Hybrid Task Cascade,method,1
+Hardtanh Activation,method,1
+Polynomial Rate Decay,method,1
+Global Average Pooling,method,1
+Fast-YOLOv4-SmallObj,method,1
+PCB,method,1
+EfficientUNet++,method,1
+Gradient Sign Dropout,method,1
+GPT,method,1
+Blink Communication,method,1
+ENet,method,1
+SCCL,method,1
+SNIP,method,1
+QRNN,method,1
+Early exiting using confidence measures,method,1
+BASNet,method,1
+Gradient Clipping,method,1
+Visual-Linguistic BERT,method,1
+Temporal Word Embeddings with a Compass,method,1
+DGRF,method,1
+Wide Residual Block,method,1
+LayoutLMv2,method,1
+VQSVD,method,1
+Neural Radiance Field,method,1
+Hierarchical Style Disentanglement,method,1
+Models Genesis,method,1
+Explanation vs Attention,method,1
+Deformable Convolutional Networks,method,1
+Embedded Gaussian Affinity,method,1
+utterance level permutation invariant training,method,1
+ACTKR,method,1
+Weight Normalization,method,1
+LFPNet with test time augmentation,method,1
+Confidence Calibration with an Auxiliary Class),method,1
+Channel Shuffle,method,1
+COCO-FUNIT,method,1
+KungFu,method,1
+Difference of Gaussian Random Forest,method,1
+Linear Warmup,method,1
+IQ-Learn,method,1
+Routing Transformer,method,1
+Online Hard Example Mining,method,1
+DeLighT Block,method,1
+TridentNet,method,1
+Assemble-ResNet,method,1
+ORB-SLAM2,method,1
+scSE,method,1
+Direct Feedback Alignment,method,1
+Go-Explore,method,1
+BART,method,1
+Class-activation map,method,1
+Location Sensitive Attention,method,1
+Stable Rank Normalization,method,1
+SCST,method,1
+Video Language Graph Matching Network,method,1
+Style Transfer Module,method,1
+Deep-CAPTCHA,method,1
+PSPNet,method,1
+ProxyOptimization,method,1
+Fixup Initialization,method,1
+FT-Transformer,method,1
+Segregated Attention Network,method,1
+Projection Discriminator,method,1
+Movement Pruning,method,1
+Autoencoders,method,1
+Local SGD,method,1
+BASE,method,1
+GEE,method,1
+HetPipe,method,1
+GHM-R,method,1
+NAM,method,1
+Deactivable Skip Connection,method,1
+FastPitch,method,1
+Residual Multi-Layer Perceptrons,method,1
+Kernel Activation Function,method,1
+TabNN,method,1
+CKConv,method,1
+Generic RoI Extractor,method,1
+Random Ensemble Mixture,method,1
+GPS,method,1
+YOLOv3,method,1
+Convolutional Vision Transformer,method,1
+ATSS,method,1
+GAN Feature Matching,method,1
+Domain-Symmetric Network,method,1
+Linear Layer,method,1
+SOM,method,1
+Faster R-CNN,method,1
+bilayer convolutional neural network,method,1
+Gait Emotion Recognition,method,1
+CCAC,method,1
+mBART,method,1
+Span-Based Dynamic Convolution,method,1
+GMI,method,1
+PNAS,method,1
+Harris Hawks optimization (HHO),method,1
+PLATO-2,method,1
+BezierAlign,method,1
+Progressive Neural Architecture Search,method,1
+Bridge-net,method,1
+PGC-DGCNN,method,1
+Multiplex Molecular Graph Neural Network,method,1
+Inception-ResNet-v2 Reduction-B,method,1
+Graph Representation with Global structure,method,1
+YellowFin,method,1
+Non-Local Operation,method,1
+DCGAN,method,1
+Temporal Distribution Matching,method,1
+UNIMO,method,1
+Voxel RoI Pooling,method,1
+Schrödinger Network,method,1
+SynaNN,method,1
+AlphaFold,method,1
+HRI pipeline,method,1
+Proxy Anchor Loss for Deep Metric Learning,method,1
+SNGAN,method,1
+Growing Cosine Unit,method,1
+Matrix-power Normalization,method,1
+Adaptive Bezier-Curve Network,method,1
+CenterMask,method,1
+GreedyNAS-B,method,1
+Channel Squeeze and Spatial Excitation,method,1
+Softplus,method,1
+RAM,method,1
+Hard Swish,method,1
+High-Order Consensuses,method,1
+TrOCR,method,1
+CDEP,method,1
+GBO,method,1
+Bootstrap Your Own Latent,method,1
+Medical Entity Disambiguation using Graph Neural Networks,method,1
+WaveGrad UBlock,method,1
+EsViT,method,1
+Residual Network,method,1
+GroupDNet,method,1
+AMSBound,method,1
+RandWire,method,1
+Channel Squeeze and Spatial Excitation (sSE),method,1
+CoaT,method,1
+VGG Loss,method,1
+E-swish,method,1
+WaveGrad,method,1
+L-GCN,method,1
+Fast AutoAugment,method,1
+RAE,method,1
+WaveNet,method,1
+Learning Cross-Modality Encoder Representations from Transformers,method,1
+Structural Deep Network Embedding,method,1
+ConvMLP,method,1
+ALiBi,method,1
+VisualBERT,method,1
+Instance-Level Meta Normalization,method,1
+Spatial Gating Unit,method,1
+Self-Organizing Map,method,1
+RFB Net,method,1
+Convolutional GRU,method,1
+Make-A-Scene,method,1
+L1 Regularization,method,1
+Slime Mould Algorithm,method,1
+VisuoSpatial Foresight,method,1
+SCN,method,1
+InstaBoost,method,1
+Dense Prediction Transformer,method,1
+Gated Recurrent Unit,method,1
+SPL,method,1
+K3M,method,1
+Magnification Prior Contrastive Similarity,method,1
+CP N3,method,1
+Scale Aggregation Block,method,1
+AutoEncoder,method,1
+Non-Local Block,method,1
+Dilated convolution with learnable spacings,method,1
+Triplet Loss,method,1
+ConViT,method,1
+Bidirectional Pyramid Networks for Semantic Segmentation,method,1
+DeepSIM,method,1
+AEDA,method,1
+Local Augmentation,method,1
+MPN,method,1
+SENet,method,1
+Contrastive Multiview Coding,method,1
+Auditory Cortex ResNet,method,1
+PGM,method,1
+"SuperpixelGridCut, SuperpixelGridMean, SuperpixelGridMix",method,1
+Invertible NxN Convolution,method,1
+GELU,method,1
+FuseFormer Block,method,1
+Linear Warmup With Linear Decay,method,1
+NPID,method,1
+SEAM,method,1
+MobileDet,method,1
+Serf,method,1
+Graph Neural Networks with Continual Learning,method,1
+Regularized Autoencoders,method,1
+Generative Adversarial Imitation Learning,method,1
+Accordion,method,1
+DropPathway,method,1
+FuseFormer,method,1
+ELMo,method,1
+StoGCN,method,1
+Switch Transformer,method,1
+Vision-and-Language BERT,method,1
+BTmPG,method,1
+GECO,method,1
+CIDA,method,1
+Dice Loss,method,1
+Self-Learning,method,1
+ScanSSD,method,1
+GNS,method,1
+Random Horizontal Flip,method,1
+ShuffleNet v2,method,1
+pixel2style2pixel,method,1
+Policy Similarity Metric,method,1
+Differentiable Digital Signal Processing,method,1
+CAM,method,1
+Primal Wasserstein Imitation Learning,method,1
+TayPO,method,1
+Transformer Decoder,method,1
+Ghost Bottleneck,method,1
+ShapeConv,method,1
+SSFG regularization,method,1
+Visual Attention,method,1
+Channel Attention Module,method,1
+Sparse Transformer,method,1
+NNCF,method,1
+Bilateral Grid,method,1
+Eligibility Trace,method,1
+Temporal attention,method,1
+Learnable adjacency matrix GCN,method,1
+RBPN,method,1
+Non-Linear-Bounding-Function,method,1
+FFMv1,method,1
+Meta-augmentation,method,1
+EBM,method,1
+1-Dimensional Convolutional Neural Networks,method,1
+SCARLET,method,1
+MacBERT,method,1
+T5,method,1
+Two Time-scale Update Rule,method,1
+RIFE,method,1
+,method,1
+(2+1)D Convolution,method,1
+BiDet,method,1
+RandAugment,method,1
+UNet++,method,1
+Deep LSTM Reader,method,1
+Deep Residual Pansharpening Neural Network,method,1
+CornerNet-Squeeze Hourglass Module,method,1
+IRN,method,1
+Chimera,method,1
+GPU-Efficient Network,method,1
+AdamW,method,1
+AGCN,method,1
+Depthwise Fire Module,method,1
+Temporally Consistent Spatial Augmentation,method,1
+SimAdapter,method,1
+LeViT Attention Block,method,1
+NICE,method,1
+Model-Free Episodic Control,method,1
+DAFNe,method,1
+Recurrent Trend Predictive Neural Network,method,1
+Auxiliary Classifier,method,1
+V-trace,method,1
+Large-scale spectral clustering,method,1
+Rendezvous,method,1
+NeuroTactic,method,1
+Dynamic SmoothL1 Loss,method,1
+Multi-head of Mixed Attention,method,1
+GGS-NNs,method,1
+Minibatch Discrimination,method,1
+Root-of-Mean-Squared Pooling,method,1
+TransE,method,1
+MultiGrain,method,1
+H-BEMD,method,1
+Adversarial Soft Advantage Fitting (ASAF),method,1
+TILDEv2,method,1
+Byte Pair Encoding,method,1
+All-Attention Layer,method,1
+IMPALA,method,1
+XCiT Layer,method,1
+Context Optimization,method,1
+SegNet,method,1
+Generative Adversarial Network,method,1
+IPBI,method,1
+Annealing SNNL,method,1
+Hyperboloid Embeddings,method,1
+BigGAN,method,1
+RevNet,method,1
+LAMB,method,1
+BiGAN,method,1
+Gaussian Mixture Variational Autoencoder,method,1
+Concrete Dropout,method,1
+Scaled Exponential Linear Unit,method,1
+Hierarchical Entity Graph Convolutional Network,method,1
+Lovasz-Softmax,method,1
+End-to-End Neural Diarization,method,1
+NormFormer,method,1
+Adafactor,method,1
+NICE-SLAM,method,1
+H3DNet,method,1
+Rectified Linear Units,method,1
+Invertible 1x1 Convolution,method,1
+SEER,method,1
+Sinusoidal Representation Network,method,1
+ShuffleNet,method,1
+Inverse Square Root Schedule,method,1
+CoVe,method,1
+DeepMask,method,1
+Discriminative Adversarial Search,method,1
+SRU++,method,1
+FLICA,method,1
+Grid Sensitive,method,1
+SCAN-clustering,method,1
+Elastic Dense Block,method,1
+CSPDenseNet,method,1
+ALS,method,1
+Precise RoI Pooling,method,1
+DMAGE,method,1
+AMSGrad,method,1
+Adam,method,1
+Semantic Cross Attention,method,1
+First Integer Neighbor Clustering Hierarchy,method,1
+ProGAN,method,1
+SIG,method,1
+1x1 Convolution,method,1
+Rotary Position Embedding,method,1
+TorchBeast,method,1
+TinaFace,method,1
+Knowledge Graph Refiner,method,1
+Contextual Residual Aggregation,method,1
+Taylor Expansion Policy Optimization,method,1
+Global Convolutional Network,method,1
+SRU,method,1
+SPADE,method,1
+PeleeNet,method,1
+LXMERT,method,1
+LTLS,method,1
+BinaryBERT,method,1
+Attribute2Font,method,1
+Spectrally Normalised GAN,method,1
+Dense Synthesized Attention,method,1
+Cutout,method,1
+Graphic Mutual Information,method,1
+GATv2,method,1
+BiGCN,method,1
+DGCNN,method,1
+ResNeXt,method,1
+CodeBERT,method,1
+Contextualized Topic Models,method,1
+DiCE Unit,method,1
+Viewmaker Network,method,1
+StruBERT,method,1
+DINO,method,1
+Deformable RoI Pooling,method,1
+Joint Learning Architecture,method,1
+Inception Module,method,1
+GradDrop,method,1
+CMCL,method,1
+SRS,method,1
+DELG,method,1
+Cyclical Learning Rate Policy,method,1
+RMS Pooling,method,1
+TAPAS,method,1
+DPN,method,1
+KOVA,method,1
+Graph Attention Network v2,method,1
+NeuralRecon,method,1
+k-Sparse Autoencoder,method,1
+IB-BERT,method,1
+Sparse Switchable Normalization,method,1
+CNN Bidirectional LSTM,method,1
+ESPNetv2,method,1
+UCTransNet,method,1
+Temporal Adaptive Module,method,1
+Compressive Transformer,method,1
+Layer-Sequential Unit-Variance Initialization,method,1
+Attentional Liquid Warping GAN,method,1
+Universal Language Model Fine-tuning,method,1
+MCKERNEL,method,1
+Coresets,method,1
+ClariNet,method,1
+PixelRNN,method,1
+Topographic VAE,method,1
+ShuffleNet V2 Downsampling Block,method,1
+GrowNet,method,1
+Single-path NAS,method,1
+ConvBERT,method,1
+O-Net,method,1
+GPipe,method,1
+Circular Smooth Label,method,1
+Enhanced Fusion Framework,method,1
+CPC v2,method,1
+CTracker,method,1
+Target Policy Smoothing,method,1
+LAPGAN,method,1
+SETR,method,1
+Stand-Alone Self Attention,method,1
+GraphSAINT,method,1
+k-Means Clustering,method,1
+Distributional Generalization,method,1
+XLM-R,method,1
+Chained-Tracker,method,1
+ManifoldPlus,method,1
+Collapsing Linear Unit,method,1
+PGNet,method,1
+MEI,method,1
+Meta Face Recognition,method,1
+SchNet,method,1
+NAFNet,method,1
+Noisy Student,method,1
+CPVT,method,1
+Hopfield Layer,method,1
+RESCAL with Relation Prediction,method,1
+Sample Redistribution,method,1
+DBGAN,method,1
+CBoW Word2Vec,method,1
+Demon ADAM,method,1
+S-shaped ReLU,method,1
+Label Smoothing,method,1
+Region Proposal Network,method,1
+Vision Transformer,method,1
+Nyströmformer,method,1
+cVAE,method,1
+XLNet,method,1
+Dorylus,method,1
+Segmentation Transformer,method,1
+SRN,method,1
+Symbolic rule learning,method,1
+Fast R-CNN,method,1
+SqueezeNeXt Block,method,1
+MDL,method,1
+AdaSqrt,method,1
+PSFR-GAN,method,1
+TaBERT,method,1
+UNet Transformer,method,1
+OTM,method,1
+Gradient-Based Subword Tokenization,method,1
+DPT,method,1
+Inverse Q-Learning,method,1
+Parametric UMAP,method,1
+Graph sampling based inductive learning method,method,1
+EncAttAgg,method,1
+mLSTM,method,1
+SAGA,method,1
+VirTex,method,1
+PipeDream-2BW,method,1
+SSKD,method,1
+VSF,method,1
+Mixture Normalization,method,1
+Attentional Liquid Warping Block,method,1
+ENIGMA,method,1
+PipeDream,method,1
+SESAME Discriminator,method,1
+k-NN,method,1
+STATEGAME MAINTAIN PICTURE BALANCED PLAY STABLE,method,1
+Feature Information Entropy Regularized Cross Entropy,method,1
+Inception v2,method,1
+RandomRotate,method,1
+Uncertainty Class Activation Map (U-CAM) Using Gradient Certainty Method,method,1
+Contrastive Predictive Coding,method,1
+PVTv2,method,1
+wav2vec Unsupervised,method,1
+DeCLUTR,method,1
+Goal-Driven Tree-Structured Neural Model,method,1
+GloVe,method,1
+Height-driven Attention Network,method,1
+Slot Attention,method,1
+Edge-augmented Graph Transformer,method,1
+DGI,method,1
+VPSNet,method,1
+NetMF,method,1
+Dilated Sliding Window Attention,method,1
+Differentiable Architecture Search Max-W,method,1
+Recursive Feature Pyramid,method,1
+LayerDrop,method,1
+Probabilistically Masked Language Model,method,1
+Euclidean Norm Regularization,method,1
+ProxylessNet-CPU,method,1
+Cross-Scale Non-Local Attention,method,1
+Dialogue-Adaptive Pre-training Objective,method,1
+SKEP,method,1
+Strip Pooling,method,1
+Non Maximum Suppression,method,1
+Segmentation of patchy areas in biomedical images based on local edge density estimation,method,1
+Deep Layer Aggregation,method,1
+Seq2Edits,method,1
+Batch Normalization,method,1
+CornerNet-Squeeze,method,1
+CRN,method,1
+Multiscale Attention ViT with Late fusion,method,1
+CheXNet,method,1
+Temporal ROIAlign,method,1
+3DSSD,method,1
+Cosine Normalization,method,1
+DCNN,method,1
+ConvTasNet,method,1
+Syntax Heat Parse Tree,method,1
+MAS,method,1
+SETSe,method,1
+node2vec,method,1
+Wasserstein GAN (Gradient Penalty),method,1
+RGCN,method,1
+SCARF,method,1
+NVAE Encoder Residual Cell,method,1
+Contour Proposal Network,method,1
+Animatable Reconstruction of Clothed Humans,method,1
+EfficientNetV2,method,1
+HPO,method,1
+Fully Convolutional Network,method,1
+Stochastically Scaling Features and Gradients Regularization,method,1
+Fire Module,method,1
+AlterNet,method,1
+R2D2,method,1
+NVAE,method,1
+CSPResNeXt Block,method,1
+EGT,method,1
+Morphence,method,1
+SwiGLU,method,1
+SELU,method,1
+Kaiming Initialization,method,1
+Conditional Convolutions for Instance Segmentation,method,1
+Robust Predictable Control,method,1
+ALCN,method,1
+DV3 Attention Block,method,1
+DiffAugment,method,1
+RoIAlign,method,1
+MLP-Mixer Layer,method,1
+Submanifold Convolution,method,1
+Dual Graph Convolutional Networks,method,1
+Network On Network,method,1
+PonderNet,method,1
+NoisyNet-A3C,method,1
+Sparse R-CNN,method,1
+HiFi-GAN,method,1
+AccoMontage,method,1
+FLAVA,method,1
+R-CNN,method,1
+Position-Sensitive RoI Pooling,method,1
+LightGCN,method,1
+Patch Merger Module,method,1
+Harris Hawks optimization,method,1
+Dense Block,method,1
+BytePS,method,1
+Good Feature Matching,method,1
+Swapping Assignments between Views,method,1
+SqueezeNet,method,1
+TNT,method,1
+Inception-C,method,1
+Diffusion,method,1
+Alternating Direction Method of Multipliers,method,1
+Flow Alignment Module,method,1
+Distributed Any-Batch Mirror Descent,method,1
+TUM,method,1
+Implicit PointRend,method,1
+StruBERT: Structure-aware BERT for Table Search and Matching,method,1
+Depthwise Convolution,method,1
+Class-MLP,method,1
+Strided Attention,method,1
+YOLOP,method,1
+Mix-FFN,method,1
+BigBird,method,1
+Concurrent Spatial and Channel Squeeze & Excitation (scSE),method,1
+Packed Levitated Markers,method,1
+DExTra,method,1
+Axial Attention,method,1
+Video Panoptic Segmentation Network,method,1
+LGCL,method,1
+Performer,method,1
+Instance Normalization,method,1
+1D CNN,method,1
+VTDE,method,1
+Adaptive Training Sample Selection,method,1
+CondInst,method,1
+Bottleneck Transformer,method,1
+DAEL,method,1
+Bilateral Guided Aggregation Layer,method,1
+Factorized Random Synthesized Attention,method,1
+Label Quality Model,method,1
+Gradient Harmonizing Mechanism C,method,1
+Implicit Q-Learning,method,1
+Depthwise Separable Convolution,method,1
+Pyramid Pooling Module,method,1
+Multiscale Vision Transformer,method,1
+Dual Attention Network,method,1
+Dynamic Time Warping,method,1
+GRLIA,method,1
+Self-adaptive Training,method,1
+EMF,method,1
+Adaptive Masking,method,1
+Soft Actor-Critic (Autotuned Temperature),method,1
+MACEst,method,1
+VocGAN,method,1
+TRPO,method,1
+MATE,method,1
+RegNetX,method,1
+T-D,method,1
+Group Decreasing Network,method,1
+Funnel Transformer,method,1
+DARTS,method,1
+FMix,method,1
+Step Decay,method,1
+Noise2Fast,method,1
+EMQAP,method,1
+Spatial and Channel SE Blocks,method,1
+T-Fixup,method,1
+Modularity preserving NMF,method,1
+GCNFN,method,1
+WaveGAN,method,1
+FBNet,method,1
+Simple Neural Attention Meta-Learner,method,1
+DeBERTa,method,1
+DBlock,method,1
+AdaShift,method,1
+Grouped Convolution,method,1
+Boundary-Aware Segmentation Network,method,1
+3 Dimensional Soft Attention,method,1
+Encoder-Attender-Aggregator,method,1
+Context Enhancement Module,method,1
+Paddle Anchor Free Network,method,1
+SegSort,method,1
+Zoneout,method,1
+Skip-gram Word2Vec,method,1
+Deformable ConvNets,method,1
+Balanced Selection,method,1
+Selective Kernel,method,1
+Adaptive Parameter-wise Diagonal Quasi-Newton Method,method,1
+RESCAL RP,method,1
+Hamburger,method,1
+Multiplicative Attention,method,1
+Class Activation Guided Attention Mechanism,method,1
+Deep Equilibrium Models,method,1
+VGG-16,method,1
+GLN,method,1
+SimpleNet,method,1
+Neural Tangent Transfer,method,1
+MaskFlownet,method,1
+CHM,method,1
+Part Affinity Fields,method,1
+Recurrent Event Network,method,1
+Feature-Centric Voting,method,1
+AUCO ResNet,method,1
+Spectral-Normalized Identity Priors,method,1
+EDLPS,method,1
+Gradual Self-Training,method,1
+Deflation,method,1
+Accumulating Eligibility Trace,method,1
+Embedding Dropout,method,1
+GAGNN,method,1
+Capsule Network,method,1
+SLR,method,1
+VoVNetV2,method,1
+Smooth ReLU,method,1
+Efficient Spatial Pyramid,method,1
+Self training multi target domain adaptive RetinaNet,method,1
+Monocular Real-Time Volumetric Performance Capture,method,1
+Softsign Activation,method,1
+HTCN,method,1
+SCARLET-NAS,method,1
+Deformable Position-Sensitive RoI Pooling,method,1
+Fast Voxel Query,method,1
+k-Nearest Neighbors,method,1
+Probabilistic Anchor Assignment,method,1
+Approximate Bayesian Computation,method,1
+ReInfoSelect,method,1
+Meta Reward Learning,method,1
+ParaNet Convolution Block,method,1
+Drafting Network,method,1
+HBMP,method,1
+GRU,method,1
+Nonlinear Activation Free Network,method,1
+MagFace,method,1
+Modulated Residual Network,method,1
+BigBiGAN,method,1
+GradientDICE,method,1
+Graph2Tree,method,1
+ABC,method,1
+ReLU6,method,1
+DSAM loss,method,1
+SwAV,method,1
+DimFuse,method,1
+Characterizable Invertible 3x3 Convolution,method,1
+AutoSync,method,1
+Log-time and Log-space Extreme Classification,method,1
+GRoIE,method,1
+Switchable Normalization,method,1
+FixRes,method,1
+Human Robot Interaction Pipeline,method,1
+PolarMask,method,1
+Guided Anchoring,method,1
+Visual Commonsense Region-based Convolutional Neural Network,method,1
+BAGUA,method,1
+Matrix NMS,method,1
+Inception-v3 Module,method,1
+Vokenization,method,1
+DiCENet,method,1
+Scale-wise Feature Aggregation Module,method,1
+Temporal Graph Network,method,1
+DeepWalk,method,1
+FINCH Clustering,method,1
+Directional Sparse FIltering,method,1
+Affine Coupling,method,1
+WideResNet,method,1
+GreedyNAS-C,method,1
+PP-YOLO,method,1
+RegNetY,method,1
+Efficient Recurrent Unit,method,1
+Adaptive Input Representations,method,1
+1-bit Adam,method,1
+Phase Shuffle,method,1
+ALP-GMM,method,1
+VGG-19,method,1
+Gaussian Process,method,1
+L2M,method,1
+Hard Sigmoid,method,1
+BPE,method,1
+Random Gaussian Blur,method,1
+Pipelined Backpropagation,method,1
+HRank,method,1
+Monte Carlo Dropout,method,1
+Spatial Group-wise Enhance,method,1
+Surrogate Lagrangian Relaxation,method,1
+RUN,method,1
+G-NIA,method,1
+Bidirectional GAN,method,1
+CT3D,method,1
+Local Importance-based Pooling,method,1
+GHM-C,method,1
+Deep Orthogonal Fusion of Local and Global Features,method,1
+MatrixNet,method,1
+Computation Redistribution,method,1
+BiGRU,method,1
+SimVLM,method,1
+SNIPER,method,1
+Involution,method,1
+LR-Net,method,1
+UNiversal Image-TExt Representation Learning,method,1
+Lower Bound on Transmission using Non-Linear Bounding Function in Single Image Dehazing,method,1
+IICNet,method,1
+Metropolis Hastings,method,1
+CodeSLAM,method,1
+CARLA,method,1
+PAUSE,method,1
+Generalized ELBO with Constrained Optimization,method,1
+Inverted Bottleneck BERT,method,1
+Semantic Reasoning Network,method,1
+SIRM,method,1
+FastMoE,method,1
+Sparse Autoencoder,method,1
+ENet Dilated Bottleneck,method,1
+Temporal Distribution Characterization,method,1
+Blue River Controls,method,1
+Collaborative Distillation,method,1
+Stochastic Depth,method,1
+Crystal Graph Neural Network,method,1
+Neural adjoint method,method,1
+Simple Visual Language Model,method,1
+Squeeze-and-Excitation Block,method,1
+SFT,method,1
+SRGAN Residual Block,method,1
+GRIN,method,1
+CORAD,method,1
+Network Dissection,method,1
+Asynchronous Interaction Aggregation,method,1
+Contrastive Language-Image Pre-training,method,1
+Latent Optimisation,method,1
+Fraternal Dropout,method,1
+HiSD,method,1
+DPN Block,method,1
+TimeSformer,method,1
+Fast_BAT,method,1
+PowerSGD,method,1
+Ontology,method,1
+PCA Whitening,method,1
+Sliced Iterative Generator,method,1
+Principal Neighbourhood Aggregation,method,1
+PrIme Sample Attention,method,1
+Global and Sliding Window Attention,method,1
+Time-homogenuous Top-K Ranking,method,1
+NEAT,method,1
+Concatenation Affinity,method,1
+GBlock,method,1
+Deformable Convolution,method,1
+Linformer,method,1
+Recurrent Dropout,method,1
+Differentiable Architecture Search,method,1
+TraDeS,method,1
+GTS,method,1
+Hit-Detector,method,1
+Contextual Word Vectors,method,1
+FCPose,method,1
+Routing Attention,method,1
+Neighborhood Contrastive Learning,method,1
+ALAE,method,1
+Lipschitz Constant Constraint,method,1
+RPN,method,1
+VATT,method,1
+FlexFlow,method,1
+Elastic Margin Loss for Deep Face Recognition,method,1
+Local Prior Matching,method,1
+DV3 Convolution Block,method,1
+Selective Search,method,1
+Wasserstein Embedding for Graph Learning,method,1
+Powerpropagation,method,1
+Message Passing Neural Network,method,1
+Self-Attention Guidance,method,1
+Receptive Field Block,method,1
+Jukebox,method,1
+OMGD,method,1
+DCN-V2,method,1
+Semi-Supervised Knowledge Distillation,method,1
+Self-Attention Network,method,1
+CutBlur,method,1
+Sandwich Batch Normalization,method,1
+SimCLRv2,method,1
+Double Q-learning,method,1
+Watch Your Step,method,1
+GreedyNAS-A,method,1
+Blended Diffusion,method,1
+Channel-wise Soft Attention,method,1
+G-GLN,method,1
+Convolutional Block Attention Module,method,1
+MNMF,method,1
+FIERCE,method,1
+StyleGAN2,method,1
+Wavelet-integrated Identity Preserving Adversarial Network for face super-resolution,method,1
+ResNet-D,method,1
+Diffusion-Convolutional Neural Networks,method,1
+Heatmap,method,1
+Gradient Quantization with Adaptive Levels/Multiplier,method,1
+N-step Returns,method,1
+Residual Connection,method,1
+Balanced Feature Pyramid,method,1
+AugMix,method,1
+LINE,method,1
+In-Place Activated Batch Normalization,method,1
+DE-GAN,method,1
+SiLU,method,1
+LIME,method,1
+Two-Way Dense Layer,method,1
+GIC,method,1
+Spectral Gap Rewiring Layer,method,1
+Curvature Regularized Variational Auto-Encoder,method,1
+Sarsa,method,1
+CAG,method,1
+Fast-YOLOv3,method,1
+GAN-TTS,method,1
+Enhanced Sequential Inference Model,method,1
+R-FCN,method,1
+Logistic Regression,method,1
+PyTorch DDP,method,1
+PALED,method,1
+Model-Agnostic Meta-Learning,method,1
+IoU-Balanced Sampling,method,1
+ARCH,method,1
+Recurrent models of visual attention,method,1
+DD-PPO,method,1
+Depthwise Dilated Separable Convolution,method,1
+Deep Ensembles,method,1
+Masked Convolution,method,1
+YOLOv4,method,1
+Data-efficient Image Transformer,method,1
+KE-MLM,method,1
+NoisyNet-Dueling,method,1
+BlendMask,method,1
+MAVL,method,1
+1-bit LAMB,method,1
+Convolution,method,1
+Invertible Rescaling Network,method,1
+TrIVD-GAN,method,1
+Effective Squeeze-and-Excitation Block,method,1
+Prediction-aware One-To-One,method,1
+TD Lambda,method,1
+Sparse Convolutions,method,1
+VIME,method,1
+ESIM,method,1
+Patch Merger,method,1
+Global second-order pooling convolutional networks,method,1
+U-RNNs,method,1
+Contextual Decomposition Explanation Penalization,method,1
+Tree-structured Parzen Estimator Approach (TPE),method,1
+Local Patch Interaction,method,1
+High-Order Proximity preserved Embedding,method,1
+Exponential Linear Unit,method,1
+IFNet,method,1
+LFPNet (TTA),method,1
+Spatio-temporal stability analysis,method,1
+CondConv,method,1
+SPIN,method,1
+Rank-based Loss,method,1
+PrivacyNet,method,1
+VLG-Net,method,1
+TSDAE,method,1
+Adaptively Sparse Transformer,method,1
+ARiA,method,1
+Conditional DBlock,method,1
+RetinaNet-RS,method,1
+Side-Aware Boundary Localization,method,1
+RSE,method,1
+ABCNet,method,1
+EdgeBoxes,method,1
+Strain Elevation Tension Spring embedding,method,1
+LMOT,method,1
+Semantic Clustering by Adopting Nearest Neighbours,method,1
+Barlow Twins,method,1
+PIRL,method,1
+InfoNCE,method,1
+Deep Stereo Geometry Network,method,1
+Motion-Encoded Particle Swarm Optimization,method,1
+Knowledge Distillation,method,1
+ADMM,method,1
+Non-monotonically Triggered ASGD,method,1
+DVD-GAN,method,1
+DistilBERT,method,1
+Snapshot Ensembles,method,1
+DetNet,method,1
+LocalViT,method,1
+RAdam,method,1
+Panoptic FPN,method,1
+LMOT: Efficient Light-Weight Detection and Tracking in Crowds,method,1
+Probability Guided Maxout,method,1
+Prescribed Generative Adversarial Network,method,1
+Contextual Graph Markov Model,method,1
+AutoGAN,method,1
+CrossTransformers,method,1
+Spatial Attention Module,method,1
+Neural Tangent Kernel,method,1
+CReLU,method,1
+Parallax,method,1
+ResNeXt Block,method,1
+Efficient Channel Attention,method,1
+AdvProp,method,1
+Asynchronous Proximal Policy Optimization,method,1
+Denoising Autoencoder,method,1
+Dimension-wise Fusion,method,1
+CutMix,method,1
+Group-Aware Neural Network,method,1
+Sticker Response Selector,method,1
+GraphESN,method,1
+Inception-B,method,1
+STraTA,method,1
+SGD,method,1
+SNN,method,1
+DetNASNet,method,1
+Adaptive Softmax,method,1
+PnP,method,1
+Focal Loss,method,1
+MFF,method,1
+Streaming Module,method,1
+Forward gradient,method,1
+Feature Pyramid Network,method,1
+ADAHESSIAN,method,1
+ISPL,method,1
+TTUR,method,1
+STA-LSTM,method,1
+TaLK Convolution,method,1
+SGD with Momentum,method,1
+Talking-Heads Attention,method,1
+PISA,method,1
+Switchable Atrous Convolution,method,1
+TridentNet Block,method,1
+GENet,method,1
+LapStyle,method,1
+NT-Xent,method,1
+Boom Layer,method,1
+MelGAN,method,1
+Attentive Normalization,method,1
+3D Dynamic Scene Graph,method,1
+E2EAdaptiveDistTraining,method,1
+OSA (identity mapping + eSE),method,1
+StyleMapGAN,method,1
+Mask Scoring R-CNN,method,1
+CornerNet-Squeeze Hourglass,method,1
+Low Rank Tensor Learning Paradigms,method,1
+Composite Fields,method,1
+WGAN GP,method,1
+TWEC,method,1
+Multi-scale Progressive Fusion Network,method,1
+Split Attention,method,1
+RoIWarp,method,1
+PatchGAN,method,1
+Blind Image Decomposition Network,method,1
+Graph Finite-State Automaton,method,1
+PULSE,method,1
+MAD Learning,method,1
+Boost-GNN,method,1
+LV-ViT,method,1
+OODformer,method,1
+Deterministic Policy Gradient,method,1
+XGPT,method,1
+Inverted Residual Block,method,1
+RotatE,method,1
+SimCSE,method,1
+DeLighT,method,1
+Adaptive Robust Loss,method,1
+PReLU-Net,method,1
+Ternary Weight Splitting,method,1
+Tacotron2,method,1
+Slanted Triangular Learning Rates,method,1
+MeRL,method,1
+NeRF,method,1
+GAN,method,1
+CenterPoint,method,1
+Variance-based Feature Importance of Artificial Neural Networks,method,1
+S-GCN,method,1
+DeepCluster,method,1
+BP-Transformer,method,1
+Kollen-Pollack Learning,method,1
+MixConv,method,1
+StyleGAN,method,1
+Adabelief,method,1
+Siamese Network,method,1
+Cross-resolution features,method,1
+Clipped Double Q-learning,method,1
+DeepIR,method,1
+Local Relation Layer,method,1
+Laplacian EigenMap,method,1
+MUSIQ,method,1
+MNN,method,1
+MFR,method,1
+3-dimensional interaction space,method,1
+Automated Graph Learning,method,1
+Average Pooling,method,1
+Darknet-19,method,1
+Pyramid Vision Transformer v2,method,1
+WFST,method,1
+Data augmentation using Polya-Gamma latent variables.,method,1
+ASGD Weight-Dropped LSTM,method,1
+CLIP,method,1
+FAVOR+,method,1
+Unified VLP,method,1
+Quasi-Recurrent Neural Network,method,1
+Spatial Attention-Guided Mask,method,1
+Lookahead,method,1
+Relative Position Encodings,method,1
+DSGN,method,1
+Off-Diagonal Orthogonal Regularization,method,1
+Random Erasing,method,1
+Gated Attention Networks,method,1
+WaveGlow,method,1
+AdaDelta,method,1
+SpecGAN,method,1
+Local Contrast Normalization,method,1
+LMU,method,1
+DeiT,method,1
+Automatic Structured Variational Inference,method,1
+BIDeN,method,1
+Global Coupled Adaptive Number of Shots,method,1
+Exact Fusion Model,method,1
+,dataset,1
+Fashion-MMT,dataset,1
+Pushshift Telegram,dataset,1
+Malay Speech Data by Mobile Phone_Reading,dataset,1
+Chinese VQA,dataset,1
+SuMe,dataset,1
+PST900,dataset,1
+Multi-Genre Natural Language Inference,dataset,1
+DaNewsroom,dataset,1
+27 Class American Sign Language-Based Dataset,dataset,1
+Minigrid,dataset,1
+SpatialVOC2K,dataset,1
+Grand Theft Auto 5,dataset,1
+PART-OF,dataset,1
+CSAbstruct Dataset,dataset,1
+MSU Video Quality Metrics Benchmark,dataset,1
+ClipShots,dataset,1
+NYT-H,dataset,1
+Multilingual LibriSpeech,dataset,1
+60k Stack Overflow Questions,dataset,1
+LiDAR-based Moving Object Segmentation,dataset,1
+Temporal Popularity Image Collection,dataset,1
+ProteinKG25,dataset,1
+capes,dataset,1
+WikiMulti,dataset,1
+Proposal Flow Datasets,dataset,1
+Real World Occluded Faces,dataset,1
+FAIR-Play,dataset,1
+Occ-Traj120,dataset,1
+catbAbI QA-mode,dataset,1
+LiveQA,dataset,1
+PANDA,dataset,1
+TRN,dataset,1
+Grasping dataset: suction-based,dataset,1
+MLS,dataset,1
+SMS Spam Collection Data Set,dataset,1
+HuTu 80 cell populations,dataset,1
+Person Re-identification in the Wild,dataset,1
+Avicenna: Deductive Commonsense Reasoning,dataset,1
+CorresPondenceNet,dataset,1
+HM3D-Semantics,dataset,1
+TGIF,dataset,1
+The Winograd Schema Challenge (Russian),dataset,1
+Task2Dial,dataset,1
+N-UCLA,dataset,1
+TRaffic ANd COngestionS,dataset,1
+Species-800,dataset,1
+UCLA Protest Image,dataset,1
+DAD,dataset,1
+Birdsnap,dataset,1
+Fongbe Speech Dataset,dataset,1
+https://sourceforge.net/adobe/adobedatasets/panoramas/home/Home/,dataset,1
+Wuhan UAV-borne hyperspectral image,dataset,1
+SES,dataset,1
+DIRHA,dataset,1
+The BioScope Corpus,dataset,1
+Stylized ImageNet,dataset,1
+249 Hours - Hangzhou Dialect Speech Data by Mobile Phone,dataset,1
+MSU Video Alignment and Retrieval Benchmark Suite,dataset,1
+DBLP Temporal,dataset,1
+Cuff-Less Blood Pressure Estimation,dataset,1
+DSSN,dataset,1
+Berkeley Multimodal Human Action Database,dataset,1
+Tufts Medical Echocardiogram Dataset,dataset,1
+HumanoidRobotPose,dataset,1
+SKU110K,dataset,1
+Short Video Dataset,dataset,1
+Dynamic Vision Sensor 3D Human Pose Dataset,dataset,1
+multi-labEl haTe speecH detectiOn dataSet,dataset,1
+TotalCapture,dataset,1
+Question Answering via Sentence Composition,dataset,1
+Yet Another Chinese Learner Corpus,dataset,1
+CBT,dataset,1
+Niko Chord Progression Dataset,dataset,1
+ParsTwiner,dataset,1
+MuJoCo,dataset,1
+"13.3 Hours - Chinese Mandarin Synthesis Corpus-Female, Emotional",dataset,1
+19.46 Hours - American English Speech Synthesis Corpus-Female,dataset,1
+PIROPO,dataset,1
+201 Hours - Singaporean Speaking English Speech Data by Mobile Phone,dataset,1
+Emotions and their Triggers during Covid-19,dataset,1
+Common Objects in COntext-stuff,dataset,1
+CommonCrawl News dataset,dataset,1
+VFR-2420,dataset,1
+Microsoft Research Video Description Corpus,dataset,1
+VoicePrivacy 2020,dataset,1
+PIPAL,dataset,1
+MedNLI,dataset,1
+Skeleton-Based Action Recognition Dataset,dataset,1
+SYNTHIA-PANO,dataset,1
+Large-Scale Arabic Book Reviews,dataset,1
+Tracking Machine Learning Challenge,dataset,1
+Sentiment Analysis + Data Drift,dataset,1
+Hotels-50K,dataset,1
+Google Landmarks Dataset v2,dataset,1
+TED-LIUM 3,dataset,1
+CB-ToF,dataset,1
+L3DAS22,dataset,1
+"1,417 People – 3D Living_Face & Anti_Spoofing Data",dataset,1
+TrUMAn,dataset,1
+Egomon Gaze & Video dataset,dataset,1
+IARPA Janus Benchmark-S,dataset,1
+Multi-domain Wizard-of-Oz,dataset,1
+Perceptual Image Processing ALgorithms IQA Dataset,dataset,1
+Benchmark for Neural Paraphrase Detection,dataset,1
+PLOD-filtered,dataset,1
+Rice Image Dataset,dataset,1
+VISION dataset,dataset,1
+Software Mentions in Scientific Articles,dataset,1
+CLO-WTSP,dataset,1
+rSoccer,dataset,1
+ACDC Scribbles,dataset,1
+CUAD,dataset,1
+global cyclone data from 1841 to 2021,dataset,1
+TNBC,dataset,1
+SMLM CEP152-Complex FITS Images,dataset,1
+Partial-iLIDS,dataset,1
+image-goal-nav-dataset,dataset,1
+x-stance,dataset,1
+OTTers,dataset,1
+emojiSpace embedding,dataset,1
+SMM4H,dataset,1
+Eth-Exchange,dataset,1
+Water Footprint Recommender System Data,dataset,1
+A Multilingual Form Understanding Benchmark,dataset,1
+FUNSD,dataset,1
+FSDnoisy18k,dataset,1
+Duolingo SLAM Shared Task,dataset,1
+Replication Data for: On estimating Armington elasticities for Japan's meat imports,dataset,1
+TurkQA,dataset,1
+WikiNEuRal,dataset,1
+"14,980 Images PPT OCR Data of 8 Languages",dataset,1
+Irish Wikipedia,dataset,1
+PyTorrent,dataset,1
+Colon Cancer Histology Dataset,dataset,1
+ACID,dataset,1
+Unsupervised Reinforcement Learning Benchmark,dataset,1
+ObjectsRoom,dataset,1
+XTREME,dataset,1
+Room Rearrangement,dataset,1
+M-PCCD,dataset,1
+ImageNet Long-Tailed,dataset,1
+Visual Affordance Learning,dataset,1
+MAST,dataset,1
+CrowdSpeech,dataset,1
+Refer-YouTube-VOS,dataset,1
+Deep Soccer Captioning,dataset,1
+ACE 2004,dataset,1
+Munich Sentinel2 Crop Segmentation,dataset,1
+Pose Estimation Lunar Robot,dataset,1
+Bajer Online Misogyny,dataset,1
+SILG,dataset,1
+FullTextPeerRead,dataset,1
+Vision for Intelligent Vehicles and Applications,dataset,1
+Full-Spectral Autofluorescence Lifetime Microscopic Images,dataset,1
+CaSiNo,dataset,1
+INRIA Sparse Light Field,dataset,1
+Knot128,dataset,1
+An Amharic News Text classification Dataset,dataset,1
+Russian Commitment Bank,dataset,1
+Dataset for methane combustion,dataset,1
+ETH Kinect Dataset,dataset,1
+Atari Annotated RAM Interface,dataset,1
+EMC Dutch Clinical Corpus,dataset,1
+HAA500,dataset,1
+OSCAR,dataset,1
+The Softwarised Network Data Zoo,dataset,1
+DeepFake MNIST+,dataset,1
+ETRI-LIVE Space-Time Subsampled Video Quality (STSVQ) Database,dataset,1
+Multimodal Entity Image Repurposing,dataset,1
+Freibrug Cars,dataset,1
+GINC,dataset,1
+MVTEC 3D-AD,dataset,1
+TekGen,dataset,1
+Public Git Archive,dataset,1
+Content4All,dataset,1
+CFQ,dataset,1
+Virtual Image Dataset for Illumination Transfer,dataset,1
+Booking.com Data Challenge,dataset,1
+All Words OpenIE,dataset,1
+NLI-TR,dataset,1
+VideoLQ,dataset,1
+High resolution ship collections 2016,dataset,1
+S2ORC,dataset,1
+Cops-Ref,dataset,1
+Alsat-2B,dataset,1
+Source Code Tagger Training Set,dataset,1
+2018 Data Science Bowl,dataset,1
+AQUA-RAT,dataset,1
+Large Scale Informal Chinese Corpus,dataset,1
+Mal-Activity,dataset,1
+Vietnamese Speech Data,dataset,1
+FoodLogoDet-1500,dataset,1
+Collision Avoidance Challenge dataset,dataset,1
+PTB-TIR,dataset,1
+CPED,dataset,1
+ETH Py150 Open,dataset,1
+C4,dataset,1
+E-KAR,dataset,1
+NLPR,dataset,1
+RAVEN,dataset,1
+OntoNotes 4.0,dataset,1
+UBOFAB19,dataset,1
+PASCAL Face,dataset,1
+ASPEC,dataset,1
+Sub-Slot Dialogue dataset id number domain,dataset,1
+Modern Office-31,dataset,1
+Pre-trained Transliterated Embeddings for Indian Languages,dataset,1
+Western Mediterranean Wetlands Birds - Version 2,dataset,1
+RITE,dataset,1
+3D cross-source point cloud registration dataset,dataset,1
+HYPERVIEW,dataset,1
+Multilingual Reuters,dataset,1
+Kuzushiji-49,dataset,1
+CVEfixes,dataset,1
+SketchyVR,dataset,1
+Multilingual Persuasion Detection,dataset,1
+StyleGAN-Human,dataset,1
+Boxy Vehicles Dataset,dataset,1
+CORRONA CERTAIN,dataset,1
+TOSCA,dataset,1
+DAVIS-585,dataset,1
+Crisscrossed Captions,dataset,1
+The Stack,dataset,1
+Abstract Meaning Representation,dataset,1
+VAST Absorption,dataset,1
+EXEQ-300k,dataset,1
+Controlled On/Off Loads Library,dataset,1
+"4,788 images Human Facial Skin Defects Data",dataset,1
+ADNI,dataset,1
+HEV-I,dataset,1
+Kvasir,dataset,1
+AwA2,dataset,1
+Building and Using Comparable Corpora,dataset,1
+Visual Relationship Detection Dataset,dataset,1
+Google Landmarks,dataset,1
+KITTI'15 MSplus,dataset,1
+Slashdot,dataset,1
+XSum,dataset,1
+DREAM,dataset,1
+“Visible” Physical Commonsense Knowledge,dataset,1
+FSD50K,dataset,1
+Clinical Diagnosis Normalization Dataset,dataset,1
+TUT Acoustic Scenes 2017,dataset,1
+ABC Dataset,dataset,1
+Brown University Stylus Handwriting,dataset,1
+Sony-TAu Realistic Spatial Soundscapes 2022,dataset,1
+Multi-Dimensional Gender Bias Datasets,dataset,1
+CLEAR,dataset,1
+PRED18: Predator/Prey DAVIS Dataset,dataset,1
+Portrait Photo Retouching dataset,dataset,1
+Peer to Peer Hate,dataset,1
+G1020,dataset,1
+Mining in Ethereum,dataset,1
+Identity-Centric and Fine-Grained Person Description Dataset,dataset,1
+Hypersim,dataset,1
+OpeReid,dataset,1
+895 Fire Videos Data,dataset,1
+Complementary Commonsense,dataset,1
+MOBIO,dataset,1
+Knowledge-Enriched Task-Oriented Dialogue,dataset,1
+Video Storytelling,dataset,1
+SPEECH-COCO,dataset,1
+MUSIC,dataset,1
+AnlamVer,dataset,1
+Reddit Norm Violations,dataset,1
+KP20k,dataset,1
+IIRC,dataset,1
+DEFT Corpus,dataset,1
+Grasp Affordance,dataset,1
+TruthfulQA,dataset,1
+EPIE,dataset,1
+Stickers,dataset,1
+pathbased,dataset,1
+BReAst Carcinoma Subtyping,dataset,1
+Kuzushiji-Kanji,dataset,1
+HOPE-Image,dataset,1
+ASIRRA,dataset,1
+HoaxItaly,dataset,1
+SWSR,dataset,1
+Eduge,dataset,1
+Spoken-SQuAD,dataset,1
+"ASC (TIL, 19 tasks)",dataset,1
+QASC,dataset,1
+Contextualised Polyseme Word Sense Dataset v2,dataset,1
+Financial Opinion Mining and Question Answering,dataset,1
+Ocean Drifters,dataset,1
+A Dataset to facilitate Explainable Classification and Summarization of Concerns towards COVID Vaccines,dataset,1
+Get it #OffMyChest,dataset,1
+KAIST-Radar,dataset,1
+ELAS,dataset,1
+Multi-Sentence Reading Comprehension,dataset,1
+Cornell (60%/20%/20% random splits),dataset,1
+EDUVSUM,dataset,1
+Dongguk Body-based Person Recognition Database (DBPerson-Recog-DB1),dataset,1
+Algebra Question Answering with Rationales,dataset,1
+CoVaxLies v1,dataset,1
+Large-scale Chinese Question Matching Corpus,dataset,1
+The 4th China Physiological Signal Challenge 2021,dataset,1
+MR Movie Reviews,dataset,1
+Multiple Object Tracking 17,dataset,1
+NTPairs,dataset,1
+SciFact,dataset,1
+Cross-Lingual Transfer Evaluation of Multilingual Encoders,dataset,1
+PIQA,dataset,1
+Freebase-122,dataset,1
+MinneApple,dataset,1
+E-GMD,dataset,1
+Multiface,dataset,1
+CATS,dataset,1
+Dirty-MNIST,dataset,1
+CHIP-CDN,dataset,1
+KADID-10k,dataset,1
+227 Hours - Italian Speaking English Speech Data by Mobile Phone,dataset,1
+Face Expression Recognition Plus dataset,dataset,1
+ROSTD,dataset,1
+Background Dataset - 20k,dataset,1
+Tracking the Trackers,dataset,1
+Multilingual Quality Estimation and Automatic Post-editing Dataset,dataset,1
+Purpose-driven Affordance Dataset,dataset,1
+RoboCupSimData,dataset,1
+MUlti-Shot EventS,dataset,1
+ROF,dataset,1
+OSCD,dataset,1
+Neural Latents Benchmark,dataset,1
+RC-49,dataset,1
+Color BSD68,dataset,1
+H-DIBCO 2016,dataset,1
+NAFLD pathology and healthy tissue samples,dataset,1
+ML-CB,dataset,1
+NERGRIT Corpus,dataset,1
+FoodSeg103,dataset,1
+Procedural Human Action Videos,dataset,1
+MOD,dataset,1
+Drone Tracking,dataset,1
+Colossal Clean Crawled Corpus,dataset,1
+MFAQ,dataset,1
+Berlin Database of Emotional Speech,dataset,1
+Oxford Buildings,dataset,1
+Social Bias Inference Corpus,dataset,1
+CCGbank,dataset,1
+Cooperative Driving Dataset,dataset,1
+PAGE,dataset,1
+VALUE,dataset,1
+OADAT: Experimental and Synthetic Clinical Optoacoustic Data for Standardized Image Processing,dataset,1
+RAVEN-FAIR,dataset,1
+WMT19 Metrics Task,dataset,1
+SKM-TEA,dataset,1
+TimeTravel,dataset,1
+SHREC 2016 TRACK: PARTIAL MATCHING OF DEFORMABLE SHAPES,dataset,1
+CoNaLa,dataset,1
+NTU RGB+D 2D,dataset,1
+Incidents1M,dataset,1
+Extended MNIST,dataset,1
+A large-scale high-resolution outdoor stereo dataset,dataset,1
+CVIT PIB,dataset,1
+Ninapro DB5 - 10 Intact Subjects - Double Myo Armband,dataset,1
+GIGO revisited: ML publications' approaches to training data,dataset,1
+QUVA Repetition,dataset,1
+Track Long and Prosper,dataset,1
+WITS,dataset,1
+Wikipedia Generation,dataset,1
+Multi-scene Aerial Image,dataset,1
+RIT-18,dataset,1
+FSDKaggle2019,dataset,1
+REDDIT-5K,dataset,1
+MDIA,dataset,1
+VALSE: A Task-Independent Benchmark for Vision and Language Models Centered on Linguistic Phenomena,dataset,1
+MJU-Waste,dataset,1
+Semantic Scholar Network,dataset,1
+PARANMT-50M,dataset,1
+PMC-SA,dataset,1
+TUM-GAID,dataset,1
+DeepSport Dataset,dataset,1
+GAMMA Challenge,dataset,1
+VQG,dataset,1
+BBBC041,dataset,1
+Pseudocode-to-Code,dataset,1
+EXTREME CLASSIFICATION,dataset,1
+San Francisco Park Evaluation,dataset,1
+WebUAV-3M,dataset,1
+Pan+ChiPhoto,dataset,1
+The Uzbek Wordnet,dataset,1
+MS-CXR,dataset,1
+raw gaze data,dataset,1
+HiNER-original,dataset,1
+SoftAttributes,dataset,1
+A collection of LFR benchmark graphs,dataset,1
+COCO-CN,dataset,1
+COUGHVID,dataset,1
+Beyond the Imitation Game Benchmark,dataset,1
+MATRES,dataset,1
+Quality of Movement Assessment for Rehabilitation,dataset,1
+Sparse LiDAR KITTI dataset,dataset,1
+Panoptic,dataset,1
+Multi-View Partial point cloud,dataset,1
+Pirá,dataset,1
+3D Lane Synthetic Dataset,dataset,1
+DanbooRegion,dataset,1
+MTNT,dataset,1
+"Dataset for: ""It is just a flu: Assessing the Effect of Watch History on YouTube's Pseudoscientific Video Recommendations""",dataset,1
+NCT-CRC-HE-100K,dataset,1
+Replica,dataset,1
+WEB-FORUM-52 gold standard,dataset,1
+SWDE,dataset,1
+ML guided Logic synthesis,dataset,1
+PROTEINS,dataset,1
+FB1.5M,dataset,1
+ZooScanNet,dataset,1
+Criteo live traffic data,dataset,1
+ViText2SQL,dataset,1
+Pump and dump dataset,dataset,1
+CAR,dataset,1
+BBBC039,dataset,1
+DDAD,dataset,1
+IndicGLUE,dataset,1
+Multimodal PISA,dataset,1
+Tecnocampus Hand Image Database,dataset,1
+Correlated and Imbalanced MNIST,dataset,1
+COCO Object Detection VIPriors subset,dataset,1
+Toloka WaterMeters,dataset,1
+CARLANE Benchmark,dataset,1
+Waste Classification data,dataset,1
+Liver Tumor Segmentation Challenge 2017,dataset,1
+Replay-Mobile,dataset,1
+SECBENCH,dataset,1
+The Laboratory for Web Algorithmics,dataset,1
+COCO,dataset,1
+HO-3D,dataset,1
+IndoNLI,dataset,1
+WikiDes,dataset,1
+ITB,dataset,1
+Indonesian Speech Data,dataset,1
+VISION,dataset,1
+BuzzFeed-Webis Fake News Corpus 2016,dataset,1
+OrdinalDataset,dataset,1
+BioRED,dataset,1
+STAR: A Benchmark for Situated Reasoning in Real-World Videos,dataset,1
+Reasonable Crowd,dataset,1
+MAVS,dataset,1
+MultiLingual Question Answering,dataset,1
+OQMD v1.2,dataset,1
+MMAct,dataset,1
+SynthCity,dataset,1
+STREETS,dataset,1
+ORConvQA,dataset,1
+ZESHEL,dataset,1
+OSS for Social Good Project List,dataset,1
+KoDF,dataset,1
+CoDEx Medium,dataset,1
+StarCraft Multi-Agent Challenge Plus,dataset,1
+Interactive Gibson Environment,dataset,1
+MultiSubs: A Large-scale Multimodal and Multilingual Dataset,dataset,1
+MSP-Podcast,dataset,1
+Multi_Channel_Grid,dataset,1
+CLOze test by TeacHers,dataset,1
+CARD-660,dataset,1
+HAKE,dataset,1
+FKD,dataset,1
+IMDb Movie Reviews,dataset,1
+MIMIC PERform Testing Dataset,dataset,1
+DailyDialog,dataset,1
+French CASS dataset,dataset,1
+ViViD++,dataset,1
+Evaluating registrations of serial sections with distortions of the ground truths. Supplemental data,dataset,1
+SVIRO,dataset,1
+100DOH,dataset,1
+NaturalProofs,dataset,1
+Social-IQ,dataset,1
+Botswana,dataset,1
+The 3rd China Physiological Signal Challenge 2020,dataset,1
+RELLIS-3D,dataset,1
+HellaSwag,dataset,1
+Oulu-CASIA,dataset,1
+Eisen Funcat,dataset,1
+CoVoST,dataset,1
+Middlebury 2014,dataset,1
+MPII Cooking 2 Dataset,dataset,1
+FoolMeTwice,dataset,1
+PDE dataset,dataset,1
+A-OKVQA,dataset,1
+Depth in the Wild,dataset,1
+ECG in High Intensity Exercise Dataset,dataset,1
+FSC147,dataset,1
+N-Digit MNIST,dataset,1
+Extended Labeled Faces in-the-Wild,dataset,1
+WebChild,dataset,1
+Nations,dataset,1
+Cam2BEV,dataset,1
+HANNA,dataset,1
+EVIL,dataset,1
+OpenEA Benchmark,dataset,1
+A2Dre,dataset,1
+DAGW,dataset,1
+IQR,dataset,1
+Set5,dataset,1
+ARCA23K,dataset,1
+KACC,dataset,1
+UCSD Ped2,dataset,1
+NEMO Hebrew NER and Morphology Corpus,dataset,1
+Breast Cancer Immunohistochemical Image Generation,dataset,1
+DocBank-TB,dataset,1
+Derisi Funcat,dataset,1
+Mall,dataset,1
+Toyota Smarthome Trimmed,dataset,1
+Movie Fill-in-the-Blank,dataset,1
+Multilingual and Code-mixed Visual Question Answering,dataset,1
+Wiki-CS,dataset,1
+Cross-Linguistic Polysemies,dataset,1
+P3,dataset,1
+MUNO21,dataset,1
+Multi-Spectral Leaf Segmentation For Crop/Weed Identification,dataset,1
+WMT 2014 Medical,dataset,1
+DIR-LAB COPDgene,dataset,1
+UniMiB SHAR,dataset,1
+AnimalWeb,dataset,1
+IowaRain,dataset,1
+Multimodal Spontaneous Expression-Heart Rate dataset,dataset,1
+Flickr Cropping Dataset,dataset,1
+PEC,dataset,1
+The 'Call me sexist but' Dataset (CMSB),dataset,1
+CIFAR-10,dataset,1
+Monocular 3D Lane Detection Dataset,dataset,1
+Microsoft Learning to Rank Datasets-30k,dataset,1
+SLURP,dataset,1
+BH-rPPG,dataset,1
+esXNLI,dataset,1
+Abt-Buy,dataset,1
+"9,497 Images - OCR Data of 10 Types of Forms",dataset,1
+Many Faces of Anger,dataset,1
+CAMUS,dataset,1
+DCF Valuation template,dataset,1
+Open-Domain Spoken Question Answering,dataset,1
+Liverpool 360 degree Street View,dataset,1
+COCO-Stuff,dataset,1
+A*3D,dataset,1
+arXiv Astro-Ph,dataset,1
+MP-3DHP: Multi-Person 3D Human Pose Dataset,dataset,1
+Moral Foundations Reddit Corpus,dataset,1
+Trailers12k,dataset,1
+WEB-FORUM-52,dataset,1
+Rendered WB dataset,dataset,1
+Multiple Light Source,dataset,1
+Tunisian Sentiment Analysis Corpus,dataset,1
+Emomusic,dataset,1
+Pre-Contest Workshop Slidedeck,dataset,1
+DRealSR,dataset,1
+CUHK01,dataset,1
+ModelNet40-C,dataset,1
+PEMS-BAY Point Missing,dataset,1
+Frames Dataset,dataset,1
+MICCAI'2015 Gland Segmentation Challenge Contest Dataset,dataset,1
+Wiki-Reliability,dataset,1
+MetaGraspNet difficulty 4 - hard 2,dataset,1
+Visual Wake Words,dataset,1
+Kvasir-SEG,dataset,1
+The Samsung Open MOS Dataset for the Evaluation of Neural Text-to-Speech Synthesis,dataset,1
+Visual Dialog,dataset,1
+COVID-19 Image Data Collection,dataset,1
+WiLI-2018,dataset,1
+Topo-boundary,dataset,1
+speechocean762,dataset,1
+WHO-COVID19 Dataset,dataset,1
+Rendered SST2,dataset,1
+French Question Answering Dataset,dataset,1
+PCD,dataset,1
+PhC-U373,dataset,1
+CBC,dataset,1
+xP3,dataset,1
+Uzbek Speech Corpus,dataset,1
+GeoQA,dataset,1
+MLFP,dataset,1
+CIC,dataset,1
+50 Salads,dataset,1
+MineRL,dataset,1
+Exclusively Dark Image Dataset,dataset,1
+NASA Worldview,dataset,1
+ROSE,dataset,1
+Wind Tunnel and Flight Test Experiments,dataset,1
 UG^2,dataset,0
 ClovaCall,dataset,0
 HErlev,dataset,0

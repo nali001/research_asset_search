@@ -57,6 +57,4 @@ if __name__ == '__main__':
     print(f'download_log_coll: {len(list(download_log_coll.find()))}')
     print(f'raw_notebook_coll: {len(list(raw_notebook_coll.find()))}')
 
-    export_resources()
-
     
