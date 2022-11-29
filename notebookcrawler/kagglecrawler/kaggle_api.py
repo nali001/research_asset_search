@@ -3,6 +3,7 @@
 
 import json
 import kaggle
+import time
 from kaggle import KaggleApi
 
 
@@ -30,7 +31,9 @@ class AuthenticatedKaggleAPI:
             kernel_list = []
             try: 
                 kernel_list = kaggle.api.kernels_list(search=query, page=page)
-                print(f'Crawling page {page}')                
+                print(f'Crawling page {page}') 
+                # Add sleep here to prevent `TooMany Requests`` error
+                time.sleep(5)               
                 if len(kernel_list) == 0: 
                     break
                 else: 

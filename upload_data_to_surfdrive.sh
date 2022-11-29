@@ -22,3 +22,16 @@ mkdir ./temp
 cp ./search_engine_app/notebooksearch/Notebooks/*.csv ./temp
 rclone copy ./temp na_surf:notebook_search_docker/Notebooks/  --progress
 rm -dr ./temp
+
+
+# 3. 
+# Source: notebookcrawler/DB_exports/
+# Destination: /home/notebook_search_docker/notebookcrawler/DB_exports/
+rclone copy ./notebookcrawler/DB_exports/ na_surf:notebook_search_docker/notebookcrawler/DB_exports/  --progress
+
+
+# 4. 
+# Source: notebookcrawler/Queries/
+# Destination: /home/notebook_search_docker/notebookcrawler/Queries/
+rclone copy ./notebookcrawler/Queries/ na_surf:notebook_search_docker/notebookcrawler/Queries/ --progress
+

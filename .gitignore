@@ -14,6 +14,9 @@ search_engine_app/notebooksearch/test.py
 search_engine_app/test.ipynb
 search_engine_app/auth/kaggle_token.json
 
+notebookcrawler/DB_exports/
+notebookcrawler/kagglecrawler/test.ipynb
+
 get_sample.ipynb
 
 nginx/logs/*

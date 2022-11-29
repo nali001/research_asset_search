@@ -2,6 +2,10 @@
 # Incorporate multiprocessing to increase parallisation. 
 
 import os 
+import time
+from datetime import timedelta
+
+import numpy as np
 import pandas as pd
 from kagglecrawler.kaggle_api import AuthenticatedKaggleAPI
 
@@ -96,8 +100,12 @@ class KaggleNotebookCrawler:
             return 0
         
 
-    def search_kernels_to_db(self, query, page_range, search_log_coll): 
+    def search_kernels_to_db(self, ordered_query, page_range, search_log_coll, update=False): 
         ''' Search Kaggle kernels using given query and store new records to MongoDB
+
+        Args: 
+            - update: Boolean. If True, the search log will be updated using new searching results.  
+                otherwise, if the number of notebooks w.r.t each query is >15, then the query is not used for searching. 
 
         Returns: 
             - results: a list of dict in the form of {
@@ -105,8 +113,21 @@ class KaggleNotebookCrawler:
                 'title': kernel.title, 
                 'kernel_ref': kernel.ref}
         '''
-        records = self.kaggle_api.search_kernels(query, page_range)
-        num_modified = self.update_search_log(records, search_log_coll)
+        print(f'---------------- Query [{ordered_query[0]+1}]: {ordered_query[1]} ----------------') 
+        query = ordered_query[1]
+
+        # Check if the query has been searched
+        records = []
+        key = {'query': query}
+        num_records = 15
+        if update==False and len(list(search_log_coll.find(key)))>num_records:
+            print(f'[***SKIP] it already has more than {num_records} records in the search log. ')
+            return records
+        try: 
+            records = self.kaggle_api.search_kernels(query, page_range)
+            num_modified = self.update_search_log(records, search_log_coll)
+        except Exception as e: 
+            print(e)
         return records
 
     def download_kernel_to_db(self, query, kernel_ref, download_log_coll, raw_notebook_coll):
@@ -169,12 +190,10 @@ class KaggleNotebookCrawler:
         Args: 
             - ordered_query: (index, query_text)
         '''
-        print(f'---------------- Query [{ordered_query[0]+1}]: {ordered_query[1]} ----------------') 
         query = ordered_query[1]
-
         # If `re_search` is True, it will search the notebooks using `query` 
         if re_search==True: 
-            records = self.search_kernels_to_db(query, page_range, search_log_coll)
+            records = self.search_kernels_to_db(ordered_query, page_range, search_log_coll, update=True)
             print(records)
         # If `re_search` is False, it will read from `search_log_coll` for a list of notebooks to be download 
         elif re_search==False: 
@@ -192,82 +211,12 @@ class KaggleNotebookCrawler:
             self.download_kernel_to_db(query, kernel_ref, download_log_coll, raw_notebook_coll)
         return True
 
-    def export_raw_notebooks(self):
-        pass
-
-
-# --------------------------------- Usage examples
-# def crawl_kaggle_notebooks(QUERY_FILE, page_range, re_search=False): 
-#     # create database and collections
-#     client = MongoClient('localhost', 27017) # change the ip and port to your mongo database's
-#     db = client['kagglecrawler']
-#     search_log_coll = db['search_log']
-#     download_log_coll = db['download_log']
-#     raw_notebook_coll = db['raw_notebooks']
-#     task_log = db['task_log']
-    
-    
-#     crawler = KaggleNotebookCrawler()
-
-#     # Read queries
-#     df_queries = pd.read_csv(QUERY_FILE)
-#     # queries = ['wsi']
-#     # df_queries = pd.DataFrame(queries, columns= ['queries'])
-#     # print(df_queries)
-#     def f(ordered_query):
-#         result = crawler.crawl_notebooks_to_db(ordered_query, page_range, search_log_coll, download_log_coll, raw_notebook_coll, re_search)
-#         return result
-
-#     ordered_queries = list(enumerate(df_queries['query']))
-#     with Pool(20) as p:
-#         p.map(f, ordered_queries)
-        
-#     return True
-
-
-# def main():
-#     # Check if the current working path is `search_engine_app``, if not terminate the program
-#     if os.path.basename(os.getcwd()) != 'notebookcrawler': 
-#         print(f'Please navigate to `notebookcrawler` directory.')
-#         return False
-#     QUERY_FILE = os.path.join(os.getcwd(), 'Queries/test_queries.csv')
-#     # crawl_kaggle_notebooks(QUERY_FILE, page_range=10, re_search=True)
-    
-#     # create database and collections
-#     client = MongoClient('localhost', 27017) # change the ip and port to your mongo database's
-#     db = client['kagglecrawler']
-#     search_log_coll = db['search_log']
-#     download_log_coll = db['download_log']
-#     raw_notebook_coll = db['raw_notebooks']
-#     task_log = db['task_log']
-    
-    
-#     crawler = KaggleNotebookCrawler()
-
-#     # Read queries
-#     df_queries = pd.read_csv(QUERY_FILE)
-#     # queries = ['wsi']
-#     # df_queries = pd.DataFrame(queries, columns= ['queries'])
-#     # print(df_queries)
-#     def f(ordered_query):
-#         # print(f'---------------- Query [{query[0]+1}]: {query[1]} ----------------') 
-#         result = crawler.crawl_notebooks_to_db(ordered_query, page_range=10, search_log_coll=search_log_coll, download_log_coll=download_log_coll, raw_notebook_coll=raw_notebook_coll, re_search=True)
-#         return result
-
-#     ordered_queries = list(enumerate(df_queries['query']))
-#     with Pool(20) as p:
-#         p.map(f, ordered_queries)   
-
-#     return True
 
 if __name__ == '__main__':
     # Check if the current working path is `search_engine_app``, if not terminate the program
     if os.path.basename(os.getcwd()) != 'notebookcrawler': 
         print(f'Please navigate to `notebookcrawler` directory.')
 
-    QUERY_FILE = os.path.join(os.getcwd(), 'Queries/pwc_queries.csv')
-    # crawl_kaggle_notebooks(QUERY_FILE, page_range=10, re_search=True)
-    
     # create database and collections
     client = MongoClient('localhost', 27017) # change the ip and port to your mongo database's
     db = client['kagglecrawler']
@@ -276,20 +225,45 @@ if __name__ == '__main__':
     raw_notebook_coll = db['raw_notebooks']
     task_log = db['task_log']
     
-    
+    # Create crawler
     crawler = KaggleNotebookCrawler()
 
-    # Read queries
-    df_queries = pd.read_csv(QUERY_FILE)
-    # queries = ['wsi']
-    # df_queries = pd.DataFrame(queries, columns= ['queries'])
-    # print(df_queries)
-    def f(ordered_query):
-        # print(f'---------------- Query [{query[0]+1}]: {query[1]} ----------------') 
+    def multiprocess_crawl(ordered_query):
+        # Sleep for random seconds to avoid request flooding.  
+        time.sleep(np.random.randint(1, 7))
         result = crawler.crawl_notebooks_to_db(ordered_query, page_range=10, search_log_coll=search_log_coll, download_log_coll=download_log_coll, raw_notebook_coll=raw_notebook_coll, re_search=False)
         return result
 
-    ordered_queries = list(enumerate(df_queries['query']))
-    with Pool(50) as p:
-        p.map(f, ordered_queries)
+    def multiprocess_search(ordered_query):
+        # Sleep for random seconds to avoid request flooding.  
+        time.sleep(np.random.randint(1, 7))
+        result = crawler.search_kernels_to_db(ordered_query, page_range=10, search_log_coll=search_log_coll, update=False)
+        return result
+
+    QUERY_LOG_FILE = os.path.join(os.getcwd(), 'Queries/pwc_log_queries.csv')
+
+    start_time = time.time()
+    for i in range(10): 
+        # Read queries log
+        df_queries_log = pd.read_csv(QUERY_LOG_FILE)
+        # Filter out queries that have not been crawled
+        df_queries = df_queries_log.loc[df_queries_log['crawled']==0]
+        # Split all the queries into small sets of `span` size
+        span = 100
+        craw_queries = df_queries.iloc[0:span]
+        ordered_queries = list(enumerate(craw_queries['query']))
+
+        # Create multiple processes
+        num_processes = 10
+        with Pool(num_processes) as p:
+            p.map(multiprocess_search, ordered_queries)
+            elapsed=int(time.time()-start_time)
+            print(f'Elapsed time: {str(timedelta(seconds=elapsed))}\n')
+            print(f'\nUpdate searching results for {span} queries!\n')
+
+            # Update query log 
+            df_queries_log.loc[craw_queries.index, 'crawled'] = 1
+            df_queries_log.to_csv(QUERY_LOG_FILE, index=False)
+
+
 
