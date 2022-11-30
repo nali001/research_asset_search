@@ -9,7 +9,8 @@ db = client['kagglecrawler']
 search_log_coll = db['search_log']
 download_log_coll = db['download_log']
 raw_notebook_coll = db['raw_notebooks']
-task_log = db['task_log']
+notebook_metadata_coll = db['notebook_metadata_coll']
+task_log_coll = db['task_log']
 
 
 def export_from_collection(coll, file_name): 
@@ -39,6 +40,12 @@ def export_download_log():
     export_from_collection(coll, file_name)
     return True
 
+def export_task_log(): 
+    coll = task_log_coll
+    file_name = os.path.join(os.getcwd(), 'DB_exports/task_log.csv')
+    export_from_collection(coll, file_name)
+    return True 
+
 
 def export_raw_notebooks():
     coll = raw_notebook_coll
@@ -46,15 +53,56 @@ def export_raw_notebooks():
     export_from_collection(coll, file_name)
     return True
 
+
+def export_notebook_metadata():
+    coll = notebook_metadata_coll
+    file_name = os.path.join(os.getcwd(), 'DB_exports/notebook_metadata.csv')
+    export_from_collection(coll, file_name)
+    return True
+
 def export_resources():
     export_search_log()
     export_download_log()
     export_raw_notebooks()
+    export_task_log()
+    export_notebook_metadata()
     return True
 
-if __name__ == '__main__': 
+def get_coll_status(): 
+    print(f'-------------- Collection status ---------------')
     print(f'search_log_coll: {len(list(search_log_coll.find()))}')
     print(f'download_log_coll: {len(list(download_log_coll.find()))}')
     print(f'raw_notebook_coll: {len(list(raw_notebook_coll.find()))}')
+    print(f'task_log_coll: {len(list(task_log_coll.find()))}')
+    print(f'notebook_metadata_coll: {len(list(notebook_metadata_coll.find()))}')
+    print(f'\n-----------------------------------------------')
+
+
+def get_task_status(): 
+    df_tasks = pd.DataFrame.from_dict(list(task_log_coll.find()))
+    un_searched = df_tasks.loc[df_tasks.searched==-1]
+    un_downloaded = df_tasks.loc[df_tasks.downloaded==-1]
+    zero_searched = df_tasks.loc[df_tasks.searched==0]
+    zero_downloaded = df_tasks.loc[df_tasks.downloaded==0]
+    
+    print(f'\n----------------- Task status -----------------')
+    print(f'seached notebooks: {len(list(search_log_coll.find()))}')
+    print(f'download notebooks: {len(list(download_log_coll.find()))}')
+    print(f'un_searched query: {len(un_searched)}')
+    print(f'un_downloaded query: {len(un_downloaded)}')
+    print(f'zero_searched query: {len(zero_searched)}')
+    print(f'zero_downloaded query: {len(zero_downloaded)}')
+    print(f'------------------------------------------------')
+
+def real_time_status(): 
+    for i in range(1000): 
+        get_task_status()
+        time.sleep(10)
+
+
+
+if __name__ == '__main__': 
+    # real_time_status()
+    export_resources()
 
     

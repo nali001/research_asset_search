@@ -14,7 +14,16 @@ class AuthenticatedKaggleAPI:
         # This requires th credenticial beding placed in '~/.kaggle/kaggle.json'
         kaggle_api.authenticate() 
 
-    def download_kernel(self, kernel_ref): 
+    def download_kernel(self, kernel_ref:str) -> dict: 
+        ''' Download one kernel 
+        Args: 
+            - kernel_ref: str. the same as Kaggle ID. 
+
+        Return: 
+            - response: responses from Kaggle.
+            
+        '''
+        response = {}
         if '/' in kernel_ref:
             dataset_urls = kernel_ref.split('/')
             owner_slug = dataset_urls[0]
@@ -33,7 +42,6 @@ class AuthenticatedKaggleAPI:
                     retry_after = int(e.headers['Retry-After'])*20
                     print(f'\nRetry {attempt+1} in {retry_after} seconds zzzzZZZZZZ\n')
                     time.sleep(retry_after)
-                    response = e
                     continue
                 # Skip other exceptions
                 else: 
@@ -41,7 +49,15 @@ class AuthenticatedKaggleAPI:
         return response
 
 
-    def search_kernels(self, query, page_range): 
+    def search_kernels(self, query:str, page_range:int) -> list:
+        ''' search `page_range` pages for one query 
+        Args: 
+            - 
+
+        Return: 
+            - result: a list of dict
+        ''' 
+
         kernels = []
         for page in range(1, page_range+1): 
             end_page = False
