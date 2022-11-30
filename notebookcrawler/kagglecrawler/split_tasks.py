@@ -51,11 +51,20 @@ class TaskSplitter:
 
 
     def load_tasks(self, task_file):
+        ''' Create new collection `task_log_coll`. It exists, delete it. 
+        '''
         # Read tasks from csv file
         df_tasks = pd.read_csv(task_file)
+        if '_id' in df_tasks.columns:
+            df_tasks.drop(columns=['_id'], inplace=True)
+        records = df_tasks.to_dict('records')
 
-        # Create a collection for local task log 
+        # Create a new collection for local task log 
         task_log_coll = self.task_log_coll
+        task_log_coll.delete_many({})
+
+        task_log_coll.insert_many(records)
+        return records
         
 
 
@@ -89,17 +98,24 @@ if __name__ == '__main__':
     # download_log_coll = db['download_log']
     # raw_notebook_coll = db['raw_notebooks']
     # notebook_metadata_coll = db['notebook_metadata_coll']
-    central_task_log_coll = db['central_task_log_coll']
     task_log_coll = db['task_log']
+    central_task_log_coll = db['central_task_log_coll']
 
     # Create task_splitter
     kwargs = {
         'task_log_coll': task_log_coll, 
-        'central_task_log_coll': task_log_coll, 
+        'central_task_log_coll': central_task_log_coll, 
     }
 
     task_splitter = TaskSplitter(**kwargs)
     num_tasks = 10
     task_path = os.path.join(os.getcwd(), 'Tasks')
-    task_splitter.split_search_tasks(num_tasks, task_path)
+
+    # ------------------- Split task ------------------ 
+    # task_splitter.split_search_tasks(num_tasks, task_path)
+
+    # ------------------- Load task ------------------- 
+    # task_file = os.path.join(task_path, 'search_task_0.csv')
+    # task_splitter.load_tasks(task_file)
+
 

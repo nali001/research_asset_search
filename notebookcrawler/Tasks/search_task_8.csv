@@ -1,0 +1,1260 @@
+_id,query,searched,downloaded
+63876465727ddf9f05e5d2a8,MIcro-Surgical Anastomose Workflow recognition on training sessions,-1,-1
+63876465727ddf9f05e5d2aa,PlasticineLab,-1,-1
+63876465727ddf9f05e5d2ac,JIGSAWS,-1,-1
+63876465727ddf9f05e5d2ae,Evan Komp and Stephanie Valleau,-1,-1
+63876465727ddf9f05e5d2b0,A Billion Ways to Grasp,-1,-1
+63876465727ddf9f05e5d2b2,Image Description Sequences,-1,-1
+63876465727ddf9f05e5d2b4,SFEW,-1,-1
+63876465727ddf9f05e5d2b6,CASME II,-1,-1
+63876465727ddf9f05e5d2b8,FREDo,-1,-1
+63876465727ddf9f05e5d2ba,Molecule3D,-1,-1
+63876465727ddf9f05e5d2bc,FGraDA,-1,-1
+63876465727ddf9f05e5d2be,Visual7W,-1,-1
+63876465727ddf9f05e5d2c0,FDF,-1,-1
+63876465727ddf9f05e5d2c2,UDE-Office-Home,-1,-1
+63876465727ddf9f05e5d2c4,North America Birds,-1,-1
+63876465727ddf9f05e5d2c6,Stereo Waterdrop,-1,-1
+63876465727ddf9f05e5d2c8,GBSG2,-1,-1
+63876465727ddf9f05e5d2ca,VideoSet,-1,-1
+63876465727ddf9f05e5d2cc,WD50K,-1,-1
+63876465727ddf9f05e5d2ce,Thingi10K,-1,-1
+63876465727ddf9f05e5d2d0,Constrained Language Understanding Evaluation Standard,-1,-1
+63876465727ddf9f05e5d2d2,VCAS-Motion,-1,-1
+63876465727ddf9f05e5d2d4,Animals-10,-1,-1
+63876465727ddf9f05e5d2d6,Click-Through Rate Prediction - Avazu,-1,-1
+63876465727ddf9f05e5d2d8,MovieGraphs,-1,-1
+63876465727ddf9f05e5d2da,XL-BEL,-1,-1
+63876465727ddf9f05e5d2dc,Kinect-WSJ,-1,-1
+63876465727ddf9f05e5d2de,Citations to invalid DOI-identified entities obtained from processing DOI-to-DOI citations to add in COCI,-1,-1
+63876465727ddf9f05e5d2e0,LitMind Dictionary,-1,-1
+63876465727ddf9f05e5d2e2,Pascal Objects Eye Tracking,-1,-1
+63876465727ddf9f05e5d2e4,Visual Odometry with Inertial and Depth,-1,-1
+63876465727ddf9f05e5d2e6,ACL Title and Abstract Dataset,-1,-1
+63876465727ddf9f05e5d2e8,VIST-Edit,-1,-1
+63876465727ddf9f05e5d2ea,ECB+,-1,-1
+63876465727ddf9f05e5d2ec,Plaintext Jokes,-1,-1
+63876465727ddf9f05e5d2ee,Human Pose Recognition Data,-1,-1
+63876465727ddf9f05e5d2f0,VideoMatte240K,-1,-1
+63876465727ddf9f05e5d2f2,WORD,-1,-1
+63876465727ddf9f05e5d2f4,Discharge Summary Clinical Questions,-1,-1
+63876465727ddf9f05e5d2f6,YouTube UGC dataset,-1,-1
+63876465727ddf9f05e5d2f8,MPII Human Pose,-1,-1
+63876465727ddf9f05e5d2fa,Election2020,-1,-1
+63876465727ddf9f05e5d2fc,Long Range Graph Benchmark (LRGB),-1,-1
+63876465727ddf9f05e5d2fe,BC4CHEMD,-1,-1
+63876465727ddf9f05e5d300,ArNLI,-1,-1
+63876465727ddf9f05e5d302,ZEST,-1,-1
+63876465727ddf9f05e5d304,Fine-Grained R2R,-1,-1
+63876465727ddf9f05e5d306,ASLG-PC12,-1,-1
+63876465727ddf9f05e5d308,Chikusei Dataset,-1,-1
+63876465727ddf9f05e5d30a,Multilingual and Multidimensional COVID-19 Fake News Data Repository,-1,-1
+63876465727ddf9f05e5d30c,OC,-1,-1
+63876465727ddf9f05e5d30e,E-commerce,-1,-1
+63876465727ddf9f05e5d310,COCO-Text Captioned,-1,-1
+63876465727ddf9f05e5d312,HACS,-1,-1
+63876465727ddf9f05e5d314,Winoground,-1,-1
+63876465727ddf9f05e5d316,Multi-relational Graph Dataset for Yelp Spam Review Detection,-1,-1
+63876465727ddf9f05e5d318,Gaze360,-1,-1
+63876465727ddf9f05e5d31a,SketchGraphs,-1,-1
+63876465727ddf9f05e5d31c,SBU Captions Dataset,-1,-1
+63876465727ddf9f05e5d31e,Consumer Healthcare Question Summarization,-1,-1
+63876465727ddf9f05e5d320,IJB-A,-1,-1
+63876465727ddf9f05e5d322,NoW Benchmark,-1,-1
+63876466727ddf9f05e5d324,Gestures Recognition Data,-1,-1
+63876466727ddf9f05e5d326,CAL500,-1,-1
+63876466727ddf9f05e5d328,NDPSID - WACV 2019,-1,-1
+63876466727ddf9f05e5d32a,DBP2.0 zh-en,-1,-1
+63876466727ddf9f05e5d32c,CENTER-TBI,-1,-1
+63876466727ddf9f05e5d32e,BioASQ,-1,-1
+63876466727ddf9f05e5d330,Cellular Automata Reinforcement Learning Environment,-1,-1
+63876466727ddf9f05e5d332,DisKnE,-1,-1
+63876466727ddf9f05e5d334,Mid-level perceptual musical features,-1,-1
+63876466727ddf9f05e5d336,ContractNLI: A Dataset for Document-level Natural Language Inference for Contracts,-1,-1
+63876466727ddf9f05e5d338,The Korean Question Answering Dataset,-1,-1
+63876466727ddf9f05e5d33a,Corrosion Image Data Set for Automating Scientific Assessment of Materials,-1,-1
+63876466727ddf9f05e5d33c,CelebA,-1,-1
+63876466727ddf9f05e5d33e,ARIA,-1,-1
+63876466727ddf9f05e5d340,CalMS21,-1,-1
+63876466727ddf9f05e5d342,TraVLR,-1,-1
+63876466727ddf9f05e5d344,Visual Question Answering,-1,-1
+63876466727ddf9f05e5d346,IEIs,-1,-1
+63876466727ddf9f05e5d348,Something-Something-100,-1,-1
+63876466727ddf9f05e5d34a,A Tree-based Symbolic Dataset For Symbolic Regression,-1,-1
+63876466727ddf9f05e5d34c,CURE-OR,-1,-1
+63876466727ddf9f05e5d34e,Large-Scale CLIR Dataset,-1,-1
+63876466727ddf9f05e5d350,MED,-1,-1
+63876466727ddf9f05e5d352,TAU-NIGENS Spatial Sound Events 2021,-1,-1
+63876466727ddf9f05e5d354,DOTmark,-1,-1
+63876466727ddf9f05e5d356,Museum Art Medium dataset,-1,-1
+63876466727ddf9f05e5d358,COVID19-CountryImage,-1,-1
+63876466727ddf9f05e5d35a,Twitter Death Hoaxes,-1,-1
+63876466727ddf9f05e5d35c,Narvik Road Dataset,-1,-1
+63876466727ddf9f05e5d35e,DISRPT2021,-1,-1
+63876466727ddf9f05e5d360,ArCOV19-Rumors,-1,-1
+63876466727ddf9f05e5d362,Region-aware benchmark based on the LYHM,-1,-1
+63876466727ddf9f05e5d364,Algonauts 2021,-1,-1
+63876466727ddf9f05e5d366,CrowdFlow,-1,-1
+63876466727ddf9f05e5d368,MASRI-HEADSET,-1,-1
+63876466727ddf9f05e5d36a,Paraphrase and Semantic Similarity in Twitter,-1,-1
+63876466727ddf9f05e5d36c,MultiCite,-1,-1
+63876466727ddf9f05e5d36e,Paint4Poem,-1,-1
+63876466727ddf9f05e5d370,FIne-GRained Image Memorability,-1,-1
+63876466727ddf9f05e5d372,Multi Vehicle Stereo Event Camera,-1,-1
+63876466727ddf9f05e5d374,M-Phasis,-1,-1
+63876466727ddf9f05e5d376,ZInd,-1,-1
+63876466727ddf9f05e5d378,CTI-to-MITRE,-1,-1
+63876466727ddf9f05e5d37a,Aesthetics Text Corpus,-1,-1
+63876466727ddf9f05e5d37c,RHD,-1,-1
+63876466727ddf9f05e5d37e,RRS,-1,-1
+63876466727ddf9f05e5d380,TimeHetNet,-1,-1
+63876466727ddf9f05e5d382,FRGC-Morphs,-1,-1
+63876466727ddf9f05e5d384,The Cancer Genome Atlas,-1,-1
+63876466727ddf9f05e5d386,Sentinel 2 manually extracted deep water spectra with high noise levels and sunglint,-1,-1
+63876466727ddf9f05e5d388,Extended YouTube Faces (E-YTF),-1,-1
+63876466727ddf9f05e5d38a,Open Broadcast Media Audio from TV,-1,-1
+63876466727ddf9f05e5d38c,Thermal Bridges on Building Rooftops,-1,-1
+63876466727ddf9f05e5d38e,OMG-Emotion,-1,-1
+63876466727ddf9f05e5d390,Set11,-1,-1
+63876466727ddf9f05e5d392,Adience,-1,-1
+63876466727ddf9f05e5d394,irc-disentanglement,-1,-1
+63876466727ddf9f05e5d396,ActivityNet Captions,-1,-1
+63876466727ddf9f05e5d398,Annotated Facial Landmarks in the Wild,-1,-1
+63876466727ddf9f05e5d39a,COUNTER,-1,-1
+63876466727ddf9f05e5d39c,ISPRS Potsdam,-1,-1
+63876466727ddf9f05e5d39e,beanTech Anomaly Detection,-1,-1
+63876466727ddf9f05e5d3a0,Title-based Video Summarization Dataset,-1,-1
+63876466727ddf9f05e5d3a2,Symbolic Interactive Language Grounding,-1,-1
+63876466727ddf9f05e5d3a4,i3DMM Test Dataset,-1,-1
+63876466727ddf9f05e5d3a6,openDD,-1,-1
+63876466727ddf9f05e5d3a8,FSL4,-1,-1
+63876466727ddf9f05e5d3aa,$O_2$Perm,-1,-1
+63876466727ddf9f05e5d3ac,UDA-CH,-1,-1
+63876466727ddf9f05e5d3ae,P-DESTRE,-1,-1
+63876466727ddf9f05e5d3b0,r/transprogrammer survey results,-1,-1
+63876466727ddf9f05e5d3b2,KINS,-1,-1
+63876466727ddf9f05e5d3b4,LDDRS,-1,-1
+63876466727ddf9f05e5d3b6,O3,-1,-1
+63876466727ddf9f05e5d3b8,Astock,-1,-1
+63876466727ddf9f05e5d3ba,m2caiSeg,-1,-1
+63876466727ddf9f05e5d3bc,RuStance,-1,-1
+63876466727ddf9f05e5d3be,Santesteban VTO,-1,-1
+63876466727ddf9f05e5d3c0,pixraw10P,-1,-1
+63876466727ddf9f05e5d3c2,BanglaWriting,-1,-1
+63876466727ddf9f05e5d3c4,ExampleStack,-1,-1
+63876466727ddf9f05e5d3c6,Chinese Character Riddle,-1,-1
+63876466727ddf9f05e5d3c8,JUSThink Dialogue and Actions Corpus,-1,-1
+63876466727ddf9f05e5d3ca,PHysically-grounded Abstract Social Events,-1,-1
+63876466727ddf9f05e5d3cc,Multimodal Dialogs,-1,-1
+63876466727ddf9f05e5d3ce,PathVQA,-1,-1
+63876466727ddf9f05e5d3d0,Wikipedia Ban Evasion Dataset,-1,-1
+63876466727ddf9f05e5d3d2,Behavioural Biometrics Multi-device and multi-Activity data from Same users,-1,-1
+63876466727ddf9f05e5d3d4,Multimodal Dyadic Behavior,-1,-1
+63876466727ddf9f05e5d3d6,SVHN,-1,-1
+63876466727ddf9f05e5d3d8,K2HPD,-1,-1
+63876466727ddf9f05e5d3da,HeadlineCause,-1,-1
+63876466727ddf9f05e5d3dc,Aff-Wild2,-1,-1
+63876466727ddf9f05e5d3de,Small Target Detection database,-1,-1
+63876466727ddf9f05e5d3e0,RNADesign,-1,-1
+63876466727ddf9f05e5d3e2,Fluo-N3DL-TRIC,-1,-1
+63876466727ddf9f05e5d3e4,Compositional Physical Reasoning Dataset,-1,-1
+63876466727ddf9f05e5d3e6,ViGGO,-1,-1
+63876466727ddf9f05e5d3e8,Taiwan Mandarin Speech Data by Mobile Phone_Reading,-1,-1
+63876466727ddf9f05e5d3ea,ChineseFoodNet,-1,-1
+63876466727ddf9f05e5d3ec,Chinese Speaking English Speech Data,-1,-1
+63876466727ddf9f05e5d3ee,Aristo Tuple KB Version 4,-1,-1
+63876466727ddf9f05e5d3f0,AiTLAS: Benchmark Arena,-1,-1
+63876466727ddf9f05e5d3f2,Webly-Reference SR Dataset,-1,-1
+63876466727ddf9f05e5d3f4,A Synthetic Dataset For Controlled Experiments,-1,-1
+63876466727ddf9f05e5d3f6,Hallmarks of Cancer,-1,-1
+63876466727ddf9f05e5d3f8,Endomapper,-1,-1
+63876466727ddf9f05e5d3fa,MFQE v2,-1,-1
+63876466727ddf9f05e5d3fc,ImDrug,-1,-1
+63876466727ddf9f05e5d3fe,USPS,-1,-1
+63876466727ddf9f05e5d400,DMQA,-1,-1
+63876466727ddf9f05e5d402,OpenFWI,-1,-1
+63876466727ddf9f05e5d404,Physical Reasoning about Objects Through Space and Time,-1,-1
+63876466727ddf9f05e5d406,ImageNet-LT,-1,-1
+63876466727ddf9f05e5d408,FixMyPose,-1,-1
+63876466727ddf9f05e5d40a,EmoContext,-1,-1
+63876466727ddf9f05e5d40c,MNIST Multiview Datasets,-1,-1
+63876466727ddf9f05e5d40e,Cata7,-1,-1
+63876466727ddf9f05e5d410,Subjectivity dataset,-1,-1
+63876466727ddf9f05e5d412,Ascent KB,-1,-1
+63876466727ddf9f05e5d414,Wiki Squirrel,-1,-1
+63876466727ddf9f05e5d416,DiveFace,-1,-1
+63876466727ddf9f05e5d418,Bio-decagon,-1,-1
+63876466727ddf9f05e5d41b,Common Crawl Domain Names,-1,-1
+63876466727ddf9f05e5d41d,RLV,-1,-1
+63876466727ddf9f05e5d41f,WikiSplit,-1,-1
+63876466727ddf9f05e5d421,BugClassify,-1,-1
+63876466727ddf9f05e5d423,Helsinki Prosody Corpus,-1,-1
+63876466727ddf9f05e5d425,Multi Task Crowd,-1,-1
+63876466727ddf9f05e5d427,Salient Object Subitizing Dataset,-1,-1
+63876466727ddf9f05e5d429,Large-scale Cleaned Chinese Conversation corpus,-1,-1
+63876466727ddf9f05e5d42b,Roman Urdu Data Set,-1,-1
+63876466727ddf9f05e5d42d,LogoDet-3K,-1,-1
+63876466727ddf9f05e5d42f,HIDE,-1,-1
+63876466727ddf9f05e5d431,United Nations Parallel Corpus,-1,-1
+63876466727ddf9f05e5d433,unarXive,-1,-1
+63876466727ddf9f05e5d435,Learning from Experience and Demonstration for 6-DOF Grasping Dataset,-1,-1
+63876466727ddf9f05e5d437,LRDE DBD,-1,-1
+63876466727ddf9f05e5d439,CinemAirSim,-1,-1
+63876466727ddf9f05e5d43b,Python Programming Puzzles (P3),-1,-1
+63876466727ddf9f05e5d43d,Filipino Speaking English Speech Data by Mobile Phone,-1,-1
+63876466727ddf9f05e5d43f,TVRecap,-1,-1
+63876466727ddf9f05e5d441,3D AffordanceNet,-1,-1
+63876466727ddf9f05e5d443,PRW,-1,-1
+63876466727ddf9f05e5d445,Sub-Slot Dialogue dataset name domain,-1,-1
+63876466727ddf9f05e5d447,Non-I.I.D. Image dataset with Contexts,-1,-1
+63876466727ddf9f05e5d449,DIDI Dataset,-1,-1
+63876466727ddf9f05e5d44b,ViSpamReviews,-1,-1
+63876466727ddf9f05e5d44d,Finnish Chat Conversations on Everyday Topics,-1,-1
+63876466727ddf9f05e5d44f,IBM-ArgQ-Rank-30kArgs,-1,-1
+63876466727ddf9f05e5d451,Image Retrieval from Contextual Descriptions,-1,-1
+63876466727ddf9f05e5d453,AQA-7,-1,-1
+63876466727ddf9f05e5d455,CodeQueries,-1,-1
+63876467727ddf9f05e5d457,MVS1K,-1,-1
+63876467727ddf9f05e5d459,Cell,-1,-1
+63876467727ddf9f05e5d45b,TrajNet,-1,-1
+63876467727ddf9f05e5d45d,VaccineLies,-1,-1
+63876467727ddf9f05e5d45f,CalCROP21,-1,-1
+63876467727ddf9f05e5d461,VILT,-1,-1
+63876467727ddf9f05e5d463,Tanks and Temples,-1,-1
+63876467727ddf9f05e5d465,MIT-BIH Malignant Ventricular Ectopy Database (VFDB),-1,-1
+63876467727ddf9f05e5d467,VSR,-1,-1
+63876467727ddf9f05e5d469,XCOPA,-1,-1
+63876467727ddf9f05e5d46b,Jejueo Interview Transcripts,-1,-1
+63876467727ddf9f05e5d46d,Multilingual Intimacy analysis,-1,-1
+63876467727ddf9f05e5d46f,DOGC,-1,-1
+63876467727ddf9f05e5d471,Video Instructions Linking for Complex Tasks,-1,-1
+63876467727ddf9f05e5d473,INSANE Cross-Domain UAV Data Set,-1,-1
+63876467727ddf9f05e5d475,FewCLUE,-1,-1
+63876467727ddf9f05e5d477,Fact Extraction and VERification,-1,-1
+63876467727ddf9f05e5d479,Anomaly Detection Datasets for Visual Inspection,-1,-1
+63876467727ddf9f05e5d47b,Assembly101,-1,-1
+63876467727ddf9f05e5d47d,Avalon,-1,-1
+63876467727ddf9f05e5d47f,Extended Minecraft Corpus dataset,-1,-1
+63876467727ddf9f05e5d481,Market-1501-C,-1,-1
+63876467727ddf9f05e5d483,Webis-Touché-2020,-1,-1
+63876467727ddf9f05e5d485,MiniF2F,-1,-1
+63876467727ddf9f05e5d487,Offensive Comments in the Brazilian Web,-1,-1
+63876467727ddf9f05e5d489,UMDFaces,-1,-1
+63876467727ddf9f05e5d48b,Vision for Visibility Dataset,-1,-1
+63876467727ddf9f05e5d48d,DrugProt,-1,-1
+63876467727ddf9f05e5d48f,NovelCraft,-1,-1
+63876467727ddf9f05e5d491,PandaSet,-1,-1
+63876467727ddf9f05e5d493,Malimg,-1,-1
+63876467727ddf9f05e5d495,GD,-1,-1
+63876467727ddf9f05e5d497,PhotoTour,-1,-1
+63876467727ddf9f05e5d499,Chameleon(60%/20%/20% random splits),-1,-1
+63876467727ddf9f05e5d49b,STS Benchmark,-1,-1
+63876467727ddf9f05e5d49d,"558,870 Videos - 50 Types of Dynamic Gesture Recognition Data",-1,-1
+63876467727ddf9f05e5d49f,RealMCVSR,-1,-1
+63876467727ddf9f05e5d4a1,VISUELLE,-1,-1
+63876467727ddf9f05e5d4a3,mMARCO,-1,-1
+63876467727ddf9f05e5d4a5,CLaRO,-1,-1
+63876467727ddf9f05e5d4a7,EURLEX57K,-1,-1
+63876467727ddf9f05e5d4a9,Oxford Town Center,-1,-1
+63876467727ddf9f05e5d4ab,M4,-1,-1
+63876467727ddf9f05e5d4ad,Eurovision 2018 votes,-1,-1
+63876467727ddf9f05e5d4af,DDD17,-1,-1
+63876467727ddf9f05e5d4b1,IPC-grounded,-1,-1
+63876467727ddf9f05e5d4b3,Contract Discovery,-1,-1
+63876467727ddf9f05e5d4b5,Action-Based Conversations Dataset,-1,-1
+63876467727ddf9f05e5d4b7,PDEs,-1,-1
+63876467727ddf9f05e5d4b9,PARus,-1,-1
+63876467727ddf9f05e5d4bb,UCF Sports,-1,-1
+63876467727ddf9f05e5d4bd,The RSNA Pediatric Bone Age Machine Learning Challenge,-1,-1
+63876467727ddf9f05e5d4bf,DaNetQA,-1,-1
+63876467727ddf9f05e5d4c1,EVE,-1,-1
+63876467727ddf9f05e5d4c3,Research Artifact - GitHub Sponsors: Exploring a New Way to Contribute to Open Source,-1,-1
+63876467727ddf9f05e5d4c5,Synthetic Human Model Dataset,-1,-1
+63876467727ddf9f05e5d4c7,NLU++,-1,-1
+63876467727ddf9f05e5d4c9,ApolloScape,-1,-1
+63876467727ddf9f05e5d4cb,Neuropixels single-mouse LFP data,-1,-1
+63876467727ddf9f05e5d4cd,Reddit Time Corpus,-1,-1
+63876467727ddf9f05e5d4cf,LSMDC-Context,-1,-1
+63876467727ddf9f05e5d4d1,Spectrum Challange 2 Dataset,-1,-1
+63876467727ddf9f05e5d4d3,DAST,-1,-1
+63876467727ddf9f05e5d4d5,Biomedical Semantic Similarity Estimation System,-1,-1
+63876467727ddf9f05e5d4d7,MOSI,-1,-1
+63876467727ddf9f05e5d4d9,USPTO-50k,-1,-1
+63876467727ddf9f05e5d4db,Chilean Waiting List,-1,-1
+63876467727ddf9f05e5d4dd,LibriSpeech,-1,-1
+63876467727ddf9f05e5d4df,Bosch Small Traffic Lights Dataset,-1,-1
+63876467727ddf9f05e5d4e1,Choice of Plausible Alternatives,-1,-1
+63876467727ddf9f05e5d4e3,Multilingual Reuters Collection,-1,-1
+63876467727ddf9f05e5d4e5,Natural Image Noise Dataset,-1,-1
+63876467727ddf9f05e5d4e7,Interspeech 2020 Accented English Speech Recognition Competition Data,-1,-1
+63876467727ddf9f05e5d4e9,Interiorverse,-1,-1
+63876467727ddf9f05e5d4eb,CP2A dataset,-1,-1
+63876467727ddf9f05e5d4ed,Linguistic Diagnostic for Russian,-1,-1
+63876467727ddf9f05e5d4ef,Jester,-1,-1
+63876467727ddf9f05e5d4f1,European Parliament Proceedings Parallel Corpus,-1,-1
+63876467727ddf9f05e5d4f3,EEGEyeNet,-1,-1
+63876467727ddf9f05e5d4f5,TaoDescribe,-1,-1
+63876467727ddf9f05e5d4f7,Off_Superhard_parallel,-1,-1
+63876467727ddf9f05e5d4f9,MuSiQue-Ans,-1,-1
+63876467727ddf9f05e5d4fb,BreastDICOM4,-1,-1
+63876467727ddf9f05e5d4fd,CHAOS - Combined (CT-MR) Healthy Abdominal Organ Segmentation,-1,-1
+63876467727ddf9f05e5d4ff,Weibo NER,-1,-1
+63876467727ddf9f05e5d501,DocRED,-1,-1
+63876467727ddf9f05e5d503,Fire and Smoke Dataset,-1,-1
+63876467727ddf9f05e5d505,CubiCasa5K,-1,-1
+63876467727ddf9f05e5d507,NTU RGB+D 120 motion similarity,-1,-1
+63876467727ddf9f05e5d509,ReadingBank,-1,-1
+63876467727ddf9f05e5d50b,American English Speech Data by Mobile Phone_Reading,-1,-1
+63876467727ddf9f05e5d50d,MSU Super-Resolution for Video Compression,-1,-1
+63876467727ddf9f05e5d50f,ImagiFilter,-1,-1
+63876467727ddf9f05e5d511,Flickr30k-Chinese All,-1,-1
+63876467727ddf9f05e5d513,Event-Human3.6m,-1,-1
+63876467727ddf9f05e5d515,SpaceNet 7,-1,-1
+63876467727ddf9f05e5d517,ActivityNet Thumbnails,-1,-1
+63876467727ddf9f05e5d519,Open Buildings,-1,-1
+63876467727ddf9f05e5d51b,Commonsense-Dialogues,-1,-1
+63876467727ddf9f05e5d51d,IMDB-Clean,-1,-1
+63876467727ddf9f05e5d51f,PEM Fuel Cell Dataset,-1,-1
+63876467727ddf9f05e5d521,HumSet,-1,-1
+63876467727ddf9f05e5d523,DISRPT2019 shared task on Discourse Unit Segmentation and Connective Detection,-1,-1
+63876467727ddf9f05e5d525,Indian Masked Faces In The Wild,-1,-1
+63876467727ddf9f05e5d527,Dataset of Grouped Commit Author IDs after Identity Resolution,-1,-1
+63876467727ddf9f05e5d529,Washington RGB-D Scenes,-1,-1
+63876467727ddf9f05e5d52b,QUestion Answering by Search And Reading – Trivia,-1,-1
+63876467727ddf9f05e5d52d,Kolektor Surface-Defect Dataset,-1,-1
+63876467727ddf9f05e5d52f,Undecided Voters in US Presidential Elections,-1,-1
+63876467727ddf9f05e5d531,IPAC,-1,-1
+63876467727ddf9f05e5d533,Phish/Hack in Ethereum,-1,-1
+63876467727ddf9f05e5d535,Privacy Annotated HMDB51,-1,-1
+63876467727ddf9f05e5d537,FLOBOT Perception,-1,-1
+63876467727ddf9f05e5d539,XWINO,-1,-1
+63876467727ddf9f05e5d53b,SALICON,-1,-1
+63876467727ddf9f05e5d53d,FCE,-1,-1
+63876467727ddf9f05e5d53f,ParCorFull,-1,-1
+63876467727ddf9f05e5d542,CUHK-PEDES,-1,-1
+63876467727ddf9f05e5d544,FoodX-251,-1,-1
+63876467727ddf9f05e5d546,662 Hours - Mandarin Heavy Accent Speech Data by Mobile Phone,-1,-1
+63876467727ddf9f05e5d548,YouCook2,-1,-1
+63876467727ddf9f05e5d54a,TSSB,-1,-1
+63876467727ddf9f05e5d54c,WASABI,-1,-1
+63876467727ddf9f05e5d54e,TurkCorpus,-1,-1
+63876467727ddf9f05e5d550,PubMed 200k RCT,-1,-1
+63876467727ddf9f05e5d553,ArgSciChat,-1,-1
+63876467727ddf9f05e5d555,SC2ReSet: StarCraft II Esport Replaypack Set,-1,-1
+63876467727ddf9f05e5d557,SocNav1,-1,-1
+63876467727ddf9f05e5d559,Holistic Video Understanding,-1,-1
+63876467727ddf9f05e5d55b,RWSD,-1,-1
+63876467727ddf9f05e5d55d,XGLUE,-1,-1
+63876467727ddf9f05e5d55f,VPCD,-1,-1
+63876467727ddf9f05e5d561,Copel-AMR,-1,-1
+63876467727ddf9f05e5d563,CUFSF,-1,-1
+63876467727ddf9f05e5d565,WikiGraphs,-1,-1
+63876467727ddf9f05e5d567,COVID-19 Disinformation Twitter Dataset,-1,-1
+63876467727ddf9f05e5d56a,ECQA,-1,-1
+63876467727ddf9f05e5d56c,Real Out-of-Domain Sentences From Task-oriented Dialog,-1,-1
+63876467727ddf9f05e5d56e,DAiSEE,-1,-1
+63876467727ddf9f05e5d570,Pyxis,-1,-1
+63876467727ddf9f05e5d573,General Classification,-1,-1
+63876467727ddf9f05e5d575,Fine-grained Action Recognition,-1,-1
+63876467727ddf9f05e5d577,Multi-future Trajectory Prediction,-1,-1
+63876467727ddf9f05e5d579,Point Clouds,-1,-1
+63876467727ddf9f05e5d57b,Weakly supervised segmentation,-1,-1
+63876467727ddf9f05e5d57d,Unconditional Image Generation,-1,-1
+63876467727ddf9f05e5d57f,eXtreme-Video-Frame-Interpolation,-1,-1
+63876467727ddf9f05e5d581,Breast Tumour Classification,-1,-1
+63876467727ddf9f05e5d583,Question Rewriting,-1,-1
+63876467727ddf9f05e5d585,Security Studies,-1,-1
+63876467727ddf9f05e5d587,Scene Text Recognition,-1,-1
+63876467727ddf9f05e5d589,Abstractive Text Summarization,-1,-1
+63876467727ddf9f05e5d58b,Road Damage Detection,-1,-1
+63876467727ddf9f05e5d58d,Multiple Object Tracking with Transformer,-1,-1
+63876467727ddf9f05e5d58f,Explainable artificial intelligence,-1,-1
+63876468727ddf9f05e5d591,3D Shape Reconstruction From A Single 2D Image,-1,-1
+63876468727ddf9f05e5d593,Few-Shot Image Classification,-1,-1
+63876468727ddf9f05e5d595,Change detection for remote sensing images,-1,-1
+63876468727ddf9f05e5d597,multi-word expression embedding,-1,-1
+63876468727ddf9f05e5d599,Unsupervised Pre-training,-1,-1
+63876468727ddf9f05e5d59b,Metric Learning,-1,-1
+63876468727ddf9f05e5d59d,Camouflaged Object Segmentation,-1,-1
+63876468727ddf9f05e5d59f,Air Pollution Prediction,-1,-1
+63876468727ddf9f05e5d5a1,Complimentary Image Retrieval,-1,-1
+63876468727ddf9f05e5d5a3,Action Unit Detection,-1,-1
+63876468727ddf9f05e5d5a5,Dialogue Act Classification,-1,-1
+63876468727ddf9f05e5d5a7,Temporal Information Extraction,-1,-1
+63876468727ddf9f05e5d5a9,Sensor Modeling,-1,-1
+63876468727ddf9f05e5d5ab,Surface Reconstruction,-1,-1
+63876468727ddf9f05e5d5ad,Memorization,-1,-1
+63876468727ddf9f05e5d5af,Skills Assessment,-1,-1
+63876468727ddf9f05e5d5b1,3D Face Animation,-1,-1
+63876468727ddf9f05e5d5b3,Cross-Lingual Natural Language Inference,-1,-1
+63876468727ddf9f05e5d5b5,Conversational Response Selection,-1,-1
+63876468727ddf9f05e5d5b7,Starcraft II,-1,-1
+63876468727ddf9f05e5d5b9,Kidney Function,-1,-1
+63876468727ddf9f05e5d5bb,Polyphone disambiguation,-1,-1
+63876468727ddf9f05e5d5bd,Time-to-Event Prediction,-1,-1
+63876468727ddf9f05e5d5bf,SQL Parsing,-1,-1
+63876468727ddf9f05e5d5c1,Matrix Completion,-1,-1
+63876468727ddf9f05e5d5c3,High School Chemistry,-1,-1
+63876468727ddf9f05e5d5c5,Network Pruning,-1,-1
+63876468727ddf9f05e5d5c8,Hate Speech Detection,-1,-1
+63876468727ddf9f05e5d5ca,Machine Reading Comprehension,-1,-1
+63876468727ddf9f05e5d5cc,Atari Games 100k,-1,-1
+63876468727ddf9f05e5d5ce,Unconstrained Lip-synchronization,-1,-1
+63876468727ddf9f05e5d5d1,Image/Document Clustering,-1,-1
+63876468727ddf9f05e5d5d3,Overlapped 100-50,-1,-1
+63876468727ddf9f05e5d5d5,Face Identification,-1,-1
+63876468727ddf9f05e5d5d7,Sentiment Analysis (Product + User),-1,-1
+63876468727ddf9f05e5d5d9,Hierarchical Reinforcement Learning,-1,-1
+63876468727ddf9f05e5d5db,Human Mesh Recovery,-1,-1
+63876468727ddf9f05e5d5dd,Disjoint 10-1,-1,-1
+63876468727ddf9f05e5d5df,Classification with Binary Weight Network,-1,-1
+63876468727ddf9f05e5d5e1,Grasp Contact Prediction,-1,-1
+63876468727ddf9f05e5d5e4,Semantic Textual Similarity,-1,-1
+63876468727ddf9f05e5d5e6,Aspect Category Polarity,-1,-1
+63876468727ddf9f05e5d5e8,Video Saliency Prediction,-1,-1
+63876468727ddf9f05e5d5ea,Intrusion Detection,-1,-1
+63876468727ddf9f05e5d5ec,Image-Based Localization,-1,-1
+63876468727ddf9f05e5d5ee,Embeddings Evaluation,-1,-1
+63876468727ddf9f05e5d5f0,Implicatures,-1,-1
+63876468727ddf9f05e5d5f2,Photoplethysmography (PPG),-1,-1
+63876468727ddf9f05e5d5f4,Cloze (multi-choices) (Few-Shot),-1,-1
+63876468727ddf9f05e5d5f6,Visual Social Relationship Recognition,-1,-1
+63876468727ddf9f05e5d5f8,Facial Landmark Detection,-1,-1
+63876468727ddf9f05e5d5fa,Aspect-Category-Opinion-Sentiment Quadruple Extraction,-1,-1
+63876468727ddf9f05e5d5fc,Face Recognition (Closed-Set),-1,-1
+63876468727ddf9f05e5d5fe,Face Presentation Attack Detection,-1,-1
+63876468727ddf9f05e5d600,Hyperspectral Image Super-Resolution,-1,-1
+63876468727ddf9f05e5d602,Code Completion,-1,-1
+63876468727ddf9f05e5d604,Headline generation,-1,-1
+63876468727ddf9f05e5d606,Lung Nodule Segmentation,-1,-1
+63876468727ddf9f05e5d608,Image Inpainting,-1,-1
+63876468727ddf9f05e5d60a,Occluded Face Detection,-1,-1
+63876468727ddf9f05e5d60c,3D Shape Generation,-1,-1
+63876468727ddf9f05e5d60e,Sarcasm Detection,-1,-1
+63876468727ddf9f05e5d610,Speaker Diarization,-1,-1
+63876468727ddf9f05e5d612,Econometrics,-1,-1
+63876468727ddf9f05e5d614,Ancient Text Restoration,-1,-1
+63876468727ddf9f05e5d616,Person Re-Identification,-1,-1
+63876468727ddf9f05e5d618,Document-level Event Extraction,-1,-1
+63876468727ddf9f05e5d61a,Fast Vehicle Detection,-1,-1
+63876468727ddf9f05e5d61c,Object SLAM,-1,-1
+63876468727ddf9f05e5d61e,Stereo Matching Hand,-1,-1
+63876468727ddf9f05e5d620,Image Classification,-1,-1
+63876468727ddf9f05e5d622,Readmission Prediction,-1,-1
+63876468727ddf9f05e5d624,Clique Prediction,-1,-1
+63876468727ddf9f05e5d626,Point Cloud Quality Assessment,-1,-1
+63876468727ddf9f05e5d628,Infrared And Visible Image Fusion,-1,-1
+63876468727ddf9f05e5d62a,6D Pose Estimation,-1,-1
+63876468727ddf9f05e5d62c,Symmetry Detection,-1,-1
+63876468727ddf9f05e5d62e,Speech-to-Text Translation,-1,-1
+63876468727ddf9f05e5d630,Surveillance-to-Single,-1,-1
+63876468727ddf9f05e5d632,Homography Estimation,-1,-1
+63876468727ddf9f05e5d634,Birds Eye View Object Detection,-1,-1
+63876468727ddf9f05e5d636,Federated Lifelong Person ReID,-1,-1
+63876468727ddf9f05e5d638,Table Type Detection,-1,-1
+63876468727ddf9f05e5d63a,Earth Surface Forecasting,-1,-1
+63876468727ddf9f05e5d63c,Subjectivity Analysis,-1,-1
+63876468727ddf9f05e5d63e,Mathematical Question Answering,-1,-1
+63876468727ddf9f05e5d641,Building change detection for remote sensing images,-1,-1
+63876468727ddf9f05e5d643,Complex Word Identification,-1,-1
+63876468727ddf9f05e5d645,Semantic Composition,-1,-1
+63876468727ddf9f05e5d647,NMR J-coupling,-1,-1
+63876468727ddf9f05e5d64a,Disentanglement,-1,-1
+63876468727ddf9f05e5d64c,Band Gap,-1,-1
+63876468727ddf9f05e5d64e,Aspect Extraction,-1,-1
+63876468727ddf9f05e5d650,Vulnerability Detection,-1,-1
+63876468727ddf9f05e5d652,Grammatical Error Correction,-1,-1
+63876468727ddf9f05e5d654,Respiratory motion forecasting,-1,-1
+63876468727ddf9f05e5d656,Continual Pretraining,-1,-1
+63876468727ddf9f05e5d658,Surface Normals Estimation,-1,-1
+63876468727ddf9f05e5d65a,Colorectal Polyps Characterization,-1,-1
+63876468727ddf9f05e5d65c,Depth Image Estimation,-1,-1
+63876468727ddf9f05e5d65e,Personalized Federated Learning,-1,-1
+63876468727ddf9f05e5d660,Multi-object colocalization,-1,-1
+63876468727ddf9f05e5d662,Video Story QA,-1,-1
+63876468727ddf9f05e5d664,Object State Change Classification,-1,-1
+63876468727ddf9f05e5d666,Material Recognition,-1,-1
+63876468727ddf9f05e5d668,Cross-Lingual ASR,-1,-1
+63876468727ddf9f05e5d66a,Depth Completion,-1,-1
+63876468727ddf9f05e5d66c,Argument Mining,-1,-1
+63876468727ddf9f05e5d66e,Symbolic Regression,-1,-1
+63876468727ddf9f05e5d670,Iloko Speech Recognition,-1,-1
+63876468727ddf9f05e5d672,Fact-based Text Editing,-1,-1
+63876468727ddf9f05e5d674,Answer Selection,-1,-1
+63876468727ddf9f05e5d676,Claim-Evidence Pair Extraction (CEPE),-1,-1
+63876468727ddf9f05e5d678,Code Comment Generation,-1,-1
+63876468727ddf9f05e5d67a,Feature Engineering,-1,-1
+63876468727ddf9f05e5d67c,Emotion Classification,-1,-1
+63876468727ddf9f05e5d67e,Multiview Clustering,-1,-1
+63876468727ddf9f05e5d680,Predicate Classification,-1,-1
+63876468727ddf9f05e5d682,Point cloud classification dataset,-1,-1
+63876468727ddf9f05e5d684,Video Synchronization,-1,-1
+63876468727ddf9f05e5d686,Short Text Clustering,-1,-1
+63876468727ddf9f05e5d688,Medical Image Generation,-1,-1
+63876468727ddf9f05e5d68a,Volumetric Medical Image Segmentation,-1,-1
+63876468727ddf9f05e5d68c,General Knowledge,-1,-1
+63876468727ddf9f05e5d68e,Federated Learning,-1,-1
+63876468727ddf9f05e5d690,3D Part Segmentation,-1,-1
+63876468727ddf9f05e5d692,Segmentation Of Remote Sensing Imagery,-1,-1
+63876468727ddf9f05e5d694,Depth Anomaly Detection and Segmentation,-1,-1
+63876468727ddf9f05e5d697,Toponym Resolution,-1,-1
+63876468727ddf9f05e5d699,Hope Speech Detection,-1,-1
+63876468727ddf9f05e5d69b,Joint Entity and Relation Extraction,-1,-1
+63876468727ddf9f05e5d69d,Predicate Detection,-1,-1
+63876468727ddf9f05e5d69f,Universal Domain Adaptation,-1,-1
+63876468727ddf9f05e5d6a1,RGB+3D Anomaly Detection and Segmentation,-1,-1
+63876468727ddf9f05e5d6a3,Event Extraction,-1,-1
+63876468727ddf9f05e5d6a5,Graph Property Prediction,-1,-1
+63876468727ddf9f05e5d6a7,Multimodal Intent Recognition,-1,-1
+63876468727ddf9f05e5d6a9,3D dense captioning,-1,-1
+63876468727ddf9f05e5d6ab,Spelling Correction,-1,-1
+63876468727ddf9f05e5d6ad,Term Extraction,-1,-1
+63876468727ddf9f05e5d6af,Video Corpus Moment Retrieval,-1,-1
+63876468727ddf9f05e5d6b1,Navigate,-1,-1
+63876468727ddf9f05e5d6b3,Text Spotting,-1,-1
+63876468727ddf9f05e5d6b5,Document Translation,-1,-1
+63876468727ddf9f05e5d6b7,Iris Recognition,-1,-1
+63876468727ddf9f05e5d6b9,Game of Hanabi,-1,-1
+63876468727ddf9f05e5d6bb,Loop Closure Detection,-1,-1
+63876468727ddf9f05e5d6bd,Gait Identification,-1,-1
+63876468727ddf9f05e5d6bf,Polish Text Diacritization,-1,-1
+63876468727ddf9f05e5d6c1,Graph Ranking,-1,-1
+63876468727ddf9f05e5d6c3,Portrait Segmentation,-1,-1
+63876468727ddf9f05e5d6c5,Zero-Shot Intent Classification and Slot Filling,-1,-1
+63876468727ddf9f05e5d6c7,3D Object Reconstruction From A Single Image,-1,-1
+63876468727ddf9f05e5d6c9,Crime Prediction,-1,-1
+63876468727ddf9f05e5d6cb,Point-Supervised Instance Segmentation,-1,-1
+63876468727ddf9f05e5d6cd,Facial Action Unit Detection,-1,-1
+63876468727ddf9f05e5d6cf,Scene-Aware Dialogue,-1,-1
+63876468727ddf9f05e5d6d1,Populist attitude,-1,-1
+63876468727ddf9f05e5d6d3,Node Classification,-1,-1
+63876468727ddf9f05e5d6d5,Video Based Workflow Recognition,-1,-1
+63876468727ddf9f05e5d6d7,Reasoning Chain Explanations,-1,-1
+63876469727ddf9f05e5d6d9,Parallel Corpus Mining,-1,-1
+63876469727ddf9f05e5d6db,Natural Language Landmark Navigation Instructions Generation,-1,-1
+63876469727ddf9f05e5d6dd,Acoustic Scene Classification,-1,-1
+63876469727ddf9f05e5d6df,Domain-IL Continual Learning,-1,-1
+63876469727ddf9f05e5d6e1,Tweet Retrieval,-1,-1
+63876469727ddf9f05e5d6e3,Vietnamese Text Diacritization,-1,-1
+63876469727ddf9f05e5d6e5,De-identification,-1,-1
+63876469727ddf9f05e5d6e7,Physical Intuition,-1,-1
+63876469727ddf9f05e5d6e9,Music Generation,-1,-1
+63876469727ddf9f05e5d6eb,Human motion prediction,-1,-1
+63876469727ddf9f05e5d6ed,Author Attribution,-1,-1
+63876469727ddf9f05e5d6ef,Object Localization,-1,-1
+63876469727ddf9f05e5d6f1,KG-to-Text Generation,-1,-1
+63876469727ddf9f05e5d6f3,Audio Question Answering,-1,-1
+63876469727ddf9f05e5d6f5,Handwritten Digit Image Synthesis,-1,-1
+63876469727ddf9f05e5d6f7,3D human pose and shape estimation,-1,-1
+63876469727ddf9f05e5d6f9,Row Annotation,-1,-1
+63876469727ddf9f05e5d6fb,Copy Detection,-1,-1
+63876469727ddf9f05e5d6fd,Montezuma's Revenge,-1,-1
+63876469727ddf9f05e5d6ff,Multi-Label Classification,-1,-1
+63876469727ddf9f05e5d701,Hand-Gesture Recognition,-1,-1
+63876469727ddf9f05e5d704,Binarization,-1,-1
+63876469727ddf9f05e5d706,Unsupervised Text Classification,-1,-1
+63876469727ddf9f05e5d708,Micro-Expression Spotting,-1,-1
+63876469727ddf9f05e5d70a,Image Reconstruction,-1,-1
+63876469727ddf9f05e5d70c,Goal-Oriented Dialog,-1,-1
+63876469727ddf9f05e5d70e,Global Facts,-1,-1
+63876469727ddf9f05e5d710,Sleep spindles detection,-1,-1
+63876469727ddf9f05e5d712,Brain Decoding,-1,-1
+63876469727ddf9f05e5d714,Document Embedding,-1,-1
+63876469727ddf9f05e5d716,Czech Text Diacritization,-1,-1
+63876469727ddf9f05e5d719,FEVER (3-way),-1,-1
+63876469727ddf9f05e5d71b,Multi-label zero-shot learning,-1,-1
+63876469727ddf9f05e5d71d,Zero-Shot Transfer Image Classification,-1,-1
+63876469727ddf9f05e5d71f,Scientific Concept Extraction,-1,-1
+63876469727ddf9f05e5d721,Question Similarity,-1,-1
+63876469727ddf9f05e5d723,Lane Detection,-1,-1
+63876469727ddf9f05e5d725,Multispectral Object Detection,-1,-1
+63876469727ddf9f05e5d727,Hungarian Text Diacritization,-1,-1
+63876469727ddf9f05e5d729,Hindu Knowledge,-1,-1
+63876469727ddf9f05e5d72b,Predictive Process Monitoring,-1,-1
+63876469727ddf9f05e5d72d,Event Segmentation,-1,-1
+63876469727ddf9f05e5d72f,Weakly Supervised Classification,-1,-1
+63876469727ddf9f05e5d731,Indoor Monocular Depth Estimation,-1,-1
+63876469727ddf9f05e5d733,Few-Shot Relation Classification,-1,-1
+63876469727ddf9f05e5d735,Representation Learning,-1,-1
+63876469727ddf9f05e5d737,Paraphrase Generation,-1,-1
+63876469727ddf9f05e5d739,Disjoint 15-1,-1,-1
+63876469727ddf9f05e5d73b,LWR Classification,-1,-1
+63876469727ddf9f05e5d73d,Heterogeneous Node Classification,-1,-1
+63876469727ddf9f05e5d73f,Graph Representation Learning,-1,-1
+63876469727ddf9f05e5d741,Talking Head Generation,-1,-1
+63876469727ddf9f05e5d743,Unseen Object Instance Segmentation,-1,-1
+63876469727ddf9f05e5d745,Morpheme Segmentaiton,-1,-1
+63876469727ddf9f05e5d747,Entity Linking,-1,-1
+63876469727ddf9f05e5d749,Medical Image Segmentation,-1,-1
+63876469727ddf9f05e5d74b,High School Physics,-1,-1
+63876469727ddf9f05e5d74d,Code Generation,-1,-1
+63876469727ddf9f05e5d74f,Semantic Textual Similarity within Bi-Encoder,-1,-1
+63876469727ddf9f05e5d751,Self-supervised Video Retrieval,-1,-1
+63876469727ddf9f05e5d753,Paper generation,-1,-1
+63876469727ddf9f05e5d755,Music Genre Classification,-1,-1
+63876469727ddf9f05e5d757,Burst Image Super-Resolution,-1,-1
+63876469727ddf9f05e5d759,Fire Detection,-1,-1
+63876469727ddf9f05e5d75b,3D Human Pose Estimation,-1,-1
+63876469727ddf9f05e5d75d,3D Shape Reconstruction,-1,-1
+63876469727ddf9f05e5d75f,Biomedical Information Retrieval,-1,-1
+63876469727ddf9f05e5d761,Multi-Object Tracking,-1,-1
+63876469727ddf9f05e5d763,Time Offset Calibration,-1,-1
+63876469727ddf9f05e5d765,Crowd Counting,-1,-1
+63876469727ddf9f05e5d767,Zero-Shot Object Detection,-1,-1
+63876469727ddf9f05e5d769,Nonsense Words Grammar,-1,-1
+63876469727ddf9f05e5d76b,Emotion Recognition,-1,-1
+63876469727ddf9f05e5d76d,Multimodal Text Prediction,-1,-1
+63876469727ddf9f05e5d76f,Patient Phenotyping,-1,-1
+63876469727ddf9f05e5d771,Code Translation,-1,-1
+63876469727ddf9f05e5d773,CYCLoPs Accuracy,-1,-1
+63876469727ddf9f05e5d775,Clean-label Backdoor Attack (0.05%),-1,-1
+63876469727ddf9f05e5d777,Noise Level Prediction,-1,-1
+63876469727ddf9f05e5d779,Text Generation,-1,-1
+63876469727ddf9f05e5d77b,Real-Time Multi-Object Tracking,-1,-1
+63876469727ddf9f05e5d77d,Graph Regression,-1,-1
+63876469727ddf9f05e5d77f,Point Processes,-1,-1
+63876469727ddf9f05e5d781,3D Assembly,-1,-1
+63876469727ddf9f05e5d783,Super-Resolution,-1,-1
+63876469727ddf9f05e5d785,BBBC021 NSC Accuracy,-1,-1
+63876469727ddf9f05e5d787,2D object detection,-1,-1
+63876469727ddf9f05e5d789,Few-Shot Text Classification,-1,-1
+63876469727ddf9f05e5d78b,Color Image Denoising,-1,-1
+63876469727ddf9f05e5d78d,Time Series Classification,-1,-1
+63876469727ddf9f05e5d78f,Local Color Enhancement,-1,-1
+63876469727ddf9f05e5d791,Extreme Summarization,-1,-1
+63876469727ddf9f05e5d793,Common Sense Reasoning,-1,-1
+63876469727ddf9f05e5d795,Audio Fingerprint,-1,-1
+63876469727ddf9f05e5d797,3D Medical Imaging Segmentation,-1,-1
+63876469727ddf9f05e5d799,Chinese Semantic Role Labeling,-1,-1
+63876469727ddf9f05e5d79b,Inductive logic programming,-1,-1
+63876469727ddf9f05e5d79d,Graph Learning,-1,-1
+63876469727ddf9f05e5d79f,Crowdsourced Text Aggregation,-1,-1
+63876469727ddf9f05e5d7a1,Image Similarity Search,-1,-1
+63876469727ddf9f05e5d7a3,Human Behavior Forecasting,-1,-1
+63876469727ddf9f05e5d7a5,Vehicle Pose Estimation,-1,-1
+63876469727ddf9f05e5d7a7,Geophysics,-1,-1
+63876469727ddf9f05e5d7a9,High School US History,-1,-1
+63876469727ddf9f05e5d7ab,satellite image super-resolution,-1,-1
+63876469727ddf9f05e5d7ad,Text Classification,-1,-1
+63876469727ddf9f05e5d7af,Malware Classification,-1,-1
+63876469727ddf9f05e5d7b1,Human-Object Interaction Concept Discovery,-1,-1
+63876469727ddf9f05e5d7b3,Extractive Question-Answering,-1,-1
+63876469727ddf9f05e5d7b5,Event data classification,-1,-1
+63876469727ddf9f05e5d7b7,Behavioral Malware Classification,-1,-1
+63876469727ddf9f05e5d7b9,Skin Lesion Segmentation,-1,-1
+63876469727ddf9f05e5d7bc,Motion Forecasting,-1,-1
+63876469727ddf9f05e5d7be,Hand Gesture Recognition,-1,-1
+63876469727ddf9f05e5d7c0,Human Dynamics,-1,-1
+63876469727ddf9f05e5d7c2,Product Categorization,-1,-1
+63876469727ddf9f05e5d7c5,3D Object Classification,-1,-1
+63876469727ddf9f05e5d7c7,Ancestor-descendant prediction,-1,-1
+63876469727ddf9f05e5d7c9,Cross-lingual zero-shot dependency parsing,-1,-1
+63876469727ddf9f05e5d7cb,Hand Detection,-1,-1
+63876469727ddf9f05e5d7cd,Temporal/Casual QA,-1,-1
+63876469727ddf9f05e5d7cf,Zero-Shot Learning,-1,-1
+63876469727ddf9f05e5d7d1,CEFR proficiency prediction,-1,-1
+63876469727ddf9f05e5d7d3,Domain 1-1,-1,-1
+63876469727ddf9f05e5d7d5,Object Categorization,-1,-1
+63876469727ddf9f05e5d7d7,Weakly Supervised 3D Point Cloud Segmentation,-1,-1
+63876469727ddf9f05e5d7d9,Vehicle Key-Point and Orientation Estimation,-1,-1
+63876469727ddf9f05e5d7db,Task-Oriented Dialogue Systems,-1,-1
+63876469727ddf9f05e5d7dd,Autonomous Navigation,-1,-1
+63876469727ddf9f05e5d7df,College Chemistry,-1,-1
+63876469727ddf9f05e5d7e1,Action Localization,-1,-1
+63876469727ddf9f05e5d7e3,Multi-modal Dialogue Generation,-1,-1
+63876469727ddf9f05e5d7e5,Autonomous Vehicles,-1,-1
+63876469727ddf9f05e5d7e7,Diabetic Retinopathy Detection,-1,-1
+63876469727ddf9f05e5d7e9,Multi-Label Image Classification,-1,-1
+6387646a727ddf9f05e5d7eb,CodeSearchNet - Java,-1,-1
+6387646a727ddf9f05e5d7ed,3D Point Cloud Matching,-1,-1
+6387646a727ddf9f05e5d7ef,Action Recognition In Videos ,-1,-1
+6387646a727ddf9f05e5d7f2,Point Cloud Completion,-1,-1
+6387646a727ddf9f05e5d7f4,French Text Diacritization,-1,-1
+6387646a727ddf9f05e5d7f6,COVID-19 Diagnosis,-1,-1
+6387646a727ddf9f05e5d7f8,Crash Blossom,-1,-1
+6387646a727ddf9f05e5d7fa,Time Series Alignment,-1,-1
+6387646a727ddf9f05e5d7fc,motion prediction,-1,-1
+6387646a727ddf9f05e5d7fe,Time Series Analysis,-1,-1
+6387646a727ddf9f05e5d800,Scene Graph Generation,-1,-1
+6387646a727ddf9f05e5d802,Image Retrieval with Multi-Modal Query,-1,-1
+6387646a727ddf9f05e5d804,NER,-1,-1
+6387646a727ddf9f05e5d806,Curved Text Detection,-1,-1
+6387646a727ddf9f05e5d808,Joint Vertebrae Identification And Localization In Spinal Ct Images,-1,-1
+6387646a727ddf9f05e5d80a,Few-shot 3D Point Cloud Semantic Segmentation,-1,-1
+6387646a727ddf9f05e5d80c,Document Layout Analysis,-1,-1
+6387646a727ddf9f05e5d80e,Domain 11-1,-1,-1
+6387646a727ddf9f05e5d810,Meme Classification,-1,-1
+6387646a727ddf9f05e5d812,Cross-Lingual NER,-1,-1
+6387646a727ddf9f05e5d814,DeepFake Detection,-1,-1
+6387646a727ddf9f05e5d816,coreference-resolution,-1,-1
+6387646a727ddf9f05e5d818,Speaker Verification,-1,-1
+6387646a727ddf9f05e5d81a,Fraud Detection,-1,-1
+6387646a727ddf9f05e5d81c,Webcam (RGB) image classification,-1,-1
+6387646a727ddf9f05e5d81e,Continuous Control (500k environment steps),-1,-1
+6387646a727ddf9f05e5d820,Common Sense Reasoning (One-Shot),-1,-1
+6387646a727ddf9f05e5d822,Moral Scenarios,-1,-1
+6387646a727ddf9f05e5d824,Table annotation,-1,-1
+6387646a727ddf9f05e5d826,Driver Attention Monitoring,-1,-1
+6387646a727ddf9f05e5d828,Multi-Modal Document Classification,-1,-1
+6387646a727ddf9f05e5d82a,Overlapped 50-50,-1,-1
+6387646a727ddf9f05e5d82c,3D Object Detection From Stereo Images,-1,-1
+6387646a727ddf9f05e5d82e,Environmental Sound Classification,-1,-1
+6387646a727ddf9f05e5d830,Movie Dialog Same Or Different,-1,-1
+6387646a727ddf9f05e5d833,Video Object Segmentation,-1,-1
+6387646a727ddf9f05e5d835,Speech-to-Speech Translation,-1,-1
+6387646a727ddf9f05e5d837,Natural Language Visual Grounding,-1,-1
+6387646a727ddf9f05e5d839,Automated Theorem Proving,-1,-1
+6387646a727ddf9f05e5d83b,Math Word Problem Solving,-1,-1
+6387646a727ddf9f05e5d83d,3D Object Tracking,-1,-1
+6387646a727ddf9f05e5d83f,Node Property Prediction,-1,-1
+6387646a727ddf9f05e5d841,HeavyMakeup/Bias-conflicting,-1,-1
+6387646a727ddf9f05e5d843,International Law,-1,-1
+6387646a727ddf9f05e5d845,Biologically-plausible Training,-1,-1
+6387646a727ddf9f05e5d847,Hope Speech Detection for Malayalam,-1,-1
+6387646a727ddf9f05e5d849,Object Detection In Aerial Images,-1,-1
+6387646a727ddf9f05e5d84b,Text Effects Transfer,-1,-1
+6387646a727ddf9f05e5d84d,Multimodal Emotion Recognition,-1,-1
+6387646a727ddf9f05e5d84f,3D Semantic Scene Completion from a single RGB image,-1,-1
+6387646a727ddf9f05e5d851,Medical Object Detection,-1,-1
+6387646a727ddf9f05e5d853,Zero-shot Text Retrieval,-1,-1
+6387646a727ddf9f05e5d855,Image Registration,-1,-1
+6387646a727ddf9f05e5d857,Single-object discovery,-1,-1
+6387646a727ddf9f05e5d859,Vehicle Re-Identification,-1,-1
+6387646a727ddf9f05e5d85b,Opinion Mining,-1,-1
+6387646a727ddf9f05e5d85d,Graph Generation,-1,-1
+6387646a727ddf9f05e5d860,Understanding Fables,-1,-1
+6387646a727ddf9f05e5d862,Face Anonymization,-1,-1
+6387646a727ddf9f05e5d864,Zero-Shot Learning + Domain Generalization,-1,-1
+6387646a727ddf9f05e5d866,Respiratory Failure,-1,-1
+6387646a727ddf9f05e5d868,Piano Music Modeling,-1,-1
+6387646a727ddf9f05e5d86a,Personality Recognition in Conversation,-1,-1
+6387646a727ddf9f05e5d86c,CCG Supertagging,-1,-1
+6387646a727ddf9f05e5d86e,Visual Object Tracking,-1,-1
+6387646a727ddf9f05e5d870,Time-interval Prediction,-1,-1
+6387646a727ddf9f05e5d872,Real-time Instance Segmentation,-1,-1
+6387646a727ddf9f05e5d874,Sentence Classification,-1,-1
+6387646a727ddf9f05e5d876,dialogue summary,-1,-1
+6387646a727ddf9f05e5d878,Human Detection,-1,-1
+6387646a727ddf9f05e5d87a,Self-Supervised Image Classification,-1,-1
+6387646a727ddf9f05e5d87c,Short-observation new product sales forecasting,-1,-1
+6387646a727ddf9f05e5d87e,Lexical Normalization,-1,-1
+6387646a727ddf9f05e5d880,Breast Cancer Histology Image Classification (20% labels),-1,-1
+6387646a727ddf9f05e5d882,Scientific Document Summarization,-1,-1
+6387646a727ddf9f05e5d884,Instrument Recognition,-1,-1
+6387646a727ddf9f05e5d886,EEG,-1,-1
+6387646a727ddf9f05e5d888,Fish Detection,-1,-1
+6387646a727ddf9f05e5d88a,Imputation,-1,-1
+6387646a727ddf9f05e5d88c,Sentence Embeddings,-1,-1
+6387646a727ddf9f05e5d88e,Electrocardiography (ECG),-1,-1
+6387646a727ddf9f05e5d890,Image Classification with Differential Privacy,-1,-1
+6387646a727ddf9f05e5d892,3D Face Reconstruction,-1,-1
+6387646a727ddf9f05e5d894,Cross Document Coreference Resolution,-1,-1
+6387646a727ddf9f05e5d896,Retrieval,-1,-1
+6387646a727ddf9f05e5d898,Zero-shot Relation Triplet Extraction,-1,-1
+6387646a727ddf9f05e5d89a,Astronomy,-1,-1
+6387646a727ddf9f05e5d89c,Action Spotting,-1,-1
+6387646a727ddf9f05e5d89e,Sentiment Analysis,-1,-1
+6387646a727ddf9f05e5d8a0,Audio/Video to Text Retrieval,-1,-1
+6387646a727ddf9f05e5d8a2,Cross-device ASR,-1,-1
+6387646a727ddf9f05e5d8a4,Hyperparameter Optimization,-1,-1
+6387646a727ddf9f05e5d8a6,Discourse Parsing,-1,-1
+6387646a727ddf9f05e5d8a8,Semantic Text Matching,-1,-1
+6387646a727ddf9f05e5d8aa,Aspect Term Extraction and Sentiment Classification,-1,-1
+6387646a727ddf9f05e5d8ac,Counterfactual Detection,-1,-1
+6387646a727ddf9f05e5d8ae,Movie Recommendation,-1,-1
+6387646a727ddf9f05e5d8b0,Protein Secondary Structure Prediction,-1,-1
+6387646a727ddf9f05e5d8b2,Eeg Decoding,-1,-1
+6387646a727ddf9f05e5d8b4,Relational Reasoning,-1,-1
+6387646a727ddf9f05e5d8b6,Action Quality Assessment,-1,-1
+6387646a727ddf9f05e5d8b8,Dynamic Link Prediction,-1,-1
+6387646a727ddf9f05e5d8ba,Multi-domain Dialogue State Tracking,-1,-1
+6387646a727ddf9f05e5d8bc,Multi-task Language Understanding,-1,-1
+6387646a727ddf9f05e5d8be,Code Repair,-1,-1
+6387646a727ddf9f05e5d8c0,Recipe Generation,-1,-1
+6387646a727ddf9f05e5d8c2,Epidemiology,-1,-1
+6387646a727ddf9f05e5d8c4,Motion Synthesis,-1,-1
+6387646a727ddf9f05e5d8c6,Anomaly Detection In Surveillance Videos,-1,-1
+6387646a727ddf9f05e5d8c8,Traffic Classification,-1,-1
+6387646a727ddf9f05e5d8ca,Long-range modeling,-1,-1
+6387646a727ddf9f05e5d8cc,Text based Person Retrieval,-1,-1
+6387646a727ddf9f05e5d8ce,Table Functional Analysis,-1,-1
+6387646a727ddf9f05e5d8d0,Weakly-Supervised Object Localization,-1,-1
+6387646a727ddf9f05e5d8d2,Semi-Supervised Text Classification,-1,-1
+6387646a727ddf9f05e5d8d4,Natural Language Inference,-1,-1
+6387646a727ddf9f05e5d8d6,Cross-Lingual Transfer,-1,-1
+6387646a727ddf9f05e5d8d8,Visual Localization,-1,-1
+6387646a727ddf9f05e5d8da,GRE Reading Comprehension,-1,-1
+6387646a727ddf9f05e5d8dc,Multimodal Lexical Translation,-1,-1
+6387646a727ddf9f05e5d8de,Object Segmentation,-1,-1
+6387646a727ddf9f05e5d8e0,Face Generation,-1,-1
+6387646a727ddf9f05e5d8e2,Data Summarization,-1,-1
+6387646a727ddf9f05e5d8e4,GPR,-1,-1
+6387646a727ddf9f05e5d8e6,Face Sketch Synthesis,-1,-1
+6387646a727ddf9f05e5d8e8,Paraphrase Identification within Bi-Encoder,-1,-1
+6387646a727ddf9f05e5d8ea,Unsupervised Video Summarization,-1,-1
+6387646a727ddf9f05e5d8ec,Semantic Contour Prediction,-1,-1
+6387646a727ddf9f05e5d8ee,Gaussian Processes,-1,-1
+6387646a727ddf9f05e5d8f0,K-complex detection,-1,-1
+6387646a727ddf9f05e5d8f2,Blood pressure estimation,-1,-1
+6387646a727ddf9f05e5d8f4,Video Quality Assessment,-1,-1
+6387646a727ddf9f05e5d8f6,Text Matching,-1,-1
+6387646a727ddf9f05e5d8f8,Unsupervised KG-to-Text Generation,-1,-1
+6387646a727ddf9f05e5d8fa,Named Entity Recognition In Vietnamese,-1,-1
+6387646a727ddf9f05e5d8fc,Aesthetics Quality Assessment,-1,-1
+6387646a727ddf9f05e5d8fe,Abstractive Dialogue Summarization,-1,-1
+6387646a727ddf9f05e5d900,Claim Verification,-1,-1
+6387646a727ddf9f05e5d902,3D Hand Pose Estimation,-1,-1
+6387646a727ddf9f05e5d904,Multi-tissue Nucleus Segmentation,-1,-1
+6387646a727ddf9f05e5d906,Pill Classification (Both Sides),-1,-1
+6387646a727ddf9f05e5d908,3D Point Cloud Linear Classification,-1,-1
+6387646a727ddf9f05e5d90a,Action Detection,-1,-1
+6387646a727ddf9f05e5d90d,Record linking,-1,-1
+6387646a727ddf9f05e5d90f,Community Question Answering,-1,-1
+6387646a727ddf9f05e5d911,Classification Of Hyperspectral Images,-1,-1
+6387646a727ddf9f05e5d913,Citation Recommendation,-1,-1
+6387646a727ddf9f05e5d915,Age Estimation,-1,-1
+6387646a727ddf9f05e5d917,Camera Calibration,-1,-1
+6387646a727ddf9f05e5d919,Boundary Detection,-1,-1
+6387646a727ddf9f05e5d91b,Traffic Object Detection,-1,-1
+6387646a727ddf9f05e5d91d,Node Classification on Non-Homophilic (Heterophilic) Graphs,-1,-1
+6387646a727ddf9f05e5d91f,Phrase Tagging,-1,-1
+6387646a727ddf9f05e5d921,Professional Medicine,-1,-1
+6387646a727ddf9f05e5d923,Sound Event Detection,-1,-1
+6387646a727ddf9f05e5d925,Visual Odometry,-1,-1
+6387646a727ddf9f05e5d927,Hurtful Sentence Completion,-1,-1
+6387646a727ddf9f05e5d929,Clustering Algorithms Evaluation,-1,-1
+6387646b727ddf9f05e5d92b,Multi Label Text Classification,-1,-1
+6387646b727ddf9f05e5d92d,Heart Segmentation,-1,-1
+6387646b727ddf9f05e5d92f,Video-Text Retrieval,-1,-1
+6387646b727ddf9f05e5d931,Association,-1,-1
+6387646b727ddf9f05e5d933,Trajectory Modeling,-1,-1
+6387646b727ddf9f05e5d935,Human fMRI response prediction,-1,-1
+6387646b727ddf9f05e5d937,Thermal Image Segmentation,-1,-1
+6387646b727ddf9f05e5d939,Diffeomorphic Medical Image Registration,-1,-1
+6387646b727ddf9f05e5d93b,Syntax Representation,-1,-1
+6387646b727ddf9f05e5d93d,2D Semantic Segmentation task 1 (8 classes),-1,-1
+6387646b727ddf9f05e5d93f,Explainable Recommendation,-1,-1
+6387646b727ddf9f05e5d941,Drum Transcription,-1,-1
+6387646b727ddf9f05e5d943,Blind Image Quality Assessment,-1,-1
+6387646b727ddf9f05e5d945,Medical Image Retrieval,-1,-1
+6387646b727ddf9f05e5d947,Board Games,-1,-1
+6387646b727ddf9f05e5d949,Point Cloud Classification,-1,-1
+6387646b727ddf9f05e5d94b,Acoustic echo cancellation,-1,-1
+6387646b727ddf9f05e5d94d,Egocentric Pose Estimation,-1,-1
+6387646b727ddf9f05e5d94f,Time Series Regression,-1,-1
+6387646b727ddf9f05e5d951,News Summarization,-1,-1
+6387646b727ddf9f05e5d953,Analogical Similarity,-1,-1
+6387646b727ddf9f05e5d955,License Plate Detection,-1,-1
+6387646b727ddf9f05e5d957,Malicious Detection,-1,-1
+6387646b727ddf9f05e5d959,Music Information Retrieval,-1,-1
+6387646b727ddf9f05e5d95b,Translation,-1,-1
+6387646b727ddf9f05e5d95d,Real-Time Strategy Games,-1,-1
+6387646b727ddf9f05e5d95f,Webpage Object Detection,-1,-1
+6387646b727ddf9f05e5d961,Electrical Engineering,-1,-1
+6387646b727ddf9f05e5d963,Highlight Detection,-1,-1
+6387646b727ddf9f05e5d965,Seizure prediction,-1,-1
+6387646b727ddf9f05e5d967,Traditional Spam Detection,-1,-1
+6387646b727ddf9f05e5d969,Elementary Mathematics,-1,-1
+6387646b727ddf9f05e5d96b,Interactive Video Object Segmentation,-1,-1
+6387646b727ddf9f05e5d96d,Multi-Object Tracking and Segmentation,-1,-1
+6387646b727ddf9f05e5d96f,Object Skeleton Detection,-1,-1
+6387646b727ddf9f05e5d971,Dial Meter Reading,-1,-1
+6387646b727ddf9f05e5d973,Foot keypoint detection,-1,-1
+6387646b727ddf9f05e5d975,2D Human Pose Estimation,-1,-1
+6387646b727ddf9f05e5d977,Low-Light Image Enhancement,-1,-1
+6387646b727ddf9f05e5d979,Model Selection,-1,-1
+6387646b727ddf9f05e5d97b,High School European History,-1,-1
+6387646b727ddf9f05e5d97d,Subject Transfer,-1,-1
+6387646b727ddf9f05e5d97f,Aspect-Based Sentiment Analysis,-1,-1
+6387646b727ddf9f05e5d982,Knowledge Base Population,-1,-1
+6387646b727ddf9f05e5d984,Zero-Shot Action Recognition,-1,-1
+6387646b727ddf9f05e5d987,Intent Classification and Slot Filling,-1,-1
+6387646b727ddf9f05e5d989,Unfairness Detection,-1,-1
+6387646b727ddf9f05e5d98b,Indoor Scene Reconstruction,-1,-1
+6387646b727ddf9f05e5d98d,Speech Recognition,-1,-1
+6387646b727ddf9f05e5d98f,Gaze Prediction,-1,-1
+6387646b727ddf9f05e5d991,single catogory classification,-1,-1
+6387646b727ddf9f05e5d993,QQP,-1,-1
+6387646b727ddf9f05e5d995,Unsupervised Anomaly Detection,-1,-1
+6387646b727ddf9f05e5d997,Sketch-to-Image Translation,-1,-1
+6387646b727ddf9f05e5d999,Misinformation,-1,-1
+6387646b727ddf9f05e5d99b,Fovea Detection,-1,-1
+6387646b727ddf9f05e5d99d,Physical Video Anomaly Detection,-1,-1
+6387646b727ddf9f05e5d9a0,Video Question Answering,-1,-1
+6387646b727ddf9f05e5d9a2,Person Search,-1,-1
+6387646b727ddf9f05e5d9a4,Class-agnostic Object Detection,-1,-1
+6387646b727ddf9f05e5d9a7,Overlapped 100-5,-1,-1
+6387646b727ddf9f05e5d9aa,Metaphor Boolean,-1,-1
+6387646b727ddf9f05e5d9ac,Reference-based Video Super-Resolution,-1,-1
+6387646b727ddf9f05e5d9ae,Natural Language Inference (Few-Shot),-1,-1
+6387646b727ddf9f05e5d9b0,Temporal Tagging,-1,-1
+6387646b727ddf9f05e5d9b2,Stereo Matching,-1,-1
+6387646b727ddf9f05e5d9b4,Clustering Ensemble,-1,-1
+6387646b727ddf9f05e5d9b6,Edge Detection,-1,-1
+6387646b727ddf9f05e5d9b8,Unsupervised Image Segmentation,-1,-1
+6387646b727ddf9f05e5d9ba,Molecule Captioning,-1,-1
+6387646b727ddf9f05e5d9bc,Mistake Detection,-1,-1
+6387646b727ddf9f05e5d9be,Topic Models,-1,-1
+6387646b727ddf9f05e5d9c0,Sentence Ordering,-1,-1
+6387646b727ddf9f05e5d9c2,FG-1-PG-1,-1,-1
+6387646b727ddf9f05e5d9c4,Single-Image Portrait Relighting,-1,-1
+6387646b727ddf9f05e5d9c6,Prediction Intervals,-1,-1
+6387646b727ddf9f05e5d9c8,Open Vocabulary Object Detection,-1,-1
+6387646b727ddf9f05e5d9ca,Extracting Buildings In Remote Sensing Images,-1,-1
+6387646b727ddf9f05e5d9cc,Unsupervised Dependency Parsing,-1,-1
+6387646b727ddf9f05e5d9ce,Word Similarity,-1,-1
+6387646b727ddf9f05e5d9d0,Multi-target Domain Adaptation,-1,-1
+6387646b727ddf9f05e5d9d2,Arousal Estimation,-1,-1
+6387646b727ddf9f05e5d9d4,Morphological Analysis,-1,-1
+6387646b727ddf9f05e5d9d6,Nested Mention Recognition,-1,-1
+6387646b727ddf9f05e5d9d8,Decipherment,-1,-1
+6387646b727ddf9f05e5d9da,License Plate Recognition,-1,-1
+6387646b727ddf9f05e5d9dc,Pose Estimation,-1,-1
+6387646b727ddf9f05e5d9de,Graph structure learning,-1,-1
+6387646b727ddf9f05e5d9e0,Age And Gender Classification,-1,-1
+6387646b727ddf9f05e5d9e2,Parameter Prediction,-1,-1
+6387646b727ddf9f05e5d9e4,Self-Supervised Learning,-1,-1
+6387646b727ddf9f05e5d9e6,Video Denoising,-1,-1
+6387646b727ddf9f05e5d9e8,Predict Future Video Frames,-1,-1
+6387646b727ddf9f05e5d9ea,Organ Detection,-1,-1
+6387646b727ddf9f05e5d9ec,Stereotypical Bias Analysis,-1,-1
+6387646b727ddf9f05e5d9ef,Plane Instance Segmentation,-1,-1
+6387646b727ddf9f05e5d9f1,Video Summarization,-1,-1
+6387646b727ddf9f05e5d9f3,Unsupervised Image Classification,-1,-1
+6387646b727ddf9f05e5d9f5,Robust Face Recognition,-1,-1
+6387646b727ddf9f05e5d9f7,JPEG Decompression,-1,-1
+6387646b727ddf9f05e5d9f9,Instance Search,-1,-1
+6387646b727ddf9f05e5d9fb,TGIF-Frame,-1,-1
+6387646b727ddf9f05e5d9fd,News Annotation,-1,-1
+6387646b727ddf9f05e5d9ff,Multimodal Sleep Stage Detection,-1,-1
+6387646b727ddf9f05e5da01,Keyword Spotting CSS,-1,-1
+6387646b727ddf9f05e5da03,Text Pair Classification,-1,-1
+6387646b727ddf9f05e5da05,Pose Tracking,-1,-1
+6387646b727ddf9f05e5da07,Physiological Computing,-1,-1
+6387646b727ddf9f05e5da09,Dialogue Management,-1,-1
+6387646b727ddf9f05e5da0b,Emotional Speech Synthesis,-1,-1
+6387646b727ddf9f05e5da0d,Chord Recognition,-1,-1
+6387646b727ddf9f05e5da0f,2D Semantic Segmentation,-1,-1
+6387646b727ddf9f05e5da11,Meta-Learning,-1,-1
+6387646b727ddf9f05e5da13,ECG Classification,-1,-1
+6387646b727ddf9f05e5da15,Image-to-Image Translation,-1,-1
+6387646b727ddf9f05e5da17,RACE-m,-1,-1
+6387646b727ddf9f05e5da19,Video Polyp Segmentation,-1,-1
+6387646b727ddf9f05e5da1b,Real-Time Semantic Segmentation,-1,-1
+6387646b727ddf9f05e5da1d,Lung Nodule Classification,-1,-1
+6387646b727ddf9f05e5da1f,Multi-class Classification,-1,-1
+6387646b727ddf9f05e5da21,One-Shot Object Detection,-1,-1
+6387646b727ddf9f05e5da23,Plan2Scene,-1,-1
+6387646b727ddf9f05e5da26,Public Relations,-1,-1
+6387646b727ddf9f05e5da28,Novel Class Discovery,-1,-1
+6387646b727ddf9f05e5da2a,Blind Docking,-1,-1
+6387646b727ddf9f05e5da2c,graph partitioning,-1,-1
+6387646b727ddf9f05e5da2e,Audio Tagging,-1,-1
+6387646b727ddf9f05e5da30,Semantic Part Detection,-1,-1
+6387646b727ddf9f05e5da32,Blood Cell Count,-1,-1
+6387646b727ddf9f05e5da34,Sentence Completion,-1,-1
+6387646b727ddf9f05e5da36,Face Swapping,-1,-1
+6387646b727ddf9f05e5da38,4-ary Relation Extraction,-1,-1
+6387646b727ddf9f05e5da3a,Hyperbaton,-1,-1
+6387646b727ddf9f05e5da3c,Multivariate Time Series Imputation,-1,-1
+6387646b727ddf9f05e5da3e,Inductive Link Prediction,-1,-1
+6387646b727ddf9f05e5da40,Online Multi-Object Tracking,-1,-1
+6387646b727ddf9f05e5da42,Compressive Sensing,-1,-1
+6387646b727ddf9f05e5da44,3D Multi-Person Pose Estimation (root-relative),-1,-1
+6387646b727ddf9f05e5da46,Neural Rendering,-1,-1
+6387646b727ddf9f05e5da48,Knowledge Base Question Answering,-1,-1
+6387646b727ddf9f05e5da4a,Multi-agent Reinforcement Learning,-1,-1
+6387646b727ddf9f05e5da4c,Cubic splines Image Registration,-1,-1
+6387646b727ddf9f05e5da4e,regression,-1,-1
+6387646b727ddf9f05e5da50,Cell Entity Annotation,-1,-1
+6387646c727ddf9f05e5da52,MNLI-m,-1,-1
+6387646c727ddf9f05e5da54,Zero-Shot Cross-Lingual Visual Natural Language Inference,-1,-1
+6387646c727ddf9f05e5da56,Multiple Choice Question Answering (MCQA),-1,-1
+6387646c727ddf9f05e5da58,3D Human Shape Estimation,-1,-1
+6387646c727ddf9f05e5da5a,Formal Logic,-1,-1
+6387646c727ddf9f05e5da5c,Gallbladder Cancer Detection,-1,-1
+6387646c727ddf9f05e5da5e,Irish Text Diacritization,-1,-1
+6387646c727ddf9f05e5da60,Anachronisms,-1,-1
+6387646c727ddf9f05e5da62,Photoplethysmography (PPG) heart rate estimation,-1,-1
+6387646c727ddf9f05e5da64,Formality Style Transfer,-1,-1
+6387646c727ddf9f05e5da66,whole slide images,-1,-1
+6387646c727ddf9f05e5da68,Physical Attribute Prediction,-1,-1
+6387646c727ddf9f05e5da6a,English Proverbs,-1,-1
+6387646c727ddf9f05e5da6c,Referring Expression Comprehension,-1,-1
+6387646c727ddf9f05e5da6e,Probing Language Models,-1,-1
+6387646c727ddf9f05e5da70,Reasoning About Colored Objects,-1,-1
+6387646c727ddf9f05e5da72,Query-Based Extractive Summarization,-1,-1
+6387646c727ddf9f05e5da74,speech-recognition,-1,-1
+6387646c727ddf9f05e5da76,Rain Removal,-1,-1
+6387646c727ddf9f05e5da78,Semantic Image Similarity,-1,-1
+6387646c727ddf9f05e5da7a,Fine-Grained Opinion Analysis,-1,-1
+6387646c727ddf9f05e5da7c,Single Image Haze Removal,-1,-1
+6387646c727ddf9f05e5da7e,Headline style transfer (Repubblica to Il Giornale),-1,-1
+6387646c727ddf9f05e5da80,Hypernym Discovery,-1,-1
+6387646c727ddf9f05e5da83,Privacy Preserving Deep Learning,-1,-1
+6387646c727ddf9f05e5da85,Network Community Partition,-1,-1
+6387646c727ddf9f05e5da87,Nonhomogeneous Image Dehazing,-1,-1
+6387646c727ddf9f05e5da89,Remaining Useful Lifetime Estimation,-1,-1
+6387646c727ddf9f05e5da8b,Multi-Armed Bandits,-1,-1
+6387646c727ddf9f05e5da8d,Satellite Image Classification,-1,-1
+6387646c727ddf9f05e5da8f,Colorectal Gland Segmentation:,-1,-1
+6387646c727ddf9f05e5da91,Speaker Separation,-1,-1
+6387646c727ddf9f05e5da93,Action Generation,-1,-1
+6387646c727ddf9f05e5da95,Handwritten Word Generation,-1,-1
+6387646c727ddf9f05e5da97,EEG Emotion Recognition,-1,-1
+6387646c727ddf9f05e5da99,High School Statistics,-1,-1
+6387646c727ddf9f05e5da9b,Drug Discovery,-1,-1
+6387646c727ddf9f05e5da9d,class-incremental learning,-1,-1
+6387646c727ddf9f05e5da9f,Zero-Shot Human-Object Interaction Detection,-1,-1
+6387646c727ddf9f05e5daa1,Lexical Simplification,-1,-1
+6387646c727ddf9f05e5daa3,Sequential Recommendation,-1,-1
+6387646c727ddf9f05e5daa5,Generalizable Novel View Synthesis,-1,-1
+6387646c727ddf9f05e5daa7,Implicit Relations,-1,-1
+6387646c727ddf9f05e5daa9,Overall - Test,-1,-1
+6387646c727ddf9f05e5daab,Traffic Sign Recognition,-1,-1
+6387646c727ddf9f05e5daad,Clinical Concept Extraction,-1,-1
+6387646c727ddf9f05e5daaf,Dialogue Rewriting,-1,-1
+6387646c727ddf9f05e5dab1,Behavioral Malware Detection,-1,-1
+6387646c727ddf9f05e5dab3,Unsupervised Few-Shot Image Classification,-1,-1
+6387646c727ddf9f05e5dab5,Joint Demosaicing and Denoising,-1,-1
+6387646c727ddf9f05e5dab7,Text based Person Search,-1,-1
+6387646c727ddf9f05e5dab9,Visual Reasoning,-1,-1
+6387646c727ddf9f05e5dabb,Automatic Sleep Stage Classification,-1,-1
+6387646c727ddf9f05e5dabd,Medical Image Denoising,-1,-1
+6387646c727ddf9f05e5dabf,Causal Emotion Entailment,-1,-1
+6387646c727ddf9f05e5dac1,Video-Based Person Re-Identification,-1,-1
+6387646c727ddf9f05e5dac3,Pulmorary Vessel Segmentation,-1,-1
+6387646c727ddf9f05e5dac5,College Biology,-1,-1
+6387646c727ddf9f05e5dac7,Generalized Zero-Shot Learning,-1,-1
+6387646c727ddf9f05e5daca,Word Embeddings,-1,-1
+6387646c727ddf9f05e5dacc,Novel Concepts,-1,-1
+6387646c727ddf9f05e5dace,Drone navigation,-1,-1
+6387646c727ddf9f05e5dad0,Audio Super-Resolution,-1,-1
+6387646c727ddf9f05e5dad2,Overlapped 15-5,-1,-1
+6387646c727ddf9f05e5dad4,Demosaicking,-1,-1
+6387646c727ddf9f05e5dad6,Intelligent Communication,-1,-1
+6387646c727ddf9f05e5dad8,Inference Attack,-1,-1
+6387646c727ddf9f05e5dadb,Winowhy,-1,-1
+6387646c727ddf9f05e5dadd,Cross-environment ASR,-1,-1
+6387646c727ddf9f05e5dadf,Chunking,-1,-1
+6387646c727ddf9f05e5dae1,Sequential Image Classification,-1,-1
+6387646c727ddf9f05e5dae3,Speech-to-Gesture Translation,-1,-1
+6387646c727ddf9f05e5dae5,Clinical Assertion Status Detection,-1,-1
+6387646c727ddf9f05e5dae7,Conversational Response Generation,-1,-1
+6387646c727ddf9f05e5dae9,Multi-Person Pose Estimation and Tracking,-1,-1
+6387646c727ddf9f05e5daeb,Head Detection,-1,-1
+6387646c727ddf9f05e5daed,Stance Detection (US Election 2020 - Biden),-1,-1
+6387646c727ddf9f05e5daef,Disaster Response,-1,-1
+6387646c727ddf9f05e5daf1,3D Object Reconstruction,-1,-1
+6387646c727ddf9f05e5daf3,Reading Comprehension (Few-Shot),-1,-1
+6387646c727ddf9f05e5daf5,Cross-Modal Retrieval,-1,-1
+6387646c727ddf9f05e5daf7,Native Language Identification,-1,-1
+6387646c727ddf9f05e5daf9,Selection bias,-1,-1
+6387646c727ddf9f05e5dafb,Visual Entailment,-1,-1
+6387646c727ddf9f05e5dafd,Lesion Detection,-1,-1
+6387646c727ddf9f05e5daff,Binary Relation Extraction,-1,-1
+6387646c727ddf9f05e5db01,The Semantic Segmentation Of Remote Sensing Imagery,-1,-1
+6387646c727ddf9f05e5db03,Compositional Zero-Shot Learning,-1,-1
+6387646c727ddf9f05e5db05,Timedial,-1,-1
+6387646c727ddf9f05e5db07,Weakly Supervised Action Segmentation (Transcript),-1,-1
+6387646c727ddf9f05e5db09,Satire Detection,-1,-1
+6387646c727ddf9f05e5db0b,Instance Shadow Detection,-1,-1
+6387646c727ddf9f05e5db0d,Video Retrieval,-1,-1
+6387646c727ddf9f05e5db0f,Speech Synthesis,-1,-1
+6387646c727ddf9f05e5db11,Object Proposal Generation,-1,-1
+6387646c727ddf9f05e5db13,Video Segmentation,-1,-1
+6387646c727ddf9f05e5db15,Traffic Sign Detection,-1,-1
+6387646c727ddf9f05e5db17,Retinal OCT Disease Classification,-1,-1
+6387646c727ddf9f05e5db19,Marketing,-1,-1
+6387646c727ddf9f05e5db1b,Audio Emotion Recognition,-1,-1
+6387646c727ddf9f05e5db1d,Video Super-Resolution,-1,-1
+6387646c727ddf9f05e5db1f,Drug Response Prediction,-1,-1
+6387646c727ddf9f05e5db21,Lip password classification,-1,-1
+6387646c727ddf9f05e5db23,Open Set Learning,-1,-1
+6387646c727ddf9f05e5db25,Graph Matching,-1,-1
+6387646c727ddf9f05e5db27,Multimodal GIF Dialog,-1,-1
+6387646c727ddf9f05e5db29,Semi-Supervised Object Detection,-1,-1
+6387646c727ddf9f05e5db2b,Human Aging,-1,-1
+6387646c727ddf9f05e5db2d,Wikipedia Summarization,-1,-1
+6387646c727ddf9f05e5db2f,Image Enhancement,-1,-1
+6387646c727ddf9f05e5db31,Point-interactive Image Colorization,-1,-1
+6387646c727ddf9f05e5db33,Drone-view target localization,-1,-1
+6387646c727ddf9f05e5db35,Transparent Object Depth Estimation,-1,-1
+6387646c727ddf9f05e5db37,Simultaneous Localization and Mapping,-1,-1
+6387646c727ddf9f05e5db39,Multimodal Text and Image Classification,-1,-1
+6387646c727ddf9f05e5db3b,Physical Commonsense Reasoning,-1,-1
+6387646c727ddf9f05e5db3d,Image Compressed Sensing,-1,-1
+6387646c727ddf9f05e5db3f,UNET Segmentation,-1,-1
+6387646c727ddf9f05e5db41,Temporal Action Localization,-1,-1
+6387646c727ddf9f05e5db43,Vehicle Speed Estimation,-1,-1
+6387646c727ddf9f05e5db45,Structured Prediction,-1,-1
+6387646c727ddf9f05e5db47,Motion Estimation,-1,-1
+6387646c727ddf9f05e5db49,Semantic SLAM,-1,-1
+6387646c727ddf9f05e5db4b,Supervised Video Summarization,-1,-1
+6387646c727ddf9f05e5db4d,Object Detection,-1,-1
+6387646c727ddf9f05e5db4f,Graph Sampling,-1,-1
+6387646c727ddf9f05e5db52,Perceptual Distance,-1,-1
+6387646c727ddf9f05e5db54,Activity Prediction,-1,-1
+6387646c727ddf9f05e5db56,Histopathological Segmentation,-1,-1
+6387646c727ddf9f05e5db58,Pedestrian Attribute Recognition,-1,-1
+6387646c727ddf9f05e5db5a,3D Volumetric Reconstruction,-1,-1
+6387646c727ddf9f05e5db5c,Self-Supervised Action Recognition,-1,-1
+6387646c727ddf9f05e5db5e,Semi Supervised Learning for Image Captioning,-1,-1
+6387646c727ddf9f05e5db60,Text Reranking,-1,-1
+6387646c727ddf9f05e5db62,Incremental Learning,-1,-1
+6387646c727ddf9f05e5db64,Key Detection,-1,-1
+6387646c727ddf9f05e5db66,Multivariate Time Series Forecasting,-1,-1
+6387646c727ddf9f05e5db68,Co-Salient Object Detection,-1,-1
+6387646c727ddf9f05e5db6a,Common Sense Reasoning (Zero-Shot),-1,-1
+6387646c727ddf9f05e5db6c,Semantic Segmentation,-1,-1
+6387646c727ddf9f05e5db6e,Sparse Learning and binarization,-1,-1
+6387646c727ddf9f05e5db70,Amodal Panoptic Segmentation,-1,-1
+6387646c727ddf9f05e5db72,High School World History,-1,-1
+6387646c727ddf9f05e5db74,Unsupervised Video Object Segmentation,-1,-1
+6387646c727ddf9f05e5db76,Human Pose Forecasting,-1,-1
+6387646c727ddf9f05e5db78,Image Relighting,-1,-1
+6387646c727ddf9f05e5db7a,Overlapped 15-1,-1,-1
+6387646c727ddf9f05e5db7c,Head Pose Estimation,-1,-1
+6387646c727ddf9f05e5db7e,3D Unsupervised Domain Adaptation,-1,-1
+6387646c727ddf9f05e5db80,NetHack Score,-1,-1
+6387646c727ddf9f05e5db82,Object Reconstruction,-1,-1
+6387646c727ddf9f05e5db84,One-shot Unsupervised Domain Adaptation,-1,-1
+6387646d727ddf9f05e5db86,Spam detection,-1,-1
+6387646d727ddf9f05e5db88,Zero-Shot Intent Classification,-1,-1
+6387646d727ddf9f05e5db8b,College Medicine,-1,-1
+6387646d727ddf9f05e5db8d,Camera Auto-Calibration,-1,-1
+6387646d727ddf9f05e5db8f,Slot Filling,-1,-1
+6387646d727ddf9f05e5db91,Face Transfer,-1,-1
+6387646d727ddf9f05e5db93,Lung Nodule Detection,-1,-1
+6387646d727ddf9f05e5db95,Word Sense Disambiguation,-1,-1
+6387646d727ddf9f05e5db97,Heterogeneous Face Recognition,-1,-1
+6387646d727ddf9f05e5db99,Time Series Prediction,-1,-1
+6387646d727ddf9f05e5db9b,Document Ranking,-1,-1
+6387646d727ddf9f05e5db9d,Few-Shot Object Detection,-1,-1
+6387646d727ddf9f05e5db9f,Science / Technology,-1,-1
+6387646d727ddf9f05e5dba1,Stereo Image Super-Resolution,-1,-1
+6387646d727ddf9f05e5dba3,Text Style Transfer,-1,-1
+6387646d727ddf9f05e5dba5,Speech Emotion Recognition - 5-Fold,-1,-1
+6387646d727ddf9f05e5dba7,Intrinsic Image Decomposition,-1,-1
+6387646d727ddf9f05e5dba9,Binary text classification,-1,-1
+6387646d727ddf9f05e5dbab,Knowledge Tracing,-1,-1
+6387646d727ddf9f05e5dbad,Predict clinical outcome,-1,-1
+6387646d727ddf9f05e5dbaf,Audio-Visual Synchronization,-1,-1
+6387646d727ddf9f05e5dbb1,Action Triplet Recognition,-1,-1
+6387646d727ddf9f05e5dbb3,Unsupervised Saliency Detection,-1,-1
+6387646d727ddf9f05e5dbb5,Contour Detection,-1,-1
+6387646d727ddf9f05e5dbb7,Slovak Text Diacritization,-1,-1
+6387646d727ddf9f05e5dbb9,Few Shot Action Recognition,-1,-1
+6387646d727ddf9f05e5dbbb,Interpretable Machine Learning,-1,-1
+6387646d727ddf9f05e5dbbd,Predicting Drug-Induced Laboratory Test Effects,-1,-1
+6387646d727ddf9f05e5dbbf,Fine-Grained Image Classification,-1,-1
+6387646d727ddf9f05e5dbc1,Radar Object Detection,-1,-1
+6387646d727ddf9f05e5dbc3,Paraphrase Identification,-1,-1
+6387646d727ddf9f05e5dbc5,Negation and Speculation Cue Detection,-1,-1
+6387646d727ddf9f05e5dbc8,Image to Point Cloud Registration,-1,-1
+6387646d727ddf9f05e5dbca,Retinal Vessel Segmentation,-1,-1
+6387646d727ddf9f05e5dbcc,Muscle Tendon Junction Identification,-1,-1
+6387646d727ddf9f05e5dbce,Natural Language Inference (Zero-Shot),-1,-1
+6387646d727ddf9f05e5dbd0,Mathematical Reasoning,-1,-1
+6387646d727ddf9f05e5dbd2,TGIF-Action,-1,-1
+6387646d727ddf9f05e5dbd4,Text Summarization,-1,-1
+6387646d727ddf9f05e5dbd6,Medical Visual Question Answering,-1,-1
+6387646d727ddf9f05e5dbd8,One-Shot 3D Action Recognition,-1,-1
+6387646d727ddf9f05e5dbda,Cloze (multi-choices) (Zero-Shot),-1,-1
+6387646d727ddf9f05e5dbdc,Toxic Comment Classification,-1,-1
+6387646d727ddf9f05e5dbde,Sports Understanding,-1,-1
+6387646d727ddf9f05e5dbe0,Recognizing Emotion Cause in Conversations,-1,-1
+6387646d727ddf9f05e5dbe2,Video Domain Adapation,-1,-1
+6387646d727ddf9f05e5dbe4,Robust Speech Recognition,-1,-1
+6387646d727ddf9f05e5dbe6,Logical Fallacies,-1,-1
+6387646d727ddf9f05e5dbe8,Traffic Accident Detection,-1,-1
+6387646d727ddf9f05e5dbea,SNARKS,-1,-1
+6387646d727ddf9f05e5dbec,Referring Expression Segmentation,-1,-1
+6387646d727ddf9f05e5dbee,Person Identification,-1,-1
+6387646d727ddf9f05e5dbf0,Cross-Lingual Document Classification,-1,-1
+6387646d727ddf9f05e5dbf2,Action Segmentation,-1,-1
+6387646d727ddf9f05e5dbf4,BIG-bench Machine Learning,-1,-1
+6387646d727ddf9f05e5dbf6,Unsupervised 3D Human Pose Estimation,-1,-1
+6387646d727ddf9f05e5dbf8,Computed Tomography (CT),-1,-1
+6387646d727ddf9f05e5dbfa,intensity image denoising,-1,-1
+6387646d727ddf9f05e5dbfc,Atari Games,-1,-1
+6387646d727ddf9f05e5dbfe,Text to Audio Retrieval,-1,-1
+6387646d727ddf9f05e5dc00,Zero-Shot Cross-Modal Retrieval,-1,-1
+6387646d727ddf9f05e5dc02,Multilingual Named Entity Recognition,-1,-1
+6387646d727ddf9f05e5dc04,MRI segmentation,-1,-1
+6387646d727ddf9f05e5dc06,Table Recognition,-1,-1
+6387646d727ddf9f05e5dc08,3D Reconstruction,-1,-1
+6387646d727ddf9f05e5dc0a,Semi-Supervised Action Detection,-1,-1
+6387646d727ddf9f05e5dc0c,Referring Image Matting (Expression-based),-1,-1
+6387646d727ddf9f05e5dc0e,KB-to-Language Generation,-1,-1
+6387646d727ddf9f05e5dc10,Topic coverage,-1,-1
+6387646d727ddf9f05e5dc12,Text Segmentation,-1,-1
+6387646d727ddf9f05e5dc14,Multiview Learning,-1,-1
+6387646d727ddf9f05e5dc16,Non-Intrusive Load Monitoring,-1,-1
+6387646d727ddf9f05e5dc18,MNLI-mm,-1,-1
+6387646d727ddf9f05e5dc1a,Scene Graph Classification,-1,-1
+6387646d727ddf9f05e5dc1c,SSTOD,-1,-1
+6387646d727ddf9f05e5dc1e,Action Recognition,-1,-1
+6387646d727ddf9f05e5dc20,Cross-Lingual Paraphrase Identification,-1,-1
+6387646d727ddf9f05e5dc23,Attention Score Prediction,-1,-1
+6387646d727ddf9f05e5dc25,Professional Law,-1,-1
+6387646d727ddf9f05e5dc27,Early Action Prediction,-1,-1
+6387646d727ddf9f05e5dc29,Entity Extraction using GAN,-1,-1
+6387646d727ddf9f05e5dc2b,Skill Generalization,-1,-1
+6387646d727ddf9f05e5dc2d,Transliteration,-1,-1
+6387646d727ddf9f05e5dc2f,Face Hallucination,-1,-1
+6387646d727ddf9f05e5dc31,Video Instance Segmentation,-1,-1
+6387646d727ddf9f05e5dc33,Max-Shot Cross-Lingual Text-to-Image Retrieval,-1,-1
+6387646d727ddf9f05e5dc35,Translation deu-eng,-1,-1
+6387646d727ddf9f05e5dc37,Segmentation Based Workflow Recognition,-1,-1
+6387646d727ddf9f05e5dc39,Bird's-Eye View Semantic Segmentation,-1,-1
+6387646d727ddf9f05e5dc3b,Classification with Binary Neural Network,-1,-1
+6387646d727ddf9f05e5dc3d,Known Unknowns,-1,-1
+6387646d727ddf9f05e5dc3f,Laminar-Turbulent Flow Localisation,-1,-1
+6387646d727ddf9f05e5dc41,Early Sexual Predator Detection (eSPD),-1,-1
+6387646d727ddf9f05e5dc43,Hard-label Attack,-1,-1
+6387646d727ddf9f05e5dc45,Unsupervised Person Re-Identification,-1,-1
+6387646d727ddf9f05e5dc47,Deep Attention,-1,-1
+6387646d727ddf9f05e5dc49,Layout-to-Image Generation,-1,-1
+6387646d727ddf9f05e5dc4b,Cardiac Segmentation,-1,-1
+6387646d727ddf9f05e5dc4d,Single-View 3D Reconstruction,-1,-1
+6387646d727ddf9f05e5dc4f,Speech Emotion Recognition,-1,-1
+6387646d727ddf9f05e5dc51,Grayscale Image Denoising,-1,-1
+6387646d727ddf9f05e5dc53,Probabilistic Time Series Forecasting,-1,-1
+6387646d727ddf9f05e5dc55,Text-to-Image Generation,-1,-1
+6387646d727ddf9f05e5dc57,Image Matting,-1,-1
+6387646d727ddf9f05e5dc59,Extreme Multi-Label Classification,-1,-1
+6387646d727ddf9f05e5dc5b,Image Matching,-1,-1
+6387646d727ddf9f05e5dc5d,Disjoint 15-5,-1,-1
+6387646d727ddf9f05e5dc5f,Grayscale Video Denoising,-1,-1
+6387646d727ddf9f05e5dc61,Fine-Grained Visual Recognition,-1,-1
+6387646d727ddf9f05e5dc63,Scene Change Detection,-1,-1
+6387646d727ddf9f05e5dc65,Shape from Texture,-1,-1
+6387646d727ddf9f05e5dc67,Entity Typing,-1,-1
+6387646d727ddf9f05e5dc69,Inverse-Tone-Mapping,-1,-1
+6387646d727ddf9f05e5dc6b,audio-visual learning,-1,-1
+6387646d727ddf9f05e5dc6d,Multi-Goal Reinforcement Learning,-1,-1
+6387646d727ddf9f05e5dc6f,Predicting Patient Outcomes,-1,-1
+6387646d727ddf9f05e5dc71,Safe Reinforcement Learning,-1,-1
+6387646d727ddf9f05e5dc73,Fashion Compatibility Learning,-1,-1
+6387646d727ddf9f05e5dc75,Overlapped 100-10,-1,-1
+6387646d727ddf9f05e5dc77,Image Retrieval,-1,-1
+6387646d727ddf9f05e5dc79,Video Matting,-1,-1
+6387646d727ddf9f05e5dc7b,Method name prediction,-1,-1
+6387646d727ddf9f05e5dc7d,Max-Shot Cross-Lingual Visual Reasoning,-1,-1
+6387646d727ddf9f05e5dc7f,SENTS,-1,-1
+6387646d727ddf9f05e5dc81,Molecular Property Prediction (1-shot)),-1,-1
+6387646d727ddf9f05e5dc83,Clothes Landmark Detection,-1,-1
+6387646d727ddf9f05e5dc85,Point Cloud Registration,-1,-1
+6387646d727ddf9f05e5dc87,Visual Tracking,-1,-1
+6387646d727ddf9f05e5dc89,Tomographic Reconstructions,-1,-1
+6387646d727ddf9f05e5dc8b,Max-Shot Cross-Lingual Visual Question Answering,-1,-1
+6387646d727ddf9f05e5dc8d,Dense Pixel Correspondence Estimation,-1,-1
+6387646d727ddf9f05e5dc8f,Egocentric Activity Recognition,-1,-1
+6387646d727ddf9f05e5dc91,Offline RL,-1,-1
+6387646d727ddf9f05e5dc93,Tweet-Reply Sentiment Analysis,-1,-1
+6387646d727ddf9f05e5dc95,AMR-to-Text Generation,-1,-1
+6387646d727ddf9f05e5dc97,Code Summarization,-1,-1
+6387646d727ddf9f05e5dc99,Music Transcription,-1,-1
+6387646d727ddf9f05e5dc9b,3D Lane Detection,-1,-1
+6387646d727ddf9f05e5dc9d,Audio Multiple Target Classification,-1,-1

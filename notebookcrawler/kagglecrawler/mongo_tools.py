@@ -9,64 +9,72 @@ db = client['kagglecrawler']
 search_log_coll = db['search_log']
 download_log_coll = db['download_log']
 raw_notebook_coll = db['raw_notebooks']
-notebook_metadata_coll = db['notebook_metadata_coll']
-central_task_log_coll = db['central_task_log_coll']
+notebook_metadata_coll = db['notebook_metadata']
+central_task_log_coll = db['central_task_log']
 task_log_coll = db['task_log']
 
 
-def export_from_collection(coll, file_name): 
+def export_from_collection(coll, file_name, timestamp): 
     ''' Export collection to one .csv file'''
     coll_files = list(coll.find())
     df_coll_file = pd.DataFrame.from_dict(coll_files)
 
     # Add time stamp to exported file
-    timestamp = int(time.time())
-    names = os.path.basename(file_name).split('.')
-    stamped_name = names[0]+'_'+str(timestamp)+'.'+names[1]
-    stamped_file_name = os.path.join(os.path.dirname(file_name), stamped_name)
+    name = os.path.basename(file_name)
+    export_dir = os.path.join(os.path.dirname(file_name), f'exports_{timestamp}')
+    if not os.path.exists(export_dir):
+        os.mkdir(export_dir)
+    stamped_file_name = os.path.join(export_dir, name)
     df_coll_file.to_csv(stamped_file_name, index=False)
     print(f'Exported {coll} collection to {stamped_file_name}')
     return True
 
-def export_search_log(): 
+def export_search_log(timestamp): 
     coll = search_log_coll
     file_name = os.path.join(os.getcwd(), 'DB_exports/search_log.csv')
-    export_from_collection(coll, file_name)
+    export_from_collection(coll, file_name, timestamp)
     return True
     
 
-def export_download_log(): 
+def export_download_log(timestamp): 
     coll = download_log_coll
     file_name = os.path.join(os.getcwd(), 'DB_exports/download_log.csv')
-    export_from_collection(coll, file_name)
+    export_from_collection(coll, file_name, timestamp)
     return True
 
-def export_task_log(): 
+def export_task_log(timestamp): 
     coll = task_log_coll
     file_name = os.path.join(os.getcwd(), 'DB_exports/task_log.csv')
-    export_from_collection(coll, file_name)
+    export_from_collection(coll, file_name, timestamp)
     return True 
 
+def export_central_task_log(timestamp): 
+    coll = task_log_coll
+    file_name = os.path.join(os.getcwd(), 'DB_exports/central_task_log.csv')
+    export_from_collection(coll, file_name, timestamp)
+    return True 
 
-def export_raw_notebooks():
+def export_raw_notebooks(timestamp):
     coll = raw_notebook_coll
     file_name = os.path.join(os.getcwd(), 'DB_exports/raw_notebook.csv')
-    export_from_collection(coll, file_name)
+    export_from_collection(coll, file_name, timestamp)
     return True
 
 
-def export_notebook_metadata():
+def export_notebook_metadata(timestamp):
     coll = notebook_metadata_coll
     file_name = os.path.join(os.getcwd(), 'DB_exports/notebook_metadata.csv')
-    export_from_collection(coll, file_name)
+    export_from_collection(coll, file_name, timestamp)
     return True
 
 def export_resources():
-    export_search_log()
-    export_download_log()
-    export_raw_notebooks()
-    export_task_log()
-    export_notebook_metadata()
+    timestamp = int(time.time())
+    export_search_log(timestamp)
+    export_download_log(timestamp)
+    export_raw_notebooks(timestamp)
+    export_task_log(timestamp)
+    export_central_task_log(timestamp)
+    export_notebook_metadata(timestamp)
     return True
 
 def get_coll_status(): 
@@ -75,6 +83,7 @@ def get_coll_status():
     print(f'download_log_coll: {len(list(download_log_coll.find()))}')
     print(f'raw_notebook_coll: {len(list(raw_notebook_coll.find()))}')
     print(f'task_log_coll: {len(list(task_log_coll.find()))}')
+    print(f'central_task_log_coll: {len(list(central_task_log_coll.find()))}')
     print(f'notebook_metadata_coll: {len(list(notebook_metadata_coll.find()))}')
     print(f'\n-----------------------------------------------')
 
@@ -103,7 +112,8 @@ def real_time_status():
 
 
 if __name__ == '__main__': 
-    real_time_status()
+    # real_time_status()
+    get_coll_status()
     # export_resources()
 
     

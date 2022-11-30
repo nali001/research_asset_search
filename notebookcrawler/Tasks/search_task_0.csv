@@ -1,0 +1,1261 @@
+_id,query,searched,downloaded
+63876440727ddf9f05e5837a,Gravity,-1,-1
+63876440727ddf9f05e5839e,Discrete Cosine Transform,-1,-1
+63876440727ddf9f05e583aa,Gated Linear Network,-1,-1
+63876440727ddf9f05e583b0,Weight Decay,-1,-1
+63876440727ddf9f05e583b2,BiGG,-1,-1
+63876440727ddf9f05e583b4,Accuracy-Robustness Area,-1,-1
+63876440727ddf9f05e583b6,DynaBERT,-1,-1
+63876440727ddf9f05e583ba,Dot-Product Attention,-1,-1
+63876440727ddf9f05e583bc,You Only Hypothesize Once,-1,-1
+63876440727ddf9f05e583c2,Polynomial Rate Decay,-1,-1
+63876440727ddf9f05e583c4,Global Average Pooling,-1,-1
+63876440727ddf9f05e583c6,Fast-YOLOv4-SmallObj,-1,-1
+63876440727ddf9f05e583c8,PCB,-1,-1
+63876440727ddf9f05e583ca,EfficientUNet++,-1,-1
+63876440727ddf9f05e583cc,Gradient Sign Dropout,-1,-1
+63876440727ddf9f05e583ce,GPT,-1,-1
+63876440727ddf9f05e583d0,Blink Communication,-1,-1
+63876440727ddf9f05e583d2,ENet,-1,-1
+63876440727ddf9f05e583d4,SCCL,-1,-1
+63876440727ddf9f05e583d6,SNIP,-1,-1
+63876440727ddf9f05e583d8,QRNN,-1,-1
+63876440727ddf9f05e583da,Early exiting using confidence measures,-1,-1
+63876440727ddf9f05e583dc,BASNet,-1,-1
+63876440727ddf9f05e583de,Gradient Clipping,-1,-1
+63876440727ddf9f05e583e0,Visual-Linguistic BERT,-1,-1
+63876440727ddf9f05e583e2,Temporal Word Embeddings with a Compass,-1,-1
+63876440727ddf9f05e583e4,DGRF,-1,-1
+63876440727ddf9f05e583e6,Wide Residual Block,-1,-1
+63876440727ddf9f05e583e8,LayoutLMv2,-1,-1
+63876440727ddf9f05e583ea,VQSVD,-1,-1
+63876440727ddf9f05e583ec,Neural Radiance Field,-1,-1
+63876440727ddf9f05e583ee,Hierarchical Style Disentanglement,-1,-1
+63876440727ddf9f05e583f0,Models Genesis,-1,-1
+63876440727ddf9f05e583f2,Explanation vs Attention,-1,-1
+63876440727ddf9f05e583f4,Deformable Convolutional Networks,-1,-1
+63876440727ddf9f05e583f6,Embedded Gaussian Affinity,-1,-1
+63876440727ddf9f05e583f8,utterance level permutation invariant training,-1,-1
+63876440727ddf9f05e583fa,ACTKR,-1,-1
+63876440727ddf9f05e583fc,Weight Normalization,-1,-1
+63876440727ddf9f05e583fe,LFPNet with test time augmentation,-1,-1
+63876440727ddf9f05e58400,Confidence Calibration with an Auxiliary Class),-1,-1
+63876440727ddf9f05e58402,Channel Shuffle,-1,-1
+63876440727ddf9f05e58404,COCO-FUNIT,-1,-1
+63876440727ddf9f05e58406,KungFu,-1,-1
+63876440727ddf9f05e58408,Difference of Gaussian Random Forest,-1,-1
+63876440727ddf9f05e5840a,Linear Warmup,-1,-1
+63876440727ddf9f05e5840c,IQ-Learn,-1,-1
+63876440727ddf9f05e5840e,Routing Transformer,-1,-1
+63876440727ddf9f05e58410,Online Hard Example Mining,-1,-1
+63876440727ddf9f05e58412,DeLighT Block,-1,-1
+63876440727ddf9f05e58414,TridentNet,-1,-1
+63876440727ddf9f05e58416,Assemble-ResNet,-1,-1
+63876440727ddf9f05e58418,ORB-SLAM2,-1,-1
+63876440727ddf9f05e5841a,scSE,-1,-1
+63876440727ddf9f05e5841c,Direct Feedback Alignment,-1,-1
+63876440727ddf9f05e5841e,Go-Explore,-1,-1
+63876440727ddf9f05e58420,BART,-1,-1
+63876440727ddf9f05e58422,Class-activation map,-1,-1
+63876440727ddf9f05e58424,Location Sensitive Attention,-1,-1
+63876440727ddf9f05e58426,Stable Rank Normalization,-1,-1
+63876440727ddf9f05e58428,SCST,-1,-1
+63876440727ddf9f05e5842a,Video Language Graph Matching Network,-1,-1
+63876440727ddf9f05e5842c,Style Transfer Module,-1,-1
+63876440727ddf9f05e5842e,Deep-CAPTCHA,-1,-1
+63876440727ddf9f05e58430,PSPNet,-1,-1
+63876440727ddf9f05e58432,ProxyOptimization,-1,-1
+63876440727ddf9f05e58434,Fixup Initialization,-1,-1
+63876440727ddf9f05e58436,FT-Transformer,-1,-1
+63876440727ddf9f05e58438,Segregated Attention Network,-1,-1
+63876440727ddf9f05e5843a,Projection Discriminator,-1,-1
+63876440727ddf9f05e5843c,Movement Pruning,-1,-1
+63876440727ddf9f05e5843e,Autoencoders,-1,-1
+63876440727ddf9f05e58440,Local SGD,-1,-1
+63876440727ddf9f05e58442,BASE,-1,-1
+63876440727ddf9f05e58444,GEE,-1,-1
+63876440727ddf9f05e58446,HetPipe,-1,-1
+63876440727ddf9f05e58448,GHM-R,-1,-1
+63876440727ddf9f05e5844a,NAM,-1,-1
+63876440727ddf9f05e5844c,Deactivable Skip Connection,-1,-1
+63876440727ddf9f05e5844e,FastPitch,-1,-1
+63876440727ddf9f05e58450,Residual Multi-Layer Perceptrons,-1,-1
+63876440727ddf9f05e58452,Kernel Activation Function,-1,-1
+63876440727ddf9f05e58454,TabNN,-1,-1
+63876440727ddf9f05e58456,CKConv,-1,-1
+63876440727ddf9f05e58458,Generic RoI Extractor,-1,-1
+63876440727ddf9f05e5845a,Random Ensemble Mixture,-1,-1
+63876440727ddf9f05e5845c,GPS,-1,-1
+63876440727ddf9f05e5845e,YOLOv3,-1,-1
+63876440727ddf9f05e58460,Convolutional Vision Transformer,-1,-1
+63876440727ddf9f05e58462,ATSS,-1,-1
+63876440727ddf9f05e58464,GAN Feature Matching,-1,-1
+63876440727ddf9f05e58466,Domain-Symmetric Network,-1,-1
+63876440727ddf9f05e58468,Linear Layer,-1,-1
+63876440727ddf9f05e5846a,SOM,-1,-1
+63876440727ddf9f05e5846c,Faster R-CNN,-1,-1
+63876440727ddf9f05e5846e,bilayer convolutional neural network,-1,-1
+63876440727ddf9f05e58470,Gait Emotion Recognition,-1,-1
+63876440727ddf9f05e58472,CCAC,-1,-1
+63876440727ddf9f05e58474,mBART,-1,-1
+63876440727ddf9f05e58476,Span-Based Dynamic Convolution,-1,-1
+63876440727ddf9f05e58478,GMI,-1,-1
+63876440727ddf9f05e5847a,PNAS,-1,-1
+63876440727ddf9f05e5847c,Harris Hawks optimization (HHO),-1,-1
+63876440727ddf9f05e5847e,PLATO-2,-1,-1
+63876440727ddf9f05e58480,BezierAlign,-1,-1
+63876440727ddf9f05e58482,Progressive Neural Architecture Search,-1,-1
+63876440727ddf9f05e58484,Bridge-net,-1,-1
+63876440727ddf9f05e58486,PGC-DGCNN,-1,-1
+63876440727ddf9f05e58488,Multiplex Molecular Graph Neural Network,-1,-1
+63876440727ddf9f05e5848a,Inception-ResNet-v2 Reduction-B,-1,-1
+63876440727ddf9f05e5848c,Graph Representation with Global structure,-1,-1
+63876440727ddf9f05e5848e,YellowFin,-1,-1
+63876440727ddf9f05e58490,Non-Local Operation,-1,-1
+63876440727ddf9f05e58492,DCGAN,-1,-1
+63876440727ddf9f05e58494,Temporal Distribution Matching,-1,-1
+63876440727ddf9f05e58496,UNIMO,-1,-1
+63876440727ddf9f05e58498,Voxel RoI Pooling,-1,-1
+63876440727ddf9f05e5849a,Schrödinger Network,-1,-1
+63876440727ddf9f05e5849c,SynaNN,-1,-1
+63876440727ddf9f05e5849e,AlphaFold,-1,-1
+63876440727ddf9f05e584a0,HRI pipeline,-1,-1
+63876440727ddf9f05e584a2,Proxy Anchor Loss for Deep Metric Learning,-1,-1
+63876440727ddf9f05e584a4,SNGAN,-1,-1
+63876440727ddf9f05e584a6,Growing Cosine Unit,-1,-1
+63876440727ddf9f05e584a8,Matrix-power Normalization,-1,-1
+63876440727ddf9f05e584aa,Adaptive Bezier-Curve Network,-1,-1
+63876440727ddf9f05e584ac,CenterMask,-1,-1
+63876440727ddf9f05e584ae,GreedyNAS-B,-1,-1
+63876440727ddf9f05e584b0,Channel Squeeze and Spatial Excitation,-1,-1
+63876440727ddf9f05e584b2,Softplus,-1,-1
+63876440727ddf9f05e584b4,RAM,-1,-1
+63876440727ddf9f05e584b6,Hard Swish,-1,-1
+63876440727ddf9f05e584b8,High-Order Consensuses,-1,-1
+63876440727ddf9f05e584ba,TrOCR,-1,-1
+63876440727ddf9f05e584bc,CDEP,-1,-1
+63876440727ddf9f05e584be,GBO,-1,-1
+63876440727ddf9f05e584c1,Bootstrap Your Own Latent,-1,-1
+63876440727ddf9f05e584c3,Medical Entity Disambiguation using Graph Neural Networks,-1,-1
+63876440727ddf9f05e584c5,WaveGrad UBlock,-1,-1
+63876440727ddf9f05e584c7,EsViT,-1,-1
+63876440727ddf9f05e584c9,Residual Network,-1,-1
+63876440727ddf9f05e584cb,GroupDNet,-1,-1
+63876440727ddf9f05e584cd,AMSBound,-1,-1
+63876440727ddf9f05e584cf,RandWire,-1,-1
+63876440727ddf9f05e584d1,Channel Squeeze and Spatial Excitation (sSE),-1,-1
+63876440727ddf9f05e584d3,CoaT,-1,-1
+63876440727ddf9f05e584d5,VGG Loss,-1,-1
+63876440727ddf9f05e584d7,E-swish,-1,-1
+63876440727ddf9f05e584d9,WaveGrad,-1,-1
+63876440727ddf9f05e584db,L-GCN,-1,-1
+63876440727ddf9f05e584dd,Fast AutoAugment,-1,-1
+63876440727ddf9f05e584df,RAE,-1,-1
+63876440727ddf9f05e584e1,WaveNet,-1,-1
+63876440727ddf9f05e584e3,Learning Cross-Modality Encoder Representations from Transformers,-1,-1
+63876440727ddf9f05e584e5,Structural Deep Network Embedding,-1,-1
+63876440727ddf9f05e584e7,ConvMLP,-1,-1
+63876440727ddf9f05e584e9,ALiBi,-1,-1
+63876440727ddf9f05e584eb,VisualBERT,-1,-1
+63876440727ddf9f05e584ed,Instance-Level Meta Normalization,-1,-1
+63876440727ddf9f05e584ef,Spatial Gating Unit,-1,-1
+63876440727ddf9f05e584f1,Self-Organizing Map,-1,-1
+63876440727ddf9f05e584f3,RFB Net,-1,-1
+63876440727ddf9f05e584f5,Convolutional GRU,-1,-1
+63876440727ddf9f05e584f7,Make-A-Scene,-1,-1
+63876440727ddf9f05e584f9,L1 Regularization,-1,-1
+63876440727ddf9f05e584fb,Slime Mould Algorithm,-1,-1
+63876440727ddf9f05e584fd,VisuoSpatial Foresight,-1,-1
+63876440727ddf9f05e584ff,SCN,-1,-1
+63876440727ddf9f05e58501,InstaBoost,-1,-1
+63876440727ddf9f05e58503,Dense Prediction Transformer,-1,-1
+63876440727ddf9f05e58505,Gated Recurrent Unit,-1,-1
+63876440727ddf9f05e58507,SPL,-1,-1
+63876440727ddf9f05e58509,K3M,-1,-1
+63876440727ddf9f05e5850b,Magnification Prior Contrastive Similarity,-1,-1
+63876440727ddf9f05e5850d,CP N3,-1,-1
+63876440727ddf9f05e5850f,Scale Aggregation Block,-1,-1
+63876440727ddf9f05e58511,AutoEncoder,-1,-1
+63876440727ddf9f05e58513,Non-Local Block,-1,-1
+63876440727ddf9f05e58515,Dilated convolution with learnable spacings,-1,-1
+63876440727ddf9f05e58517,Triplet Loss,-1,-1
+63876440727ddf9f05e58519,ConViT,-1,-1
+63876440727ddf9f05e5851b,Bidirectional Pyramid Networks for Semantic Segmentation,-1,-1
+63876440727ddf9f05e5851d,DeepSIM,-1,-1
+63876440727ddf9f05e5851f,AEDA,-1,-1
+63876440727ddf9f05e58521,Local Augmentation,-1,-1
+63876440727ddf9f05e58523,MPN,-1,-1
+63876440727ddf9f05e58525,SENet,-1,-1
+63876440727ddf9f05e58527,Contrastive Multiview Coding,-1,-1
+63876440727ddf9f05e58529,Auditory Cortex ResNet,-1,-1
+63876440727ddf9f05e5852b,PGM,-1,-1
+63876440727ddf9f05e5852d,"SuperpixelGridCut, SuperpixelGridMean, SuperpixelGridMix",-1,-1
+63876440727ddf9f05e5852f,Invertible NxN Convolution,-1,-1
+63876440727ddf9f05e58531,GELU,-1,-1
+63876440727ddf9f05e58533,FuseFormer Block,-1,-1
+63876440727ddf9f05e58535,Linear Warmup With Linear Decay,-1,-1
+63876440727ddf9f05e58537,NPID,-1,-1
+63876440727ddf9f05e58539,SEAM,-1,-1
+63876440727ddf9f05e5853b,MobileDet,-1,-1
+63876440727ddf9f05e5853d,Serf,-1,-1
+63876440727ddf9f05e5853f,Graph Neural Networks with Continual Learning,-1,-1
+63876440727ddf9f05e58541,Regularized Autoencoders,-1,-1
+63876440727ddf9f05e58543,Generative Adversarial Imitation Learning,-1,-1
+63876440727ddf9f05e58545,Accordion,-1,-1
+63876440727ddf9f05e58547,DropPathway,-1,-1
+63876440727ddf9f05e58549,FuseFormer,-1,-1
+63876440727ddf9f05e5854b,ELMo,-1,-1
+63876440727ddf9f05e5854d,StoGCN,-1,-1
+63876440727ddf9f05e5854f,Switch Transformer,-1,-1
+63876440727ddf9f05e58551,Vision-and-Language BERT,-1,-1
+63876440727ddf9f05e58553,BTmPG,-1,-1
+63876440727ddf9f05e58555,GECO,-1,-1
+63876440727ddf9f05e58557,CIDA,-1,-1
+63876440727ddf9f05e58559,Dice Loss,-1,-1
+63876440727ddf9f05e5855b,Self-Learning,-1,-1
+63876440727ddf9f05e5855d,ScanSSD,-1,-1
+63876440727ddf9f05e5855f,GNS,-1,-1
+63876440727ddf9f05e58561,Random Horizontal Flip,-1,-1
+63876440727ddf9f05e58563,ShuffleNet v2,-1,-1
+63876440727ddf9f05e58565,pixel2style2pixel,-1,-1
+63876440727ddf9f05e58567,Policy Similarity Metric,-1,-1
+63876440727ddf9f05e58569,Differentiable Digital Signal Processing,-1,-1
+63876440727ddf9f05e5856b,CAM,-1,-1
+63876440727ddf9f05e5856d,Primal Wasserstein Imitation Learning,-1,-1
+63876440727ddf9f05e5856f,TayPO,-1,-1
+63876440727ddf9f05e58571,Transformer Decoder,-1,-1
+63876440727ddf9f05e58573,Ghost Bottleneck,-1,-1
+63876440727ddf9f05e58575,ShapeConv,-1,-1
+63876440727ddf9f05e58577,SSFG regularization,-1,-1
+63876440727ddf9f05e58579,Visual Attention,-1,-1
+63876440727ddf9f05e5857b,Channel Attention Module,-1,-1
+63876440727ddf9f05e5857d,Sparse Transformer,-1,-1
+63876440727ddf9f05e5857f,NNCF,-1,-1
+63876440727ddf9f05e58581,Bilateral Grid,-1,-1
+63876440727ddf9f05e58583,Eligibility Trace,-1,-1
+63876440727ddf9f05e58585,Temporal attention,-1,-1
+63876440727ddf9f05e58587,Learnable adjacency matrix GCN,-1,-1
+63876440727ddf9f05e58589,RBPN,-1,-1
+63876440727ddf9f05e5858b,Non-Linear-Bounding-Function,-1,-1
+63876440727ddf9f05e5858d,FFMv1,-1,-1
+63876440727ddf9f05e5858f,Meta-augmentation,-1,-1
+63876440727ddf9f05e58591,EBM,-1,-1
+63876440727ddf9f05e58593,1-Dimensional Convolutional Neural Networks,-1,-1
+63876440727ddf9f05e58595,SCARLET,-1,-1
+63876440727ddf9f05e58597,MacBERT,-1,-1
+63876440727ddf9f05e58599,T5,-1,-1
+63876440727ddf9f05e5859b,Two Time-scale Update Rule,-1,-1
+63876440727ddf9f05e5859d,RIFE,-1,-1
+63876440727ddf9f05e5859f,,-1,-1
+63876440727ddf9f05e585a1,(2+1)D Convolution,-1,-1
+63876440727ddf9f05e585a3,BiDet,-1,-1
+63876440727ddf9f05e585a5,RandAugment,-1,-1
+63876440727ddf9f05e585a7,UNet++,-1,-1
+63876440727ddf9f05e585a9,Deep LSTM Reader,-1,-1
+63876440727ddf9f05e585ab,Deep Residual Pansharpening Neural Network,-1,-1
+63876440727ddf9f05e585ad,CornerNet-Squeeze Hourglass Module,-1,-1
+63876440727ddf9f05e585af,IRN,-1,-1
+63876440727ddf9f05e585b1,Chimera,-1,-1
+63876440727ddf9f05e585b3,GPU-Efficient Network,-1,-1
+63876440727ddf9f05e585b5,AdamW,-1,-1
+63876440727ddf9f05e585b7,AGCN,-1,-1
+63876440727ddf9f05e585b9,Depthwise Fire Module,-1,-1
+63876440727ddf9f05e585bb,Temporally Consistent Spatial Augmentation,-1,-1
+63876440727ddf9f05e585bd,SimAdapter,-1,-1
+63876440727ddf9f05e585bf,LeViT Attention Block,-1,-1
+63876440727ddf9f05e585c1,NICE,-1,-1
+63876440727ddf9f05e585c3,Model-Free Episodic Control,-1,-1
+63876440727ddf9f05e585c5,DAFNe,-1,-1
+63876440727ddf9f05e585c7,Recurrent Trend Predictive Neural Network,-1,-1
+63876440727ddf9f05e585c9,Auxiliary Classifier,-1,-1
+63876440727ddf9f05e585cb,V-trace,-1,-1
+63876440727ddf9f05e585cd,Large-scale spectral clustering,-1,-1
+63876440727ddf9f05e585cf,Rendezvous,-1,-1
+63876440727ddf9f05e585d1,NeuroTactic,-1,-1
+63876440727ddf9f05e585d3,Dynamic SmoothL1 Loss,-1,-1
+63876440727ddf9f05e585d5,Multi-head of Mixed Attention,-1,-1
+63876440727ddf9f05e585d7,GGS-NNs,-1,-1
+63876440727ddf9f05e585d9,Minibatch Discrimination,-1,-1
+63876440727ddf9f05e585db,Root-of-Mean-Squared Pooling,-1,-1
+63876440727ddf9f05e585dd,TransE,-1,-1
+63876440727ddf9f05e585df,MultiGrain,-1,-1
+63876440727ddf9f05e585e1,H-BEMD,-1,-1
+63876440727ddf9f05e585e3,Adversarial Soft Advantage Fitting (ASAF),-1,-1
+63876440727ddf9f05e585e5,TILDEv2,-1,-1
+63876440727ddf9f05e585e7,Byte Pair Encoding,-1,-1
+63876440727ddf9f05e585e9,All-Attention Layer,-1,-1
+63876440727ddf9f05e585eb,IMPALA,-1,-1
+63876440727ddf9f05e585ed,XCiT Layer,-1,-1
+63876440727ddf9f05e585ef,Context Optimization,-1,-1
+63876440727ddf9f05e585f1,SegNet,-1,-1
+63876440727ddf9f05e585f3,Generative Adversarial Network,-1,-1
+63876440727ddf9f05e585f5,IPBI,-1,-1
+63876440727ddf9f05e585f7,Annealing SNNL,-1,-1
+63876440727ddf9f05e585f9,Hyperboloid Embeddings,-1,-1
+63876440727ddf9f05e585fb,BigGAN,-1,-1
+63876440727ddf9f05e585fd,RevNet,-1,-1
+63876440727ddf9f05e585ff,LAMB,-1,-1
+63876440727ddf9f05e58601,BiGAN,-1,-1
+63876440727ddf9f05e58603,Gaussian Mixture Variational Autoencoder,-1,-1
+63876440727ddf9f05e58605,Concrete Dropout,-1,-1
+63876440727ddf9f05e58607,Scaled Exponential Linear Unit,-1,-1
+63876440727ddf9f05e58609,Hierarchical Entity Graph Convolutional Network,-1,-1
+63876440727ddf9f05e5860b,Lovasz-Softmax,-1,-1
+63876440727ddf9f05e5860d,End-to-End Neural Diarization,-1,-1
+63876440727ddf9f05e5860f,NormFormer,-1,-1
+63876440727ddf9f05e58611,Adafactor,-1,-1
+63876440727ddf9f05e58613,NICE-SLAM,-1,-1
+63876440727ddf9f05e58615,H3DNet,-1,-1
+63876440727ddf9f05e58617,Rectified Linear Units,-1,-1
+63876440727ddf9f05e58619,Invertible 1x1 Convolution,-1,-1
+63876440727ddf9f05e5861b,SEER,-1,-1
+63876440727ddf9f05e5861d,Sinusoidal Representation Network,-1,-1
+63876440727ddf9f05e5861f,ShuffleNet,-1,-1
+63876440727ddf9f05e58621,Inverse Square Root Schedule,-1,-1
+63876440727ddf9f05e58623,CoVe,-1,-1
+63876440727ddf9f05e58625,DeepMask,-1,-1
+63876440727ddf9f05e58627,Discriminative Adversarial Search,-1,-1
+63876440727ddf9f05e5862a,SRU++,-1,-1
+63876440727ddf9f05e5862c,FLICA,-1,-1
+63876440727ddf9f05e5862e,Grid Sensitive,-1,-1
+63876440727ddf9f05e58630,SCAN-clustering,-1,-1
+63876440727ddf9f05e58632,Elastic Dense Block,-1,-1
+63876440727ddf9f05e58634,CSPDenseNet,-1,-1
+63876440727ddf9f05e58636,ALS,-1,-1
+63876440727ddf9f05e58638,Precise RoI Pooling,-1,-1
+63876440727ddf9f05e5863a,DMAGE,-1,-1
+63876440727ddf9f05e5863c,AMSGrad,-1,-1
+63876440727ddf9f05e5863e,Adam,-1,-1
+63876440727ddf9f05e58640,Semantic Cross Attention,-1,-1
+63876440727ddf9f05e58642,First Integer Neighbor Clustering Hierarchy,-1,-1
+63876440727ddf9f05e58644,ProGAN,-1,-1
+63876440727ddf9f05e58646,SIG,-1,-1
+63876440727ddf9f05e58648,1x1 Convolution,-1,-1
+63876440727ddf9f05e5864a,Rotary Position Embedding,-1,-1
+63876440727ddf9f05e5864c,TorchBeast,-1,-1
+63876440727ddf9f05e5864e,TinaFace,-1,-1
+63876440727ddf9f05e58650,Knowledge Graph Refiner,-1,-1
+63876440727ddf9f05e58652,Contextual Residual Aggregation,-1,-1
+63876440727ddf9f05e58654,Taylor Expansion Policy Optimization,-1,-1
+63876440727ddf9f05e58656,Global Convolutional Network,-1,-1
+63876440727ddf9f05e58658,SRU,-1,-1
+63876440727ddf9f05e5865a,SPADE,-1,-1
+63876440727ddf9f05e5865c,PeleeNet,-1,-1
+63876440727ddf9f05e5865e,LXMERT,-1,-1
+63876440727ddf9f05e58660,LTLS,-1,-1
+63876440727ddf9f05e58662,BinaryBERT,-1,-1
+63876440727ddf9f05e58664,Attribute2Font,-1,-1
+63876440727ddf9f05e58666,Spectrally Normalised GAN,-1,-1
+63876440727ddf9f05e58668,Dense Synthesized Attention,-1,-1
+63876440727ddf9f05e5866a,Cutout,-1,-1
+63876440727ddf9f05e5866c,Graphic Mutual Information,-1,-1
+63876440727ddf9f05e5866e,GATv2,-1,-1
+63876440727ddf9f05e58670,BiGCN,-1,-1
+63876440727ddf9f05e58672,DGCNN,-1,-1
+63876440727ddf9f05e58674,ResNeXt,-1,-1
+63876440727ddf9f05e58676,CodeBERT,-1,-1
+63876440727ddf9f05e58678,Contextualized Topic Models,-1,-1
+63876440727ddf9f05e5867a,DiCE Unit,-1,-1
+63876440727ddf9f05e5867c,Viewmaker Network,-1,-1
+63876440727ddf9f05e5867e,StruBERT,-1,-1
+63876440727ddf9f05e58680,DINO,-1,-1
+63876440727ddf9f05e58682,Deformable RoI Pooling,-1,-1
+63876440727ddf9f05e58684,Joint Learning Architecture,-1,-1
+63876440727ddf9f05e58686,Inception Module,-1,-1
+63876440727ddf9f05e58688,GradDrop,-1,-1
+63876440727ddf9f05e5868a,CMCL,-1,-1
+63876440727ddf9f05e5868c,SRS,-1,-1
+63876440727ddf9f05e5868e,DELG,-1,-1
+63876440727ddf9f05e58690,Cyclical Learning Rate Policy,-1,-1
+63876440727ddf9f05e58692,RMS Pooling,-1,-1
+63876440727ddf9f05e58694,TAPAS,-1,-1
+63876440727ddf9f05e58696,DPN,-1,-1
+63876440727ddf9f05e58698,KOVA,-1,-1
+63876440727ddf9f05e5869a,Graph Attention Network v2,-1,-1
+63876440727ddf9f05e5869c,NeuralRecon,-1,-1
+63876440727ddf9f05e5869e,k-Sparse Autoencoder,-1,-1
+63876440727ddf9f05e586a0,IB-BERT,-1,-1
+63876440727ddf9f05e586a2,Sparse Switchable Normalization,-1,-1
+63876440727ddf9f05e586a4,CNN Bidirectional LSTM,-1,-1
+63876440727ddf9f05e586a6,ESPNetv2,-1,-1
+63876440727ddf9f05e586a8,UCTransNet,-1,-1
+63876440727ddf9f05e586aa,Temporal Adaptive Module,-1,-1
+63876440727ddf9f05e586ac,Compressive Transformer,-1,-1
+63876440727ddf9f05e586ae,Layer-Sequential Unit-Variance Initialization,-1,-1
+63876440727ddf9f05e586b0,Attentional Liquid Warping GAN,-1,-1
+63876440727ddf9f05e586b2,Universal Language Model Fine-tuning,-1,-1
+63876440727ddf9f05e586b4,MCKERNEL,-1,-1
+63876440727ddf9f05e586b6,Coresets,-1,-1
+63876440727ddf9f05e586b8,ClariNet,-1,-1
+63876440727ddf9f05e586ba,PixelRNN,-1,-1
+63876440727ddf9f05e586bc,Topographic VAE,-1,-1
+63876440727ddf9f05e586be,ShuffleNet V2 Downsampling Block,-1,-1
+63876440727ddf9f05e586c0,GrowNet,-1,-1
+63876440727ddf9f05e586c2,Single-path NAS,-1,-1
+63876440727ddf9f05e586c4,ConvBERT,-1,-1
+63876440727ddf9f05e586c6,O-Net,-1,-1
+63876440727ddf9f05e586c8,GPipe,-1,-1
+63876440727ddf9f05e586ca,Circular Smooth Label,-1,-1
+63876440727ddf9f05e586cc,Enhanced Fusion Framework,-1,-1
+63876440727ddf9f05e586ce,CPC v2,-1,-1
+63876440727ddf9f05e586d0,CTracker,-1,-1
+63876440727ddf9f05e586d2,Target Policy Smoothing,-1,-1
+63876440727ddf9f05e586d4,LAPGAN,-1,-1
+63876440727ddf9f05e586d6,SETR,-1,-1
+63876440727ddf9f05e586d8,Stand-Alone Self Attention,-1,-1
+63876440727ddf9f05e586da,GraphSAINT,-1,-1
+63876440727ddf9f05e586dc,k-Means Clustering,-1,-1
+63876440727ddf9f05e586de,Distributional Generalization,-1,-1
+63876440727ddf9f05e586e0,XLM-R,-1,-1
+63876440727ddf9f05e586e2,Chained-Tracker,-1,-1
+63876440727ddf9f05e586e4,ManifoldPlus,-1,-1
+63876440727ddf9f05e586e6,Collapsing Linear Unit,-1,-1
+63876440727ddf9f05e586e8,PGNet,-1,-1
+63876440727ddf9f05e586ea,MEI,-1,-1
+63876440727ddf9f05e586ec,Meta Face Recognition,-1,-1
+63876440727ddf9f05e586ee,SchNet,-1,-1
+63876440727ddf9f05e586f0,NAFNet,-1,-1
+63876440727ddf9f05e586f2,Noisy Student,-1,-1
+63876440727ddf9f05e586f4,CPVT,-1,-1
+63876440727ddf9f05e586f6,Hopfield Layer,-1,-1
+63876440727ddf9f05e586f8,RESCAL with Relation Prediction,-1,-1
+63876440727ddf9f05e586fa,Sample Redistribution,-1,-1
+63876440727ddf9f05e586fc,DBGAN,-1,-1
+63876440727ddf9f05e586fe,CBoW Word2Vec,-1,-1
+63876440727ddf9f05e58700,Demon ADAM,-1,-1
+63876440727ddf9f05e58702,S-shaped ReLU,-1,-1
+63876440727ddf9f05e58704,Label Smoothing,-1,-1
+63876440727ddf9f05e58706,Region Proposal Network,-1,-1
+63876440727ddf9f05e58708,Vision Transformer,-1,-1
+63876440727ddf9f05e5870a,Nyströmformer,-1,-1
+63876440727ddf9f05e5870c,cVAE,-1,-1
+63876440727ddf9f05e5870e,XLNet,-1,-1
+63876440727ddf9f05e58710,Dorylus,-1,-1
+63876440727ddf9f05e58712,Segmentation Transformer,-1,-1
+63876440727ddf9f05e58714,SRN,-1,-1
+63876440727ddf9f05e58716,Symbolic rule learning,-1,-1
+63876440727ddf9f05e58718,Fast R-CNN,-1,-1
+63876440727ddf9f05e5871a,SqueezeNeXt Block,-1,-1
+63876440727ddf9f05e5871c,MDL,-1,-1
+63876440727ddf9f05e5871e,AdaSqrt,-1,-1
+63876440727ddf9f05e58720,PSFR-GAN,-1,-1
+63876440727ddf9f05e58722,TaBERT,-1,-1
+63876440727ddf9f05e58724,UNet Transformer,-1,-1
+63876440727ddf9f05e58726,OTM,-1,-1
+63876440727ddf9f05e58728,Gradient-Based Subword Tokenization,-1,-1
+63876440727ddf9f05e5872a,DPT,-1,-1
+63876440727ddf9f05e5872c,Inverse Q-Learning,-1,-1
+63876440727ddf9f05e5872e,Parametric UMAP,-1,-1
+63876440727ddf9f05e58730,Graph sampling based inductive learning method,-1,-1
+63876440727ddf9f05e58732,EncAttAgg,-1,-1
+63876440727ddf9f05e58734,mLSTM,-1,-1
+63876440727ddf9f05e58736,SAGA,-1,-1
+63876440727ddf9f05e58738,VirTex,-1,-1
+63876440727ddf9f05e5873a,PipeDream-2BW,-1,-1
+63876440727ddf9f05e5873c,SSKD,-1,-1
+63876440727ddf9f05e5873e,VSF,-1,-1
+63876440727ddf9f05e58740,Mixture Normalization,-1,-1
+63876440727ddf9f05e58742,Attentional Liquid Warping Block,-1,-1
+63876440727ddf9f05e58744,ENIGMA,-1,-1
+63876440727ddf9f05e58746,PipeDream,-1,-1
+63876440727ddf9f05e58748,SESAME Discriminator,-1,-1
+63876440727ddf9f05e5874a,k-NN,-1,-1
+63876440727ddf9f05e5874c,STATEGAME MAINTAIN PICTURE BALANCED PLAY STABLE,-1,-1
+63876440727ddf9f05e5874e,Feature Information Entropy Regularized Cross Entropy,-1,-1
+63876440727ddf9f05e58750,Inception v2,-1,-1
+63876440727ddf9f05e58752,RandomRotate,-1,-1
+63876440727ddf9f05e58754,Uncertainty Class Activation Map (U-CAM) Using Gradient Certainty Method,-1,-1
+63876440727ddf9f05e58756,Contrastive Predictive Coding,-1,-1
+63876440727ddf9f05e58758,PVTv2,-1,-1
+63876440727ddf9f05e5875a,wav2vec Unsupervised,-1,-1
+63876440727ddf9f05e5875c,DeCLUTR,-1,-1
+63876440727ddf9f05e5875e,Goal-Driven Tree-Structured Neural Model,-1,-1
+63876440727ddf9f05e58760,GloVe,-1,-1
+63876440727ddf9f05e58762,Height-driven Attention Network,-1,-1
+63876440727ddf9f05e58764,Slot Attention,-1,-1
+63876440727ddf9f05e58766,Edge-augmented Graph Transformer,-1,-1
+63876440727ddf9f05e58768,DGI,-1,-1
+63876440727ddf9f05e5876a,VPSNet,-1,-1
+63876441727ddf9f05e5876c,NetMF,-1,-1
+63876441727ddf9f05e5876e,Dilated Sliding Window Attention,-1,-1
+63876441727ddf9f05e58770,Differentiable Architecture Search Max-W,-1,-1
+63876441727ddf9f05e58772,Recursive Feature Pyramid,-1,-1
+63876441727ddf9f05e58774,LayerDrop,-1,-1
+63876441727ddf9f05e58776,Probabilistically Masked Language Model,-1,-1
+63876441727ddf9f05e58778,Euclidean Norm Regularization,-1,-1
+63876441727ddf9f05e5877a,ProxylessNet-CPU,-1,-1
+63876441727ddf9f05e5877c,Cross-Scale Non-Local Attention,-1,-1
+63876441727ddf9f05e5877e,Dialogue-Adaptive Pre-training Objective,-1,-1
+63876441727ddf9f05e58780,SKEP,-1,-1
+63876441727ddf9f05e58782,Strip Pooling,-1,-1
+63876441727ddf9f05e58784,Non Maximum Suppression,-1,-1
+63876441727ddf9f05e58786,Segmentation of patchy areas in biomedical images based on local edge density estimation,-1,-1
+63876441727ddf9f05e58788,Deep Layer Aggregation,-1,-1
+63876441727ddf9f05e5878a,Seq2Edits,-1,-1
+63876441727ddf9f05e5878c,Batch Normalization,-1,-1
+63876441727ddf9f05e5878e,CornerNet-Squeeze,-1,-1
+63876441727ddf9f05e58790,CRN,-1,-1
+63876441727ddf9f05e58792,Multiscale Attention ViT with Late fusion,-1,-1
+63876441727ddf9f05e58794,CheXNet,-1,-1
+63876441727ddf9f05e58796,Temporal ROIAlign,-1,-1
+63876441727ddf9f05e58798,3DSSD,-1,-1
+63876441727ddf9f05e5879a,Cosine Normalization,-1,-1
+63876441727ddf9f05e5879c,DCNN,-1,-1
+63876441727ddf9f05e5879e,ConvTasNet,-1,-1
+63876441727ddf9f05e587a0,Syntax Heat Parse Tree,-1,-1
+63876441727ddf9f05e587a2,MAS,-1,-1
+63876441727ddf9f05e587a4,SETSe,-1,-1
+63876441727ddf9f05e587a6,node2vec,-1,-1
+63876441727ddf9f05e587a8,Wasserstein GAN (Gradient Penalty),-1,-1
+63876441727ddf9f05e587aa,RGCN,-1,-1
+63876441727ddf9f05e587ac,SCARF,-1,-1
+63876441727ddf9f05e587ae,NVAE Encoder Residual Cell,-1,-1
+63876441727ddf9f05e587b0,Contour Proposal Network,-1,-1
+63876441727ddf9f05e587b2,Animatable Reconstruction of Clothed Humans,-1,-1
+63876441727ddf9f05e587b4,EfficientNetV2,-1,-1
+63876441727ddf9f05e587b6,HPO,-1,-1
+63876441727ddf9f05e587b8,Fully Convolutional Network,-1,-1
+63876441727ddf9f05e587ba,Stochastically Scaling Features and Gradients Regularization,-1,-1
+63876441727ddf9f05e587bc,Fire Module,-1,-1
+63876441727ddf9f05e587be,AlterNet,-1,-1
+63876441727ddf9f05e587c0,R2D2,-1,-1
+63876441727ddf9f05e587c2,NVAE,-1,-1
+63876441727ddf9f05e587c4,CSPResNeXt Block,-1,-1
+63876441727ddf9f05e587c6,EGT,-1,-1
+63876441727ddf9f05e587c8,Morphence,-1,-1
+63876441727ddf9f05e587ca,SwiGLU,-1,-1
+63876441727ddf9f05e587cc,SELU,-1,-1
+63876441727ddf9f05e587ce,Kaiming Initialization,-1,-1
+63876441727ddf9f05e587d0,Conditional Convolutions for Instance Segmentation,-1,-1
+63876441727ddf9f05e587d2,Robust Predictable Control,-1,-1
+63876441727ddf9f05e587d4,ALCN,-1,-1
+63876441727ddf9f05e587d6,DV3 Attention Block,-1,-1
+63876441727ddf9f05e587d8,DiffAugment,-1,-1
+63876441727ddf9f05e587da,RoIAlign,-1,-1
+63876441727ddf9f05e587dc,MLP-Mixer Layer,-1,-1
+63876441727ddf9f05e587de,Submanifold Convolution,-1,-1
+63876441727ddf9f05e587e0,Dual Graph Convolutional Networks,-1,-1
+63876441727ddf9f05e587e2,Network On Network,-1,-1
+63876441727ddf9f05e587e4,PonderNet,-1,-1
+63876441727ddf9f05e587e6,NoisyNet-A3C,-1,-1
+63876441727ddf9f05e587e8,Sparse R-CNN,-1,-1
+63876441727ddf9f05e587ea,HiFi-GAN,-1,-1
+63876441727ddf9f05e587ec,AccoMontage,-1,-1
+63876441727ddf9f05e587ee,FLAVA,-1,-1
+63876441727ddf9f05e587f0,R-CNN,-1,-1
+63876441727ddf9f05e587f2,Position-Sensitive RoI Pooling,-1,-1
+63876441727ddf9f05e587f4,LightGCN,-1,-1
+63876441727ddf9f05e587f6,Patch Merger Module,-1,-1
+63876441727ddf9f05e587f8,Harris Hawks optimization,-1,-1
+63876441727ddf9f05e587fa,Dense Block,-1,-1
+63876441727ddf9f05e587fc,BytePS,-1,-1
+63876441727ddf9f05e587fe,Good Feature Matching,-1,-1
+63876441727ddf9f05e58800,Swapping Assignments between Views,-1,-1
+63876441727ddf9f05e58802,SqueezeNet,-1,-1
+63876441727ddf9f05e58804,TNT,-1,-1
+63876441727ddf9f05e58806,Inception-C,-1,-1
+63876441727ddf9f05e58808,Diffusion,-1,-1
+63876441727ddf9f05e5880a,Alternating Direction Method of Multipliers,-1,-1
+63876441727ddf9f05e5880c,Flow Alignment Module,-1,-1
+63876441727ddf9f05e5880e,Distributed Any-Batch Mirror Descent,-1,-1
+63876441727ddf9f05e58810,TUM,-1,-1
+63876441727ddf9f05e58812,Implicit PointRend,-1,-1
+63876441727ddf9f05e58814,StruBERT: Structure-aware BERT for Table Search and Matching,-1,-1
+63876441727ddf9f05e58816,Depthwise Convolution,-1,-1
+63876441727ddf9f05e58818,Class-MLP,-1,-1
+63876441727ddf9f05e5881a,Strided Attention,-1,-1
+63876441727ddf9f05e5881c,YOLOP,-1,-1
+63876441727ddf9f05e5881e,Mix-FFN,-1,-1
+63876441727ddf9f05e58820,BigBird,-1,-1
+63876441727ddf9f05e58822,Concurrent Spatial and Channel Squeeze & Excitation (scSE),-1,-1
+63876441727ddf9f05e58824,Packed Levitated Markers,-1,-1
+63876441727ddf9f05e58826,DExTra,-1,-1
+63876441727ddf9f05e58828,Axial Attention,-1,-1
+63876441727ddf9f05e5882a,Video Panoptic Segmentation Network,-1,-1
+63876441727ddf9f05e5882c,LGCL,-1,-1
+63876441727ddf9f05e5882e,Performer,-1,-1
+63876441727ddf9f05e58830,Instance Normalization,-1,-1
+63876441727ddf9f05e58832,1D CNN,-1,-1
+63876441727ddf9f05e58834,VTDE,-1,-1
+63876441727ddf9f05e58836,Adaptive Training Sample Selection,-1,-1
+63876441727ddf9f05e58838,CondInst,-1,-1
+63876441727ddf9f05e5883a,Bottleneck Transformer,-1,-1
+63876441727ddf9f05e5883c,DAEL,-1,-1
+63876441727ddf9f05e5883e,Bilateral Guided Aggregation Layer,-1,-1
+63876441727ddf9f05e58840,Factorized Random Synthesized Attention,-1,-1
+63876441727ddf9f05e58842,Label Quality Model,-1,-1
+63876441727ddf9f05e58844,Gradient Harmonizing Mechanism C,-1,-1
+63876441727ddf9f05e58846,Implicit Q-Learning,-1,-1
+63876441727ddf9f05e58848,Depthwise Separable Convolution,-1,-1
+63876441727ddf9f05e5884a,Pyramid Pooling Module,-1,-1
+63876441727ddf9f05e5884c,Multiscale Vision Transformer,-1,-1
+63876441727ddf9f05e5884e,Dual Attention Network,-1,-1
+63876441727ddf9f05e58850,Dynamic Time Warping,-1,-1
+63876441727ddf9f05e58852,GRLIA,-1,-1
+63876441727ddf9f05e58854,Self-adaptive Training,-1,-1
+63876441727ddf9f05e58856,EMF,-1,-1
+63876441727ddf9f05e58858,Adaptive Masking,-1,-1
+63876441727ddf9f05e5885a,Soft Actor-Critic (Autotuned Temperature),-1,-1
+63876441727ddf9f05e5885c,MACEst,-1,-1
+63876441727ddf9f05e5885e,VocGAN,-1,-1
+63876441727ddf9f05e58860,TRPO,-1,-1
+63876441727ddf9f05e58862,MATE,-1,-1
+63876441727ddf9f05e58864,RegNetX,-1,-1
+63876441727ddf9f05e58866,T-D,-1,-1
+63876441727ddf9f05e58868,Group Decreasing Network,-1,-1
+63876441727ddf9f05e5886a,Funnel Transformer,-1,-1
+63876441727ddf9f05e5886c,DARTS,-1,-1
+63876441727ddf9f05e5886e,FMix,-1,-1
+63876441727ddf9f05e58870,Step Decay,-1,-1
+63876441727ddf9f05e58872,Noise2Fast,-1,-1
+63876441727ddf9f05e58874,EMQAP,-1,-1
+63876441727ddf9f05e58876,Spatial and Channel SE Blocks,-1,-1
+63876441727ddf9f05e58878,T-Fixup,-1,-1
+63876441727ddf9f05e5887a,Modularity preserving NMF,-1,-1
+63876441727ddf9f05e5887c,GCNFN,-1,-1
+63876441727ddf9f05e5887e,WaveGAN,-1,-1
+63876441727ddf9f05e58880,FBNet,-1,-1
+63876441727ddf9f05e58882,Simple Neural Attention Meta-Learner,-1,-1
+63876441727ddf9f05e58884,DeBERTa,-1,-1
+63876441727ddf9f05e58886,DBlock,-1,-1
+63876441727ddf9f05e58888,AdaShift,-1,-1
+63876441727ddf9f05e5888a,Grouped Convolution,-1,-1
+63876441727ddf9f05e5888c,Boundary-Aware Segmentation Network,-1,-1
+63876441727ddf9f05e5888e,3 Dimensional Soft Attention,-1,-1
+63876441727ddf9f05e58890,Encoder-Attender-Aggregator,-1,-1
+63876441727ddf9f05e58892,Context Enhancement Module,-1,-1
+63876441727ddf9f05e58894,Paddle Anchor Free Network,-1,-1
+63876441727ddf9f05e58896,SegSort,-1,-1
+63876441727ddf9f05e58898,Zoneout,-1,-1
+63876441727ddf9f05e5889a,Skip-gram Word2Vec,-1,-1
+63876441727ddf9f05e5889c,Deformable ConvNets,-1,-1
+63876441727ddf9f05e5889e,Balanced Selection,-1,-1
+63876441727ddf9f05e588a0,Selective Kernel,-1,-1
+63876441727ddf9f05e588a2,Adaptive Parameter-wise Diagonal Quasi-Newton Method,-1,-1
+63876441727ddf9f05e588a4,RESCAL RP,-1,-1
+63876441727ddf9f05e588a6,Hamburger,-1,-1
+63876441727ddf9f05e588a8,Multiplicative Attention,-1,-1
+63876441727ddf9f05e588aa,Class Activation Guided Attention Mechanism,-1,-1
+63876441727ddf9f05e588ac,Deep Equilibrium Models,-1,-1
+63876441727ddf9f05e588ae,VGG-16,-1,-1
+63876441727ddf9f05e588b0,GLN,-1,-1
+63876441727ddf9f05e588b2,SimpleNet,-1,-1
+63876441727ddf9f05e588b4,Neural Tangent Transfer,-1,-1
+63876441727ddf9f05e588b6,MaskFlownet,-1,-1
+63876441727ddf9f05e588b8,CHM,-1,-1
+63876441727ddf9f05e588ba,Part Affinity Fields,-1,-1
+63876441727ddf9f05e588bc,Recurrent Event Network,-1,-1
+63876441727ddf9f05e588be,Feature-Centric Voting,-1,-1
+63876441727ddf9f05e588c0,AUCO ResNet,-1,-1
+63876441727ddf9f05e588c2,Spectral-Normalized Identity Priors,-1,-1
+63876441727ddf9f05e588c4,EDLPS,-1,-1
+63876441727ddf9f05e588c6,Gradual Self-Training,-1,-1
+63876441727ddf9f05e588c8,Deflation,-1,-1
+63876441727ddf9f05e588ca,Accumulating Eligibility Trace,-1,-1
+63876441727ddf9f05e588cc,Embedding Dropout,-1,-1
+63876441727ddf9f05e588ce,GAGNN,-1,-1
+63876441727ddf9f05e588d0,Capsule Network,-1,-1
+63876441727ddf9f05e588d2,SLR,-1,-1
+63876441727ddf9f05e588d4,VoVNetV2,-1,-1
+63876441727ddf9f05e588d6,Smooth ReLU,-1,-1
+63876441727ddf9f05e588d8,Efficient Spatial Pyramid,-1,-1
+63876441727ddf9f05e588da,Self training multi target domain adaptive RetinaNet,-1,-1
+63876441727ddf9f05e588dc,Monocular Real-Time Volumetric Performance Capture,-1,-1
+63876441727ddf9f05e588de,Softsign Activation,-1,-1
+63876441727ddf9f05e588e0,HTCN,-1,-1
+63876441727ddf9f05e588e2,SCARLET-NAS,-1,-1
+63876441727ddf9f05e588e4,Deformable Position-Sensitive RoI Pooling,-1,-1
+63876441727ddf9f05e588e6,Fast Voxel Query,-1,-1
+63876441727ddf9f05e588e8,k-Nearest Neighbors,-1,-1
+63876441727ddf9f05e588ea,Probabilistic Anchor Assignment,-1,-1
+63876441727ddf9f05e588ec,Approximate Bayesian Computation,-1,-1
+63876441727ddf9f05e588ee,ReInfoSelect,-1,-1
+63876441727ddf9f05e588f0,Meta Reward Learning,-1,-1
+63876441727ddf9f05e588f2,ParaNet Convolution Block,-1,-1
+63876441727ddf9f05e588f4,Drafting Network,-1,-1
+63876441727ddf9f05e588f6,HBMP,-1,-1
+63876441727ddf9f05e588f8,GRU,-1,-1
+63876441727ddf9f05e588fa,Nonlinear Activation Free Network,-1,-1
+63876441727ddf9f05e588fc,MagFace,-1,-1
+63876441727ddf9f05e588fe,Modulated Residual Network,-1,-1
+63876441727ddf9f05e58900,BigBiGAN,-1,-1
+63876441727ddf9f05e58902,GradientDICE,-1,-1
+63876441727ddf9f05e58904,Graph2Tree,-1,-1
+63876441727ddf9f05e58906,ABC,-1,-1
+63876441727ddf9f05e58908,ReLU6,-1,-1
+63876441727ddf9f05e5890a,DSAM loss,-1,-1
+63876441727ddf9f05e5890c,SwAV,-1,-1
+63876441727ddf9f05e5890e,DimFuse,-1,-1
+63876441727ddf9f05e58910,Characterizable Invertible 3x3 Convolution,-1,-1
+63876441727ddf9f05e58912,AutoSync,-1,-1
+63876441727ddf9f05e58914,Log-time and Log-space Extreme Classification,-1,-1
+63876441727ddf9f05e58916,GRoIE,-1,-1
+63876441727ddf9f05e58918,Switchable Normalization,-1,-1
+63876441727ddf9f05e5891a,FixRes,-1,-1
+63876441727ddf9f05e5891c,Human Robot Interaction Pipeline,-1,-1
+63876441727ddf9f05e5891e,PolarMask,-1,-1
+63876441727ddf9f05e58920,Guided Anchoring,-1,-1
+63876441727ddf9f05e58922,Visual Commonsense Region-based Convolutional Neural Network,-1,-1
+63876441727ddf9f05e58924,BAGUA,-1,-1
+63876441727ddf9f05e58926,Matrix NMS,-1,-1
+63876441727ddf9f05e58928,Inception-v3 Module,-1,-1
+63876441727ddf9f05e5892a,Vokenization,-1,-1
+63876441727ddf9f05e5892c,DiCENet,-1,-1
+63876441727ddf9f05e5892e,Scale-wise Feature Aggregation Module,-1,-1
+63876441727ddf9f05e58930,Temporal Graph Network,-1,-1
+63876441727ddf9f05e58932,DeepWalk,-1,-1
+63876441727ddf9f05e58934,FINCH Clustering,-1,-1
+63876441727ddf9f05e58936,Directional Sparse FIltering,-1,-1
+63876441727ddf9f05e58938,Affine Coupling,-1,-1
+63876441727ddf9f05e5893a,WideResNet,-1,-1
+63876441727ddf9f05e5893c,GreedyNAS-C,-1,-1
+63876441727ddf9f05e5893e,PP-YOLO,-1,-1
+63876441727ddf9f05e58940,RegNetY,-1,-1
+63876441727ddf9f05e58942,Efficient Recurrent Unit,-1,-1
+63876441727ddf9f05e58944,Adaptive Input Representations,-1,-1
+63876441727ddf9f05e58946,1-bit Adam,-1,-1
+63876441727ddf9f05e58948,Phase Shuffle,-1,-1
+63876441727ddf9f05e5894a,ALP-GMM,-1,-1
+63876441727ddf9f05e5894c,VGG-19,-1,-1
+63876441727ddf9f05e5894e,Gaussian Process,-1,-1
+63876441727ddf9f05e58950,L2M,-1,-1
+63876441727ddf9f05e58952,Hard Sigmoid,-1,-1
+63876441727ddf9f05e58954,BPE,-1,-1
+63876441727ddf9f05e58956,Random Gaussian Blur,-1,-1
+63876441727ddf9f05e58958,Pipelined Backpropagation,-1,-1
+63876441727ddf9f05e5895a,HRank,-1,-1
+63876441727ddf9f05e5895c,Monte Carlo Dropout,-1,-1
+63876441727ddf9f05e5895e,Spatial Group-wise Enhance,-1,-1
+63876441727ddf9f05e58960,Surrogate Lagrangian Relaxation,-1,-1
+63876441727ddf9f05e58962,RUN,-1,-1
+63876441727ddf9f05e58964,G-NIA,-1,-1
+63876441727ddf9f05e58966,Bidirectional GAN,-1,-1
+63876441727ddf9f05e58968,CT3D,-1,-1
+63876441727ddf9f05e5896a,Local Importance-based Pooling,-1,-1
+63876441727ddf9f05e5896c,GHM-C,-1,-1
+63876441727ddf9f05e5896e,Deep Orthogonal Fusion of Local and Global Features,-1,-1
+63876441727ddf9f05e58970,MatrixNet,-1,-1
+63876441727ddf9f05e58972,Computation Redistribution,-1,-1
+63876441727ddf9f05e58974,BiGRU,-1,-1
+63876441727ddf9f05e58976,SimVLM,-1,-1
+63876441727ddf9f05e58978,SNIPER,-1,-1
+63876441727ddf9f05e5897a,Involution,-1,-1
+63876441727ddf9f05e5897c,LR-Net,-1,-1
+63876441727ddf9f05e5897e,UNiversal Image-TExt Representation Learning,-1,-1
+63876441727ddf9f05e58980,Lower Bound on Transmission using Non-Linear Bounding Function in Single Image Dehazing,-1,-1
+63876441727ddf9f05e58982,IICNet,-1,-1
+63876441727ddf9f05e58984,Metropolis Hastings,-1,-1
+63876441727ddf9f05e58986,CodeSLAM,-1,-1
+63876441727ddf9f05e58988,CARLA,-1,-1
+63876441727ddf9f05e5898a,PAUSE,-1,-1
+63876441727ddf9f05e5898c,Generalized ELBO with Constrained Optimization,-1,-1
+63876441727ddf9f05e5898e,Inverted Bottleneck BERT,-1,-1
+63876441727ddf9f05e58990,Semantic Reasoning Network,-1,-1
+63876441727ddf9f05e58992,SIRM,-1,-1
+63876441727ddf9f05e58994,FastMoE,-1,-1
+63876441727ddf9f05e58996,Sparse Autoencoder,-1,-1
+63876441727ddf9f05e58998,ENet Dilated Bottleneck,-1,-1
+63876441727ddf9f05e5899a,Temporal Distribution Characterization,-1,-1
+63876441727ddf9f05e5899c,Blue River Controls,-1,-1
+63876441727ddf9f05e5899e,Collaborative Distillation,-1,-1
+63876441727ddf9f05e589a0,Stochastic Depth,-1,-1
+63876441727ddf9f05e589a2,Crystal Graph Neural Network,-1,-1
+63876441727ddf9f05e589a4,Neural adjoint method,-1,-1
+63876441727ddf9f05e589a6,Simple Visual Language Model,-1,-1
+63876441727ddf9f05e589a8,Squeeze-and-Excitation Block,-1,-1
+63876441727ddf9f05e589aa,SFT,-1,-1
+63876441727ddf9f05e589ac,SRGAN Residual Block,-1,-1
+63876441727ddf9f05e589ae,GRIN,-1,-1
+63876441727ddf9f05e589b0,CORAD,-1,-1
+63876441727ddf9f05e589b2,Network Dissection,-1,-1
+63876441727ddf9f05e589b4,Asynchronous Interaction Aggregation,-1,-1
+63876441727ddf9f05e589b6,Contrastive Language-Image Pre-training,-1,-1
+63876441727ddf9f05e589b8,Latent Optimisation,-1,-1
+63876441727ddf9f05e589ba,Fraternal Dropout,-1,-1
+63876441727ddf9f05e589bc,HiSD,-1,-1
+63876441727ddf9f05e589be,DPN Block,-1,-1
+63876441727ddf9f05e589c0,TimeSformer,-1,-1
+63876441727ddf9f05e589c2,Fast_BAT,-1,-1
+63876441727ddf9f05e589c4,PowerSGD,-1,-1
+63876441727ddf9f05e589c6,Ontology,-1,-1
+63876441727ddf9f05e589c8,PCA Whitening,-1,-1
+63876441727ddf9f05e589ca,Sliced Iterative Generator,-1,-1
+63876441727ddf9f05e589cc,Principal Neighbourhood Aggregation,-1,-1
+63876441727ddf9f05e589ce,PrIme Sample Attention,-1,-1
+63876441727ddf9f05e589d0,Global and Sliding Window Attention,-1,-1
+63876441727ddf9f05e589d2,Time-homogenuous Top-K Ranking,-1,-1
+63876441727ddf9f05e589d4,NEAT,-1,-1
+63876441727ddf9f05e589d6,Concatenation Affinity,-1,-1
+63876441727ddf9f05e589d8,GBlock,-1,-1
+63876441727ddf9f05e589da,Deformable Convolution,-1,-1
+63876441727ddf9f05e589dc,Linformer,-1,-1
+63876441727ddf9f05e589de,Recurrent Dropout,-1,-1
+63876441727ddf9f05e589e0,Differentiable Architecture Search,-1,-1
+63876441727ddf9f05e589e2,TraDeS,-1,-1
+63876441727ddf9f05e589e4,GTS,-1,-1
+63876441727ddf9f05e589e6,Hit-Detector,-1,-1
+63876441727ddf9f05e589e8,Contextual Word Vectors,-1,-1
+63876441727ddf9f05e589ea,FCPose,-1,-1
+63876441727ddf9f05e589ec,Routing Attention,-1,-1
+63876441727ddf9f05e589ee,Neighborhood Contrastive Learning,-1,-1
+63876441727ddf9f05e589f0,ALAE,-1,-1
+63876441727ddf9f05e589f2,Lipschitz Constant Constraint,-1,-1
+63876441727ddf9f05e589f4,RPN,-1,-1
+63876441727ddf9f05e589f6,VATT,-1,-1
+63876441727ddf9f05e589f8,FlexFlow,-1,-1
+63876441727ddf9f05e589fa,Elastic Margin Loss for Deep Face Recognition,-1,-1
+63876441727ddf9f05e589fc,Local Prior Matching,-1,-1
+63876441727ddf9f05e589fe,DV3 Convolution Block,-1,-1
+63876441727ddf9f05e58a00,Selective Search,-1,-1
+63876441727ddf9f05e58a02,Wasserstein Embedding for Graph Learning,-1,-1
+63876441727ddf9f05e58a04,Powerpropagation,-1,-1
+63876441727ddf9f05e58a06,Message Passing Neural Network,-1,-1
+63876441727ddf9f05e58a08,Self-Attention Guidance,-1,-1
+63876441727ddf9f05e58a0a,Receptive Field Block,-1,-1
+63876441727ddf9f05e58a0c,Jukebox,-1,-1
+63876441727ddf9f05e58a0e,OMGD,-1,-1
+63876441727ddf9f05e58a10,DCN-V2,-1,-1
+63876441727ddf9f05e58a12,Semi-Supervised Knowledge Distillation,-1,-1
+63876441727ddf9f05e58a14,Self-Attention Network,-1,-1
+63876441727ddf9f05e58a16,CutBlur,-1,-1
+63876441727ddf9f05e58a18,Sandwich Batch Normalization,-1,-1
+63876441727ddf9f05e58a1a,SimCLRv2,-1,-1
+63876441727ddf9f05e58a1c,Double Q-learning,-1,-1
+63876441727ddf9f05e58a1e,Watch Your Step,-1,-1
+63876441727ddf9f05e58a20,GreedyNAS-A,-1,-1
+63876441727ddf9f05e58a22,Blended Diffusion,-1,-1
+63876441727ddf9f05e58a24,Channel-wise Soft Attention,-1,-1
+63876441727ddf9f05e58a26,G-GLN,-1,-1
+63876441727ddf9f05e58a28,Convolutional Block Attention Module,-1,-1
+63876441727ddf9f05e58a2a,MNMF,-1,-1
+63876441727ddf9f05e58a2c,FIERCE,-1,-1
+63876441727ddf9f05e58a2e,StyleGAN2,-1,-1
+63876441727ddf9f05e58a30,Wavelet-integrated Identity Preserving Adversarial Network for face super-resolution,-1,-1
+63876441727ddf9f05e58a32,ResNet-D,-1,-1
+63876441727ddf9f05e58a34,Diffusion-Convolutional Neural Networks,-1,-1
+63876441727ddf9f05e58a36,Heatmap,-1,-1
+63876441727ddf9f05e58a38,Gradient Quantization with Adaptive Levels/Multiplier,-1,-1
+63876441727ddf9f05e58a3a,N-step Returns,-1,-1
+63876441727ddf9f05e58a3c,Residual Connection,-1,-1
+63876441727ddf9f05e58a3e,Balanced Feature Pyramid,-1,-1
+63876441727ddf9f05e58a40,AugMix,-1,-1
+63876441727ddf9f05e58a42,LINE,-1,-1
+63876441727ddf9f05e58a44,In-Place Activated Batch Normalization,-1,-1
+63876441727ddf9f05e58a46,DE-GAN,-1,-1
+63876441727ddf9f05e58a48,SiLU,-1,-1
+63876441727ddf9f05e58a4a,LIME,-1,-1
+63876441727ddf9f05e58a4c,Two-Way Dense Layer,-1,-1
+63876441727ddf9f05e58a4e,GIC,-1,-1
+63876441727ddf9f05e58a50,Spectral Gap Rewiring Layer,-1,-1
+63876441727ddf9f05e58a52,Curvature Regularized Variational Auto-Encoder,-1,-1
+63876441727ddf9f05e58a54,Sarsa,-1,-1
+63876441727ddf9f05e58a56,CAG,-1,-1
+63876441727ddf9f05e58a58,Fast-YOLOv3,-1,-1
+63876441727ddf9f05e58a5a,GAN-TTS,-1,-1
+63876441727ddf9f05e58a5c,Enhanced Sequential Inference Model,-1,-1
+63876441727ddf9f05e58a5e,R-FCN,-1,-1
+63876441727ddf9f05e58a60,Logistic Regression,-1,-1
+63876441727ddf9f05e58a62,PyTorch DDP,-1,-1
+63876441727ddf9f05e58a64,PALED,-1,-1
+63876441727ddf9f05e58a66,Model-Agnostic Meta-Learning,-1,-1
+63876441727ddf9f05e58a68,IoU-Balanced Sampling,-1,-1
+63876441727ddf9f05e58a6a,ARCH,-1,-1
+63876441727ddf9f05e58a6c,Recurrent models of visual attention,-1,-1
+63876441727ddf9f05e58a6e,DD-PPO,-1,-1
+63876441727ddf9f05e58a70,Depthwise Dilated Separable Convolution,-1,-1
+63876441727ddf9f05e58a72,Deep Ensembles,-1,-1
+63876441727ddf9f05e58a74,Masked Convolution,-1,-1
+63876441727ddf9f05e58a76,YOLOv4,-1,-1
+63876441727ddf9f05e58a78,Data-efficient Image Transformer,-1,-1
+63876441727ddf9f05e58a7a,KE-MLM,-1,-1
+63876441727ddf9f05e58a7c,NoisyNet-Dueling,-1,-1
+63876441727ddf9f05e58a7e,BlendMask,-1,-1
+63876441727ddf9f05e58a80,MAVL,-1,-1
+63876441727ddf9f05e58a82,1-bit LAMB,-1,-1
+63876441727ddf9f05e58a84,Convolution,-1,-1
+63876441727ddf9f05e58a86,Invertible Rescaling Network,-1,-1
+63876441727ddf9f05e58a88,TrIVD-GAN,-1,-1
+63876441727ddf9f05e58a8a,Effective Squeeze-and-Excitation Block,-1,-1
+63876441727ddf9f05e58a8c,Prediction-aware One-To-One,-1,-1
+63876441727ddf9f05e58a8e,TD Lambda,-1,-1
+63876441727ddf9f05e58a90,Sparse Convolutions,-1,-1
+63876441727ddf9f05e58a92,VIME,-1,-1
+63876441727ddf9f05e58a94,ESIM,-1,-1
+63876441727ddf9f05e58a96,Patch Merger,-1,-1
+63876441727ddf9f05e58a98,Global second-order pooling convolutional networks,-1,-1
+63876441727ddf9f05e58a9a,U-RNNs,-1,-1
+63876441727ddf9f05e58a9c,Contextual Decomposition Explanation Penalization,-1,-1
+63876441727ddf9f05e58a9e,Tree-structured Parzen Estimator Approach (TPE),-1,-1
+63876441727ddf9f05e58aa0,Local Patch Interaction,-1,-1
+63876441727ddf9f05e58aa2,High-Order Proximity preserved Embedding,-1,-1
+63876441727ddf9f05e58aa4,Exponential Linear Unit,-1,-1
+63876441727ddf9f05e58aa6,IFNet,-1,-1
+63876441727ddf9f05e58aa8,LFPNet (TTA),-1,-1
+63876441727ddf9f05e58aaa,Spatio-temporal stability analysis,-1,-1
+63876441727ddf9f05e58aac,CondConv,-1,-1
+63876441727ddf9f05e58aae,SPIN,-1,-1
+63876441727ddf9f05e58ab0,Rank-based Loss,-1,-1
+63876441727ddf9f05e58ab2,PrivacyNet,-1,-1
+63876441727ddf9f05e58ab4,VLG-Net,-1,-1
+63876441727ddf9f05e58ab6,TSDAE,-1,-1
+63876441727ddf9f05e58ab8,Adaptively Sparse Transformer,-1,-1
+63876441727ddf9f05e58aba,ARiA,-1,-1
+63876441727ddf9f05e58abc,Conditional DBlock,-1,-1
+63876441727ddf9f05e58abe,RetinaNet-RS,-1,-1
+63876441727ddf9f05e58ac0,Side-Aware Boundary Localization,-1,-1
+63876441727ddf9f05e58ac2,RSE,-1,-1
+63876441727ddf9f05e58ac4,ABCNet,-1,-1
+63876441727ddf9f05e58ac6,EdgeBoxes,-1,-1
+63876441727ddf9f05e58ac8,Strain Elevation Tension Spring embedding,-1,-1
+63876441727ddf9f05e58aca,LMOT,-1,-1
+63876441727ddf9f05e58acc,Semantic Clustering by Adopting Nearest Neighbours,-1,-1
+63876441727ddf9f05e58ace,Barlow Twins,-1,-1
+63876441727ddf9f05e58ad0,PIRL,-1,-1
+63876441727ddf9f05e58ad2,InfoNCE,-1,-1
+63876441727ddf9f05e58ad5,Deep Stereo Geometry Network,-1,-1
+63876441727ddf9f05e58ad7,Motion-Encoded Particle Swarm Optimization,-1,-1
+63876441727ddf9f05e58ad9,Knowledge Distillation,-1,-1
+63876441727ddf9f05e58adb,ADMM,-1,-1
+63876441727ddf9f05e58add,Non-monotonically Triggered ASGD,-1,-1
+63876441727ddf9f05e58adf,DVD-GAN,-1,-1
+63876441727ddf9f05e58ae1,DistilBERT,-1,-1
+63876441727ddf9f05e58ae3,Snapshot Ensembles,-1,-1
+63876441727ddf9f05e58ae5,DetNet,-1,-1
+63876441727ddf9f05e58ae7,LocalViT,-1,-1
+63876441727ddf9f05e58ae9,RAdam,-1,-1
+63876441727ddf9f05e58aeb,Panoptic FPN,-1,-1
+63876441727ddf9f05e58aed,LMOT: Efficient Light-Weight Detection and Tracking in Crowds,-1,-1
+63876441727ddf9f05e58aef,Probability Guided Maxout,-1,-1
+63876441727ddf9f05e58af1,Prescribed Generative Adversarial Network,-1,-1
+63876441727ddf9f05e58af3,Contextual Graph Markov Model,-1,-1
+63876441727ddf9f05e58af5,AutoGAN,-1,-1
+63876441727ddf9f05e58af7,CrossTransformers,-1,-1
+63876441727ddf9f05e58af9,Spatial Attention Module,-1,-1
+63876441727ddf9f05e58afb,Neural Tangent Kernel,-1,-1
+63876441727ddf9f05e58afd,CReLU,-1,-1
+63876441727ddf9f05e58aff,Parallax,-1,-1
+63876441727ddf9f05e58b01,ResNeXt Block,-1,-1
+63876441727ddf9f05e58b03,Efficient Channel Attention,-1,-1
+63876441727ddf9f05e58b05,AdvProp,-1,-1
+63876441727ddf9f05e58b07,Asynchronous Proximal Policy Optimization,-1,-1
+63876441727ddf9f05e58b09,Denoising Autoencoder,-1,-1
+63876441727ddf9f05e58b0b,Dimension-wise Fusion,-1,-1
+63876441727ddf9f05e58b0d,CutMix,-1,-1
+63876441727ddf9f05e58b0f,Group-Aware Neural Network,-1,-1
+63876441727ddf9f05e58b11,Sticker Response Selector,-1,-1
+63876441727ddf9f05e58b13,GraphESN,-1,-1
+63876441727ddf9f05e58b15,Inception-B,-1,-1
+63876441727ddf9f05e58b17,STraTA,-1,-1
+63876441727ddf9f05e58b19,SGD,-1,-1
+63876441727ddf9f05e58b1b,SNN,-1,-1
+63876441727ddf9f05e58b1d,DetNASNet,-1,-1
+63876441727ddf9f05e58b1f,Adaptive Softmax,-1,-1
+63876441727ddf9f05e58b21,PnP,-1,-1
+63876441727ddf9f05e58b23,Focal Loss,-1,-1
+63876441727ddf9f05e58b25,MFF,-1,-1
+63876441727ddf9f05e58b27,Streaming Module,-1,-1
+63876441727ddf9f05e58b29,Forward gradient,-1,-1
+63876441727ddf9f05e58b2b,Feature Pyramid Network,-1,-1
+63876441727ddf9f05e58b2d,ADAHESSIAN,-1,-1
+63876441727ddf9f05e58b2f,ISPL,-1,-1
+63876441727ddf9f05e58b31,TTUR,-1,-1
+63876441727ddf9f05e58b33,STA-LSTM,-1,-1
+63876441727ddf9f05e58b35,TaLK Convolution,-1,-1
+63876441727ddf9f05e58b37,SGD with Momentum,-1,-1
+63876441727ddf9f05e58b39,Talking-Heads Attention,-1,-1
+63876441727ddf9f05e58b3b,PISA,-1,-1
+63876441727ddf9f05e58b3d,Switchable Atrous Convolution,-1,-1
+63876441727ddf9f05e58b3f,TridentNet Block,-1,-1
+63876441727ddf9f05e58b41,GENet,-1,-1
+63876441727ddf9f05e58b43,LapStyle,-1,-1
+63876441727ddf9f05e58b45,NT-Xent,-1,-1
+63876441727ddf9f05e58b47,Boom Layer,-1,-1
+63876441727ddf9f05e58b49,MelGAN,-1,-1
+63876441727ddf9f05e58b4b,Attentive Normalization,-1,-1
+63876441727ddf9f05e58b4d,3D Dynamic Scene Graph,-1,-1
+63876441727ddf9f05e58b4f,E2EAdaptiveDistTraining,-1,-1
+63876441727ddf9f05e58b51,OSA (identity mapping + eSE),-1,-1
+63876441727ddf9f05e58b53,StyleMapGAN,-1,-1
+63876441727ddf9f05e58b55,Mask Scoring R-CNN,-1,-1
+63876441727ddf9f05e58b57,CornerNet-Squeeze Hourglass,-1,-1
+63876441727ddf9f05e58b59,Low Rank Tensor Learning Paradigms,-1,-1
+63876441727ddf9f05e58b5b,Composite Fields,-1,-1
+63876441727ddf9f05e58b5d,WGAN GP,-1,-1
+63876441727ddf9f05e58b5f,TWEC,-1,-1
+63876441727ddf9f05e58b61,Multi-scale Progressive Fusion Network,-1,-1
+63876441727ddf9f05e58b63,Split Attention,-1,-1
+63876441727ddf9f05e58b65,RoIWarp,-1,-1
+63876441727ddf9f05e58b67,PatchGAN,-1,-1
+63876441727ddf9f05e58b69,Blind Image Decomposition Network,-1,-1
+63876441727ddf9f05e58b6b,Graph Finite-State Automaton,-1,-1
+63876441727ddf9f05e58b6d,PULSE,-1,-1
+63876441727ddf9f05e58b6f,MAD Learning,-1,-1
+63876441727ddf9f05e58b71,Boost-GNN,-1,-1
+63876441727ddf9f05e58b73,LV-ViT,-1,-1
+63876441727ddf9f05e58b75,OODformer,-1,-1
+63876441727ddf9f05e58b77,Deterministic Policy Gradient,-1,-1
+63876441727ddf9f05e58b79,XGPT,-1,-1
+63876441727ddf9f05e58b7b,Inverted Residual Block,-1,-1
+63876441727ddf9f05e58b7d,RotatE,-1,-1
+63876441727ddf9f05e58b7f,SimCSE,-1,-1
+63876441727ddf9f05e58b81,DeLighT,-1,-1
+63876441727ddf9f05e58b83,Adaptive Robust Loss,-1,-1
+63876441727ddf9f05e58b85,PReLU-Net,-1,-1
+63876441727ddf9f05e58b87,Ternary Weight Splitting,-1,-1
+63876441727ddf9f05e58b89,Tacotron2,-1,-1
+63876441727ddf9f05e58b8b,Slanted Triangular Learning Rates,-1,-1
+63876441727ddf9f05e58b8d,MeRL,-1,-1
+63876441727ddf9f05e58b8f,NeRF,-1,-1
+63876441727ddf9f05e58b91,GAN,-1,-1
+63876441727ddf9f05e58b93,CenterPoint,-1,-1
+63876441727ddf9f05e58b95,Variance-based Feature Importance of Artificial Neural Networks,-1,-1
+63876441727ddf9f05e58b97,S-GCN,-1,-1
+63876441727ddf9f05e58b99,DeepCluster,-1,-1
+63876441727ddf9f05e58b9b,BP-Transformer,-1,-1
+63876441727ddf9f05e58b9d,Kollen-Pollack Learning,-1,-1
+63876441727ddf9f05e58b9f,MixConv,-1,-1
+63876441727ddf9f05e58ba1,StyleGAN,-1,-1
+63876441727ddf9f05e58ba3,Adabelief,-1,-1
+63876441727ddf9f05e58ba5,Siamese Network,-1,-1
+63876441727ddf9f05e58ba7,Cross-resolution features,-1,-1
+63876441727ddf9f05e58ba9,Clipped Double Q-learning,-1,-1
+63876441727ddf9f05e58bab,DeepIR,-1,-1
+63876441727ddf9f05e58bad,Local Relation Layer,-1,-1
+63876441727ddf9f05e58baf,Laplacian EigenMap,-1,-1
+63876441727ddf9f05e58bb1,MUSIQ,-1,-1
+63876441727ddf9f05e58bb3,MNN,-1,-1
+63876441727ddf9f05e58bb5,MFR,-1,-1
+63876441727ddf9f05e58bb7,3-dimensional interaction space,-1,-1
+63876441727ddf9f05e58bb9,Automated Graph Learning,-1,-1
+63876441727ddf9f05e58bbb,Average Pooling,-1,-1
+63876441727ddf9f05e58bbd,Darknet-19,-1,-1
+63876441727ddf9f05e58bbf,Pyramid Vision Transformer v2,-1,-1
+63876441727ddf9f05e58bc1,WFST,-1,-1
+63876442727ddf9f05e58bc3,Data augmentation using Polya-Gamma latent variables.,-1,-1
+63876442727ddf9f05e58bc5,ASGD Weight-Dropped LSTM,-1,-1
+63876442727ddf9f05e58bc7,CLIP,-1,-1
+63876442727ddf9f05e58bc9,FAVOR+,-1,-1
+63876442727ddf9f05e58bcb,Unified VLP,-1,-1
+63876442727ddf9f05e58bcd,Quasi-Recurrent Neural Network,-1,-1
+63876442727ddf9f05e58bcf,Spatial Attention-Guided Mask,-1,-1
+63876442727ddf9f05e58bd1,Lookahead,-1,-1
+63876442727ddf9f05e58bd3,Relative Position Encodings,-1,-1
+63876442727ddf9f05e58bd5,DSGN,-1,-1
+63876442727ddf9f05e58bd7,Off-Diagonal Orthogonal Regularization,-1,-1
+63876442727ddf9f05e58bd9,Random Erasing,-1,-1
+63876442727ddf9f05e58bdb,Gated Attention Networks,-1,-1
+63876442727ddf9f05e58bdd,WaveGlow,-1,-1
+63876442727ddf9f05e58bdf,AdaDelta,-1,-1
+63876442727ddf9f05e58be1,SpecGAN,-1,-1
+63876442727ddf9f05e58be3,Local Contrast Normalization,-1,-1
+63876442727ddf9f05e58be5,LMU,-1,-1
+63876442727ddf9f05e58be7,DeiT,-1,-1
+63876442727ddf9f05e58be9,Automatic Structured Variational Inference,-1,-1
+63876442727ddf9f05e58beb,BIDeN,-1,-1
+63876442727ddf9f05e58bed,Global Coupled Adaptive Number of Shots,-1,-1
+63876442727ddf9f05e58bef,Exact Fusion Model,-1,-1
+63876442727ddf9f05e58bf2,Fashion-MMT,-1,-1
+63876442727ddf9f05e58bf4,Pushshift Telegram,-1,-1
+63876442727ddf9f05e58bf6,Malay Speech Data by Mobile Phone_Reading,-1,-1
+63876442727ddf9f05e58bf8,Chinese VQA,-1,-1
+63876442727ddf9f05e58bfa,SuMe,-1,-1
+63876442727ddf9f05e58bfc,PST900,-1,-1
+63876442727ddf9f05e58bfe,Multi-Genre Natural Language Inference,-1,-1
+63876442727ddf9f05e58c00,DaNewsroom,-1,-1
+63876442727ddf9f05e58c02,27 Class American Sign Language-Based Dataset,-1,-1
+63876442727ddf9f05e58c04,Minigrid,-1,-1
+63876442727ddf9f05e58c06,SpatialVOC2K,-1,-1
+63876442727ddf9f05e58c08,Grand Theft Auto 5,-1,-1
+63876442727ddf9f05e58c0a,PART-OF,-1,-1
+63876442727ddf9f05e58c0c,CSAbstruct Dataset,-1,-1
+63876442727ddf9f05e58c0e,MSU Video Quality Metrics Benchmark,-1,-1
+63876442727ddf9f05e58c10,ClipShots,-1,-1
+63876442727ddf9f05e58c12,NYT-H,-1,-1
+63876442727ddf9f05e58c14,Multilingual LibriSpeech,-1,-1
+63876442727ddf9f05e58c16,60k Stack Overflow Questions,-1,-1
+63876442727ddf9f05e58c18,LiDAR-based Moving Object Segmentation,-1,-1
+63876442727ddf9f05e58c1a,Temporal Popularity Image Collection,-1,-1
+63876442727ddf9f05e58c1c,ProteinKG25,-1,-1
+63876442727ddf9f05e58c1e,capes,-1,-1
+63876442727ddf9f05e58c20,WikiMulti,-1,-1
+63876442727ddf9f05e58c22,Proposal Flow Datasets,-1,-1
+63876442727ddf9f05e58c24,Real World Occluded Faces,-1,-1
+63876442727ddf9f05e58c26,FAIR-Play,-1,-1
+63876442727ddf9f05e58c28,Occ-Traj120,-1,-1
+63876442727ddf9f05e58c2a,catbAbI QA-mode,-1,-1
+63876442727ddf9f05e58c2c,LiveQA,-1,-1
+63876442727ddf9f05e58c2e,PANDA,-1,-1
+63876442727ddf9f05e58c30,TRN,-1,-1
+63876442727ddf9f05e58c32,Grasping dataset: suction-based,-1,-1
+63876442727ddf9f05e58c34,MLS,-1,-1
+63876442727ddf9f05e58c36,SMS Spam Collection Data Set,-1,-1
+63876442727ddf9f05e58c38,HuTu 80 cell populations,-1,-1
+63876442727ddf9f05e58c3a,Person Re-identification in the Wild,-1,-1
+63876442727ddf9f05e58c3c,Avicenna: Deductive Commonsense Reasoning,-1,-1
+63876442727ddf9f05e58c3e,CorresPondenceNet,-1,-1
+63876442727ddf9f05e58c40,HM3D-Semantics,-1,-1
+63876442727ddf9f05e58c42,TGIF,-1,-1
+63876442727ddf9f05e58c44,The Winograd Schema Challenge (Russian),-1,-1
+63876442727ddf9f05e58c46,Task2Dial,-1,-1
+63876442727ddf9f05e58c48,N-UCLA,-1,-1
+63876442727ddf9f05e58c4a,TRaffic ANd COngestionS,-1,-1
+63876442727ddf9f05e58c4c,Species-800,-1,-1
+63876442727ddf9f05e58c4e,UCLA Protest Image,-1,-1
+63876442727ddf9f05e58c50,DAD,-1,-1
+63876442727ddf9f05e58c52,Birdsnap,-1,-1
+63876442727ddf9f05e58c54,Fongbe Speech Dataset,-1,-1
+63876442727ddf9f05e58c56,https://sourceforge.net/adobe/adobedatasets/panoramas/home/Home/,-1,-1
+63876442727ddf9f05e58c58,Wuhan UAV-borne hyperspectral image,-1,-1
+63876442727ddf9f05e58c5a,SES,-1,-1
+63876442727ddf9f05e58c5c,DIRHA,-1,-1
+63876442727ddf9f05e58c5e,The BioScope Corpus,-1,-1
+63876442727ddf9f05e58c60,Stylized ImageNet,-1,-1
+63876442727ddf9f05e58c62,249 Hours - Hangzhou Dialect Speech Data by Mobile Phone,-1,-1
+63876442727ddf9f05e58c64,MSU Video Alignment and Retrieval Benchmark Suite,-1,-1
+63876442727ddf9f05e58c66,DBLP Temporal,-1,-1
+63876442727ddf9f05e58c68,Cuff-Less Blood Pressure Estimation,-1,-1
+63876442727ddf9f05e58c6a,DSSN,-1,-1
+63876442727ddf9f05e58c6c,Berkeley Multimodal Human Action Database,-1,-1
+63876442727ddf9f05e58c6e,Tufts Medical Echocardiogram Dataset,-1,-1
+63876442727ddf9f05e58c70,HumanoidRobotPose,-1,-1
+63876442727ddf9f05e58c72,SKU110K,-1,-1
+63876442727ddf9f05e58c74,Short Video Dataset,-1,-1
+63876442727ddf9f05e58c76,Dynamic Vision Sensor 3D Human Pose Dataset,-1,-1
+63876442727ddf9f05e58c78,multi-labEl haTe speecH detectiOn dataSet,-1,-1
+63876442727ddf9f05e58c7a,TotalCapture,-1,-1
+63876442727ddf9f05e58c7c,Question Answering via Sentence Composition,-1,-1
+63876442727ddf9f05e58c7e,Yet Another Chinese Learner Corpus,-1,-1
+63876442727ddf9f05e58c80,CBT,-1,-1
+63876442727ddf9f05e58c82,Niko Chord Progression Dataset,-1,-1
+63876442727ddf9f05e58c84,ParsTwiner,-1,-1
+63876442727ddf9f05e58c86,MuJoCo,-1,-1
+63876442727ddf9f05e58c88,"13.3 Hours - Chinese Mandarin Synthesis Corpus-Female, Emotional",-1,-1
+63876442727ddf9f05e58c8a,19.46 Hours - American English Speech Synthesis Corpus-Female,-1,-1
+63876442727ddf9f05e58c8c,PIROPO,-1,-1
+63876442727ddf9f05e58c8e,201 Hours - Singaporean Speaking English Speech Data by Mobile Phone,-1,-1
+63876442727ddf9f05e58c90,Emotions and their Triggers during Covid-19,-1,-1
+63876442727ddf9f05e58c92,Common Objects in COntext-stuff,-1,-1
+63876442727ddf9f05e58c94,CommonCrawl News dataset,-1,-1
+63876442727ddf9f05e58c96,VFR-2420,-1,-1
+63876442727ddf9f05e58c98,Microsoft Research Video Description Corpus,-1,-1
+63876442727ddf9f05e58c9a,VoicePrivacy 2020,-1,-1
+63876442727ddf9f05e58c9c,PIPAL,-1,-1
+63876442727ddf9f05e58c9e,MedNLI,-1,-1
+63876442727ddf9f05e58ca0,Skeleton-Based Action Recognition Dataset,-1,-1
+63876442727ddf9f05e58ca2,SYNTHIA-PANO,-1,-1
+63876442727ddf9f05e58ca4,Large-Scale Arabic Book Reviews,-1,-1
+63876442727ddf9f05e58ca6,Tracking Machine Learning Challenge,-1,-1
+63876442727ddf9f05e58ca8,Sentiment Analysis + Data Drift,-1,-1
+63876442727ddf9f05e58caa,Hotels-50K,-1,-1
+63876442727ddf9f05e58cac,Google Landmarks Dataset v2,-1,-1
+63876442727ddf9f05e58cae,TED-LIUM 3,-1,-1
+63876442727ddf9f05e58cb0,CB-ToF,-1,-1
+63876442727ddf9f05e58cb2,L3DAS22,-1,-1
+63876442727ddf9f05e58cb4,"1,417 People – 3D Living_Face & Anti_Spoofing Data",-1,-1
+63876442727ddf9f05e58cb6,TrUMAn,-1,-1
+63876442727ddf9f05e58cb8,Egomon Gaze & Video dataset,-1,-1
+63876442727ddf9f05e58cba,IARPA Janus Benchmark-S,-1,-1
+63876442727ddf9f05e58cbc,Multi-domain Wizard-of-Oz,-1,-1
+63876442727ddf9f05e58cbe,Perceptual Image Processing ALgorithms IQA Dataset,-1,-1
+63876442727ddf9f05e58cc0,Benchmark for Neural Paraphrase Detection,-1,-1
+63876442727ddf9f05e58cc2,PLOD-filtered,-1,-1
+63876442727ddf9f05e58cc4,Rice Image Dataset,-1,-1
+63876442727ddf9f05e58cc6,VISION dataset,-1,-1
+63876442727ddf9f05e58cc8,Software Mentions in Scientific Articles,-1,-1
+63876442727ddf9f05e58cca,CLO-WTSP,-1,-1
+63876442727ddf9f05e58ccc,rSoccer,-1,-1
+63876442727ddf9f05e58cce,ACDC Scribbles,-1,-1
+63876442727ddf9f05e58cd0,CUAD,-1,-1
+63876442727ddf9f05e58cd2,global cyclone data from 1841 to 2021,-1,-1
+63876442727ddf9f05e58cd4,TNBC,-1,-1
+63876442727ddf9f05e58cd6,SMLM CEP152-Complex FITS Images,-1,-1
+63876442727ddf9f05e58cd8,Partial-iLIDS,-1,-1
+63876442727ddf9f05e58cda,image-goal-nav-dataset,-1,-1
+63876442727ddf9f05e58cdc,x-stance,-1,-1
+63876442727ddf9f05e58cde,OTTers,-1,-1
+63876442727ddf9f05e58ce0,emojiSpace embedding,-1,-1
+63876442727ddf9f05e58ce2,SMM4H,-1,-1
+63876442727ddf9f05e58ce4,Eth-Exchange,-1,-1
+63876442727ddf9f05e58ce6,Water Footprint Recommender System Data,-1,-1
+63876442727ddf9f05e58ce8,A Multilingual Form Understanding Benchmark,-1,-1
+63876442727ddf9f05e58cea,FUNSD,-1,-1
+63876442727ddf9f05e58cec,FSDnoisy18k,-1,-1
+63876442727ddf9f05e58cee,Duolingo SLAM Shared Task,-1,-1
+63876442727ddf9f05e58cf0,Replication Data for: On estimating Armington elasticities for Japan's meat imports,-1,-1
+63876442727ddf9f05e58cf2,TurkQA,-1,-1
+63876442727ddf9f05e58cf4,WikiNEuRal,-1,-1
+63876442727ddf9f05e58cf6,"14,980 Images PPT OCR Data of 8 Languages",-1,-1
+63876442727ddf9f05e58cf8,Irish Wikipedia,-1,-1
+63876442727ddf9f05e58cfa,PyTorrent,-1,-1
+63876442727ddf9f05e58cfc,Colon Cancer Histology Dataset,-1,-1
+63876442727ddf9f05e58cfe,ACID,-1,-1
+63876442727ddf9f05e58d00,Unsupervised Reinforcement Learning Benchmark,-1,-1
+63876442727ddf9f05e58d02,ObjectsRoom,-1,-1
+63876442727ddf9f05e58d04,XTREME,-1,-1
+63876442727ddf9f05e58d06,Room Rearrangement,-1,-1
+63876442727ddf9f05e58d08,M-PCCD,-1,-1
+63876442727ddf9f05e58d0a,ImageNet Long-Tailed,-1,-1
+63876442727ddf9f05e58d0c,Visual Affordance Learning,-1,-1
+63876442727ddf9f05e58d0e,MAST,-1,-1
+63876442727ddf9f05e58d10,CrowdSpeech,-1,-1
+63876442727ddf9f05e58d12,Refer-YouTube-VOS,-1,-1
+63876442727ddf9f05e58d14,Deep Soccer Captioning,-1,-1
+63876442727ddf9f05e58d16,ACE 2004,-1,-1
+63876442727ddf9f05e58d18,Munich Sentinel2 Crop Segmentation,-1,-1
+63876442727ddf9f05e58d1a,Pose Estimation Lunar Robot,-1,-1
+63876442727ddf9f05e58d1c,Bajer Online Misogyny,-1,-1
+63876442727ddf9f05e58d1e,SILG,-1,-1
+63876442727ddf9f05e58d20,FullTextPeerRead,-1,-1
+63876442727ddf9f05e58d22,Vision for Intelligent Vehicles and Applications,-1,-1
+63876442727ddf9f05e58d24,Full-Spectral Autofluorescence Lifetime Microscopic Images,-1,-1
+63876442727ddf9f05e58d26,CaSiNo,-1,-1
+63876442727ddf9f05e58d28,INRIA Sparse Light Field,-1,-1
+63876442727ddf9f05e58d2a,Knot128,-1,-1
+63876442727ddf9f05e58d2c,An Amharic News Text classification Dataset,-1,-1
+63876442727ddf9f05e58d2e,Russian Commitment Bank,-1,-1
+63876442727ddf9f05e58d30,Dataset for methane combustion,-1,-1
+63876442727ddf9f05e58d32,ETH Kinect Dataset,-1,-1
+63876442727ddf9f05e58d34,Atari Annotated RAM Interface,-1,-1
+63876442727ddf9f05e58d36,EMC Dutch Clinical Corpus,-1,-1
+63876442727ddf9f05e58d38,HAA500,-1,-1
+63876442727ddf9f05e58d3b,The Softwarised Network Data Zoo,-1,-1
+63876442727ddf9f05e58d3d,DeepFake MNIST+,-1,-1
+63876442727ddf9f05e58d3f,ETRI-LIVE Space-Time Subsampled Video Quality (STSVQ) Database,-1,-1
+63876442727ddf9f05e58d41,Multimodal Entity Image Repurposing,-1,-1
+63876442727ddf9f05e58d43,Freibrug Cars,-1,-1
+63876442727ddf9f05e58d45,GINC,-1,-1
+63876442727ddf9f05e58d47,MVTEC 3D-AD,-1,-1
+63876442727ddf9f05e58d49,TekGen,-1,-1
+63876442727ddf9f05e58d4b,Public Git Archive,-1,-1
+63876442727ddf9f05e58d4d,Content4All,-1,-1
+63876442727ddf9f05e58d4f,CFQ,-1,-1
+63876442727ddf9f05e58d51,Virtual Image Dataset for Illumination Transfer,-1,-1
+63876442727ddf9f05e58d53,Booking.com Data Challenge,-1,-1
+63876442727ddf9f05e58d55,All Words OpenIE,-1,-1
+63876442727ddf9f05e58d57,NLI-TR,-1,-1
+63876442727ddf9f05e58d59,VideoLQ,-1,-1
+63876442727ddf9f05e58d5b,High resolution ship collections 2016,-1,-1
+63876442727ddf9f05e58d5d,S2ORC,-1,-1
+63876442727ddf9f05e58d5f,Cops-Ref,-1,-1
+63876442727ddf9f05e58d61,Alsat-2B,-1,-1
+63876442727ddf9f05e58d63,Source Code Tagger Training Set,-1,-1
+63876442727ddf9f05e58d65,2018 Data Science Bowl,-1,-1
+63876442727ddf9f05e58d67,AQUA-RAT,-1,-1
+63876442727ddf9f05e58d69,Large Scale Informal Chinese Corpus,-1,-1
+63876442727ddf9f05e58d6b,Mal-Activity,-1,-1
+63876442727ddf9f05e58d6d,Vietnamese Speech Data,-1,-1
+63876442727ddf9f05e58d6f,FoodLogoDet-1500,-1,-1
+63876442727ddf9f05e58d71,Collision Avoidance Challenge dataset,-1,-1
+63876442727ddf9f05e58d73,PTB-TIR,-1,-1
+63876442727ddf9f05e58d75,CPED,-1,-1
+63876442727ddf9f05e58d77,ETH Py150 Open,-1,-1
+63876442727ddf9f05e58d79,C4,-1,-1
+63876442727ddf9f05e58d7b,E-KAR,-1,-1
+63876442727ddf9f05e58d7d,NLPR,-1,-1
+63876442727ddf9f05e58d7f,RAVEN,-1,-1
+63876442727ddf9f05e58d81,OntoNotes 4.0,-1,-1
+63876442727ddf9f05e58d83,UBOFAB19,-1,-1
+63876442727ddf9f05e58d85,PASCAL Face,-1,-1
+63876442727ddf9f05e58d87,ASPEC,-1,-1
+63876442727ddf9f05e58d89,Sub-Slot Dialogue dataset id number domain,-1,-1
+63876442727ddf9f05e58d8b,Modern Office-31,-1,-1
