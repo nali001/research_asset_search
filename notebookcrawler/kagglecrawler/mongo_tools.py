@@ -10,6 +10,7 @@ search_log_coll = db['search_log']
 download_log_coll = db['download_log']
 raw_notebook_coll = db['raw_notebooks']
 notebook_metadata_coll = db['notebook_metadata_coll']
+central_task_log_coll = db['central_task_log_coll']
 task_log_coll = db['task_log']
 
 
@@ -102,7 +103,7 @@ def real_time_status():
 
 
 if __name__ == '__main__': 
-    # real_time_status()
-    export_resources()
+    real_time_status()
+    # export_resources()
 
     

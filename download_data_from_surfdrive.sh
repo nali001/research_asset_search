@@ -9,3 +9,8 @@
 # Source: search_engine_app/notebooksearch/Notebooks/
 # Destination: /home/notebook_search_docker/Notebooks
 rclone copy na_surf:notebook_search_docker/Notebooks/ ./search_engine_app/notebooksearch/Notebooks/ --progress
+
+# 2. 
+# Source: /home/notebook_search_docker/notebookcrawler/DB_exports/
+# Destination: notebookcrawler/DB_imports/
+rclone copy na_surf:notebook_search_docker/notebookcrawler/DB_exports/ ./notebookcrawler/DB_imports/  --progress
