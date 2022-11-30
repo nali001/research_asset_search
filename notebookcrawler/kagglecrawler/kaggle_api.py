@@ -81,10 +81,10 @@ class AuthenticatedKaggleAPI:
                 # Capture the customized Exception. 
                 # Execption definition: https://github.com/Kaggle/kaggle-api/blob/49057db362903d158b1e71a43d888b981dd27159/kaggle/rest.py#L311
                 except kaggle.rest.ApiException as e:  
-                    # Sleep if it is due to 409 error. 
+                    # Sleep 20 mins if it is due to 409 error. 
                     if e.status==429: 
                         print(f'[ERROR!!] (429) {e.reason}')
-                        retry_after = int(e.headers['Retry-After'])*20
+                        retry_after = int(e.headers['Retry-After'])*40
                         print(f'\nRetry {attempt+1} in {retry_after} seconds zzzzZZZZZZ\n')
                         time.sleep(retry_after)
                         continue
