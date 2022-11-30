@@ -20,8 +20,24 @@ class AuthenticatedKaggleAPI:
             owner_slug = dataset_urls[0]
             kernel_slug = dataset_urls[1]
 
-        response = kaggle.api.process_response(
-            kaggle.api.kernel_pull_with_http_info(owner_slug, kernel_slug))
+        for attempt in range(10): 
+            try: 
+                response = kaggle.api.process_response(
+                    kaggle.api.kernel_pull_with_http_info(owner_slug, kernel_slug))
+            # Capture the customized Exception. 
+            # Execption definition: https://github.com/Kaggle/kaggle-api/blob/49057db362903d158b1e71a43d888b981dd27159/kaggle/rest.py#L311
+            except kaggle.rest.ApiException as e:  
+                # Sleep if it is due to 409 error. 
+                if e.status==429: 
+                    print(f'[ERROR!!] (429) {e.reason}')
+                    retry_after = int(e.headers['Retry-After'])*20
+                    print(f'\nRetry {attempt+1} in {retry_after} seconds zzzzZZZZZZ\n')
+                    time.sleep(retry_after)
+                    response = e
+                    continue
+                # Skip other exceptions
+                else: 
+                    break
         return response
 
 

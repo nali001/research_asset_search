@@ -32,18 +32,47 @@ class KaggleNotebookCrawler:
         # self.KAGGLE_SEARCH_LOG_FILE = KAGGLE_SEARCH_LOG_FILE
         # self.df_queries = df_queries    
 
-    def update_task_log(self, records, task_log_coll): 
-        ''' Update task log 
+    # def get_not_exists(self, records, element, coll): 
+    #     # check if the `records` is empty
+    #     if not records: 
+    #         return []
+        
+    #     key = {element: record[element]}
+    #     pre_records = list(task_log_coll.find())
+    #     new_records = []
+
+    def add_tasks(self, records, task_log_coll): 
+        ''' initialize task log 
         '''
+
+        # check if the `records` is empty
+        if not records: 
+            return []
+
+        new_records = []
+        for record in records: 
+            key = {'query': record['query']}
+            # check is the record already exists
+            if not list(task_log_coll.find(key)): 
+                new_records.append(record)
+        # Check if the `new_records` is empty
+        if new_records: 
+            result = task_log_coll.insert_many(new_records)
+            return len(new_records)
+
+    def update_task_log(self, records, task_log_coll): 
+        ''' Update task log for changing `searched` and `downloaded` status
+        '''
+
         # check if the `records` is empty
         if not records: 
             return 0
-        key = {'query': record['query']}
+        
         for record in records: 
-            for i in ['searched', 'downloaded']: 
-                if record[i]: 
-                    result = task_log_coll.update_one(key, {'$inc': {i: record[i]}}, upsert=True)
-        return records
+            key = {'query': record['query']}
+            result = task_log_coll.replace_one(key, record, upsert=True)
+        return len(records)
+
 
     def update_search_log(self, records, search_log_coll): 
         ''' Update search log 
@@ -91,7 +120,7 @@ class KaggleNotebookCrawler:
 
 
     def update_notebooks(self, records, raw_notebook_coll): 
-        ''' Update download log
+        ''' Update raw notebooks
         '''
         # check if the `records` is empty
         if not records: 
@@ -114,7 +143,7 @@ class KaggleNotebookCrawler:
         
 
     def search_kernels_to_db(self, ordered_query, page_range, task_log_coll, search_log_coll, update=False): 
-        ''' Search Kaggle kernels using given query and store new records to MongoDB
+        ''' Search Kaggle kernels for one query and store new records to MongoDB
 
         Args: 
             - update: Boolean. If True, the search log will be updated using new searching results.  
@@ -131,33 +160,43 @@ class KaggleNotebookCrawler:
 
         # Check if the query has been searched
         records = []
+        task_log = []
         key = {'query': query}
         num_records = 15
         if update==False and len(list(search_log_coll.find(key)))>num_records:
             print(f'[***SKIP] it already has more than {num_records} records in the search log. ')
-            return records
-        try: 
-            records = self.kaggle_api.search_kernels(query, page_range)
-            self.update_search_log(records, search_log_coll)
-
             task_log = [{
-                'query': query, 
-                'searched': 1, 
-                'downloaded': 0
-            }]
+                    'query': query, 
+                    'searched': 1, 
+                    'downloaded': 0
+                }] 
+        else: 
+            try: 
+                records = self.kaggle_api.search_kernels(query, page_range)
+                self.update_search_log(records, search_log_coll)
+                task_log = [{
+                    'query': query, 
+                    'searched': 1, 
+                    'downloaded': 0
+                }]
+                
+            except Exception as e:
+                print(f'------------ Here is the error [[[SEARCH_KERNEL]]]')
+                print(e)
+                print(f'-------------\n\n') 
+        
+        if task_log:
             self.update_task_log(task_log, task_log_coll)
-        except Exception as e:
-            print(f'------------ Here is the error [[[SEARCH_KERNEL]]]')
-            print(e)
-            print(f'-------------\n\n') 
         return records
 
-    def download_kernel_to_db(self, query, kernel_ref, download_log_coll, raw_notebook_coll):
-        ''' Download the kernels together with the metadata file to the disk
+    def download_kernel_to_db(self, query:str, kernel_ref:str, download_log_coll, raw_notebook_coll):
+        ''' Download one Kaggle kernel. 
+
+        Download the kernels together with the metadata file to the disk
 
         Args: 
+            - query: str. the text of query
             - kernel_ref: the ID used by Kaggle to denote one notebook. 
-            - search_log_coll: the destination MongoDB database for search logs
             - download_log_coll: the destination MongoDB database for download logs
             - notebook_coll: the destination MongoDB database for downloaded notebooks
         
@@ -177,6 +216,10 @@ class KaggleNotebookCrawler:
             try: 
                 print(f'[Pulling] {kernel_ref}')
                 response = self.kaggle_api.download_kernel(kernel_ref)
+                if 'status' in response.keys():
+                    if response['status']==409:  
+                        return False
+
             except Exception as e:
                 # print(e) 
                 print(f'[***FAIL] {kernel_ref}')
@@ -214,34 +257,44 @@ class KaggleNotebookCrawler:
             - ordered_query: (index, query_text)
         '''
         print(f'---------------- Crawl Query [{ordered_query[0]+1}]: {ordered_query[1]} ----------------') 
+        task_log = []
         query = ordered_query[1]
-        # If `re_search` is True, it will search the notebooks using `query` 
-        if re_search==True: 
-            records = self.search_kernels_to_db(ordered_query, page_range, search_log_coll, update=True)
-            print(records)
+        num_records = 15
+        key = {'query': query}
+        if len(list(download_log_coll.find(key)))>num_records:
+            print(f'[***SKIP] it already has more than {num_records} records in the download log. ')
+            task_log = [{
+                    'query': query, 
+                    'searched': 1, 
+                    'downloaded': 1
+                }] 
+        else: 
+            # If `re_search` is True, it will search the notebooks using `query` 
+            if re_search==True: 
+                records = self.search_kernels_to_db(ordered_query, page_range, search_log_coll, update=False)
 
-        # If `re_search` is False, it will read from `search_log_coll` for a list of notebooks to be download 
-        elif re_search==False: 
-            key = {'query': query}
-            try: 
-                records = list(search_log_coll.find(key))
-                if len(records): 
-                    print(f'Found {len(records)} from search log.\n')
-            except Exception as e:
-                print(f'[SearchLog ERROR(self-defined)] There is no search log found!') 
-        
-        for record in records: 
-            query = record['query'], 
-            kernel_ref = record['kernel_ref']
-            self.download_kernel_to_db(query, kernel_ref, download_log_coll, raw_notebook_coll)
+            # If `re_search` is False, it will read from `search_log_coll` for a list of notebooks to be download 
+            elif re_search==False: 
+                key = {'query': query}
+                try: 
+                    records = list(search_log_coll.find(key))
+                    if len(records): 
+                        print(f'Found {len(records)} from search log.\n')
+                except Exception as e:
+                    print(f'[SearchLog ERROR(self-defined)] There is no search log found!') 
+            
+            for record in records: 
+                query = record['query'], 
+                kernel_ref = record['kernel_ref']
+                self.download_kernel_to_db(query, kernel_ref, download_log_coll, raw_notebook_coll)
 
-        task_log = [{
+            task_log = [{
                 'query': query, 
                 'searched': 1, 
                 'downloaded': 1
-            }]
-        self.update_task_log(task_log, task_log_coll)
-
+                }]
+        if task_log: 
+            self.update_task_log(task_log, task_log_coll)
         return True
 
 
@@ -256,56 +309,78 @@ if __name__ == '__main__':
     search_log_coll = db['search_log']
     download_log_coll = db['download_log']
     raw_notebook_coll = db['raw_notebooks']
-    task_log = db['task_log']
-
-    QUERY_LOG_FILE = os.path.join(os.getcwd(), 'Queries/pwc_log_queries.csv')
-    re_search = False
+    task_log_coll = db['task_log']
     
+    QUERY_FILE = os.path.join(os.getcwd(), 'Queries/pwc_queries.csv')
+    re_search = False
+
+
     # Create crawler
     crawler = KaggleNotebookCrawler()
+    
+    # Initialize task_log if empty
+    if not list(task_log_coll.find()): 
+        df_pwc_queries = pd.read_csv(QUERY_FILE)
+        df_tasks = pd.DataFrame(df_pwc_queries['query'])
+        df_tasks['searched'] = 0
+        df_tasks['downloaded'] = 0
+        records = df_tasks.to_dict('records')
+        crawler.add_tasks(records, task_log_coll)
 
     def multiprocess_crawl(ordered_query):
         # Sleep for random seconds to avoid request flooding.  
         # time.sleep(np.random.randint(1, 7))
-        result = crawler.crawl_notebooks_to_db(ordered_query, page_range=10, task_log=task_log, search_log_coll=search_log_coll, download_log_coll=download_log_coll, raw_notebook_coll=raw_notebook_coll, re_search=re_search)
+        result = crawler.crawl_notebooks_to_db(ordered_query, page_range=10, task_log_coll=task_log_coll, search_log_coll=search_log_coll, download_log_coll=download_log_coll, raw_notebook_coll=raw_notebook_coll, re_search=re_search)
         return result
 
     def multiprocess_search(ordered_query):
         # Sleep for random seconds to avoid request flooding.  
         time.sleep(np.random.randint(1, 7))
-        result = crawler.search_kernels_to_db(ordered_query, page_range=10, task_log=task_log, search_log_coll=search_log_coll, update=False)
+        result = crawler.search_kernels_to_db(ordered_query, page_range=10, task_log_coll=task_log_coll, search_log_coll=search_log_coll, update=False)
         return result
 
     
     start_time = time.time()
     for i in range(10): 
-        if re_search==True: 
-            # Read query log from disk
-            df_queries_log = pd.read_csv(QUERY_LOG_FILE)
-            # Filter out queries that have not been crawled
-            df_queries = df_queries_log.loc[df_queries_log['crawled']==0]
-            
+        # Read tasks
+        df_tasks = pd.DataFrame.from_dict(list(task_log_coll.find()))
+        df_search_queries = df_tasks.loc[df_tasks['searched']==0]
+
+        if re_search==False: 
+            df_download_queries = df_tasks.loc[df_tasks['searched']==1 and df_tasks['downloaded']==0]
         else: 
-            # Read query log from search log
-            df_queries = pd.DataFrame.from_dict(list(search_log_coll.find()))
+            df_download_queries = df_tasks.loc[df_tasks['downloaded']==0]
 
         # Split all the queries into small sets of `span` size
         span = 100
-        craw_queries = df_queries.iloc[0:span]
-        ordered_queries = list(enumerate(craw_queries['query']))
+        task_name = 'search'
+
+        # --------------------- For searching ----------------------
+        if task_name=='search': 
+            candidate_queries = df_search_queries.iloc[0:span]
+            ordered_queries = list(enumerate(candidate_queries['query']))
+            # Create multiple processes
+            num_processes = 1
+            with Pool(num_processes) as p:
+                p.map(multiprocess_search, ordered_queries)
+                elapsed=int(time.time()-start_time)
+                print(f'Elapsed time: {str(timedelta(seconds=elapsed))}\n')
+                print(f'Updated notebooks for {span} queries!\n')
+        # ---------------------------------------------------------
         
-        # Create multiple processes
-        num_processes = 1
-        with Pool(num_processes) as p:
-            p.map(multiprocess_crawl, ordered_queries)
-            elapsed=int(time.time()-start_time)
-            print(f'Elapsed time: {str(timedelta(seconds=elapsed))}\n')
-            print(f'Updated notebooks for {span} queries!\n')
+        # --------------------- For crawling ----------------------
+        elif task_name=='crawl': 
+            candidate_queries = df_download_queries.iloc[0:span]
+            ordered_queries = list(enumerate(candidate_queries['query']))
+            # Create multiple processes
+            num_processes = 1
+            with Pool(num_processes) as p:
+                p.map(multiprocess_crawl, ordered_queries)
+                elapsed=int(time.time()-start_time)
+                print(f'Elapsed time: {str(timedelta(seconds=elapsed))}\n')
+                print(f'Updated notebooks for {span} queries!\n')
+        # ---------------------------------------------------------
 
-            # Update query log 
-            if re_search==True: 
-                df_queries_log.loc[craw_queries.index, 'crawled'] = 1
-                df_queries_log.to_csv(QUERY_LOG_FILE, index=False)
 
-
+     
 
