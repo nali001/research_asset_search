@@ -1,0 +1,115 @@
+_id,query,searched,downloaded
+6387a608727ddf9f05e7eb38,Memory Network,200,-1
+6387a608727ddf9f05e7eb3c,Soft-NMS,43,-1
+6387a608727ddf9f05e7eb3e,RepVGG,16,-1
+6387a608727ddf9f05e7eb44,Gradient Sparsification,3,-1
+6387a608727ddf9f05e7eb46,3D Convolution,200,-1
+6387a608727ddf9f05e7eb48,Crossbow,50,-1
+6387a608727ddf9f05e7eb4a,Compact Convolutional Transformers,9,-1
+6387a608727ddf9f05e7eb4e,Quick Attention,200,-1
+6387a608727ddf9f05e7eb50,SCA-CNN,29,-1
+6387a608727ddf9f05e7eb52,Simulation as Augmentation,48,-1
+6387a608727ddf9f05e7eb54,PIoU Loss,1,-1
+6387a608727ddf9f05e7eb56,Spectral Normalization,200,-1
+6387a608727ddf9f05e7eb58,Semi-Pseudo-Label,55,-1
+6387a608727ddf9f05e7eb5a,Trans-Encoder,153,-1
+6387a608727ddf9f05e7eb5c,Short-Term Dense Concatenate,156,-1
+6387a608727ddf9f05e7eb62,Window-based Discriminator,29,-1
+6387a608727ddf9f05e7eb66,Spatially Separable Convolution,9,-1
+6387a608727ddf9f05e7eb68,"Snapshot Ensembles: Train 1, get M for free",8,-1
+6387a608727ddf9f05e7eb6a,Attention-augmented Convolution,39,-1
+6387a608727ddf9f05e7eb6c,Field Embedded Factorization Machine,7,-1
+6387a608727ddf9f05e7eb6e,Self-Normalizing Neural Networks,161,-1
+6387a608727ddf9f05e7eb70,Double DQN,56,-1
+6387a608727ddf9f05e7eb74,Kalman Optimization for Value Approximation,6,-1
+6387a608727ddf9f05e7eb76,Multilingual Universal Sentence Encoder,46,-1
+6387a608727ddf9f05e7eb7a,GraphSAGE,17,-1
+6387a608727ddf9f05e7eb7c,UNITER,6,-1
+6387a608727ddf9f05e7eb7e,Scattering Transform,59,-1
+6387a608727ddf9f05e7eb80,Hierarchical Variational Autoencoder,8,-1
+6387a608727ddf9f05e7eb82,FCN,181,-1
+6387a608727ddf9f05e7eb84,ULMFiT,126,-1
+6387a608727ddf9f05e7eb86,IC-SBP,2,-1
+6387a608727ddf9f05e7eb88,Hierarchical Softmax,122,-1
+6387a608727ddf9f05e7eb8a,mRNN,6,-1
+6387a608727ddf9f05e7eb8c,CodeT5,6,-1
+6387a608727ddf9f05e7eb8e,AutoInt,6,-1
+6387a608727ddf9f05e7eb90,Variational Autoencoder,174,-1
+6387a608727ddf9f05e7eb92,Single Headed Attention RNN,20,-1
+6387a608727ddf9f05e7eb96,NAS-FPN,10,-1
+6387a608727ddf9f05e7eb9a,Gumbel Softmax,18,-1
+6387a608727ddf9f05e7eb9c,Bottleneck Attention Module,50,-1
+6387a608727ddf9f05e7eb9e,Cluster-GCN,20,-1
+6387a608727ddf9f05e7eba0,Hydra,90,-1
+6387a608727ddf9f05e7eba2,Mask R-CNN,150,-1
+6387a608727ddf9f05e7eba6,Longformer,175,-1
+6387a608727ddf9f05e7ebaa,Energy Based Process,126,-1
+6387a608727ddf9f05e7ebac,Multi-source Sentiment Generative Adversarial Network,4,-1
+6387a608727ddf9f05e7ebb2,Fractal Block,17,-1
+6387a608727ddf9f05e7ebb4,Local Relation Network,123,-1
+6387a608727ddf9f05e7ebb6,TGAN,31,-1
+6387a608727ddf9f05e7ebb8,VideoBERT,3,-1
+6387a608727ddf9f05e7ebbc,Bort,58,-1
+6387a608727ddf9f05e7ebbe,Extended Transformer Construction,5,-1
+6387a608727ddf9f05e7ebc0,Conditional Position Encoding Vision Transformer,5,-1
+6387a608727ddf9f05e7ebc4,CeiT,14,-1
+6387a608727ddf9f05e7ebc6,Group Normalization,118,-1
+6387a608727ddf9f05e7ebca,Electric,176,-1
+6387a608727ddf9f05e7ebcc,SpatialDropout,106,-1
+6387a608727ddf9f05e7ebce,MoCo,26,-1
+6387a608727ddf9f05e7ebd2,DiffPool,4,-1
+6387a608727ddf9f05e7ebd6,Stochastic Dueling Network,2,-1
+6387a608727ddf9f05e7ebd8,DDSP,1,-1
+6387a608727ddf9f05e7ebda,ProphetNet,6,-1
+6387a608727ddf9f05e7ebe0,Stochastic Weight Averaging,140,-1
+6387a608727ddf9f05e7ebe2,Cosine Annealing,154,-1
+6387a608727ddf9f05e7ebe4,Concurrent Spatial and Channel Squeeze & Excitation,3,-1
+6387a608727ddf9f05e7ebe6,High-level backbone,104,-1
+6387a608727ddf9f05e7ebe8,Spatial Transformer,137,-1
+6387a608727ddf9f05e7ebea,Generalized Mean Pooling,37,-1
+6387a608727ddf9f05e7ebee,Self-Training with Task Augmentation,110,-1
+6387a608727ddf9f05e7ebf2,MoGA-C,5,-1
+6387a608727ddf9f05e7ebf4,GLU,155,-1
+6387a608727ddf9f05e7ebf6,Attention Gate,108,-1
+6387a608727ddf9f05e7ebfc,Highway Layer,62,-1
+6387a608727ddf9f05e7ec00,Graph Transformer,110,-1
+6387a608727ddf9f05e7ec02,Pyramidal Residual Unit,3,-1
+6387a608727ddf9f05e7ec04,Positional Encoding Generator,23,-1
+6387a608727ddf9f05e7ec06,Zero-padded Shortcut Connection,5,-1
+6387a608727ddf9f05e7ec08,TuckER,98,-1
+6387a608727ddf9f05e7ec0a,Matching The Statements,107,-1
+6387a608727ddf9f05e7ec0c,MPSO,185,-1
+6387a608727ddf9f05e7ec0e,GLIDE,24,-1
+6387a608727ddf9f05e7ec10,MobileNetV3,55,-1
+6387a608727ddf9f05e7ec14,GAM,183,-1
+6387a608727ddf9f05e7ec16,Early exiting,28,-1
+6387a608727ddf9f05e7ec18,ELiSH,9,-1
+6387a608727ddf9f05e7ec1a,Deep Graph Infomax,1,-1
+6387a608727ddf9f05e7ec1c,WYS,27,-1
+6387a608727ddf9f05e7ec20,ChebNet,2,-1
+6387a608727ddf9f05e7ec22,Tree Ensemble to Rules,137,-1
+6387a608727ddf9f05e7ec26,Laplacian Pyramid Network,9,-1
+6387a608727ddf9f05e7ec2a,GhostNet,25,-1
+6387a608727ddf9f05e7ec2c,DFA,200,-1
+6387a608727ddf9f05e7ec2e,Path Planning and Motion Control,21,-1
+6387a608727ddf9f05e7ec30,Conditional Instance Normalization,55,-1
+6387a608727ddf9f05e7ec32,GCT,31,-1
+6387a608727ddf9f05e7ec38,Graph Convolutional Networks for Fake News Detection,10,-1
+6387a608727ddf9f05e7ec3a,UNETR,6,-1
+6387a608727ddf9f05e7ec3c,HS-ResNet,38,-1
+6387a608727ddf9f05e7ec3e,ZCA Whitening,166,-1
+6387a608727ddf9f05e7ec40,Shapley Additive Explanations,165,-1
+6387a608727ddf9f05e7ec42,Sliding Window Attention,26,-1
+6387a608727ddf9f05e7ec44,Location-based Attention,85,-1
+6387a608727ddf9f05e7ec46,ARMA,168,-1
+6387a608727ddf9f05e7ec48,FSAF,10,-1
+6387a608727ddf9f05e7ec4a,GAN Hinge Loss,19,-1
+6387a608727ddf9f05e7ec4c,Local Mixup,47,-1
+6387a608727ddf9f05e7ec4e,Self-training Guided Prototypical Cross-domain Self-supervised learning,2,-1
+6387a608727ddf9f05e7ec50,Smooth Step,126,-1
+6387a608727ddf9f05e7ec52,Spatial Pyramid Pooling,27,-1
+6387a608727ddf9f05e7ec56,Mixture model network,125,-1
+6387a608727ddf9f05e7ec58,Bottleneck Residual Block,96,-1
+6387a608727ddf9f05e7ec5a,Virtual Data Augmentation,62,-1
+6387a608727ddf9f05e7ec5e,SRM,38,-1
+6387a608727ddf9f05e7ec62,MobileNetV2,178,-1

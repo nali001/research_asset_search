@@ -1,0 +1,114 @@
+_id,query,searched,downloaded
+6387a609727ddf9f05e7f28c,Perceiver IO,2,-1
+6387a609727ddf9f05e7f28e,Style-based Recalibration Module,1,-1
+6387a609727ddf9f05e7f290,CycleGAN,200,-1
+6387a609727ddf9f05e7f292,DE-GAN: A Conditional Generative Adversarial Network for Document Enhancement,0,-1
+6387a609727ddf9f05e7f294,TanhExp,5,-1
+6387a609727ddf9f05e7f296,EMEA,44,-1
+6387a609727ddf9f05e7f298,TransferQA,0,-1
+6387a609727ddf9f05e7f29a,DRPNN,0,-1
+6387a609727ddf9f05e7f29c,WordPiece,198,-1
+6387a609727ddf9f05e7f29e,CharacterBERT,1,-1
+6387a609727ddf9f05e7f2a0,Spatial Feature Transform,200,-1
+6387a609727ddf9f05e7f2a2,Protagonist Antagonist Induced Regret Environment Design,1,-1
+6387a609727ddf9f05e7f2a4,Bayesian REX,5,-1
+6387a609727ddf9f05e7f2a6,srBTAW (BTW),0,-1
+6387a609727ddf9f05e7f2a8,Residual Attention Network,200,-1
+6387a609727ddf9f05e7f2aa,Position-Sensitive RoIAlign,0,-1
+6387a609727ddf9f05e7f2ac,Bidirectional GRU,200,-1
+6387a609727ddf9f05e7f2ae,SuperpixelGridMasks,0,-1
+6387a609727ddf9f05e7f2b0,uNetXST,1,-1
+6387a609727ddf9f05e7f2b2,Monte-Carlo Tree Search,52,-1
+6387a609727ddf9f05e7f2b4,Rotary Embeddings,2,-1
+6387a609727ddf9f05e7f2b6,LFME,0,-1
+6387a609727ddf9f05e7f2b8,HOPE,200,-1
+6387a609727ddf9f05e7f2ba,SAFRAN - Scalable and fast non-redundant rule application,0,-1
+6387a609727ddf9f05e7f2bc,Transductive Inference,3,-1
+6387a609727ddf9f05e7f2be,ERU,71,-1
+6387a609727ddf9f05e7f2c0,Weighted Recurrent Quality Enhancement,6,-1
+6387a609727ddf9f05e7f2c2,Spherical Graph Convolutional Network,9,-1
+6387a609727ddf9f05e7f2c4,DOLG,22,-1
+6387a609727ddf9f05e7f2c6,Q-Learning,200,-1
+6387a609727ddf9f05e7f2c8,GER,200,-1
+6387a609727ddf9f05e7f2ca,Noisy Linear Layer,200,-1
+6387a609727ddf9f05e7f2cc,AlphaStar,6,-1
+6387a609727ddf9f05e7f2ce,Mesh-TensorFlow,98,-1
+6387a609727ddf9f05e7f2d0,SepFormer,0,-1
+6387a609727ddf9f05e7f2d2,Adaptive Instance Normalization,104,-1
+6387a609727ddf9f05e7f2d4,CuBERT,2,-1
+6387a609727ddf9f05e7f2d6,ParaNet,0,-1
+6387a609727ddf9f05e7f2d8,WaveGrad DBlock,0,-1
+6387a609727ddf9f05e7f2da,PointASNL,0,-1
+6387a609727ddf9f05e7f2dc,Copy-Paste,200,-1
+6387a609727ddf9f05e7f2de,Iterative Pseudo-Labeling,6,-1
+6387a609727ddf9f05e7f2e0,Displaced Aggregation Units,0,-1
+6387a609727ddf9f05e7f2e2,PICARD,44,-1
+6387a609727ddf9f05e7f2e4,Kaleido-BERT,3,-1
+6387a609727ddf9f05e7f2e6,DeepLabv3,184,-1
+6387a609727ddf9f05e7f2e8,DIME,200,-1
+6387a609727ddf9f05e7f2ea,KP,200,-1
+6387a609727ddf9f05e7f2ec,Temporaral Difference Network,0,-1
+6387a609727ddf9f05e7f2ee,Replica exchange stochastic gradient Langevin Dynamics,0,-1
+6387a609727ddf9f05e7f2f0,Reduction-B,200,-1
+6387a609727ddf9f05e7f2f2,GCN,164,-1
+6387a609727ddf9f05e7f2f4,Dilated Bottleneck Block,83,-1
+6387a609727ddf9f05e7f2f6,Bi3D,0,-1
+6387a609727ddf9f05e7f2f8,Synergistic Image and Feature Alignment,0,-1
+6387a609727ddf9f05e7f2fa,Normalized Temperature-scaled Cross Entropy Loss,3,-1
+6387a609727ddf9f05e7f2fc,DDParser,0,-1
+6387a609727ddf9f05e7f2fe,SRDC,0,-1
+6387a609727ddf9f05e7f300,PNA,34,-1
+6387a609727ddf9f05e7f302,MyGym: Modular Toolkit for Visuomotor Robotic Tasks,0,-1
+6387a609727ddf9f05e7f304,Visformer,2,-1
+6387a609727ddf9f05e7f306,Disentangled Attention Mechanism,6,-1
+6387a609727ddf9f05e7f308,Base Boosting,200,-1
+6387a609727ddf9f05e7f30a,CurricularFace,13,-1
+6387a609727ddf9f05e7f30c,Apollo,200,-1
+6387a609727ddf9f05e7f30e,Rainbow DQN,8,-1
+6387a609727ddf9f05e7f310,Max Pooling,200,-1
+6387a609727ddf9f05e7f312,Pyramidal Bottleneck Residual Unit,2,-1
+6387a609727ddf9f05e7f314,Support-set Based Cross-Supervision,14,-1
+6387a609727ddf9f05e7f316,Position-Wise Feed-Forward Layer,84,-1
+6387a609727ddf9f05e7f318,Cascade Corner Pooling,6,-1
+6387a609727ddf9f05e7f31a,WGAN,196,-1
+6387a609727ddf9f05e7f31c,CaiT,46,-1
+6387a609727ddf9f05e7f31e,JLA,11,-1
+6387a609727ddf9f05e7f320,PAU,200,-1
+6387a609727ddf9f05e7f322,Deep Q-Network,200,-1
+6387a609727ddf9f05e7f324,DTW,132,-1
+6387a609727ddf9f05e7f326,Neural adjoint,2,-1
+6387a609727ddf9f05e7f328,MFEC,2,-1
+6387a609727ddf9f05e7f32a,NON,180,-1
+6387a609727ddf9f05e7f32c,GIN,200,-1
+6387a609727ddf9f05e7f32e,CayleyNet,0,-1
+6387a609727ddf9f05e7f330,Spectral Dropout,200,-1
+6387a609727ddf9f05e7f332,Dynamic Graph Event Detection,19,-1
+6387a609727ddf9f05e7f334,PinvGCN,0,-1
+6387a609727ddf9f05e7f336,ReasonBERT,0,-1
+6387a609727ddf9f05e7f338,Variational Trace Distance Estimation,12,-1
+6387a609727ddf9f05e7f33a,NetAdapt,0,-1
+6387a609727ddf9f05e7f33c,MobileNetV1,21,-1
+6387a609727ddf9f05e7f33e,1cycle,148,-1
+6387a609727ddf9f05e7f340,SHA-RNN,20,-1
+6387a609727ddf9f05e7f342,MSPFN,0,-1
+6387a609727ddf9f05e7f344,Shuffle Transformer,200,-1
+6387a609727ddf9f05e7f346,Adaptive Smooth Optimizer,83,-1
+6387a609727ddf9f05e7f348,Local Response Normalization,172,-1
+6387a609727ddf9f05e7f34a,CVRL,0,-1
+6387a609727ddf9f05e7f34c,ResNeXt-Elastic,46,-1
+6387a609727ddf9f05e7f34e,MixNet,12,-1
+6387a609727ddf9f05e7f350,GShard,0,-1
+6387a609727ddf9f05e7f352,CARAFE,10,-1
+6387a609727ddf9f05e7f354,ILVR,1,-1
+6387a609727ddf9f05e7f356,NVAE Generative Residual Cell,0,-1
+6387a609727ddf9f05e7f358,Octave Convolution,12,-1
+6387a609727ddf9f05e7f35a,Multi-Heads of Mixed Attention,45,-1
+6387a609727ddf9f05e7f35c,Hyper HyperNetwork,1,-1
+6387a609727ddf9f05e7f35e,Random Resized Crop,200,-1
+6387a609727ddf9f05e7f360,Distance Shrinking with Angular Marginalizing Loss,0,-1
+6387a609727ddf9f05e7f362,VC R-CNN,74,-1
+6387a609727ddf9f05e7f364,ZoomNet,0,-1
+6387a609727ddf9f05e7f366,Adversarially Learned Inference,2,-1
+6387a609727ddf9f05e7f368,Soft Split and Soft Composition,43,-1
+6387a609727ddf9f05e7f36a,ELR,25,-1
+6387a609727ddf9f05e7f36c,Self-critical Sequence Training,138,-1

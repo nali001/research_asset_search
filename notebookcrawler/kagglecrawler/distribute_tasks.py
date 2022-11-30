@@ -99,7 +99,7 @@ if __name__ == '__main__':
     # raw_notebook_coll = db['raw_notebooks']
     # notebook_metadata_coll = db['notebook_metadata_coll']
     task_log_coll = db['task_log']
-    central_task_log_coll = db['central_task_log_coll']
+    central_task_log_coll = db['central_task_log']
 
     # Create task_splitter
     kwargs = {
@@ -111,8 +111,11 @@ if __name__ == '__main__':
     num_tasks = 10
     task_path = os.path.join(os.getcwd(), 'Tasks')
 
-    # ------------------- Split task ------------------ 
+    # ------------------- Split search task ------------------ 
     # task_splitter.split_search_tasks(num_tasks, task_path)
+
+    # ------------------- Split crawl task ------------------ 
+    task_splitter.split_crawl_tasks(num_tasks, task_path)
 
     # ------------------- Load task ------------------- 
     # task_file = os.path.join(task_path, 'search_task_0.csv')

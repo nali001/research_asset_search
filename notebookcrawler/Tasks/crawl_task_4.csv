@@ -1,0 +1,114 @@
+_id,query,searched,downloaded
+6387a609727ddf9f05e7f0c8,StereoLayers,0,-1
+6387a609727ddf9f05e7f0ca,Generalized Focal Loss,21,-1
+6387a609727ddf9f05e7f0cc,Graph Convolutional Network,200,-1
+6387a609727ddf9f05e7f0ce,LiteSeg,0,-1
+6387a609727ddf9f05e7f0d0,Criss-Cross Network,0,-1
+6387a609727ddf9f05e7f0d2,Mogrifier LSTM,0,-1
+6387a609727ddf9f05e7f0d4,Randomized Leaky Rectified Linear Units,0,-1
+6387a609727ddf9f05e7f0d6,Pointwise Convolution,71,-1
+6387a609727ddf9f05e7f0d8,LDA,200,-1
+6387a609727ddf9f05e7f0da,Tacotron,14,-1
+6387a609727ddf9f05e7f0dc,VEGA,200,-1
+6387a609727ddf9f05e7f0de,StyleALAE,2,-1
+6387a609727ddf9f05e7f0e0,ShuffleNet V2 Block,6,-1
+6387a609727ddf9f05e7f0e2,FBNet Block,1,-1
+6387a609727ddf9f05e7f0e4,ALDEN,20,-1
+6387a609727ddf9f05e7f0e6,UORO,3,-1
+6387a609727ddf9f05e7f0e8,ResNeSt,200,-1
+6387a609727ddf9f05e7f0ea,ENet Initial Block,8,-1
+6387a609727ddf9f05e7f0ec,ShuffleNet Block,11,-1
+6387a609727ddf9f05e7f0ee,TernaryBERT,0,-1
+6387a609727ddf9f05e7f0f0,MoNet,200,-1
+6387a609727ddf9f05e7f0f2,gSDE,2,-1
+6387a609727ddf9f05e7f0f4,FLAVR,0,-1
+6387a609727ddf9f05e7f0f6,Center-pivot convolution,4,-1
+6387a609727ddf9f05e7f0f8,Gaussian Gated Linear Network,15,-1
+6387a609727ddf9f05e7f0fa,3D ResNet-RS,16,-1
+6387a609727ddf9f05e7f0fc,wav2vec-U,15,-1
+6387a609727ddf9f05e7f0fe,Fast Minimum-Norm Attack,12,-1
+6387a609727ddf9f05e7f100,RSU Beneš Block,0,-1
+6387a609727ddf9f05e7f102,YOLOX,148,-1
+6387a609727ddf9f05e7f104,Siamese U-Net,27,-1
+6387a609727ddf9f05e7f106,VoiceFilter-Lite,0,-1
+6387a609727ddf9f05e7f108,NUQSGD,0,-1
+6387a609727ddf9f05e7f10a,Inception-ResNet-v2-B,68,-1
+6387a609727ddf9f05e7f10c,Multi-band MelGAN,0,-1
+6387a609727ddf9f05e7f10e,VoVNet,4,-1
+6387a609727ddf9f05e7f110,Extremely Efficient Spatial Pyramid of Depth-wise Dilated Separable Convolutions,2,-1
+6387a609727ddf9f05e7f112,AdaMod,6,-1
+6387a609727ddf9f05e7f114,Single-Shot Multi-Object Tracker,4,-1
+6387a609727ddf9f05e7f116,Temporal Jittering,6,-1
+6387a609727ddf9f05e7f118,ASAF,28,-1
+6387a609727ddf9f05e7f11a,TuckER-RP,1,-1
+6387a609727ddf9f05e7f11c,AdaMax,200,-1
+6387a609727ddf9f05e7f11e,Track objects as points,200,-1
+6387a609727ddf9f05e7f120,FairMOT,3,-1
+6387a609727ddf9f05e7f122,Synthetic Minority Over-sampling Technique.,200,-1
+6387a609727ddf9f05e7f124,Hierarchical MTL,1,-1
+6387a609727ddf9f05e7f126,Adversarial Model Perturbation,47,-1
+6387a609727ddf9f05e7f128,Adapter,200,-1
+6387a609727ddf9f05e7f12a,NFR,17,-1
+6387a609727ddf9f05e7f12c,Dual Multimodal Attention,3,-1
+6387a609727ddf9f05e7f12e,State-Aware Tracker,33,-1
+6387a609727ddf9f05e7f130,SDAE,10,-1
+6387a609727ddf9f05e7f132,Channel-wise Cross Fusion Transformer,3,-1
+6387a609727ddf9f05e7f134,Causal Inference,20,-1
+6387a609727ddf9f05e7f136,DeepLabv2,1,-1
+6387a609727ddf9f05e7f138,Deep Extreme Cut,200,-1
+6387a609727ddf9f05e7f13a,PolyCAM,0,-1
+6387a609727ddf9f05e7f13c,FORK,200,-1
+6387a609727ddf9f05e7f13e,Dynamic Keypoint Head,3,-1
+6387a609727ddf9f05e7f140,OFA,38,-1
+6387a609727ddf9f05e7f142,Cross-Attention Module,200,-1
+6387a609727ddf9f05e7f144,Dense Connections,200,-1
+6387a609727ddf9f05e7f146,Multi Loss ( BCE Loss + Focal Loss )  + Dice Loss,13,-1
+6387a609727ddf9f05e7f148,U-CAM,143,-1
+6387a609727ddf9f05e7f14a,Point-wise Spatial Attention,80,-1
+6387a609727ddf9f05e7f14c,KNN and IOU based verification,0,-1
+6387a609727ddf9f05e7f14e,Pix2Pix,200,-1
+6387a609727ddf9f05e7f150,SpreadsheetCoder,0,-1
+6387a609727ddf9f05e7f152,Ape-X DQN,7,-1
+6387a609727ddf9f05e7f154,IoU-guided NMS,2,-1
+6387a609727ddf9f05e7f156,Random Grayscale,200,-1
+6387a609727ddf9f05e7f158,Metrix,200,-1
+6387a609727ddf9f05e7f15a,NeuralRecon: Real-Time Coherent 3D Reconstruction from Monocular Video,0,-1
+6387a609727ddf9f05e7f15c,VAE,200,-1
+6387a609727ddf9f05e7f15e,Prioritized Experience Replay,12,-1
+6387a609727ddf9f05e7f160,SOHO,83,-1
+6387a609727ddf9f05e7f162,Metric mixup,200,-1
+6387a609727ddf9f05e7f164,PermuteFormer,0,-1
+6387a609727ddf9f05e7f166,DECA,187,-1
+6387a609727ddf9f05e7f168,Frequency channel attention networks,46,-1
+6387a609727ddf9f05e7f16a,Distribution-induced Bidirectional Generative Adversarial Network for Graph Representation Learning,2,-1
+6387a609727ddf9f05e7f16c,Feedforward Network,200,-1
+6387a609727ddf9f05e7f16e,R(2+1)D,200,-1
+6387a609727ddf9f05e7f170,Enhanced Seq2Seq Autoencoder via Contrastive Learning,0,-1
+6387a609727ddf9f05e7f172,IPL,200,-1
+6387a609727ddf9f05e7f174,FPG,39,-1
+6387a609727ddf9f05e7f176,LeVIT,23,-1
+6387a609727ddf9f05e7f178,Fast-YOLOv2,19,-1
+6387a609727ddf9f05e7f17a,Triplet Entropy Loss,51,-1
+6387a609727ddf9f05e7f17c,Rank-based loss,200,-1
+6387a609727ddf9f05e7f17e,QuantTree histograms,0,-1
+6387a609727ddf9f05e7f180,Griffin-Lim Algorithm,2,-1
+6387a609727ddf9f05e7f182,One-Shot Aggregation,64,-1
+6387a609727ddf9f05e7f184,DROID-SLAM,2,-1
+6387a609727ddf9f05e7f186,Disentangled Attribution Curves,0,-1
+6387a609727ddf9f05e7f188,CoLU,200,-1
+6387a609727ddf9f05e7f18a,Random Mutation Search,112,-1
+6387a609727ddf9f05e7f18c,CSPDarknet53,15,-1
+6387a609727ddf9f05e7f18e,Maxout,51,-1
+6387a609727ddf9f05e7f190,Holographic Reduced Representation,0,-1
+6387a609727ddf9f05e7f192,DSelect-k,0,-1
+6387a609727ddf9f05e7f194,Augmented SBERT,7,-1
+6387a609727ddf9f05e7f196,Harmonic Block,95,-1
+6387a609727ddf9f05e7f198,PWIL,0,-1
+6387a609727ddf9f05e7f19a,Progressive Growing Channel Attentive Non-Local Network,4,-1
+6387a609727ddf9f05e7f19c,Twin Delayed Deep Deterministic,0,-1
+6387a609727ddf9f05e7f19e,SAGAN,36,-1
+6387a609727ddf9f05e7f1a0,BIMAN,6,-1
+6387a609727ddf9f05e7f1a2,Deep Convolutional GAN,200,-1
+6387a609727ddf9f05e7f1a4,DAU-ConvNet,2,-1
+6387a609727ddf9f05e7f1a6,Highway Network,100,-1
+6387a609727ddf9f05e7f1a8,Low-resolution input,200,-1

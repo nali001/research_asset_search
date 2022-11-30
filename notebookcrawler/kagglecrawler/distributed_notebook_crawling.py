@@ -10,8 +10,9 @@ import pandas as pd
 from kagglecrawler.kaggle_api import AuthenticatedKaggleAPI
 
 from pymongo import MongoClient
-
 from multiprocessing import Pool
+
+from kagglecrawler import mongo_tools
 
 
 class KaggleNotebookCrawler: 
@@ -332,6 +333,7 @@ if __name__ == '__main__':
     
     QUERY_FILE = os.path.join(os.getcwd(), 'Queries/pwc_queries.csv')
     re_search = False
+    task_number = 0
 
 
     # Create crawler
@@ -390,8 +392,9 @@ if __name__ == '__main__':
             with Pool(num_processes) as p:
                 p.map(multiprocess_search, ordered_queries)
                 elapsed=int(time.time()-start_time)
-                print(f'')
                 print(f'[Summary] {(i+1)*span} queries processed!\nElapsed time: {str(timedelta(seconds=elapsed))}\n\n')
+                remote_path = f'notebook_search_docker/notebookcrawler/DB_exports/task_{task_number}/'
+                mongo_tools.auto_save(remote_path)
         # ---------------------------------------------------------
         
         # --------------------- For crawling ----------------------
@@ -403,8 +406,8 @@ if __name__ == '__main__':
             with Pool(num_processes) as p:
                 p.map(multiprocess_crawl, ordered_queries)
                 elapsed=int(time.time()-start_time)
-                print(f'Elapsed time: {str(timedelta(seconds=elapsed))}\n')
-                print(f'Updated notebooks for {span} queries!\n')
+                print(f'[Summary] {(i+1)*span} queries processed!\nElapsed time: {str(timedelta(seconds=elapsed))}\n\n')
+
         # ---------------------------------------------------------
 
 

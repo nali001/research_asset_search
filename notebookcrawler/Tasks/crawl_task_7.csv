@@ -1,0 +1,114 @@
+_id,query,searched,downloaded
+6387a609727ddf9f05e7f36e,Polya-Gamma Augmentation,0,-1
+6387a609727ddf9f05e7f370,RetinaMask,0,-1
+6387a609727ddf9f05e7f372,Encoder-Decoder model with local and pairwise loss along with shared encoder and discriminator network (EDLPS),0,-1
+6387a609727ddf9f05e7f374,Adaptive Graph Convolutional Neural Networks,181,-1
+6387a609727ddf9f05e7f376,Tofu,50,-1
+6387a609727ddf9f05e7f378,rTPNN,0,-1
+6387a609727ddf9f05e7f37a,Tacotron 2,9,-1
+6387a609727ddf9f05e7f37c,VFNet,18,-1
+6387a609727ddf9f05e7f37e,Branch attention,199,-1
+6387a609727ddf9f05e7f380,ScheduledDropPath,0,-1
+6387a609727ddf9f05e7f382,CoordConv,5,-1
+6387a609727ddf9f05e7f384,AdapTive Meta Optimizer,46,-1
+6387a609727ddf9f05e7f386,3D SA,200,-1
+6387a609727ddf9f05e7f388,ORN,36,-1
+6387a609727ddf9f05e7f38a,VGAE,4,-1
+6387a609727ddf9f05e7f38c,WGAN-GP Loss,112,-1
+6387a609727ddf9f05e7f38e,Aggregated Learning,200,-1
+6387a609727ddf9f05e7f390,Re-Attention Module,200,-1
+6387a609727ddf9f05e7f392,InfoGAN,17,-1
+6387a609727ddf9f05e7f394,squeeze-and-excitation networks,66,-1
+6387a609727ddf9f05e7f396,MADGRAD,28,-1
+6387a609727ddf9f05e7f398,QuantTree,0,-1
+6387a609727ddf9f05e7f39a,Hunger Games Search,13,-1
+6387a609727ddf9f05e7f39c,ReZero,7,-1
+6387a609727ddf9f05e7f39e,TGN,18,-1
+6387a609727ddf9f05e7f3a0,DistanceNet,0,-1
+6387a609727ddf9f05e7f3a2,Transformer in Transformer,200,-1
+6387a609727ddf9f05e7f3a4,ENet Bottleneck,22,-1
+6387a609727ddf9f05e7f3a6,Elastic ResNeXt Block,4,-1
+6387a609727ddf9f05e7f3a8,Contrastive Learning,146,-1
+6387a609727ddf9f05e7f3aa,Continuous Kernel Convolution,77,-1
+6387a609727ddf9f05e7f3ac,Conditional Batch Normalization,111,-1
+6387a609727ddf9f05e7f3ae,Tanh Exponential Activation Function,153,-1
+6387a609727ddf9f05e7f3b0,SentencePiece,200,-1
+6387a609727ddf9f05e7f3b2,Stochastic Steady-state Embedding,4,-1
+6387a609727ddf9f05e7f3b4,A3C,40,-1
+6387a609727ddf9f05e7f3b6,Stein Variational Policy Gradient,2,-1
+6387a609727ddf9f05e7f3b8,ZFNet,15,-1
+6387a609727ddf9f05e7f3ba,ADELE,87,-1
+6387a609727ddf9f05e7f3bc,MoBY,63,-1
+6387a609727ddf9f05e7f3be,Residual Block,200,-1
+6387a609727ddf9f05e7f3c0,Auxiliary Batch Normalization,68,-1
+6387a609727ddf9f05e7f3c2,Dilated Bottleneck with Projection Block,14,-1
+6387a609727ddf9f05e7f3c4,Gated Positional Self-Attention,14,-1
+6387a609727ddf9f05e7f3c6,Stochastic Gradient Variational Bayes,9,-1
+6387a609727ddf9f05e7f3c8,GloVe Embeddings,200,-1
+6387a609727ddf9f05e7f3ca,GFSA,0,-1
+6387a609727ddf9f05e7f3cc,Leaky ReLU,200,-1
+6387a609727ddf9f05e7f3ce,CRF,200,-1
+6387a609727ddf9f05e7f3d0,Hybrid Firefly and Particle Swarm Optimization,0,-1
+6387a609727ddf9f05e7f3d2,TDN,22,-1
+6387a609727ddf9f05e7f3d4,Gather-Excite Networks,3,-1
+6387a609727ddf9f05e7f3d6,CoBERL,0,-1
+6387a609727ddf9f05e7f3d8,Filter Response Normalization,200,-1
+6387a609727ddf9f05e7f3da,Kernel Inducing Points,6,-1
+6387a609727ddf9f05e7f3dc,PixLoc,0,-1
+6387a609727ddf9f05e7f3de,Phish,130,-1
+6387a609727ddf9f05e7f3e0,NesT,200,-1
+6387a609727ddf9f05e7f3e2,Multi-DConv-Head Attention,0,-1
+6387a609727ddf9f05e7f3e4,GPFL,0,-1
+6387a609727ddf9f05e7f3e6,Voxel Transformer,10,-1
+6387a609727ddf9f05e7f3e8,Genetic Algorithms,200,-1
+6387a609727ddf9f05e7f3ea,CT-Layer,200,-1
+6387a609727ddf9f05e7f3ec,RegionViT,0,-1
+6387a609727ddf9f05e7f3ee,Error Back Proragation Network,0,-1
+6387a609727ddf9f05e7f3f0,Gradient-based optimization,200,-1
+6387a609727ddf9f05e7f3f2,Wavelet Distributed Training,18,-1
+6387a609727ddf9f05e7f3f4,GBST,13,-1
+6387a609727ddf9f05e7f3f6,Relational Graph Convolution Network,14,-1
+6387a609727ddf9f05e7f3f8,LipGAN,0,-1
+6387a609727ddf9f05e7f3fa,Gated Convolution,91,-1
+6387a609727ddf9f05e7f3fc,G-GLN Neuron,0,-1
+6387a609727ddf9f05e7f3fe,Teacher-Tutor-Student Knowledge Distillation,0,-1
+6387a609727ddf9f05e7f400,online deep learning,200,-1
+6387a609727ddf9f05e7f402,ReLIC,59,-1
+6387a609727ddf9f05e7f404,Pyramid Vision Transformer,6,-1
+6387a609727ddf9f05e7f406,SmeLU,1,-1
+6387a609727ddf9f05e7f408,NTK,18,-1
+6387a609727ddf9f05e7f40a,Smish,1,-1
+6387a609727ddf9f05e7f40c,ESP,200,-1
+6387a609727ddf9f05e7f40e,ORB-Simultaneous localization and mapping,3,-1
+6387a609727ddf9f05e7f410,Early Stopping,200,-1
+6387a609727ddf9f05e7f412,DG-Net,54,-1
+6387a609727ddf9f05e7f414,Neural Network Compression Framework,46,-1
+6387a60a727ddf9f05e7f416,Segment Sorting,200,-1
+6387a60a727ddf9f05e7f418,Pansharpening by convolutional neural networks in the full resolution framework,0,-1
+6387a60a727ddf9f05e7f41a,CBHG,0,-1
+6387a60a727ddf9f05e7f41c,Meta Pseudo Labels,47,-1
+6387a60a727ddf9f05e7f41e,DEXTR,1,-1
+6387a60a727ddf9f05e7f420,Spatial CNN with UNet based Encoder-decoder and ConvLSTM,0,-1
+6387a60a727ddf9f05e7f422,Neural network for graphs,200,-1
+6387a60a727ddf9f05e7f424,Spatial & Temporal Attention,55,-1
+6387a60a727ddf9f05e7f426,EESP,2,-1
+6387a60a727ddf9f05e7f428,Natural Gradient Descent,200,-1
+6387a60a727ddf9f05e7f42a,CSGLD,0,-1
+6387a60a727ddf9f05e7f42c,Temporal Activation Regularization,40,-1
+6387a60a727ddf9f05e7f42e,uPIT,16,-1
+6387a60a727ddf9f05e7f430,IMGEP,0,-1
+6387a60a727ddf9f05e7f432,GAT,200,-1
+6387a60a727ddf9f05e7f434,Sarsa Lambda,16,-1
+6387a60a727ddf9f05e7f436,Agglomerative Contextual Decomposition,0,-1
+6387a60a727ddf9f05e7f438,Multi-partition Embedding Interaction,9,-1
+6387a60a727ddf9f05e7f43a,PipeMare,0,-1
+6387a60a727ddf9f05e7f43c,Random Synthesized Attention,18,-1
+6387a60a727ddf9f05e7f43e,PPMC,2,-1
+6387a60a727ddf9f05e7f440,SortCut Sinkhorn Attention,0,-1
+6387a60a727ddf9f05e7f442,Spatial Attention Module (ThunderNet),0,-1
+6387a60a727ddf9f05e7f444,EdgeFlow,0,-1
+6387a60a727ddf9f05e7f446,MotionNet,0,-1
+6387a60a727ddf9f05e7f448,LRNet,2,-1
+6387a60a727ddf9f05e7f44a,Continuously Indexed Domain Adaptation,1,-1
+6387a60a727ddf9f05e7f44c,SERLU,1,-1
+6387a60a727ddf9f05e7f44e,ViLBERT,4,-1

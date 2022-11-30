@@ -41,3 +41,4 @@ rclone_setup.sh
 temp/
 
 .env
+notebookcrawler/nohup.out

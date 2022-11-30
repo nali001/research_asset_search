@@ -4,6 +4,8 @@ import pandas as pd
 
 from pymongo import MongoClient
 
+import subprocess
+
 client = MongoClient('localhost', 27017) # change the ip and port to your mongo database's
 db = client['kagglecrawler']
 search_log_coll = db['search_log']
@@ -26,7 +28,7 @@ def export_from_collection(coll, file_name, timestamp):
         os.mkdir(export_dir)
     stamped_file_name = os.path.join(export_dir, name)
     df_coll_file.to_csv(stamped_file_name, index=False)
-    print(f'Exported {coll} collection to {stamped_file_name}')
+    print(f'Exported [{coll.name}] collection to {stamped_file_name}')
     return True
 
 def export_search_log(timestamp): 
@@ -49,7 +51,7 @@ def export_task_log(timestamp):
     return True 
 
 def export_central_task_log(timestamp): 
-    coll = task_log_coll
+    coll = central_task_log_coll
     file_name = os.path.join(os.getcwd(), 'DB_exports/central_task_log.csv')
     export_from_collection(coll, file_name, timestamp)
     return True 
@@ -79,13 +81,13 @@ def export_resources():
 
 def get_coll_status(): 
     print(f'-------------- Collection status ---------------')
+    print(f'central_task_log_coll: {len(list(central_task_log_coll.find()))}')
+    print(f'task_log_coll: {len(list(task_log_coll.find()))}')
     print(f'search_log_coll: {len(list(search_log_coll.find()))}')
     print(f'download_log_coll: {len(list(download_log_coll.find()))}')
     print(f'raw_notebook_coll: {len(list(raw_notebook_coll.find()))}')
-    print(f'task_log_coll: {len(list(task_log_coll.find()))}')
-    print(f'central_task_log_coll: {len(list(central_task_log_coll.find()))}')
     print(f'notebook_metadata_coll: {len(list(notebook_metadata_coll.find()))}')
-    print(f'\n-----------------------------------------------')
+    print(f'-----------------------------------------------')
 
 
 def get_task_status(): 
@@ -109,11 +111,19 @@ def real_time_status():
         get_task_status()
         time.sleep(10)
 
+def auto_save(remote_path): 
+    # Export resources to Db_exports
+    export_resources()
+    sh_file = os.path.join(os.getcwd(), 'upload_task_data.sh')
+    rc = subprocess.call(f'{sh_file} {remote_path}', shell=True)
+    print(f'Autosave to na_surf:{remote_path}:)')
+
 
 
 if __name__ == '__main__': 
-    # real_time_status()
+    real_time_status()
     get_coll_status()
     # export_resources()
+    # auto_save()
 
     
