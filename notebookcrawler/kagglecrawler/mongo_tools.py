@@ -121,7 +121,7 @@ def auto_save(remote_path):
 
 
 if __name__ == '__main__': 
-    real_time_status()
+    # real_time_status()
     get_coll_status()
     # export_resources()
     # auto_save()

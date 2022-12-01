@@ -132,6 +132,28 @@ class KaggleNotebookCrawler:
             return len(new_records)
         else: 
             return 0
+
+    def update_notebook_metadata(self, records, notebook_metadata_coll): 
+        ''' Update notebook metadata
+        '''
+        # check if the `records` is empty
+        if not records: 
+            return 0
+
+        new_records = []
+        for record in records: 
+            key = {'ref': record['ref']}
+
+            # check is the record already exists
+            if not list(notebook_metadata_coll.find(key)): 
+                new_records.append(record)
+
+        # Check if the `new_records` is empty
+        if new_records: 
+            result = notebook_metadata_coll.insert_many(new_records)
+            return len(new_records)
+        else: 
+            return 0
         
 
     def search_kernels_to_db(self, ordered_query, page_range, update=False): 
@@ -245,17 +267,18 @@ class KaggleNotebookCrawler:
                 }]
                 # Insert new raw notebooks to database if no exists
                 self.update_notebooks(raw_notebook, raw_notebook_coll)
-                self.update_notebook_metadata(metadata, notebook_metadata_coll)
+                # print(metadata)
+                self.update_notebook_metadata([metadata], notebook_metadata_coll)
                 self.update_download_log(download_log, download_log_coll)
 
             except Exception as e:
-                # print(e) 
+                print(e) 
                 print(f'[***FAIL] {kernel_ref}')
                 return False    
         return True
 
 
-    def crawl_notebooks_to_db(self, ordered_query:tuple, page_range, task_log_coll, search_log_coll, download_log_coll, raw_notebook_coll, re_search=False):
+    def crawl_notebooks_to_db(self, ordered_query:tuple, page_range, re_search=False):
         ''' Search and download notebooks for each query 
 
         The notebooks will be downloaed to database. 
@@ -263,9 +286,9 @@ class KaggleNotebookCrawler:
         Args: 
             - ordered_query: (index, query_text)
         '''
-
-        download_log_coll = self.download_log_coll
+        task_log_coll = self.task_log_coll
         search_log_coll = self.search_log_coll
+        download_log_coll = self.download_log_coll
 
         print(f'---------------- Crawl Query [{ordered_query[0]+1}]: {ordered_query[1]} ----------------') 
         task_log = []
@@ -328,12 +351,15 @@ if __name__ == '__main__':
     search_log_coll = db['search_log']
     download_log_coll = db['download_log']
     raw_notebook_coll = db['raw_notebooks']
-    notebook_metadata_coll = db['notebook_metadata_coll']
+    notebook_metadata_coll = db['notebook_metadata']
     task_log_coll = db['task_log']
     
-    QUERY_FILE = os.path.join(os.getcwd(), 'Queries/pwc_queries.csv')
+
+    # Controlling parameters
     re_search = False
-    task_number = 0
+    task_number = 0       
+    span = 100
+    task_name = 'crawl'
 
 
     # Create crawler
@@ -348,6 +374,7 @@ if __name__ == '__main__':
     
     # Initialize task_log if empty
     if not list(task_log_coll.find()): 
+        QUERY_FILE = os.path.join(os.getcwd(), 'Queries/pwc_queries.csv')
         df_pwc_queries = pd.read_csv(QUERY_FILE)
         df_tasks = pd.DataFrame(df_pwc_queries['query'])
         df_tasks['searched'] = 0
@@ -369,8 +396,10 @@ if __name__ == '__main__':
 
     
     start_time = time.time()
-    for i in range(10): 
-        # Read tasks
+    # Run 15 rounds, 
+    # for each round, only use the first `span` size of queries
+    for i in range(15): 
+        # Read the most updated tasks
         df_tasks = pd.DataFrame.from_dict(list(task_log_coll.find()))
         df_search_queries = df_tasks.loc[df_tasks['searched']==-1]
 
@@ -378,38 +407,40 @@ if __name__ == '__main__':
             df_download_queries = df_tasks.loc[(df_tasks['searched']>=0) & (df_tasks['downloaded']==-1)]
         else: 
             df_download_queries = df_tasks.loc[df_tasks['downloaded']==-1]
-
-        # Split all the queries into small sets of `span` size
-        span = 100
-        task_name = 'search'
-
+        
+        print(f'===== Round [{i}] =====')
         # --------------------- For searching ----------------------
         if task_name=='search': 
+            if df_search_queries.empty: 
+                print(f'Congratulations! search_task_{task_number} is finished.')
+                break
             candidate_queries = df_search_queries.iloc[0:span]
             ordered_queries = list(enumerate(candidate_queries['query']))
             # Create multiple processes
             num_processes = 10
+            print(f'Number of processes: {num_processes}')
             with Pool(num_processes) as p:
                 p.map(multiprocess_search, ordered_queries)
                 elapsed=int(time.time()-start_time)
                 print(f'[Summary] {(i+1)*span} queries processed!\nElapsed time: {str(timedelta(seconds=elapsed))}\n\n')
-                remote_path = f'notebook_search_docker/notebookcrawler/DB_exports/task_{task_number}/'
+                remote_path = f'notebook_search_docker/notebookcrawler/DB_exports/search_task_{task_number}/'
                 mongo_tools.auto_save(remote_path)
         # ---------------------------------------------------------
         
         # --------------------- For crawling ----------------------
         elif task_name=='crawl': 
+            if df_download_queries.empty: 
+                print(f'Congratulations! crawl_task_{task_number} is finished.')
+                break
             candidate_queries = df_download_queries.iloc[0:span]
             ordered_queries = list(enumerate(candidate_queries['query']))
             # Create multiple processes
-            num_processes = 1
+            num_processes = 10
             with Pool(num_processes) as p:
                 p.map(multiprocess_crawl, ordered_queries)
                 elapsed=int(time.time()-start_time)
                 print(f'[Summary] {(i+1)*span} queries processed!\nElapsed time: {str(timedelta(seconds=elapsed))}\n\n')
-
+                remote_path = f'notebook_search_docker/notebookcrawler/DB_exports/crawl_task_{task_number}/'
+                mongo_tools.auto_save(remote_path)
         # ---------------------------------------------------------
-
-
-     
 

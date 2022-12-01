@@ -39,7 +39,7 @@ class AuthenticatedKaggleAPI:
                 # Sleep if it is due to 409 error. 
                 if e.status==429: 
                     print(f'[ERROR!!] (429) {e.reason}')
-                    retry_after = int(e.headers['Retry-After'])*20
+                    retry_after = int(e.headers['Retry-After'])*40
                     print(f'\nRetry {attempt+1} in {retry_after} seconds zzzzZZZZZZ\n')
                     time.sleep(retry_after)
                     continue
