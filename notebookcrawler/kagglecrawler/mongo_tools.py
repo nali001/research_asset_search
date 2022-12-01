@@ -110,8 +110,8 @@ def get_task_status():
 
     print(f'\n>>> Notebook <<<')
     print(f'seached notebooks: {len(list(search_log_coll.find()))}')
-    print(f'download notebooks: {len(list(raw_notebook_coll.find()))}')
-    print(f'download metadata: {len(list(notebook_metadata_coll.find()))}')
+    print(f'downloaded notebooks: {len(list(raw_notebook_coll.find()))}')
+    print(f'downloaded metadata: {len(list(notebook_metadata_coll.find()))}')
     print(f'------------------------------------------------')
 
 def real_time_status(): 
@@ -132,6 +132,5 @@ if __name__ == '__main__':
     real_time_status()
     # get_coll_status()
     # export_resources()
-    # auto_save()
 
     

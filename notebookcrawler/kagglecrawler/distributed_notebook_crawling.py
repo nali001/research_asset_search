@@ -264,7 +264,7 @@ class KaggleNotebookCrawler:
                     'kernel_ref': metadata['ref']
                 }]
             except Exception as e:
-                print(e) 
+                print(f'[ERRORRRRRRRRR]\n{e}') 
                 print(f'[***FAIL] {kernel_ref}')
                 return False    
         
@@ -294,6 +294,7 @@ class KaggleNotebookCrawler:
 
         print(f'---------------- Crawl Query [{ordered_query[0]+1}]: {ordered_query[1]} ----------------') 
         task_log = []
+        records = []
         query = ordered_query[1]
         min_records = 1
         key = {'query': query}
@@ -328,7 +329,7 @@ class KaggleNotebookCrawler:
 
 
             for record in records: 
-                query = record['query'], 
+                query = record['query']
                 kernel_ref = record['kernel_ref']
                 self.download_kernel_to_db(query, kernel_ref)
 
@@ -383,17 +384,18 @@ if __name__ == '__main__':
         df_tasks['downloaded'] = 0
         records = df_tasks.to_dict('records')
         crawler.add_tasks(records, task_log_coll)
-
-    def multiprocess_crawl(ordered_query):
-        # Sleep for random seconds to avoid request flooding.  
-        time.sleep(np.random.randint(1, 10))
-        result = crawler.crawl_notebooks_to_db(ordered_query, page_range=10, re_search=re_search)
-        return result
+    
 
     def multiprocess_search(ordered_query):
         # Sleep for random seconds to avoid request flooding.  
         time.sleep(np.random.randint(1, 7))
         result = crawler.search_kernels_to_db(ordered_query, page_range=10, update=False)
+        return result
+
+    def multiprocess_crawl(ordered_query):
+        # Sleep for random seconds to avoid request flooding.  
+        time.sleep(np.random.randint(1, 10))
+        result = crawler.crawl_notebooks_to_db(ordered_query, page_range=10, re_search=re_search)
         return result
 
     
