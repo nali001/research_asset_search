@@ -99,7 +99,8 @@ def get_task_status():
     
     print(f'\n----------------- Task status -----------------')
     print(f'seached notebooks: {len(list(search_log_coll.find()))}')
-    print(f'download notebooks: {len(list(download_log_coll.find()))}')
+    print(f'download notebooks: {len(list(raw_notebook_coll.find()))}')
+    print(f'download metadata: {len(list(notebook_metadata_coll.find()))}')
     print(f'un_searched query: {len(un_searched)}')
     print(f'un_downloaded query: {len(un_downloaded)}')
     print(f'zero_searched query: {len(zero_searched)}')
@@ -121,8 +122,8 @@ def auto_save(remote_path):
 
 
 if __name__ == '__main__': 
-    # real_time_status()
-    get_coll_status()
+    real_time_status()
+    # get_coll_status()
     # export_resources()
     # auto_save()
 

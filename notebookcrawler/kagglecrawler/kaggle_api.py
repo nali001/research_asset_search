@@ -33,6 +33,10 @@ class AuthenticatedKaggleAPI:
             try: 
                 response = kaggle.api.process_response(
                     kaggle.api.kernel_pull_with_http_info(owner_slug, kernel_slug))
+
+                # Add sleep here to alleviate `TooMany Requests`` error
+                time.sleep(5)
+                
             # Capture the customized Exception. 
             # Execption definition: https://github.com/Kaggle/kaggle-api/blob/49057db362903d158b1e71a43d888b981dd27159/kaggle/rest.py#L311
             except kaggle.rest.ApiException as e:  

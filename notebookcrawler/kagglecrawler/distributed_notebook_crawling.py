@@ -231,6 +231,9 @@ class KaggleNotebookCrawler:
             - buddhiniw_breast-cancer-prediction.json
         '''
 
+        raw_notebook = []
+        metadata = {}
+        download_log = []
         raw_notebook_coll = self.raw_notebook_coll
         notebook_metadata_coll = self.notebook_metadata_coll
         download_log_coll = self.download_log_coll
@@ -245,11 +248,6 @@ class KaggleNotebookCrawler:
             try: 
                 print(f'[Pulling] {kernel_ref}')
                 response = self.kaggle_api.download_kernel(kernel_ref)
-                # # If 429 Error occurs
-                # if 'status' in response.keys():
-                #     if response['status']==429:  
-                #         return False
-
                 metadata = response['metadata']
                 blob = response['blob']
                 raw_notebook = [{
@@ -265,16 +263,20 @@ class KaggleNotebookCrawler:
                     'title': metadata['title'], 
                     'kernel_ref': metadata['ref']
                 }]
-                # Insert new raw notebooks to database if no exists
-                self.update_notebooks(raw_notebook, raw_notebook_coll)
-                # print(metadata)
-                self.update_notebook_metadata([metadata], notebook_metadata_coll)
-                self.update_download_log(download_log, download_log_coll)
-
             except Exception as e:
                 print(e) 
                 print(f'[***FAIL] {kernel_ref}')
                 return False    
+        
+        # Insert new raw notebooks to database if no exists
+        if raw_notebook: 
+            self.update_notebooks(raw_notebook, raw_notebook_coll)
+        
+        if metadata: # print(metadata)
+            self.update_notebook_metadata([metadata], notebook_metadata_coll)
+        
+        if download_log: 
+            self.update_download_log(download_log, download_log_coll)
         return True
 
 
@@ -384,7 +386,7 @@ if __name__ == '__main__':
 
     def multiprocess_crawl(ordered_query):
         # Sleep for random seconds to avoid request flooding.  
-        # time.sleep(np.random.randint(1, 7))
+        time.sleep(np.random.randint(1, 10))
         result = crawler.crawl_notebooks_to_db(ordered_query, page_range=10, re_search=re_search)
         return result
 
