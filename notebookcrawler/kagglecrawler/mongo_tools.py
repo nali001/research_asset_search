@@ -92,19 +92,26 @@ def get_coll_status():
 
 def get_task_status(): 
     df_tasks = pd.DataFrame.from_dict(list(task_log_coll.find()))
+    searched = df_tasks.loc[df_tasks.searched>=0]
+    downloaded = df_tasks.loc[df_tasks.downloaded>=0]
     un_searched = df_tasks.loc[df_tasks.searched==-1]
     un_downloaded = df_tasks.loc[df_tasks.downloaded==-1]
     zero_searched = df_tasks.loc[df_tasks.searched==0]
     zero_downloaded = df_tasks.loc[df_tasks.downloaded==0]
     
     print(f'\n----------------- Task status -----------------')
+    print(f'>>> Query <<<')
+    print(f'searched: {len(searched)}')
+    print(f'un_searched: {len(un_searched)}')
+    print(f'zero_searched: {len(zero_searched)}')
+    print(f'downloaded: {len(downloaded)}')
+    print(f'un_downloaded: {len(un_downloaded)}')
+    print(f'zero_downloaded: {len(zero_downloaded)}')
+
+    print(f'\n>>> Notebook <<<')
     print(f'seached notebooks: {len(list(search_log_coll.find()))}')
     print(f'download notebooks: {len(list(raw_notebook_coll.find()))}')
     print(f'download metadata: {len(list(notebook_metadata_coll.find()))}')
-    print(f'un_searched query: {len(un_searched)}')
-    print(f'un_downloaded query: {len(un_downloaded)}')
-    print(f'zero_searched query: {len(zero_searched)}')
-    print(f'zero_downloaded query: {len(zero_downloaded)}')
     print(f'------------------------------------------------')
 
 def real_time_status(): 

@@ -6,7 +6,7 @@ import pandas as pd
 from pymongo import MongoClient
 
 
-class TaskSplitter: 
+class TaskDistributor: 
     def __init__(self, **kwargs): 
         for key, value in kwargs.items():
             setattr(self, key, value)
@@ -107,18 +107,18 @@ if __name__ == '__main__':
         'central_task_log_coll': central_task_log_coll, 
     }
 
-    task_splitter = TaskSplitter(**kwargs)
+    task_distributor = TaskDistributor(**kwargs)
     num_tasks = 10
     task_path = os.path.join(os.getcwd(), 'Tasks')
 
     # ------------------- Split search task ------------------ 
-    # task_splitter.split_search_tasks(num_tasks, task_path)
+    # task_distributor.split_search_tasks(num_tasks, task_path)
 
     # ------------------- Split crawl task ------------------ 
-    task_splitter.split_crawl_tasks(num_tasks, task_path)
+    # task_distributor.split_crawl_tasks(num_tasks, task_path)
 
     # ------------------- Load task ------------------- 
     # task_file = os.path.join(task_path, 'search_task_0.csv')
-    # task_splitter.load_tasks(task_file)
+    # task_distributor.load_tasks(task_file)
 
 
