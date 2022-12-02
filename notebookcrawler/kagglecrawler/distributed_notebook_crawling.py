@@ -439,7 +439,7 @@ if __name__ == '__main__':
             candidate_queries = df_download_queries.iloc[0:span]
             ordered_queries = list(enumerate(candidate_queries['query']))
             # Create multiple processes
-            num_processes = 10
+            num_processes = 5
             with Pool(num_processes) as p:
                 p.map(multiprocess_crawl, ordered_queries)
                 elapsed=int(time.time()-start_time)

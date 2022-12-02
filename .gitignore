@@ -7,6 +7,7 @@ search_engine_app/notebooksearch/Notebooks/*
 
 search_engine_app/notebooksearch/Raw_notebooks/Github/*
 search_engine_app/notebooksearch/Raw_notebooks/Kaggle/*
+search_engine_app/notebooksearch/Raw_notebooks/PWC/*
 
 sample.ipynb
 
@@ -41,4 +42,4 @@ rclone_setup.sh
 temp/
 
 .env
-notebookcrawler/nohup.out
+nohup.out
