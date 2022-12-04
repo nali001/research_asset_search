@@ -62,12 +62,10 @@ class PwcResource:
 
 class KaggleNotebookCrawler: 
     METADATA_FILE_NAME = "kernel-metadata.json"
-
-    def __init__(self, df_queries, KERNEL_DOWNLOAD_PATH, KAGGLE_DOWNLOAD_LOG_FILE, KAGGLE_SEARCH_LOG_FILE):
-        self.KERNEL_DOWNLOAD_PATH = KERNEL_DOWNLOAD_PATH
-        self.KAGGLE_DOWNLOAD_LOG_FILE = KAGGLE_DOWNLOAD_LOG_FILE
-        self.KAGGLE_SEARCH_LOG_FILE = KAGGLE_SEARCH_LOG_FILE
-        self.df_queries = df_queries    
+    def __init__(self, df_queries, **kwargs):
+        self.df_queries = df_queries
+        for key, value in kwargs.items(): 
+            setattr(self, key, value) 
 
     def search_kernels(self, query, page_range): 
         ''' Search Kaggle kernels using given query
@@ -106,6 +104,7 @@ class KaggleNotebookCrawler:
         
         Return: 
             - Boolean: Only True when the file is correctly downloaded or already exists. 
+                If False, there are usaully something wrong with the Kaggle server or Kaggle API. 
 
 
         The notebook will be downloaded as 'dirname_basename' of `kernel_ref`. 
@@ -115,7 +114,7 @@ class KaggleNotebookCrawler:
             - buddhiniw_breast-cancer-prediction.ipynb
             - buddhiniw_breast-cancer-prediction.json
         '''
-        download_path = self.KERNEL_DOWNLOAD_PATH
+        download_path = self.DOWNLOAD_PATH
         try: 
             file_name = os.path.dirname(kernel_ref) + '_' + os.path.basename(kernel_ref)
         except Exception as e: 
@@ -161,7 +160,7 @@ class KaggleNotebookCrawler:
         return True
 
     def file_exists(self, file_name): 
-        file_path = os.path.join(self.KERNEL_DOWNLOAD_PATH, file_name) + ".ipynb" 
+        file_path = os.path.join(self.DOWNLOAD_PATH, file_name) + ".ipynb" 
         if os.path.exists(file_path): 
             return True
         else: 
@@ -194,6 +193,22 @@ class KaggleNotebookCrawler:
         new_records.reset_index(inplace=True, drop=True)
         return new_records
 
+    def update_log(self, df, log_file):
+        ''' Insert records that are not in the log file. ''' 
+        try: 
+            df_log = pd.read_csv(log_file)
+        except Exception as e:
+            print(e) 
+            df_log = pd.DataFrame(columns=df.columns)
+
+        if df.empty: 
+            df_all = df_log
+        else: 
+            df_all = df_log.merge(df, how='outer')
+        df_all.drop_duplicates(inplace=True)
+
+        df_all.to_csv(log_file, index=False)
+        return df_all
 
     # memory_profile decorator
     @profile
@@ -201,33 +216,48 @@ class KaggleNotebookCrawler:
         '''' Search for notebooks '''
         df_queries = self.df_queries
         # Read notebook search logs and filter out the new notbooks to download
-        new_queries = self.check_log(df_queries, self.KAGGLE_SEARCH_LOG_FILE)
+        temp = self.check_log(df_queries, self.SEARCH_LOG_FILE)
+        # Then check the no record log, not to search for queries that do not have records
+        new_queries = self.check_log(temp, self.SEARCH_NO_RECORD_FILE)
         print(f'--------------------------- {len(new_queries)} new Queries --------------------------------')
         print(f'{new_queries}')
         print(f'----------------------------------------------------------------------------\n\n')
 
         df_notebooks = pd.DataFrame()
+        df_no_records = pd.DataFrame()
         # Search notebooks for each query
         start = time.time()
         for i, query in enumerate(new_queries['query']): 
             print(f'---------------- Query [{i+1}]: {query} ----------------')
-            # To save the memory, we write the searching results to disk for every 10 queries 
             df_notebooks = pd.concat([df_notebooks, self.search_kernels(query, page_range)])
             df_notebooks.drop_duplicates(inplace=True)
-            if (i+1)%10 == 0 or i+1 == len(new_queries): 
-                # Update notebook search logs
-                try: 
-                    search_logs = pd.read_csv(self.KAGGLE_SEARCH_LOG_FILE)
-                except Exception as e:
-                    print(e) 
-                    search_logs = pd.DataFrame(columns=df_notebooks.columns)
+            
+            if df_notebooks.empty: 
+                no_record = pd.DataFrame.from_dict([{
+                    'query': query, 
+                    'no_record': True
+                    }])
+                df_no_records = pd.concat([df_no_records, no_record])
 
-                if df_notebooks.empty: 
-                    search_all = search_logs
-                else: 
-                    search_all = search_logs.merge(df_notebooks, how='outer')
-                search_all.drop_duplicates(inplace=True)
-                search_all.to_csv(self.KAGGLE_SEARCH_LOG_FILE, index=False)
+            # To save the memory, we write the searching results to disk for every 10 queries 
+            if (i+1)%10 == 0 or i+1 == len(new_queries): 
+                self.update_log(df_no_records, self.SEARCH_NO_RECORD_FILE)
+                search_all = self.update_log(df_notebooks, self.SEARCH_LOG_FILE)
+                # Update notebook search logs
+                # try: 
+                #     search_logs = pd.read_csv(self.SEARCH_LOG_FILE)
+                # except Exception as e:
+                #     print(e) 
+                #     search_logs = pd.DataFrame(columns=df_notebooks.columns)
+
+                # if df_notebooks.empty: 
+                #     search_all = search_logs
+                # else: 
+                #     search_all = search_logs.merge(df_notebooks, how='outer')
+                # search_all.drop_duplicates(inplace=True)
+
+                # search_all.to_csv(self.SEARCH_LOG_FILE, index=False)
+
                 end = time.time()
                 print(f'>>>>> Saving {len(df_notebooks)} searching results to disk...')
                 print(f'>>>>> Time elapsed: {str(timedelta(seconds=int(end-start)))}\n\n')
@@ -240,7 +270,9 @@ class KaggleNotebookCrawler:
     def bulk_download(self, df_notebooks): 
         ''' Download a bunch of notebooks specified inside `df_notebooks`'''
         # Read notebook download logs and filter out the new notbooks to download
-        new_notebooks = self.check_log(df_notebooks, self.KAGGLE_DOWNLOAD_LOG_FILE)
+        temp = self.check_log(df_notebooks, self.DOWNLOAD_LOG_FILE)
+        # Then check the no record logs to eliminate kernel_ref that has been failed to download. 
+        new_notebooks = self.check_log(temp, self.DOWNLOAD_NO_RECORD_FILE)
         print(f'--------------------------- {len(new_notebooks)} new Notebooks --------------------------------')
         print(f'{new_notebooks}')
         print(f'----------------------------------------------------------------------------\n\n')
@@ -248,30 +280,40 @@ class KaggleNotebookCrawler:
         # Download the notebooks and keep track of downloaded notebooks 
         start = time.time()
         downloaded_notebooks = pd.DataFrame()
+        df_no_records = pd.DataFrame()
         print(f'------------------ {0} - {49}  notebooks -------------------')
         for j in range(len(new_notebooks)): 
             # Download the notebooks
             kernel_ref = new_notebooks.iloc[j]['kernel_ref']
             if self.download_kernel(kernel_ref):
                 downloaded_notebooks = pd.concat([downloaded_notebooks, new_notebooks.iloc[[j]]])
+            else:  
+                no_record = pd.DataFrame.from_dict([{
+                    'kernel_ref': kernel_ref, 
+                    'no_record': True
+                    }])
+                df_no_records = pd.concat([df_no_records, no_record])
+
 
             if (j+1)%50==0 or j+1==len(new_notebooks): 
                 # Update notebook download logs for every 100 notebooks
-                try: 
-                    download_logs = pd.read_csv(self.KAGGLE_DOWNLOAD_LOG_FILE)
-                except Exception as e:
-                    print(e) 
-                    download_logs = pd.DataFrame(columns=downloaded_notebooks.columns)
+                self.update_log(df_no_records, self.DOWNLOAD_NO_RECORD_FILE)
+                download_all = self.update_log(downloaded_notebooks, self.DOWNLOAD_LOG_FILE)
+                # try: 
+                #     download_logs = pd.read_csv(self.DOWNLOAD_LOG_FILE)
+                # except Exception as e:
+                #     print(e) 
+                #     download_logs = pd.DataFrame(columns=downloaded_notebooks.columns)
 
-                print(f'downloaded_notebooks.empty: {downloaded_notebooks.empty}')
+                # print(f'downloaded_notebooks.empty: {downloaded_notebooks.empty}')
                 
-                if downloaded_notebooks.empty: 
-                    download_all = download_logs
-                else: 
-                    download_all = download_logs.merge(downloaded_notebooks, how='outer')
-                download_all.drop_duplicates(inplace=True)
-                # Save notebook names, IDs etc to .csv file. 
-                download_all.to_csv(self.KAGGLE_DOWNLOAD_LOG_FILE, index=False)
+                # if downloaded_notebooks.empty: 
+                #     download_all = download_logs
+                # else: 
+                #     download_all = download_logs.merge(downloaded_notebooks, how='outer')
+                # download_all.drop_duplicates(inplace=True)
+                # # Save notebook names, IDs etc to .csv file. 
+                # download_all.to_csv(self.DOWNLOAD_LOG_FILE, index=False)
                 end = time.time()
                 print(f'\n\n>>>>> Saving {len(downloaded_notebooks)} downloaded results to disk...')
                 print(f'>>>>> Time elapsed: {str(timedelta(seconds=int(end-start)))}\n\n')
@@ -291,7 +333,7 @@ class KaggleNotebookCrawler:
             df_notebooks = self.bulk_search(page_range)
         else: 
             try: 
-                df_notebooks = pd.read_csv(self.KAGGLE_SEARCH_LOG_FILE)
+                df_notebooks = pd.read_csv(self.SEARCH_LOG_FILE)
             except Exception as e:
                 print(f'[SearchLog ERROR(self-defined)] There is no search log file specified!') 
         
@@ -327,17 +369,26 @@ def crawl_kaggle_notebooks(QUERY_FILE, page_range, task=None, re_search=False):
         print(f'Please navigate to `search_engine_app` directory and run: \n `python -m notebooksearch.notebook_crawling`\n')
         return False
 
-    KERNEL_DOWNLOAD_PATH = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/PWC/')
-    KAGGLE_DOWNLOAD_LOG_FILE = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/logs/pwc_download_log.csv')
-    KAGGLE_SEARCH_LOG_FILE = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/logs/pwc_search_log.csv')
+    DOWNLOAD_PATH = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/PWC/')
+    DOWNLOAD_LOG_FILE = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/logs/pwc_download_log.csv')
+    SEARCH_LOG_FILE = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/logs/pwc_search_log.csv')
+    SEARCH_NO_RECORD_FILE = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/logs/pwc_search_no_record.csv')
+    DOWNLOAD_NO_RECORD_FILE = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/logs/pwc_download_no_record.csv')
 
     # Read queries
     df_queries = pd.DataFrame(pd.read_csv(QUERY_FILE)['query'])
     # queries = ['wsi']
     # df_queries = pd.DataFrame(queries, columns= ['queries'])
     # print(df_queries)
+    kwargs = {
+        'DOWNLOAD_PATH': DOWNLOAD_PATH, 
+        'DOWNLOAD_LOG_FILE': DOWNLOAD_LOG_FILE, 
+        'SEARCH_LOG_FILE': SEARCH_LOG_FILE, 
+        'SEARCH_NO_RECORD_FILE': SEARCH_NO_RECORD_FILE, 
+        'DOWNLOAD_NO_RECORD_FILE': DOWNLOAD_NO_RECORD_FILE
+    }
+    crawler = KaggleNotebookCrawler(df_queries, **kwargs)
 
-    crawler = KaggleNotebookCrawler(df_queries, KERNEL_DOWNLOAD_PATH, KAGGLE_DOWNLOAD_LOG_FILE, KAGGLE_SEARCH_LOG_FILE)
 
     if task=='search': 
         result = crawler.bulk_search(page_range=page_range)
@@ -354,7 +405,7 @@ def main():
     # generate_pwc_queries(PWC_PATH)
     
     QUERY_FILE = os.path.join(os.getcwd(), 'notebooksearch/Queries/search_task_1.csv')
-    crawl_kaggle_notebooks(QUERY_FILE, page_range=10, task='crawl', re_search=False)
+    crawl_kaggle_notebooks(QUERY_FILE, page_range=10, task='search', re_search=False)
     return True
 
 if __name__ == '__main__':
