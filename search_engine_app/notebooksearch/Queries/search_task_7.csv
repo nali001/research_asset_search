@@ -1,0 +1,1260 @@
+_id,query,searched,downloaded
+6387645e727ddf9f05e5c8c9,SIP,-1,-1
+6387645e727ddf9f05e5c8cb,Abductive Reasoning in narrative Text,-1,-1
+6387645e727ddf9f05e5c8cd,KnowIT VQA,-1,-1
+6387645e727ddf9f05e5c8cf,SFpark,-1,-1
+6387645e727ddf9f05e5c8d1,30M Factoid Question-Answer Corpus,-1,-1
+6387645e727ddf9f05e5c8d3,CoVERT,-1,-1
+6387645e727ddf9f05e5c8d5,MKQA,-1,-1
+6387645e727ddf9f05e5c8d7,Treutlein et al,-1,-1
+6387645e727ddf9f05e5c8d9,Room-to-Room,-1,-1
+6387645e727ddf9f05e5c8db,Natural Language Decathlon Benchmark,-1,-1
+6387645e727ddf9f05e5c8dd,KITTI-Masks,-1,-1
+6387645e727ddf9f05e5c8df,P-DukeMTMC-reID,-1,-1
+6387645e727ddf9f05e5c8e1,Taiwanese Across Taiwan,-1,-1
+6387645e727ddf9f05e5c8e3,Unpaired haze images,-1,-1
+6387645e727ddf9f05e5c8e5,NATS-Bench,-1,-1
+6387645e727ddf9f05e5c8e7,EHR-Rel,-1,-1
+6387645e727ddf9f05e5c8e9,Comic2k,-1,-1
+6387645e727ddf9f05e5c8eb,Medical Question Pairs (MQP) Dataset,-1,-1
+6387645e727ddf9f05e5c8ed,MedVidCL (Medical Video Classification),-1,-1
+6387645e727ddf9f05e5c8f0,Minecraft House,-1,-1
+6387645e727ddf9f05e5c8f2,Illness-dataset,-1,-1
+6387645e727ddf9f05e5c8f4,Informatics for Integrating Biology and the Bedside (i2b2) Project — De-identification Dataset,-1,-1
+6387645e727ddf9f05e5c8f6,AM2iCo,-1,-1
+6387645e727ddf9f05e5c8f8,Zooniverse,-1,-1
+6387645e727ddf9f05e5c8fa,DIHARD II,-1,-1
+6387645e727ddf9f05e5c8fc,ParallelCorpus-Python,-1,-1
+6387645e727ddf9f05e5c8fe,Biased-Cars,-1,-1
+6387645e727ddf9f05e5c900,Darija Open Dataset,-1,-1
+6387645e727ddf9f05e5c902,Speech Commands,-1,-1
+6387645e727ddf9f05e5c904,SPACE,-1,-1
+6387645e727ddf9f05e5c906,Separated COCO,-1,-1
+6387645e727ddf9f05e5c908,Finnish News Corpus for Named Entity Recognition,-1,-1
+6387645e727ddf9f05e5c90a,CADB,-1,-1
+6387645e727ddf9f05e5c90c,Cross-institution Male Pelvic Structures,-1,-1
+6387645e727ddf9f05e5c90e,VISOR,-1,-1
+6387645e727ddf9f05e5c910,Ultra-processed Food Dataset,-1,-1
+6387645e727ddf9f05e5c912,mini-Imagenet,-1,-1
+6387645e727ddf9f05e5c914,HuGaDB,-1,-1
+6387645e727ddf9f05e5c916,SinGAN-Seg-polyps,-1,-1
+6387645e727ddf9f05e5c918,TCLD,-1,-1
+6387645e727ddf9f05e5c91a,Official dataset of the SIIM-ISIC Melanoma Classification Challenge 2020,-1,-1
+6387645e727ddf9f05e5c91c,DACT,-1,-1
+6387645e727ddf9f05e5c91e,Laboratory for Image & Video Engineering,-1,-1
+6387645e727ddf9f05e5c920,Definite Pronoun Resolution Dataset,-1,-1
+6387645e727ddf9f05e5c922,ionosphere,-1,-1
+6387645e727ddf9f05e5c924,MSSD,-1,-1
+6387645e727ddf9f05e5c926,HuTu 80,-1,-1
+6387645e727ddf9f05e5c928,MMDB,-1,-1
+6387645e727ddf9f05e5c92a,VisDrone,-1,-1
+6387645e727ddf9f05e5c92c,GVGAI,-1,-1
+6387645e727ddf9f05e5c92e,Human-Annotated Disaster Incidents Data,-1,-1
+6387645e727ddf9f05e5c930,BinKit,-1,-1
+6387645e727ddf9f05e5c932,PROST,-1,-1
+6387645e727ddf9f05e5c934,Kosp2e,-1,-1
+6387645e727ddf9f05e5c936,261 Hours – Japanese Speech Data by Mobile Phone,-1,-1
+6387645e727ddf9f05e5c938,UDIVA,-1,-1
+6387645e727ddf9f05e5c93a,Creative Style Responses,-1,-1
+6387645e727ddf9f05e5c93c,CamGes,-1,-1
+6387645e727ddf9f05e5c93e,AdobeIndoorNav,-1,-1
+6387645e727ddf9f05e5c940,Reddit Corpus,-1,-1
+6387645e727ddf9f05e5c942,AraMeter,-1,-1
+6387645e727ddf9f05e5c944,3D-FUTURE,-1,-1
+6387645e727ddf9f05e5c946,Darpa OpTC,-1,-1
+6387645e727ddf9f05e5c948,Aerial Image Dataset,-1,-1
+6387645e727ddf9f05e5c94a,CMD,-1,-1
+6387645e727ddf9f05e5c94d,Odd-One-Out Dataset,-1,-1
+6387645e727ddf9f05e5c94f,Electricity Transformer Temperature,-1,-1
+6387645e727ddf9f05e5c951,CarFusion,-1,-1
+6387645e727ddf9f05e5c954,ConvoSumm,-1,-1
+6387645e727ddf9f05e5c956,176 Hours - Suzhou Dialect Speech Data by Mobile Phone,-1,-1
+6387645e727ddf9f05e5c958,Incomplete Information Reading Comprehension,-1,-1
+6387645e727ddf9f05e5c95a,SketchHairSalon,-1,-1
+6387645e727ddf9f05e5c95c,Curiosity,-1,-1
+6387645e727ddf9f05e5c95e,THÖR,-1,-1
+6387645e727ddf9f05e5c960,Gibson Environment,-1,-1
+6387645e727ddf9f05e5c962,Barcelona Images for Perceptual Edge Detection,-1,-1
+6387645e727ddf9f05e5c964,Multiple Testing and Variable Selection along Least Angle Regression's path,-1,-1
+6387645e727ddf9f05e5c966,BillSum,-1,-1
+6387645e727ddf9f05e5c968,Kitchen Scenes,-1,-1
+6387645e727ddf9f05e5c96a,IFCNet,-1,-1
+6387645e727ddf9f05e5c96c,Nottingham,-1,-1
+6387645e727ddf9f05e5c96e,Russian Reading Comprehension with Commonsense Reasoning,-1,-1
+6387645e727ddf9f05e5c970,Retinal Microsurgery,-1,-1
+6387645e727ddf9f05e5c972,DAQUAR,-1,-1
+6387645e727ddf9f05e5c974,Tennessee Eastman Process,-1,-1
+6387645e727ddf9f05e5c976,Soil and Plant X-ray CT data with semantic annotations,-1,-1
+6387645e727ddf9f05e5c978,Cuff-Less Blood Pressure Estimation. Pre-processed and cleaned vital signals for cuff-less BP estimation.,-1,-1
+6387645e727ddf9f05e5c97a,ArtBench-10 (32x32),-1,-1
+6387645e727ddf9f05e5c97c,SceneNet RGB-D,-1,-1
+6387645e727ddf9f05e5c97e,Stanford Background,-1,-1
+6387645e727ddf9f05e5c980,Cross-Dataset Testbed,-1,-1
+6387645e727ddf9f05e5c982,The 19 landmark variant of AFLW.,-1,-1
+6387645e727ddf9f05e5c984,UESTC RGB-D Varying-view action database,-1,-1
+6387645e727ddf9f05e5c986,Repetitive Action Counting Dataset,-1,-1
+6387645e727ddf9f05e5c988,CATER,-1,-1
+6387645e727ddf9f05e5c98a,Arabic Sign Language Dataset,-1,-1
+6387645e727ddf9f05e5c98c,arXiv Astro Physics,-1,-1
+6387645e727ddf9f05e5c98e,Freesound Database 50K,-1,-1
+6387645e727ddf9f05e5c990,PMIndia,-1,-1
+6387645e727ddf9f05e5c992,PubTabNet,-1,-1
+6387645e727ddf9f05e5c994,Panoramic Image Database,-1,-1
+6387645e727ddf9f05e5c996,ROBIN Technical Acquisition Speech Corpus,-1,-1
+6387645e727ddf9f05e5c998,CI-MNIST,-1,-1
+6387645e727ddf9f05e5c99a,Geometric shapes Bimodal Dataset,-1,-1
+6387645e727ddf9f05e5c99c,Scruples,-1,-1
+6387645f727ddf9f05e5c99e,ScenicOrNot,-1,-1
+6387645f727ddf9f05e5c9a0,BDD100K-Subsets,-1,-1
+6387645f727ddf9f05e5c9a2,SPMRL Hebrew segmentation data,-1,-1
+6387645f727ddf9f05e5c9a4,TbD,-1,-1
+6387645f727ddf9f05e5c9a6,FIQA,-1,-1
+6387645f727ddf9f05e5c9a8,Clear Weather,-1,-1
+6387645f727ddf9f05e5c9aa,WikiSum,-1,-1
+6387645f727ddf9f05e5c9ac,Monocular Estimation of Body Orientation In the Wild,-1,-1
+6387645f727ddf9f05e5c9ae,Wider Facial Landmarks in the Wild,-1,-1
+6387645f727ddf9f05e5c9b0,InstaFake,-1,-1
+6387645f727ddf9f05e5c9b2,MovingFashion,-1,-1
+6387645f727ddf9f05e5c9b4,WikiTables-TURL,-1,-1
+6387645f727ddf9f05e5c9b6,Saint Gall,-1,-1
+6387645f727ddf9f05e5c9b8,DPB-5L (French),-1,-1
+6387645f727ddf9f05e5c9ba,BABEL Project,-1,-1
+6387645f727ddf9f05e5c9bc,Dataset: Relationship extraction for knowledge graph creation from biomedical literature (Gene-Disease relationships),-1,-1
+6387645f727ddf9f05e5c9be,International Survey on Emotion Antecedents and Reactions,-1,-1
+6387645f727ddf9f05e5c9c0,DoodleUINet,-1,-1
+6387645f727ddf9f05e5c9c2,UNITOPATHO,-1,-1
+6387645f727ddf9f05e5c9c4,M-VAD Names,-1,-1
+6387645f727ddf9f05e5c9c6,Multinational Structured Address Dataset,-1,-1
+6387645f727ddf9f05e5c9c8,Robotic Interestingness: A Dataset to Push the Limits of Online Visual Interesting Scene Prediction,-1,-1
+6387645f727ddf9f05e5c9ca,Annotated Germs for Automated Recognition,-1,-1
+6387645f727ddf9f05e5c9cc,DensePASS,-1,-1
+6387645f727ddf9f05e5c9ce,PANC,-1,-1
+6387645f727ddf9f05e5c9d0,MULTEXT-East,-1,-1
+6387645f727ddf9f05e5c9d2,520 Hours - French Speaking English Speech Data by Mobile Phone,-1,-1
+6387645f727ddf9f05e5c9d4,Visual Discriminative Question Generation,-1,-1
+6387645f727ddf9f05e5c9d6,DuoRC,-1,-1
+6387645f727ddf9f05e5c9d8,National Consortium on Alcohol and Neurodevelopment in Adolescence,-1,-1
+6387645f727ddf9f05e5c9da,Moléne Dataset,-1,-1
+6387645f727ddf9f05e5c9dc,CC12M,-1,-1
+6387645f727ddf9f05e5c9de,UQ NIDS Datasets (FlowMeter Format),-1,-1
+6387645f727ddf9f05e5c9e0,BIG-bench,-1,-1
+6387645f727ddf9f05e5c9e2,YFCC100M,-1,-1
+6387645f727ddf9f05e5c9e4,EurekaAlert,-1,-1
+6387645f727ddf9f05e5c9e6,DF20 - Mini,-1,-1
+6387645f727ddf9f05e5c9e8,Europarl-ST,-1,-1
+6387645f727ddf9f05e5c9ea,HoMG,-1,-1
+6387645f727ddf9f05e5c9ec,IoT Inspector,-1,-1
+6387645f727ddf9f05e5c9ee,NAB,-1,-1
+6387645f727ddf9f05e5c9f0,ARCT,-1,-1
+6387645f727ddf9f05e5c9f2,DDRel,-1,-1
+6387645f727ddf9f05e5c9f4,2WikiMultiHopQA,-1,-1
+6387645f727ddf9f05e5c9f6,QUASAR-T,-1,-1
+6387645f727ddf9f05e5c9f8,MEDIC,-1,-1
+6387645f727ddf9f05e5c9fa,RadarScenes,-1,-1
+6387645f727ddf9f05e5c9fc,Canadian Adverse Driving Conditions,-1,-1
+6387645f727ddf9f05e5c9fe,X-Fact,-1,-1
+6387645f727ddf9f05e5ca00,Synthesized Lakh Dataset,-1,-1
+6387645f727ddf9f05e5ca02,Wikidated 1.0,-1,-1
+6387645f727ddf9f05e5ca04,Actor-identified Spatiotemporal Action Detection,-1,-1
+6387645f727ddf9f05e5ca06,Instructional-DT (Instr-DT),-1,-1
+6387645f727ddf9f05e5ca08,ImageNet-to-Bing,-1,-1
+6387645f727ddf9f05e5ca0a,Cry Wolf,-1,-1
+6387645f727ddf9f05e5ca0c,20-MAD,-1,-1
+6387645f727ddf9f05e5ca0e,Application-oriented License Plate,-1,-1
+6387645f727ddf9f05e5ca10,UFPR-AMR,-1,-1
+6387645f727ddf9f05e5ca12,SMAC,-1,-1
+6387645f727ddf9f05e5ca14,Maybe Ambiguous Pronoun,-1,-1
+6387645f727ddf9f05e5ca16,"1,003 People - Emotional Video Data",-1,-1
+6387645f727ddf9f05e5ca18,ABCD,-1,-1
+6387645f727ddf9f05e5ca1a,trek05-1,-1,-1
+6387645f727ddf9f05e5ca1c,Joint Attention in Autonomous Driving,-1,-1
+6387645f727ddf9f05e5ca1e,SportsSum,-1,-1
+6387645f727ddf9f05e5ca20,iLur News Texts,-1,-1
+6387645f727ddf9f05e5ca22,Gumar Corpus,-1,-1
+6387645f727ddf9f05e5ca24,Congolese Swahili – French parallel text corpora,-1,-1
+6387645f727ddf9f05e5ca26,Ukiyo-e Faces,-1,-1
+6387645f727ddf9f05e5ca28,US-Accidents,-1,-1
+6387645f727ddf9f05e5ca2a,SWAT A7,-1,-1
+6387645f727ddf9f05e5ca2c,OVIS,-1,-1
+6387645f727ddf9f05e5ca2e,Baxter-UR5_95-Objects,-1,-1
+6387645f727ddf9f05e5ca30,Camouflaged Object,-1,-1
+6387645f727ddf9f05e5ca32,Caltech-256,-1,-1
+6387645f727ddf9f05e5ca34,Okutama-Action,-1,-1
+6387645f727ddf9f05e5ca36,201 People – Infant Cry Speech Data by Mobile Phone,-1,-1
+6387645f727ddf9f05e5ca38,PoseTrack,-1,-1
+6387645f727ddf9f05e5ca3a,Photometrically Distorted Synthetic COCO,-1,-1
+6387645f727ddf9f05e5ca3c,DSIOD,-1,-1
+6387645f727ddf9f05e5ca3e,DAVIS 2017,-1,-1
+6387645f727ddf9f05e5ca40,Europarl,-1,-1
+6387645f727ddf9f05e5ca42,VGaokao,-1,-1
+6387645f727ddf9f05e5ca44,iNaturalist Fine-Grained Geolocation,-1,-1
+6387645f727ddf9f05e5ca46,EUCA dataset,-1,-1
+6387645f727ddf9f05e5ca48,Visual Genome,-1,-1
+6387645f727ddf9f05e5ca4a,ISTD,-1,-1
+6387645f727ddf9f05e5ca4c,ShARC,-1,-1
+6387645f727ddf9f05e5ca4e,Boston University Biomedical Image Library,-1,-1
+6387645f727ddf9f05e5ca50,Bike and Car Odometer Dataset ! Speedometer OCR,-1,-1
+6387645f727ddf9f05e5ca52,CC100,-1,-1
+6387645f727ddf9f05e5ca54,Generalized Multi-View Detection Dataset,-1,-1
+6387645f727ddf9f05e5ca56,time-agnostic-library: benchmarks on execution times and memory,-1,-1
+6387645f727ddf9f05e5ca58,KAT2A target of LIT-PCBA Dataset,-1,-1
+6387645f727ddf9f05e5ca5a,NExT-QA,-1,-1
+6387645f727ddf9f05e5ca5c,Climate Claims,-1,-1
+6387645f727ddf9f05e5ca5e,DROP,-1,-1
+6387645f727ddf9f05e5ca60,Rotowire-Modified,-1,-1
+6387645f727ddf9f05e5ca62,Visual Fields,-1,-1
+6387645f727ddf9f05e5ca64,TLP,-1,-1
+6387645f727ddf9f05e5ca66,GENIA,-1,-1
+6387645f727ddf9f05e5ca68,QM9 Charge Densities and Energies Calculated with VASP,-1,-1
+6387645f727ddf9f05e5ca6a,OntoGUM,-1,-1
+6387645f727ddf9f05e5ca6c,TrecQA,-1,-1
+6387645f727ddf9f05e5ca6e,Vietnamese Spam Reviews Detection,-1,-1
+6387645f727ddf9f05e5ca70,Large Scale Movie Description Challenge,-1,-1
+6387645f727ddf9f05e5ca72,Dataset of Dockerfiles,-1,-1
+6387645f727ddf9f05e5ca74,NewB,-1,-1
+6387645f727ddf9f05e5ca76,Corpus Web Salud Espanol,-1,-1
+6387645f727ddf9f05e5ca78,DIBCO and H_DIBCO,-1,-1
+6387645f727ddf9f05e5ca7a,Omni-MOT,-1,-1
+6387645f727ddf9f05e5ca7c,DIT4BEARs Smart Road Dataset,-1,-1
+6387645f727ddf9f05e5ca7e,Alibaba Click and Conversion Prediction,-1,-1
+6387645f727ddf9f05e5ca80,Real World Computing Music Database,-1,-1
+6387645f727ddf9f05e5ca82,GeBioCorpus,-1,-1
+6387645f727ddf9f05e5ca84,TR-News,-1,-1
+6387645f727ddf9f05e5ca86,https://zenodo.org/record/2552025/export/json#.Y2FhyXbMK5c,-1,-1
+6387645f727ddf9f05e5ca88,PointQA,-1,-1
+6387645f727ddf9f05e5ca8a,AVASpeech-SMAD: A Strongly Labelled Speech and Music Activity Detection Dataset with Label Co-Occurrence,-1,-1
+6387645f727ddf9f05e5ca8c,DTD,-1,-1
+6387645f727ddf9f05e5ca8e,CelebA-Spoof,-1,-1
+6387645f727ddf9f05e5ca90,Tweets from US and Canada,-1,-1
+6387645f727ddf9f05e5ca92,Cross-Age Celebrity Dataset,-1,-1
+6387645f727ddf9f05e5ca94,German Breast Cancer Study Group 2,-1,-1
+6387645f727ddf9f05e5ca96,LIVECell,-1,-1
+6387645f727ddf9f05e5ca98,Stanford Light Field,-1,-1
+6387645f727ddf9f05e5ca9b,UAV Trajectory,-1,-1
+6387645f727ddf9f05e5ca9d,HGP,-1,-1
+6387645f727ddf9f05e5ca9f,ENTIGEN,-1,-1
+6387645f727ddf9f05e5caa1,PASTIS,-1,-1
+6387645f727ddf9f05e5caa3,VFP290K,-1,-1
+6387645f727ddf9f05e5caa5,WebNLG,-1,-1
+6387645f727ddf9f05e5caa7,Diverse Algebra Word Problem Set,-1,-1
+6387645f727ddf9f05e5caa9,VIS-TIR,-1,-1
+6387645f727ddf9f05e5caab,FastZIP Dataset and Code,-1,-1
+6387645f727ddf9f05e5caad,UW Indoor Scenes,-1,-1
+6387645f727ddf9f05e5caaf,LasHeR,-1,-1
+6387645f727ddf9f05e5cab1,COVIDGR,-1,-1
+6387645f727ddf9f05e5cab3,HLGD,-1,-1
+6387645f727ddf9f05e5cab5,NSMC,-1,-1
+6387645f727ddf9f05e5cab7,Discovery Dataset,-1,-1
+6387645f727ddf9f05e5cab9,TalkSumm,-1,-1
+6387645f727ddf9f05e5cabb,REFUGE2,-1,-1
+6387645f727ddf9f05e5cabd,Mixing Secrets,-1,-1
+6387645f727ddf9f05e5cabf,Deep Noise Suppression Challenge,-1,-1
+6387645f727ddf9f05e5cac1,UTD-MHAD,-1,-1
+6387645f727ddf9f05e5cac3,MORPH,-1,-1
+6387645f727ddf9f05e5cac5,MobIE,-1,-1
+6387645f727ddf9f05e5cac7,sRGB2XYZ Dataset,-1,-1
+6387645f727ddf9f05e5cac9,Independently Moving Objects,-1,-1
+6387645f727ddf9f05e5cacb,Distorted Surveillance Video Database,-1,-1
+6387645f727ddf9f05e5cacd,TUB CrowdFlow,-1,-1
+6387645f727ddf9f05e5cacf,CLEVR-Humans,-1,-1
+6387645f727ddf9f05e5cad1,MutualFriends,-1,-1
+6387645f727ddf9f05e5cad3,PoserNet ECCV 2022 data,-1,-1
+6387645f727ddf9f05e5cad5,TinyPerson,-1,-1
+6387645f727ddf9f05e5cad7,NOD,-1,-1
+6387645f727ddf9f05e5cad9,MEDIQA-AnS,-1,-1
+6387645f727ddf9f05e5cadb,ISIC 2020 Challenge Dataset,-1,-1
+6387645f727ddf9f05e5cadd,WorldStrat,-1,-1
+6387645f727ddf9f05e5cadf,FreiHAND,-1,-1
+6387645f727ddf9f05e5cae1,2D Semantic Labeling - Vaihingen data,-1,-1
+6387645f727ddf9f05e5cae3,CLEVR-Math,-1,-1
+6387645f727ddf9f05e5cae5,Summaries of genetic variation,-1,-1
+6387645f727ddf9f05e5cae7,SpeechMatrix,-1,-1
+6387645f727ddf9f05e5cae9,GCDC,-1,-1
+6387645f727ddf9f05e5caeb,IMFW,-1,-1
+6387645f727ddf9f05e5caed,UIT-ViWikiQA,-1,-1
+6387645f727ddf9f05e5caef,Whole abdominal  Organs Dataset,-1,-1
+6387645f727ddf9f05e5caf1,Open Catalyst 2020,-1,-1
+6387645f727ddf9f05e5caf3,MemeTracker,-1,-1
+6387645f727ddf9f05e5caf5,AFHQ,-1,-1
+6387645f727ddf9f05e5caf7,British English Speech Data,-1,-1
+6387645f727ddf9f05e5caf9,GlaS,-1,-1
+6387645f727ddf9f05e5cafb,PESMOD,-1,-1
+63876460727ddf9f05e5cafd,LIAR,-1,-1
+63876460727ddf9f05e5caff,ORKG-QA,-1,-1
+63876460727ddf9f05e5cb01,Distinctions-646,-1,-1
+63876460727ddf9f05e5cb03,Chairs,-1,-1
+63876460727ddf9f05e5cb05,Meta-Learning Wizard-of-Oz,-1,-1
+63876460727ddf9f05e5cb07,VSLID,-1,-1
+63876460727ddf9f05e5cb09,WNUT-2020 Task 1 Overview: Extracting Entities and Relations from Wet Lab Protocols,-1,-1
+63876460727ddf9f05e5cb0b,TEMPO,-1,-1
+63876460727ddf9f05e5cb0d,Logic Bombs,-1,-1
+63876460727ddf9f05e5cb0f,SARAS Endoscopic Surgeon Action Detection,-1,-1
+63876460727ddf9f05e5cb11,SentimentArcs: Sentiment Reference Corpus for Novels,-1,-1
+63876460727ddf9f05e5cb13,UAV-based multispectral vineyards,-1,-1
+63876460727ddf9f05e5cb15,SciQ,-1,-1
+63876460727ddf9f05e5cb17,Multi-template MRI mouse brain atlas,-1,-1
+63876460727ddf9f05e5cb19,DBR,-1,-1
+63876460727ddf9f05e5cb1b,LINNAEUS,-1,-1
+63876460727ddf9f05e5cb1d,WNUT 2017,-1,-1
+63876460727ddf9f05e5cb1f,Oxford Road Boundaries,-1,-1
+63876460727ddf9f05e5cb21,Logic2Text,-1,-1
+63876460727ddf9f05e5cb23,199 Hours - Australian English Speech Data by Mobile Phone,-1,-1
+63876460727ddf9f05e5cb25,FigureQA,-1,-1
+63876460727ddf9f05e5cb27,suction-based-grasping-dataset,-1,-1
+63876460727ddf9f05e5cb29,VCOPA,-1,-1
+63876460727ddf9f05e5cb2b,Cityscapes VIPriors subset,-1,-1
+63876460727ddf9f05e5cb2d,BMS-26,-1,-1
+63876460727ddf9f05e5cb2f,LAW,-1,-1
+63876460727ddf9f05e5cb31,DELAUNAY,-1,-1
+63876460727ddf9f05e5cb33,Real World Worry Dataset,-1,-1
+63876460727ddf9f05e5cb35,Make3D,-1,-1
+63876460727ddf9f05e5cb37,VRAI,-1,-1
+63876460727ddf9f05e5cb39,Document Understanding Conferences,-1,-1
+63876460727ddf9f05e5cb3b,20 People – Infant Laugh Speech Data by Mobile Phone,-1,-1
+63876460727ddf9f05e5cb3d,Face Attributes Dataset,-1,-1
+63876460727ddf9f05e5cb3f,DWIE,-1,-1
+63876460727ddf9f05e5cb41,AbdomenCT-1K,-1,-1
+63876460727ddf9f05e5cb43,Home Action Genome,-1,-1
+63876460727ddf9f05e5cb45,MUSES,-1,-1
+63876460727ddf9f05e5cb47,DCCW,-1,-1
+63876460727ddf9f05e5cb49,BRWAC,-1,-1
+63876460727ddf9f05e5cb4b,bornholmsk_parallel,-1,-1
+63876460727ddf9f05e5cb4d,MTEB,-1,-1
+63876460727ddf9f05e5cb4f,Massive Online Data Annotation Spindle Dataset,-1,-1
+63876460727ddf9f05e5cb51,VQA-E,-1,-1
+63876460727ddf9f05e5cb53,TREK-100,-1,-1
+63876460727ddf9f05e5cb55,Russian Words in Context (based on RUSSE),-1,-1
+63876460727ddf9f05e5cb57,Natural Language Inference in Turkish,-1,-1
+63876460727ddf9f05e5cb59,MedVidQA,-1,-1
+63876460727ddf9f05e5cb5b,ICB,-1,-1
+63876460727ddf9f05e5cb5d,MUSE,-1,-1
+63876460727ddf9f05e5cb5f,Large Multipurpose Motion and Video Dataset,-1,-1
+63876460727ddf9f05e5cb61,AIP Environment,-1,-1
+63876460727ddf9f05e5cb63,CNN Filter DB,-1,-1
+63876460727ddf9f05e5cb65,BNLP-Resources,-1,-1
+63876460727ddf9f05e5cb67,Molecular Dynamics 17,-1,-1
+63876460727ddf9f05e5cb69,Itihasa,-1,-1
+63876460727ddf9f05e5cb6b,Korean Table Question Answering,-1,-1
+63876460727ddf9f05e5cb6d,OpenML-CC18,-1,-1
+63876460727ddf9f05e5cb6f,TRECDD,-1,-1
+63876460727ddf9f05e5cb71,SUNCG,-1,-1
+63876460727ddf9f05e5cb73,Fluorescent Neuronal Cells,-1,-1
+63876460727ddf9f05e5cb75,UAV123,-1,-1
+63876460727ddf9f05e5cb77,REAL275,-1,-1
+63876460727ddf9f05e5cb79,Wisconsin (48%/32%/20% fixed splits),-1,-1
+63876460727ddf9f05e5cb7b,Florentine,-1,-1
+63876460727ddf9f05e5cb7d,Geometric Pose Affordance,-1,-1
+63876460727ddf9f05e5cb7f,Public Figures Face Database,-1,-1
+63876460727ddf9f05e5cb81,Mandarin Speech Data,-1,-1
+63876460727ddf9f05e5cb83,Wellhead Protection Area prediction from breakthrough curves,-1,-1
+63876460727ddf9f05e5cb85,Shadow-OBject Association,-1,-1
+63876460727ddf9f05e5cb87,Scaffold split of ESOL dataset,-1,-1
+63876460727ddf9f05e5cb89,SKU110K-R,-1,-1
+63876460727ddf9f05e5cb8b,"Labeled Retinal Optical Coherence Tomography Dataset for Classification of Normal, Drusen, and CNV Cases",-1,-1
+63876460727ddf9f05e5cb8d,Unite the People,-1,-1
+63876460727ddf9f05e5cb8f,GPLA-12,-1,-1
+63876460727ddf9f05e5cb91,SPARE3D,-1,-1
+63876460727ddf9f05e5cb93,HT1080WT cells - 3D collagen type I matrices,-1,-1
+63876460727ddf9f05e5cb95,Polyglot-NER,-1,-1
+63876460727ddf9f05e5cb97,NELA-GT-2020,-1,-1
+63876460727ddf9f05e5cb99,NELL,-1,-1
+63876460727ddf9f05e5cb9b,SYSU-MM01-C,-1,-1
+63876460727ddf9f05e5cb9d,Million-AID,-1,-1
+63876460727ddf9f05e5cb9f,3D Faces Collection Data,-1,-1
+63876460727ddf9f05e5cba1,Human-centric Spatio-Temporal Video Grounding,-1,-1
+63876460727ddf9f05e5cba3,Structured Web Data Extraction,-1,-1
+63876460727ddf9f05e5cba5,larousse_1905_wd,-1,-1
+63876460727ddf9f05e5cba7,Street View House Numbers,-1,-1
+63876460727ddf9f05e5cba9,SemEval 2022 Task 12: Symlink - Linking Mathematical Symbols to their Descriptions,-1,-1
+63876460727ddf9f05e5cbab,LaboroTVSpeech,-1,-1
+63876460727ddf9f05e5cbad,2D-3D Match Dataset,-1,-1
+63876460727ddf9f05e5cbaf,Pinterest Complete The Look,-1,-1
+63876460727ddf9f05e5cbb1,Expanded Groove MIDI Dataset,-1,-1
+63876460727ddf9f05e5cbb3,RWTH-PHOENIX-Weather-2014T,-1,-1
+63876460727ddf9f05e5cbb5,SPAVE-28G,-1,-1
+63876460727ddf9f05e5cbb7,DanFEVER,-1,-1
+63876460727ddf9f05e5cbb9,Metric-Type of Numerical Tables,-1,-1
+63876460727ddf9f05e5cbbb,CUHK Face Sketch Database,-1,-1
+63876460727ddf9f05e5cbbd,VIST,-1,-1
+63876460727ddf9f05e5cbbf,Monash,-1,-1
+63876460727ddf9f05e5cbc1,Sub-Slot Dialogue dataset,-1,-1
+63876460727ddf9f05e5cbc3,PASCAL Context,-1,-1
+63876460727ddf9f05e5cbc5,Memotion Analysis,-1,-1
+63876460727ddf9f05e5cbc7,Medicinal Leaves,-1,-1
+63876460727ddf9f05e5cbc9,Text8,-1,-1
+63876460727ddf9f05e5cbcb,RWCP Sound Scene Database,-1,-1
+63876460727ddf9f05e5cbcd,ExBAN,-1,-1
+63876460727ddf9f05e5cbcf,Audi Autonomous Driving Dataset,-1,-1
+63876460727ddf9f05e5cbd1,Cloud Motion Wind Dataset,-1,-1
+63876460727ddf9f05e5cbd3,FarsBase-KBP,-1,-1
+63876460727ddf9f05e5cbd5,TRIP,-1,-1
+63876460727ddf9f05e5cbd7,Semantic Textual Similarity Dataset,-1,-1
+63876460727ddf9f05e5cbd9,Underwater Image Enhancement Benchmark Dataset,-1,-1
+63876460727ddf9f05e5cbdb,KorQuAD,-1,-1
+63876460727ddf9f05e5cbdd,Taskography,-1,-1
+63876460727ddf9f05e5cbdf,MOTFront,-1,-1
+63876460727ddf9f05e5cbe1,Bus Stop Spacings for Transit Providers in the US,-1,-1
+63876460727ddf9f05e5cbe3,CPP,-1,-1
+63876460727ddf9f05e5cbe5,RoomR,-1,-1
+63876460727ddf9f05e5cbe7,Marine Debris Archive,-1,-1
+63876460727ddf9f05e5cbe9,Riposte! A Large Corpus of Counter-Arguments,-1,-1
+63876460727ddf9f05e5cbeb,MELD,-1,-1
+63876460727ddf9f05e5cbed,HT1080WT cells embedded in 3D collagen type I matrices - manual annotations for cell instance segmentation and tracking,-1,-1
+63876460727ddf9f05e5cbef,"Quo Vadis, Open Source?",-1,-1
+63876460727ddf9f05e5cbf1,Box-Jenkins,-1,-1
+63876460727ddf9f05e5cbf3,GazeCapture,-1,-1
+63876460727ddf9f05e5cbf5,Automotive Multi-Sensor Dataset,-1,-1
+63876460727ddf9f05e5cbf7,DIPS,-1,-1
+63876460727ddf9f05e5cbf9,COVID-19 Disinfo,-1,-1
+63876460727ddf9f05e5cbfb,PhoMT,-1,-1
+63876460727ddf9f05e5cbfd,OQM9HK,-1,-1
+63876460727ddf9f05e5cbff,NavigationNet,-1,-1
+63876460727ddf9f05e5cc01,Materials Project,-1,-1
+63876460727ddf9f05e5cc03,Amazon Product Data,-1,-1
+63876460727ddf9f05e5cc05,DAWT,-1,-1
+63876460727ddf9f05e5cc07,Bilingual Corpus of Arabic-English Parallel Tweets,-1,-1
+63876460727ddf9f05e5cc09,RTMV,-1,-1
+63876460727ddf9f05e5cc0b,AMR3.0,-1,-1
+63876460727ddf9f05e5cc0d,UIT-ViCTSD,-1,-1
+63876460727ddf9f05e5cc0f,Breast Lesion Detection in Ultrasound Videos (CVA-Net),-1,-1
+63876460727ddf9f05e5cc11,Flickr Audio Caption Corpus,-1,-1
+63876460727ddf9f05e5cc13,LARQS,-1,-1
+63876460727ddf9f05e5cc15,PCSOD,-1,-1
+63876460727ddf9f05e5cc17,XD-Violence,-1,-1
+63876460727ddf9f05e5cc19,Weibo21,-1,-1
+63876460727ddf9f05e5cc1b,Arabic Text Diacritization,-1,-1
+63876460727ddf9f05e5cc1d,Room-across-Room,-1,-1
+63876460727ddf9f05e5cc1f,Gaofen Image Dataset,-1,-1
+63876460727ddf9f05e5cc21,MultiBooked,-1,-1
+63876460727ddf9f05e5cc23,Retail50K,-1,-1
+63876460727ddf9f05e5cc25,CVL Traffic Signs Dataset,-1,-1
+63876460727ddf9f05e5cc27,6.78 Hours - Chinese Mandarin Speech Synthesis Corpus-Female Imitating Children,-1,-1
+63876460727ddf9f05e5cc29,Software Heritage Graph Dataset,-1,-1
+63876460727ddf9f05e5cc2b,redwood-3dscan,-1,-1
+63876460727ddf9f05e5cc2d,Explainable Abstract Trains,-1,-1
+63876460727ddf9f05e5cc2f,BVI-DVC,-1,-1
+63876460727ddf9f05e5cc31,SubEdits,-1,-1
+63876460727ddf9f05e5cc33,ESAD,-1,-1
+63876460727ddf9f05e5cc35,ArgKP-2021,-1,-1
+63876460727ddf9f05e5cc37,STEM-ECR,-1,-1
+63876460727ddf9f05e5cc39,Cross-View Time Dataset,-1,-1
+63876460727ddf9f05e5cc3b,2018 n2c2 (Track 2) - Adverse Drug Events and Medication Extraction,-1,-1
+63876460727ddf9f05e5cc3d,Music4All-Onion,-1,-1
+63876460727ddf9f05e5cc3f,EasyCom,-1,-1
+63876460727ddf9f05e5cc41,BL30K,-1,-1
+63876460727ddf9f05e5cc43,LaPa,-1,-1
+63876460727ddf9f05e5cc45,Habitat-Matterport 3D,-1,-1
+63876460727ddf9f05e5cc47,Korea Composite Stock Price Index,-1,-1
+63876460727ddf9f05e5cc49,Visual Commonsense Reasoning,-1,-1
+63876460727ddf9f05e5cc4b,Instructional Video Question Answering,-1,-1
+63876460727ddf9f05e5cc4d,QNLI,-1,-1
+63876460727ddf9f05e5cc4f,"Online Cryptocurrency-topic diffusion on Twitter, Telegram, and Discord",-1,-1
+63876460727ddf9f05e5cc51,HONEST,-1,-1
+63876460727ddf9f05e5cc53,CLEVR-Dialog,-1,-1
+63876460727ddf9f05e5cc55,SIDD-Image,-1,-1
+63876460727ddf9f05e5cc57,2018 n2c2 shared task on adverse drug events and medication extraction in electronic health records,-1,-1
+63876460727ddf9f05e5cc59,Wide Multi Channel Presentation Attack,-1,-1
+63876460727ddf9f05e5cc5b,arXivEdits,-1,-1
+63876460727ddf9f05e5cc5d,ENZYMES,-1,-1
+63876460727ddf9f05e5cc5f,CCD,-1,-1
+63876460727ddf9f05e5cc61,PeerSum,-1,-1
+63876460727ddf9f05e5cc63,Sewer-ML,-1,-1
+63876460727ddf9f05e5cc65,Open Images V4,-1,-1
+63876460727ddf9f05e5cc67,TFH_Annotated_Dataset,-1,-1
+63876460727ddf9f05e5cc69,(Animal Species Image Recognition for Restricting Access,-1,-1
+63876460727ddf9f05e5cc6b,MVB,-1,-1
+63876460727ddf9f05e5cc6d,Personal Events in Dialogue Corpus,-1,-1
+63876460727ddf9f05e5cc6f,Bus Trajectory Dataset,-1,-1
+63876460727ddf9f05e5cc71,Blind Audio-Visual Localization (BAVL),-1,-1
+63876460727ddf9f05e5cc73,Simplified versions of the CommAI Navigation tasks,-1,-1
+63876461727ddf9f05e5cc75,BioCreative VII NLM-Chem,-1,-1
+63876461727ddf9f05e5cc77,LRA,-1,-1
+63876461727ddf9f05e5cc79,Diabetic Macular Edema VQA dataset,-1,-1
+63876461727ddf9f05e5cc7b,German Traffic Sign Recognition Benchmark,-1,-1
+63876461727ddf9f05e5cc7d,DialogueFairness,-1,-1
+63876461727ddf9f05e5cc7f,Epinions,-1,-1
+63876461727ddf9f05e5cc81,Real-World Masked Face Dataset,-1,-1
+63876461727ddf9f05e5cc83,Multi-class Fashion Item Detection Data,-1,-1
+63876461727ddf9f05e5cc85,Synthetic Visual Reasoning Task,-1,-1
+63876461727ddf9f05e5cc87,ProcGen,-1,-1
+63876461727ddf9f05e5cc89,Multi-View Large Population Database with Pose Sequence,-1,-1
+63876461727ddf9f05e5cc8b,Textbook Question Answering,-1,-1
+63876461727ddf9f05e5cc8d,Cambridge Well-being Dataset for Psychological Distress Analysis,-1,-1
+63876461727ddf9f05e5cc8f,Example dataset for CellCluster code,-1,-1
+63876461727ddf9f05e5cc91,Short BBC Pose,-1,-1
+63876461727ddf9f05e5cc93,Headline Grouping Dataset,-1,-1
+63876461727ddf9f05e5cc95,HPatches,-1,-1
+63876461727ddf9f05e5cc97,MeLa BitChute,-1,-1
+63876461727ddf9f05e5cc99,BUCC,-1,-1
+63876461727ddf9f05e5cc9b,Emol news articles and comments,-1,-1
+63876461727ddf9f05e5cc9d,PDDL Generators,-1,-1
+63876461727ddf9f05e5cc9f,FusedChat,-1,-1
+63876461727ddf9f05e5cca1,Secure Water Treatment (SWaT),-1,-1
+63876461727ddf9f05e5cca3,Cell-200,-1,-1
+63876461727ddf9f05e5cca5,HandNet,-1,-1
+63876461727ddf9f05e5cca7,Weibo-Douban,-1,-1
+63876461727ddf9f05e5ccaa,NES-MDB,-1,-1
+63876461727ddf9f05e5ccac,67 Hours - Northeast Dialect Speech Data by Mobile Phone,-1,-1
+63876461727ddf9f05e5ccae,DDD20,-1,-1
+63876461727ddf9f05e5ccb0,Radboud Faces Database,-1,-1
+63876461727ddf9f05e5ccb2,PodcastFillers,-1,-1
+63876461727ddf9f05e5ccb4,VocBench,-1,-1
+63876461727ddf9f05e5ccb6,RoomEnv,-1,-1
+63876461727ddf9f05e5ccb8,CL-SciSumm,-1,-1
+63876461727ddf9f05e5ccba,MedMentions,-1,-1
+63876461727ddf9f05e5ccbc,DublinCity,-1,-1
+63876461727ddf9f05e5ccbe,ObjectNet3D,-1,-1
+63876461727ddf9f05e5ccc0,Com2Sense,-1,-1
+63876461727ddf9f05e5ccc2,IU ShareView,-1,-1
+63876461727ddf9f05e5ccc4,An open-source corpus for machine learning.,-1,-1
+63876461727ddf9f05e5ccc6,V-COCO,-1,-1
+63876461727ddf9f05e5ccc8,SeasonDepth,-1,-1
+63876461727ddf9f05e5ccca,GitHub-Python,-1,-1
+63876461727ddf9f05e5cccc,Simple Variations on Arithmetic Math word Problems,-1,-1
+63876461727ddf9f05e5ccce,Breast Cancer Semantic Segmentation,-1,-1
+63876461727ddf9f05e5ccd0,OCID,-1,-1
+63876461727ddf9f05e5ccd2,CRVD,-1,-1
+63876461727ddf9f05e5ccd4,Human-annotated Mappings,-1,-1
+63876461727ddf9f05e5ccd6,VFR-Wild,-1,-1
+63876461727ddf9f05e5ccd9,RSNA-ASNR-MICCAI Brain Tumor Segmentation (BraTS) Challenge 2021,-1,-1
+63876461727ddf9f05e5ccdb,Surrey Audio-Visual Expressed Emotion,-1,-1
+63876461727ddf9f05e5ccdd,Extension of Cornell-Box Time-of-Flight Dataset,-1,-1
+63876461727ddf9f05e5ccdf,QPT,-1,-1
+63876461727ddf9f05e5cce1,WebCaricature Dataset,-1,-1
+63876461727ddf9f05e5cce3,Grand Central Station Dataset,-1,-1
+63876461727ddf9f05e5cce5,Clarkson Fingerprint Generator,-1,-1
+63876461727ddf9f05e5cce7,T-LESS,-1,-1
+63876461727ddf9f05e5cce9,SemanticKITTI,-1,-1
+63876461727ddf9f05e5cceb,SPARTQA,-1,-1
+63876461727ddf9f05e5cced,HKR,-1,-1
+63876461727ddf9f05e5ccef,Screen2Words,-1,-1
+63876461727ddf9f05e5ccf1,Procon20,-1,-1
+63876461727ddf9f05e5ccf3,DBP-5L (Spanish),-1,-1
+63876461727ddf9f05e5ccf5,ErAConD,-1,-1
+63876461727ddf9f05e5ccf7,The Second Program Synthesis Benchmark Suite,-1,-1
+63876461727ddf9f05e5ccf9,CodeXGLUE,-1,-1
+63876461727ddf9f05e5ccfb,Oxford Radar RobotCar Dataset,-1,-1
+63876461727ddf9f05e5ccfd,ParaBank,-1,-1
+63876461727ddf9f05e5ccff,DementiaBank,-1,-1
+63876461727ddf9f05e5cd02,Dataset for Mid-Price Forecasting of Limit Order Book Data,-1,-1
+63876461727ddf9f05e5cd04,ToolNet,-1,-1
+63876461727ddf9f05e5cd06,GOT-10k,-1,-1
+63876461727ddf9f05e5cd08,CK+,-1,-1
+63876461727ddf9f05e5cd0a,IIIT-AR-13K,-1,-1
+63876461727ddf9f05e5cd0c,Oxford RobotCar Dataset,-1,-1
+63876461727ddf9f05e5cd0e,MEFB,-1,-1
+63876461727ddf9f05e5cd10,Catalan TimeBank 1.0,-1,-1
+63876461727ddf9f05e5cd12,BABEL,-1,-1
+63876461727ddf9f05e5cd14,LReID,-1,-1
+63876461727ddf9f05e5cd16,WikiAsp,-1,-1
+63876461727ddf9f05e5cd18,PFN-PIC,-1,-1
+63876461727ddf9f05e5cd1a,GMEG-yahoo,-1,-1
+63876461727ddf9f05e5cd1c,car parking lot dataset,-1,-1
+63876461727ddf9f05e5cd1e,VizWiz-QualityIssues,-1,-1
+63876461727ddf9f05e5cd20,FED,-1,-1
+63876461727ddf9f05e5cd22,RELiC,-1,-1
+63876461727ddf9f05e5cd24,Mandarin Speech Data in Cars by Mobile Phone,-1,-1
+63876461727ddf9f05e5cd26,DeepSportRadar-v1,-1,-1
+63876461727ddf9f05e5cd28,AKB-48,-1,-1
+63876461727ddf9f05e5cd2a,Wiki Talk Page Comments,-1,-1
+63876461727ddf9f05e5cd2c,PosePrior,-1,-1
+63876461727ddf9f05e5cd2e,Middlebury 2006,-1,-1
+63876461727ddf9f05e5cd30,Image网,-1,-1
+63876461727ddf9f05e5cd32,CPNet,-1,-1
+63876461727ddf9f05e5cd34,Danbooru2020,-1,-1
+63876461727ddf9f05e5cd36,Disfl-QA,-1,-1
+63876461727ddf9f05e5cd38,Retinal Fundus MultiDisease Image Dataset,-1,-1
+63876461727ddf9f05e5cd3a,ConditionalQA,-1,-1
+63876461727ddf9f05e5cd3c,Warblr,-1,-1
+63876461727ddf9f05e5cd3e,Occluded Video Instance Segmentation,-1,-1
+63876461727ddf9f05e5cd40,Bias-Aware Face Mask Detection Dataset,-1,-1
+63876461727ddf9f05e5cd42,NEMO-Corpus,-1,-1
+63876461727ddf9f05e5cd44,OV,-1,-1
+63876461727ddf9f05e5cd46,Capriccio,-1,-1
+63876461727ddf9f05e5cd48,IndoSum,-1,-1
+63876461727ddf9f05e5cd4a,ShEMO,-1,-1
+63876461727ddf9f05e5cd4c,DCASE 2021 Task3,-1,-1
+63876461727ddf9f05e5cd4e,Dataset of Structured Queries and Spatial Relations,-1,-1
+63876461727ddf9f05e5cd50,ARCTIC,-1,-1
+63876461727ddf9f05e5cd52,GlassTemp,-1,-1
+63876461727ddf9f05e5cd54,Japanese Word Similarity,-1,-1
+63876461727ddf9f05e5cd56,Open PI,-1,-1
+63876461727ddf9f05e5cd58,NuScenes Occupancy Grids Dataset,-1,-1
+63876461727ddf9f05e5cd5a,SBD,-1,-1
+63876461727ddf9f05e5cd5c,CAMO,-1,-1
+63876461727ddf9f05e5cd5f,PMC Structured Abstracts,-1,-1
+63876461727ddf9f05e5cd61,"1,297 Hours - Scene Noise Data by Voice Recorder",-1,-1
+63876461727ddf9f05e5cd63,eSCAPE,-1,-1
+63876461727ddf9f05e5cd65,Basketball Ballistic raw sequences,-1,-1
+63876461727ddf9f05e5cd67,FALLMUD,-1,-1
+63876461727ddf9f05e5cd69,ICASSP 2021 Acoustic Echo Cancellation Challenge,-1,-1
+63876461727ddf9f05e5cd6b,ReaSCAN: Compositional Reasoning in Language Grounding,-1,-1
+63876461727ddf9f05e5cd6d,Impersonator,-1,-1
+63876461727ddf9f05e5cd6f,CD&S,-1,-1
+63876461727ddf9f05e5cd71,Chinese AI and Law (CAIL) 2018,-1,-1
+63876461727ddf9f05e5cd73,CSI Screenplay Summarization Corpus,-1,-1
+63876461727ddf9f05e5cd75,Identity Access Management dataset,-1,-1
+63876461727ddf9f05e5cd77,PARADE,-1,-1
+63876461727ddf9f05e5cd79,Unified SSL Benchmark (USB),-1,-1
+63876461727ddf9f05e5cd7b,Vehicle Claims,-1,-1
+63876461727ddf9f05e5cd7d,Marine Snow Removal Benchmarking,-1,-1
+63876461727ddf9f05e5cd7f,pd4ml,-1,-1
+63876461727ddf9f05e5cd81,Freiburg Groceries,-1,-1
+63876461727ddf9f05e5cd83,RPC,-1,-1
+63876461727ddf9f05e5cd85,Tracking Any Object Dataset,-1,-1
+63876461727ddf9f05e5cd87,EMU,-1,-1
+63876461727ddf9f05e5cd89,"1,078 People 3D Faces Collection Data",-1,-1
+63876461727ddf9f05e5cd8b,HRSC2016,-1,-1
+63876461727ddf9f05e5cd8d,Waymo Open Dataset,-1,-1
+63876461727ddf9f05e5cd8f,Multi-Attribute Facial Landmark,-1,-1
+63876461727ddf9f05e5cd91,RF signal,-1,-1
+63876461727ddf9f05e5cd93,Gene-Disease Associations Corpus,-1,-1
+63876461727ddf9f05e5cd95,HuTics,-1,-1
+63876461727ddf9f05e5cd97,Dataset of Context information for Zero Interaction Security,-1,-1
+63876461727ddf9f05e5cd99,Specs on Faces,-1,-1
+63876461727ddf9f05e5cd9b,SyntheticFur,-1,-1
+63876461727ddf9f05e5cd9e,WN18,-1,-1
+63876461727ddf9f05e5cda0,Two Ball Ellsberg Paradox: Representative US Data,-1,-1
+63876461727ddf9f05e5cda2,Event-focused Emotion Corpora for German and English,-1,-1
+63876461727ddf9f05e5cda4,PAXRay,-1,-1
+63876461727ddf9f05e5cda6,"HopeEDI: A Multilingual Hope Speech Detection Dataset for Equality, Diversity, and Inclusion",-1,-1
+63876461727ddf9f05e5cda8,SPOT,-1,-1
+63876461727ddf9f05e5cdaa,DUO,-1,-1
+63876461727ddf9f05e5cdac,Photographic Defect Severity,-1,-1
+63876461727ddf9f05e5cdae,inD Dataset,-1,-1
+63876461727ddf9f05e5cdb0,Apolloscape Inpainting,-1,-1
+63876461727ddf9f05e5cdb2,800 Hours - Sichuan Dialect Conversational Speech Data by Mobile Phone,-1,-1
+63876461727ddf9f05e5cdb4,CC-DBP,-1,-1
+63876461727ddf9f05e5cdb6,Gun Violence Frame Corpus,-1,-1
+63876461727ddf9f05e5cdb8,Ambiguous-HOI,-1,-1
+63876461727ddf9f05e5cdba,Medico automatic polyp segmentation challenge (dataset),-1,-1
+63876461727ddf9f05e5cdbc,Quick Sky Time,-1,-1
+63876461727ddf9f05e5cdbe,ShapeStacks,-1,-1
+63876461727ddf9f05e5cdc0,Thermal Face Database,-1,-1
+63876461727ddf9f05e5cdc2,ILDC,-1,-1
+63876461727ddf9f05e5cdc4,Bongard-HOI,-1,-1
+63876461727ddf9f05e5cdc6,ScribbleSup,-1,-1
+63876461727ddf9f05e5cdc8,INQUISITIVE,-1,-1
+63876461727ddf9f05e5cdca,Pavia University,-1,-1
+63876461727ddf9f05e5cdcc,COVID19-Algeria-and-World-Dataset,-1,-1
+63876461727ddf9f05e5cdce,SHREC'19 track Matching Humans with Different Connectivity,-1,-1
+63876461727ddf9f05e5cdd0,is-it-instructional-video,-1,-1
+63876461727ddf9f05e5cdd2,APPS,-1,-1
+63876461727ddf9f05e5cdd4,YouTube-GDD: A challenging gun detection dataset with rich contextual information,-1,-1
+63876461727ddf9f05e5cdd6,Youtube Video Object Segmentation,-1,-1
+63876461727ddf9f05e5cdd8,MAP,-1,-1
+63876461727ddf9f05e5cdda,TCR-CMV,-1,-1
+63876461727ddf9f05e5cddc,Sydney Urban Objects,-1,-1
+63876462727ddf9f05e5cdde,TCR,-1,-1
+63876462727ddf9f05e5cde0,RGRS,-1,-1
+63876462727ddf9f05e5cde2,RuSentRel,-1,-1
+63876462727ddf9f05e5cde4,Sentiment Polarity Annotations Dataset,-1,-1
+63876462727ddf9f05e5cde6,Formula semantics benchmark,-1,-1
+63876462727ddf9f05e5cde8,Watch-n-Patch,-1,-1
+63876462727ddf9f05e5cdea,KTH Action dataset,-1,-1
+63876462727ddf9f05e5cdec,Heron Island Coral Reef Dataset,-1,-1
+63876462727ddf9f05e5cdee,WikiText-TL-39,-1,-1
+63876462727ddf9f05e5cdf0,NCI,-1,-1
+63876462727ddf9f05e5cdf2,IndicTTS,-1,-1
+63876462727ddf9f05e5cdf4,Chinese Classifier,-1,-1
+63876462727ddf9f05e5cdf6,Oxford-IIIT Pet Dataset,-1,-1
+63876462727ddf9f05e5cdf8,YouTube-VIS 2021 validation,-1,-1
+63876462727ddf9f05e5cdfa,Toyota Smarthome dataset,-1,-1
+63876462727ddf9f05e5cdfc,Uyghur Speech Data,-1,-1
+63876462727ddf9f05e5cdfe,Jejueo Single Speaker Speech,-1,-1
+63876462727ddf9f05e5ce00,Medical Wiki Paralell Corpus for Medical Text Simplification,-1,-1
+63876462727ddf9f05e5ce02,HT Docking,-1,-1
+63876462727ddf9f05e5ce04,BRACS,-1,-1
+63876462727ddf9f05e5ce06,NUS-WIDE,-1,-1
+63876462727ddf9f05e5ce08,FLAME,-1,-1
+63876462727ddf9f05e5ce0a,464 Hours - Chinese Children Speaking English Speech Data by Mobile Phone,-1,-1
+63876462727ddf9f05e5ce0c,VAried Stance Topics,-1,-1
+63876462727ddf9f05e5ce0e,CMRC 2019,-1,-1
+63876462727ddf9f05e5ce10,FER+,-1,-1
+63876462727ddf9f05e5ce12,TAT,-1,-1
+63876462727ddf9f05e5ce14,Complete Inertial Pose,-1,-1
+63876462727ddf9f05e5ce16,ALDH1 target of LIT-PCBA Dataset,-1,-1
+63876462727ddf9f05e5ce18,PyBullet,-1,-1
+63876462727ddf9f05e5ce1a,Perla Depression Screening Dataset,-1,-1
+63876462727ddf9f05e5ce1c,Market-1501,-1,-1
+63876462727ddf9f05e5ce1e,GF-PA66 3D XCT (composite material 3D tomography),-1,-1
+63876462727ddf9f05e5ce20,Flickr Diverse Faces,-1,-1
+63876462727ddf9f05e5ce22,Synthetic COCO,-1,-1
+63876462727ddf9f05e5ce24,Creative Habit Tags,-1,-1
+63876462727ddf9f05e5ce26,Madagascar Ocean Drifters,-1,-1
+63876462727ddf9f05e5ce28,500 Hours - Indian English Colloquial Video Speech Data,-1,-1
+63876462727ddf9f05e5ce2a,BiRdQA,-1,-1
+63876462727ddf9f05e5ce2c,PKU SketchRe-ID Dataset,-1,-1
+63876462727ddf9f05e5ce2e,ImageNet VIPriors subset,-1,-1
+63876462727ddf9f05e5ce30,Cross-lingual Slot and Intent Detection,-1,-1
+63876462727ddf9f05e5ce32,CovidQA,-1,-1
+63876462727ddf9f05e5ce34,HVIS Dataset,-1,-1
+63876462727ddf9f05e5ce36,BindingDB,-1,-1
+63876462727ddf9f05e5ce38,LM Email Address Leakage,-1,-1
+63876462727ddf9f05e5ce3a,VOC 2012,-1,-1
+63876462727ddf9f05e5ce3c,REFreSD,-1,-1
+63876462727ddf9f05e5ce3e,MINC,-1,-1
+63876462727ddf9f05e5ce40,CoNLL-2014 Shared Task: Grammatical Error Correction,-1,-1
+63876462727ddf9f05e5ce42,Yan et al,-1,-1
+63876462727ddf9f05e5ce44,Newsela,-1,-1
+63876462727ddf9f05e5ce46,CUHK Occlusion Dataset,-1,-1
+63876462727ddf9f05e5ce48,Fashion 144K,-1,-1
+63876462727ddf9f05e5ce4a,MIDV-2019,-1,-1
+63876462727ddf9f05e5ce4c,NAF,-1,-1
+63876462727ddf9f05e5ce4e,Facebook Pages,-1,-1
+63876462727ddf9f05e5ce50,A robot dataset of successful and failed placement executions,-1,-1
+63876462727ddf9f05e5ce52,Toloka Business ID Recognition,-1,-1
+63876462727ddf9f05e5ce54,Digital Retinal Images for Vessel Extraction,-1,-1
+63876462727ddf9f05e5ce56,Geography of Open Source Software,-1,-1
+63876462727ddf9f05e5ce58,Inspec,-1,-1
+63876462727ddf9f05e5ce5a,TREC-COVID,-1,-1
+63876462727ddf9f05e5ce5c,Colorectal Nuclear Segmentation and Phenotypes,-1,-1
+63876462727ddf9f05e5ce5e,Problems with Explanations for Numbers,-1,-1
+63876462727ddf9f05e5ce60,PrOntoQA,-1,-1
+63876462727ddf9f05e5ce62,Dizi,-1,-1
+63876462727ddf9f05e5ce64,Icentia11K,-1,-1
+63876462727ddf9f05e5ce66,CLOUD,-1,-1
+63876462727ddf9f05e5ce68,ChID,-1,-1
+63876462727ddf9f05e5ce6a,PSG Dataset,-1,-1
+63876462727ddf9f05e5ce6c,TLFM dataset for microscopy image sequence generation,-1,-1
+63876462727ddf9f05e5ce6e,Czech restaurant information,-1,-1
+63876462727ddf9f05e5ce70,Multimodal Document Intent Dataset,-1,-1
+63876462727ddf9f05e5ce72,Multi-Axis Temporal RElations for Start-points,-1,-1
+63876462727ddf9f05e5ce74,OQGend,-1,-1
+63876462727ddf9f05e5ce76,iHarmony4,-1,-1
+63876462727ddf9f05e5ce78,CITR Dataset,-1,-1
+63876462727ddf9f05e5ce7a,ReQA,-1,-1
+63876462727ddf9f05e5ce7c,rounD Dataset,-1,-1
+63876462727ddf9f05e5ce7e,Perceptual Similarity,-1,-1
+63876462727ddf9f05e5ce80,Visual Domain Decathlon,-1,-1
+63876462727ddf9f05e5ce82,H3DS,-1,-1
+63876462727ddf9f05e5ce84,EFO-1-QA,-1,-1
+63876462727ddf9f05e5ce86,SegTHOR,-1,-1
+63876462727ddf9f05e5ce88,P3M-10k,-1,-1
+63876462727ddf9f05e5ce8a,Product Page,-1,-1
+63876462727ddf9f05e5ce8c,APND,-1,-1
+63876462727ddf9f05e5ce8e,UFPR-Eyeglasses,-1,-1
+63876462727ddf9f05e5ce90,Berkeley Segmentation Dataset,-1,-1
+63876462727ddf9f05e5ce92,WHU-Specular dataset,-1,-1
+63876462727ddf9f05e5ce94,"Quo Vadis, Open Source? The Limits of Open Source Growth",-1,-1
+63876462727ddf9f05e5ce96,AVSD,-1,-1
+63876462727ddf9f05e5ce98,Technology in Motion Tremor,-1,-1
+63876462727ddf9f05e5ce9a,Vibration Measurements on a Rotating Shaft at Different Unbalance Strengths,-1,-1
+63876462727ddf9f05e5ce9c,RePack,-1,-1
+63876462727ddf9f05e5ce9e,BnB,-1,-1
+63876462727ddf9f05e5cea0,Impartial-RAVEN,-1,-1
+63876462727ddf9f05e5cea2,Apolloscape Trajectory,-1,-1
+63876462727ddf9f05e5cea4,500 Hours - Japanese Conversational Speech by Mobile Phone,-1,-1
+63876462727ddf9f05e5cea6,Single-dish PARKES for finding the uneXpected,-1,-1
+63876462727ddf9f05e5cea8,I-HAZE,-1,-1
+63876462727ddf9f05e5ceaa,WebQuestions Semantic Parses Dataset,-1,-1
+63876462727ddf9f05e5ceac,M-VAD Names Dataset,-1,-1
+63876462727ddf9f05e5ceae,USF,-1,-1
+63876462727ddf9f05e5ceb0,Pedestrian-Traffic-Lights,-1,-1
+63876462727ddf9f05e5ceb2,SNIPS,-1,-1
+63876462727ddf9f05e5ceb4,Censored_Planet_Quack,-1,-1
+63876462727ddf9f05e5ceb6,UTSig: A Persian offline signature dataset,-1,-1
+63876462727ddf9f05e5ceb8,Self-stimulatory Behavior Dataset,-1,-1
+63876462727ddf9f05e5ceba,Andy Lomas Generative Art Dataset,-1,-1
+63876462727ddf9f05e5cebc,Urban Dict spelling variant,-1,-1
+63876462727ddf9f05e5cebe,Knowledge-driven Conversation,-1,-1
+63876462727ddf9f05e5cec0,American English Natural Dialogue Speech Data,-1,-1
+63876462727ddf9f05e5cec2,WIT,-1,-1
+63876462727ddf9f05e5cec4,COVID-19 & Election,-1,-1
+63876462727ddf9f05e5cec6,PSB2,-1,-1
+63876462727ddf9f05e5cec8,TI1K Dataset,-1,-1
+63876462727ddf9f05e5ceca,TikTok Comments,-1,-1
+63876462727ddf9f05e5cecc,Blender Cycles Ray-tracing dataset,-1,-1
+63876462727ddf9f05e5cece,Alchemy,-1,-1
+63876462727ddf9f05e5ced0,Indian Traffic Sign Image Dataset,-1,-1
+63876462727ddf9f05e5ced2,AI2 Reasoning Challenge,-1,-1
+63876462727ddf9f05e5ced4,Face Recognition Grand Challenge,-1,-1
+63876462727ddf9f05e5ced6,JS Fake Chorales,-1,-1
+63876462727ddf9f05e5ced8,SoyCultivarVein,-1,-1
+63876462727ddf9f05e5ceda,See-in-the-Dark,-1,-1
+63876462727ddf9f05e5cedc,FIW-MM,-1,-1
+63876462727ddf9f05e5cede,Turbofan Engine Degradation Simulation Data Set,-1,-1
+63876462727ddf9f05e5cee0,BCSD,-1,-1
+63876462727ddf9f05e5cee2,CMRC,-1,-1
+63876462727ddf9f05e5cee4,MICCAI 2020 EMIDEC,-1,-1
+63876462727ddf9f05e5cee6,WMT 2016 IT Translation Task,-1,-1
+63876462727ddf9f05e5cee8,Drone vs Bird Detection Challenge,-1,-1
+63876462727ddf9f05e5ceea,Our Database of Faces,-1,-1
+63876462727ddf9f05e5ceec,Reading Chinese Text in the Wild,-1,-1
+63876462727ddf9f05e5ceee,RotoWire,-1,-1
+63876462727ddf9f05e5cef0,AnthroProtect,-1,-1
+63876462727ddf9f05e5cef2,Backstabber’s Knife Collection,-1,-1
+63876462727ddf9f05e5cef4,Lower-limb Kinematics and Kinetics During Continuously Varying Human Locomotion,-1,-1
+63876462727ddf9f05e5cef6,PROBA-V,-1,-1
+63876462727ddf9f05e5cef8,Individual Brain Charting,-1,-1
+63876462727ddf9f05e5cefa,COCO 10% labeled data,-1,-1
+63876462727ddf9f05e5cefc,SemEval 2013,-1,-1
+63876462727ddf9f05e5cefe,LAOFIW Dataset,-1,-1
+63876462727ddf9f05e5cf00,Dortmund 6D Pose dataset,-1,-1
+63876462727ddf9f05e5cf02,GAFA,-1,-1
+63876462727ddf9f05e5cf04,Facial Expression Research Group Database,-1,-1
+63876462727ddf9f05e5cf06,Persona-Based Empathetic Conversational,-1,-1
+63876462727ddf9f05e5cf08,NREC Agricultural Person-Detection,-1,-1
+63876462727ddf9f05e5cf0a,FixaTons,-1,-1
+63876462727ddf9f05e5cf0c,MIntRec,-1,-1
+63876462727ddf9f05e5cf0e,MMAC Captions,-1,-1
+63876462727ddf9f05e5cf10,amazon_electronics_computers,-1,-1
+63876462727ddf9f05e5cf12,Clipart1k,-1,-1
+63876462727ddf9f05e5cf14,AnoShift: A Distribution Shift Benchmark for Unsupervised Anomaly Detection,-1,-1
+63876462727ddf9f05e5cf16,WikiText-103,-1,-1
+63876462727ddf9f05e5cf18,ReCAM,-1,-1
+63876462727ddf9f05e5cf1a,Montgomery County X-ray Set,-1,-1
+63876462727ddf9f05e5cf1c,KUAKE-QTR,-1,-1
+63876462727ddf9f05e5cf1e,The Open Racing Car Simulator,-1,-1
+63876462727ddf9f05e5cf20,CARL,-1,-1
+63876462727ddf9f05e5cf22,ScanObjectNN,-1,-1
+63876462727ddf9f05e5cf24,"UWHVF: A real-world, open source dataset of Humphrey Visual Fields (HVF) from the University of Washington",-1,-1
+63876462727ddf9f05e5cf26,A Turkish-German Bilingual Code-Switching Corpus,-1,-1
+63876462727ddf9f05e5cf28,OCTAGON,-1,-1
+63876462727ddf9f05e5cf2a,Contract Understanding Atticus Dataset,-1,-1
+63876462727ddf9f05e5cf2c,Indiscapes2,-1,-1
+63876462727ddf9f05e5cf2e,Cityscapes,-1,-1
+63876462727ddf9f05e5cf30,Sugar Beets 2016,-1,-1
+63876462727ddf9f05e5cf32,LasVR,-1,-1
+63876462727ddf9f05e5cf34,Worldtree,-1,-1
+63876462727ddf9f05e5cf36,HHOI,-1,-1
+63876462727ddf9f05e5cf38,VITON-Zalando Dataset,-1,-1
+63876462727ddf9f05e5cf3a,CIFAR-100N,-1,-1
+63876462727ddf9f05e5cf3c,Black-box Agent Integration,-1,-1
+63876462727ddf9f05e5cf3e,Neural Cross-Lingual Summarization Corpora,-1,-1
+63876462727ddf9f05e5cf40,Corpus for Entity Resolution in Email Conversations,-1,-1
+63876462727ddf9f05e5cf42,PKU-Reid,-1,-1
+63876462727ddf9f05e5cf44,Chinese Young Children Speech Data,-1,-1
+63876462727ddf9f05e5cf46,Twitter Sentiment Analysis,-1,-1
+63876463727ddf9f05e5cf48,Place Pulse 2.0,-1,-1
+63876463727ddf9f05e5cf4a,RealNews,-1,-1
+63876463727ddf9f05e5cf4c,LRWC,-1,-1
+63876463727ddf9f05e5cf4e,HOPE-Video,-1,-1
+63876463727ddf9f05e5cf50,ANIM,-1,-1
+63876463727ddf9f05e5cf52,CUB Gaze-based Human Attention,-1,-1
+63876463727ddf9f05e5cf54,NumtaDB,-1,-1
+63876463727ddf9f05e5cf56,RUSSE,-1,-1
+63876463727ddf9f05e5cf58,Metaphorical Connections,-1,-1
+63876463727ddf9f05e5cf5a,30MQA,-1,-1
+63876463727ddf9f05e5cf5c,MINTAKA,-1,-1
+63876463727ddf9f05e5cf5e,Cambridge-driving Labeled Video Database,-1,-1
+63876463727ddf9f05e5cf60,Auditory Detection of Sound (ADS),-1,-1
+63876463727ddf9f05e5cf62,FFHQ-Aging,-1,-1
+63876463727ddf9f05e5cf64,Shifts,-1,-1
+63876463727ddf9f05e5cf66,Synbols,-1,-1
+63876463727ddf9f05e5cf68,Scaffold split of SIDER  dataset,-1,-1
+63876463727ddf9f05e5cf6a,mejdi,-1,-1
+63876463727ddf9f05e5cf6c,Multilingual Task-Oriented Semantic Parsing,-1,-1
+63876463727ddf9f05e5cf6e,Friedman1,-1,-1
+63876463727ddf9f05e5cf70,SuspectGuilt Corpus,-1,-1
+63876463727ddf9f05e5cf72,Extended Complex Scene Saliency Dataset,-1,-1
+63876463727ddf9f05e5cf74,Agriculture-Vision,-1,-1
+63876463727ddf9f05e5cf76,VehicleX,-1,-1
+63876463727ddf9f05e5cf78,Silhouettes,-1,-1
+63876463727ddf9f05e5cf7a,Newer College,-1,-1
+63876463727ddf9f05e5cf7c,FlyingThings3D,-1,-1
+63876463727ddf9f05e5cf7e,Nordic Language Identification (DSL),-1,-1
+63876463727ddf9f05e5cf80,孙文迪,-1,-1
+63876463727ddf9f05e5cf82,LC-QuAD 2.0,-1,-1
+63876463727ddf9f05e5cf84,GPI corpus,-1,-1
+63876463727ddf9f05e5cf86,FLEURS: Few-shot Learning Evaluation of Universal Representations of Speech,-1,-1
+63876463727ddf9f05e5cf88,AuxAI,-1,-1
+63876463727ddf9f05e5cf8a,Korean Speech Data,-1,-1
+63876463727ddf9f05e5cf8c,Synthetic Barcode Dataset,-1,-1
+63876463727ddf9f05e5cf8e,MediaEval Benchmarking Initiative for Multimedia Evaluation,-1,-1
+63876463727ddf9f05e5cf90,DLR-ACD,-1,-1
+63876463727ddf9f05e5cf92,adVFed,-1,-1
+63876463727ddf9f05e5cf94,Replication Data for: Crossing the Linguistic Causeway: A Binational Approach for Translating Soundscape Attributes to zsm,-1,-1
+63876463727ddf9f05e5cf96,AllMusic Mood Subset,-1,-1
+63876463727ddf9f05e5cf98,ZeroWaste,-1,-1
+63876463727ddf9f05e5cf9a,Sentence Compression,-1,-1
+63876463727ddf9f05e5cf9c,SmokEng,-1,-1
+63876463727ddf9f05e5cf9e,Naturalistic Music EEG Dataset - Tempo,-1,-1
+63876463727ddf9f05e5cfa0,SegTrack-v2,-1,-1
+63876463727ddf9f05e5cfa2,Single Direct Borohydride Fuel Cell Dataset,-1,-1
+63876463727ddf9f05e5cfa4,"39,993 Images – OCR Data of Internet Image",-1,-1
+63876463727ddf9f05e5cfa6,Mint,-1,-1
+63876463727ddf9f05e5cfa8,RaFD,-1,-1
+63876463727ddf9f05e5cfaa,CODD,-1,-1
+63876463727ddf9f05e5cfac,(Big) Berkeley Instance Recognition Dataset,-1,-1
+63876463727ddf9f05e5cfae,K-EmoCon,-1,-1
+63876463727ddf9f05e5cfb0,MoGaze,-1,-1
+63876463727ddf9f05e5cfb2,Jamendo Corpus,-1,-1
+63876463727ddf9f05e5cfb4,SST,-1,-1
+63876463727ddf9f05e5cfb6,Gazeta,-1,-1
+63876463727ddf9f05e5cfb8,Anime Drawings Dataset,-1,-1
+63876463727ddf9f05e5cfba,TITAN,-1,-1
+63876463727ddf9f05e5cfbc,bFFHQ,-1,-1
+63876463727ddf9f05e5cfbe,CrossRE,-1,-1
+63876463727ddf9f05e5cfc0,CI-AVSR,-1,-1
+63876463727ddf9f05e5cfc2,Richly Annotated Pedestrian,-1,-1
+63876463727ddf9f05e5cfc4,CoSal2015,-1,-1
+63876463727ddf9f05e5cfc6,P-OCT,-1,-1
+63876463727ddf9f05e5cfc8,WikiPII,-1,-1
+63876463727ddf9f05e5cfca,Hateful Memes Challenge,-1,-1
+63876463727ddf9f05e5cfcc,The Spoken Wikipedia Corpora,-1,-1
+63876463727ddf9f05e5cfce,Temple University Hospital (TUH) EEG Corpus,-1,-1
+63876463727ddf9f05e5cfd0,polstance,-1,-1
+63876463727ddf9f05e5cfd2,Urban Night Driving Dataset,-1,-1
+63876463727ddf9f05e5cfd4,Webis-STEREO-21,-1,-1
+63876463727ddf9f05e5cfd6,Interpretable STS,-1,-1
+63876463727ddf9f05e5cfd8,ArtDL,-1,-1
+63876463727ddf9f05e5cfda,PASTRIE,-1,-1
+63876463727ddf9f05e5cfdc,OpenSurfaces,-1,-1
+63876463727ddf9f05e5cfde,SailX,-1,-1
+63876463727ddf9f05e5cfe0,MSRA Text Detection 500 Database,-1,-1
+63876463727ddf9f05e5cfe2,Very Small Lego Image Dataset,-1,-1
+63876463727ddf9f05e5cfe4,THUMOS 2014,-1,-1
+63876463727ddf9f05e5cfe6,TIMIT Acoustic-Phonetic Continuous Speech Corpus,-1,-1
+63876463727ddf9f05e5cfe8,Unsplash Dataset,-1,-1
+63876463727ddf9f05e5cfea,SoloDance,-1,-1
+63876463727ddf9f05e5cfec,Kinetics,-1,-1
+63876463727ddf9f05e5cfee,MultiEURLEX,-1,-1
+63876463727ddf9f05e5cff0,Visual Question Generation,-1,-1
+63876463727ddf9f05e5cff2,KeypointNet,-1,-1
+63876463727ddf9f05e5cff4,Princeton Shape,-1,-1
+63876463727ddf9f05e5cff6,MLe2e,-1,-1
+63876463727ddf9f05e5cff8,Human-Annotated Sense-Disambiguated Word Contexts for Russian,-1,-1
+63876463727ddf9f05e5cffa,IN2LAAMA,-1,-1
+63876463727ddf9f05e5cffc,Queries Annotated with Intent using Weak Supervision,-1,-1
+63876463727ddf9f05e5cffe,TextVQA,-1,-1
+63876463727ddf9f05e5d000,Duolingo STAPLE Shared Task,-1,-1
+63876463727ddf9f05e5d002,XQLFW,-1,-1
+63876463727ddf9f05e5d004,Multi-Spectral Imaging via Computed Tomography,-1,-1
+63876463727ddf9f05e5d006,Animal Matting - 2k,-1,-1
+63876463727ddf9f05e5d008,"CMU CoNaLa, the Code/Natural Language Challenge",-1,-1
+63876463727ddf9f05e5d00a,OCD,-1,-1
+63876463727ddf9f05e5d00c,VizWiz-VQA,-1,-1
+63876463727ddf9f05e5d00e,Date Estimation in the Wild,-1,-1
+63876463727ddf9f05e5d010,Spoken Hate in the Albanian Jargon,-1,-1
+63876463727ddf9f05e5d012,Intersection Drone Dataset,-1,-1
+63876463727ddf9f05e5d014,SRSD-Feynman (Medium set),-1,-1
+63876463727ddf9f05e5d016,Earnings Call,-1,-1
+63876463727ddf9f05e5d018,SpokenSTS,-1,-1
+63876463727ddf9f05e5d01a,"103,282-Images Driver Behavior Annotation Data",-1,-1
+63876463727ddf9f05e5d01c,MultiTHUMOS,-1,-1
+63876463727ddf9f05e5d01e,MMED,-1,-1
+63876463727ddf9f05e5d020,Scholars on Twitter,-1,-1
+63876463727ddf9f05e5d022,V-HICO,-1,-1
+63876463727ddf9f05e5d024,Collaborative European NeuroTrauma Effectiveness Research in TBI,-1,-1
+63876463727ddf9f05e5d026,IAPR TC-12,-1,-1
+63876463727ddf9f05e5d028,methods2test,-1,-1
+63876463727ddf9f05e5d02a,OFDIW,-1,-1
+63876463727ddf9f05e5d02c,Jericho,-1,-1
+63876463727ddf9f05e5d02e,STN Power Line Assets Dataset,-1,-1
+63876463727ddf9f05e5d030,Dataset: Impact Events for Structural Health Monitoring of a Plastic Thin Plate,-1,-1
+63876463727ddf9f05e5d032,ComSum,-1,-1
+63876463727ddf9f05e5d034,LSA64: A Dataset for Argentinian Sign Language,-1,-1
+63876463727ddf9f05e5d036,Intrinsic Images in the Wild,-1,-1
+63876463727ddf9f05e5d038,Photi-LakeIce,-1,-1
+63876463727ddf9f05e5d03a,MPII,-1,-1
+63876463727ddf9f05e5d03c,COSIAN,-1,-1
+63876463727ddf9f05e5d03e,Unconstrained Face Detection Dataset,-1,-1
+63876463727ddf9f05e5d040,LAReQA,-1,-1
+63876463727ddf9f05e5d042,Italian disinformation,-1,-1
+63876463727ddf9f05e5d044,SHape REtrieval Contest,-1,-1
+63876463727ddf9f05e5d046,ISR-UoL 3D Social Activity Dataset,-1,-1
+63876463727ddf9f05e5d048,Apiza Corpus,-1,-1
+63876463727ddf9f05e5d04a,eICU-CRD,-1,-1
+63876463727ddf9f05e5d04c,Deeply Parent-Child vocal interaction,-1,-1
+63876463727ddf9f05e5d04e,Complete Blood Count,-1,-1
+63876463727ddf9f05e5d050,UIT-ViNames,-1,-1
+63876463727ddf9f05e5d052,Generated Debiased NLI Datasets,-1,-1
+63876463727ddf9f05e5d054,Kvasir-Sessile dataset,-1,-1
+63876463727ddf9f05e5d056,Eye Tracking for Everyone,-1,-1
+63876463727ddf9f05e5d058,Chinese Wake-up Words Speech Data by Mobile Phone,-1,-1
+63876463727ddf9f05e5d05a,Mobile Turkish Scene Text,-1,-1
+63876463727ddf9f05e5d05c,"10,000 People - Re-ID Data in Real Surveillance Scenes",-1,-1
+63876463727ddf9f05e5d05e,Replication Data for: Assessment of a Cost-Effective Headphone Calibration Procedure for Soundscape Evaluations,-1,-1
+63876463727ddf9f05e5d060,YUP++,-1,-1
+63876463727ddf9f05e5d062,Makeup Datasets,-1,-1
+63876463727ddf9f05e5d064,CQASUMM,-1,-1
+63876463727ddf9f05e5d066,Unpaired haze images from google images,-1,-1
+63876463727ddf9f05e5d068,Traditional and Context-specific Spam Twitter,-1,-1
+63876463727ddf9f05e5d06a,CADSketchNet,-1,-1
+63876463727ddf9f05e5d06c,Paper Field,-1,-1
+63876463727ddf9f05e5d06e,CRUW,-1,-1
+63876463727ddf9f05e5d070,Wiki-One,-1,-1
+63876463727ddf9f05e5d072,MLDS,-1,-1
+63876463727ddf9f05e5d074,TUM-VIE,-1,-1
+63876463727ddf9f05e5d076,Gait Recognition Data in Surveillance Scenes,-1,-1
+63876463727ddf9f05e5d078,OGB Large-Scale Challenge,-1,-1
+63876463727ddf9f05e5d07a,Audio demo files,-1,-1
+63876463727ddf9f05e5d07c,WikiMovies,-1,-1
+63876463727ddf9f05e5d07e,Traditional Chinese Landscape Painting Dataset,-1,-1
+63876463727ddf9f05e5d080,Atari-HEAD,-1,-1
+63876463727ddf9f05e5d082,Texas (48%/32%/20% fixed splits),-1,-1
+63876463727ddf9f05e5d084,Perception Test,-1,-1
+63876463727ddf9f05e5d086,putEMG,-1,-1
+63876463727ddf9f05e5d088,PEYMA,-1,-1
+63876463727ddf9f05e5d08a,3D motion of chest external markers,-1,-1
+63876463727ddf9f05e5d08c,Proof and Ontology-Generated Question-Answering,-1,-1
+63876463727ddf9f05e5d08e,European Portuguese Speech Data by Mobile Phone,-1,-1
+63876463727ddf9f05e5d090,CompGuessWhat?!,-1,-1
+63876463727ddf9f05e5d092,BugRepo,-1,-1
+63876463727ddf9f05e5d094,Ontology representation for a data set of cation-coordinated conformers of 20 proteinogenic amino acids,-1,-1
+63876463727ddf9f05e5d096,BLVD,-1,-1
+63876463727ddf9f05e5d098,RxR,-1,-1
+63876464727ddf9f05e5d09a,Tuan Dung nguyen,-1,-1
+63876464727ddf9f05e5d09c,343 People- Spanish Speech Data by Mobile Phone_Guiding,-1,-1
+63876464727ddf9f05e5d09e,VitaminC Robust Fact Verification,-1,-1
+63876464727ddf9f05e5d0a0,SHREC,-1,-1
+63876464727ddf9f05e5d0a2,NNE,-1,-1
+63876464727ddf9f05e5d0a4,NTIRE 2021 HDR,-1,-1
+63876464727ddf9f05e5d0a6,JDDC 2.0,-1,-1
+63876464727ddf9f05e5d0a8,A ground-truth dataset to identify bots in GitHub,-1,-1
+63876464727ddf9f05e5d0aa,Expressive Gaussian mixture models for high-dimensional statistical modelling: simulated data and neural network model files,-1,-1
+63876464727ddf9f05e5d0ac,CUGE,-1,-1
+63876464727ddf9f05e5d0ae,GEN1 Detection,-1,-1
+63876464727ddf9f05e5d0b0,Glass Transition Temperature,-1,-1
+63876464727ddf9f05e5d0b2,Credibility Factors 2020,-1,-1
+63876464727ddf9f05e5d0b4,HYouTube,-1,-1
+63876464727ddf9f05e5d0b6,VIPeR,-1,-1
+63876464727ddf9f05e5d0b8,UR-FUNNY,-1,-1
+63876464727ddf9f05e5d0ba,DDPM,-1,-1
+63876464727ddf9f05e5d0bc,Alexa Domains,-1,-1
+63876464727ddf9f05e5d0be,WHU-RS19,-1,-1
+63876464727ddf9f05e5d0c0,PIC,-1,-1
+63876464727ddf9f05e5d0c2,Thin_Film_head_relevant_Patent_Annotated_Dataset,-1,-1
+63876464727ddf9f05e5d0c4,PS5k,-1,-1
+63876464727ddf9f05e5d0c6,DAGM2007,-1,-1
+63876464727ddf9f05e5d0c8,MultiCoNER,-1,-1
+63876464727ddf9f05e5d0ca,MUAD,-1,-1
+63876464727ddf9f05e5d0cc,nicolingua-0003-west-african-radio-corpus,-1,-1
+63876464727ddf9f05e5d0ce,AI-TOD,-1,-1
+63876464727ddf9f05e5d0d0,MSR-VTT,-1,-1
+63876464727ddf9f05e5d0d2,PANACEA,-1,-1
+63876464727ddf9f05e5d0d4,ADIMA,-1,-1
+63876464727ddf9f05e5d0d6,Toronto-3D,-1,-1
+63876464727ddf9f05e5d0d8,MEIR,-1,-1
+63876464727ddf9f05e5d0da,GenWiki,-1,-1
+63876464727ddf9f05e5d0dc,BSTLD,-1,-1
+63876464727ddf9f05e5d0de,MM-WHS 2017,-1,-1
+63876464727ddf9f05e5d0e0,SpaceNet 2: Building Detection v2,-1,-1
+63876464727ddf9f05e5d0e2,UCSD Anomaly Detection Dataset,-1,-1
+63876464727ddf9f05e5d0e4,WSC,-1,-1
+63876464727ddf9f05e5d0e6,Free Universal Sound Separation,-1,-1
+63876464727ddf9f05e5d0e8,505 Hours - Uyghur Colloquial Video Speech Data,-1,-1
+63876464727ddf9f05e5d0ea,Challenge on Learned Image Compression,-1,-1
+63876464727ddf9f05e5d0ec,20 Newsgroups,-1,-1
+63876464727ddf9f05e5d0ee,Libri-Adapt,-1,-1
+63876464727ddf9f05e5d0f0,UCF-CC-50,-1,-1
+63876464727ddf9f05e5d0f2,DGTA-Cattle,-1,-1
+63876464727ddf9f05e5d0f4,Gender-biased FFHQ dataset,-1,-1
+63876464727ddf9f05e5d0f6,JAAD,-1,-1
+63876464727ddf9f05e5d0f8,Autorickshaw Image Dataset | Niche Vehicle Dataset,-1,-1
+63876464727ddf9f05e5d0fa,CAT2000,-1,-1
+63876464727ddf9f05e5d0fc,AdobeVFR syn,-1,-1
+63876464727ddf9f05e5d0fe,Planar Object Tracking in the Wild: A Benchmark,-1,-1
+63876464727ddf9f05e5d100,TMED,-1,-1
+63876464727ddf9f05e5d102,SenseReID,-1,-1
+63876464727ddf9f05e5d104,EDUB-Seg,-1,-1
+63876464727ddf9f05e5d106,OpenViDial 2.0,-1,-1
+63876464727ddf9f05e5d108,Independent benchmark images and matched scans v1,-1,-1
+63876464727ddf9f05e5d10a,American Children Speech Data by Microphone,-1,-1
+63876464727ddf9f05e5d10c,The China Physiological Signal Challenge 2018,-1,-1
+63876464727ddf9f05e5d10e,Multiperson Pose Test Set in 3DMulti-person Pose estimation Test Set in 3D,-1,-1
+63876464727ddf9f05e5d110,Squirrel (48%/32%/20% fixed splits),-1,-1
+63876464727ddf9f05e5d112,Math23K for Math Word Problem Solving,-1,-1
+63876464727ddf9f05e5d114,flower_photos,-1,-1
+63876464727ddf9f05e5d116,Fongbe  audio,-1,-1
+63876464727ddf9f05e5d118,Lyft Level 5 Prediction,-1,-1
+63876464727ddf9f05e5d11a,Kinetics Human Action Video Dataset,-1,-1
+63876464727ddf9f05e5d11c,LIT-PCBA(ALDH1),-1,-1
+63876464727ddf9f05e5d11e,Billboard in Japanese Streetscapes,-1,-1
+63876464727ddf9f05e5d120,Composing Actions from Language and Vision,-1,-1
+63876464727ddf9f05e5d122,Grep-BiasIR,-1,-1
+63876464727ddf9f05e5d124,Telegraphic Summaries,-1,-1
+63876464727ddf9f05e5d126,RCB,-1,-1
+63876464727ddf9f05e5d128,ASD,-1,-1
+63876464727ddf9f05e5d12a,Multispectral Latex Mask based Video Face Presentation Attack,-1,-1
+63876464727ddf9f05e5d12c,Asian Face Age Dataset,-1,-1
+63876464727ddf9f05e5d12e,"Security of Alerting Authorities in the WWW: Measuring Namespaces, DNSSEC, and Web PKI",-1,-1
+63876464727ddf9f05e5d130,PeMSD8,-1,-1
+63876464727ddf9f05e5d132,RegDB-C,-1,-1
+63876464727ddf9f05e5d134,Norwegian Endurance Athlete ECG Database,-1,-1
+63876464727ddf9f05e5d136,BOBSL,-1,-1
+63876464727ddf9f05e5d138,Interestingness,-1,-1
+63876464727ddf9f05e5d13a,ERATO,-1,-1
+63876464727ddf9f05e5d13c,French Belgian Sign Language Datasets,-1,-1
+63876464727ddf9f05e5d13e,Hard and Soft Skill Extraction from English Job Postings,-1,-1
+63876464727ddf9f05e5d140,Suitcase/Luggage Dataset Indoor Object Image,-1,-1
+63876464727ddf9f05e5d142,Semantic Parsing in Context,-1,-1
+63876464727ddf9f05e5d144,RobustBench,-1,-1
+63876464727ddf9f05e5d146,CMU Motion Capture,-1,-1
+63876464727ddf9f05e5d148,AND Dataset,-1,-1
+63876464727ddf9f05e5d14a,Synthetic Keystroke,-1,-1
+63876464727ddf9f05e5d14c,HM3D,-1,-1
+63876464727ddf9f05e5d14e,Amazon-Fraud,-1,-1
+63876464727ddf9f05e5d150,datacluster.ai,-1,-1
+63876464727ddf9f05e5d152,EasyCall,-1,-1
+63876464727ddf9f05e5d154,NQuAD,-1,-1
+63876464727ddf9f05e5d156,GAP,-1,-1
+63876464727ddf9f05e5d158,LiMiT,-1,-1
+63876464727ddf9f05e5d15a,TRECVID-AVS17 (IACC.3),-1,-1
+63876464727ddf9f05e5d15c,Griddly,-1,-1
+63876464727ddf9f05e5d15e,LAMBADA,-1,-1
+63876464727ddf9f05e5d160,OpenAI Gym,-1,-1
+63876464727ddf9f05e5d162,SEmantic Salient Instance Video,-1,-1
+63876464727ddf9f05e5d164,CAP,-1,-1
+63876464727ddf9f05e5d166,VLEP,-1,-1
+63876464727ddf9f05e5d168,Signal Propagation Analyses in V2X Ecosystems (S.P.A.V.E) at 28 GHz on the NSF POWDER testbed,-1,-1
+63876464727ddf9f05e5d16a,Near-Collision,-1,-1
+63876464727ddf9f05e5d16c,MIZAN,-1,-1
+63876464727ddf9f05e5d16e,West African Virtual Assistant Speech Recognition Corpus,-1,-1
+63876464727ddf9f05e5d170,CogText,-1,-1
+63876464727ddf9f05e5d172,Countix-AV,-1,-1
+63876464727ddf9f05e5d174,DSTC7 Task 1,-1,-1
+63876464727ddf9f05e5d176,Semeion,-1,-1
+63876464727ddf9f05e5d178,TIM-Tremor,-1,-1
+63876464727ddf9f05e5d17a,Adobe Visual Font Recognition synthetic dataset,-1,-1
+63876464727ddf9f05e5d17c,Diagnosis of COVID-19 and its clinical spectrum,-1,-1
+63876464727ddf9f05e5d17e,Freiburg Lighting Adaptable Map Tracking,-1,-1
+63876464727ddf9f05e5d180,Text-to-3D House Model,-1,-1
+63876464727ddf9f05e5d182,BiasCorp,-1,-1
+63876464727ddf9f05e5d184,TRECVID-AVS20 (V3C1),-1,-1
+63876464727ddf9f05e5d186,Image Caption Quality Dataset,-1,-1
+63876464727ddf9f05e5d188,Crello,-1,-1
+63876464727ddf9f05e5d18a,JSS Dataset,-1,-1
+63876464727ddf9f05e5d18c,CAS-VSR-W1k (LRW-1000),-1,-1
+63876464727ddf9f05e5d18e,Netflix Prize,-1,-1
+63876464727ddf9f05e5d190,Cluttered Omniglot,-1,-1
+63876464727ddf9f05e5d192,SuperMUDI,-1,-1
+63876464727ddf9f05e5d194,NWPU-Crowd,-1,-1
+63876464727ddf9f05e5d196,Oxford5k,-1,-1
+63876464727ddf9f05e5d198,Freiburg Terrains,-1,-1
+63876464727ddf9f05e5d19a,BookSum,-1,-1
+63876464727ddf9f05e5d19c,Who’s Waldo,-1,-1
+63876464727ddf9f05e5d19e,JW300,-1,-1
+63876464727ddf9f05e5d1a0,Action Genome Question Answering,-1,-1
+63876464727ddf9f05e5d1a2,The LJ Speech Dataset,-1,-1
+63876464727ddf9f05e5d1a4,CrossMoDA,-1,-1
+63876464727ddf9f05e5d1a6,Persian Question Answering Dataset,-1,-1
+63876464727ddf9f05e5d1a8,Oximeter Image Dataset | Medical Device Reading,-1,-1
+63876464727ddf9f05e5d1aa,240 Hours - Hindi Speech Data by Mobile Phone_R,-1,-1
+63876464727ddf9f05e5d1ac,WordNet Language Model Probing,-1,-1
+63876464727ddf9f05e5d1ae,AMiner,-1,-1
+63876464727ddf9f05e5d1b0,Taskmaster-1,-1,-1
+63876464727ddf9f05e5d1b2,MeltingTemp,-1,-1
+63876464727ddf9f05e5d1b4,Motion Capture with Actions,-1,-1
+63876464727ddf9f05e5d1b6,Notre-Dame Cathedral Fire,-1,-1
+63876464727ddf9f05e5d1b8,12 Scenes,-1,-1
+63876464727ddf9f05e5d1ba,MuTual,-1,-1
+63876464727ddf9f05e5d1bc,ParaCrawl,-1,-1
+63876464727ddf9f05e5d1be,Replication Data for: Do uHear? Validation of uHear App for Preliminary Screening of Hearing Ability in Soundscape Studies,-1,-1
+63876464727ddf9f05e5d1c0,NAIST COVID,-1,-1
+63876464727ddf9f05e5d1c2,SIMMC,-1,-1
+63876464727ddf9f05e5d1c4,"828,599 Images – Vehicle Re-ID Data in Surveillance Scenes",-1,-1
+63876464727ddf9f05e5d1c6,Fishnet Open Images,-1,-1
+63876464727ddf9f05e5d1c8,Edge-Map-345C,-1,-1
+63876464727ddf9f05e5d1ca,Chest ImaGenome,-1,-1
+63876464727ddf9f05e5d1cc,UCF101-24,-1,-1
+63876464727ddf9f05e5d1ce,SoccerData,-1,-1
+63876464727ddf9f05e5d1d0,SoccerNet,-1,-1
+63876464727ddf9f05e5d1d2,Microsoft Common Objects in Context,-1,-1
+63876464727ddf9f05e5d1d4,O-HAZE,-1,-1
+63876464727ddf9f05e5d1d6,MiniHack,-1,-1
+63876464727ddf9f05e5d1d8,Workplace Sexual Harassment,-1,-1
+63876464727ddf9f05e5d1da,Motion Analysis and Re-identification Set,-1,-1
+63876464727ddf9f05e5d1dc,Large Scale  Underwater Image Dataset,-1,-1
+63876464727ddf9f05e5d1de,PolarRR,-1,-1
+63876464727ddf9f05e5d1e0,PFN-VT,-1,-1
+63876464727ddf9f05e5d1e2,EigenWorms,-1,-1
+63876464727ddf9f05e5d1e4,Apple Scab in the Early Stage of Development,-1,-1
+63876464727ddf9f05e5d1e6,RMRC 2014,-1,-1
+63876464727ddf9f05e5d1e8,NBA dataset for Sports Video Analysis,-1,-1
+63876464727ddf9f05e5d1ea,R2VQ,-1,-1
+63876464727ddf9f05e5d1ec,Paraphrase Questions - decaNLP,-1,-1
+63876464727ddf9f05e5d1ee,EXPLICIT 3D CHANGE DETECTION USING RAY-TRACING IN SPHERICAL COORDINATES,-1,-1
+63876464727ddf9f05e5d1f0,AMASS,-1,-1
+63876464727ddf9f05e5d1f2,NAS Dataset for DIP,-1,-1
+63876464727ddf9f05e5d1f4,DADA-2000,-1,-1
+63876465727ddf9f05e5d1f6,RUSS Dataset,-1,-1
+63876465727ddf9f05e5d1f8,Adressa,-1,-1
+63876465727ddf9f05e5d1fa,HErlev Pap Smear Dataset,-1,-1
+63876465727ddf9f05e5d1fc,Imagenette,-1,-1
+63876465727ddf9f05e5d1fe,CMU Movie Summary Corpus with Events,-1,-1
+63876465727ddf9f05e5d200,Human Deictic Gestures Dataset,-1,-1
+63876465727ddf9f05e5d202,XQA,-1,-1
+63876465727ddf9f05e5d204,Samoa Measles Outbreak 2019,-1,-1
+63876465727ddf9f05e5d206,Freiburg Across Seasons,-1,-1
+63876465727ddf9f05e5d208,Oracle-MNIST: a Realistic Image Dataset for Benchmarking Machine Learning Algorithms,-1,-1
+63876465727ddf9f05e5d20a,MultiSenti,-1,-1
+63876465727ddf9f05e5d20c,Numenta Anomaly Benchmark,-1,-1
+63876465727ddf9f05e5d20e,NDD20,-1,-1
+63876465727ddf9f05e5d210,Symmetry-OOD,-1,-1
+63876465727ddf9f05e5d212,IMDb-Face,-1,-1
+63876465727ddf9f05e5d214,GLips,-1,-1
+63876465727ddf9f05e5d216,Polyvore Outfits,-1,-1
+63876465727ddf9f05e5d218,MIT Traffic,-1,-1
+63876465727ddf9f05e5d21a,WWW Crowd,-1,-1
+63876465727ddf9f05e5d21c,San Francisco eXtra Large test v1,-1,-1
+63876465727ddf9f05e5d21e,Video-to-Commonsense,-1,-1
+63876465727ddf9f05e5d220,LPW,-1,-1
+63876465727ddf9f05e5d222,STACKEX,-1,-1
+63876465727ddf9f05e5d224,HumanMT,-1,-1
+63876465727ddf9f05e5d226,Custom FINNgers,-1,-1
+63876465727ddf9f05e5d228,DVS128 Gesture,-1,-1
+63876465727ddf9f05e5d22a,SOSD,-1,-1
+63876465727ddf9f05e5d22c,Blackout Poetry Dataset,-1,-1
+63876465727ddf9f05e5d22e,Unmanned Aerial Vehicle Benchmark Object Detection and Tracking,-1,-1
+63876465727ddf9f05e5d230,Real-World Human Annotations,-1,-1
+63876465727ddf9f05e5d232,RGZ EMU: Semantic Taxonomy,-1,-1
+63876465727ddf9f05e5d234,WALT,-1,-1
+63876465727ddf9f05e5d236,Spanish Conversational Speech Data,-1,-1
+63876465727ddf9f05e5d238,ParaQA,-1,-1
+63876465727ddf9f05e5d23a,OTB,-1,-1
+63876465727ddf9f05e5d23c,"Cross-cultural pop song mood ratings (US, KR, BR)",-1,-1
+63876465727ddf9f05e5d23e,WikiQAar,-1,-1
+63876465727ddf9f05e5d240,Parsing Time Normalizations,-1,-1
+63876465727ddf9f05e5d242,KoNViD-1k,-1,-1
+63876465727ddf9f05e5d244,ViTT,-1,-1
+63876465727ddf9f05e5d246,iDesigner,-1,-1
+63876465727ddf9f05e5d248,Multi-XScience,-1,-1
+63876465727ddf9f05e5d24a,BDD100K-weather(OOD Setting),-1,-1
+63876465727ddf9f05e5d24c,NAS-Bench-201,-1,-1
+63876465727ddf9f05e5d24e,CocoChorales,-1,-1
+63876465727ddf9f05e5d250,849 Hours – Mandarin Interactive Speech Data by Mobile Phone,-1,-1
+63876465727ddf9f05e5d252,Spoken Language Understanding Evaluation,-1,-1
+63876465727ddf9f05e5d254,Pollen et al,-1,-1
+63876465727ddf9f05e5d256,LibriCSS,-1,-1
+63876465727ddf9f05e5d258,D3,-1,-1
+63876465727ddf9f05e5d25a,Sintel 4D LFV,-1,-1
+63876465727ddf9f05e5d25c,Car Learning to Act,-1,-1
+63876465727ddf9f05e5d25e,TUT Rare Sound Events 2017,-1,-1
+63876465727ddf9f05e5d260,L3CubeMahaSent,-1,-1
+63876465727ddf9f05e5d262,Human Optical Flow,-1,-1
+63876465727ddf9f05e5d264,LEAKAGE-PERSONA Dataset,-1,-1
+63876465727ddf9f05e5d266,FluencyBank,-1,-1
+63876465727ddf9f05e5d268,WikiSQL,-1,-1
+63876465727ddf9f05e5d26a,Wikipedia Person and Animal Dataset,-1,-1
+63876465727ddf9f05e5d26c,RITEyes,-1,-1
+63876465727ddf9f05e5d26e,BCNB,-1,-1
+63876465727ddf9f05e5d270,Scaffold split of Tox21  dataset,-1,-1
+63876465727ddf9f05e5d272,Simitate,-1,-1
+63876465727ddf9f05e5d274,Call for Customized Conversation: Customized Conversation Grounding Persona and Knowledge,-1,-1
+63876465727ddf9f05e5d276,EmailSum,-1,-1
+63876465727ddf9f05e5d278,QA-SRL,-1,-1
+63876465727ddf9f05e5d27a,SILICONE,-1,-1
+63876465727ddf9f05e5d27c,Lorenz Dataset,-1,-1
+63876465727ddf9f05e5d27e,Legal Documents Entity Recognition,-1,-1
+63876465727ddf9f05e5d280,TextWorld KG,-1,-1
+63876465727ddf9f05e5d282,ComQA,-1,-1
+63876465727ddf9f05e5d284,ssTEM,-1,-1
+63876465727ddf9f05e5d286,Vehicle-Rear,-1,-1
+63876465727ddf9f05e5d288,Draper VDisc Dataset,-1,-1
+63876465727ddf9f05e5d28a,ActorShift,-1,-1
+63876465727ddf9f05e5d28c,CARRADA,-1,-1
+63876465727ddf9f05e5d28e,"26.1 Hours - Chinese Mandarin Synthesis Corpus-Female, Customer Service",-1,-1
+63876465727ddf9f05e5d290,ISIC 2018 Task 2,-1,-1
+63876465727ddf9f05e5d292,KELM,-1,-1
+63876465727ddf9f05e5d294,AirSim,-1,-1
+63876465727ddf9f05e5d296,Scientific statement classification dataset from arXMLiv 08.2018,-1,-1
+63876465727ddf9f05e5d298,ViHSD,-1,-1
+63876465727ddf9f05e5d29a,Airline Travel Information Systems,-1,-1
+63876465727ddf9f05e5d29c,Multi-exposure image fusion,-1,-1
+63876465727ddf9f05e5d29e,"5,199 People – 3D Face Recognition Images Data",-1,-1
+63876465727ddf9f05e5d2a0,Delicious,-1,-1
+63876465727ddf9f05e5d2a2,Off_Distant_parallel,-1,-1
+63876465727ddf9f05e5d2a4,MedleyDB 2.0,-1,-1
+63876465727ddf9f05e5d2a6,Real Blur Dataset,-1,-1

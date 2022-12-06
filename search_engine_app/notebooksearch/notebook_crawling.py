@@ -172,7 +172,7 @@ class KaggleNotebookCrawler:
         else: 
             return True   
 
-    def check_log(self, df, log_file):
+    def check_log(self, df, log_file, check_columns):
         ''' Check the log and return new records NOT contained in the log. 
         Args: 
             - df: DataFrame. 
@@ -188,8 +188,11 @@ class KaggleNotebookCrawler:
             print(e) 
             df_log = pd.DataFrame(columns=df.columns)
         
-        merged = df.merge(df_log, how='left', indicator=True)
-        new_records = merged[merged['_merge'] == 'left_only'].drop(columns=['_merge'])
+        merged = df.merge(df_log, how='left', on=check_columns, indicator=True, suffixes=['', '_DROP'])
+        # new_records = merged[merged['_merge'] == 'left_only'].drop(columns=['_merge'])
+
+        drop_columns = [col for col in merged.columns if '_DROP' in col]
+        new_records = merged[merged['_merge'] == 'left_only'][df.columns]
         new_records.reset_index(inplace=True, drop=True)
         return new_records
 
@@ -216,12 +219,17 @@ class KaggleNotebookCrawler:
         '''' Search for notebooks '''
         df_queries = self.df_queries
         # Read notebook search logs and filter out the new notbooks to download
-        temp = self.check_log(df_queries, self.SEARCH_LOG_FILE)
+        temp = self.check_log(df_queries, self.SEARCH_LOG_FILE, ['query'])
         # Then check the no record log, not to search for queries that do not have records
-        new_queries = self.check_log(temp, self.SEARCH_NO_RECORD_FILE)
+        new_queries = self.check_log(temp, self.SEARCH_NO_RECORD_FILE, ['query'])
+
         print(f'--------------------------- {len(new_queries)} new Queries --------------------------------')
         print(f'{new_queries}')
         print(f'----------------------------------------------------------------------------\n\n')
+
+        if new_queries.empty: 
+            print(f'Seach task has been finished!')
+            return True
 
         df_notebooks = pd.DataFrame()
         df_no_records = pd.DataFrame()
@@ -242,22 +250,8 @@ class KaggleNotebookCrawler:
             # To save the memory, we write the searching results to disk for every 10 queries 
             if (i+1)%10 == 0 or i+1 == len(new_queries): 
                 self.update_log(df_no_records, self.SEARCH_NO_RECORD_FILE)
-                search_all = self.update_log(df_notebooks, self.SEARCH_LOG_FILE)
                 # Update notebook search logs
-                # try: 
-                #     search_logs = pd.read_csv(self.SEARCH_LOG_FILE)
-                # except Exception as e:
-                #     print(e) 
-                #     search_logs = pd.DataFrame(columns=df_notebooks.columns)
-
-                # if df_notebooks.empty: 
-                #     search_all = search_logs
-                # else: 
-                #     search_all = search_logs.merge(df_notebooks, how='outer')
-                # search_all.drop_duplicates(inplace=True)
-
-                # search_all.to_csv(self.SEARCH_LOG_FILE, index=False)
-
+                search_all = self.update_log(df_notebooks, self.SEARCH_LOG_FILE)
                 end = time.time()
                 print(f'>>>>> Saving {len(df_notebooks)} searching results to disk...')
                 print(f'>>>>> Time elapsed: {str(timedelta(seconds=int(end-start)))}\n\n')
@@ -270,9 +264,9 @@ class KaggleNotebookCrawler:
     def bulk_download(self, df_notebooks): 
         ''' Download a bunch of notebooks specified inside `df_notebooks`'''
         # Read notebook download logs and filter out the new notbooks to download
-        temp = self.check_log(df_notebooks, self.DOWNLOAD_LOG_FILE)
+        temp = self.check_log(df_notebooks, self.DOWNLOAD_LOG_FILE, ['kernel_ref'])
         # Then check the no record logs to eliminate kernel_ref that has been failed to download. 
-        new_notebooks = self.check_log(temp, self.DOWNLOAD_NO_RECORD_FILE)
+        new_notebooks = self.check_log(temp, self.DOWNLOAD_NO_RECORD_FILE, ['kernel_ref'])
         print(f'--------------------------- {len(new_notebooks)} new Notebooks --------------------------------')
         print(f'{new_notebooks}')
         print(f'----------------------------------------------------------------------------\n\n')
@@ -299,21 +293,6 @@ class KaggleNotebookCrawler:
                 # Update notebook download logs for every 100 notebooks
                 self.update_log(df_no_records, self.DOWNLOAD_NO_RECORD_FILE)
                 download_all = self.update_log(downloaded_notebooks, self.DOWNLOAD_LOG_FILE)
-                # try: 
-                #     download_logs = pd.read_csv(self.DOWNLOAD_LOG_FILE)
-                # except Exception as e:
-                #     print(e) 
-                #     download_logs = pd.DataFrame(columns=downloaded_notebooks.columns)
-
-                # print(f'downloaded_notebooks.empty: {downloaded_notebooks.empty}')
-                
-                # if downloaded_notebooks.empty: 
-                #     download_all = download_logs
-                # else: 
-                #     download_all = download_logs.merge(downloaded_notebooks, how='outer')
-                # download_all.drop_duplicates(inplace=True)
-                # # Save notebook names, IDs etc to .csv file. 
-                # download_all.to_csv(self.DOWNLOAD_LOG_FILE, index=False)
                 end = time.time()
                 print(f'\n\n>>>>> Saving {len(downloaded_notebooks)} downloaded results to disk...')
                 print(f'>>>>> Time elapsed: {str(timedelta(seconds=int(end-start)))}\n\n')
@@ -370,10 +349,10 @@ def crawl_kaggle_notebooks(QUERY_FILE, page_range, task=None, re_search=False):
         return False
 
     DOWNLOAD_PATH = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/PWC/')
-    DOWNLOAD_LOG_FILE = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/logs/pwc_download_log.csv')
-    SEARCH_LOG_FILE = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/logs/pwc_search_log.csv')
-    SEARCH_NO_RECORD_FILE = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/logs/pwc_search_no_record.csv')
-    DOWNLOAD_NO_RECORD_FILE = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/logs/pwc_download_no_record.csv')
+    DOWNLOAD_LOG_FILE = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/PWC_logs/pwc_download_log.csv')
+    SEARCH_LOG_FILE = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/PWC_logs/pwc_search_log.csv')
+    SEARCH_NO_RECORD_FILE = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/PWC_logs/pwc_search_no_record.csv')
+    DOWNLOAD_NO_RECORD_FILE = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/PWC_logs/pwc_download_no_record.csv')
 
     # Read queries
     df_queries = pd.DataFrame(pd.read_csv(QUERY_FILE)['query'])
@@ -404,8 +383,8 @@ def main():
     # PWC_PATH = os.path.join(os.getcwd(), 'notebooksearch/Queries')
     # generate_pwc_queries(PWC_PATH)
     
-    QUERY_FILE = os.path.join(os.getcwd(), 'notebooksearch/Queries/search_task_1.csv')
-    crawl_kaggle_notebooks(QUERY_FILE, page_range=10, task='search', re_search=False)
+    QUERY_FILE = os.path.join(os.getcwd(), 'notebooksearch/Queries/search_task_2.csv')
+    crawl_kaggle_notebooks(QUERY_FILE, page_range=10, task='crawl', re_search=False)
     return True
 
 if __name__ == '__main__':

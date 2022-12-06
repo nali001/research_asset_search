@@ -43,3 +43,5 @@ temp/
 
 .env
 nohup.out
+
+*.output

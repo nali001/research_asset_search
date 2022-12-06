@@ -4,13 +4,25 @@
 # please navigate to corresponding folder that you want to upload data 
 # and then use the relevant commands in this file to transfer data
 
-# 1. 
-# Source: search_engine_app/notebooksearch/Raw_notebooks/
+# 1.1 
+# Source: search_engine_app/notebooksearch/Raw_notebooks/Kaggle
 # Destination: /home/notebook_search_docker/Raw_notebooks
 zip -r ./search_engine_app/notebooksearch/Raw_notebooks/Kaggle.zip ./search_engine_app/notebooksearch/Raw_notebooks/Kaggle
-mkdir ./temp ./temp/logs
+mkdir ./temp ./temp/Kaggle_logs
 mv ./search_engine_app/notebooksearch/Raw_notebooks/Kaggle.zip ./temp
-cp ./search_engine_app/notebooksearch/Raw_notebooks/logs/*.csv ./temp/logs
+cp ./search_engine_app/notebooksearch/Raw_notebooks/logs/*.csv ./temp/Kaggle_logs
+rclone copy ./temp na_surf:notebook_search_docker/Raw_notebooks/  --progress
+rm -dr ./temp
+
+
+# 1.2
+# Source: search_engine_app/notebooksearch/Raw_notebooks/PWC
+# Destination: /home/notebook_search_docker/Raw_notebooks
+version=03
+zip -r ./search_engine_app/notebooksearch/Raw_notebooks/PWC_${version}.zip ./search_engine_app/notebooksearch/Raw_notebooks/PWC
+mkdir ./temp ./temp/PWC_logs_${version}
+mv ./search_engine_app/notebooksearch/Raw_notebooks/PWC_${version}.zip ./temp
+cp ./search_engine_app/notebooksearch/Raw_notebooks/PWC_logs/*.csv ./temp/PWC_logs_${version}
 rclone copy ./temp na_surf:notebook_search_docker/Raw_notebooks/  --progress
 rm -dr ./temp
 
@@ -34,4 +46,6 @@ rclone copy ./notebookcrawler/DB_exports/ na_surf:notebook_search_docker/noteboo
 # Source: notebookcrawler/Queries/
 # Destination: /home/notebook_search_docker/notebookcrawler/Queries/
 rclone copy ./notebookcrawler/Queries/ na_surf:notebook_search_docker/notebookcrawler/Queries/ --progress
+
+
 
