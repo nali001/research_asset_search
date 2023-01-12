@@ -218,6 +218,9 @@ Please refer to `es_backup.sh`.
 ------------------------------------------------------------------------------------------------------
 ## Framework Design Philosophy 
 
+### Functional modules
+![Functional modules](readme/functional_modules.png)
+
 ### High-level structure 
 ![high-level structure](readme/high_level_structure.png)
 

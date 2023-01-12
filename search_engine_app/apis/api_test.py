@@ -98,7 +98,7 @@ def post_notebook_search(api_endpoint, api_config):
     query = 'explosion'
     url = api_endpoint + "notebook_search/"
     params = {
-        "page": "1",
+        "page": "3",
         "query": query,
         "filter": "",
         "facet": "",
@@ -116,7 +116,7 @@ def post_notebook_search(api_endpoint, api_config):
     hits = response.json()
     results = hits['results']
     print('------------------------ First 10 of notebook results -----------------------\n')
-    for i in range(min(len(results), 10)): 
+    for i in range(min(len(results), 100)): 
         pprint(results[i]['name'])
     print('----------------------------------------------------------------------------\n')
     return hits
@@ -238,10 +238,10 @@ def relevancy_feedback(api_endpoint, api_config):
     ''' test query generation API with `POST` method
     '''
     url = api_endpoint + "relevancy_feedback/"
-    client_id = 'Old man never lies'
+    client_id = 'API test'
     event = "relevancy_feedback"
     query = "bird"
-    num_stars = 4
+    num_stars = 0
     hits = get_notebook_search(api_endpoint, api_config)
     notebook = hits["results"][0]
     annotated_notebook = {}
@@ -271,7 +271,7 @@ def test(api_endpoint, api_config):
 
 
 if __name__ == "__main__": 
-    server = 'LOCAL'
+    server = 'ONLINE'
     api_endpoint = locals()[server + '_API_ENDPOINT']
     api_config = locals()[server + '_API_CONFIG']
     # print(api_config)
@@ -279,8 +279,8 @@ if __name__ == "__main__":
     # obatain_api_token(api_endpoint)
     # test_api_token(api_endpoint, api_config)
     # get_notebook_search(api_endpoint, api_config)
-    # post_notebook_search(api_endpoint, api_config)
-    get_notebook_download(api_endpoint, api_config)
+    post_notebook_search(api_endpoint, api_config)
+    # get_notebook_download(api_endpoint, api_config)
     # post_notebook_download(api_endpoint, api_config)
     # query_generation(api_endpoint, api_config)
     # context_search(api_endpoint, api_config)

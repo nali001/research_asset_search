@@ -18,7 +18,7 @@ rm -dr ./temp
 # 1.2
 # Source: search_engine_app/notebooksearch/Raw_notebooks/PWC
 # Destination: /home/notebook_search_docker/Raw_notebooks
-version=03
+version=11
 zip -r ./search_engine_app/notebooksearch/Raw_notebooks/PWC_${version}.zip ./search_engine_app/notebooksearch/Raw_notebooks/PWC
 mkdir ./temp ./temp/PWC_logs_${version}
 mv ./search_engine_app/notebooksearch/Raw_notebooks/PWC_${version}.zip ./temp

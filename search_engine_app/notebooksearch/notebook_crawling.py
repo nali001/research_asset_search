@@ -383,8 +383,11 @@ def main():
     # PWC_PATH = os.path.join(os.getcwd(), 'notebooksearch/Queries')
     # generate_pwc_queries(PWC_PATH)
     
-    QUERY_FILE = os.path.join(os.getcwd(), 'notebooksearch/Queries/search_task_2.csv')
-    crawl_kaggle_notebooks(QUERY_FILE, page_range=10, task='crawl', re_search=False)
+    QUERY_FILE = os.path.join(os.getcwd(), 'notebooksearch/Queries/search_task_9.csv')
+    tasks = ['search', 'crawl']
+    for task in tasks: 
+        crawl_kaggle_notebooks(QUERY_FILE, page_range=10, task=task, re_search=False)
+        crawl_kaggle_notebooks(QUERY_FILE, page_range=10, task=task, re_search=False)
     return True
 
 if __name__ == '__main__':
