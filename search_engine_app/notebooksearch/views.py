@@ -13,7 +13,7 @@ def notebook_search_view(request):
     '''
     query_data = request.GET
     print(query_data)
-    index_name = "kaggle_notebooks"
+    index_name = "kaggle_online"
     searcher = notebook_retrieval.NotebookRetriever(query_data, index_name)
     results = searcher.retrieve_notebooks()
     # searcher = genericsearch.Genericsearch(request, es, index_name)

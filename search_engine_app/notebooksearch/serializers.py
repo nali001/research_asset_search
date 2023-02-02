@@ -9,6 +9,7 @@ from drf_writable_nested.serializers import WritableNestedModelSerializer
 from notebooksearch.models import UserProfile
 from notebooksearch.models import NotebookSearchParam
 from notebooksearch.models import NotebookSearchLog
+from notebooksearch.models import SummarizationScore
 from notebooksearch.models import KaggleNotebook
 from notebooksearch.models import NotebookSearchResult
 
@@ -59,12 +60,23 @@ class NotebookSearchLogSerializer(serializers.ModelSerializer):
 #         fields = ['name', 'full_name', 'stargazers_count', 'forks_count', 'description', 'size', 'language', 'html_url', 'git_url']
 
 
-class KaggleNotebookSerializer(serializers.ModelSerializer):
-    ''' A serliazer for serializing Kaggle notebooks
+class SummarizationScoreSerializer(serializers.ModelSerializer):
+    ''' A serializer for summarization socres
+    This will be included in KaggleNotebookSerializer
     '''
+    class Meta: 
+        model = SummarizationScore
+        fields = '__all__'
+
+class KaggleNotebookSerializer(serializers.ModelSerializer):
+    ''' A serializer for serializing Kaggle notebooks 
+    This will be included in KaggleNotebookSearchResultSerializer
+    '''
+    # summarization_scores = SummarizationScoreSerializer(many=True)
+
     class Meta:
         model = KaggleNotebook
-        fields = ('docid', 'source_id', 'name', 'file_name', 'source', 'html_url', 'description', 'language', 'num_cells')
+        fields = ('docid', 'source_id', 'name', 'file_name', 'source', 'html_url', 'description', 'summarization', 'summarization_relevance', 'summarization_confidence', 'language', 'num_cells')
 
 
 class KaggleNotebookSearchResultSerializer(serializers.ModelSerializer):

@@ -6,6 +6,7 @@ import time
 import pandas as pd
 
 from notebooksearch import utils
+from notebooksearch import notebook_retrieval
 from elasticsearch import Elasticsearch
 
 
@@ -131,7 +132,10 @@ class ElasticsearchIndexer():
         return True
 # ----------------------------------------------------------------------------------
 
-def index_kaggle_notebooks(reindex=False):         
+def index_kaggle_notebooks(reindex=False):  
+    ''' Index preprocessed notebooks, 
+    this will further retrieved by Elasticsearch
+    '''       
     # Try to reconnect to Elasticsearch for 10 times when failing
     # This 
     for i in range(100): 
@@ -145,18 +149,21 @@ def index_kaggle_notebooks(reindex=False):
     # Index notebooks crawled from Github or Kaggle
     # github_notebook_path = os.path.join(os.getcwd(), 'notebooksearch', 'Github Notebooks')
     # indexer = ElasticsearchIndexer(es, "Github", "github_notebooks", github_notebook_path)
-    kaggle_notebook_path = os.path.join(os.getcwd(), 'notebooksearch', 'Notebooks')
+    notebook_path = os.path.join(os.getcwd(), 'notebooksearch', 'Notebooks')
     indexer = ElasticsearchIndexer(
         es=es, 
         source_name="Kaggle", 
         doc_type="preprocessed", 
         index_name="kaggle_notebooks", 
-        notebook_path=kaggle_notebook_path, 
+        notebook_path=notebook_path, 
         source_file_name="Kaggle_updated_preprocessed_notebooks.csv")
     indexer.index_notebooks(reindex=reindex)
 
 
 def index_raw_notebooks(reindex=False):         
+    ''' Index raw notebooks, 
+    this will be used to download original notebooks from the index 
+    '''
     # Try to reconnect to Elasticsearch for 10 times when failing
     # This is useful when Elasticsearch service is not fully online, 
     # which usually happens when starting all services at once. 
@@ -171,15 +178,57 @@ def index_raw_notebooks(reindex=False):
     # Index notebooks crawled from Github or Kaggle
     # github_notebook_path = os.path.join(os.getcwd(), 'notebooksearch', 'Github Notebooks')
     # indexer = ElasticsearchIndexer(es, "Github", "github_notebooks", github_notebook_path)
-    raw_notebook_path = os.path.join(os.getcwd(), 'notebooksearch', 'Notebooks')
+    notebook_path = os.path.join(os.getcwd(), 'notebooksearch', 'Notebooks')
     indexer = ElasticsearchIndexer(
         es=es, 
         source_name="Kaggle", 
         doc_type="raw", 
         index_name="kaggle_raw_notebooks", 
-        notebook_path=raw_notebook_path, 
+        notebook_path=notebook_path, 
         source_file_name="Kaggle_raw_notebooks.csv")
     indexer.index_notebooks(reindex=reindex)
+
+
+
+def index_kaggle_summarization(reindex=False):         
+    ''' Index summarization of the notebooks, 
+    this addes summarizations to preprocessed notebooks
+    and will be used from the retrieval 
+    '''
+    # Try to reconnect to Elasticsearch for 10 times when failing
+    # This is useful when Elasticsearch service is not fully online, 
+    # which usually happens when starting all services at once. 
+    for i in range(100): 
+        es = utils.create_es_client()
+        if es == None: 
+            time.sleep(0.5)
+            continue
+        else: 
+            break
+
+    notebook_path = os.path.join(os.getcwd(), 'notebooksearch', 'Notebooks')
+    indexer = ElasticsearchIndexer(
+        es=es, 
+        source_name="Kaggle", 
+        doc_type="preprocessed", 
+        index_name="kaggle_notebook_summarization", 
+        notebook_path=notebook_path, 
+        source_file_name="Kaggle_summarization_fake_score.csv")
+    indexer.index_notebooks(reindex=reindex)
+
+    # Test the new index using notebook retrieval
+    query = "test"
+    query_params={
+        "page": "1",
+        "query": query,
+        "filter": "",
+        "facet": "",
+    }
+    index_name = "kaggle_notebook_summarization"
+    searcher = notebook_retrieval.NotebookRetriever(query_params, index_name)
+    search_results = searcher.retrieve_notebooks()
+    print(f'============ Retrieval test for index [{index_name}] ==========')
+    print(f"{search_results['results'][0]['summarization_t5']}\n")
 
 def main():
 # Check if the current working path is `search_engine_app``, if not terminate the program
@@ -188,10 +237,11 @@ def main():
         return False
 
     # Change `reindex` to True if you want to reindex the notebooks
-    index_kaggle_notebooks(reindex=False)
-    index_raw_notebooks(reindex=False)
+    index_kaggle_summarization(reindex=True)
+    # index_raw_notebooks(reindex=False)
 
-# If using `python -m notebooksearch.notebook_indexing`, 
-# `__name__` will be `__main__`
+# Go to 'notebook_search_docker/search_engine_app' dir and 
+# run `python -m notebooksearch.notebook_indexing` 
+# Otherwise it won't work. 
 if __name__ == '__main__': 
     main()

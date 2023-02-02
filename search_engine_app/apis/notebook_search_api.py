@@ -78,7 +78,7 @@ def notebook_search_api(request) -> Response:
             return Response(log_serializer.errors, status = 400)
 
     # Retrieve notebooks from Elasticsearch dataserver
-    index_name = "kaggle_notebooks"
+    index_name = "kaggle_online"
     searcher = notebook_retrieval.NotebookRetriever(query_params, index_name)
     search_results = searcher.retrieve_notebooks()
     result_serializer = serializers.KaggleNotebookSearchResultSerializer(search_results)

@@ -329,6 +329,18 @@ class RawNotebookPreprocessor:
         df_features = pd.DataFrame.from_dict(features)
         df_features['docid'] = df_notebooks['docid']   
         return df_features
+    
+    def add_notebook_summarization(self, source_name):
+        ''' Add summarization and summarization scores to preprocessed notebooks 
+        '''
+        pass
+
+    def preprocessing_pipeline(self): 
+        ''' The end-to-end preprocessing pipeline notebooks,
+        The output is ready to be indexed by Elasticsearch
+        '''
+        pass
+
 
     
 def main():

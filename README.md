@@ -42,7 +42,9 @@ Now you can access the web page on `http://IP_address/`
 
 6. Initialize the web application via: `http://IP_address/api/initialize_app/`
 
-
+### Update index served online
+One easy way to update the index that is served online is to add alias `kaggle_online` to the index you want to serve. To do so, change contents inside `search_engine_app/notebooksearch/es_tools` and then run
+`python -m notebooksearch.es_tools`
 
 ### Administration
 We expose `pgadmin` service to the localhost so that you can easily monitor the database. Access it through `http://localhost:5050/`
@@ -195,6 +197,11 @@ POST http://IP_address/api/create_userprofile/
 Notebook search: 
 ```
 GET/POST http://IP_address/api/notebook_search/
+```
+
+Query reformulation
+```
+
 ```
 
 

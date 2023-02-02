@@ -77,9 +77,15 @@ class NotebookRetriever():
 
         es_results = es.search(index=index_name, body=query_body)
         # Extract notebooks from Elasticsearch responses
+        # The responses from Elasticsearch are not original notebook contents, 
+        # but rather processed information.  
+        # Please refer to models.KaggleNotebook for fields info
         es_notebooks=[]
         for search_result in es_results['hits']['hits']:
-            es_notebooks.append(search_result['_source'])
+            one_notebook = search_result['_source']
+            print(one_notebook.keys())
+            one_notebook['summarization'] = one_notebook.pop('summarization_t5')
+            es_notebooks.append(one_notebook)
         num_hits=es_results['hits']['total']['value']
         num_pages=round(np.ceil(num_hits/10)+1)
         # Only display the first 11 pages
@@ -92,7 +98,8 @@ class NotebookRetriever():
             "num_hits": num_hits,
             "num_pages": num_pages,
             "current_page": page,
-            "results": es_notebooks,
+            "results": es_notebooks
             # "function_list": self.getAllfunctionList(request)
         }
+        # Returned results will be serialized by KaggleNotebookSearchResultSerializer
         return results

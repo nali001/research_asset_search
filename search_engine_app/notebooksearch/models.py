@@ -21,6 +21,18 @@ class UserProfile(BaseUser):
         return self.client_id
 # -----------------------------------------------------------------
 
+
+# ------------------- Notebook summarization models -------------------- 
+class SummarizationScore(models.Model):
+    name = models.CharField(max_length=60)
+    score = models.CharField(max_length=60)
+
+    class Meta: 
+        managed = False
+
+# -----------------------------------------------------------------
+
+
 # ------------------- Notebook search models --------------------    
 class BaseNotebook(models.Model): 
     ''' Abstract notebook model that contains minimum set of notebook attributes
@@ -84,13 +96,17 @@ class NotebookSearchResult(models.Model):
 class KaggleNotebook(BaseNotebook): 
     ''' A notebook result specific to Kaggle source
 
-    docid, source_id, name, file_name, source, html_url, description
+    docid, source_id, name, file_name, source, html_url, description, summarization, summarization_scores
     '''
     # title = models.CharField(max_length=120)
     source_id = models.CharField(max_length=60)
     file_name = models.CharField(max_length=60)
     language = models.CharField(max_length=60)
     num_cells = models.CharField(max_length=60)
+    summarization = models.TextField()
+    summarization_relevance = models.CharField(max_length=60)
+    summarization_confidence = models.CharField(max_length=60)
+    # summarization_scores = models.ForeignKey(SummarizationScore, related_name="summarization_score", on_delete=models.CASCADE)
     notebook_search_result = models.ForeignKey(NotebookSearchResult, related_name="results", on_delete=models.CASCADE)
     
     class Meta: 

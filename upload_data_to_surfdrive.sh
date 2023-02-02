@@ -48,4 +48,8 @@ rclone copy ./notebookcrawler/DB_exports/ na_surf:notebook_search_docker/noteboo
 rclone copy ./notebookcrawler/Queries/ na_surf:notebook_search_docker/notebookcrawler/Queries/ --progress
 
 
+# 5. 
+rclone copy ./notebooksearch/Notebooks/Kaggle_summarization_fake_score.csv na_surf:notebook_search_docker/./notebooksearch/Notebooks/ --progress
+
+
 

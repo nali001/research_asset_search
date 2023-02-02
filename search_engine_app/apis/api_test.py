@@ -89,6 +89,7 @@ def get_notebook_search(api_endpoint, api_config):
     print('----------------------------------------------------------------------------\n')
     print('------------------------------ Result fields ---------------------------\n')
     pprint(results[0].keys())
+    # print(results[3])
     print('----------------------------------------------------------------------------\n')
     return hits
 
@@ -197,6 +198,35 @@ def query_generation(api_endpoint, api_config):
     print('----------------------------------------------------------------------------\n')
     return results
 
+def query_reformulation(api_endpoint, api_config): 
+    ''' test query reformulation API with `POST` method
+    Note it shares the same API endpoint with query generation, 
+    but instead of using cell contents to generate queries, 
+    it uses user's query. 
+    '''
+    url = api_endpoint + "query_generation/"
+    client_id = 'kitten'
+    event = "query_reformulation"
+    cell_contents = [
+        {
+            "cell_type": "user query",
+            "cell_content": "Great empire conquer marz", 
+        }, 
+        ]
+    data = {
+        "client_id": client_id, 
+        "timestamp": str(time.time()), 
+        "event": event, 
+        "cell_contents": cell_contents, 
+    }
+    # print(json.dumps(data))
+    response = requests.post(url, json=data, **api_config)
+    results = response.json()
+    print('------------------------ Reformulated quries results -----------------------\n')
+    pprint(results['generated_queries'][0]['queries'])
+    print('----------------------------------------------------------------------------\n')
+    return results
+
 
 def context_search(api_endpoint, api_config):
     ''' test context_based search API with `POST` method
@@ -283,6 +313,7 @@ if __name__ == "__main__":
     # get_notebook_download(api_endpoint, api_config)
     # post_notebook_download(api_endpoint, api_config)
     # query_generation(api_endpoint, api_config)
+    # query_reformulation(api_endpoint, api_config)
     # context_search(api_endpoint, api_config)
     # relevancy_feedback(api_endpoint, api_config)
 
