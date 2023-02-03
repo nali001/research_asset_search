@@ -34,7 +34,7 @@ class NotebookRetriever():
         index_name = self.index_name 
         query_data = self.query_data
         # Index the notebooks if there is no indexes before. 
-        notebook_indexing.index_kaggle_notebooks()
+        # notebook_indexing.index_kaggle_notebooks()
 
         query = query_data['query']
         page = int(query_data['page'])
@@ -83,7 +83,6 @@ class NotebookRetriever():
         es_notebooks=[]
         for search_result in es_results['hits']['hits']:
             one_notebook = search_result['_source']
-            print(one_notebook.keys())
             one_notebook['summarization'] = one_notebook.pop('summarization_t5')
             es_notebooks.append(one_notebook)
         num_hits=es_results['hits']['total']['value']

@@ -31,6 +31,11 @@ This step is crucial for accesses and persistent storage of data.
 4. Prepare the notebooks for indexing. \
 Put the preprocessed notebooks `Kaggle_preprocessed_notebooks.csv` and the raw notebooks `Kaggle_raw_notebooks.csv` under the folder `search_engine_app/notebooksearch/Notebooks` 
 
+5. Set the index to be served online. \
+We use alias `kaggle_online` to point to the index that is served online. It is independent to the index itself. You can easily delete and update aliases in a second without modifying the indexes. \
+There is helper script `search_engine_app/notebooksearch/es_tools` which contains a `update_alias` method that can add alias to an index. 
+Just uncomment it, put the name their and then run
+`python -m notebooksearch.es_tools`
 
 5. Run 
 ```
@@ -54,7 +59,7 @@ We expose `Django admin` service to public web. Access it through `http://IP_add
 We expose `Elasticsearch` service to localhost so that you can update Elasticsearch server from the host machine, without modifying code within Django project. Access it through `http://localhost/9200/` 
 
 
-However, services `postgres`, `search_engine_app`, `Elasticsearch` are only accessible within the docker network and thus cannot be accessed from the host machine or the web. 
+However, services `postgres` are only accessible within the docker network and thus cannot be accessed from the host machine or the web. 
 
 Postgres pgadmin login 
 ```

@@ -228,7 +228,7 @@ def index_kaggle_summarization(reindex=False):
     searcher = notebook_retrieval.NotebookRetriever(query_params, index_name)
     search_results = searcher.retrieve_notebooks()
     print(f'============ Retrieval test for index [{index_name}] ==========')
-    print(f"{search_results['results'][0]['summarization_t5']}\n")
+    print(f"{search_results['results'][4]['summarization']}\n")
 
 def main():
 # Check if the current working path is `search_engine_app``, if not terminate the program
@@ -237,7 +237,7 @@ def main():
         return False
 
     # Change `reindex` to True if you want to reindex the notebooks
-    index_kaggle_summarization(reindex=True)
+    index_kaggle_summarization(reindex=False)
     # index_raw_notebooks(reindex=False)
 
 # Go to 'notebook_search_docker/search_engine_app' dir and 

@@ -27,7 +27,7 @@ def main():
     # get_doc_number('kaggle_raw_notebooks')
     # get_doc_number('kaggle_notebook_summarization')
     update_alias('kaggle_notebook_summarization', 'kaggle_online')
-    # list_indexes()
+    list_indexes()
 
 
 

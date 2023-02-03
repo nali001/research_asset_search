@@ -45,3 +45,5 @@ temp/
 nohup.out
 
 *.output
+
+error_logs
