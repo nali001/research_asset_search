@@ -1,7 +1,9 @@
 .vscode
+.ipynb_checkpoints/
 __pycache__/
 __init__.pyc
 migrations/
+data/
 search_engine_app/venv
 search_engine_app/notebooksearch/Notebooks/*
 
@@ -15,9 +17,9 @@ search_engine_app/notebooksearch/test.py
 search_engine_app/test.ipynb
 search_engine_app/auth/kaggle_token.json
 
-notebookcrawler/DB_exports/
-notebookcrawler/DB_imports/
-notebookcrawler/kagglecrawler/test.ipynb
+distributed_crawler/DB_exports/
+distributed_crawler/DB_imports/
+distributed_crawler/kagglecrawler/test.ipynb
 
 mongobackup-kagglecrawler
 

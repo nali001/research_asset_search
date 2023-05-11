@@ -1,0 +1,18 @@
+{
+    "id": "augustinjossa/kiva-crowdfunding-data-exploration",
+    "id_no": 710488,
+    "title": "Kiva Crowdfunding - Data exploration",
+    "code_file": "kiva-crowdfunding-data-exploration.ipynb",
+    "language": "python",
+    "kernel_type": "notebook",
+    "is_private": false,
+    "enable_gpu": false,
+    "enable_internet": false,
+    "keywords": [],
+    "dataset_sources": [
+        "datasets/kiva/data-science-for-good-kiva-crowdfunding"
+    ],
+    "kernel_sources": [],
+    "competition_sources": [],
+    "docid": "NB_4d99c58024892ef69acd2859c29ed830825d360551b466ba626a82a0fa3c2c68"
+}

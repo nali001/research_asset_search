@@ -1,0 +1,28 @@
+{
+    "id": "cavfiumella/california-motorcycle-collisions",
+    "id_no": 20238069,
+    "title": "California motorcycle collisions",
+    "code_file": "california-motorcycle-collisions.ipynb",
+    "language": "python",
+    "kernel_type": "notebook",
+    "is_private": false,
+    "enable_gpu": false,
+    "enable_internet": true,
+    "keywords": [
+        "exploratory data analysis",
+        "cities and urban areas",
+        "automobiles and vehicles",
+        "clustering",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "seaborn",
+        "sklearn"
+    ],
+    "dataset_sources": [
+        "datasets/alexgude/california-traffic-collision-data-from-switrs"
+    ],
+    "kernel_sources": [],
+    "competition_sources": [],
+    "docid": "NB_4d9444410d5d3a91d79f1d54e1d33e82c312f2651ea0ee3464e161746efa0d9b"
+}

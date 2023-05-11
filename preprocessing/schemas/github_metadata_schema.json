@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Github metadata schema",
+  "type": "object",
+  "properties": {
+    "docid": {
+      "type": "string",
+      "description": "docid generated from html_url using hash function"
+    },
+    "path": {
+      "type": "string",
+      "description": "File path relative to the repository root"
+    },
+    "name": {
+      "type": "string",
+      "description": "File name"
+    },
+    "html_url": {
+      "type": "string",
+      "description": "HTML URL of the file"
+    },
+    "url": {
+      "type": "string",
+      "description": "API URL of the file"
+    },
+    "size": {
+      "type": "integer",
+      "description": "Size of the file in bytes"
+    },
+    "sha": {
+      "type": "string",
+      "description": "SHA-1 hash of the file contents"
+    },
+    "git_url": {
+      "type": "string",
+      "description": "URL of the file in Git format"
+    },
+    "download_url": {
+      "type": "string",
+      "description": "URL to download the file"
+    },
+    "type": {
+      "type": "string",
+      "description": "Type of file"
+    },
+    "encoding": {
+      "type": "string",
+      "description": "Encoding of the file contents"
+    },
+    "last_modified": {
+      "type": "string",
+      "description": "Date and time when the file was last modified"
+    }
+  },
+  "required": [
+    "docid",
+    "path",
+    "name",
+    "html_url",
+    "url",
+    "size",
+    "sha",
+    "git_url",
+    "download_url",
+    "type",
+    "encoding",
+    "last_modified"
+  ]
+}

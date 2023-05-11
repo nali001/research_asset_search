@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Kaggle metadata schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the kernel"
+    },
+    "id_no": {
+      "type": "integer",
+      "description": "Numeric identifier for the kernel"
+    },
+    "title": {
+      "type": "string",
+      "description": "Title or name of the kernel"
+    },
+    "code_file": {
+      "type": "string",
+      "description": "Filename of the kernel code file"
+    },
+    "language": {
+      "type": "string",
+      "description": "Language in which the kernel is written"
+    },
+    "kernel_type": {
+      "type": "string",
+      "description": "Type of kernel"
+    },
+    "is_private": {
+      "type": "boolean",
+      "description": "Whether the kernel is private or public"
+    },
+    "enable_gpu": {
+      "type": "boolean",
+      "description": "Whether the kernel is enabled for GPU processing"
+    },
+    "enable_internet": {
+      "type": "boolean",
+      "description": "Whether the kernel has access to the internet"
+    },
+    "keywords": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Keywords associated with the kernel"
+    },
+    "dataset_sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Sources of any datasets used in the kernel"
+    },
+    "kernel_sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Sources of any other kernels used in the kernel"
+    },
+    "competition_sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Sources of any competitions used in the kernel"
+    }
+  },
+  "required": [
+    "id",
+    "id_no",
+    "title",
+    "code_file",
+    "language",
+    "kernel_type",
+    "is_private",
+    "enable_gpu",
+    "enable_internet",
+    "keywords",
+    "dataset_sources",
+    "kernel_sources",
+    "competition_sources"
+  ]
+}

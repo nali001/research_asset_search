@@ -1,0 +1,18 @@
+{
+    "id": "patrickwhite598/als-gait",
+    "id_no": 26876980,
+    "title": "ALS Gait",
+    "code_file": "als-gait.ipynb",
+    "language": "python",
+    "kernel_type": "notebook",
+    "is_private": false,
+    "enable_gpu": false,
+    "enable_internet": false,
+    "keywords": [],
+    "dataset_sources": [
+        ""
+    ],
+    "kernel_sources": [],
+    "competition_sources": [],
+    "docid": "NB_4d989186496857ce49fecd125ddc76f667c2ba77f44e2843cd3d1486cef20023"
+}

@@ -1,0 +1,66 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Github indexing schema",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier for the notebook"
+      },
+      "name": {
+        "type": "string",
+        "description": "Short name (GitHub repo name or Kaggle notebook name)"
+      },
+      "stargazers_count": {
+        "type": "integer",
+        "description": "Number of stars or upvotes"
+      },
+      "forks_count": {
+        "type": "integer",
+        "description": "Number of forks (GitHub only)"
+      },
+      "description": {
+        "type": "string",
+        "description": "Short description (Kaggle notebook title or GitHub repository description)"
+      },
+      "size": {
+        "type": "integer",
+        "description": "Repository size (in kB, GitHub only)"
+      },
+      "language": {
+        "type": "string",
+        "description": "Programming language"
+      },
+      "html_url": {
+        "type": "string",
+        "description": "Landing page URL"
+      },
+      "git_url": {
+        "type": "string",
+        "description": "Git URL (different from html_url only for GitHub)"
+      },
+      "source": {
+        "type": "string",
+        "description": "Repository ('GitHub' or 'Kaggle')"
+      },
+      "code_file": {
+        "type": "string",
+        "description": "Notebook filename"
+      }
+    },
+    "required": [
+      "id",
+      "name",
+      "stargazers_count",
+      "forks_count",
+      "description",
+      "size",
+      "language",
+      "html_url",
+      "git_url",
+      "source",
+      "query",
+      "code_file"
+    ]
+  }
+  

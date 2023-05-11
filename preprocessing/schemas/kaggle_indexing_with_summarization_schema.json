@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Kaggle indexing with summarization schema",
+  "type": "object",
+  "properties": {
+    "source_id": {
+      "type": "string",
+      "description": "Unique identifier for the document's source"
+    },
+    "name": {
+      "type": "string",
+      "description": "Name or title of the document"
+    },
+    "file_name": {
+      "type": "string",
+      "description": "Name of the file containing the document"
+    },
+    "html_url": {
+      "type": "string",
+      "description": "URL of the document in HTML format"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description or summary of the document's contents"
+    },
+    "source": {
+      "type": "string",
+      "description": "Name of the organization or entity that created the document"
+    },
+    "docid": {
+      "type": "string",
+      "description": "Unique identifier assigned to the document"
+    },
+    "language": {
+      "type": "string",
+      "description": "Programming language of the notebook"
+    },
+    "num_cells": {
+      "type": "integer",
+      "description": "Total number of cells in the document"
+    },
+    "num_code_cells": {
+      "type": "integer",
+      "description": "Number of cells containing code in the document"
+    },
+    "num_md_cells": {
+      "type": "integer",
+      "description": "Number of cells containing markdown in the document"
+    },
+    "len_md_text": {
+      "type": "integer",
+      "description": "Total length of the markdown text in the document"
+    },
+    "summarization_t5": {
+      "type": "string",
+      "description": "Summary of the document generated using the T5 summarization model"
+    },
+    "summarization_relevance": {
+      "type": "number",
+      "description": "Relevance score for the T5-generated summary"
+    },
+    "summarization_confidence": {
+      "type": "number",
+      "description": "Confidence score for the T5-generated summary"
+    }
+  },
+  "required": [
+    "source_id",
+    "name",
+    "file_name",
+    "html_url",
+    "description",
+    "source",
+    "docid",
+    "language",
+    "num_cells",
+    "num_code_cells",
+    "num_md_cells",
+    "len_md_text",
+    "summarization_t5",
+    "summarization_relevance",
+    "summarization_confidence"
+  ]
+}

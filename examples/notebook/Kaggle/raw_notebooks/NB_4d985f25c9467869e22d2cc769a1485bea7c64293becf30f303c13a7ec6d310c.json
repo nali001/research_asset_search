@@ -1,0 +1,24 @@
+{
+    "id": "aarthivg/heart-attack-prediction",
+    "id_no": 17681675,
+    "title": "Heart_Attack_Prediction",
+    "code_file": "heart-attack-prediction.ipynb",
+    "language": "python",
+    "kernel_type": "notebook",
+    "is_private": false,
+    "enable_gpu": false,
+    "enable_internet": false,
+    "keywords": [
+        "k-means",
+        "data cleaning",
+        "data visualization",
+        "exploratory data analysis",
+        "logistic regression"
+    ],
+    "dataset_sources": [
+        "datasets/rashikrahmanpritom/heart-attack-analysis-prediction-dataset"
+    ],
+    "kernel_sources": [],
+    "competition_sources": [],
+    "docid": "NB_4d985f25c9467869e22d2cc769a1485bea7c64293becf30f303c13a7ec6d310c"
+}

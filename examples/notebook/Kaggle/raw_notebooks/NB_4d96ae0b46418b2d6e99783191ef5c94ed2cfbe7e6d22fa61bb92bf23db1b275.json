@@ -1,0 +1,18 @@
+{
+    "id": "mozaffarkhider/brainnest-sleep-project",
+    "id_no": 28922250,
+    "title": "brainnest-sleep project",
+    "code_file": "brainnest-sleep-project.ipynb",
+    "language": "python",
+    "kernel_type": "notebook",
+    "is_private": false,
+    "enable_gpu": false,
+    "enable_internet": false,
+    "keywords": [],
+    "dataset_sources": [
+        ""
+    ],
+    "kernel_sources": [],
+    "competition_sources": [],
+    "docid": "NB_4d96ae0b46418b2d6e99783191ef5c94ed2cfbe7e6d22fa61bb92bf23db1b275"
+}

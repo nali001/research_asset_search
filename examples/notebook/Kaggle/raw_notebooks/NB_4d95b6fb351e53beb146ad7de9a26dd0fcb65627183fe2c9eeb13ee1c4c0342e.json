@@ -1,0 +1,21 @@
+{
+    "id": "sarthakbatra/predicting-sales-tutorial",
+    "id_no": 3313720,
+    "title": "Predicting Sales - Tutorial",
+    "code_file": "predicting-sales-tutorial.ipynb",
+    "language": "python",
+    "kernel_type": "notebook",
+    "is_private": false,
+    "enable_gpu": false,
+    "enable_internet": false,
+    "keywords": [
+        "feature engineering",
+        "data visualization"
+    ],
+    "dataset_sources": [],
+    "kernel_sources": [],
+    "competition_sources": [
+        "competitions/competitive-data-science-predict-future-sales"
+    ],
+    "docid": "NB_4d95b6fb351e53beb146ad7de9a26dd0fcb65627183fe2c9eeb13ee1c4c0342e"
+}
