@@ -8,6 +8,9 @@ from notebooksearch import genericsearch
 from notebooksearch import utils
 es = utils.create_es_client()
 
+
+import json
+
 def notebook_search_view(request):
     ''' Retrieve notebooks from Elasticsearch and render the web page. 
     '''
@@ -19,5 +22,10 @@ def notebook_search_view(request):
     # searcher = genericsearch.Genericsearch(request, es, index_name)
     # results = searcher.genericsearch()
     results["page_range"] = range(1, results["num_pages"])
+
+    # with open("results_hhhhhhh.json", "w") as outfile:
+    #     json.dump(results, outfile)
+
+    print(type(results))
     return render(request,'notebook_results.html', results)
  

@@ -139,6 +139,10 @@ class RawNotebookPreprocessor:
         :return:
         """
         base_result = self._base_preprocess(notebook, notebook_metadata)
+        if base_result is None: 
+            print(f"None result for notebook {notebook_metadata['docid']}")
+            return
+
         metadata = base_result['metadata']
         contents = base_result['contents']
 

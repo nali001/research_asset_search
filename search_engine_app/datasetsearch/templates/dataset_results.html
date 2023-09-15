@@ -224,8 +224,9 @@
                             </li> -->
                             
                             {% comment %} navigation item: Notebooks {% endcomment %}
-                            <li class="active">
-                                    <a href="javascript:void(0);">
+                            <li class="">
+                                <a id = 'search_url' href= "#" onclick="updateURL('notebook');">
+                                {% comment %} <a id = 'search_url' href= "{}"> {% endcomment %}
                                     {% comment %} ../../notebooksearch/notebook_search?query={{ query }}&page=1&filter=&facet= {% endcomment %}
                                     <span class="pcoded-micon"><i class="ti-file"></i></span>
                                     <span class="pcoded-mtext" data-i18n="nav.dash.main">Notebooks</span>
@@ -234,8 +235,8 @@
                             </li>
 
                             {% comment %} navigation item: Datasets {% endcomment %}
-                            <li class="">
-                                <a id = 'search_url' href= "#" onclick="updateURL('dataset');">
+                            <li class="active">
+                                <a href="javascript:void(0)">
                                     <span class="pcoded-micon"><i class="ti-server"></i></span>
                                     <span class="pcoded-mtext"  data-i18n="nav.dash.main">Datasets</span>
                                     <span class="pcoded-mcaret"></span>
@@ -458,29 +459,12 @@
             location.reload();
         }
         //---------------------------------------------------------------------
-        function updateURL(item) {
-            var searchValue = document.getElementById('searchbox2').value;
-            var anchor = document.getElementById('search_url');
-            {% comment %} var encodedSearchValue = encodeURIComponent(searchValue); {% endcomment %}
-            if (item=='notebook') {
-                var url = "../../notebooksearch/notebook_search?query=" + searchValue + "&page=1&filter=&facet=";
-            }
-            else if (item=='dataset') {
-                var url = "../../datasetsearch/dataset_search?query=" + searchValue + "&page=1";
-            }
-        
-            anchor.href = url; 
-            // Update the href attribute of the <a> element
-
-        }
-        //---------------------------------------------------------------------
         function search(searchBoxNum) {
-            var searchValue = ""
             if (searchBoxNum == 1) {
                 searchValue = document.getElementById('searchbox1').value;
             }
             else {
-                {% comment %} searchValue = 'none';  {% endcomment %}
+                {% comment %} searchValue='none' {% endcomment %}
                 searchValue = document.getElementById('searchbox2').value;
             }
             sessionStorage.setItem("searchValue", searchValue);
@@ -499,8 +483,42 @@
                 location.reload();
             }
         }
-        //--------------------------------------------------------------------- Iniitialization
+        //---------------------------------------------------------------------
+        function updateURL(item) {
+            var searchValue = document.getElementById("searchbox2").value;
+            var anchor = document.getElementById('search_url');
+            {% comment %} var encodedSearchValue = encodeURIComponent(searchValue); {% endcomment %}
+            var url = "../../notebooksearch/notebook_search?query=" + searchValue + "&page=1&filter=&facet=";
+        
+            anchor.href = url; 
+            // Update the href attribute of the <a> element
+            
+            sessionStorage.setItem("searchValue", searchValue);
+            
+        }
+        //---------------------------------------------------------------------
+        function parseQueryParams() {
+            var queryParams = {};
+            var queryString = window.location.search.substring(1);
+        
+            var pairs = queryString.split('&');
+            for (var i = 0; i < pairs.length; i++) {
+              var pair = pairs[i].split('=');
+              if (pair.length === 2) {
+                var key = decodeURIComponent(pair[0]);
+                var value = decodeURIComponent(pair[1]);
+                queryParams[key] = value;
+              }
+            }
+        
+            return queryParams;
+          }
+        //--------------------------------------------------------------------- Initialization
         {% comment %} document.getElementById('searchbox1').value = sessionStorage.getItem("searchValue"); {% endcomment %}
+        var queryParams = parseQueryParams(); 
+        var searchValue = queryParams['query']; 
+        sessionStorage.setItem('searchValue', searchValue); 
+        
         document.getElementById('searchbox2').value = sessionStorage.getItem("searchValue");
         cnt = document.querySelectorAll("#MyCart li").length - 1;
         $('#MyCartCount').text(cnt);

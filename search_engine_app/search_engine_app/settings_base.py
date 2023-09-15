@@ -97,6 +97,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'genericpages',
     'notebooksearch', 
+    'datasetsearch', 
     'apis', 
     'rest_framework', 
     'rest_framework.authtoken', 
