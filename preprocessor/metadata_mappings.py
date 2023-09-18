@@ -1,6 +1,18 @@
 # Field mappings
+COMMON_CONTENT_MAPPING = {
+    'docid': ['docid'], 
+    'description': ['md_text_clean'],
+    'html_url': ['html_url'],
+    'language': ['language'],
+    'num_cells': ['num_cells'],
+    'num_code_cells': ['num_code_cells'],
+    'num_md_cells': ['num_md_cells'],
+    'len_md_text': ['len_md_text']
+}
+
 GITHUB_MATADATA_MAPPING = {
-    'docid': ['docid'],
+    'docid': ['docid'], 
+    'source_id': ['git_url'], 
     "stargazers_count": [], 
     "forks_count": [], 
     'size': ['size'],
@@ -24,14 +36,7 @@ KAGGLE_METADATA_MAPPING = {
     'code_file': ['code_file'], 
 }
 
-COMMON_CONTENT_MAPPING = {
-    'description': ['md_text_clean'],
-    'language': ['language'],
-    'num_cells': ['num_cells'],
-    'num_code_cells': ['num_code_cells'],
-    'num_md_cells': ['num_md_cells'],
-    'len_md_text': ['len_md_text']
-}
+
 
 GITHUB_CONTENT_MAPPING = {
     'docid': ['docid'],

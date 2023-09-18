@@ -1,3 +1,10 @@
+''' notebook__crawling.py
+Crawl notebooks from Kaggle. 
+18 Sep 2023 checking notes: It seems that this is only for crawling notebooks from Kaggle, not from Github. 
+Each item contains a .ipynb source file and a .json metadata file. 
+
+'''
+
 import os 
 import json
 import pandas as pd

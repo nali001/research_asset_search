@@ -1,3 +1,12 @@
+''' preprocessor.preprocessing.py
+Preprocess notebooks form both Kaggle and Github using common metadata schema. 
+
+- input: {data_dir}/{self.source_name}/raw_notebooks/,
+- output_summary: preprocessed_{self.preprocess_type}/notebooks_summaries/, 
+- output_contents: preprocessed_{self.preprocess_type}/notebooks_contents/, 
+
+'''
+
 import os
 import json
 import glob

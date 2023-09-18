@@ -1,4 +1,4 @@
-from notebooksearch import utils
+from utils import utils
 es = utils.create_es_client()
 
 def list_indexes():
@@ -21,12 +21,12 @@ def get_doc_number(index_name):
     print(f'{result[0]["count"]}\n')
 
 def main():
-    # list_indexes()
+    list_indexes()
     # print(es.indices.get_alias('kaggle_online'))
     # get_doc_number('kaggle_raw_notebooks')
     # get_doc_number('kaggle_raw_notebooks')
     # get_doc_number('kaggle_notebook_summarization')
-    update_alias('kaggle_notebook_summarization', 'kaggle_online')
+    # update_alias('kaggle_notebook_summarization', 'kaggle_online')
     # list_indexes()
 
 

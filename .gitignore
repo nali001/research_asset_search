@@ -42,8 +42,8 @@ push_docker_images.sh
 
 rclone_setup.sh
 temp/
+test.ipynb
 
-.env
 nohup.out
 
 *.output

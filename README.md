@@ -127,6 +127,20 @@ conda activate notebooksearch
 python manage.py runserver 7777
 ```
 
+### Offline preparation
++ Crawl datasets and notebooks
+```
+crawler/notebook_crawling.py (crawler is not ready yet)
+```
+
+
++ Preprocessing datasets and notebooks 
+```preprocessor/preprocessing.py```
+
++ Generate indexes
+```preprocessor/notebook_indexing.py```
+
+
 ### Accessing addresses
 + Django dummy server (search_engine_app): `localhost:7777`
 + Elasticsearch: `localhost:9200`

@@ -1,3 +1,9 @@
+'''
+change_filenames.py
+Change the .ipynb and .json files downloaded from Kaggle to `docid`. 
+
+'''
+
 import os
 import json
 import hashlib

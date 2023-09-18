@@ -1,3 +1,9 @@
+''' notebook_metadata.py
+Map metadata to a unified schema. 
+Metadata is extracted from the metadata file of each notebook. 
+The notebook contents are not used. 
+'''
+
 import json
 import hashlib
 
