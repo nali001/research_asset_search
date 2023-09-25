@@ -1,15 +1,25 @@
 # Field mappings
-COMMON_CONTENT_MAPPING = {
-    'docid': ['docid'], 
-    'description': ['md_text_clean'],
-    'html_url': ['html_url'],
-    'language': ['language'],
-    'num_cells': ['num_cells'],
-    'num_code_cells': ['num_code_cells'],
-    'num_md_cells': ['num_md_cells'],
-    'len_md_text': ['len_md_text']
+# ---------------- Schema -----------------
+UNIFIED_MATADATA_SCHEMA = {
+    "docid": None,
+    "source_id": None,
+    "stargazers_count": None,
+    "forks_count": None,
+    "size": None,
+    "name": None,
+    "html_url": None,
+    "git_url": None,
+    "source": None,
+    "code_file": None,
+    "description": None,
+    "language": None,
+    "num_cells": None,
+    "num_code_cells": None,
+    "num_md_cells": None,
+    "len_md_text": None
 }
 
+# ---------------- Map from metadata -----------------
 GITHUB_MATADATA_MAPPING = {
     'docid': ['docid'], 
     'source_id': ['git_url'], 
@@ -36,6 +46,17 @@ KAGGLE_METADATA_MAPPING = {
     'code_file': ['code_file'], 
 }
 
+# ---------------- Extract from contents -----------------
+COMMON_CONTENT_MAPPING = {
+    'docid': ['docid'], 
+    'description': ['md_text_clean'],
+    'html_url': ['html_url'],
+    'language': ['language'],
+    'num_cells': ['num_cells'],
+    'num_code_cells': ['num_code_cells'],
+    'num_md_cells': ['num_md_cells'],
+    'len_md_text': ['len_md_text']
+}
 
 
 GITHUB_CONTENT_MAPPING = {

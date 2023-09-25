@@ -1,0 +1,95 @@
+{
+  "_links": {
+    "self": {
+      "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.7pvmcvdqr"
+    },
+    "stash:versions": {
+      "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.7pvmcvdqr/versions"
+    },
+    "stash:version": {
+      "href": "/api/v2/versions/91275"
+    },
+    "stash:download": {
+      "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.7pvmcvdqr/download"
+    },
+    "curies": [
+      {
+        "name": "stash",
+        "href": "https://github.com/CDL-Dryad/stash/blob/main/stash_api/link-relations.md#{rel}",
+        "templated": "true"
+      }
+    ]
+  },
+  "identifier": "doi:10.5061/dryad.7pvmcvdqr",
+  "id": 49185,
+  "storageSize": 104741,
+  "relatedPublicationISSN": "1932-6203",
+  "title": "Effects of future climate on coral-coral competition",
+  "authors": [
+    {
+      "firstName": "Nicole",
+      "lastName": "Johnston",
+      "email": "njohnston7@gatech.edu",
+      "affiliation": "Georgia Institute of Technology",
+      "affiliationROR": "https://ror.org/01zkghx44",
+      "orcid": "0000-0003-2612-1997"
+    },
+    {
+      "firstName": "Mark",
+      "lastName": "Hay",
+      "email": "mark.hay@biology.gatech.edu",
+      "affiliation": "Georgia Institute of Technology",
+      "affiliationROR": "https://ror.org/01zkghx44"
+    },
+    {
+      "firstName": "Valerie",
+      "lastName": "Paul",
+      "email": "Paul@si.edu",
+      "affiliation": "Smithsonian Marine Station",
+      "affiliationROR": "https://ror.org/00ga81413"
+    },
+    {
+      "firstName": "Justin",
+      "lastName": "Campbell",
+      "email": "jcampbel@fiu.edu",
+      "affiliation": "Smithsonian Marine Station",
+      "affiliationROR": "https://ror.org/00ga81413"
+    }
+  ],
+  "abstract": "As carbon dioxide (CO  2  ) levels increase, coral reefs and other marine systems will be affected by the joint stressors of ocean acidification (OA) and warming. The effects of these two stressors on coral physiology are relatively well studied, but their impact on biotic interactions between corals are poorly understood. While coral-coral interactions are less common on modern reefs, it is important to document the nature of these interactions to better inform restoration strategies in the face of climate change. Using a mesocosm study, we evaluated whether the combined effects of ocean acidification and warming alter the competitive interactions between the common coral  Porites astreoides  and two other mounding corals (  Montastraea cavernosa  or  Orbicella faveolata  ) common in the Caribbean. After 7 days of direct contact,  P. astreoides  suppressed the photosynthetic potential of  M. cavernosa  by 100% in areas of contact under both present (~28.5°C and ~400 μatm  p  CO  2  ) and predicted future (~30.0°C and ~1000 μatm  p  CO  2  ) conditions. In contrast, under present conditions  M. cavernosa  reduced the photosynthetic potential of  P. astreoides  by only 38% in areas of contact, while under future conditions reduction was 100%.  A similar pattern occurred between  P. astreoides  and  O. faveolata  at day 7 post contact, but by day 14, each coral had reduced the photosynthetic potential of the other by 100% at the point of contact, and  O. faveolata  was generating larger lesions on  P. astreoides  than the reverse.  In the absence of competition, OA and warming did not affect the photosynthetic potential of any coral. These results suggest that OA and warming can alter the severity of initial coral-coral interactions, with potential cascading effects due to corals serving as foundation species on coral reefs.",
+  "funders": [
+    {
+      "organization": "Link Foundation",
+      "identifierType": "crossref_funder_id",
+      "identifier": "http://dx.doi.org/10.13039/100005238",
+      "awardNumber": ""
+    },
+    {
+      "organization": "Teasley Endowment*",
+      "identifier": "",
+      "awardNumber": ""
+    },
+    {
+      "organization": "Smithsonian Institution",
+      "identifierType": "crossref_funder_id",
+      "identifier": "http://dx.doi.org/10.13039/100000014",
+      "awardNumber": ""
+    },
+    {
+      "organization": "Teasley Endowment",
+      "identifier": ""
+    }
+  ],
+  "methods": "<p>This dataset comes from a tank experiment. Data was collected using PAM flourometry and photography. Photos were processed in Image J. Data was analyzed in R.</p>\r\n",
+  "usageNotes": "<p>The second experiment ran twice as long as the first experiment, so there are more data points. Some alkalinity samples were lost in the process due to issues with the titrator.</p>\r\n",
+  "versionNumber": 3,
+  "versionStatus": "submitted",
+  "curationStatus": "Published",
+  "versionChanges": "metadata_changed",
+  "publicationDate": "2020-11-11",
+  "lastModificationDate": "2020-11-11",
+  "visibility": "public",
+  "sharingLink": "https://datadryad.org/stash/share/0s6u8aWqIx83qPQHFONfndMJrjoq6hz5RUcPtB2541w",
+  "userId": 19387,
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+}

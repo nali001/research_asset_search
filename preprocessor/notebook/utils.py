@@ -137,3 +137,15 @@ def get_data_dir():
     if data_dir is None:
         raise ValueError('$DATA_DIR is not defined.')
     return data_dir
+
+
+def map_metadata(metadata: dict, metadata_mapping: dict): 
+        mapped_metadata = {}
+        for new_key, old_keys in metadata_mapping.items():
+            mapped_value = None
+            for old_key in old_keys:
+                if old_key in metadata:
+                    mapped_value = metadata[old_key]
+                    break
+            mapped_metadata[new_key] = mapped_value
+        return mapped_metadata

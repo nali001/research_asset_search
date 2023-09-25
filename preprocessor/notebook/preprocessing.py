@@ -1,4 +1,4 @@
-''' preprocessor.preprocessing.py
+''' preprocessor.notebook.preprocessing.py
 Preprocess notebooks form both Kaggle and Github using common metadata schema. 
 
 - input: {data_dir}/{self.source_name}/raw_notebooks/,
