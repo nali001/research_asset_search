@@ -7,7 +7,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from utils import utils
-# from indexer import notebook_indexing
+# from indexer import dataset_indexing
 
 #-----------------------------------------------------------------------------------------------------------------------
 def synonyms(term):
@@ -27,14 +27,14 @@ class DatasetRetriever():
         self.response_data = {}
 
 
-    def retrieve_dataset(self):
-        ''' Retrieval notebooks from Elasticsearch
+    def retrieve_datasets(self):
+        ''' Retrieval datasets from Elasticsearch
         '''
         es = self.es
         index_name = self.index_name 
         query_data = self.query_data
-        # Index the notebooks if there is no indexes before. 
-        # notebook_indexing.index_kaggle_notebooks()
+        # Index the datasets if there is no indexes before. 
+        # dataset_indexing.index_kaggle_notebooks()
 
         query = query_data['query']
         page = int(query_data['page'])
@@ -76,16 +76,13 @@ class DatasetRetriever():
             }
 
         es_results = es.search(index=index_name, body=query_body)
-        # Extract notebooks from Elasticsearch responses
-        # The responses from Elasticsearch are not original notebook contents, 
+        # Extract datasets from Elasticsearch responses
+        # The responses from Elasticsearch are not original dataset contents, 
         # but rather processed information.  
-        # Please refer to models.KaggleNotebook for fields info
         es_datasets=[]
         for search_result in es_results['hits']['hits']:
             one_dataset = search_result['_source']
 
-            # print(one_notebook.keys())
-            # one_notebook['summarization'] = one_notebook.pop('summarization_t5')
             es_datasets.append(one_dataset)
         num_hits=es_results['hits']['total']['value']
         num_pages=round(np.ceil(num_hits/10)+1)
@@ -102,5 +99,5 @@ class DatasetRetriever():
             "results": es_datasets
             # "function_list": self.getAllfunctionList(request)
         }
-        # Returned results will be serialized by KaggleNotebookSearchResultSerializer
+        # Returned results will be serialized by DatasetSearchResultSerializer
         return results

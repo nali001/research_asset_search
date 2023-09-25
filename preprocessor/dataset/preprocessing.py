@@ -66,7 +66,8 @@ class DatasetMetadataPreprocessor:
 
     def _get_size(self, dataset_metadata): 
         ''' Get the size metadata for datasets. '''
-        size = 0
+        size = '0bits'
+
         if self.source_name=='Zenodo':
             file_size_bits = 0
             for file in dataset_metadata['files']: 
@@ -79,6 +80,9 @@ class DatasetMetadataPreprocessor:
         elif self.source_name=='Dryad': 
             file_size_bits = dataset_metadata['storageSize']
             size = self._convert_bits_to_human_readable(file_size_bits)
+        
+        else: 
+            print("Error: Data source not supported.")
             
         return size
 

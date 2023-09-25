@@ -2,11 +2,11 @@
 # `docid`, `source` and `size` are generated with scripts. Others are directly mapped. 
 UNIFIED_METADATA_SCHEMA = {
     "docid": None,
+    "source": None,
     "size": None, 
     "name": None,
     "description": None,
     "html_url": None,
-    "source": None,
     "source_id": None,
     "last_updated": None, 
     "license": None, 

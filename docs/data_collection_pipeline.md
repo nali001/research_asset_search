@@ -5,6 +5,8 @@
 2. `preprocessor/dataset/preprocessing.py`
     - mapping metadata
 
+3. `indexer/dataset_indexing.py`
+
 ## Computational notebook collection
 + 1. `crawler/notebooks/github_crawler/notebook_crawling.py`
     - source file: file_name <-- 'NB_' + Hash(identifier) + '.ipynb'

@@ -20,3 +20,15 @@ NOTEBOOK_INDEX_SUMMARY = {
 
 
 
+DATASET_INDEX_SUMMARY = {
+    "docid": None,
+    "source": None,
+    "size": None, 
+    "name": None,
+    "description": None,
+    "html_url": None,
+    "source_id": None,
+    "last_updated": None, 
+    "license": None, 
+}
+

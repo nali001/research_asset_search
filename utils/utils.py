@@ -4,7 +4,10 @@ import json
 import time
 from elasticsearch import Elasticsearch
 from elasticsearch_dsl import Index
+from dotenv import load_dotenv
 
+# Load variables from the .env file
+load_dotenv()
 
 # Ignore warnings
 import warnings

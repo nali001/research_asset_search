@@ -71,7 +71,7 @@ class ElasticsearchIndexer():
                     # for count, record in enumerate(indexfiles): 
                             try: 
                                 res = es.index(index=index_name, id = newRecord["id"], body=newRecord)
-                                print(f'Indexing {str(count+1)}-th recode!\n')
+                                print(f'Indexing {str(count+1)}-th record!\n')
                                 count = count + 1
                             except Exception as e: 
                                 print(e, "\n")

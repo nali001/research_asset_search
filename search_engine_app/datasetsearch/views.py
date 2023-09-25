@@ -3,19 +3,15 @@
 from django.shortcuts import render
 
 from datasetsearch import dataset_retrieval
-# from notebooksearch import genericsearch
-
-# from notebooksearch import utils
-# es = utils.create_es_client()
 
 def dataset_search_view(request):
-    ''' Retrieve notebooks from Elasticsearch and render the web page. 
+    ''' Retrieve datasets from Elasticsearch and render the web page. 
     '''
     query_data = request.GET
     print(query_data)
     index_name = "dataset_online"
     searcher = dataset_retrieval.DatasetRetriever(query_data, index_name)
-    results = searcher.retrieve_notebooks()
+    results = searcher.retrieve_datasets()
 
     results["page_range"] = range(1, results["num_pages"])
     
