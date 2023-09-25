@@ -52,4 +52,25 @@ rclone copy ./notebookcrawler/Queries/ na_surf:notebook_search_docker/notebookcr
 rclone copy ./notebooksearch/Notebooks/Kaggle_summarization_fake_score.csv na_surf:notebook_search_docker/./notebooksearch/Notebooks/ --progress
 
 
+# ------------------------------------------------------------------------------------------------------
+# 20 Sep 2023
+# Source: data/notebook/Kaggle
+# Destination: /home/notebook_search_docker/data/notebook/Kaggle
+version=20_sep_2023
+zip -r ./data/notebook/Kaggle_${version}.zip ./data/notebook/Kaggle
+mv ./data/notebook/Kaggle_${version}.zip ./temp
+rclone copy ./temp na_surf:notebook_search_docker/data/notebook/Kaggle  --progress
+rm -dr ./temp
+
+
+# 21 Sep 2023
+# Source: data/dataset/Zenodo
+# Destination: /home/notebook_search_docker/data/dataset/Zenodo
+version=21_sep_2023
+zip -r ./data/dataset/Zenodo/PWC_${version}.zip ./data/dataset/Zenodo/PWC
+mkdir ./temp
+mv ./data/dataset/Zenodo/PWC_${version}.zip ./temp/PWC_${version}.zip
+cp -r ./data/dataset/Zenodo/PWC_logs ./temp/PWC_logs
+rclone copy ./temp na_surf:notebook_search_docker/data/dataset/Zenodo  --progress
+rm -dr ./temp
 

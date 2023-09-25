@@ -14,7 +14,7 @@ def dataset_search_view(request):
     query_data = request.GET
     print(query_data)
     index_name = "dataset_online"
-    searcher = dataset_retrieval.NotebookRetriever(query_data, index_name)
+    searcher = dataset_retrieval.DatasetRetriever(query_data, index_name)
     results = searcher.retrieve_notebooks()
 
     results["page_range"] = range(1, results["num_pages"])

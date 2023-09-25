@@ -1,6 +1,6 @@
 import os
 import pandas as pd
-from notebooksearch import utils
+from utils import utils
 
 class NotebookDownloader:
     def __init__(self): 

@@ -45,5 +45,6 @@ temp/
 test.ipynb
 
 nohup.out
+nohup*.out
 
 *.output

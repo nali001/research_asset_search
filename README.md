@@ -147,6 +147,17 @@ crawler/notebook_crawling.py (crawler is not ready yet)
 + Postgres: `localhost:5432`
 + pgadmin: `localhost:5050`
 
+### Index switching
++ Help functions in `search_engine_app/management/index_switching.py`. Usage: 
+```
+python -m management.index_switching
+```
+
+### Elasticsearch administation
++ Help functions in `search_engine_app/utils/es_tools.py`. Usage: 
+```
+python -m utils.es_tools
+```
 
 ### Postgres inspection
 Get into postgres docker container: 

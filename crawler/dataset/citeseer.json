@@ -1,0 +1,27 @@
+{
+    "conceptdoi": "10.5281/zenodo.8226021",
+    "conceptrecid": "8226021",
+    "created": "2023-08-08T19:02:08.004663+00:00",
+    "doi": "10.5281/zenodo.8226022",
+    "metadata": {
+        "access_right": "open",
+        "description": "<p>The supplementary dataset for the paper &quot;Evaluating Graph Neural Networks for Link Prediction: Current Pitfalls and New Benchmarking&quot;. We include the splits for cora, citeseer, and pubmed, the hard negative samples, and the node2vec embeddings. We also include a jupyter file <em>read_data.ipynb</em> to show how to read the non-txt file.</p>\n\n<ul>\n\t<li>heart_test_samples.npy,&nbsp;heart_valid_samples.npy: the heard negative samples</li>\n\t<li>*-n2v-embedding.pt: node2vec embeddings</li>\n\t<li>test_samples_index.pt, valid_samples_index.pt: the node index of the selected samples in ogbl-ppa under HeaRT</li>\n\t<li>gnn_feature: the input feature of cora, citeseer, pubmed</li>\n</ul>\n\n<p>More details for our code&nbsp;and how to use the dataset are&nbsp;on the code repository:&nbsp;https://github.com/Juanhui28/HeaRT .</p>",
+        "doi": "10.5281/zenodo.8226022",
+        "keywords": [
+            "link prediction, graph neural networks, benchmark, hard negative samples"
+        ],
+        "license": {
+            "id": "CC-BY-4.0"
+        },
+        "publication_date": "2023-08-08",
+        "related_identifiers": [
+            {
+                "identifier": "10.5281/zenodo.8226021",
+                "relation": "isVersionOf",
+                "scheme": "doi"
+            }
+        ],
+        "title": "Supplementary dataset for \"Evaluating Graph Neural Networks for Link Prediction: Current Pitfalls and New Benchmarking\"",
+        "version": "v1"
+    }
+}

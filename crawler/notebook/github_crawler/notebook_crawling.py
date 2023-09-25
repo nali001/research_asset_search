@@ -8,7 +8,7 @@ Each item contains a .ipynb source file and a .json metadata file.
 import os 
 import pandas as pd
 
-
+import requests
 import kaggle
 import time
 from datetime import timedelta
@@ -17,13 +17,71 @@ from memory_profiler import profile
 
 
 
-class KaggleNotebookCrawler: 
-    METADATA_FILE_NAME = "kernel-metadata.json"
-    def __init__(self, df_queries, **kwargs):
+class GithubNotebookCrawler: 
+    def __init__(self, df_queries, num_repos=100, **kwargs):
         self.df_queries = df_queries
         for key, value in kwargs.items(): 
             setattr(self, key, value) 
 
+    def search_repos(self, query): 
+        ''' Given one query, search Github repositories with the language Jupyter Notebook. 
+        '''
+        # GitHub search API endpoint
+        api_url = 'https://api.github.com/search/repositories'
+       
+        search_query = f'{query} language:Jupyter Notebook'  # Modify this based on your search criteria
+
+        repositories = []
+        # Send a request to the GitHub search API
+        response = requests.get(api_url, params={'q': search_query}) 
+        # Check if the request was successful
+        if response.status_code == 200:
+            # Extract repository information from the response
+            repositories = response.json().get('items', []) 
+        else:
+            print('Failed to search for Jupyter notebooks. Status code:', response.status_code)
+        
+        return repositories
+    
+
+    def download_notebooks(self, repo_full_name):
+        ''' Download notebooks from one repository. 
+        Args: 
+            - repo_full_name: str/str. 
+        '''
+        repo_contents_url = f'{self.github_api_url}/{repo_full_name}/contents'
+        notebook_count = 0
+
+        response = requests.get(repo_contents_url)
+
+        if response.status_code == 200:
+            repo_contents = response.json()
+
+            for content in repo_contents:
+                if content['type'] == 'file' and content['name'].endswith('.ipynb'):
+                    notebook_response = requests.get(content['download_url'])
+
+                    if notebook_response.status_code == 200:
+                        notebook_content = notebook_response.content
+
+                        repo_directory = repo_full_name.replace('/', '_')
+                        os.makedirs(repo_directory, exist_ok=True)
+                        notebook_filename = f'{content["name"]}'
+                        notebook_path = os.path.join(repo_directory, notebook_filename)
+
+                        with open(notebook_path, 'wb') as notebook_file:
+                            notebook_file.write(notebook_content)
+
+                        print(f'Downloaded {notebook_filename} from {repo_full_name}')
+                        notebook_count += 1
+
+            print(f'Total Jupyter notebooks downloaded from {repo_full_name}: {notebook_count}\n')
+
+        else:
+            print(f'Failed to retrieve contents of {repo_full_name}. Status code:', response.status_code)
+
+
+        
     def search_kernels(self, query, page_range): 
         ''' Search Kaggle kernels using given query
         '''
@@ -173,7 +231,7 @@ class KaggleNotebookCrawler:
     # memory_profile decorator
     @profile
     def bulk_search(self, page_range): 
-        '''' Search for notebooks '''
+        '''' Search for notebooks given a set of queries. '''
         df_queries = self.df_queries
         # Read notebook search logs and filter out the new notbooks to download
         temp = self.check_log(df_queries, self.SEARCH_LOG_FILE, ['query'])
@@ -277,22 +335,30 @@ class KaggleNotebookCrawler:
         return True
 
 
-def crawl_kaggle_notebooks(QUERY_FILE, page_range, task=None, re_search=False): 
-    # Check if the current working path is `search_engine_app``, if not terminate the program
-    if os.path.basename(os.getcwd()) != 'search_engine_app': 
-        print(f'Please navigate to `search_engine_app` directory and run: \n `python -m notebooksearch.notebook_crawling`\n')
+# ----------------------------
+
+def crawl_PWC_notebooks(source_name, QUERY_FILE, size, task=None): 
+    # Check if the current working path is `notebook_search_docker``, if not terminate the program
+    if os.path.basename(os.getcwd()) != 'notebook_search_docker': 
+        print(f'Please navigate to `notebook_search_docker` directory and run: \n `python -m crawler.dataset_crawling`\n')
         return False
 
-    DOWNLOAD_PATH = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/PWC/')
-    DOWNLOAD_LOG_FILE = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/PWC_logs/pwc_download_log.csv')
-    SEARCH_LOG_FILE = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/PWC_logs/pwc_search_log.csv')
-    SEARCH_NO_RECORD_FILE = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/PWC_logs/pwc_search_no_record.csv')
-    DOWNLOAD_NO_RECORD_FILE = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/PWC_logs/pwc_download_no_record.csv')
+    ROOT = os.path.join(os.getcwd(), f'data/notebook/{source_name}')
+    DOWNLOAD_PATH = os.path.join(ROOT, 'PWC')
+    LOG_PATH = os.path.join(ROOT, 'PWC_logs')
+    DOWNLOAD_LOG_FILE = os.path.join(LOG_PATH, 'pwc_download_log.csv')
+    SEARCH_LOG_FILE = os.path.join(LOG_PATH, 'pwc_search_log.csv')
+    SEARCH_NO_RECORD_FILE = os.path.join(LOG_PATH, 'pwc_search_no_record.csv')
+    DOWNLOAD_NO_RECORD_FILE = os.path.join(LOG_PATH, 'pwc_download_no_record.csv')
+
+    os.makedirs(ROOT, exist_ok=True)
+    os.makedirs(DOWNLOAD_PATH, exist_ok=True)
+    os.makedirs(LOG_PATH, exist_ok=True)
 
     # Read queries
     df_queries = pd.DataFrame(pd.read_csv(QUERY_FILE)['query'])
     # queries = ['wsi']
-    # df_queries = pd.DataFrame(queries, columns= ['queries'])
+    # df_queries = pd.DataFrame(queries, columns=['query'])
     # print(df_queries)
     kwargs = {
         'DOWNLOAD_PATH': DOWNLOAD_PATH, 
@@ -301,54 +367,17 @@ def crawl_kaggle_notebooks(QUERY_FILE, page_range, task=None, re_search=False):
         'SEARCH_NO_RECORD_FILE': SEARCH_NO_RECORD_FILE, 
         'DOWNLOAD_NO_RECORD_FILE': DOWNLOAD_NO_RECORD_FILE
     }
-    crawler = KaggleNotebookCrawler(df_queries, **kwargs)
+    crawler = GithubNotebookCrawler(source_name=source_name, df_queries=df_queries, size=size, **kwargs)
 
 
     if task=='search': 
-        result = crawler.bulk_search(page_range=page_range)
+        result = crawler.bulk_search(size=size)
     elif task=='crawl': 
-        result = crawler.crawl_notebooks(page_range=page_range, re_search=re_search)
+        result = crawler.crawl_notebooks()
     else: 
         return None
     return result
 
-
-def crawl_kaggle_notebooks_for_collected_queries(QUERY_FILE, page_range, task=None, re_search=False):
-    ''' Crawl notebooks from Kaggle for collected queries. 
-    ''' 
-    # Check if the current working path is `search_engine_app``, if not terminate the program
-    if os.path.basename(os.getcwd()) != 'search_engine_app': 
-        print(f'Please navigate to `search_engine_app` directory and run: \n `python -m notebooksearch.notebook_crawling`\n')
-        return False
-
-    DOWNLOAD_PATH = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/collected_queries/')
-    DOWNLOAD_LOG_FILE = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/collected_queries_logs/download_log.csv')
-    SEARCH_LOG_FILE = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/collected_queries_logs/search_log.csv')
-    SEARCH_NO_RECORD_FILE = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/collected_queries_logs/search_no_record.csv')
-    DOWNLOAD_NO_RECORD_FILE = os.path.join(os.getcwd(), 'notebooksearch/Raw_notebooks/collected_queries_logs/download_no_record.csv')
-
-    # Read queries
-    df_queries = pd.DataFrame(pd.read_csv(QUERY_FILE)['query'])
-    # queries = ['wsi']
-    # df_queries = pd.DataFrame(queries, columns= ['queries'])
-    # print(df_queries)
-    kwargs = {
-        'DOWNLOAD_PATH': DOWNLOAD_PATH, 
-        'DOWNLOAD_LOG_FILE': DOWNLOAD_LOG_FILE, 
-        'SEARCH_LOG_FILE': SEARCH_LOG_FILE, 
-        'SEARCH_NO_RECORD_FILE': SEARCH_NO_RECORD_FILE, 
-        'DOWNLOAD_NO_RECORD_FILE': DOWNLOAD_NO_RECORD_FILE
-    }
-    crawler = KaggleNotebookCrawler(df_queries, **kwargs)
-
-
-    if task=='search': 
-        result = crawler.bulk_search(page_range=page_range)
-    elif task=='crawl': 
-        result = crawler.crawl_notebooks(page_range=page_range, re_search=re_search)
-    else: 
-        return None
-    return result
 
 
 
@@ -356,13 +385,14 @@ def main():
     # PWC_PATH = os.path.join(os.getcwd(), 'notebooksearch/Queries')
     # generate_pwc_queries(PWC_PATH)
     
-    QUERY_FILE = os.path.join(os.getcwd(), 'data/Queries/collected_queries.csv')
-    tasks = ['search', 'crawl']
+    QUERY_FILE = os.path.join(os.getcwd(), 'data/Queries/pwc_queries.csv')
+    tasks = ['crawl']
     for task in tasks: 
-        crawl_kaggle_notebooks_for_collected_queries(QUERY_FILE, page_range=10, task=task, re_search=False)
-        crawl_kaggle_notebooks_for_collected_queries(QUERY_FILE, page_range=10, task=task, re_search=False)
+        crawl_PWC_notebooks(source_name='Github', QUERY_FILE=QUERY_FILE, num_repos=100, task=task)
+        crawl_PWC_notebooks(source_name='Github', QUERY_FILE=QUERY_FILE, num_repos=100, task=task)
     return True
 
 if __name__ == '__main__':
     main()
+
 

@@ -6,7 +6,7 @@ import numpy as np
 import requests
 from bs4 import BeautifulSoup
 
-from notebooksearch import utils
+from utils import utils
 # from indexer import notebook_indexing
 
 #-----------------------------------------------------------------------------------------------------------------------
@@ -84,7 +84,7 @@ class NotebookRetriever():
         for search_result in es_results['hits']['hits']:
             one_notebook = search_result['_source']
             print(one_notebook.keys())
-            one_notebook['summarization'] = one_notebook.pop('summarization_t5')
+            # one_notebook['summarization'] = one_notebook.pop('summarization_t5')
             es_notebooks.append(one_notebook)
         num_hits=es_results['hits']['total']['value']
         num_pages=round(np.ceil(num_hits/10)+1)

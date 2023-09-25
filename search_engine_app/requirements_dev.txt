@@ -11,7 +11,7 @@ PyGithub==1.55
 pandas==1.5.0
 
 # Kaggle API
-kaggle==1.5.12
+kaggle==1.5.16
 
 
 # NLP
