@@ -83,7 +83,7 @@ class NotebookRetriever():
         es_notebooks=[]
         for search_result in es_results['hits']['hits']:
             one_notebook = search_result['_source']
-            print(one_notebook.keys())
+            # print(one_notebook.keys())
             # one_notebook['summarization'] = one_notebook.pop('summarization_t5')
             es_notebooks.append(one_notebook)
         num_hits=es_results['hits']['total']['value']

@@ -26,7 +26,7 @@ def switch_to_index(resource_type=None, new_indices=None):
 
 def main():
     # switch_to_index(resource_type='notebook', new_indices=['kaggle_notebooks_2023-09-18'])
-    switch_to_index(resource_type='dataset', new_indices=['kaggle_datasets_2023-09-25', 'zenodo_datasets_2023-09-25', 'dryad_datasets_2023-09-25'])
+    switch_to_index(resource_type='dataset', new_indices=['kaggle_datasets_2023-09-25', 'zenodo_datasets_2023-09-25'])
 
 
 if __name__ == '__main__': 

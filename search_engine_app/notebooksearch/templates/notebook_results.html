@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Search Results</title>
+    <title>Notebooks</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
@@ -16,7 +16,7 @@
 
     {% load static %}
     <!-- Favicon icon -->
-    <link rel="icon" href="{% static '/images/envriLOGO.png'%}" type="image/x-icon">
+    <link rel="icon" href="{% static '/images/system_icon.png'%}" type="image/x-icon">
 
     <!-- Google font-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600">
@@ -68,8 +68,6 @@
 
 </head>
 
-
-
 <body>
     <!-- Pre-loader start -->
     <div class="theme-loader">
@@ -103,7 +101,9 @@
 
                         {% comment %} Return to Home page {% endcomment %}
                         <a href="/">
-                              <span style="height:40px;font-size:11pt;padding:6px;margin-top:5px;">Home</span>
+                            <img class="img-fluid" src="{% static 'images/system_logo01.png' %}" 
+                            style="height:40px;padding:0px;margin-top:0px;" alt="Theme-Logo" />
+                              {% comment %} <span style="height:80px;font-size:14pt;padding:6px;margin-top:5px;margin-left:10px;">Home</span> {% endcomment %}
                           </a>
                         <a class="mobile-options">
                             <i class="ti-more"></i>
@@ -125,11 +125,11 @@
                                     </div>
                                 </div>
                             </li> {% endcomment %}
-                            <li>
+                            {% comment %} <li>
                                 <a href="#!" onclick="javascript:toggleFullScreen()">
                                     <i class="ti-fullscreen"></i>
                                 </a>
-                            </li>
+                            </li> {% endcomment %}
                         </ul>
                         <ul class="nav-right">
                             <li class="header-notification">
@@ -147,7 +147,7 @@
 
                             <li class="user-profile header-notification">
                                 <a href="#!">
-                                    <img src="{% static 'images/GuestICON.png' %}" class="img-radius"
+                                    <img src="{% static 'images/joker_icon.png' %}" class="img-radius"
                                         alt="User-Profile-Image" width="20" height="30">
                                     <span>Guest</span>
                                     <i class="ti-angle-down"></i>
@@ -347,6 +347,7 @@
                                     </script>
 
                                     {% comment %} Notebook result page {% endcomment %}
+                                    {% comment %} <script> var item_index = 1 </script> {% endcomment %}
                                     {%for resultItem in results %}
 
                                     <div class="page-body">
@@ -358,7 +359,7 @@
                                                         <h5 class="m-b-10 titleTrimming">
                                                             <a href="{{ resultItem.html_url}}" target="_blank"
                                                                 style="color:darkblue;">
-                                                                <img src="{% static 'images/JPNk.png' %}"
+                                                                <img src="{% static 'images/notebook_icon.png' %}"
                                                                     style="width:25px; left: 10px; margin-right:6px;" />
                                                                 {{ resultItem.name }}
                                                             </a>
@@ -389,11 +390,16 @@
                                                                             target="_blank"> Git </a> </div>
                                                                 </a> {% endcomment %}
 
-                                                                <a href="#"
+
+                                                                <img src="{% static 'images/selection_icon.png' %}" data-docid='{{ resultItem.docid }}' data-type='notebook'
+                                                                onclick="selectObject(event, 'select');"
+                                                                    style="width:35px; right:30px;position: absolute;margin-right:20px;" />
+
+                                                                {% comment %} <a href="#"
                                                                     onclick="modifyBasket('add','Notebooks',&quot;{{ resultItem.name }}&quot;, &quot;{{ resultItem.html_url}}&quot;, 'id');">
-                                                                    <img src="{% static 'images/addToBasket.png' %}"
+                                                                    <img id="selection_icon_image" src="{% static 'images/addToBasket.png' %}"
                                                                         style="width:25px; right:0px;position: absolute;margin-right:20px;" />
-                                                                </a>
+                                                                </a> {% endcomment %}
 
                                                             </li>
                                                         </ul>
@@ -401,10 +407,10 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-
+                                </div>
                                     {% endfor %}
                                 </div>
+
                                 <div style="text-align:center; margin-bottom:40px;">
                                     {% for page in page_range %}
                                     {% if page == current_page %}
@@ -430,8 +436,6 @@
 
     {% csrf_token %}
     <script>
-        //---------------------------------------------------------------------
-
         function clearSearchBoxes() {
             sessionStorage.setItem("searchValue", "");
         }
@@ -480,12 +484,11 @@
                 searchValue = document.getElementById('searchbox1').value;
             }
             else {
-                {% comment %} searchValue = 'none';  {% endcomment %}
                 searchValue = document.getElementById('searchbox2').value;
             }
             sessionStorage.setItem("searchValue", searchValue);
 
-            if (searchValue === "") {
+            if (searchValue == "") {
                 document.getElementById('MessageBox').innerText = "Please enter at least one keyword, otherwise, I cannot help you!";
             }
             else {
@@ -540,6 +543,66 @@
             return cookieValue;
         }
         //---------------------------------------------------------------------
+        function selectObject(event, operation){
+            if (operation == 'select') {
+                // clear other other selected item first
+                var selected_item = document.getElementById("selected_item"); 
+                if(selected_item) {
+                    selected_item.id = ''; 
+                    selected_item.src = '{% static "images/selection_icon.png" %}'; 
+                    selected_item.setAttribute("onclick", `selectObject(event, 'select');`); 
+                }
+
+                // Change the clicked item
+                var id = 'id' + (new Date()).getTime();
+                new_item = event.target
+                new_item.src = '{% static "images/selected_icon.png" %}'; 
+                new_item.id = "selected_item"; 
+                new_item.setAttribute("onclick", `selectObject(event, 'cancel');`); 
+
+                // Post the selected item to server to get reformulated query
+                getReformulatedQuery(new_item.dataset.type, new_item.dataset.docid); 
+            } 
+            else if (operation == 'cancel') {
+                var id = 'id' + (new Date()).getTime();
+                event.target.src = '{% static "images/selection_icon.png" %}'; 
+                event.target.setAttribute("onclick", `selectObject(event, 'select');`); 
+                var original_query = sessionStorage.getItem("searchValue");
+                document.getElementById('searchbox2').value = original_query;
+
+            }; 
+
+        }
+        
+        function getReformulatedQuery(object_type, docid) {
+            var url = `../select_${object_type}/`; 
+            var query = sessionStorage.getItem("searchValue")
+            var newEntity = {"query": query, "object_type": object_type, "docid": docid}; 
+            $.ajax({
+                url: url,
+                type: "POST",
+                dataType: "json",
+                data: JSON.stringify(newEntity),
+                headers: {
+                    "X-Requested-With": "XMLHttpRequest",
+                    "X-CSRFToken": getCookie("csrftoken"),  // don't forget to include the 'getCookie' function
+                },
+                success: (data) => {
+                    var reformedQuery = data.reformed_query;
+                    console.log("Reformed Query:", reformedQuery);
+                    
+                    // Change the query in the search bar
+                    sessionStorage.setItem("reformulatedQuery", reformedQuery);
+                    document.getElementById('searchbox2').value = reformedQuery;
+                },
+                error: (error) => {
+                    console.log(error);
+                }
+            });
+        }
+
+    
+
         function modifyBasket(operation, type, title, url, id) {
 
             if (title.length > 35) {

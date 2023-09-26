@@ -136,9 +136,13 @@ class DatasetCrawler:
         '''
         # Search for datasets
         api_url = "https://datadryad.org/api/v2/search"  # Replace with the actual API endpoint
+        
+        MAX_RETRIES = 5  # Maximum number of retries
+        BASE_DELAY = 10  # Base delay in seconds for the first retry
 
         per_page = 100
         page_range = size%per_page+1
+        retries = 0
         hits = []
         
         for page in range(1, page_range+1): 
@@ -147,25 +151,36 @@ class DatasetCrawler:
             "per_page": per_page, 
             "page": page, 
             }
+            while retries < MAX_RETRIES:
+                try:
+                    response = requests.get(api_url, params=params)
+                    response.raise_for_status()  # Raise an exception for bad requests
 
-            try:
-                response = requests.get(api_url, params=params)
-                response.raise_for_status()  # Raise an exception for bad requests
+                    # Parse the JSON response
+                    data = response.json()
+                    datasets = data.get("_embedded", {}).get("stash:datasets", [])
 
-                # Parse the JSON response
-                data = response.json()
-                datasets = data.get("_embedded", {}).get("stash:datasets", [])
+                    print(f'Crawling page {page}') 
+                    time.sleep(1)
+                    break 
 
-                print(f'Crawling page {page}') 
 
-            except requests.exceptions.RequestException as e:
-                print("Error:", e)            
-            
-            if len(datasets) == 0: 
-                break
-            
-            else: 
-                hits.extend(datasets)
+                except requests.exceptions.RequestException as e:
+                    print("Error:", e)    
+                     # Increment retries and apply exponential backoff
+                    retries += 1
+                    if retries < MAX_RETRIES:
+                        delay = BASE_DELAY * 2**retries
+                        print(f"Retrying in {delay} seconds...")
+                        time.sleep(delay)
+                    else:
+                        print("Maximum retries reached. Unable to retrieve data.")
+                
+                if len(datasets) == 0: 
+                    break
+                
+                else: 
+                    hits.extend(datasets)
         return hits
 
 

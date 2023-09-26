@@ -68,7 +68,7 @@ class ElasticsearchIndexer():
                             newRecord[key] = index_content[key]
                 # for count, record in enumerate(indexfiles): 
                         try: 
-                            res = es.index(index=index_name, id = newRecord["id"], body=newRecord)
+                            res = es.index(index=index_name, id = newRecord["id"], document=newRecord)
                             print(f'Indexing {str(count+1)}-th record!\n')
                             count = count + 1
                         except Exception as e: 
@@ -127,7 +127,7 @@ def main():
     data_dir = os.path.join(os.getcwd(), 'data/dataset')
     # Change `reindex` to True if you want to reindex the notebooks
     # index_datasets(data_dir=data_dir, source_name='Kaggle', query_source='PWC', preprocess_type='basic', reindex=True)
-    index_datasets(data_dir=data_dir, source_name='Zenodo', query_source='PWC', preprocess_type='basic', reindex=True)
+    # index_datasets(data_dir=data_dir, source_name='Zenodo', query_source='PWC', preprocess_type='basic', reindex=True)
     index_datasets(data_dir=data_dir, source_name='Dryad', query_source='PWC', preprocess_type='basic', reindex=True)
 
 # Go to 'notebook_search_docker/' dir and 

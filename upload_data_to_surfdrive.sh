@@ -70,7 +70,30 @@ version=21_sep_2023
 zip -r ./data/dataset/Zenodo/PWC_${version}.zip ./data/dataset/Zenodo/PWC
 mkdir ./temp
 mv ./data/dataset/Zenodo/PWC_${version}.zip ./temp/PWC_${version}.zip
-cp -r ./data/dataset/Zenodo/PWC_logs ./temp/PWC_logs
+cp -r ./data/dataset/Zenodo/PWC_logs ./temp/PWC_logs_${version}
 rclone copy ./temp na_surf:notebook_search_docker/data/dataset/Zenodo  --progress
 rm -dr ./temp
 
+
+# 26 Sep 2023
+# Source: data/dataset/Kaggle
+# Destination: /home/notebook_search_docker/data/dataset/Kaggle
+version=26_sep_2023
+zip -r ./data/dataset/Kaggle/PWC_${version}.zip ./data/dataset/Kaggle/PWC
+mkdir ./temp
+mv ./data/dataset/Kaggle/PWC_${version}.zip ./temp/PWC_${version}.zip
+cp -r ./data/dataset/Kaggle/PWC_logs ./temp/PWC_logs_${version}
+rclone copy ./temp na_surf:notebook_search_docker/data/dataset/Kaggle  --progress
+rm -dr ./temp
+
+
+# 26 Sep 2023
+# Source: data/notebook/Kaggle
+# Destination: /home/notebook_search_docker/data/notebook/Kaggle
+version=26_sep_2023
+zip -r ./data/notebook/Kaggle/PWC_${version}.zip ./data/notebook/Kaggle/PWC
+mkdir ./temp
+mv ./data/notebook/Kaggle/PWC_${version}.zip ./temp/PWC_${version}.zip
+cp -r ./data/notebook/Kaggle/PWC_logs ./temp/PWC_logs_${version}
+rclone copy ./temp na_surf:notebook_search_docker/data/notebook/Kaggle  --progress
+rm -dr ./temp
