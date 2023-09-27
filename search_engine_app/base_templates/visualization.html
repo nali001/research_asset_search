@@ -1,0 +1,16 @@
+{% extends 'body.html' %}
+{% load static %}
+
+{% block main_body %}
+<div class="pcoded-content">
+    <div class="pcoded-inner-content">
+        {% comment %} Message box {% endcomment %}
+        <div class="main-body">
+            {% block visualization_content %} Visualization content {% endblock %}
+        </div>
+    </div>
+        <div id="styleSelector">
+
+        </div>
+</div>
+{% endblock %}

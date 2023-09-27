@@ -34,7 +34,7 @@ ROOT_URLCONF = 'search_engine_app.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['./base_templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -98,6 +98,7 @@ INSTALLED_APPS = [
     'genericpages',
     'notebooksearch', 
     'datasetsearch', 
+    'graphvisualization',
     'apis', 
     'rest_framework', 
     'rest_framework.authtoken', 

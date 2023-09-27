@@ -1,0 +1,45 @@
+{% extends 'visualization.html' %}
+{% load static %}
+
+{% block visualization_content %} 
+<div id="graph-container"></div>
+  <script type="text/javascript">
+    // Initialize a network
+    // Sample data for nodes and edges
+    var nodesData = [
+    { id: 1, label: 'Node 1' },
+    { id: 2, label: 'Node 2' },
+    { id: 3, label: 'Node 3' },
+    { id: 4, label: 'Node 4' }
+    ];
+
+    var edgesData = [
+    { from: 1, to: 2 },
+    { from: 1, to: 3 },
+    { from: 2, to: 4 },
+    { from: 3, to: 4 }
+    ];
+
+    var container = document.getElementById('graph-container');
+    var data = {
+      nodes: new vis.DataSet(nodesData),
+      edges: new vis.DataSet(edgesData)
+    };
+    var options = {};
+    var network = new vis.Network(container, data, options);
+  </script>
+
+
+<script>
+    var channel_name = 'graph_channel';
+    $('.left_pannel').each(function() {
+        var a = $(this).find('a');  // Find 'a' element within each 'left_pannel'
+        if (a.attr('id') === channel_name) {
+            console.log('Found matching channel:', channel_name);
+            // Add a class to the parent div with class 'left_pannel'
+            $(this).addClass('active');
+        }
+    });
+</script>
+
+{% endblock %}
