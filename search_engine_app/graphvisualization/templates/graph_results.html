@@ -2,31 +2,27 @@
 {% load static %}
 
 {% block visualization_content %} 
-<div id="graph-container"></div>
+<div id="graph-container" style="width: 100%; height: 100vh;"></div>
+
   <script type="text/javascript">
     // Initialize a network
     // Sample data for nodes and edges
-    var nodesData = [
-    { id: 1, label: 'Node 1' },
-    { id: 2, label: 'Node 2' },
-    { id: 3, label: 'Node 3' },
-    { id: 4, label: 'Node 4' }
-    ];
 
-    var edgesData = [
-    { from: 1, to: 2 },
-    { from: 1, to: 3 },
-    { from: 2, to: 4 },
-    { from: 3, to: 4 }
-    ];
-
-    var container = document.getElementById('graph-container');
-    var data = {
-      nodes: new vis.DataSet(nodesData),
-      edges: new vis.DataSet(edgesData)
+    var container = document.getElementById('graph-container'); 
+    const graphData = {{ graph | safe }};
+    console.log(graphData)
+    const options = {
+      nodes: {
+          shape: 'dot',
+          {% comment %} size: graphData['nodes'],  // Default node size {% endcomment %}
+      },
+      edges: {
+          smooth: {
+              type: 'continuous',
+          },
+      },
     };
-    var options = {};
-    var network = new vis.Network(container, data, options);
+    var network = new vis.Network(container, graphData, options);
   </script>
 
 

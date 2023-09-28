@@ -1,12 +1,17 @@
 # graphvisualization/views.py
 # Only used for rendering HTML
 from django.shortcuts import render
-from .models import Node, Edge
+
+from .generate_graph import GraphGenerator
 
 
 def graph_visualization_view(request):
-    nodes = Node.objects.all()
-    edges = Edge.objects.all()
-    return render(request, 'graph_results.html', {'nodes': nodes, 'edges': edges})
+    graph_path = "../data/KG/PWC/datasets_kg.graphml" 
+    graph_generator = GraphGenerator(graph_path=graph_path)
+    graph = graph_generator.search_graph(keyword='mnist', mode='label', max_distance=2)
+    
+    result = {"graph": graph}
+    return render(request, 'graph_results.html', result)
+
 
  
