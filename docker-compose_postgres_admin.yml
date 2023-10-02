@@ -11,7 +11,7 @@ services:
       - POSTGRES_PASSWORD=notebooksearch2022
       - POSTGRES_DB=notebooksearch
     ports:
-      - 5432:5432
+      - 127.0.0.1:5432:5432
 
   pgadmin:
     build: ./pgadmin
@@ -26,7 +26,7 @@ services:
     depends_on: 
       - postgres
     ports:
-      - 6666:80
+      - 127.0.0.1:6666:80
 
     
 

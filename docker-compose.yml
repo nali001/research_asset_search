@@ -42,7 +42,7 @@ services:
       - node.name=es01
       - TAKE_FILE_OWNERSHIP=true 
     ports: 
-      - 9200:9200
+      - 127.0.0.1:9200:9200
 
   postgres:
     build: ./postgres
@@ -57,8 +57,8 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=notebooksearch2022
       - POSTGRES_DB=notebooksearch
-    expose:
-      - 5432
+    ports:
+      - 127.0.0.1:5432:5432
 
   pgadmin:
     build: ./pgadmin
@@ -75,8 +75,9 @@ services:
     depends_on: 
       - postgres
     ports:
-      - 5050:80
-    
+      - 127.0.0.1:5050:80
+  
+
   nginx: 
     build: ./nginx
     image: notebooksearch/nginx:latest
@@ -89,9 +90,66 @@ services:
       - search_engine_net
     depends_on:
       - search_engine_app
-    ports: 
-      - 80:80
+    expose: 
+      - 80
+      - 443
+
+
+  haproxy:
+    image: haproxy:2.8
+    depends_on:
+      certbot_self_signed:
+        condition: service_completed_successfully
+    healthcheck:
+      test: |
+        bash -c 'exec 3<>/dev/tcp/127.0.0.1/80; echo -e "GET /health HTTP/1.1\nConnection: close\n" >&3; cat <&3 | grep -q "200 OK"'
+      interval: 5s
+    volumes:
+      - ./gateway_config/conf-haproxy:/usr/local/etc/haproxy/
+      - ./gateway_config/data-backend-certs/:/etc/ssl/backend-certs/
+      - ./gateway_config/data-certificates:/etc/ssl/private/
+    ports:
+      - '80:80'
+      - '443:443'
+    networks: 
+      - search_engine_net
+
+
+
+  certbot_self_signed:
+    image: local/certbot_self_signed
+    build:
+      context: ./docker/certbot_self_signed
+    volumes:
+      - ./gateway_config/data-certificates:/etc/ssl/private/
+    env_file:
+      - ./gateway_config/certbot.env
+    networks: 
+      - search_engine_net
+    
+
+  certbot_letsencrypt:
+    image: local/certbot_letsencrypt
+    build:
+      context: ./docker/certbot_letsencrypt/
+    depends_on:
+      haproxy:
+        condition: service_healthy
+    volumes:
+      - ./gateway_config/data-letsencrypt:/etc/letsencrypt/
+      - ./gateway_config/data-certificates:/etc/ssl/private/
+    env_file:
+      - ./gateway_config/certbot.env
+    networks: 
+      - search_engine_net
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
 
 networks: 
   search_engine_net:
     driver: bridge
+
+volumes:
+  data-letsencrypt:
+  data-certificates:

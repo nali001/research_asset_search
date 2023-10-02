@@ -1,6 +1,32 @@
-# docker-compose_dev.yml
-# Build and run docker containers for web services in development environment
+# docker-compose.yml
+# Build and run docker containers for web services in deployment environment
+
 services:
+  search_engine_app:
+    build: ./search_engine_app
+    image: notebooksearch/search_engine_app:latest
+    container_name: notebooksearch_search_engine_app
+    volumes: 
+      - ./search_engine_app/notebooksearch/Notebooks:/search_engine_app/notebooksearch/Notebooks
+    environment: 
+      - HOST_IP=${HOST_IP}
+      - ELASTICSEARCH_HOSTNAME=elasticsearch
+      - ELASTICSEARCH_PORT=9200
+      - ELASTICSEARCH_USERNAME=elastic
+      - ELASTICSEARCH_PASSWORD=changeme
+      - POSTGRES_HOSTNAME=postgres
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=notebooksearch2022
+      - POSTGRES_DB=notebooksearch
+    networks: 
+      - search_engine_net
+    depends_on:
+      - elasticsearch
+      - postgres
+    expose: 
+      - 7777
+    
   elasticsearch: 
     build: ./elasticsearch
     image: notebooksearch/elasticsearch:latest
@@ -16,7 +42,7 @@ services:
       - node.name=es01
       - TAKE_FILE_OWNERSHIP=true 
     ports: 
-      - 127.0.0.1:9200:9200
+      - 9200:9200
 
   postgres:
     build: ./postgres
@@ -31,8 +57,8 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=notebooksearch2022
       - POSTGRES_DB=notebooksearch
-    ports:
-      - 127.0.0.1:5432:5432
+    expose:
+      - 5432
 
   pgadmin:
     build: ./pgadmin
@@ -49,9 +75,23 @@ services:
     depends_on: 
       - postgres
     ports:
-      - 127.0.0.1:5050:80
+      - 5050:80
+    
+  nginx: 
+    build: ./nginx
+    image: notebooksearch/nginx:latest
+    container_name: notebooksearch_nginx
+    volumes: 
+      - ./nginx/logs:/nginx_server/search_engine_app/logs
+      - ./nginx/templates:/etc/nginx/templates
+
+    networks: 
+      - search_engine_net
+    depends_on:
+      - search_engine_app
+    ports: 
+      - 80:80
 
 networks: 
   search_engine_net:
     driver: bridge
-
