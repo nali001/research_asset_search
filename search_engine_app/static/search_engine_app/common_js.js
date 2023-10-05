@@ -1,6 +1,7 @@
 // =================== Common JS functions ======================
 function updateURL(event, object_type) {
     var searchValue = document.getElementById("searchbox2").value; 
+    var nodeDistance = 3
 
     if (object_type=='notebook') {
         var url = "../../notebooksearch/notebook_search?query=" + searchValue + "&page=1&filter=&facet="; 
@@ -9,7 +10,7 @@ function updateURL(event, object_type) {
         var url = "../../datasetsearch/dataset_search?query=" + searchValue + "&page=1&filter=&facet=";
     }
     else if (object_type=='graph') {
-        var url = "../../graphvisualization/graph_visualization/";
+        var url = "../../graphvisualization/graph_visualization?query=" + searchValue + "&distance=" + nodeDistance;
     }
 
     channel_id = '#'+object_type+'_channel'

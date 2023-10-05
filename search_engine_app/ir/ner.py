@@ -1,11 +1,14 @@
 # ir/ner.py
+import openai
+import os
+
 
 class EntityExtractor:
     def __init__(self, content_type=None, model_name=None):
         self.content_type = content_type
         self.model_name = model_name
         self.models = {
-            "xxx": self._xxx,  # Placeholder for entity extraction function
+            "chatgpt": self._chatgpt,  # Placeholder for entity extraction function
         }
 
     def extract_entities(self, content):
@@ -14,14 +17,28 @@ class EntityExtractor:
         extraction_function = self.models[self.model_name]
         entities = extraction_function(content)
         return entities
+    
 
-    def _xxx(self, content):
-        # Placeholder for entity extraction function
-        # Replace this with your actual entity extraction logic
-        # For now, just splitting the content into words and returning them as entities
-        toy_entities = {
-            "task": "Data Wrangling",
-            "dataset": "Turbofan Engine Degradation Simulation Data Set",
-            "method": "Importing txt files and consolidating data into csv files"
-        }
-        return toy_entities
+
+    def _chatgpt(self, content):
+        with open('../secrets/openai_token.txt', 'r') as f: 
+            api_key = f.read()
+
+        # Define a list of messages as input for the chat model
+        messages = [
+            {"role": "system", "content": "Extract task, dataset and method entities from the text. Output the entities in a Json format using these keys: {'task', 'dataset', 'method'}"},
+            {"role": "user", "content": content},
+        ]
+
+        # Use the OpenAI API for chat completions
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",  # Use the appropriate model
+            messages=messages,
+            max_tokens=1240,  # Adjust as needed
+            temperature=0.3,  # Lower temperature for more deterministic output
+            api_key=api_key
+        )
+        # Extract the assistant's reply from the response
+        entities = response['choices'][0]['message']['content']
+        return entities
+

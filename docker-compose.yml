@@ -24,8 +24,8 @@ services:
     depends_on:
       - elasticsearch
       - postgres
-    expose: 
-      - 7777
+    ports: 
+      - 127.0.0.1:7777:7777
     
   elasticsearch: 
     build: ./elasticsearch
@@ -85,14 +85,14 @@ services:
     volumes: 
       - ./nginx/logs:/nginx_server/search_engine_app/logs
       - ./nginx/templates:/etc/nginx/templates
+      - ./nginx/static:/nginx_server/search_engine_app/static
 
     networks: 
       - search_engine_net
     depends_on:
       - search_engine_app
-    expose: 
-      - 80
-      - 443
+    ports: 
+      - 127.0.0.1:8585:80
 
 
   haproxy:

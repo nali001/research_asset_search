@@ -90,9 +90,9 @@ class GraphGenerator:
     @staticmethod
     def _compute_node_size(num_edges):
         # Define the quadratic scaling function, adjust the coefficients based on your requirements
-        a = 1.0  # Coefficient
-        b = 1.0  # Coefficient
-        c = 10.0  # Coefficient
+        a = 0  # Coefficient
+        b = 0  # Coefficient
+        c = 20.0  # Coefficient
 
         # Scale the node size using a quadratic function
         size = a * num_edges ** 2 + b * num_edges + c
@@ -100,7 +100,18 @@ class GraphGenerator:
     
     @staticmethod
     def _serialize_nodes(graph):
-        node_data = [{"id": node, "label": data.get("label", ""), "size": GraphGenerator._compute_node_size(graph.degree(node))} for node, data in graph.nodes(data=True)]
+        # Define a dictionary to map node types to colors
+        NODE_TYPE_COLORS = {
+            "dataset": "#40E0D0",
+            "task": "#4169E1",
+            # Add more mappings as needed
+        }
+
+        node_data = [{"id": node, 
+                      "label": data.get("label", ""), 
+                      "size": GraphGenerator._compute_node_size(graph.degree(node)), 
+                      "color": NODE_TYPE_COLORS.get(data.get("type", ""), "gray")
+                      } for node, data in graph.nodes(data=True)]
         return {"nodes": node_data}
 
     # Serialize the graph edges to dict

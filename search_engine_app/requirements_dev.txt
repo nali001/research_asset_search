@@ -35,3 +35,6 @@ memory_profiler==0.60.0
 
 # Graph
 networkx==3.1
+
+# Openai
+openai==0.28.1

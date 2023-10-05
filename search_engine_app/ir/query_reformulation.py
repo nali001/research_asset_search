@@ -1,6 +1,10 @@
-from .ner import EntityExtractor
 from elasticsearch.helpers import scan
 from utils import utils
+import os
+import json
+
+from .ner import EntityExtractor
+
 
 class QueryReformulator: 
     def __init__(self, object_type=None, docid=None, index_name=None): 
@@ -12,14 +16,20 @@ class QueryReformulator:
         # Get the contents using docid
         # Assuming df_notebook contains the notebook content for the given docid
         content = self._get_notebook_content(self.docid, self.index_name)  # You'll need to implement this function
-
-        # Extract entities
-        extractor = EntityExtractor(content_type='text', model_name='xxx')
-        entities = extractor.extract_entities(content)
+        # content = nb['description']
+        if content=='': 
+            print(f'[[{os.getcwd()}]] No description: {self.docid}')
+            entities = {}
+        else: 
+            # Extract entities
+            extractor = EntityExtractor(content_type='text', model_name='chatgpt')
+            entities = extractor.extract_entities(content)
         return entities
     
     def reformulate_query_for_notebook(self, query=None): 
         entities = self.extract_entities_from_notebook()
+        # print(entities)
+        entities = json.loads(entities)
         non_none_values = [value for key, value in entities.items() if value is not None]
         reformed_query = query + ' ' + ' '.join(non_none_values)
         return reformed_query
@@ -40,6 +50,7 @@ class QueryReformulator:
 
         # Process the results
         for hit in search_results:
+            print(hit)
             notebook_content = hit['_source']['description']
             break
         return notebook_content
@@ -48,7 +59,8 @@ class QueryReformulator:
 # ------------------------------------------------
 def main():
     query = "Point cloud"
-    reformulator = QueryReformulator(object_type='notebook', docid='NB_3303738aff8da496ae1366dd059d0343ddcb5eedd8e3c0c92209bac6caa97d0d', index_name='notebook_online')
+    # reformulator = QueryReformulator(object_type='notebook', docid='NB_93a306f0bd0e6567dfa1afcc01f0f985fafa0b4d156fabace1c99a6b584b4e7e', index_name='notebook_online')
+    reformulator = QueryReformulator(object_type='notebook', docid='NB_b7e8217d45d41b10a9754adfeef5c62b779bc1fd83aa48eb7f8c9d117a8ce55d', index_name='notebook_online')
     reformed = reformulator.reformulate_query_for_notebook(query=query)
     print(f"-------------- Reformed query ------------\n{reformed}")
     print("-------------------------------------------\n")

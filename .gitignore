@@ -2,6 +2,8 @@
 .ipynb_checkpoints/
 __pycache__/
 __init__.pyc
+
+secrets/
 migrations/
 data/
 search_engine_app/venv
@@ -48,3 +50,7 @@ nohup.out
 nohup*.out
 
 *.output
+
+gateway_config/
+search_engine_app/ir/scierc/
+search_engine_app/ir/scirex/
