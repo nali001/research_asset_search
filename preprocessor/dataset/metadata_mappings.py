@@ -22,7 +22,8 @@ ZENODO_MATADATA_MAPPING = {
     "description": [('metadata', 'title'), ('metadata', 'description'), ('metadata', 'keywords')],
     "html_url": [('links', 'html')],
     "source_id": ['doi'],
-    "last_updated": ['updated'], 
+    # "last_updated": ['updated'], 
+    "last_updated": ['last_updated'], 
     "license": [('metadata', 'license', 'id')], 
 }
 
@@ -34,7 +35,8 @@ KAGGLE_METADATA_MAPPING = {
     "description": ['title', 'subtitile', 'description'],
     "html_url": ['url'],
     "source_id": ['ref'],
-    "last_updated": ['lastUpdated'], 
+    # "last_updated": ['lastUpdated'], 
+    "last_updated": ['last_updated'], 
     "license": ['licenseName'], 
 }
 
@@ -48,8 +50,12 @@ DRYAD_CONTENT_MAPPING = {
     "description": ['abstract'],
     "html_url": ['sharingLink'],
     "source_id": ['identifier'],
-    "last_updated": ['lastModificationDate'], 
-    "license": ['license'],
+    # "last_updated": ['lastModificationDate'], 
+    "last_updated": ['last_updated'], 
+    "license": ['license'], 
 }
 
+DRYAD_LICENSES = {
+    "https://creativecommons.org/publicdomain/zero/1.0/": "CC0 1.0 Universal", 
+}
 

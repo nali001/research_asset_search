@@ -8,11 +8,13 @@ Preprocess dataset metadata form various respositories.
 import os
 import json
 import glob
+from datetime import datetime
 
 from utils import utils
 from .metadata_mappings import ZENODO_MATADATA_MAPPING
 from .metadata_mappings import KAGGLE_METADATA_MAPPING
 from .metadata_mappings import DRYAD_CONTENT_MAPPING
+from .metadata_mappings import DRYAD_LICENSES
 
 
 class DatasetMetadataPreprocessor:
@@ -65,7 +67,7 @@ class DatasetMetadataPreprocessor:
             return f"{value_in_bits / GB:.1f}GB"
 
     def _get_size(self, dataset_metadata): 
-        ''' Get the size metadata for datasets. '''
+        ''' Get the dataset size. '''
         size = '0bits'
 
         if self.source_name=='Zenodo':
@@ -85,6 +87,32 @@ class DatasetMetadataPreprocessor:
             print("Error: Data source not supported.")
             
         return size
+    
+    def _get_last_updated(self, dataset_metadata):
+        ''' Get the last_updated date for datasets. '''
+        last_updated = ''
+
+        if self.source_name=='Zenodo':
+            datetime_str = dataset_metadata['updated']
+            # Convert the string to a datetime object
+            datetime_obj = datetime.fromisoformat(datetime_str)
+            # Format the datetime object as a date string (e.g., '2023-08-09')
+            last_updated = datetime_obj.strftime('%Y-%m-%d')
+
+        elif self.source_name=='Kaggle': 
+            datetime_str = dataset_metadata['lastUpdated']
+            # Convert the string to a datetime object
+            datetime_obj = datetime.strptime(datetime_str, '%Y-%m-%d %H:%M:%S')
+            # Format the datetime object as a date string (e.g., '2017-05-01')
+            last_updated = datetime_obj.strftime('%Y-%m-%d')
+
+        elif self.source_name=='Dryad': 
+            last_updated = dataset_metadata['lastModificationDate']
+        
+        else: 
+            print("Error: Data source not supported.")
+            
+        return last_updated
 
 
 
@@ -103,6 +131,13 @@ class DatasetMetadataPreprocessor:
                     dataset_metadata['docid'] = docid
                     dataset_metadata['source'] = self.source_name
                     dataset_metadata['size'] = self._get_size(dataset_metadata)
+                    dataset_metadata['last_updated'] = self._get_last_updated(dataset_metadata)
+                    # We need to process the license info in Dryad datasets
+                    if self.source_name == 'Dryad': 
+                        license_url = dataset_metadata['license']
+                        dataset_metadata['license'] = DRYAD_LICENSES[license_url]
+                        # print(dataset_metadata['license'])
+                        # break
             except: 
                 continue
             
@@ -146,9 +181,9 @@ if __name__ == '__main__':
     # Prepare data: {DATA_DIR}/{source_name}/raw_notebooks/{docid}.json
     # Prepare data: {DATA_DIR}/{source_name}/raw_notebooks/{docid}.ipynb
     os.environ['DATA_DIR'] = './data/dataset'
-    # source_name = 'Zenodo'
+    source_name = 'Zenodo'
     # source_name = 'Kaggle'
-    source_name = 'Dryad'
+    # source_name = 'Dryad'
     query_source = 'PWC'
     preprocess_type = 'basic'
     preprocessor = DatasetMetadataPreprocessor(source_name=source_name, query_source=query_source, preprocess_type=preprocess_type)
