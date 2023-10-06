@@ -20,10 +20,10 @@ def synonyms(term):
 class DatasetRetriever():
     ''' Provide an entrypoint for generic dataset search
     '''
-    def __init__(self, query_data, index_name): 
+    def __init__(self, query_data, index_name_list): 
         self.query_data = query_data
         self.es = utils.create_es_client()
-        self.index_name = index_name
+        self.index_name_list = index_name_list
         self.response_data = {}
 
 
@@ -31,7 +31,7 @@ class DatasetRetriever():
         ''' Retrieval datasets from Elasticsearch
         '''
         es = self.es
-        index_name = self.index_name 
+        index_name_list = self.index_name_list 
         query_data = self.query_data
         # Index the datasets if there is no indexes before. 
         # dataset_indexing.index_kaggle_notebooks()
@@ -75,7 +75,7 @@ class DatasetRetriever():
                 }
             }
 
-        es_results = es.search(index=index_name, body=query_body)
+        es_results = es.search(index=index_name_list, body=query_body)
         # Extract datasets from Elasticsearch responses
         # The responses from Elasticsearch are not original dataset contents, 
         # but rather processed information.  

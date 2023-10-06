@@ -3,7 +3,7 @@ es = utils.create_es_client()
 
 def list_indexes():
     print(f'---------- Indexes ----------')
-    indexes = es.indices.get_alias("*")
+    indexes = es.indices.get_alias(index="*")
     for i in indexes: 
         print(i)
 
@@ -21,14 +21,16 @@ def get_doc_number(index_name):
     print(f'{result[0]["count"]}\n')
 
 def main():
-    list_indexes()
-    # print(es.indices.get_alias('kaggle_online'))
+    # list_indexes()
+    print('================ Elasticsearch Output Start ===============')
+    # print(es.indices.get_alias(index='notebook_online'))
+    print(es.indices.get_alias(index='dataset_online'))
     # get_doc_number('kaggle_raw_notebooks')
     # get_doc_number('kaggle_raw_notebooks')
     # get_doc_number('kaggle_notebook_summarization')
     # update_alias('kaggle_notebook_summarization', 'kaggle_online')
     # list_indexes()
-
+    print('================ Elasticsearch Output End ===============')
 
 
 

@@ -134,53 +134,99 @@ class DatasetCrawler:
         Return: 
             - hits: [{}]. Serializable dict of the returned dataset metadata records. 
         '''
+        # Get token
+        def get_dryad_token(credential_path): 
+            with open(credential_path) as f:
+                credential = json.load(f)
+            url = "https://datadryad.org/oauth/token"
+            client_id = credential["application_id"]
+            client_secret = credential["secret"]
+            grant_type = "client_credentials"
+
+            payload = {
+                "client_id": client_id,
+                "client_secret": client_secret,
+                "grant_type": grant_type
+            }
+
+            headers = {
+                "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+            }
+
+            response = requests.post(url, data=payload, headers=headers)
+
+            if response.status_code == 200:
+                print("Token successfully retrieved:")
+                print(response.json())
+                
+                # Save the access token to a JSON file
+                access_token = response.json().get("access_token")
+                token_data = {"access_token": access_token}
+
+                current_date = datetime.now().strftime('%Y-%m-%d')
+                output_path = os.path.join(os.path.dirname(credential_path), f'dryad_token_{current_date}.json')
+                
+                with open(output_path, "w") as json_file:
+                    json.dump(token_data, json_file)
+                print(f"Saved to {output_path}")
+                
+            else:
+                print("Failed to retrieve token. Status code:", response.status_code)
+                print("Response:", response.text)
+
+            return access_token
+
+
+        # Load token 
+        file_path = os.path.join(os.getcwd(), "secrets/dryad_token.json")
+        with open(file_path, "r") as json_file:
+            access_token = json.load(json_file)["access_token"]
+        
+        # Create token
+        # credential_path = os.path.join(os.getcwd(), 'secrets/dryad_client_credential.json')
+        # access_token = get_dryad_token(credential_path=credential_path)
+        
+        headers = {
+            "Authorization": f"Bearer {access_token}",
+            "Content-Type": "application/json"
+        }
+
         # Search for datasets
         api_url = "https://datadryad.org/api/v2/search"  # Replace with the actual API endpoint
-        
-        MAX_RETRIES = 5  # Maximum number of retries
-        BASE_DELAY = 10  # Base delay in seconds for the first retry
 
         per_page = 100
         page_range = size%per_page+1
-        retries = 0
         hits = []
-        
+
         for page in range(1, page_range+1): 
             params = {
             "q": query, 
             "per_page": per_page, 
             "page": page, 
             }
-            while retries < MAX_RETRIES:
-                try:
-                    response = requests.get(api_url, params=params)
-                    response.raise_for_status()  # Raise an exception for bad requests
+            try:
+                response = requests.get(api_url, params=params, headers=headers)
+                response.raise_for_status()  # Raise an exception for bad requests
 
-                    # Parse the JSON response
-                    data = response.json()
-                    datasets = data.get("_embedded", {}).get("stash:datasets", [])
+                # Parse the JSON response
+                data = response.json()
+                datasets = data.get("_embedded", {}).get("stash:datasets", [])
 
-                    print(f'Crawling page {page}') 
-                    time.sleep(1)
-                    break 
+                print(f'Crawling page {page}') 
 
 
-                except requests.exceptions.RequestException as e:
+            except requests.exceptions.RequestException as e: 
+                if response.status_code == 403:
+                    print("Error 403: Skipping this query.")
+                    return hits
+                else:
                     print("Error:", e)    
-                     # Increment retries and apply exponential backoff
-                    retries += 1
-                    if retries < MAX_RETRIES:
-                        delay = BASE_DELAY * 2**retries
-                        print(f"Retrying in {delay} seconds...")
-                        time.sleep(delay)
-                    else:
-                        print("Maximum retries reached. Unable to retrieve data.")
-                
-                if len(datasets) == 0: 
-                    break
-                
-                else: 
-                    hits.extend(datasets)
+
+            if len(datasets) == 0: 
+                break
+            
+            else: 
+                hits.extend(datasets)
         return hits
 
 
