@@ -128,7 +128,7 @@ def main():
     # Change `reindex` to True if you want to reindex the notebooks
     # index_datasets(data_dir=data_dir, source_name='Kaggle', query_source='PWC', preprocess_type='basic', reindex=True)
     # index_datasets(data_dir=data_dir, source_name='Zenodo', query_source='PWC', preprocess_type='basic', reindex=True)
-    index_datasets(data_dir=data_dir, source_name='Dryad', query_source='PWC', preprocess_type='basic', reindex=True)
+    # index_datasets(data_dir=data_dir, source_name='Dryad', query_source='PWC', preprocess_type='basic', reindex=True)
 
 # Go to 'notebook_search_docker/' dir and 
 # run `python -m indexer.dataset_indexing` 

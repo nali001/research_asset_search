@@ -157,12 +157,16 @@ def map_metadata(metadata, mapping):
                 value = get_nested_value(metadata, source_key)
                 if isinstance(value, list):
                     values.extend(value)
-                elif value is not None:
+                elif bool(value): 
                     values.append(value)
+                else: 
+                    values.append('Unknown')
             else:
                 value = metadata.get(source_key)
-                if value is not None:
+                if bool(value):
                     values.append(value)
+                else: 
+                    values.append('Unknown')
 
         # Concatenate values for keys that have multiple sources
         if len(values) > 1:
@@ -170,6 +174,6 @@ def map_metadata(metadata, mapping):
         elif values:
             mapped_metadata[target_key] = values[0]
         else:
-            mapped_metadata[target_key] = None
+            mapped_metadata[target_key] = "Unknown"
 
     return mapped_metadata

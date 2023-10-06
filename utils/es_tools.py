@@ -21,10 +21,10 @@ def get_doc_number(index_name):
     print(f'{result[0]["count"]}\n')
 
 def main():
-    # list_indexes()
     print('================ Elasticsearch Output Start ===============')
+    list_indexes()
     # print(es.indices.get_alias(index='notebook_online'))
-    print(es.indices.get_alias(index='dataset_online'))
+    # print(es.indices.get_alias(index='dataset_online'))
     # get_doc_number('kaggle_raw_notebooks')
     # get_doc_number('kaggle_raw_notebooks')
     # get_doc_number('kaggle_notebook_summarization')

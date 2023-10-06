@@ -165,16 +165,18 @@ def index_datasets(data_dir, source_name=None, query_source=None, preprocess_typ
 # ==================================================
 
 def main():
+    ''' python -m indexer.dataset_bulk_indexing
+    '''
 # Check if the current working path is `notebook_search_docker``, if not terminate the program
     if os.path.basename(os.getcwd()) != 'notebook_search_docker': 
-        print(f'Please navigate to `notebook_search_docker` directory and run: \n `python -m indexer.dataset_indexing`\n')
+        print(f'Please navigate to `notebook_search_docker` directory and run: \n `python -m indexer.dataset_bulk_indexing`\n')
         return False
     
     data_dir = os.path.join(os.getcwd(), 'data/dataset')
     # Change `reindex` to True if you want to reindex the notebooks
-    # index_datasets(data_dir=data_dir, source_name='Kaggle', query_source='PWC', preprocess_type='basic', reindex=True)
-    # index_datasets(data_dir=data_dir, source_name='Zenodo', query_source='PWC', preprocess_type='basic', reindex=True)
-    index_datasets(data_dir=data_dir, source_name='Dryad', query_source='PWC', preprocess_type='basic', batch_size=1000, reindex=True)
+    # index_datasets(data_dir=data_dir, source_name='Kaggle', query_source='PWC', preprocess_type='basic', batch_size=1000, reindex=True)
+    index_datasets(data_dir=data_dir, source_name='Zenodo', query_source='PWC', preprocess_type='basic', batch_size=1000, reindex=True)
+    # index_datasets(data_dir=data_dir, source_name='Dryad', query_source='PWC', preprocess_type='basic', batch_size=1000, reindex=True)
 
 # Go to 'notebook_search_docker/' dir and 
 # run `python -m indexer.dataset_indexing` 
