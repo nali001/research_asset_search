@@ -1,6 +1,9 @@
 # notebook_search/views.py
 # Only used for rendering HTML
+import os
 import json
+from dotenv import load_dotenv
+
 from django.shortcuts import render
 from django.http import JsonResponse
 
@@ -15,8 +18,11 @@ def notebook_search_view(request):
     '''
     query_data = request.GET
     # print(query_data)
-    index_name = "notebook_online"
-    searcher = notebook_retrieval.NotebookRetriever(query_data, index_name)
+    # Load environment variables from .env file
+    load_dotenv()
+    index_name_list = os.getenv("ES_NOTEBOOK_INDEX_NAMES", "").split(",")
+
+    searcher = notebook_retrieval.NotebookRetriever(query_data, index_name_list)
     results = searcher.retrieve_notebooks()
     results["page_range"] = range(1, results["num_pages"])
     return render(request,'notebook_results.html', results)
@@ -31,9 +37,10 @@ def select_notebook_view(request):
 
     query = query_data["query"]
     docid = query_data["docid"]
-    index_name = "notebook_online"
-    
-    reformulator = query_reformulation.QueryReformulator(object_type='notebook', docid=docid, index_name=index_name)
+    load_dotenv()
+    index_name_list = os.getenv("ES_NOTEBOOK_INDEX_NAMES", "").split(",")
+
+    reformulator = query_reformulation.QueryReformulator(object_type='notebook', docid=docid, index_name_list=index_name_list)
     reformed = reformulator.reformulate_query_for_notebook(query=query)
 
     results = query_data.copy()
