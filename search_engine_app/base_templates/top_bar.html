@@ -33,16 +33,6 @@
                     <div class="sidebar_toggle"><a href="javascript:void(0)"><i class="ti-menu"></i></a>
                     </div>
                 </li>
-                {% comment %} <li class="header-search">
-                    <div class="main-search morphsearch-search">
-                        <div class="input-group">
-                            <span class="input-group-addon search-close"><i class="ti-close"></i></span>
-                            <input type="text" class="form-control" id="searchbox1" name="searchbox1"
-                                onchange="search(1);">
-                            <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
-                        </div>
-                    </div>
-                </li> {% endcomment %}
                 {% comment %} <li>
                     <a href="#!" onclick="javascript:toggleFullScreen()">
                         <i class="ti-fullscreen"></i>
@@ -81,22 +71,41 @@
             </ul>
         </div>
     </div>
-
-    {% comment %} Add a search bar in the navigation header {% endcomment %}
-    {% comment %} <div class="input-group"> {% endcomment %}
-        {% comment %} <input type="text" class="form-control" placeholder="Enter search string" id="searchbox2" name="searchbox2" onchange="search(2);"> {% endcomment %}
-        {% comment %} <span class="input-group-addon search-btn"><i class="ti-search" onclick="search(2);"></i></span> {% endcomment %}
-    {% comment %} </div> {% endcomment %}
-
-    {% comment %} <div style="display: flex; align-items: left;">
-        <input type="text" class="form-control" placeholder="Enter search string" id="searchbox2" name="searchbox2" onchange="search(2);">
-        <span class="input-group-addon search-btn" style="margin-left: -35px;"><i class="ti-search" onclick="search(2);"></i></span>
-    </div> {% endcomment %}
-    
+    <!-- Search bar -->
     <div class="navbar-container container-fluid">
         <div class="input-group">
             <input type="text" class="form-control" placeholder="Enter search string" id="searchbox2" name="searchbox2" onchange="search(2);">
             <span class="input-group-addon search-btn"><i class="ti-search" onclick="search(2);"></i></span>
         </div>
     </div>
+    <!-- Four buttons -->
+    <!-- Four buttons with styling and Themify Icons -->
+    <div class="button-container text-center">
+        <button class="btn btn-secondary custom-btn" 
+                data-toggle="tooltip" 
+                data-placement="top" 
+                title="Task"
+                onclick="handleButtonClick(1)">
+            <i class="fa-solid fa-lightbulb"></i>
+            <span id="task_button">N/A</span>
+        </button>
+        <button class="btn btn-secondary custom-btn" 
+                data-toggle="tooltip" 
+                data-placement="top" 
+                title="Method"
+                onclick="handleButtonClick(2)">
+            <i class="fa-solid fa-microscope"></i>
+            <span id="method_button">N/A</span>
+        </button>
+        <button class="btn btn-secondary custom-btn" 
+                data-toggle="tooltip" 
+                data-placement="top" 
+                title="Dataset"
+                onclick="handleButtonClick(3)">
+                <i class="fa-solid fa-dna"></i>
+                <span id="dataset_button">N/A</span>
+        </button>
+        <!-- <button class="btn btn-danger custom-btn" onclick="handleButtonClick(4)"><i class="ti-alert"></i><span id="all_text">Button 4</span></button> -->
+    </div>
 </nav>
+

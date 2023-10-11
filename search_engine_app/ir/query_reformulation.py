@@ -24,15 +24,24 @@ class QueryReformulator:
             # Extract entities
             extractor = EntityExtractor(content_type='text', model_name='chatgpt')
             entities = extractor.extract_entities(content)
+
         return entities
     
     def reformulate_query_for_notebook(self, query=None): 
         entities = self.extract_entities_from_notebook()
-        # print(entities)
         entities = json.loads(entities)
-        non_none_values = [value for key, value in entities.items() if value is not None]
+        non_none_values = [value for key, value in entities.items() if bool(value)]
         reformed_query = query + ' ' + ' '.join(non_none_values)
-        return reformed_query
+        
+        entities.update({"reformed_query": reformed_query})
+        # Add N/A to None values
+        for key, value in entities.items(): 
+            if not bool(value): 
+                entities[key] = 'N/A'
+        print(entities)
+        
+        # return reformed_query
+        return entities
     
     # Replace this with actual implementation of getting notebook content based on docid
     @staticmethod
