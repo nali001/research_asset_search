@@ -6,6 +6,8 @@ __init__.pyc
 secrets/
 migrations/
 data/
+mongo/
+
 search_engine_app/venv
 search_engine_app/notebooksearch/Notebooks/*
 
