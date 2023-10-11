@@ -7,15 +7,15 @@ from .ner import EntityExtractor
 
 
 class QueryReformulator: 
-    def __init__(self, object_type=None, docid=None, index_name=None): 
+    def __init__(self, object_type=None, docid=None, index_name_list=None): 
         self.object_type = object_type
         self.docid = docid
-        self.index_name = index_name
+        self.index_name_list = index_name_list
     
     def extract_entities_from_notebook(self):
         # Get the contents using docid
         # Assuming df_notebook contains the notebook content for the given docid
-        content = self._get_notebook_content(self.docid, self.index_name)  # You'll need to implement this function
+        content = self._get_notebook_content(self.docid, self.index_name_list)  # You'll need to implement this function
         # content = nb['description']
         if content=='': 
             print(f'[[{os.getcwd()}]] No description: {self.docid}')
@@ -36,7 +36,7 @@ class QueryReformulator:
     
     # Replace this with actual implementation of getting notebook content based on docid
     @staticmethod
-    def _get_notebook_content(docid, index_name):
+    def _get_notebook_content(docid, index_name_list):
         query = {
             "query": {
                 "match": {
@@ -46,11 +46,11 @@ class QueryReformulator:
         }
         es = utils.create_es_client()
         # Use a scan to retrieve all matching documents
-        search_results = scan(es, query=query, index=index_name)
+        search_results = scan(es, query=query, index=index_name_list)
 
         # Process the results
         for hit in search_results:
-            print(hit)
+            # print(hit)
             notebook_content = hit['_source']['description']
             break
         return notebook_content

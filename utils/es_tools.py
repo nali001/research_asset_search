@@ -7,6 +7,16 @@ def list_indexes():
     for i in indexes: 
         print(i)
 
+
+def delete_indexes(indexes):
+    for index in indexes:
+        if es.indices.exists(index=index):
+            es.indices.delete(index=index)
+            print(f"Index '{index}' deleted.")
+        else:
+            print(f"Index '{index}' does not exist.")
+
+
 def update_alias(index, alias):
     if es.indices.exists_alias(alias): 
         es.indices.delete_alias('_all', alias)
@@ -22,7 +32,8 @@ def get_doc_number(index_name):
 
 def main():
     print('================ Elasticsearch Output Start ===============')
-    list_indexes()
+    # list_indexes()
+    # delete_indexes(indexes=['dryad_datasets_2023-09-26', 'zenodo_datasets_2023-09-25'])
     # print(es.indices.get_alias(index='notebook_online'))
     # print(es.indices.get_alias(index='dataset_online'))
     # get_doc_number('kaggle_raw_notebooks')

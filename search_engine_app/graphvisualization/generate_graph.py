@@ -78,12 +78,16 @@ class GraphGenerator:
 
         return result_nodes
     
-    def search_graph(self, keyword='mnist', mode='label', max_distance=2): 
+    def search_graph(self, keyword='knowledge graph', mode='label', max_distance=2): 
         ''' Search nodes with keyword and return a subgraph 
         '''
+        if not bool(keyword):
+            keyword = 'knowledge graph'
+            
         result_nodes = self._match_nodes(keyword, mode)
         result_subgraph = self._extract_subgraph(result_nodes, max_distance=max_distance)
         graph = self._serialize_graph(result_subgraph)
+        
         return graph
 
     # Serialize the graph nodes to dict
