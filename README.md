@@ -104,17 +104,6 @@ sudo chgrp -R 0 postgres/data postgres/logs pgadmin/data
 docker compose -f docker-compose_dev.yml up
 ```
 
-Or you can start them separately using: 
-```
-docker compose -f docker-compose_es.yml up
-docker compose -f docker-compose_postgres_admin.yml up
-```
-
-If you don't want to use pgadmin4, run the following: 
-```
-docker compose -f docker-compose_postgres.yml up
-```
-
 6. Prepare the notebooks for indexing. \
 Put the preprocessed notebooks `Kaggle_preprocessed_notebooks.csv` and the raw notebooks `Kaggle_raw_notebooks.csv` under the folder `search_engine_app/notebooksearch/Notebooks` \
 Then go to 

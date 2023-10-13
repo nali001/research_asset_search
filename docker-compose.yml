@@ -4,12 +4,12 @@
 services:
   search_engine_app:
     build: ./search_engine_app
-    image: notebooksearch/search_engine_app:latest
-    container_name: notebooksearch_search_engine_app
+    image: mras/search_engine_app:latest
+    container_name: mras_search_engine_app
     volumes: 
       - ./search_engine_app/notebooksearch/Notebooks:/search_engine_app/notebooksearch/Notebooks
     environment: 
-      - HOST_IP=${HOST_IP}
+      - ES_JAVA_OPTS=-Xms16g -Xmx16g
       - ELASTICSEARCH_HOSTNAME=elasticsearch
       - ELASTICSEARCH_PORT=9200
       - ELASTICSEARCH_USERNAME=elastic
@@ -29,8 +29,8 @@ services:
     
   elasticsearch: 
     build: ./elasticsearch
-    image: notebooksearch/elasticsearch:latest
-    container_name: notebooksearch_elasticsearch
+    image: mras/elasticsearch:latest
+    container_name: mras_elasticsearch
     volumes: 
       - ./elasticsearch/data:/usr/share/elasticsearch/data
       - ./elasticsearch/logs:/usr/share/elasticsearch/logs
@@ -46,8 +46,8 @@ services:
 
   postgres:
     build: ./postgres
-    image: notebooksearch/postgres:latest
-    container_name: notebooksearch_postgres
+    image: mras/postgres:latest
+    container_name: mras_postgres
     volumes: 
       - ./postgres/data:/var/lib/postgresql/data
       - ./postgres/logs:/var/lib/postgresql/logs
@@ -62,8 +62,8 @@ services:
 
   pgadmin:
     build: ./pgadmin
-    image: notebooksearch/pgadmin:latest
-    container_name: notebooksearch_pgadmin
+    image: mras/pgadmin:latest
+    container_name: mras_pgadmin
     restart: always
     volumes:
       - ./pgadmin/data:/var/lib/pgadmin
@@ -80,8 +80,8 @@ services:
 
   nginx: 
     build: ./nginx
-    image: notebooksearch/nginx:latest
-    container_name: notebooksearch_nginx
+    image: mras/nginx:latest
+    container_name: mras_nginx
     volumes: 
       - ./nginx/logs:/nginx_server/search_engine_app/logs
       - ./nginx/templates:/etc/nginx/templates
@@ -97,6 +97,7 @@ services:
 
   haproxy:
     image: haproxy:2.8
+    container_name: mras_haproxy
     depends_on:
       certbot_self_signed:
         condition: service_completed_successfully
@@ -118,8 +119,9 @@ services:
 
   certbot_self_signed:
     image: local/certbot_self_signed
+    container_name: mras_certbot_self_signed
     build:
-      context: ./docker/certbot_self_signed
+      context: ./gateway_config/docker/certbot_self_signed
     volumes:
       - ./gateway_config/data-certificates:/etc/ssl/private/
     env_file:
@@ -130,8 +132,9 @@ services:
 
   certbot_letsencrypt:
     image: local/certbot_letsencrypt
+    container_name: mras_certbot_letsencrypt
     build:
-      context: ./docker/certbot_letsencrypt/
+      context: ./gateway_config/docker/certbot_letsencrypt/
     depends_on:
       haproxy:
         condition: service_healthy

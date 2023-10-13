@@ -29,10 +29,23 @@ function selectObject(event, operation) {
         // Post the selected item to server to get reformulated query
         
         getReformulatedQuery(new_item.dataset.type, new_item.dataset.docid)
-        .then(reformed_query => {
-            console.log(reformed_query);
-            sessionStorage.setItem("reformulatedQuery", reformed_query);
-            document.getElementById('searchbox2').value = reformed_query;
+        // .then(reformed_query => {
+        //     console.log(reformed_query);
+        //     sessionStorage.setItem("reformulatedQuery", reformed_query);
+        //     // document.getElementById('searchbox2').value = reformed_query;
+        //     document.getElementById('task_button').value = reformed_query;
+        //     document.getElementById('method_button').value = reformed_query;
+        //     document.getElementById('dataset_button').value = reformed_query;
+
+        // })
+        .then(data => {
+            console.log(data);
+            sessionStorage.setItem("reformulatedQuery", data.reformed_query);
+            // document.getElementById('searchbox2').value = reformed_query;
+            document.getElementById('task_button').innerText = data.task;
+            document.getElementById('method_button').innerText = data.method;
+            document.getElementById('dataset_button').innerText = data.dataset;
+
         })
         .catch(error => console.error(error));
 
@@ -80,7 +93,9 @@ function getReformulatedQuery(object_type, docid) {
     })
     .then(data => {
         console.log(data.reformed_query);
-        return data.reformed_query;
+        // return data.reformed_query;
+        return data;
+
     })
     .catch(error => {
         console.error('Error:', error);

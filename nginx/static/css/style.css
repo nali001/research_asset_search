@@ -1728,13 +1728,13 @@ h6.media-heading {
   margin-bottom: 5px; }
 
 .btn-outline-primary {
-  border-color: #4099ff;
+  border-color: #95E1D3;
   font-weight: 500;
   padding: 10px 16px;
   font-size: 15px; }
   .btn-outline-primary:hover {
-    background-color: #4099ff;
-    border-color: #4099ff; }
+    background-color: #95E1D3;
+    border-color: #95E1D3; }
 
 .simple-cards p {
   margin: 20px;
@@ -5622,7 +5622,7 @@ table tbody .border-bottom-info td {
 ==========================  **/
 .main-menu {
   float: left;
-  width: 235px;
+  width: 190px;
   z-index: 99; }
   .main-menu .main-menu-header {
     -webkit-box-align: center;
@@ -6212,7 +6212,7 @@ table tbody .border-bottom-info td {
   position: relative;
   margin: 0 auto; }
 .pcoded[theme-layout="vertical"] .pcoded-navbar .pcoded-search {
-  padding: 20px 20px 5px;
+  padding: 10px 10px 10px;
   position: relative; }
 .pcoded[theme-layout="vertical"][vnavigation-view="view2"] .pcoded-navbar .pcoded-search {
   border-radius: 4px 4px 0 0; }
@@ -6603,7 +6603,7 @@ table tbody .border-bottom-info td {
   right: unset; }
 .pcoded[theme-layout="vertical"][vertical-nav-type="expanded"] .pcoded-header .pcoded-left-header,
 .pcoded[theme-layout="vertical"][vertical-nav-type="expanded"] .pcoded-navbar {
-  width: 235px; }
+  width: 190px; }
 .pcoded[theme-layout="vertical"][vertical-placement="left"][vertical-nav-type="expanded"][vertical-effect="push"] .pcoded-header .pcoded-right-header {
   margin-left: 235px; }
 .pcoded[theme-layout="vertical"][vertical-placement="left"][vertical-nav-type="expanded"][vertical-effect="push"] .pcoded-header.iscollapsed .pcoded-right-header {
@@ -6624,7 +6624,7 @@ table tbody .border-bottom-info td {
 .pcoded[theme-layout="vertical"][vertical-placement="left"][vertical-nav-type="expanded"][vertical-effect="shrink"] .pcoded-header .pcoded-right-header {
   margin-left: 235px; }
 .pcoded[theme-layout="vertical"][vertical-placement="left"][vertical-nav-type="expanded"][vertical-effect="shrink"] .pcoded-content {
-  margin-left: 235px; }
+  margin-left: 190px; }
 .pcoded[theme-layout="vertical"][vertical-placement="right"][vertical-nav-type="expanded"][vertical-effect="shrink"] .pcoded-header.iscollapsed .pcoded-right-header,
 .pcoded[theme-layout="vertical"][vertical-placement="right"][vertical-nav-type="expanded"][vertical-effect="shrink"] .pcoded-header .pcoded-right-header {
   margin-right: 235px; }
@@ -7628,12 +7628,12 @@ table tbody .border-bottom-info td {
     border-left-color: transparent; }
 .pcoded .pcoded-navbar[active-item-theme="theme4"] .pcoded-item > li.active > a {
   background: -webkit-gradient(linear, left top, right top, from(#004ef9), to(#79a3ff)) !important;
-  background: linear-gradient(to right, #e166a3, #0f1e85) !important;
-  color: #fff !important; }
+  background: linear-gradient(to right, #EAFFD0, #EAFFD0) !important;
+  color: #000 !important; }
   .pcoded .pcoded-navbar[active-item-theme="theme4"] .pcoded-item > li.active > a .pcoded-micon {
-    color: #fff !important; }
+    color: #000 !important; }
   .pcoded .pcoded-navbar[active-item-theme="theme4"] .pcoded-item > li.active > a:before {
-    border-left-color: #004ef9; }
+    border-left-color: #808080; }
 .pcoded .pcoded-navbar[active-item-theme="theme4"] .pcoded-item .pcoded-hasmenu[subitem-icon="style7"] .pcoded-submenu {
   border-left: 1px solid #d6d6d6; }
   .pcoded .pcoded-navbar[active-item-theme="theme4"] .pcoded-item .pcoded-hasmenu[subitem-icon="style7"] .pcoded-submenu > li.active > a > .pcoded-mtext:after, .pcoded .pcoded-navbar[active-item-theme="theme4"] .pcoded-item .pcoded-hasmenu[subitem-icon="style7"] .pcoded-submenu > li:hover > a > .pcoded-mtext:after {
@@ -8353,9 +8353,9 @@ table tbody .border-bottom-info td {
     color: #fff; }
 .pcoded .pcoded-header[header-theme="theme6"] {
   background: -webkit-gradient(linear, left top, right top, from(#d463a1), to(#001a82));
-  background: linear-gradient(to right, #d463a1, #001a82); }
+  background: linear-gradient(to right, #F38181, #F38181); }
   .pcoded .pcoded-header[header-theme="theme6"] a {
-    color: #fff; }
+    color: #000; }
 
 body .pcoded[pcoded-device-type="phone"][vertical-nav-type="expanded"] .pcoded-navbar, body .pcoded[pcoded-device-type="tablet"][vertical-nav-type="expanded"] .pcoded-navbar {
   position: absolute !important; }
@@ -8643,14 +8643,14 @@ body.menu-bottom #collapse-menu {
 /**====== Basic-Buttons css Start ======**/
 .btn-primary, .sweet-alert button.confirm, .wizard > .actions a {
   background-color: #4099ff;
-  border-color: #4099ff;
+  border-color: #95E1D3;
   color: #fff;
   cursor: pointer;
   -webkit-transition: all ease-in 0.3s;
   transition: all ease-in 0.3s; }
   .btn-primary:hover, .sweet-alert button.confirm:hover, .wizard > .actions a:hover {
-    background-color: #73b4ff;
-    border-color: #73b4ff; }
+    background-color: #95E1D3;
+    border-color: #000; }
   .btn-primary:active, .sweet-alert button.confirm:active, .wizard > .actions a:active {
     background-color: #0378ff !important;
     border-color: #0378ff;
@@ -8803,7 +8803,7 @@ body.menu-bottom #collapse-menu {
 /**====== Basic-Buttons css end ======**/
 /**====== Outline-Buttons css Start ======**/
 .btn-outline-primary {
-  color: #0378ff;
+  color: #808080;
   background-color: #fff;
   background-color: transparent; }
 
@@ -8887,10 +8887,11 @@ body.menu-bottom #collapse-menu {
 
 .btn-grd-primary {
   background-image: -webkit-gradient(linear, left top, right top, from(#73b4ff), color-stop(51%, #0378ff), to(#73b4ff));
-  background-image: linear-gradient(to right, #73b4ff 0%, #0378ff 51%, #73b4ff 100%); }
+  background-image: linear-gradient(to right, #95E1D3 0%, #95E1D3 51%, #95E1D3 100%); 
+  border-color: #000;}
   .btn-grd-primary.hor-grd {
     background-image: -webkit-gradient(linear, left bottom, left top, from(#73b4ff), color-stop(51%, #0378ff), to(#73b4ff));
-    background-image: linear-gradient(to top, #73b4ff 0%, #0378ff 51%, #73b4ff 100%); }
+    background-image: linear-gradient(to top, #95E1D3 0%, #95E1D3 51%, #95E1D3 100%); }
 
 .btn-grd-warning {
   background-image: -webkit-gradient(linear, left top, right top, from(#f4d03f), color-stop(51%, #b8960b), to(#f4d03f));
@@ -9515,11 +9516,11 @@ body.menu-bottom #collapse-menu {
       Form group-add-on css start
 ==========================  **/
 .input-group {
-  margin-bottom: 1.25em; }
+  margin-bottom: 0.3em; }
 
 .input-group-addon {
-  background-color: #a4519a;
-  color: #fff; }
+  background-color: #FCE38A;
+  color: #000; }
 
 .input-group-button .input-group-addon {
   -webkit-transition: all ease-in 0.3s;

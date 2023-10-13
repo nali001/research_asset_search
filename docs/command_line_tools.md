@@ -8,4 +8,4 @@ python manage.py runserver [PORT_NUMBER]
 
 
 ## Interact with Elasticsearch database
-+ `python -m utils.es_tools [OPTION]`
++ `python -m cli.es [OPTION]`
