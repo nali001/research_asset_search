@@ -6,7 +6,7 @@ from .settings_base import *
 
 # The variables are stored in `.env` file under the main dir
 # and passed through `docker-compose.yml`
-host_ip = os.environ.get('HOST_IP')
+# host_ip = os.environ.get('HOST_IP')
 postgres_hostname = os.environ.get('POSTGRES_HOSTNAME')
 postgres_port = os.environ.get('POSTGRES_PORT')
 postgres_db = os.environ.get('POSTGRES_DB')

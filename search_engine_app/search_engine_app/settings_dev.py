@@ -4,7 +4,7 @@ import os
 from .settings_base import *
 
 # The variables are stored in `.env` file under the same dir as this file
-host_ip = os.environ.get('HOST_IP')
+# host_ip = os.environ.get('HOST_IP')
 postgres_hostname = os.environ.get('POSTGRES_HOSTNAME')
 postgres_port = os.environ.get('POSTGRES_PORT')
 postgres_db = os.environ.get('POSTGRES_DB')
@@ -13,7 +13,8 @@ postgres_password = os.environ.get('POSTGRES_PASSWORD')
 
 
 # Allowed hosts
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', host_ip]
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
