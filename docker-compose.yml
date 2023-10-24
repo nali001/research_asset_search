@@ -9,7 +9,7 @@ services:
     volumes: 
       - ./search_engine_app/notebooksearch/Notebooks:/search_engine_app/notebooksearch/Notebooks
     environment: 
-      - ES_JAVA_OPTS=-Xms16g -Xmx16g
+      - ES_JAVA_OPTS=-Xms8g -Xmx8g
       - ELASTICSEARCH_HOSTNAME=elasticsearch
       - ELASTICSEARCH_PORT=9200
       - ELASTICSEARCH_USERNAME=elastic

@@ -97,3 +97,6 @@ mv ./data/notebook/Kaggle/PWC_${version}.zip ./temp/PWC_${version}.zip
 cp -r ./data/notebook/Kaggle/PWC_logs ./temp/PWC_logs_${version}
 rclone copy ./temp na_surf:notebook_search_docker/data/notebook/Kaggle  --progress
 rm -dr ./temp
+
+# 14 Oct 2023
+rclone copy ./gateway_config na_surf:research_asset_search/gateway_config/  --progress
