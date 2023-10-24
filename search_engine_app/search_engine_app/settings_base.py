@@ -102,6 +102,7 @@ INSTALLED_APPS = [
     'apis', 
     'rest_framework', 
     'rest_framework.authtoken', 
+    'drf_spectacular', 
 ]
 
 #------------------------------------------------------------------
@@ -132,5 +133,14 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
     ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'API Documentation',
+    'DESCRIPTION': 'This page contains the documentation of RESTful APIs of the computational notebook search system.',
+    'VERSION': '1.0.0',
+    'COMPONENT_SPLIT_REQUEST': True,
+    'SERVE_INCLUDE_SCHEMA': False,
 }
 #------------------------------------------------------------------------------------
