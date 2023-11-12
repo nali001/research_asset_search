@@ -30,7 +30,7 @@ services:
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=notebooksearch2022
-      - POSTGRES_DB=notebooksearch
+      - POSTGRdoES_DB=notebooksearch
     ports:
       - 127.0.0.1:5432:5432
 
