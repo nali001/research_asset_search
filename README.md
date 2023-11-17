@@ -190,6 +190,11 @@ http://IP_address/api/
 
 API examples are in the file `apis/api_test.py`
 
+### Documentation
+We use `drf_spectacular` to automatically generate API documetation. 
+Access it via `http://IP_address/api/docs`. 
+Or check the schema at `docs/API_documentation.yaml`
+
 ### Authentication 
 We are using TokenAuthentication. Ref: https://www.django-rest-framework.org/api-guide/authentication/#generating-tokens 
 
