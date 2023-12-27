@@ -24,7 +24,7 @@ parser.add_argument('--end', type=int, default=None)
 args = parser.parse_args()
 
 
-@backoff.on_exception(backoff.expo, [Exception], max_tries=10, jitter=backoff.full_jitter)
+@backoff.on_exception(backoff.expo, Exception, max_tries=10, jitter=backoff.full_jitter)
 def get_github_repo_ipynb(owner, repo, header):
     api_url = f'https://api.github.com/search/code?q=extension:ipynb+repo:{owner}/{repo}'
     response = requests.get(api_url, headers=header)
