@@ -10,10 +10,11 @@ postgres_port = os.environ.get('POSTGRES_PORT')
 postgres_db = os.environ.get('POSTGRES_DB')
 postgres_user = os.environ.get('POSTGRES_USER')
 postgres_password = os.environ.get('POSTGRES_PASSWORD')
+local_ip = os.environ.get('LOCAL_IP')
 
 
 # Allowed hosts
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', local_ip, 'localhost']
 
 
 # SECURITY WARNING: don't run with debug turned on in production!

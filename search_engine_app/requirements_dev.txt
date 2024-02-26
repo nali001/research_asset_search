@@ -36,7 +36,7 @@ memory_profiler==0.60.0
 networkx==3.1
 
 # Openai
-openai==0.28.1
+openai==1.12.0
 
 # Dense retrieval
 farm-haystack[faiss]==1.15.1

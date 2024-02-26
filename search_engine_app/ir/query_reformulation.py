@@ -62,6 +62,7 @@ class QueryReformulator:
             # print(hit)
             notebook_content = hit['_source']['description']
             break
+
         return notebook_content
 
 
