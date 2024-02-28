@@ -1,4 +1,5 @@
 {% load static %}
+<script type="text/javascript" src="{% static 'search_engine_app/common_js.js' %}"></script>
 <nav class="navbar header-navbar pcoded-header">
     <div class="navbar-wrapper">
         <div class="navbar-logo">
@@ -84,28 +85,38 @@
         <button class="btn btn-secondary custom-btn" 
                 data-toggle="tooltip" 
                 data-placement="top" 
+                data-action="augment"
+                data-title="Task"
                 title="Task"
-                onclick="handleButtonClick(1)">
+                onclick="handleAugmentOptionClick(event)">
             <i class="fa-solid fa-lightbulb"></i>
             <span id="task_button">N/A</span>
         </button>
         <button class="btn btn-secondary custom-btn" 
                 data-toggle="tooltip" 
                 data-placement="top" 
+                data-action="augment"
+                data-title="Method"
                 title="Method"
-                onclick="handleButtonClick(2)">
+                onclick="handleAugmentOptionClick(event)">
             <i class="fa-solid fa-microscope"></i>
             <span id="method_button">N/A</span>
         </button>
         <button class="btn btn-secondary custom-btn" 
                 data-toggle="tooltip" 
                 data-placement="top" 
+                data-action="augment"
+                data-title="Dataset"
                 title="Dataset"
-                onclick="handleButtonClick(3)">
+                onclick="handleAugmentOptionClick(event)">
                 <i class="fa-solid fa-dna"></i>
                 <span id="dataset_button">N/A</span>
         </button>
         <!-- <button class="btn btn-danger custom-btn" onclick="handleButtonClick(4)"><i class="ti-alert"></i><span id="all_text">Button 4</span></button> -->
     </div>
 </nav>
+
+<script>
+
+</script>
 

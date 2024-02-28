@@ -29,23 +29,16 @@ function selectObject(event, operation) {
         // Post the selected item to server to get reformulated query
         
         getReformulatedQuery(new_item.dataset.type, new_item.dataset.docid)
-        // .then(reformed_query => {
-        //     console.log(reformed_query);
-        //     sessionStorage.setItem("reformulatedQuery", reformed_query);
-        //     // document.getElementById('searchbox2').value = reformed_query;
-        //     document.getElementById('task_button').value = reformed_query;
-        //     document.getElementById('method_button').value = reformed_query;
-        //     document.getElementById('dataset_button').value = reformed_query;
-
-        // })
         .then(data => {
             console.log(data);
-            sessionStorage.setItem("reformulatedQuery", data.reformed_query);
+
             // document.getElementById('searchbox2').value = reformed_query;
             document.getElementById('task_button').innerText = data.task;
             document.getElementById('method_button').innerText = data.method;
             document.getElementById('dataset_button').innerText = data.dataset;
-
+            
+            // Save the data object to session storage
+            sessionStorage.setItem("parsed_augment_terms", JSON.stringify(data));
         })
         .catch(error => console.error(error));
 
@@ -92,6 +85,11 @@ function getReformulatedQuery(object_type, docid) {
         return response.json();  // Parse the response as JSON
     })
     .then(data => {
+        //save the original query
+        sessionStorage.setItem("originalQuery", query);
+        // save the reformulated query
+        sessionStorage.setItem("reformulatedQuery", data.reformed_query);
+
         console.log(data.reformed_query);
         // return data.reformed_query;
         return data;
@@ -102,6 +100,71 @@ function getReformulatedQuery(object_type, docid) {
         return query;
     });
 }
+
+function augment_query(title) {
+    // var current_query = sessionStorage.getItem("originalQuery");
+    var current_query = document.getElementById('searchbox2').value;
+    var parsed_augment_terms = JSON.parse(sessionStorage.getItem("parsed_augment_terms"));
+
+    if (parsed_augment_terms[title].length > 0) {
+        var new_query = current_query + ' ' + parsed_augment_terms[title];
+    }
+    else {
+        var new_query = current_query;
+    }
+
+    document.getElementById('searchbox2').value = new_query; 
+    
+}
+
+function remove_augment_term(title) {
+    var original_query = sessionStorage.getItem("originalQuery");
+    var parsed_augment_terms = JSON.parse(sessionStorage.getItem("parsed_augment_terms"));
+
+    var new_query = original_query.replace(parsed_augment_terms[title], '');
+
+    document.getElementById('searchbox2').value = new_query; 
+
+    return parsed_augment_terms[title]
+}
+
+function handleAugmentOptionClick(event) {
+    target_item = event.target
+    if(target_item.tagName == 'SPAN') {
+        target_item = target_item.parentElement;
+        target_span = event.target;
+    }
+    else{
+        target_span = target_item.getElementsByTagName('span')[0];
+    }
+
+    title = target_item.dataset.title.toLowerCase();
+    action = target_item.dataset.action;
+
+    // cases include 'augment', 'cancel' 
+    switch (action) {
+        case 'augment':
+            // Add the selected item to query string
+            augment_query(title);
+            target_item.dataset.action = 'cancel';
+            target_span.innerText = 'Cancel';
+            // change the target_span color to yellow
+            target_item.style.color = "yellow";
+            break;
+        case 'cancel':
+            // Remove the selected item from query string
+            terms = remove_augment_term(title);
+            target_item.dataset.action = 'augment';
+            target_span.innerText = terms;
+            target_item.style.color = "";
+            break;
+        default:
+            console.log('No action is taken');
+    }
+
+}
+
+
 
 
 function modifyMyCart() {
@@ -158,3 +221,4 @@ function modifyCartItems(data) {
     }
     modifyMyCart(); 
 }
+
