@@ -61,13 +61,20 @@
                             style="width:35px; right:30px;position: absolute;margin-right:20px;" 
                             />
 
-                        </li>
-                    </ul>
+                                {% comment %} <a href="#"
+                                    onclick="modifyBasket('add','Datasets',&quot;{{ resultItem.name }}&quot;, &quot;{{ resultItem.html_url}}&quot;, 'id');">
+                                    <img id="selection_icon_image" src="{% static 'images/addToBasket.png' %}"
+                                        style="width:25px; right:0px;position: absolute;margin-right:20px;" />
+                                </a> {% endcomment %}
+
+                                
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 {% endfor %}
 
 <script>

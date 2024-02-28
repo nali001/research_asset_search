@@ -49,7 +49,10 @@ def select_dataset_view(request):
     reformed = reformulator.reformulate_query_for_notebook(query=query)
 
     results = query_data.copy()
-    results["reformed_query"] = reformed
+    results["reformed_query"] = reformed["reformed_query"]
+    results["task"] = reformed["task"]
+    results["method"] = reformed["method"]
+    results["dataset"] = reformed["dataset"]
     return JsonResponse(results, content_type='application/json')
 
 def add_to_basket_view(request): 
