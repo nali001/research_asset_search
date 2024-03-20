@@ -1,5 +1,58 @@
 {% load static %}
 <script type="text/javascript" src="{% static 'search_engine_app/common_js.js' %}"></script>
+      
+<div class="modal fade bd-example-modal-lg" id="post-questionnaire" tabindex="-1" role="dialog" aria-labelledby="post-questionnaire-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="post-questionnaire-modal-label">Survey</h5>
+          <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button> -->
+        </div>
+        <div class="modal-body">
+          <form>
+            <!-- 
+            <div class="rating">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+            </div>          -->
+
+            <select class="star-rating">
+                <option value="">Select a rating</option>
+                <option value="5">Excellent</option>
+                <option value="4">Very Good</option>
+                <option value="3">Average</option>
+                <option value="2">Poor</option>
+                <option value="1">Terrible</option>
+            </select>
+            
+            <script>
+                var stars = new StarRating('.star-rating');
+            </script>
+
+
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Recipient:</label>
+              <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Send message</button>
+        </div>
+      </div>
+    </div>
+</div>  
+
 <nav class="navbar header-navbar pcoded-header">
     <div class="navbar-wrapper">
         <div class="navbar-logo">
@@ -41,15 +94,18 @@
                 </li> {% endcomment %}
             </ul>
             <ul class="nav-right">
+
+                <li class="header-notification">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#post-questionnaire" id="post-test-button" data-whatever="@mdo"> Submit Questionnaire </button>                          
+                </li>
+
                 <li class="header-notification">
                     <a href="#!">
                         {% comment %} <i style="font-size:15pt; " class="ti-shopping-cart"></i> {% endcomment %}
                         <i id="MyCartIcon" class="fa-solid fa-toolbox still-icon" style="font-size:22pt; margin-top:16px; color: #FCE38A;"></i>
-                    <span style="display: inline-block;font-size:12pt;font-weight:bold;margin-left:3px"> <sup><span
-                                    id="MyCartCount">100</span></sup> </span>
+                    <span style="display: inline-block;font-size:12pt;font-weight:bold;margin-left:3px"> <sup><span id="MyCartCount">100</span></sup> </span>
                     </a>
-                    <ul class="show-notification" id="MyCart">
-                        
+                    <ul class="show-notification" id="MyCart">                        
                         <li>
                             <h6 style="color:blue;">Selected components</h6>
                         </li>
@@ -74,43 +130,49 @@
     </div>
     <!-- Search bar -->
     <div class="navbar-container container-fluid">
-        <div class="input-group">
+        <div class="input-group" id="querybox-form">
             <input type="text" class="form-control" placeholder="Enter search string" id="searchbox2" name="searchbox2" onchange="search(2);">
-            <span class="input-group-addon search-btn"><i class="ti-search" onclick="search(2);"></i></span>
+            <span class="input-group-addon search-btn" id="searchboxbutton2"><i class="ti-search" onclick="search(2);">Search</i></span>
         </div>
     </div>
     <!-- Four buttons -->
     <!-- Four buttons with styling and Themify Icons -->
     <div class="button-container text-center">
         <button class="btn btn-secondary custom-btn" 
+                id="task_button"
                 data-toggle="tooltip" 
                 data-placement="top" 
                 data-action="augment"
                 data-title="Task"
                 title="Task"
+                kept-value="N/A"
                 onclick="handleAugmentOptionClick(event)">
             <i class="fa-solid fa-lightbulb"></i>
-            <span id="task_button">N/A</span>
+            <span>N/A</span>            
         </button>
         <button class="btn btn-secondary custom-btn" 
+                id="method_button"
                 data-toggle="tooltip" 
                 data-placement="top" 
                 data-action="augment"
                 data-title="Method"
                 title="Method"
+                kept-value="N/A"
                 onclick="handleAugmentOptionClick(event)">
             <i class="fa-solid fa-microscope"></i>
-            <span id="method_button">N/A</span>
+            <span>N/A</span>
         </button>
         <button class="btn btn-secondary custom-btn" 
+                id="dataset_button"
                 data-toggle="tooltip" 
                 data-placement="top" 
                 data-action="augment"
                 data-title="Dataset"
                 title="Dataset"
+                kept-value="N/A"
                 onclick="handleAugmentOptionClick(event)">
                 <i class="fa-solid fa-dna"></i>
-                <span id="dataset_button">N/A</span>
+                <span>N/A</span>
         </button>
         <!-- <button class="btn btn-danger custom-btn" onclick="handleButtonClick(4)"><i class="ti-alert"></i><span id="all_text">Button 4</span></button> -->
     </div>

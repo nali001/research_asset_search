@@ -55,7 +55,8 @@
             searchValue = document.getElementById('searchbox2').value;
         }
         sessionStorage.setItem("searchValue", searchValue);
-
+        // clean stored parsed augment terms from last search.
+        sessionStorage.removeItem("parsed_augment_terms");
         if (searchValue == "") {
             document.getElementById('MessageBox').innerText = "Please enter at least one keyword, otherwise, I cannot help you!";
         }
@@ -216,5 +217,253 @@
         }
         modifyCartItems(item_data); 
     }
+
+    var userId = localStorage.getItem('userID');
+    if(userId == null) {
+        localStorage.setItem('userID', generateId());
+    }
+
+    let configurationObject = {
+        logUIConfiguration: {
+            endpoint: 'ws://145.100.135.19:6110/ws/endpoint/',
+            authorisationToken: 'eyJ0eXBlIjoibG9nVUktYXV0aG9yaXNhdGlvbi1vYmplY3QiLCJhcHBsaWNhdGlvbklEIjoiN2IzNzcyYWMtM2Y0NS00ZjE5LWIxZTctMjlhMTM4ZWJkYTYwIiwiZmxpZ2h0SUQiOiJmZWM1N2M3Mi05NWQzLTQ2OTYtYTViNS00NmQyZGU2YjJhY2EifQ:1rleLN:Ijy5MMGl9-zZyZPNtDP-stoGlfmQY5nGfbnsLmKCi9c',
+            verbose: true,
+        },
+        browserEvents: {
+                    blockEventBubbling: true,
+                    eventsWhileScrolling: true,
+                    URLChanges: true,
+                    contextMenu: true,
+                    pageFocus: true,
+                    trackCursor: true,
+                    cursorUpdateFrequency: 3000,
+                    cursorLeavingPage: true,
+                    pageResize: true,
+        },
+        
+        applicationSpecificData: {
+            userID: localStorage.getItem('userID'),
+        },
+        trackingConfiguration: {
+            'rewrite-task-button': {
+                selector: '#task_button',
+                event: 'click',
+                name: 'TASK_BUTTON_CLICK',
+                metadata: [
+                    {
+                        nameForLog: 'DATA_TITLE',
+                        sourcer: 'elementAttribute',
+                        lookFor: 'data-title',
+                    },
+                    {
+                        nameForLog: 'DATA_ACTION',
+                        sourcer: 'elementAttribute',
+                        lookFor: 'data-action',
+                    },
+                    {
+                        nameForLog: 'DATA_KEPT_VALUE',
+                        sourcer: 'elementAttribute',
+                        lookFor: 'kept-value',
+                    },                    
+                    {
+                        nameForLog: 'DATA_SPAN',
+                        sourcer: 'elementProperty',
+                        // sourcer: 'elementAttribute',
+                        lookFor: 'innerText',
+                    },
+                ]                
+            },
+
+            'rewrite-method-button': {
+                selector: '#method_button',
+                event: 'click',
+                name: 'METHOD_BUTTON_CLICK',
+                metadata: [
+                    {
+                        nameForLog: 'DATA_TITLE',
+                        sourcer: 'elementAttribute',
+                        lookFor: 'data-title',
+                    },
+                    {
+                        nameForLog: 'DATA_ACTION',
+                        sourcer: 'elementAttribute',
+                        lookFor: 'data-action',
+                    },
+                    {
+                        nameForLog: 'DATA_KEPT_VALUE',
+                        sourcer: 'elementAttribute',
+                        lookFor: 'kept-value',
+                    },
+
+                    {
+                        nameForLog: 'DATA_SPAN',
+                        sourcer: 'elementProperty',
+                        // sourcer: 'elementAttribute',
+                        lookFor: 'innerText',
+                    },
+                ]                             
+            },
+
+            'rewrite-dataset-button': {
+                selector: '#dataset_button',
+                event: 'click',
+                name: 'DATASET_BUTTON_CLICK',
+                metadata: [
+                    {
+                        nameForLog: 'DATA_TITLE',
+                        sourcer: 'elementAttribute',
+                        lookFor: 'data-title',
+                    },
+                    {
+                        nameForLog: 'DATA_ACTION',
+                        sourcer: 'elementAttribute',
+                        lookFor: 'data-action',
+                    },
+                    {
+                        nameForLog: 'DATA_KEPT_VALUE',
+                        sourcer: 'elementAttribute',
+                        lookFor: 'kept-value',
+                    },
+                                     
+                    {
+                        nameForLog: 'DATA_SPAN',
+                        sourcer: 'elementProperty',
+                        // sourcer: 'elementAttribute',
+                        lookFor: 'innerText',
+                    },
+                ]                             
+            },
+
+            'querybox-losefocus': {
+                selector: '#input-box',
+                event: 'blur',
+                name: 'QUERYBOX_BLUR',
+            },
+
+            'change_to_notebook_object_type': {
+                selector: "#notebook_channel",
+                event: 'click',
+                name: "USE_NOTEBOOK_CHANNEL"
+            },
+
+            'change_to_dataset_object_type': {
+                selector: "#dataset_channel",
+                event: 'click',
+                name: "USE_DATASET_CHANNEL"
+            },
+
+            'click_result_object': {
+                selector: '#object_selection_icon_image',
+                event: 'click',
+                name: 'RESULT_OBJECT_CLICK',
+                metadata: [
+                    {
+                        nameForLog: 'OBJECT_TYPE',
+                        sourcer: 'elementAttribute',
+                        lookFor: 'data-type',
+                    },
+                    {
+                        nameForLog: 'OBJECT_ID',
+                        sourcer: 'elementAttribute',
+                        lookFor: 'data-docid',
+                    },
+                    {
+                        nameForLog: 'OBJECT_NAME',
+                        sourcer: 'elementAttribute',
+                        lookFor: 'data-name',
+                    },
+                    {
+                        nameForLog: 'OBJECT_URL',
+                        sourcer: 'elementAttribute',
+                        lookFor: 'data-url',
+                    },
+                ]
+            },           
+
+            'result-hover': {
+                selector: '.page-body',
+                event: 'mouseHover',
+                properties: {
+                    mouseenter: {
+                        name: 'RESULT_MOUSE_ENTER',
+                    },
+                    mouseleave: {
+                        name: 'RESULT_MOUSE_LEAVE',
+                    },                                  
+                },
+                metadata: [
+                    {
+                        nameForLog: 'RESULT_RANK',
+                        sourcer: 'elementAttribute',
+                        lookFor: 'itemindex',
+                    },
+                    {
+                        nameForLog: 'RESULT_VIEW_URL',
+                        sourcer: 'elementAttribute',                        
+                        lookFor: 'result-id',
+                    },                    
+                ]
+            },  
+
+            'issue-query-1':{
+                selector: '#searchbox2',
+                event: 'change',
+                name: 'QUERY_CHANGE',
+                // properties: {
+                //     includeValues: [
+                //         {
+                //             nameForLog: 'QUERY_SUBMIT',
+                //             sourcer: 'elementProperty',
+                //             selector: '#searchbox2',
+                //             lookFor: 'value',
+                //         }
+                //     ]
+                // }
+                metadata: [
+                    {
+                        nameForLog: 'QUERY_SUBMIT',
+                        sourcer: 'elementProperty',
+                        lookFor: 'value',
+                    },
+                ]
+            },            
+
+            'issue-query-2':{
+                selector: '#searchboxbutton2',
+                event: 'click',
+                name: 'QUERY_CHANGE2',
+                sourcer: 'elementProperty',
+                onElement: 'searchbox2',
+                lookFor: 'value',
+                metadata: [ 
+                        {
+                            nameForLog: 'QUERY_SUBMIT',
+                            sourcer: 'elementProperty',
+                            onElement: '#searchbox2',
+                            lookFor: 'value',
+                        }
+                ],
+            },            
+
+            'query-submission': {
+                selector: '#querybox-form',
+                event: 'formSubmission',
+                name: 'QUERY_SUBMITTED',
+                properties: {
+                    includeValues: [
+                        {
+                            nameForLog: 'QUERY_SUBMIT',
+                            sourcer: 'elementProperty',
+                            selector: '#searchbox2',
+                            lookFor: 'value',
+                        }
+                    ]
+                }
+            },            
+        },
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        LogUI.init(configurationObject);
+    });
 </script>
 {% endblock %}

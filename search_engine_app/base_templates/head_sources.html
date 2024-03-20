@@ -23,11 +23,18 @@
 <!-- ico font -->
 <link rel="stylesheet" type="text/css" href="{% static '/icon/icofont/css/icofont.css'%}">
 <!-- Style.css -->
-<link rel="stylesheet" type="text/css" href="{% static '/css/style.css'%}">
-<link rel="stylesheet" type="text/css" href="{% static '/css/jquery.mCustomScrollbar.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static '/css/style.css'%}" />
+<link rel="stylesheet" type="text/css" href="{% static '/css/jquery.mCustomScrollbar.css'%}" />
 <link rel="stylesheet" href="{% static '/notification/style.css'%}" />
 <link rel="stylesheet" type="text/css"
     href="{% static '/starRating/starability-minified/starability-all.min.css'%}" />
+<link rel="stylesheet" href="{% static '/css/star-rating.css'%}" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<link rel="stylesheet" href="https://unpkg.com/intro.js/introjs.css" />
+<!-- Add Nazanin template -->
+<!-- <link rel="stylesheet"  href="{% static '/css/introjs-modern.css'%}" /> -->
 
 <style>
     h5.titleTrimming {
@@ -79,6 +86,7 @@
 <script src="{% static 'js/vartical-demo.js' %}"></script>
 <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
 
+<script src="{% static '/js/star-rating.min.js' %}"></script>
 
 <!-- Graph visualization -->
 <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
@@ -88,3 +96,8 @@
     height: 100vh; /* 80% of the viewport height */
 }
 </style> -->
+
+<!-- LogUI initialization-->
+<script type="text/javascript" src="{% static 'search_engine_app/logui.bundle.js' %}"></script>
+
+<script type="text/javascript" src="https://unpkg.com/intro.js/intro.js"></script>

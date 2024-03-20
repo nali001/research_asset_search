@@ -25,6 +25,7 @@ urlpatterns = [
     path('notebooksearch/', include('notebooksearch.urls')), 
     path('datasetsearch/', include('datasetsearch.urls')), 
     path('graphvisualization/', include('graphvisualization.urls')), 
+    path('user_study/', include('user_study.urls')),
     path('admin/', admin.site.urls),
     path('api/', include('apis.urls')),
     path('api/docs/schema', SpectacularAPIView.as_view(), name='schema'),

@@ -15,6 +15,7 @@ local_ip = os.environ.get('LOCAL_IP')
 
 # Allowed hosts
 ALLOWED_HOSTS = ['127.0.0.1', local_ip, 'localhost']
+# ALLOWED_HOSTS = ['145.100.135.19']
 
 
 # SECURITY WARNING: don't run with debug turned on in production!

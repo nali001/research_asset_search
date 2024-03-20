@@ -3,7 +3,7 @@
 
 {% block object_list %}   
 {%for resultItem in results %}
-<div class="page-body">
+<div class="page-body"  itemindex="{{ forloop.counter }}" result-id="{{ resultItem.docid }} " result-url="{{ resultItem.html_url }}">
     <div class="row">
         <div class="col-sm-12">
             <div class="card">
@@ -56,6 +56,7 @@
                             data-url='{{ resultItem.html_url }}' 
                             data-toggle="tooltip" 
                             data-placement="top" 
+                            id="object_selection_icon_image"
                             title="Select" 
                             onclick="selectObject(event, 'select');" 
                             style="width:35px; right:30px;position: absolute;margin-right:20px;" 
