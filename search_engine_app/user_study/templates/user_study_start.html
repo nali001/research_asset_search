@@ -10,6 +10,14 @@
 <!-- Pre-loader start -->
 {% csrf_token %}
 
+<script>
+    $(document).ready(function() {
+        start_user_study();
+
+        get_user_study_task();
+    });
+</script>
+
 <!-- Bootstrap header start -->
 <div class="container">
     <div class="row">

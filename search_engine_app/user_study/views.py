@@ -29,7 +29,7 @@ def information_survey(request):
 
 
 def log_user_activity(request):
-    # your code here
+    # save user activity log
     record = json.loads(request.body.decode('utf-8'))
     saved_id = save_record_to_mongo(record)
     if saved_id:
@@ -41,7 +41,7 @@ def guide(request):
     return render(request, 'user_study_guide.html')
 
 def pretest(request):
-    # your code here
+    # process the pretest survey
     pass
 
 def intro_step(request):
@@ -49,9 +49,17 @@ def intro_step(request):
     return render(request, 'user_study_guide.html')
 
 def task(request):
-    # your code here
+    # task innformation
     pass
 
 def posttest(request):
-    # your code here
+    # process the posttest survey
+    pass
+
+
+def task_assignment(request):
+    # assign a task to the user, including the whether the user is in the control or experimental group, and the research question to answer.
+
+
+
     pass

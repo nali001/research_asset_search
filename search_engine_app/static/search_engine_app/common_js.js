@@ -284,6 +284,45 @@ async function start_user_study() {
     return userId, sessionId;
 }
 
+/**
+ * Get user study task. Choose the condition for this study (0: W/o Entity Recognition, 1: W/ Entity Recognition), and research question for this user.
+ */
+async function get_user_study_task() {
+    userId = localStorage.getItem("userId");
+    sessionId = sessionStorage.getItem("sessionId");
+
+    var url = "/user_study/task_assignment";
+
+    return fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "X-Requested-With": "XMLHttpRequest",
+            "X-CSRFToken": getCookie("csrftoken")
+        },
+        body: JSON.stringify({
+            'userId': userId,
+            'sessionId': sessionId
+        })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        
+        return response.json();  // Parse the response as JSON
+    })
+    .then(data => {
+        console.log(data);
+        sessionStorage.setItem("userTask", JSON.stringify(data));
+        return data;
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        return error;
+    });
+}
+
 
 /**
  * This is a function to handle the user information submission when registering. 
