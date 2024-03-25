@@ -130,9 +130,12 @@
     </div>
     <!-- Search bar -->
     <div class="navbar-container container-fluid">
-        <div class="input-group" id="querybox-form">
+        <div class="input-group mb-3" id="querybox-form" style="width=50px">
             <input type="text" class="form-control" placeholder="Enter search string" id="searchbox2" name="searchbox2" onchange="search(2);">
-            <span class="input-group-addon search-btn" id="searchboxbutton2"><i class="ti-search" onclick="search(2);">Search</i></span>
+            <div class="input-group-append">
+                <!-- <span class="input-group-addon search-btn" id="searchboxbutton2"> <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #74C0FC;"></i><i class="ti-search" onclick="search(2);">Search</i></span> -->
+                <button class="btn btn-outline-secondary" id="searchboxbutton2" onclick="search(2);" style="background-color: #FFD43B;" type="button"> <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #74C0FC;"></i>Search</button>
+            </div>
         </div>
     </div>
     <!-- Four buttons -->

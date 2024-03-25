@@ -158,6 +158,9 @@
             queryParams.set("page", 1);
             queryParams.set("query", searchValue);
             
+            // Add this query to query history component
+            add_to_query_history(searchValue);
+
             // Replace current querystring with the new one.
             history.replaceState(null, null, "?" + queryParams.toString());
             location.reload();
@@ -279,6 +282,7 @@
 
 
     //======================= Newly defined functions ========================
+
     function toggleSelection(item, operation, cart_operation) {
         // Modify selection icon
         if (operation=='select') {
@@ -309,9 +313,9 @@
         modifyCartItems(item_data); 
     }
 
-    var userId = localStorage.getItem('userID');
+    var userId = localStorage.getItem('userId');
     if(userId == null) {
-        localStorage.setItem('userID', generateId());
+        localStorage.setItem('userId', generateId());
     }
 
     let configurationObject = {
@@ -327,13 +331,15 @@
                     contextMenu: true,
                     pageFocus: true,
                     trackCursor: true,
-                    cursorUpdateFrequency: 3000,
+                    cursorUpdateFrequency: 500,
                     cursorLeavingPage: true,
                     pageResize: true,
         },
         
         applicationSpecificData: {
-            userID: localStorage.getItem('userID'),
+            userId: localStorage.getItem('userId'),
+            sessionId: sessionStorage.getItem('sessionId'),
+            taskData: sessionStorage.getItem('taskData'),
         },
         trackingConfiguration: {
             'rewrite-task-button': {
@@ -361,7 +367,7 @@
                         sourcer: 'elementProperty',
                         // sourcer: 'elementAttribute',
                         lookFor: 'innerText',
-                    },
+                    }
                 ]                
             },
 
@@ -414,8 +420,7 @@
                         nameForLog: 'DATA_KEPT_VALUE',
                         sourcer: 'elementAttribute',
                         lookFor: 'kept-value',
-                    },
-                                     
+                    },                                     
                     {
                         nameForLog: 'DATA_SPAN',
                         sourcer: 'elementProperty',
@@ -434,13 +439,13 @@
             'change_to_notebook_object_type': {
                 selector: "#notebook_channel",
                 event: 'click',
-                name: "USE_NOTEBOOK_CHANNEL"
+                name: "USE_NOTEBOOK_CHANNEL",
             },
 
             'change_to_dataset_object_type': {
                 selector: "#dataset_channel",
                 event: 'click',
-                name: "USE_DATASET_CHANNEL"
+                name: "USE_DATASET_CHANNEL",
             },
 
             'click_result_object': {
@@ -467,7 +472,7 @@
                         nameForLog: 'OBJECT_URL',
                         sourcer: 'elementAttribute',
                         lookFor: 'data-url',
-                    },
+                    }, 
                 ]
             },           
 
@@ -492,7 +497,7 @@
                         nameForLog: 'RESULT_VIEW_URL',
                         sourcer: 'elementAttribute',                        
                         lookFor: 'result-id',
-                    },                    
+                    },                                             
                 ]
             },  
 
@@ -515,7 +520,7 @@
                         nameForLog: 'QUERY_SUBMIT',
                         sourcer: 'elementProperty',
                         lookFor: 'value',
-                    },
+                    } 
                 ]
             },            
 
@@ -532,7 +537,7 @@
                             sourcer: 'elementProperty',
                             onElement: '#searchbox2',
                             lookFor: 'value',
-                        }
+                        },                               
                 ],
             },            
 
@@ -549,12 +554,49 @@
                             lookFor: 'value',
                         }
                     ]
-                }
-            },            
+                },               
+            },          
+            'query-history-modal': {
+                selector: '#query-history-modal',
+                name: 'QUERY_HISTORY_MODAL_Hover',
+                event: 'mouseHover',
+                properties: {
+                    mouseenter: {
+                        name: 'QUERY_HISTORY_MODAL_ENTER',
+                    },
+                    mouseleave: {
+                        name: 'QUERY_HISTORY_MODAL_LEAVE',
+                    },                                  
+                },
+            },
+            'saved-bookmarks': {
+                selector: '#saved-bookmarks',
+                name: 'BOOKMARK_MODAL_Hover',
+                event: 'mouseHover',
+                properties: {
+                    mouseenter: {
+                        name: 'BOOKMARK_ENTER',
+                    },
+                    mouseleave: {
+                        name: 'BOOKMARK_LEAVE',
+                    },                                  
+                },
+            },
+
         },
     }
     document.addEventListener('DOMContentLoaded', function() {
         LogUI.init(configurationObject);
+
+        task_condition = sessionStorage.getItem('condition');
+        if (task_condition == 0){
+            // make entity button invisible
+            document.getElementById('method_button').style.display = 'none';
+            document.getElementById('task_button').style.display = 'none';
+            document.getElementById('dataset_button').style.display = 'none';
+        }
     });
+
+
 </script>
 {% endblock %}

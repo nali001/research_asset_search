@@ -2,7 +2,7 @@ from elasticsearch.helpers import scan
 from utils import utils
 import os
 import json
-
+from itertools import chain
 from .ner import EntityExtractor
 
 
@@ -30,14 +30,23 @@ class QueryReformulator:
     def reformulate_query_for_notebook(self, query=None): 
         entities = self.extract_entities_from_notebook()
         entities = json.loads(entities)
-        non_none_values = [value for key, value in entities.items() if bool(value)]
+        non_none_values = [] 
+        def list_entities(value):
+            if isinstance(value, list):
+                for k in value:
+                    list_entities(k)        
+            else:
+                non_none_values.append(value)
+        for key, value in entities.items():
+            if bool(value):
+                list_entities(value)
+            else:
+                entities[key] = 'N/A'
+        
         reformed_query = query + ' ' + ' '.join(non_none_values)
         
         entities.update({"reformed_query": reformed_query})
-        # Add N/A to None values
-        for key, value in entities.items(): 
-            if not bool(value): 
-                entities[key] = 'N/A'
+
         print(entities)
         
         # return reformed_query

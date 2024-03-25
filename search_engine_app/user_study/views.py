@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 import json
 from django.shortcuts import render
 from django.http import JsonResponse
+from urllib.parse import unquote
 
 from .utils import save_record_to_mongo, assign_user_condition
 
@@ -20,7 +21,8 @@ def register(request):
 def information_survey(request):
     # your code here
     record = json.loads(request.body.decode('utf-8'))
-    condition = assign_user_condition()
+    # condition = assign_user_condition()
+    condition = assign_user_condition(record['userId'])
     record['assigned_condition'] = condition
     saved_id = save_record_to_mongo(record)
     
@@ -59,7 +61,8 @@ def posttest(request):
 
 def task_assignment(request):
     # assign a task to the user, including the whether the user is in the control or experimental group, and the research question to answer.
-
-
-
-    pass
+    # breakpoint()
+    body = unquote(request.body.decode('utf-8'))
+    body = json.loads(body)
+    condition, task_id, task  = assign_user_condition(body['userId'])
+    return JsonResponse({'condition': condition, 'taskId': task_id, 'task': task})

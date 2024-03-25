@@ -20,150 +20,177 @@
                 {% comment %} Left pannel {% endcomment %}
                 <!-- {% block left_pannel %} left_pannel {% endblock %} -->
                 {% include 'left_pannel.html' %}
-                
-                {% comment %} Main body {% endcomment %}
-                {% block main_body %}  
-                <div class="pcoded-content">
-                    <div class="pcoded-inner-content">
-                        <div class="main-body">
-                            <div class="page-wrapper" id="MessageBox">                        
-                                <div class="page-body" itemindex="1" result-id="NB_306c7303481753f0ba0e6479ddeb960126f063fccedf2c31ea3b9ea0dd15db18 " result-url="https://www.kaggle.com/code/skylord/test-test-and-test">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <div class="card">
-                                                <div class="card-header">
-                            
-                                                    <h5 class="m-b-10 titleTrimming" id="result-title">
-                                                        <a href="https://www.kaggle.com/code/skylord/test-test-and-test" target="_blank" style="color:darkblue;">
-                                                            <img src="/static/images/notebook_icon.png" style="width:25px; left: 10px; margin-right:6px;">
-                                                            Test, Test and Test!
-                                                        </a>
-                                                    </h5>
-                            
-                            
-                                                    <div class="card-header-right">
-                                                        <ul class="list-unstyled card-option">
-                                                            <li><i class="fa fa-chevron-left" aria-hidden="true"></i></li>
-                                                            <li><i class="fa fa-window-maximize full-card" aria-hidden="true"></i></li>
-                                                            <li><i class="fa fa-minus minimize-card" aria-hidden="true"></i></li>
-                                                            <li><i class="fa fa-refresh reload-card" aria-hidden="true"></i></li>
-                                                            <li><i class="fa fa-times close-card" aria-hidden="true"></i></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="card-block">
-                                                    <p class="show-read-more">
-                                                        Number of cases in the wild will always be higher than the number of cases detected by health officials. 
-                            ie. (Actual cases &gt; confirmed cases)
-                            An asymptomatic patient can lead to far wider spread of the disease and eventually lead to a condition known as *community spread*.  
-                            The only way one can control it is by increasing the number of tests. 
-                            Countries which were pro-active in prepaing for the COVID-19 pandemic,were able to control the spread &amp; have a lower <a href="javascript:void(0);" class="read-more">[+]</a><span class="more-text"> mortality rate. Their labs were preparing testing kits as far back as in early Jan [link to news article]()
-                            Please also read Nate Silver's critique on how the [number of case counts is meaningless]() unless it's correlated with the testing strategy. 
-                            In this notebook, I will illustrate the impact of testing on the total number of cases.
-                            1. Iceland has a large outlier, having conducted more than 45k+ tests/ million
-                            2. Note that Iceland has a population of 3.64 lacs &amp; has conducted 16k+ tests! 
-                            3. Within Italy, the region of Veneto has a higher incidence of tests/million while the confirmed cases/million is also lower  
-                            Following countries have a high ``Tests/Positive (Confirmed Cases)``
-                            |Country/Region | Tests/Positive |
-                            | --- | --- |
-                            |Canada-NW territories | 833 |
-                            |UAE | 385 |
-                            |Russia | 292 |
-                            + All Canada territories have high ``Tests/Positive (Confirmed Cases)`` 
-                            + For the following countries the ratio is 
-                            |Country/Region| Tests/Positive |
-                            | --- | --- |
-                            |Australia| 53|
-                            |Singapore| 69|
-                            |Taiwan| 98|
-                            |Hong-Kong| 132|  
-                            *Assumptions &amp; Limitations*
-                            1. Countries have different testing strategies.
-                            2. Testing strategy is often a function of the
-                            a. country's preparedness for the disease,
-                            b. availability of testing kits and labs and often
-                            c. political will!
-                            3. The data has been collated from multiple sources, hence it's as good as the data collected
-                            4. Sources of the data points are cited in the [data file]()
-                            5. Highly connected cities/countries will have a larger incidence of the disease
-                            We will now create separate series for the following countries of interest:
-                            1. United States
-                            2. Italy
-                            3. China
-                            4. Rest of the World
-                            We now calculate the number of tests per confirmed cases (posit</span></p>
-                                                    <ul class="breadcrumb-title b-t-default p-t-10">
-                                                        <li class="breadcrumb-item"><a href="#!">
-                                                            <div style="display:inline-block;"> Source: Kaggle</div>
-                                                            <span style="padding:10px; color:lightgray;"> | </span>
-                                                            <div style="display:inline-block;"> Markdowns: 3; Codes: 12</div>
-                                                            <span style="padding:10px; color:lightgray;"> | </span>
-                                                            <span style="display:inline-block" class="ti-cloud-down"></span>
-                                                            
-                                                                
-                            
-                            
-                                                            <img src="/static/images/selection_icon.png" data-docid="NB_306c7303481753f0ba0e6479ddeb960126f063fccedf2c31ea3b9ea0dd15db18" data-type="notebook" data-name="Test, Test and Test!" data-url="https://www.kaggle.com/code/skylord/test-test-and-test" data-toggle="tooltip" data-placement="top" title="" id="object_selection_icon_image" onclick="selectObject(event, 'select');" style="width:30px; right:30px;position: absolute;margin-right:20px;" data-original-title="Select">
-                                                            
-                                                        </a></li><a href="#!">
-                                                    </a></ul><a href="#!">
+                <div class="d-flex flex-nowrap">
+                    <div class="d-flex flex-column flex-shrink-0" style="width: 80%;">                                                    
+                        {% comment %} Main body {% endcomment %}
+                        {% block main_body %}  
+                        <div class="pcoded-content">
+                            <div class="pcoded-inner-content">
+                                <div class="main-body">
+                                    <div class="page-wrapper" id="MessageBox">                        
+                                        <div class="page-body" itemindex="1" result-id="NB_306c7303481753f0ba0e6479ddeb960126f063fccedf2c31ea3b9ea0dd15db18 " result-url="https://www.kaggle.com/code/skylord/test-test-and-test">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                    
+                                                            <h5 class="m-b-10 titleTrimming" id="result-title">
+                                                                <a href="https://www.kaggle.com/code/skylord/test-test-and-test" target="_blank" style="color:darkblue;">
+                                                                    <img src="/static/images/notebook_icon.png" style="width:25px; left: 10px; margin-right:6px;">
+                                                                    Test, Test and Test!
+                                                                </a>
+                                                            </h5>
+                                    
+                                    
+                                                            <div class="card-header-right">
+                                                                <ul class="list-unstyled card-option">
+                                                                    <li><i class="fa fa-chevron-left" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-window-maximize full-card" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-minus minimize-card" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-refresh reload-card" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-times close-card" aria-hidden="true"></i></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-block">
+                                                            <p class="show-read-more">
+                                                                Number of cases in the wild will always be higher than the number of cases detected by health officials. 
+                                    ie. (Actual cases &gt; confirmed cases)
+                                    An asymptomatic patient can lead to far wider spread of the disease and eventually lead to a condition known as *community spread*.  
+                                    The only way one can control it is by increasing the number of tests. 
+                                    Countries which were pro-active in prepaing for the COVID-19 pandemic,were able to control the spread &amp; have a lower <a href="javascript:void(0);" class="read-more">[+]</a><span class="more-text"> mortality rate. Their labs were preparing testing kits as far back as in early Jan [link to news article]()
+                                    Please also read Nate Silver's critique on how the [number of case counts is meaningless]() unless it's correlated with the testing strategy. 
+                                    In this notebook, I will illustrate the impact of testing on the total number of cases.
+                                    1. Iceland has a large outlier, having conducted more than 45k+ tests/ million
+                                    2. Note that Iceland has a population of 3.64 lacs &amp; has conducted 16k+ tests! 
+                                    3. Within Italy, the region of Veneto has a higher incidence of tests/million while the confirmed cases/million is also lower  
+                                    Following countries have a high ``Tests/Positive (Confirmed Cases)``
+                                    |Country/Region | Tests/Positive |
+                                    | --- | --- |
+                                    |Canada-NW territories | 833 |
+                                    |UAE | 385 |
+                                    |Russia | 292 |
+                                    + All Canada territories have high ``Tests/Positive (Confirmed Cases)`` 
+                                    + For the following countries the ratio is 
+                                    |Country/Region| Tests/Positive |
+                                    | --- | --- |
+                                    |Australia| 53|
+                                    |Singapore| 69|
+                                    |Taiwan| 98|
+                                    |Hong-Kong| 132|  
+                                    *Assumptions &amp; Limitations*
+                                    1. Countries have different testing strategies.
+                                    2. Testing strategy is often a function of the
+                                    a. country's preparedness for the disease,
+                                    b. availability of testing kits and labs and often
+                                    c. political will!
+                                    3. The data has been collated from multiple sources, hence it's as good as the data collected
+                                    4. Sources of the data points are cited in the [data file]()
+                                    5. Highly connected cities/countries will have a larger incidence of the disease
+                                    We will now create separate series for the following countries of interest:
+                                    1. United States
+                                    2. Italy
+                                    3. China
+                                    4. Rest of the World
+                                    We now calculate the number of tests per confirmed cases (posit</span></p>
+                                                            <ul class="breadcrumb-title b-t-default p-t-10">
+                                                                <li class="breadcrumb-item"><a href="#!">
+                                                                    <div style="display:inline-block;"> Source: Kaggle</div>
+                                                                    <span style="padding:10px; color:lightgray;"> | </span>
+                                                                    <div style="display:inline-block;"> Markdowns: 3; Codes: 12</div>
+                                                                    <span style="padding:10px; color:lightgray;"> | </span>
+                                                                    <span style="display:inline-block" class="ti-cloud-down"></span>
+                                                                    
+                                                                        
+                                    
+                                    
+                                                                    <img src="/static/images/selection_icon.png" data-docid="NB_306c7303481753f0ba0e6479ddeb960126f063fccedf2c31ea3b9ea0dd15db18" data-type="notebook" data-name="Test, Test and Test!" data-url="https://www.kaggle.com/code/skylord/test-test-and-test" data-toggle="tooltip" data-placement="top" title="" id="object_selection_icon_image" onclick="selectObject(event, 'select');" style="width:30px; right:30px;position: absolute;margin-right:20px;" data-original-title="Select">
+                                                                    
+                                                                </a></li><a href="#!">
+                                                            </a></ul><a href="#!">
+                                                        </a></div><a href="#!">
+                                                    </a></div><a href="#!">
                                                 </a></div><a href="#!">
                                             </a></div><a href="#!">
-                                        </a></div><a href="#!">
-                                    </a></div><a href="#!">
-                                </a></div>   
-                            </div>
-                            <a href="#!" id="page-selector">
+                                        </a></div>   
+                                    </div>
+                                    <a href="#!" id="page-selector">
 
-                                <div style="text-align:center; margin-bottom:40px;">
-                                    
-                                    
-                                    <input type="button" class="btn btn-grd-primary" style="font-weight:bold; width:30px; padding:5px;" value="1">
-                                    
-                                    
-                                    
-                                    <input type="button" class="btn btn-primary btn-outline-primary" style="font-weight:bold; width:30px; padding:5px;" value="2" onclick="btnPage(2);">
-                                    
-                                    
-                                    
-                                    <input type="button" class="btn btn-primary btn-outline-primary" style="font-weight:bold; width:30px; padding:5px;" value="3" onclick="btnPage(3);">
-                                    
-                                    
-                                    
-                                    <input type="button" class="btn btn-primary btn-outline-primary" style="font-weight:bold; width:30px; padding:5px;" value="4" onclick="btnPage(4);">
-                                    
-                                    
-                                    
-                                    <input type="button" class="btn btn-primary btn-outline-primary" style="font-weight:bold; width:30px; padding:5px;" value="5" onclick="btnPage(5);">
-                                    
-                                    
-                                    
-                                    <input type="button" class="btn btn-primary btn-outline-primary" style="font-weight:bold; width:30px; padding:5px;" value="6" onclick="btnPage(6);">
-                                    
-                                    
-                                    
-                                    <input type="button" class="btn btn-primary btn-outline-primary" style="font-weight:bold; width:30px; padding:5px;" value="7" onclick="btnPage(7);">
-                                    
-                                    
-                                    
-                                    <input type="button" class="btn btn-primary btn-outline-primary" style="font-weight:bold; width:30px; padding:5px;" value="8" onclick="btnPage(8);">
-                                    
-                                    
-                                    
-                                    <input type="button" class="btn btn-primary btn-outline-primary" style="font-weight:bold; width:30px; padding:5px;" value="9" onclick="btnPage(9);">
-                                    
-                                    
-                                    
-                                    <input type="button" class="btn btn-primary btn-outline-primary" style="font-weight:bold; width:30px; padding:5px;" value="10" onclick="btnPage(10);">
-                                    
-                                    
+                                        <div style="text-align:center; margin-bottom:40px;">
+                                            
+                                            
+                                            <input type="button" class="btn btn-grd-primary" style="font-weight:bold; width:30px; padding:5px;" value="1">
+                                            
+                                            
+                                            
+                                            <input type="button" class="btn btn-primary btn-outline-primary" style="font-weight:bold; width:30px; padding:5px;" value="2" onclick="btnPage(2);">
+                                            
+                                            
+                                            
+                                            <input type="button" class="btn btn-primary btn-outline-primary" style="font-weight:bold; width:30px; padding:5px;" value="3" onclick="btnPage(3);">
+                                            
+                                            
+                                            
+                                            <input type="button" class="btn btn-primary btn-outline-primary" style="font-weight:bold; width:30px; padding:5px;" value="4" onclick="btnPage(4);">
+                                            
+                                            
+                                            
+                                            <input type="button" class="btn btn-primary btn-outline-primary" style="font-weight:bold; width:30px; padding:5px;" value="5" onclick="btnPage(5);">
+                                            
+                                            
+                                            
+                                            <input type="button" class="btn btn-primary btn-outline-primary" style="font-weight:bold; width:30px; padding:5px;" value="6" onclick="btnPage(6);">
+                                            
+                                            
+                                            
+                                            <input type="button" class="btn btn-primary btn-outline-primary" style="font-weight:bold; width:30px; padding:5px;" value="7" onclick="btnPage(7);">
+                                            
+                                            
+                                            
+                                            <input type="button" class="btn btn-primary btn-outline-primary" style="font-weight:bold; width:30px; padding:5px;" value="8" onclick="btnPage(8);">
+                                            
+                                            
+                                            
+                                            <input type="button" class="btn btn-primary btn-outline-primary" style="font-weight:bold; width:30px; padding:5px;" value="9" onclick="btnPage(9);">
+                                            
+                                            
+                                            
+                                            <input type="button" class="btn btn-primary btn-outline-primary" style="font-weight:bold; width:30px; padding:5px;" value="10" onclick="btnPage(10);">
+                                            
+                                            
+                                        </div>
+                                    </a>                            
                                 </div>
-                            </a>                            
+                            </div>             
                         </div>
-                    </div>             
+                        
+                        {% endblock %}
+                    </div>
+                    <div class="d-flex flex-column align-items-stretch flex-shrink-0" style="width:20%;display:block;position: float;">
+                        <div id="query-history-modal">
+                            <div class="query-history-header">
+                                <!-- <span class="close">&times;</span> -->
+                                <span class="fs-6 fw-semibold" style="color: #ef5350;"><i class="fa fa-history" style="font-size:20px" aria-hidden="true"></i>   Recent Query History</span>
+                            </div>
+                            <div class="query-history-content">
+                                <div class="list-group list-group-flush border-bottom scrollarea" id="query-history-list">
+                                <a href="#" class="list-group-item list-group-item-action py-2 lh-sm" aria-current="true"><div class="d-flex w-100 align-items-center justify-content-between"><i class="fa-regular fa-file" style="color: #74C0FC;"></i>&nbsp;&nbsp;<small class="mb-1 small">Test query 1</small><small class="text-body-secondary">25-03 12:49</small></div></a></div>
+                                <div class="list-group list-group-flush border-bottom scrollarea" id="query-history-list">
+                                <a href="#" class="list-group-item list-group-item-action py-2 lh-sm" aria-current="true"><div class="d-flex w-100 align-items-center justify-content-between"><i class="fa-regular fa-file" style="color: #74C0FC;"></i>&nbsp;&nbsp;<small class="mb-1 small">Test query 2</small><small class="text-body-secondary">25-03 12:50</small></div></a></div>
+                            </div>
+                        </div>        
+                        <div id="saved-bookmarks">
+                            <div class="bookmark-header">
+                                <!-- <span class="close">&times;</span> -->
+                                <span class="fs-6 fw-semibold" style="color: #ef5350;"><i class="fa-solid fa-bookmark" style="font-size:20px"></i>   Chosen Assets</span>
+                            </div>
+                        
+                            <div class="bookmark-content">
+                                <div class="list-group list-group-flush border-bottom scrollarea" id="saved-bookmark-list"><div class="list-group-item list-group-item-action py-2 lh-sm" aria-current="true"><div class="d-flex w-100 align-items-center justify-content-between"><i class="fa-regular fa-file" style="color: #74C0FC;"></i>&nbsp;&nbsp; <a href="https://www.kaggle.com/code/viktorivanovio/gpu-test" class="mb-1 small"> GPU Test</a> <small class="text-body-secondary">24-03 23:50</small></div> <div class="col-10 mb-1 small"><p> Task<i class="fa-solid fa-lightbulb"></i>:analyze Kaggle coding and running environment in CPU mode <br> Method <i class="fa-solid fa-microscope"></i>: get some memory and CPU stats from tensorflow, run test for GPU and compare with CPU in ProjectWork5 <br> Dataset<i class="fa-solid fa-dna"></i>: N/A</p> </div> </div></div>
+                            </div>
+                        </div>                                        
+                    </div>                    
                 </div>
-                
-                {% endblock %}
             </div>
         </div>
     </div>
@@ -221,6 +248,12 @@
                 element: document.querySelector('#dataset_button'), 
                 intro: "Click here to add the dataset Entity ."
             },{
+                element: document.querySelector('#query-history-modal'),
+                intro: "Scroll here to view your recent queries."
+            },{
+                element: document.querySelector('#saved-bookmarks'),
+                intro: "Scroll here to view your saved bookmarks."
+            },{
                 element: document.querySelector('#post-test-button'),
                 intro: "When you finish the searching task, click here to take a short survey about the experience."
             },    
@@ -233,5 +266,63 @@
         }).start();
     });
 </script>
+
+
+
+
+<style>
+    .query-history-header {
+        right: 10px;
+        top: 21.5%;
+        width: 20%; /* Set a width */
+        height: 3.5%;
+        z-index: 0; /* Sit on top */
+        position: fixed; /* Stay in place */
+        background-color: #fefefe;
+        margin: auto;
+        padding: 5px;
+        border: 1px solid #b4b3b3;
+    }
+
+    .query-history-content {
+        display: block; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 0; /* Sit on top */
+        right: 10px;
+        top: 25%;
+        width: 20%; /* Set a width */
+        height: 25%; /* Set a height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(255,255,255); /* Fallback color */
+        background-color: rgba(255,255,255, 0.4); /* Black w/ opacity */
+        border: 1px solid #b4b3b3;
+    }
+
+    .bookmark-header {
+        right: 10px;
+        top: 51.5%;
+        width: 20%; /* Set a width */
+        height: 3.5%;
+        z-index: 0; /* Sit on top */
+        position: fixed; /* Stay in place */
+        background-color: #fefefe;
+        margin: auto;
+        padding: 5px;
+        border: 1px solid #b4b3b3;
+    }
+    .bookmark-content {
+        display: block; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 0; /* Sit on top */
+        right: 10px;
+        top: 55%;
+        width: 20%; /* Set a width */
+        height: 40%; /* Set a height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(255,255,255); /* Fallback color */
+        background-color: rgba(255,255,255, 0.4); /* Black w/ opacity */
+        border: 1px solid #b4b3b3;
+    }
+</style>
 
 {% endblock %}

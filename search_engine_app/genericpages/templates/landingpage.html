@@ -74,6 +74,7 @@
   <script src="{% static 'js/vartical-demo.js' %}"></script>
   <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
 
+  <script type="text/javascript" src="{% static 'search_engine_app/common_js.js' %}"></script>
 </head>
 
 
@@ -192,7 +193,10 @@
           <div class="input-group" style="width=50px">
             <input type="text" class="form-control" placeholder="Enter search string" id="searchbox2" name="searchbox2"
               onchange="search(2);">
-            <span class="input-group-addon search-btn"><i class="ti-search" onclick="search(2);"></i></span>
+            <!-- <span class="input-group-addon search-btn"><i class="ti-search" onclick="search(2);"></i></span> -->
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" id="searchboxbutton2" onclick="search(2);" style="background-color: #FFD43B;" type="button"> <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #74C0FC;"></i>Search</button>
+            </div>
           </div>
         </div>
       </div>
@@ -228,6 +232,7 @@
         queryParams.set("page", 1);
         queryParams.set("filter", '');
         queryParams.set("facet", '');
+        add_to_query_history(searchValue);
         // Replace current querystring with the new one.
         window.location.replace("../notebooksearch/notebook_search?" + queryParams.toString());
 
@@ -293,77 +298,6 @@
       });
 
     }
-
-    function modifyBasket(operation, type, title, url, id) {
-
-      if (title.length > 35) {
-        title = title.substring(1, 35) + "...";
-      }
-
-
-      if (operation == 'add') {
-        id = 'id' + (new Date()).getTime();
-      }
-      newEntitiy = { 'operation': operation, 'type': type, 'title': title, 'url': url, 'id': id };
-      $.ajax({
-        url: '../webSearch/addToBasket',
-        type: "POST",
-        dataType: "json",
-        data: JSON.stringify(newEntitiy),
-        headers: {
-          "X-Requested-With": "XMLHttpRequest",
-          "X-CSRFToken": getCookie("csrftoken"),  // don't forget to include the 'getCookie' function
-        },
-        success: (data) => {
-          console.log(data);
-          modifyCart(data);
-        },
-        error: (error) => {
-          console.log(error);
-        }
-      });
-    }
-
-    function modifyCart(data) {
-      if (data['operation'] == 'add') {
-        var ul = document.getElementById("MyCart");
-        var li = document.createElement("li");
-        var icon = "";
-        if (data['type'] == 'Webpages') {
-          icon = '<i style="font-size:10pt; font-weight: bold; padding-right:5px;" class="ti-world"></i>';
-        }
-        else if (data['type'] == 'Datasets') {
-          icon = '<i style="font-size:10pt; font-weight: bold; padding-right:5px;" class="ti-ruler-pencil"></i>';
-        }
-        else if (data['type'] == 'WebAPIs') {
-          icon = '<i style="font-size:10pt; font-weight: bold; padding-right:5px;" class="ti-control-shuffle"></i>';
-        }
-        else if (data['type'] == 'Notebooks') {
-          icon = '<i style="font-size:10pt; font-weight: bold; padding-right:5px;" class="ti-package"></i>';
-        }
-        li.innerHTML = '<div class="media">' +
-          icon +
-          '<div class="media-body">' +
-          '<h5 class="notification-user"><a target="_blank" href="' + data['url'] + '">' + data['title'] + '</a> </h5>' +
-          '</div>' +
-          '<a href="#" onclick="modifyBasket(&quot;delete&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;' + data['id'] + '&quot;);"' +
-          'style="font-size:8pt;  display:inline-block;"> <i class="ti-close"></i>' +
-          '</a>' +
-          '</div>';
-        li.setAttribute("id", data['id']); // added line
-        ul.appendChild(li);
-      }
-      else if (data['operation'] == 'delete') {
-        $('#' + data['id']).remove();
-      }
-
-      cnt = document.querySelectorAll("#MyCart li").length - 1;
-      $('#MyCartCount').text(cnt);
-    }
-    { { functionList | safe } }
-
-    cnt = document.querySelectorAll("#MyCart li").length - 1;
-    $('#MyCartCount').text(cnt);
   </script>
 </body>
 

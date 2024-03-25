@@ -14,7 +14,10 @@
     $(document).ready(function() {
         start_user_study();
 
-        get_user_study_task();
+        get_user_study_task().then(function(response) {
+            var search_topic = sessionStorage.getItem('task');
+            $('#search-topic-header').text('Search topic: ' + search_topic);
+        });
     });
 </script>
 
@@ -39,8 +42,10 @@
             <div class="card">
                 <div class="card-body">
 
-                    <h3 class="card-title"> Evaluate search results: spend about 20 minutes searching for the target research topic!</h3>
-        
+                    <h2 class="card-title"> Spend about 20 minutes searching for a research topic!</h2>
+
+                    <h3 class="card-subtitle mb-2 text-muted" id="search-topic-header"> Search topic:  </h3>
+                    
                     <p class="card-text"> This study consists of one search phase and two tests (one test before the search phase and one post-test after it). Each test asks you different questions about your knowledge on one or more topics - please answer the questions truthfully. 
                     Your payment is not affected by the number of correct or incorrect answers. 
                     Most questions are multiple-choice questions, in the last test we ask you to write a summary about one topic too.
@@ -52,19 +57,10 @@
                         <li>
                             <p>
                             Only use the web search interface we provide. 
-                            Do not switch browser tabs–-after three tab switches we will cancel your participation.
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                            You can interact with the search results. 
-                            A click on a document snippet will open this document in our own document viewer. 
-                            <strong> There may be a question regarding the document you are reading. You are required to answer the question based on the document.</strong>
-                            Your payment is not affected by the number of correct or incorrect answers. However, we will check the answer quality and cancel your participation if we find meaningless or off-document answers.
-                            We know that this document viewer is not perfect, but please stick with it. 
                             
                             </p>
                         </li>
+
                         <li> 
                             <p>
                             Keep your searches on the topic and avoid searches on unrelated topics. 
@@ -84,7 +80,7 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-body text-center"> <!-- Added 'text-center' class -->
-                            <a href="{% url 'user_study:register_participant' %}" class="btn btn-primary" onclick="start_user_study(event)">Start</a>
+                            <a href="{% url 'user_study:guide' %}" class="btn btn-primary" onclick="start_study_session(event)">Start</a>
                         </div>
                     </div>
                 </div>
@@ -94,9 +90,9 @@
 </div>
 <!-- Task description end -->
 
-
-
 {% endblock %} 
+
+
 
 
 

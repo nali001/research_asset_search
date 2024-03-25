@@ -27,9 +27,10 @@ def save_record_to_mongo(record):
 
 ## Assign one condition to a user
 def assign_user_condition(userId):
-    tasks = [json.loads(_) for _ in open("target_search_tasks.jsonl").readlines()]
-    num_conditions = len(tasks)
-
+    current_location = os.path.dirname(os.path.abspath(__file__))
+    tasks = [json.loads(_) for _ in open(os.path.join(current_location, "target_search_tasks.jsonl")).readlines()]
+    num_tasks = len(tasks)
+    num_conditions = 2
     mongo_server = os.getenv("MONGO_SERVER")
     mongo_database = os.getenv("USER_STUDY_MONGO_DATABASE")
     mongo_collection = os.getenv("USER_STUDY_MONGO_COLLECTION")
@@ -47,10 +48,25 @@ def assign_user_condition(userId):
     records = collection.find({'userId': userId})
     records = [_ for _ in records]
 
+    condition = -1
+    task_taken = set([])
     if len(records) > 0:
         # The user has already taken a test
-        return records[0]['condition']
+        tested_conditions = set([record['condition'] for record in records])
+        task_taken = set([record['taskId'] for record in records])
+        if len(tested_conditions) == num_conditions:
+            # already took all the tests
+            condition = -1
+        else:
+            # assign a new condition            
+            condition =  random.choice(list(set(range(num_conditions)).difference(tested_conditions)))
+    else:
+        # The user has not taken any test
+        condition = random.randint(0, num_conditions - 1)
 
-    condition = random.randint(1, num_conditions)
-    return condition
+    
+    # Assign a task to the user
+    task_id = random.choice(list(set([_['task_id'] for _ in tasks]).difference(task_taken)))
+    task = [_ for _ in tasks if _['task_id'] == task_id][0]['task_question']
+    return condition, task_id, task
     
