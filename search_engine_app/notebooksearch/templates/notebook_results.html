@@ -34,18 +34,12 @@
                             {{ resultItem.description }}
                         </p>
                         <ul class="breadcrumb-title b-t-default p-t-10">
-                            <li class="breadcrumb-item"><a href="#!">
+                            <li class="breadcrumb-item">
                                 <div style="display:inline-block;"> Source: {{ resultItem.source }}</div>
                                 <span style="padding:10px; color:lightgray;"> | </span>
                                 <div style="display:inline-block;"> Markdowns: {{ resultItem.num_md_cells }}; Codes: {{ resultItem.num_code_cells }}</div>
                                 <span style="padding:10px; color:lightgray;"> | </span>
-                                <span style="display:inline-block" class="ti-cloud-down"></span>
-                                
-                                    {% comment %} <div style="display:inline-block;"> Stars: {{ resultItem.stargazers_count }}</div>
-                                    <div style="display:inline-block;"> <a
-                                            href="{{ resultItem.git_url }}"
-                                            target="_blank"> Git </a> </div>
-                                </a> {% endcomment %}
+                                <span style="display:inline-block" class="ti-cloud-down"></span>                               
 
 
                                 <img 
@@ -61,13 +55,6 @@
                                 onclick="selectObject(event, 'select');" 
                                 style="width:30px; right:30px;position: absolute;margin-right:20px;" 
                                 />
-
-                                {% comment %} <a href="#"
-                                    onclick="modifyBasket('add','Notebooks',&quot;{{ resultItem.name }}&quot;, &quot;{{ resultItem.html_url}}&quot;, 'id');">
-                                    <img id="selection_icon_image" src="{% static 'images/addToBasket.png' %}"
-                                        style="width:25px; right:0px;position: absolute;margin-right:20px;" />
-                                </a> {% endcomment %}
-
                                 
                             </li>
                         </ul>

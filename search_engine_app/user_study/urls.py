@@ -16,4 +16,5 @@ urlpatterns = [
     # path('github_index_pipeline/', views.github_index_pipeline, name='github_index_pipeline'), 
     # path('api/', apis.welcome),
     # path('api/api_test/', apis.api_test),
+    path('layout/', views.test_layout, name='test_layout'),
 ]

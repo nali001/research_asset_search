@@ -93,27 +93,27 @@
 <div id="pcoded" class="pcoded">
     <div class="pcoded-overlay-box"></div>
     <div class="pcoded-container navbar-wrapper">
-        {% comment %} Top bar {% endcomment %}
-        {% include 'top_bar.html' %}
+        <header>
+            {% comment %} Top bar {% endcomment %}
+            {% include 'top_bar.html' %}
+        </header>
 
         <div class="pcoded-main-container">
-            <div class="pcoded-wrapper">                
-                {% comment %} Left pannel {% endcomment %}
-                <!-- {% block left_pannel %} left_pannel {% endblock %} -->
-                {% include 'left_pannel.html' %}
-                <div class="d-flex flex-nowrap">
-                    <div class="d-flex flex-column flex-shrink-0" style="width: 80%;">                                    
-                        {% comment %} Main body {% endcomment %}
-                        {% block main_body %} Main body {% endblock %}
+                <div class="row">
+                    {% comment %} Left pannel {% endcomment %}
+                    {% block left_pannel %} left_pannel {% endblock %}
+                    {% include 'left_pannel.html' %}
+                    <div class="col-md-9">
+                            {% comment %} Main body {% endcomment %}
+                            {% block main_body %} Main body {% endblock %}
                     </div> 
-                    <div class="d-flex flex-column align-items-stretch flex-shrink-0" style="width:20%;display:block;position: float;">
-                        {% comment %} right pannel {% endcomment %}
+                    <div class="col-md-3">
                         {% include 'right_pannel.html' %}
                     </div>
                 </div>
-            </div>
-
+            <!-- </div>  -->
         </div>
+
     </div>
 </div>
 

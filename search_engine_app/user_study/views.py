@@ -66,3 +66,8 @@ def task_assignment(request):
     body = json.loads(body)
     condition, task_id, task  = assign_user_condition(body['userId'])
     return JsonResponse({'condition': condition, 'taskId': task_id, 'task': task})
+
+
+def test_layout(request):
+    # show the layout of the test
+    return render(request, 'test_layout.html')
