@@ -1,0 +1,602 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block body %}
+
+<style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      width: 100%;
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .btn-bd-primary {
+      --bd-violet-bg: #712cf9;
+      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+      --bs-btn-font-weight: 600;
+      --bs-btn-color: var(--bs-white);
+      --bs-btn-bg: var(--bd-violet-bg);
+      --bs-btn-border-color: var(--bd-violet-bg);
+      --bs-btn-hover-color: var(--bs-white);
+      --bs-btn-hover-bg: #6528e0;
+      --bs-btn-hover-border-color: #6528e0;
+      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+      --bs-btn-active-color: var(--bs-btn-hover-color);
+      --bs-btn-active-bg: #5a23c8;
+      --bs-btn-active-border-color: #5a23c8;
+    }
+
+    .bd-mode-toggle {
+      z-index: 1500;
+    }
+
+    .bd-mode-toggle .dropdown-menu .active .bi {
+      display: block !important;
+    }
+  </style>
+
+
+<!-- Pre-loader start -->
+<div class="theme-loader">
+    <div class="loader-track">
+        <div class="loader-bar"></div>
+    </div>
+</div>
+<!-- Pre-loader end -->
+<div id="pcoded" class="pcoded">
+    <div class="pcoded-overlay-box"></div>
+    <div class="pcoded-container navbar-wrapper">
+        <header>
+            {% comment %} Top bar {% endcomment %}
+            {% include 'top_bar.html' %}
+        </header>
+
+        <div class="pcoded-main-container">
+                <div class="row">
+                    {% comment %} Left pannel {% endcomment %}
+                    {% block left_pannel %} left_pannel {% endblock %}
+                    {% include 'left_pannel.html' %}
+                    <div class="col-md-9">
+                            {% comment %} Main body {% endcomment %}
+                            {% block main_body %} Main body {% endblock %}
+                    </div> 
+                    <div class="col-md-3">
+                        {% include 'right_pannel.html' %}
+                    </div>
+                </div>
+            <!-- </div>  -->
+        </div>
+
+    </div>
+</div>
+
+{% csrf_token %}
+
+
+<script>
+    function clearSearchBoxes() {
+        sessionStorage.setItem("searchValue", "");
+    }
+    //---------------------------------------------------------------------
+    function facetSearch(facet, filter) {
+        // Construct URLSearchParams object instance from current URL querystring.
+        var queryParams = new URLSearchParams(window.location.search);
+        // Set new or modify existing parameter value.
+        queryParams.set("filter", filter);
+        queryParams.set("facet", facet);
+        queryParams.set("page", 1);
+        // Replace current querystring with the new one.
+        history.replaceState(null, null, "?" + queryParams.toString());
+        location.reload();
+    }
+    //---------------------------------------------------------------------
+    function search(searchBoxNum) {
+        var searchValue = ""
+        if (searchBoxNum == 1) {
+            searchValue = document.getElementById('searchbox1').value;
+        }
+        else {
+            searchValue = document.getElementById('searchbox2').value;
+        }
+        sessionStorage.setItem("searchValue", searchValue);
+        // clean stored parsed augment terms from last search.
+        sessionStorage.removeItem("parsed_augment_terms");
+        if (searchValue == "") {
+            document.getElementById('MessageBox').innerText = "Please enter at least one keyword, otherwise, I cannot help you!";
+        }
+        else {
+            // Construct URLSearchParams object instance from current URL querystring.
+            var queryParams = new URLSearchParams(window.location.search);
+            // Set new or modify existing parameter value.
+            queryParams.set("page", 1);
+            queryParams.set("query", searchValue);
+            
+            // Add this query to query history component
+            add_to_query_history(searchValue);
+
+            // Replace current querystring with the new one.
+            history.replaceState(null, null, "?" + queryParams.toString());
+            location.reload();
+        }
+    }
+    //--------------------------------------------------------------------- Iniitialization
+    {% comment %} document.getElementById('searchbox1').value = sessionStorage.getItem("searchValue"); {% endcomment %}
+    document.getElementById('searchbox2').value = sessionStorage.getItem("searchValue");
+    cnt = document.querySelectorAll("#MyCart li").length - 1;
+    $('#MyCartCount').text(cnt);
+    //---------------------------------------------------------------------
+    $(document).ready(function () {
+        var maxLength = 500;
+        $(".show-read-more").each(function () {
+            var myStr = $(this).html();
+            if ($.trim(myStr).length > maxLength) {
+                var newStr = myStr.substring(0, maxLength);
+                var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
+                $(this).empty().html(newStr);
+                $(this).append(' <a href="javascript:void(0);" class="read-more">[+]</a>');
+                $(this).append('<span class="more-text">' + removedStr + '</span>');
+            }
+        });
+        $(".read-more").click(function () {
+            $(this).siblings(".more-text").contents().unwrap();
+            $(this).remove();
+        });
+
+        // Activate tootips
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+    //---------------------------------------------------------------------
+    // https://docs.djangoproject.com/en/3.2/ref/csrf/#acquiring-the-token-if-csrf-use-sessions-and-csrf-cookie-httponly-are-false
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== "") {
+            const cookies = document.cookie.split(";");
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + "=")) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    
+    function modifyBasket(operation, type, title, url, id) {
+
+        if (title.length > 35) {
+            title = title.substring(1, 35) + "...";
+        }
+
+
+        if (operation == 'add') {
+            id = 'id' + (new Date()).getTime();
+        }
+        newEntitiy = { 'operation': operation, 'type': type, 'title': title, 'url': url, 'id': id };
+        $.ajax({
+            url: '../add_to_basket',
+            type: "POST",
+            dataType: "json",
+            data: JSON.stringify(newEntitiy),
+            headers: {
+                "X-Requested-With": "XMLHttpRequest",
+                "X-CSRFToken": getCookie("csrftoken"),  // don't forget to include the 'getCookie' function
+            },
+            success: (data) => {
+                console.log(data);
+                modifyCart(data);
+            },
+            error: (error) => {
+                console.log(error);
+            }
+        });
+    }
+
+    function modifyCart(data) {
+        if (data['operation'] == 'add') {
+            var ul = document.getElementById("MyCart");
+            var li = document.createElement("li");
+            var icon = "";
+            if (data['type'] == 'Webpages') {
+                icon = '<i style="font-size:10pt; font-weight: bold; padding-right:5px;" class="ti-world"></i>';
+            }
+            else if (data['type'] == 'Datasets') {
+                icon = '<i style="font-size:10pt; font-weight: bold; padding-right:5px;" class="ti-ruler-pencil"></i>';
+            }
+            else if (data['type'] == 'WebAPIs') {
+                icon = '<i style="font-size:10pt; font-weight: bold; padding-right:5px;" class="ti-control-shuffle"></i>';
+            }
+            else if (data['type'] == 'Notebooks') {
+                icon = '<i style="font-size:10pt; font-weight: bold; padding-right:5px;" class="ti-package"></i>';
+            }
+            li.innerHTML = '<div class="media">' +
+                icon +
+                '<div class="media-body">' +
+                '<h5 class="notification-user"><a target="_blank" href="' + data['url'] + '">' + data['title'] + '</a> </h5>' +
+                '</div>' +
+                '<a href="#" onclick="modifyBasket(&quot;delete&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;' + data['id'] + '&quot;);"' +
+                'style="font-size:8pt;  display:inline-block;"> <i class="ti-close"></i>' +
+                '</a>' +
+                '</div>';
+            li.setAttribute("id", data['id']); // added line
+            ul.appendChild(li);
+        }
+        else if (data['operation'] == 'delete') {
+            $('#' + data['id']).remove();
+        }
+
+        cnt = document.querySelectorAll("#MyCart li").length - 1;
+        $('#MyCartCount').text(cnt);
+    }
+    {% comment %} { { functionList | safe } } {% endcomment %}
+    
+    // ---------------------------------------------------------
+
+
+    //======================= Newly defined functions ========================
+
+    function toggleSelection(item, operation, cart_operation) {
+        // Modify selection icon
+        if (operation=='select') {
+            $(item)
+            .attr("id", "selected_item")
+            .attr("src", '{% static "images/selected_icon.png" %}')
+            .attr("onclick", "selectObject(event, 'cancel');")
+            .attr("title", 'Cancel'); 
+        }
+        else if (operation=='cancel') {
+            $(item)
+            .attr("id", "")
+            .attr("src", '{% static "images/selection_icon.png" %}')
+            .attr("onclick", "selectObject(event, 'select');")
+            .attr("title", 'Select'); 
+        }
+        $(item).tooltip('dispose').tooltip();
+
+        // Modify my cart
+        var item_data = {
+            "operation": cart_operation, 
+            'type': item.dataset.type,
+            'id': 'item'+item.dataset.docid, 
+            'docid': item.dataset.docid, 
+            'name': item.dataset.name, 
+            'url': item.dataset.url, 
+        }
+        modifyCartItems(item_data); 
+    }
+
+    var userId = localStorage.getItem('userId');
+    if(userId == null) {
+        localStorage.setItem('userId', generateId());
+    }
+
+    let configurationObject = {
+        logUIConfiguration: {
+            endpoint: 'ws://localhost:6110/ws/endpoint/',
+            authorisationToken: 'eyJ0eXBlIjoibG9nVUktYXV0aG9yaXNhdGlvbi1vYmplY3QiLCJhcHBsaWNhdGlvbklEIjoiNzUwYmE5YmMtYjY2Yi00YjcxLWE5NzgtYjhkZDIzNWIxNzkzIiwiZmxpZ2h0SUQiOiI0MDhiNjQ4YS0zZjVlLTRhYWEtYjZlNC1kNWYwNjliNDZmNzUifQ:1s6uLa:irrzpt_t9QJncTROXlPeaWS7E5xVK-jdYlb3nVxBKaY', // 'eyJ0eXBlIjoibG9nVUktYXV0aG9yaXNhdGlvbi1vYmplY3QiLCJhcHBsaWNhdGlvbklEIjoiN2IzNzcyYWMtM2Y0NS00ZjE5LWIxZTctMjlhMTM4ZWJkYTYwIiwiZmxpZ2h0SUQiOiJmZWM1N2M3Mi05NWQzLTQ2OTYtYTViNS00NmQyZGU2YjJhY2EifQ:1rleLN:Ijy5MMGl9-zZyZPNtDP-stoGlfmQY5nGfbnsLmKCi9c',
+            verbose: true,
+        },
+        browserEvents: {
+                    blockEventBubbling: true,
+                    eventsWhileScrolling: true,
+                    URLChanges: true,
+                    contextMenu: true,
+                    pageFocus: true,
+                    trackCursor: true,
+                    cursorUpdateFrequency: 500,
+                    cursorLeavingPage: true,
+                    pageResize: true,
+        },
+        
+        applicationSpecificData: {
+            userId: localStorage.getItem('userId'),
+            sessionId: sessionStorage.getItem('sessionId'),
+            taskData: sessionStorage.getItem('taskData'),
+        },
+        trackingConfiguration: {
+            'rewrite-task-button': {
+                selector: '#task_button',
+                event: 'click',
+                name: 'TASK_BUTTON_CLICK',
+                metadata: [
+                    {
+                        nameForLog: 'DATA_TITLE',
+                        sourcer: 'elementAttribute',
+                        lookFor: 'data-title',
+                    },
+                    {
+                        nameForLog: 'DATA_ACTION',
+                        sourcer: 'elementAttribute',
+                        lookFor: 'data-action',
+                    },
+                    {
+                        nameForLog: 'DATA_KEPT_VALUE',
+                        sourcer: 'elementAttribute',
+                        lookFor: 'kept-value',
+                    },                    
+                    {
+                        nameForLog: 'DATA_SPAN',
+                        sourcer: 'elementProperty',
+                        // sourcer: 'elementAttribute',
+                        lookFor: 'innerText',
+                    }
+                ]                
+            },
+
+            'rewrite-method-button': {
+                selector: '#method_button',
+                event: 'click',
+                name: 'METHOD_BUTTON_CLICK',
+                metadata: [
+                    {
+                        nameForLog: 'DATA_TITLE',
+                        sourcer: 'elementAttribute',
+                        lookFor: 'data-title',
+                    },
+                    {
+                        nameForLog: 'DATA_ACTION',
+                        sourcer: 'elementAttribute',
+                        lookFor: 'data-action',
+                    },
+                    {
+                        nameForLog: 'DATA_KEPT_VALUE',
+                        sourcer: 'elementAttribute',
+                        lookFor: 'kept-value',
+                    },
+
+                    {
+                        nameForLog: 'DATA_SPAN',
+                        sourcer: 'elementProperty',
+                        // sourcer: 'elementAttribute',
+                        lookFor: 'innerText',
+                    },
+                ]                             
+            },
+
+            'rewrite-dataset-button': {
+                selector: '#dataset_button',
+                event: 'click',
+                name: 'DATASET_BUTTON_CLICK',
+                metadata: [
+                    {
+                        nameForLog: 'DATA_TITLE',
+                        sourcer: 'elementAttribute',
+                        lookFor: 'data-title',
+                    },
+                    {
+                        nameForLog: 'DATA_ACTION',
+                        sourcer: 'elementAttribute',
+                        lookFor: 'data-action',
+                    },
+                    {
+                        nameForLog: 'DATA_KEPT_VALUE',
+                        sourcer: 'elementAttribute',
+                        lookFor: 'kept-value',
+                    },                                     
+                    {
+                        nameForLog: 'DATA_SPAN',
+                        sourcer: 'elementProperty',
+                        // sourcer: 'elementAttribute',
+                        lookFor: 'innerText',
+                    },
+                ]                             
+            },
+
+            'querybox-losefocus': {
+                selector: '#input-box',
+                event: 'blur',
+                name: 'QUERYBOX_BLUR',
+            },
+
+            'change_to_notebook_object_type': {
+                selector: "#notebook_channel",
+                event: 'click',
+                name: "USE_NOTEBOOK_CHANNEL",
+            },
+
+            'change_to_dataset_object_type': {
+                selector: "#dataset_channel",
+                event: 'click',
+                name: "USE_DATASET_CHANNEL",
+            },
+
+            'click_result_object': {
+                selector: '#object_selection_icon_image',
+                event: 'click',
+                name: 'RESULT_OBJECT_CLICK',
+                metadata: [
+                    {
+                        nameForLog: 'OBJECT_TYPE',
+                        sourcer: 'elementAttribute',
+                        lookFor: 'data-type',
+                    },
+                    {
+                        nameForLog: 'OBJECT_ID',
+                        sourcer: 'elementAttribute',
+                        lookFor: 'data-docid',
+                    },
+                    {
+                        nameForLog: 'OBJECT_NAME',
+                        sourcer: 'elementAttribute',
+                        lookFor: 'data-name',
+                    },
+                    {
+                        nameForLog: 'OBJECT_URL',
+                        sourcer: 'elementAttribute',
+                        lookFor: 'data-url',
+                    }, 
+                ]
+            },           
+
+            'result-hover': {
+                selector: '.page-body',
+                event: 'mouseHover',
+                properties: {
+                    mouseenter: {
+                        name: 'RESULT_MOUSE_ENTER',
+                    },
+                    mouseleave: {
+                        name: 'RESULT_MOUSE_LEAVE',
+                    },                                  
+                },
+                metadata: [
+                    {
+                        nameForLog: 'RESULT_RANK',
+                        sourcer: 'elementAttribute',
+                        lookFor: 'itemindex',
+                    },
+                    {
+                        nameForLog: 'RESULT_VIEW_URL',
+                        sourcer: 'elementAttribute',                        
+                        lookFor: 'result-id',
+                    },                                             
+                ]
+            },  
+
+            'issue-query-1':{
+                selector: '#searchbox2',
+                event: 'change',
+                name: 'QUERY_CHANGE',
+                // properties: {
+                //     includeValues: [
+                //         {
+                //             nameForLog: 'QUERY_SUBMIT',
+                //             sourcer: 'elementProperty',
+                //             selector: '#searchbox2',
+                //             lookFor: 'value',
+                //         }
+                //     ]
+                // }
+                metadata: [
+                    {
+                        nameForLog: 'QUERY_SUBMIT',
+                        sourcer: 'elementProperty',
+                        lookFor: 'value',
+                    } 
+                ]
+            },            
+
+            'issue-query-2':{
+                selector: '#searchboxbutton2',
+                event: 'click',
+                name: 'QUERY_CHANGE2',
+                sourcer: 'elementProperty',
+                onElement: 'searchbox2',
+                lookFor: 'value',
+                metadata: [ 
+                        {
+                            nameForLog: 'QUERY_SUBMIT',
+                            sourcer: 'elementProperty',
+                            onElement: '#searchbox2',
+                            lookFor: 'value',
+                        },                               
+                ],
+            },            
+
+            'query-submission': {
+                selector: '#querybox-form',
+                event: 'formSubmission',
+                name: 'QUERY_SUBMITTED',
+                properties: {
+                    includeValues: [
+                        {
+                            nameForLog: 'QUERY_SUBMIT',
+                            sourcer: 'elementProperty',
+                            selector: '#searchbox2',
+                            lookFor: 'value',
+                        }
+                    ]
+                },               
+            },          
+            'query-history-modal': {
+                selector: '#query-history-modal',
+                name: 'QUERY_HISTORY_MODAL_Hover',
+                event: 'mouseHover',
+                properties: {
+                    mouseenter: {
+                        name: 'QUERY_HISTORY_MODAL_ENTER',
+                    },
+                    mouseleave: {
+                        name: 'QUERY_HISTORY_MODAL_LEAVE',
+                    },                                  
+                },
+            },
+            'saved-bookmarks': {
+                selector: '#saved-bookmarks',
+                name: 'BOOKMARK_MODAL_Hover',
+                event: 'mouseHover',
+                properties: {
+                    mouseenter: {
+                        name: 'BOOKMARK_ENTER',
+                    },
+                    mouseleave: {
+                        name: 'BOOKMARK_LEAVE',
+                    },                                  
+                },
+            },
+
+        },
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        LogUI.init(configurationObject);
+
+        task_condition = sessionStorage.getItem('condition');
+        if (task_condition == 0){
+            // make entity button invisible
+            document.getElementById('method_button').style.display = 'none';
+            document.getElementById('task_button').style.display = 'none';
+            document.getElementById('dataset_button').style.display = 'none';
+        }
+    });
+
+
+</script>
+{% endblock %}

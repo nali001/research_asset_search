@@ -1,0 +1,25 @@
+# Gunicorn
+gunicorn==20.1.0
+
+
+# Django
+Django==4.0.5
+
+# Django REST API framework
+djangorestframework==3.13.1
+Markdown==3.4.1
+drf-writable-nested==0.7.0
+drf-spectacular==0.26.5
+
+
+# Elasticsearch
+elasticsearch==7.17.6
+# django-elasticsearch-dsl==7.2.2
+elasticsearch-dsl==7.4.0
+
+
+# PostgresSQL
+psycopg2-binary==2.9.4
+
+# MongoDB
+pymongo==4.3.3

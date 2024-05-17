@@ -1,0 +1,187 @@
+{% load static %}
+<script type="text/javascript" src="{% static 'search_engine_app/common_js.js' %}"></script>
+      
+<div class="modal fade bd-example-modal-lg" id="post-questionnaire" tabindex="-1" role="dialog" aria-labelledby="post-questionnaire-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="post-questionnaire-modal-label">Survey</h5>
+          <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button> -->
+        </div>
+        <div class="modal-body">
+          <form>
+            <!-- 
+            <div class="rating">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+            </div>          -->
+
+            <select class="star-rating">
+                <option value="">Select a rating</option>
+                <option value="5">Excellent</option>
+                <option value="4">Very Good</option>
+                <option value="3">Average</option>
+                <option value="2">Poor</option>
+                <option value="1">Terrible</option>
+            </select>
+            
+            <script>
+                var stars = new StarRating('.star-rating');
+            </script>
+
+
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Recipient:</label>
+              <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Send message</button>
+        </div>
+      </div>
+    </div>
+</div>  
+
+<nav class="navbar header-navbar pcoded-header">
+    <div class="navbar-wrapper">
+        <div class="navbar-logo">
+            <a class="mobile-menu" id="mobile-collapse" href="#!">
+                <i class="ti-menu"></i>
+            </a>
+            <div class="mobile-search">
+                <div class="header-search">
+                    <div class="main-search morphsearch-search">
+                        <div class="input-group">
+                            <!-- <span class="input-group-addon search-close"><i class="ti-close"></i></span>
+                            <input type="text" class="form-control" placeholder="Enter Keyword">
+                            <span class="input-group-addon search-btn"><i class="ti-search"></i></span> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% comment %} Return to Home page {% endcomment %}
+            <a href="/">
+                <img class="img-fluid" src="{% static 'images/system_logo01.png' %}" 
+                style="height:40px;padding:0px;margin-top:0px;" alt="Theme-Logo" />
+                    {% comment %} <span style="height:80px;font-size:14pt;padding:6px;margin-top:5px;margin-left:10px;">Home</span> {% endcomment %}
+            </a>
+            <a class="mobile-options">
+                <i class="ti-more"></i>
+            </a>
+        </div>
+        <div class="navbar-container container-fluid">
+            <ul class="nav-left">
+                <li>
+                    <div class="sidebar_toggle"><a href="javascript:void(0)"><i class="ti-menu"></i></a>
+                    </div>
+                </li>
+                {% comment %} <li>
+                    <a href="#!" onclick="javascript:toggleFullScreen()">
+                        <i class="ti-fullscreen"></i>
+                    </a>
+                </li> {% endcomment %}
+            </ul>
+            <ul class="nav-right">
+
+                <li class="header-notification">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#post-questionnaire" id="post-test-button" data-whatever="@mdo"> Submit Questionnaire </button>                          
+                </li>
+
+                <li class="header-notification">
+                    <a href="#!">
+                        {% comment %} <i style="font-size:15pt; " class="ti-shopping-cart"></i> {% endcomment %}
+                        <i id="MyCartIcon" class="fa-solid fa-toolbox still-icon" style="font-size:22pt; margin-top:16px; color: #FCE38A;"></i>
+                    <span style="display: inline-block;font-size:12pt;font-weight:bold;margin-left:3px"> <sup><span id="MyCartCount">100</span></sup> </span>
+                    </a>
+                    <ul class="show-notification" id="MyCart">                        
+                        <li>
+                            <h6 style="color:blue;">Selected components</h6>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="user-profile header-notification">
+                    <a href="#!">
+                        <img src="{% static 'images/joker_icon.png' %}" class="img-radius"
+                            alt="User-Profile-Image" width="20" height="30">
+                        <span>Guest</span>
+                        <i class="ti-angle-down"></i>
+                    </a>
+                    <ul class="show-notification profile-notification">
+                        <li><a href="../accountManagement/login"><i class="ti-layout-sidebar-left"></i>
+                                Login </a> </li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Search bar -->
+    <div class="navbar-container container-fluid">
+        <div class="input-group mb-3" id="querybox-form" style="width=50px">
+            <input type="text" class="form-control" placeholder="Enter search string" id="searchbox2" name="searchbox2" onchange="search(2);">
+            <div class="input-group-append">
+                <!-- <span class="input-group-addon search-btn" id="searchboxbutton2"> <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #74C0FC;"></i><i class="ti-search" onclick="search(2);">Search</i></span> -->
+                <button class="btn btn-outline-secondary" id="searchboxbutton2" onclick="search(2);" style="background-color: #FFD43B;" type="button"> <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #74C0FC;"></i>Search</button>
+            </div>
+        </div>
+    </div>
+    <!-- Four buttons -->
+    <!-- Four buttons with styling and Themify Icons -->
+    <div class="button-container text-center">
+        <button class="btn btn-secondary custom-btn" 
+                id="task_button"
+                data-toggle="tooltip" 
+                data-placement="top" 
+                data-action="augment"
+                data-title="Task"
+                title="Task"
+                kept-value="N/A"
+                onclick="handleAugmentOptionClick(event)">
+            <i class="fa-solid fa-lightbulb"></i>
+            <span>N/A</span>            
+        </button>
+        <button class="btn btn-secondary custom-btn" 
+                id="method_button"
+                data-toggle="tooltip" 
+                data-placement="top" 
+                data-action="augment"
+                data-title="Method"
+                title="Method"
+                kept-value="N/A"
+                onclick="handleAugmentOptionClick(event)">
+            <i class="fa-solid fa-microscope"></i>
+            <span>N/A</span>
+        </button>
+        <button class="btn btn-secondary custom-btn" 
+                id="dataset_button"
+                data-toggle="tooltip" 
+                data-placement="top" 
+                data-action="augment"
+                data-title="Dataset"
+                title="Dataset"
+                kept-value="N/A"
+                onclick="handleAugmentOptionClick(event)">
+                <i class="fa-solid fa-dna"></i>
+                <span>N/A</span>
+        </button>
+        <!-- <button class="btn btn-danger custom-btn" onclick="handleButtonClick(4)"><i class="ti-alert"></i><span id="all_text">Button 4</span></button> -->
+    </div>
+</nav>
+
+<script>
+
+</script>
+

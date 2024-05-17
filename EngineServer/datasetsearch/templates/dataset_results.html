@@ -1,0 +1,84 @@
+{% extends 'SERP.html' %}
+{% load static %}
+
+{% block object_list %}   
+{%for resultItem in results %}
+<div class="page-body"  itemindex="{{ forloop.counter }}" result-id="{{ resultItem.docid }} " result-url="{{ resultItem.html_url }}">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header">
+
+                    <h5 class="m-b-10 titleTrimming">
+                        <a href="{{ resultItem.html_url}}" target="_blank"
+                            style="color:darkblue;">
+                            <img src="{% static 'images/dataset_icon.png' %}"
+                                style="width:25px; left: 10px; margin-right:6px;" />
+                            {{ resultItem.name }}
+                        </a>
+                    </h5>
+                    <div class="card-header-right">
+                        <ul class="list-unstyled card-option">
+                            <li><i class="fa fa-chevron-left"></i></li>
+                            <li><i class="fa fa-window-maximize full-card"></i></li>
+                            <li><i class="fa fa-minus minimize-card"></i></li>
+                            <li><i class="fa fa-refresh reload-card"></i></li>
+                            <li><i class="fa fa-times close-card"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-block">
+                    <p class="show-read-more">
+                        {{ resultItem.description }}
+                    </p>
+                    <ul class="breadcrumb-title b-t-default p-t-10">
+                        <li class="breadcrumb-item">
+                                <div style="display:inline-block;"> Source: {{ resultItem.source }}</div>
+                                <span style="padding:10px; color:lightgray;"> | </span>
+                                <div style="display:inline-block;"> Size: {{ resultItem.size }}</div>
+                                <span style="padding:10px; color:lightgray;"> | </span>
+                                <div style="display:inline-block;"> Last Updated: {{ resultItem.last_updated }}</div>
+                                <span style="padding:10px; color:lightgray;"> | </span>
+                                <div style="display:inline-block;"> License: {{ resultItem.license }}</div>
+                                <span style="padding:10px; color:lightgray;"> | </span>
+                       
+
+                            {% comment %} Selection buttons {% endcomment %}
+                            <img 
+                            src="{% static 'images/selection_icon.png' %}" 
+                            data-docid='{{ resultItem.docid }}' 
+                            data-type='dataset' 
+                            data-name='{{ resultItem.name }}' 
+                            data-url='{{ resultItem.html_url }}' 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            id="object_selection_icon_image"
+                            title="Select" 
+                            onclick="selectObject(event, 'select');" 
+                            style="width:35px; right:30px;position: absolute;margin-right:20px;" 
+                            />                               
+
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+<script>
+    var channel_name = 'dataset_channel';
+    $('.left_pannel').each(function() {
+        var a = $(this).find('a');  // Find 'a' element within each 'left_pannel'
+        if (a.attr('id') === channel_name) {
+            console.log('Found matching channel:', channel_name);
+            // Add a class to the parent div with class 'left_pannel'
+            $(this).addClass('active');
+        }
+    });
+</script>
+
+
+{% endblock %} 

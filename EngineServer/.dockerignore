@@ -1,0 +1,11 @@
+venv
+__pycache__/
+.vscode
+auth
+tests
+db.sqlite3
+dev_env_setup.sh
+
+migrations/
+
+notebooksearch/Notebooks/*

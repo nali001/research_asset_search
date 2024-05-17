@@ -1,0 +1,165 @@
+services:
+
+  proxy:
+    build:
+      context: ./proxy
+    restart: always
+    container_name: proxy
+    depends_on:
+      - logui-http-worker
+      - logui-websocket-worker
+    ports:
+      - 6110:6110
+    volumes:
+      - logui_static:/logui/worker/static/
+    networks:
+      - search_engine_net
+
+  mongo:
+    image: mongo
+    container_name: mongo
+    restart: always
+    networks: 
+      - search_engine_net
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mongo
+      - MONGO_INITDB_ROOT_PASSWORD=notebooksearch2022
+    volumes:
+      - mongo:/data/db
+      - mongo:/data/configdb
+    ports:
+    - 127.0.0.1:27017:27017
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.6
+    container_name: elasticsearch
+    restart: always
+    working_dir: /usr/share/elasticsearch
+    networks: 
+      - search_engine_net
+    environment:
+      - discovery.type=single-node
+      # - ES_JAVA_OPTS='-Xms512m -Xmx512m'
+    volumes:
+      - ./ElasticSearch/data:/usr/share/elasticsearch/data
+    ports: 
+      - 127.0.0.1:9200:9200
+
+  postgres:
+    image: postgres:15
+    container_name: postgres
+    restart: always
+    networks: 
+      - search_engine_net    
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=notebooksearch2022
+      - POSTGRES_DB=notebooksearch
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    ports: 
+      - 5432:5432
+
+  pgadmin:
+    image: dpage/pgadmin4:8.6
+    networks: 
+      - search_engine_net
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=postgres@notebooksearch.com
+      - PGADMIN_DEFAULT_PASSWORD=notebooksearch2022
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    depends_on: 
+      - postgres    
+    ports:
+      - 127.0.0.1:5050:80
+
+  web:
+    build: ./EngineServer
+    command: python manage.py runserver 0.0.0.0:8000
+    restart: always
+    volumes:
+      - ./EngineServer:/search_engine_app
+    ports:
+      - 8000:8000
+    environment:
+      - HOST_IP=${HOST_IP}
+      - ELASTICSEARCH_HOSTNAME=elasticsearch
+      - ELASTICSEARCH_PORT=9200
+      - ELASTICSEARCH_USERNAME=elastic
+      - ELASTICSEARCH_PASSWORD=elastic_2022
+      - POSTGRES_HOSTNAME=postgres
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=notebooksearch2022
+      - POSTGRES_DB=notebooksearch    
+      - MONGO_HOSTNAME=mongo
+    networks: 
+      - search_engine_net
+    depends_on:
+      - elasticsearch
+      - postgres
+      - logui-http-worker
+      - logui-websocket-worker
+
+  logui-http-worker:
+    build:
+      context: ./LogUI
+      dockerfile: ./worker/Dockerfile
+      args:
+        - SECRET_KEY='Wqh1Qy=r%qyJsflCv0zaSIH5h_T^y)Svgd+7kJkOcftp1q56GC'  # This is required for collectstatic to work.
+    env_file: ./LogUI/.env
+    container_name: logui-http-worker-1
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+      - PYTHONUNBUFFERED=1
+      - PROXY_LISTEN_ON=6110
+      - DOCKER_HOSTNAME=0.0.0.0
+      - DEBUG=False
+      - SECRET_KEY='Wqh1Qy=r%qyJsflCv0zaSIH5h_T^y)Svgd+7kJkOcftp1q56GC'
+      - DATABASE_PASSWORD='oWyOGoCQ'
+    restart: always
+    volumes:
+      - logui_static:/logui/worker/static/
+    networks: 
+      - search_engine_net
+    depends_on:
+      - mongo
+
+
+  logui-websocket-worker:
+    build:
+      context: ./LogUI
+      dockerfile: ./worker/Dockerfile
+      args:
+        - SECRET_KEY='Wqh1Qy=r%qyJsflCv0zaSIH5h_T^y)Svgd+7kJkOcftp1q56GC'
+    command: daphne -b 0.0.0.0 -p 6110 worker.asgi:logui_application
+    env_file: ./LogUI/.env
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+      - PYTHONUNBUFFERED=1
+      - PROXY_LISTEN_ON=6110
+      - DOCKER_HOSTNAME=0.0.0.0
+      - DEBUG=False
+      - SECRET_KEY='Wqh1Qy=r%qyJsflCv0zaSIH5h_T^y)Svgd+7kJkOcftp1q56GC'
+      - DATABASE_PASSWORD='oWyOGoCQ'
+    restart: always
+    volumes:
+      - logui_static:/logui/worker/static/
+    networks: 
+      - search_engine_net
+    depends_on:
+      - mongo
+
+
+
+volumes:
+  mongo:
+  elastic:
+  postgres_data:
+  logui_static:
+  pgadmin_data:
+
+networks: 
+  search_engine_net:
+    driver: bridge

@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+<script type="text/javascript" src="{% static 'search_engine_app/common_js.js' %}"></script>
+
+{% block body %}
+
+
+<!-- Pre-loader start -->
+{% csrf_token %}
+
+<script>
+    $(document).ready(function() {
+        start_user_study();
+
+        get_user_study_task().then(function(response) {
+            var search_topic = sessionStorage.getItem('task');
+            $('#search-topic-header').text('Search topic: ' + search_topic);
+        });
+    });
+</script>
+
+<!-- Bootstrap header start -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h1> </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Bootstrap header end -->
+
+<!-- Task description start -->
+<div class="container border">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+
+                    <h2 class="card-title"> Spend about 20 minutes searching for a research topic!</h2>
+
+                    <h3 class="card-subtitle mb-2 text-muted" id="search-topic-header"> Search topic:  </h3>
+                    
+                    <p class="card-text"> This study consists of one search phase and two tests (one test before the search phase and one post-test after it). Each test asks you different questions about your knowledge on one or more topics - please answer the questions truthfully. 
+                    Your payment is not affected by the number of correct or incorrect answers. 
+                    Most questions are multiple-choice questions, in the last test we ask you to write a summary about one topic too.
+                    <strong>You have to write the summary based on your memory of the knowledge that you learned during the search phase</strong>. </p>
+                    
+              
+                    <p> We have a few important points: </p>
+                    <ol type="-">
+                        <li>
+                            <p>
+                            Only use the web search interface we provide. 
+                            
+                            </p>
+                        </li>
+
+                        <li> 
+                            <p>
+                            Keep your searches on the topic and avoid searches on unrelated topics. 
+                            For example, if your topic is computer science, we consider searches for tomorrow's weather, the latest news on Brexit, movie reviews of the Avenger movies, as off-topic and will cancel your participation.
+                            </p>
+                        </li>
+                    </ol>
+                    <hr/>
+                    <p>Finally, a reminder before you continue:
+                    please read the task description on the right-hand side of the search interface carefully. </p>
+                    <p style="color:red"> <b> Do not change tabs and do not reload. These activities would make you disqualified. </b> </p>                    
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body text-center"> <!-- Added 'text-center' class -->
+                            <a href="{% url 'user_study:guide' %}" class="btn btn-primary" onclick="start_study_session(event)">Start</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>
+<!-- Task description end -->
+
+{% endblock %} 
+
+
+
+
+

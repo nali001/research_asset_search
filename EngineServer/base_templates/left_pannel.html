@@ -1,0 +1,113 @@
+{% load static %}
+<nav class="pcoded-navbar">
+    <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
+    <div class="pcoded-inner-navbar main-menu">
+        <div class="pcoded-search">
+            <span class="searchbar-toggle"> </span>
+            {% comment %} <div class="pcoded-search-box ">
+                <input type="text" placeholder="Search" id="searchbox2" name="searchbox2"
+                    onchange="search(2);">
+                <span class="search-icon"><i class="ti-search" aria-hidden="true"
+                        onclick="search(2);"></i></span>
+            </div> {% endcomment %}
+        </div>
+        <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Search Space</div>
+        <ul class="pcoded-item pcoded-left-item">
+            {% comment %} <li class="">
+                <a href="../webSearch/genericsearch?query={{ query }}&page=1">
+                    <span class="pcoded-micon"><i class="ti-world"></i><b>D</b></span>
+                    <span class="pcoded-mtext" data-i18n="nav.dash.main">Webpages</span>
+                    <span class="pcoded-mcaret"></span>
+                </a>
+            </li> {% endcomment %}
+            <!-- <li class="">
+            <a href="../dataset_elastic/genericsearch?query={{ query }}&page=1">
+                <span class="pcoded-micon"><i class="ti-ruler-pencil"></i></span>
+                <span class="pcoded-mtext"  data-i18n="nav.dash.main">Datasets</span>
+                <span class="pcoded-mcaret"></span>
+            </a>
+        </li>
+        <li class="">
+            <a href="../webAPI/genericsearch?query={{ query }}&page=1" >
+                <span class="pcoded-micon"><i class="ti-control-shuffle"></i></span>
+                <span class="pcoded-mtext"  data-i18n="nav.dash.main">Web APIs</span>
+                <span class="pcoded-mcaret"></span>
+            </a>
+        </li> -->
+        
+        {% comment %} navigation item: Notebooks {% endcomment %}
+        <li class="left_pannel">
+                <a id="notebook_channel" href="#" onclick="updateURL(event, 'notebook');">
+                {% comment %} ../../notebooksearch/notebook_search?query={{ query }}&page=1&filter=&facet= {% endcomment %}
+                <span class="pcoded-micon"><i class="ti-file"></i></span>
+                <span class="pcoded-mtext" data-i18n="nav.dash.main">Notebooks</span>
+                <span class="pcoded-mcaret"></span>
+            </a>
+        </li>
+
+        {% comment %} navigation item: Datasets {% endcomment %}
+        <li class="left_pannel">
+            <a id="dataset_channel" href= "#" onclick="updateURL(event, 'dataset');">
+                <span class="pcoded-micon"><i class="ti-server"></i></span>
+                <span class="pcoded-mtext"  data-i18n="nav.dash.main">Datasets</span>
+                <span class="pcoded-mcaret"></span>
+            </a>
+        </li>
+
+        {% comment %} navigation item: Combined {% endcomment %}
+        {% comment %} <li class="">
+            <a href="../webSearch/genericsearch?query={{ query }}&page=1&searchtype=imagesearch" >
+                <span class="pcoded-micon"><i class="ti-package"></i></span>
+                <span class="pcoded-mtext"  data-i18n="nav.dash.main">Combined</span>
+                <span class="pcoded-mcaret"></span>
+            </a>
+        </li> {% endcomment %}
+
+        </ul>
+        <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Visualization</div>
+        <ul class="pcoded-item pcoded-left-item">
+            <li class="left_pannel">
+                <a id='graph_channel' href= "#" onclick="updateURL(event, 'graph');">
+                    <span class="pcoded-micon"><i class="ti-vector"></i><b>FC</b></span>
+                    <span class="pcoded-mtext" data-i18n="nav.form-components.main">Graph</span>
+                    <span class="pcoded-mcaret"></span>
+                </a>
+            </li>
+            <li>
+                <a href="../genericpages/genericpages?page=pieChart&query={{ query }}">
+                    <span class="pcoded-micon"><i class="ti-pie-chart"></i><b>FC</b></span>
+                    <span class="pcoded-mtext" data-i18n="nav.form-components.main">Pie chart</span>
+                    <span class="pcoded-mcaret"></span>
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Info</div>
+        <ul class="pcoded-item pcoded-left-item">
+            <li>
+                <a href="../genericpages/genericpages?page=publications&query={{ query }}">
+                    <span class="pcoded-micon"><i class="ti-write"></i><b>FC</b></span>
+                    <span class="pcoded-mtext"
+                        data-i18n="nav.form-components.main">Publications</span>
+                    <span class="pcoded-mcaret"></span>
+                </a>
+            </li>
+            <li>
+                <a href="../genericpages/genericpages?page=RnD&query={{ query }}">
+                    <span class="pcoded-micon"><i class="ti-user"></i><b>FC</b></span>
+                    <span class="pcoded-mtext" data-i18n="nav.form-components.main">R&amp;D
+                        team</span>
+                    <span class="pcoded-mcaret"></span>
+                </a>
+            </li>
+            <li>
+                <a href="map-google.html">
+                    <span class="pcoded-micon"><i class="ti-comments"></i><b>FC</b></span>
+                    <span class="pcoded-mtext" data-i18n="nav.form-components.main">Feedback</span>
+                    <span class="pcoded-mcaret"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

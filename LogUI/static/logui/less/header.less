@@ -1,0 +1,33 @@
+@import 'global.less';
+
+header {
+    grid-area: banner;
+    position: relative;
+    background-color: @colour-banner-background;
+    background-image: linear-gradient(to right, @colour-banner-background, darken(@colour-banner-background, 20%));
+    background-size: @width-menu-gradient 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+    color: @colour-banner-text;
+}
+
+header a {
+    position: relative;
+    top: 4px;
+    height: 48px;
+    display: inline-block;
+}
+
+header a img {
+    margin: 5px 0 0 10px;
+    height: 100%;
+    width: auto;
+}
+
+header span {
+    position: absolute;
+    top: 35px;
+    left: 117px;
+    font-weight: 400;
+    font-size: 14px;
+}

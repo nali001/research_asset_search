@@ -1,0 +1,23 @@
+# System databases
+Thumbs.db
+.DS_Store
+
+# Python Specifics
+*.pyc
+__pycache__/
+
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Repository-specific rules
+db.sqlite3
+.env
+**/migrations/*
+!**/migrations/__init__.py
+**/node_modules/
+/static/cache/
+/worker/collectedstatic/
