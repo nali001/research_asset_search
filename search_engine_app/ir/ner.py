@@ -23,7 +23,11 @@ class EntityExtractor:
     def _chatgpt(self, content):
         with open('../secrets/openai_token.txt', 'r') as f: 
             api_key = f.read()
+            openai.api_key = api_key
 
+        if type(content) != str:
+            raise ValueError("Content must be a string.")
+        
         # Define a list of messages as input for the chat model
         messages = [
             {"role": "system", "content": "Extract task, dataset and method entities from the text. Output the entities in a Json format using these keys: {'task', 'dataset', 'method'}"},
@@ -31,14 +35,15 @@ class EntityExtractor:
         ]
 
         # Use the OpenAI API for chat completions
-        response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",  # Use the appropriate model
+        response = openai.chat.completions.create(
+            model="gpt-3.5-turbo-0125", # "gpt-3.5-turbo",  # Use the appropriate model
             messages=messages,
             max_tokens=1240,  # Adjust as needed
             temperature=0.3,  # Lower temperature for more deterministic output
-            api_key=api_key
+
         )
+
         # Extract the assistant's reply from the response
-        entities = response['choices'][0]['message']['content']
+        entities = response.choices[0].message.content
         return entities
 

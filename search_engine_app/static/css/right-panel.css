@@ -1,0 +1,10 @@
+.right-panel {
+    position: fixed;
+    right: 0;
+    width: 300px; /* Adjust as needed */
+    height: 100%;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light gray */
+    overflow: auto; /* Add scroll if content is larger than the panel */
+    border-left: 1px solid #dee2e6; /* Gray border */
+}

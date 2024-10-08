@@ -3,7 +3,7 @@
 
 {% block object_list %}   
 {%for resultItem in results %}
-<div class="page-body">
+<div class="page-body"  itemindex="{{ forloop.counter }}" result-id="{{ resultItem.docid }} " result-url="{{ resultItem.html_url }}">
     <div class="row">
         <div class="col-sm-12">
             <div class="card">
@@ -32,7 +32,7 @@
                         {{ resultItem.description }}
                     </p>
                     <ul class="breadcrumb-title b-t-default p-t-10">
-                        <li class="breadcrumb-item"><a href="#!">
+                        <li class="breadcrumb-item">
                                 <div style="display:inline-block;"> Source: {{ resultItem.source }}</div>
                                 <span style="padding:10px; color:lightgray;"> | </span>
                                 <div style="display:inline-block;"> Size: {{ resultItem.size }}</div>
@@ -41,11 +41,7 @@
                                 <span style="padding:10px; color:lightgray;"> | </span>
                                 <div style="display:inline-block;"> License: {{ resultItem.license }}</div>
                                 <span style="padding:10px; color:lightgray;"> | </span>
-                                {% comment %} <div style="display:inline-block;"> Stars: {{ resultItem.stargazers_count }}</div>
-                                <div style="display:inline-block;"> <a
-                                        href="{{ resultItem.git_url }}"
-                                        target="_blank"> Git </a> </div>
-                            </a> {% endcomment %}
+                       
 
                             {% comment %} Selection buttons {% endcomment %}
                             <img 
@@ -56,18 +52,20 @@
                             data-url='{{ resultItem.html_url }}' 
                             data-toggle="tooltip" 
                             data-placement="top" 
+                            id="object_selection_icon_image"
                             title="Select" 
                             onclick="selectObject(event, 'select');" 
                             style="width:35px; right:30px;position: absolute;margin-right:20px;" 
-                            />
+                            />                               
 
-                        </li>
-                    </ul>
+                                
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 {% endfor %}
 
 <script>

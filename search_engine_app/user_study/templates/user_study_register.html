@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% load static %}
+<script type="text/javascript" src="{% static 'search_engine_app/common_js.js' %}"></script>
+{% csrf_token %}
+
+
+
+
+{% block body %}
+
+<div id="pcoded" class="pcoded">
+    <div class="pcoded-overlay-box"></div>
+    <div class="pcoded-container navbar-wrapper">
+
+      <nav class="navbar header-navbar pcoded-header">
+        <div class="navbar-wrapper">
+          <div class="navbar-logo">
+            <div class="mobile-search">
+              <div class="header-search">
+                <div class="main-search morphsearch-search">
+                  <div class="input-group">
+                    <span class="input-group-addon search-close"><i class="ti-close"></i></span>
+                    <input type="text" class="form-control" placeholder="Enter Keyword">
+                    <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <a class="mobile-options">
+              <i class="ti-more"></i>
+            </a>
+          </div>
+          <div class="navbar-container container-fluid">
+
+            <ul class="nav-left">
+              <li>
+                <div class="sidebar_toggle">
+                  <a href="javascript:void(0)">
+                    <i class="ti-menu"></i></a>
+                </div>
+              </li>
+            </ul>
+            <ul class="nav-right">
+              <li>
+                <a href="#!" onclick="javascript:toggleFullScreen()">
+                  <i class="ti-fullscreen"></i>
+                </a>
+              </li>
+              {% comment %} <li class="header-notification">
+                <a href="#!">
+                  <i style="font-size:15pt; " class="ti-shopping-cart"></i>
+                  <span style="display: inline-block;font-size:10pt;font-weight:bold;"> <sup><span
+                        id="MyCartCount">0</span></sup> </span>
+                </a>
+                <ul class="show-notification" id="MyCart">
+                  <li>
+                    <a href="#" onclick="">
+                      <h6 style="color:blue;"><span class="btn btn-primary btn-icon"
+                          style="font-size:15pt; padding:0px; padding-top:4px; padding-left:2px; height:30px;width:30px; text-align:center; margin-right:5px; margin-left:-10px;"><i
+                            class="ti-cloud-down"></i></span>
+                        My Basket</h6>
+                    </a>
+                  </li>
+                </ul>
+              </li> {% endcomment %}
+              {% comment %} <li class="user-profile header-notification">
+                <a href="#!">
+                  <span>Knowledge Base</span>
+                  <i class="ti-angle-down"></i>
+                </a>
+                <ul class="show-notification profile-notification">
+                  <li><a href="https://envri-fair.lab.uvalight.net/OntoWiki/index.php" target="_blank"><i
+                        class="ti-check-box"></i> Ontowiki </a> </li>
+                  <li><a href="http://90.147.102.53/rdforms/samples/software_description.html" target="_blank"><i
+                        class="ti-check-box"></i> Software Description </a> </li>
+                  <li><a href="http://90.147.102.53/rdforms/samples/document_description.html" target="_blank"><i
+                        class="ti-check-box"></i> <span style="font-size:11pt;"> Document Description </span></a> </li>
+                  <li><a href="http://90.147.102.53/rdforms/samples/service_description.html" target="_blank"><i
+                        class="ti-check-box"></i> Service Description </a> </li>
+                  <li><a href="http://90.147.102.53/rdforms/samples/usecase_description.html" target="_blank"><i
+                        class="ti-check-box"></i> Usecase Description </a> </li>
+                  <li><a href="https://envri-fair.github.io/knowledge-base-ui/" target="_blank"><i
+                        class="ti-check-box"></i> Gap Analysis </a> </li>
+                </ul>
+              </li> {% endcomment %}
+
+              <li class="user-profile header-notification">
+                <a href="#!">
+                  <img src="{% static 'images/joker_icon.png' %}" class="img-radius" alt="User-Profile-Image">
+                  <span>Guest</span>
+                  <i class="ti-angle-down"></i>
+                </a>
+                <ul class="show-notification profile-notification">
+                  <li><a href="../accountManagement/login"><i class="ti-layout-sidebar-left"></i> Login </a> </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="pcoded-main-container">
+        <div class="container" style="margin-top: 10%; width: 60%;">
+
+            <form onkeydown="return event.key != 'Enter';" onsubmit="sumit_user_information(event)">
+                <div class="form-group row">
+                    <label for="registerUserName" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="registerUserName" placeholder="Enter your name">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="registerUserEmail" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="registerUserEmail" placeholder="Enter your email">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="registerUserEducation" class="col-sm-2 col-form-label">Education</label>
+                    <div class="col-sm-10">
+                        <select class="form-control" id="registerUserEducation">
+                            <option>Master Candidate</option>
+                            <option>Master's Degree</option>
+                            <option>PhD Candidate</option>
+                            <option>PhD</option>
+                            <option>Others</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- <div class="container"> -->
+                
+                    <div class="form-group row">
+                        <div class="col-sm-2">
+                            <button type="button" class="btn btn-primary btn-sm" onclick="addTopic();">Research Topic</button>
+                        </div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="newTopic" onkeydown="if (event.keyCode == 13) addTopic()">
+                        </div>
+                    </div>
+                
+
+                    <div id="registerResearchTopics" class="mt-3">
+                        <!-- Research topics will be added here -->
+                    </div>
+                <!-- </div> -->
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+        </div>
+      </div>
+</div>
+</div>
+
+<style>
+
+    .topic-block {
+        border: 2px dashed #000;
+        position: relative;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px; 
+        display: inline-block; 
+    }
+
+    .delete-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        /* width: 10px; */
+        transform: translate(50%, -50%);
+    }    
+</style>
+
+<script>
+    function addTopic() {
+        var topic = document.getElementById('newTopic').value;
+        if (topic) {
+            var block = document.createElement('div');
+            block.className = 'topic-block';
+
+            var deleteButton = document.createElement('button');
+            deleteButton.className = 'btn btn-danger btn-sm delete-button';
+            deleteButton.innerText = 'X';
+            deleteButton.onclick = function() {
+                block.remove();
+            };
+
+            var topicText = document.createElement('p');
+            topicText.className = 'mb-0';
+            topicText.innerText = topic;
+
+            block.appendChild(deleteButton);
+            block.appendChild(topicText);
+
+            document.getElementById('registerResearchTopics').appendChild(block);
+
+            document.getElementById('newTopic').value = '';
+        }
+    }
+</script>
+{% endblock %}
+
+
+
+
