@@ -21,13 +21,13 @@ def get_doc_number(index_name):
     print(f'{result[0]["count"]}\n')
 
 def main():
-    # list_indexes()
+    list_indexes()
     # print(es.indices.get_alias('kaggle_online'))
-    # get_doc_number('kaggle_raw_notebooks')
+    # get_doc_number('kaggle_notebooks')
     # get_doc_number('kaggle_raw_notebooks')
     # get_doc_number('kaggle_notebook_summarization')
-    update_alias('kaggle_notebook_summarization', 'kaggle_online')
-    list_indexes()
+    # update_alias('kaggle_notebook_summarization', 'kaggle_online')
+    # list_indexes()
 
 
 

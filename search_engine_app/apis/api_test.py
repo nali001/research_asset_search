@@ -105,7 +105,7 @@ def post_notebook_search(api_endpoint, api_config):
         "facet": "",
     }
 
-    client_id = 'sugar'
+    client_id = 'post_notebook_search 24 Mar'
     event = "notebook_search"
     data = {
         "client_id": client_id, 
@@ -268,10 +268,10 @@ def relevancy_feedback(api_endpoint, api_config):
     ''' test query generation API with `POST` method
     '''
     url = api_endpoint + "relevancy_feedback/"
-    client_id = 'API test'
+    client_id = 'relevancy feedback 24 Mar'
     event = "relevancy_feedback"
-    query = "bird"
-    num_stars = 0
+    query = "something"
+    num_stars = 3
     hits = get_notebook_search(api_endpoint, api_config)
     notebook = hits["results"][0]
     annotated_notebook = {}
